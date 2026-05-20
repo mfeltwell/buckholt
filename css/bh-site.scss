@@ -1,0 +1,588 @@
+// This file contains Buckholt DS styles as well as some additional styles to make some stuff in the DS docs site work.
+
+@import "../scss/buckholt";
+
+.btn.state_hover,
+.state_hover .response-btn-input .btn-response:first-of-type {
+    color: var(--#{$prefix-bh}button-label-hover);
+    background-color: var(--#{$prefix-bh}button-background-hover);
+    border-color: var(--#{$prefix-bh}button-border-hover);
+    position: relative;
+}
+
+.btn.state_hover:after,
+.state_hover .response-btn-input .btn-response:first-of-type:after {
+    content: url(../images/pointer.png);
+    position: absolute;
+    right: 0.5rem;
+    top: calc(100% - 0.5rem);
+    display: block;
+}
+
+.btn.state_focus,
+.state_focus .response-btn-input .btn-response:first-of-type {
+    border-bottom-width: var(--#{$prefix-bh}button-border-width);
+    color: var(--#{$prefix-bh}button-label-focus);
+        @include gradient-bg(var(--#{$prefix-bh}button-background-focus));
+        border-color: var(--#{$prefix-bh}button-border-focus);
+        outline: 0;
+      // Avoid using mixin so we can pass custom focus shadow properly
+            box-shadow: var(--#{$prefix-bh}button-shadow-focus);
+}
+
+.state_active .response-btn-input .btn-response:first-of-type {
+    color: var(--#{$prefix-bh}button-label-active);
+    background-color: var(--#{$prefix-bh}button-background-active);
+    border-color: var(--#{$prefix-bh}button-border-active);
+}
+
+
+
+.bg-dark {
+    background-color: $primary-100 !important;
+}
+
+.bg-dark {
+    color: $white !important;
+}
+
+.anchor {
+    position: relative;
+    top: -4rem;
+}
+
+.page-body:has(#page_nav) .anchor {
+    top: -8rem;
+}
+
+// Input state styles
+.state_focus .form-control,
+.state_focus .form-select {
+    border-color: #1748D0;
+    outline: 0;
+    box-shadow: 0 0 0 1px #1748d0;
+}
+
+// Check state styles
+.state_focus .form-check-input {
+    outline: 0;
+    box-shadow: 0 0 0 1px #ffffff, 0 0 0 3px #1748D0;
+}
+
+// Link state styles (demo purposes)
+.link-hover {
+    text-decoration: none;
+    position: relative;
+    color: $link-hover !important;
+    .icon {
+        color: $link-icon-hover !important;
+    }
+
+    &::after {
+        content: url(../images/pointer.png);
+        position: absolute;
+        right: 0.5rem;
+        top: calc(100% - 0.5rem);
+        display: block;
+        }
+
+    &.link-standalone {
+        text-decoration: underline !important;
+    }
+}
+
+.link-focus {
+    outline-offset: 0.25rem;
+    text-decoration: underline !important;
+    border-radius: 1px;
+    outline: var(--focus-01) auto 1px;
+    color: $link-focus !important;
+    .icon {
+        color: $link-icon-focus !important;
+    }
+}
+
+.link-active {
+    color: $link-active !important;
+    text-decoration: none !important;
+
+    &.link-standalone {
+        text-decoration: underline !important;
+    }
+
+    .icon {
+        color: $link-icon-active !important;
+    }
+}
+
+.link-visited {
+    color: var(--expressive-secondary-deep) !important;
+    .icon {
+        color: var(--expressive-secondary-deep) !important;
+    }
+}
+
+.shadow-info {
+    box-shadow: 0 20px 25px -5px rgba(var(--#{$prefix-bh}feedback-shadow-info), 0.1), 0 8px 10px -6px rgba(var(--#{$prefix-bh}feedback-shadow-info), 0.1);
+}
+
+.shadow-success {
+    box-shadow: 0 20px 25px -5px rgba(var(--#{$prefix-bh}feedback-shadow-success), 0.1), 0 8px 10px -6px rgba(var(--#{$prefix-bh}feedback-shadow-success), 0.1);
+}
+
+.shadow-warning {
+    box-shadow: 0 20px 25px -5px rgba(var(--#{$prefix-bh}feedback-shadow-warning), 0.1), 0 8px 10px -6px rgba(var(--#{$prefix-bh}feedback-shadow-warning), 0.1);
+}
+
+.shadow-error {
+    box-shadow: 0 20px 25px -5px rgba(var(--#{$prefix-bh}feedback-shadow-error), 0.1), 0 8px 10px -6px rgba(var(--#{$prefix-bh}feedback-shadow-error), 0.1);
+}
+
+// Min width for inputs on Bukcholt
+
+.component_card .input:not(:has(.response-btn-input, .check-input, .num-input), .input-row .input) {
+    min-width: 22rem;
+}
+
+.ignore-width .input:not(:has(.response-btn-input, .check-input), .input-row .input) {
+    min-width: unset;
+}
+
+
+// Live search results styles
+.buckholt-search .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.buckholt-search .dropdown.show .dropdown-menu {
+  display: flex;
+}
+
+.search-pagination {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.search-pagination .btn {
+    min-width: 2.5rem;
+}
+
+.search-pagination .btn.page-numbers {
+    padding: 0.25rem;
+}
+
+/* Code ________________________________________________________________________*/
+.code_block {
+    position: relative;
+}
+
+.code_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.code_content pre[class*=language-] {
+    background-color: var(--neutral-100);
+    color: var(--white-tint-70);
+    border-radius: 0.5rem;
+    margin: 0 !important;
+
+    &:not(.line-numbers) {
+        padding: 1.5rem 2rem;
+    }
+}
+
+@if $enable-dark-mode {
+        @include color-mode(dark) {
+            .code_content pre[class*=language-] {
+                background: var(--black);
+            }
+    }
+}
+
+/* Used to create a display for component example and attach relevant code. Add .code-example class to WP group */
+.code-example {
+    border: 1px solid var(--ui-border-02);
+    overflow: hidden;
+    border-radius: var(--border-radius-md);
+    position: relative;
+}
+
+.code-example .page-panel {
+    gap: 0;
+}
+
+.code-example .code_content pre,
+.code-example .component_group {
+    border-radius: 0;
+}
+
+.code-example .component_card {
+    background: none;
+}
+
+.code-example::after {
+    content: '';
+    background: url(/wp-content/themes/buckholt/blocks/swatches/chequered.png);
+    background-repeat: repeat;
+    height: 100%;
+    width: calc(100% + 1rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+@if $enable-dark-mode {
+        @include color-mode(dark) {
+            .code-example::after {
+                filter: invert(100%);
+            }
+    }
+}
+
+.code-example .card,
+.code-example .component_group {
+    overflow: unset;
+}
+
+
+.code_block .badge {
+    top: 0.5rem;
+    right: 0.5rem;
+    background: var(--ui-background-03);
+    color: var(--text-secondary);
+    transform: none;
+}
+
+@if $enable-dark-mode {
+        @include color-mode(dark) {
+            .code_block .badge {
+                background: var(--white-tint-20);
+            }
+    }
+}
+
+/* Table _______________________________________________________________________*/
+// .table {
+//     margin: 0;
+// }
+
+// .table table {
+//     width: 100%;
+// }
+
+// table {
+//     --table-padding-y: var(--padding-05);
+//     --table-padding-x: var(--padding-05);
+//     --table-radius: var(--border-radius-md);
+// }
+
+// table th,
+// table td {
+//     padding: var(--table-padding-y) var(--table-padding-x);
+//     vertical-align: middle;
+// }
+
+// thead::after:not(.simple_table thead) {
+//     content: "";
+//     display: block;
+//     height: 0.25rem;
+//     width: 100%;
+// }
+
+// table th:not(.simple_table th) {
+//     padding: var(--padding-01) var(--table-padding-x);
+//     background-color: var(--ui-overlay-03);
+//     white-space: nowrap;
+//     font-weight: var(--font-weight-rg);
+//     line-height: 1.5rem;
+//     letter-spacing: 0.25px;
+//     height: 3.5rem;
+// }
+
+// .table thead tr {
+//     border: none;
+// }
+
+// .table td:not(.no-italics td):first-child {
+//     font-style: italic;
+//     min-width: 6.5rem;
+// }
+
+// .table td {
+//     vertical-align: top;
+// }
+
+// table th:first-child {
+//     border-top-left-radius: var(--table-radius);
+//     border-bottom-left-radius: var(--table-radius);
+// }
+
+// table th:last-child {
+//     border-top-right-radius: var(--table-radius);
+//     border-bottom-right-radius: var(--table-radius);
+// }
+
+// table td:not(.simple_table td) {
+//     border-bottom: 1px solid var(--ui-border-02);
+//     height: 3.5rem;
+// }
+
+// table .icon_display {
+//     width: 1%;
+//     white-space: nowrap;
+//     padding-top: 0.5rem;
+//     padding-bottom: 0.5rem;
+//     vertical-align: middle;
+// }
+
+// table .fa_name * {
+//     display: block;
+// }
+
+// table .fa_name em {
+//     font-size: var(--typescale-01);
+//     letter-spacing: 0.25px;
+// }
+
+// /* Simple table */
+// .simple_table table {
+//     table-layout: fixed;
+// }
+
+// .simple_table table th {
+//     background-color: var(--transparent);
+// }
+
+// .simple_table table tr,
+// .simple_table table td {
+//     border: none;
+// }
+
+// .simple_table table th,
+// .simple_table table td {
+//     padding: 0 var(--table-padding-x);
+// }
+
+// .simple_table table th:first-child,
+// .simple_table table td:first-child {
+//     padding-left: 0;
+// }
+
+// .simple_table table th:last-child,
+// .simple_table table td:last-child {
+//     padding-right: 0;
+// }
+
+// .simple_table.table td:first-child {
+//     font-style: normal;
+// }
+
+// .simple_table table th {
+//     font-size: var(--typescale-03);
+//     font-weight: var(--font-weight-lt);
+//     letter-spacing: 0.16px;
+//     line-height: 1.5rem;
+// }
+
+// .simple_table table td {
+//     font-size: var(--typescale-03);
+//     font-weight: var(--font-weight-rg);
+//     letter-spacing: 0;
+//     line-height: 1.5rem;
+
+// }
+
+/* Swatches ____________________________________________________________________*/
+.swatches {
+    display: flex;
+    gap: var(--padding-05);
+    flex-wrap: wrap;
+}
+
+.swatch {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 10rem;
+    border: 1px solid var(--ui-border-02);
+    position: relative;
+}
+
+.swatch_header {
+    height: 5rem;
+    padding: 0.75rem var(--padding-05);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-right: 1rem;
+}
+
+.contrast_score {
+    background-color: var(--white-tint-60);
+    border-radius: var(--border-radius-full);
+    font-weight: var(--font-weight-rg);
+    font-size: var(--typescale-01);
+    line-height: 1rem;
+    padding: 0.125rem 0.375rem;
+    padding-left: 0.125rem;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--margin-01);
+    margin-bottom: var(--margin-01);
+    align-self: flex-start;
+    border: 1px solid var(--black-tint-30);
+}
+
+.colour_dot {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    background-color: var(--black);
+    border-radius: var(--border-radius-full);
+    border: 1px solid var(--black-tint-30);
+}
+
+.cs_wht .colour_dot {
+    background-color: var(--white);
+}
+
+.swatch_body {
+    padding: var(--padding-04) var(--padding-05);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    height: 100%;
+}
+
+.swatch_code {
+    font-size: var(--typescale-01);
+    color: var(--text-muted);
+    font-weight: var(--font-weight-rg);
+    line-height: 1rem;
+    letter-spacing: 0.25px;
+}
+
+.swatch_base::before {
+    content: '';
+    height: 0.75rem;
+    width: 0.75rem;
+    background: #fff;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    border-radius: var(--border-radius-full);
+    z-index: 10;
+}
+
+.swatch_tint .swatch_header::after,
+.swatch_tint .swatch_block::after {
+    content: '';
+    background: url(/wp-content/themes/buckholt/blocks/swatches/chequered.png);
+    background-repeat: repeat;
+    height: 100%;
+    width: calc(100% + 1rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.75;
+}
+
+.swatchbkg_black .swatch_header::after {
+    filter: invert(100%);
+    opacity: 1;
+}
+
+.swatchbkg_black .swatch_body {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.swatchbkg_black .swatch_code {
+    color: var(--white-tint-70);
+}
+
+.color_check {
+    height: 100%;
+    width: 1rem;
+    position: absolute;
+    top: 0;
+    right: -1rem;
+}
+
+/* Ref colours */
+.swatches:has(.ref_colour) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.ref_colour {
+    display: flex;
+    gap: 1rem;
+    flex: 1 0 20%;
+}
+
+.swatch_block {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 0.5rem;
+    display: block;
+    flex: none;
+    border: 1px solid var(--ui-border-03);
+    position: relative;
+    overflow: hidden;
+}
+
+.swatchblock_bkg {
+    height: 100%;
+    width: auto;
+    margin-right: 1rem;
+    position: relative;
+}
+
+.swatch_block .color_check {
+    right: 0;
+}
+
+span.swatch_role {
+    margin-top: 0.5rem;
+}
+
+/* Swatch table ________________________________________________________________*/
+.colour_ref {
+    display: flex;
+    align-items: center;
+}
+
+.swatch_dot {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: var(--border-radius-full);
+    border: 1px solid var(--ui-border-03);
+    display: inline-block;
+    margin-right: var(--margin-02);
+    position: relative;
+    overflow: hidden;
+}
+
+.swatch_dot::after {
+    content: '';
+    background: url(/wp-content/themes/buckholt/blocks/swatches/chequered.png);
+    background-repeat: repeat;
+    height: 100%;
+    width: calc(100% + 1rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.75;
+}
