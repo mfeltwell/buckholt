@@ -1,0 +1,660 @@
+// Colour stuff _____________________________________________________________________________________________________________________
+
+// Neutral ______________________________
+// Base __________
+$white:     #ffffff;
+$black:     #1a1a1a;
+$transparent: transparent;
+
+// primary ______________________________
+$primary-10:        #E0E9FF;
+$primary-20:        #C7D7FF;
+$primary-30:        #A8C1FF;
+$primary-40:        #7FA3F7;
+$primary-50:        #5F88EA;
+$primary-60:        #3F6FDD;
+$primary-70:        #2557D0;
+$primary-80:        #0F40C5;
+$primary-90:        #0A2E99;
+$primary-100:       #02091D;
+
+$primary-palette-dark: (
+  "10":     $primary-10,
+  "20":     $primary-20,
+  "30":     $primary-30,
+  "40":     $primary-40,
+  "50":     $primary-50,
+  "60":     $primary-60,
+  "70":     $primary-70,
+  "80":     $primary-80,
+  "90":     $primary-90,
+  "100":    $primary-100
+);
+
+// Generate css variable map version
+$primary-palette-vars: generate-css-var-map("primary", $primary-palette);
+
+// System _______________________________
+// danger ___________
+$danger-10:         #FFF0F0;
+$danger-20:         #FFD4D4;
+$danger-30:         #FFB0AF;
+$danger-40:         #FF8886;
+$danger-50:         #FF6663;
+$danger-60:         #FF4442;
+$danger-70:         #E62F2D;
+$danger-80:         #B81F1D;
+$danger-90:         #7D1514;
+$danger-100:        #2B0909;
+
+$danger-palette-dark: (
+  "10":     $danger-10,
+  "20":     $danger-20,
+  "30":     $danger-30,
+  "40":     $danger-40,
+  "50":     $danger-50,
+  "60":     $danger-60,
+  "70":     $danger-70,
+  "80":     $danger-80,
+  "90":     $danger-90,
+  "100":    $danger-100
+);
+
+// caution ________
+$caution-10:      #FFF4E8;
+$caution-20:      #FFE0BD;
+$caution-30:      #FFC785;
+$caution-40:      #FFAE52;
+$caution-50:      #FF9A24;
+$caution-60:      #FF8901;
+$caution-70:      #DB7200;
+$caution-80:      #A85700;
+$caution-90:      #733C00;
+$caution-100:     #261300;
+
+$caution-palette-dark: (
+  "10":     $caution-10,
+  "20":     $caution-20,
+  "30":     $caution-30,
+  "40":     $caution-40,
+  "50":     $caution-50,
+  "60":     $caution-60,
+  "70":     $caution-70,
+  "80":     $caution-80,
+  "90":     $caution-90,
+  "100":    $caution-100
+);
+
+// valid _________
+$valid-10:       #E8FFF4;
+$valid-20:       #C7FFE3;
+$valid-30:       #98F5C3;
+$valid-40:       #63E69E;
+$valid-50:       #2FD57F;
+$valid-60:       #00C56B;
+$valid-70:       #00A85B;
+$valid-80:       #007D45;
+$valid-90:       #035C33;
+$valid-100:      #021F12;
+
+$valid-palette-dark: (
+  "10":     $valid-10,
+  "20":     $valid-20,
+  "30":     $valid-30,
+  "40":     $valid-40,
+  "50":     $valid-50,
+  "60":     $valid-60,
+  "70":     $valid-70,
+  "80":     $valid-80,
+  "90":     $valid-90,
+  "100":    $valid-100
+);
+
+// Info ______________________________
+$info-10:        #E0E9FF;
+$info-20:        #C7D7FF;
+$info-30:        #A8C1FF;
+$info-40:        #7FA3F7;
+$info-50:        #5F88EA;
+$info-60:        #3F6FDD;
+$info-70:        #2557D0;
+$info-80:        #0F40C5;
+$info-90:        #0A2E99;
+$info-100:       #02091D;
+
+$info-palette-dark: (
+  "10":     $info-10,
+  "20":     $info-20,
+  "30":     $info-30,
+  "40":     $info-40,
+  "50":     $info-50,
+  "60":     $info-60,
+  "70":     $info-70,
+  "80":     $info-80,
+  "90":     $info-90,
+  "100":    $info-100
+);
+
+// Prime colours ________________________
+
+$prime-primary:     $primary-80;
+$prime-danger:      $danger-60;
+$prime-caution:     $caution-60;
+$prime-valid:       $valid-60;
+$prime-info:        $info-80;
+
+$prime-colors-dark: (
+  "white":        $white,
+  "primary":      $prime-primary,
+  "danger":       $prime-danger,
+  "caution":      $prime-caution,
+  "valid":        $prime-valid,
+  "info":         $prime-info,
+);
+
+// White tint ____
+$white-tint-10:     rgba($white, 0.04);
+$white-tint-20:     rgba($white, 0.08);
+$white-tint-30:     rgba($white, 0.13);
+$white-tint-40:     rgba($white, 0.19);
+$white-tint-50:     rgba($white, 0.27);
+$white-tint-60:     rgba($white, 0.39);
+$white-tint-70:     rgba($white, 0.53);
+$white-tint-80:     rgba($white, 0.68);
+$white-tint-90:     rgba($white, 0.84);
+$white-tint-100:    rgba($white, 0.97);
+
+$white-tint-palette-dark: (
+  "10":     $white-tint-10,
+  "20":     $white-tint-20,
+  "30":     $white-tint-30,
+  "40":     $white-tint-40,
+  "50":     $white-tint-50,
+  "60":     $white-tint-60,
+  "70":     $white-tint-70,
+  "80":     $white-tint-80,
+  "90":     $white-tint-90,
+  "100":    $white-tint-100
+);
+
+// primary tint _____
+$primary-tint-10:     rgba($prime-primary, 0.1);
+$primary-tint-20:     rgba($prime-primary, 0.18);
+$primary-tint-30:     rgba($prime-primary, 0.28);
+$primary-tint-40:     rgba($prime-primary, 0.4);
+$primary-tint-50:     rgba($prime-primary, 0.55);
+$primary-tint-60:     rgba($prime-primary, 0.75);
+
+$primary-tint-palette-dark: (
+  "10":     $primary-tint-10,
+  "20":     $primary-tint-20,
+  "30":     $primary-tint-30,
+  "40":     $primary-tint-40,
+  "50":     $primary-tint-50,
+  "60":     $primary-tint-60
+);
+
+// danger tint ______
+$danger-tint-10:     rgba($prime-danger, 0.14);
+$danger-tint-20:     rgba($prime-danger, 0.22);
+$danger-tint-30:     rgba($prime-danger, 0.32);
+$danger-tint-40:     rgba($prime-danger, 0.46);
+$danger-tint-50:     rgba($prime-danger, 0.62);
+$danger-tint-60:     rgba($prime-danger, 0.80);
+
+$danger-tint-palette-dark: (
+  "10":     $danger-tint-10,
+  "20":     $danger-tint-20,
+  "30":     $danger-tint-30,
+  "40":     $danger-tint-40,
+  "50":     $danger-tint-50,
+  "60":     $danger-tint-60
+);
+
+// Caution tint ___
+$caution-tint-10:     rgba($prime-caution, 0.14);
+$caution-tint-20:     rgba($prime-caution, 0.22);
+$caution-tint-30:     rgba($prime-caution, 0.32);
+$caution-tint-40:     rgba($prime-caution, 0.46);
+$caution-tint-50:     rgba($prime-caution, 0.62);
+$caution-tint-60:     rgba($prime-caution, 0.80);
+
+$caution-tint-palette-dark: (
+  "10":     $caution-tint-10,
+  "20":     $caution-tint-20,
+  "30":     $caution-tint-30,
+  "40":     $caution-tint-40,
+  "50":     $caution-tint-50,
+  "60":     $caution-tint-60
+);
+
+// valid tint ____
+$valid-tint-10:     rgba($prime-valid, 0.14);
+$valid-tint-20:     rgba($prime-valid, 0.22);
+$valid-tint-30:     rgba($prime-valid, 0.32);
+$valid-tint-40:     rgba($prime-valid, 0.46);
+$valid-tint-50:     rgba($prime-valid, 0.62);
+$valid-tint-60:     rgba($prime-valid, 0.80);
+
+$valid-tint-palette-dark: (
+  "10":     $valid-tint-10,
+  "20":     $valid-tint-20,
+  "30":     $valid-tint-30,
+  "40":     $valid-tint-40,
+  "50":     $valid-tint-50,
+  "60":     $valid-tint-60
+);
+
+// info tint _____
+$info-tint-10:     rgba($prime-info, 0.1);
+$info-tint-20:     rgba($prime-info, 0.18);
+$info-tint-30:     rgba($prime-info, 0.28);
+$info-tint-40:     rgba($prime-info, 0.4);
+$info-tint-50:     rgba($prime-info, 0.55);
+$info-tint-60:     rgba($prime-info, 0.75);
+
+$info-tint-palette-dark: (
+  "10":     $info-tint-10,
+  "20":     $info-tint-20,
+  "30":     $info-tint-30,
+  "40":     $info-tint-40,
+  "50":     $info-tint-50,
+  "60":     $info-tint-60
+);
+
+
+// Foundation colour stuff __________________________________________________________________________________________________________
+
+// Text _________________________________
+$text-primary-dark:      $white;
+$text-secondary-dark:    $white-tint-90;
+$text-tertiary-dark:     $white-tint-80;
+$text-muted-dark:        $white-tint-70;
+$text-active-dark:       $info-40;
+
+$text-colors-dark: (
+    "primary":    $text-primary-dark,
+    "secondary":  $text-secondary-dark,
+    "tertiary":   $text-tertiary-dark,
+    "muted":      $text-muted-dark,
+    "active":     $text-active-dark,
+    // "success":    $text-success-dark,
+    // "error":      $text-error-dark
+);
+
+// UI colours ___________________________
+$ui-background-01-dark: $primary-100;
+// $ui-background-02-dark: $neutral-10;
+// $ui-background-03-dark: $neutral-20;
+
+$ui-overlay-01-dark:      $white-tint-10;
+$ui-overlay-02-dark:      $white-tint-20;
+$ui-overlay-03-dark:      $white-tint-60;
+$ui-overlay-04-dark:      $primary-tint-20;
+
+$ui-border-01-dark:        $white-tint-60;
+$ui-border-02-dark:        $white-tint-40;
+$ui-border-03-dark:        $white-tint-30;
+// $ui-border-04-dark:     $white;
+
+$ui-background-colors-dark: (
+    "01":   $ui-background-01-dark, 
+    // "02":   $ui-background-02-dark, 
+    // "03":   $ui-background-03-dark,
+    // "04":   $ui-background-04-dark
+);
+
+$ui-overlay-colors-dark: (
+    "01":   $ui-overlay-01-dark, 
+    "02":   $ui-overlay-02-dark, 
+    "03":   $ui-overlay-03-dark, 
+    "04":   $ui-overlay-04-dark, 
+);
+
+$ui-border-colors-dark: (
+    "01":   $ui-border-01-dark, 
+    "02":   $ui-border-02-dark, 
+    "03":   $ui-border-03-dark,
+    // "04":   $ui-border-04-dark
+);
+
+
+// State colours ________________________
+$focus-01:    $info-60;
+$success-01:  $valid-60;
+$error-01:    $danger-60;
+
+$state-colours-dark: (
+  "focus-01":    $focus-01,
+  "success-01":  $success-01,
+  "error-01":    $error-01,
+);
+
+
+// $disabled-overlay-01-dark: $white-tint-20;
+// $disabled-overlay-02-dark: $black-tint-40;
+// $disabled-overlay-03-dark: $black-tint-50;
+$disabled-01-dark: $white-tint-20;
+// $disabled-02-dark: $neutral-40;
+$disabled-03-dark: $white-tint-50;
+$disabled-04-dark: $white;
+
+$disabled-colors-dark: (
+    // "overlay-01":   $disabled-overlay-01-dark, 
+    // "overlay-02":   $disabled-overlay-02-dark, 
+    // "overlay-03":   $disabled-overlay-03-dark, 
+    "01":           $disabled-01-dark, 
+    // "02":           $disabled-02-dark, 
+    "03":           $disabled-03-dark, 
+    "04":           $disabled-04-dark, 
+);
+
+
+// Action colours _______________________
+$action-01-dark:         $primary-70;
+$action-02-dark:         $primary-40;
+$action-03-dark:         $primary-80;
+$action-04-dark:         $primary-tint-20;
+$action-05-dark:         $white-tint-40;
+$action-06-dark:         $white-tint-30;
+$action-07-dark:         $white-tint-20;
+$action-08-dark:         $primary-100;
+$action-09-dark:         $white-tint-50;
+$action-10-dark:         $white-tint-70;
+$action-11-dark:         $white-tint-90;
+
+$action-text-01-dark:    $primary-40;
+$action-text-02-dark:    $white;
+$action-text-03-dark:    $white-tint-90;
+$action-text-04-dark:    $white-tint-80;
+$action-text-05-dark:    $primary-100;
+
+$action-colors-dark: (
+    "01":   $action-01-dark, 
+    "02":   $action-02-dark, 
+    "03":   $action-03-dark, 
+    "04":   $action-04-dark,
+    "05":   $action-05-dark, 
+    "06":   $action-06-dark, 
+    "07":   $action-07-dark, 
+    "08":   $action-08-dark, 
+    "09":   $action-09-dark,
+    "10":   $action-10-dark,
+    "11":   $action-11-dark,
+);
+
+$action-text-colors-dark: (
+    "01":   $action-text-01-dark, 
+    "02":   $action-text-02-dark, 
+    "03":   $action-text-03-dark, 
+    "04":   $action-text-04-dark, 
+    "05":   $action-text-05-dark,
+);
+
+
+// Action danger colours ________________
+$action-danger-01-dark:         $danger-60;
+$action-danger-02-dark:         $danger-80;
+$action-danger-03-dark:         $danger-90;
+$action-danger-04-dark:         $danger-tint-10;
+
+$action-text-danger-01-dark:    $danger-60;
+
+$action-danger-colors-dark: (
+    "01":   $action-danger-01-dark, 
+    "02":   $action-danger-02-dark, 
+    "03":   $action-danger-03-dark, 
+    "04":   $action-danger-04-dark, 
+);
+
+$action-text-danger-colors-dark: (
+    "01":   $action-text-danger-01-dark,
+);
+
+// Feedback colours _____________________
+$feedback-background-info-dark:        $info-tint-20;
+$feedback-overlay-info-dark:           $info-tint-20;
+$feedback-border-info-dark:            $info-50;
+$feedback-message-info-dark:           $info-40;
+$feedback-body-info-dark:              $info-10;
+$feedback-shadow-info-dark:            $info-100;
+
+$feedback-background-success-dark:     $valid-tint-20;
+$feedback-overlay-success-dark:        $valid-tint-10;
+$feedback-border-success-dark:         $valid-60;
+$feedback-message-success-dark:        $valid-50;
+$feedback-body-success-dark:           $valid-10;
+$feedback-shadow-success-dark:         $valid-100;
+
+$feedback-background-warning-dark:     $caution-tint-10;
+$feedback-overlay-warning-dark:        $caution-tint-10;
+$feedback-border-warning-dark:         $caution-60;
+$feedback-message-warning-dark:        $caution-50;
+$feedback-body-warning-dark:           $caution-10;
+$feedback-shadow-warning-dark:         $caution-100;
+
+$feedback-background-error-dark:       $danger-tint-10;
+$feedback-overlay-error-dark:          $danger-tint-10;
+$feedback-border-error-dark:           $danger-60;
+$feedback-message-error-dark:          $danger-40;
+$feedback-body-error-dark:             $danger-10;
+$feedback-shadow-error-dark:           $danger-100;
+
+$feedback-colours-dark: (
+    "info": (
+        "background":   $feedback-background-info-dark,
+        "overlay":      $feedback-overlay-info-dark,
+        "border":       $feedback-border-info-dark,
+        "message":      $feedback-message-info-dark,
+        "body":         $feedback-body-info-dark,
+        "shadow":       $feedback-shadow-info-dark,
+    ),
+
+    "success": (
+        "background":   $feedback-background-success-dark,
+        "overlay":      $feedback-overlay-success-dark,
+        "border":       $feedback-border-success-dark,
+        "message":      $feedback-message-success-dark,
+        "body":         $feedback-body-success-dark,
+        "shadow":       $feedback-shadow-success-dark,
+    ),
+
+    "warning": (
+        "background":   $feedback-background-warning-dark,
+        "overlay":      $feedback-overlay-warning-dark,
+        "border":       $feedback-border-warning-dark,
+        "message":      $feedback-message-warning-dark,
+        "body":         $feedback-body-warning-dark,
+        "shadow":       $feedback-shadow-warning-dark,
+    ),
+
+    "error": (
+        "background":   $feedback-background-error-dark,
+        "overlay":      $feedback-overlay-error-dark,
+        "border":       $feedback-border-error-dark,
+        "message":      $feedback-message-error-dark,
+        "body":         $feedback-body-error-dark,
+        "shadow":       $feedback-shadow-error-dark,
+    )
+);
+
+
+// UI stuff _________________________________________________________________________________________________________________________
+
+// Body _________________________________
+//
+// Settings for the `<body>` element.
+$body-color-dark:           var(--text-primary);
+$body-secondary-color-dark: var(--text-muted);
+$body-background-dark:      var(--ui-background-01);
+$body-background-b-dark:    var(--primary-tint-30);
+
+
+
+// Font stuff _______________________________________________________________________________________________________________________
+
+// Links ________________________________
+//
+// Style anchor elements.
+
+$link-colour-dark:         $text-active-dark;
+$link-icon-dark:           $link-colour-dark;
+
+$link-hover-dark:          $link-colour-dark;
+$link-icon-hover-dark:     $link-hover-dark;
+
+// $link-focus-dark:            $link-colour;
+// $link-icon-focus-dark:       $link-focus;
+
+$link-active-dark:         $text-primary-dark;
+$link-icon-active-dark:    $link-active-dark;
+
+// Visited links
+// To enable a colour change on visit change this colour to var(--expressive-secondary-deep) (recommeded)
+// By default this is this same as link.
+$link-visited-dark:          $link-colour-dark;
+$link-icon-visited-dark:     $link-visited-dark;
+
+
+// Horizontal rule ______________________
+$hr-color-dark:          $ui-border-03-dark;
+
+
+
+// Component stuff __________________________________________________________________________________________________________________
+
+// Forms ________________________________
+$form-input-background-dark:           var(--#{$prefix-bh}ui-overlay-01);
+$form-input-background-disabled-dark:  var(--#{$prefix-bh}disabled-01);
+$form-input-border-disabled-dark:      var(--#{$prefix-bh}disabled-01);
+$form-text-disabled-dark:              var(--#{$prefix-bh}disabled-03);
+
+// $form-input-border-focus:         $focus-ring-color;
+// $form-input-focus-ring:           0 0 $focus-ring-blur $form-input-focus-ring-width $focus-ring-color;
+
+
+// Form validation ______________________
+$form-input-icon-error-dark:             map-get($state-colours-dark, "error-01");
+$form-input-icon-svg-dark:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$form-input-icon-error-dark}'><!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--><path d='M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z'/></svg>");
+$form-feedback-icon-svg-dark:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$form-input-icon-error-dark}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z'/></svg>");
+
+$form-validation-states-dark: (
+  "invalid": (
+    "icon": $form-input-icon-svg-dark,
+    "feedback-icon": $form-feedback-icon-svg-dark,
+  )
+);
+
+
+
+// Checkbox _____________________________
+
+$checkbox-label-dark:                        var(--#{$prefix-bh}text-secondary);
+$checkbox-input-background-dark:             var(--#{$prefix-bh}transparent);
+$checkbox-input-border-dark:                 var(--#{$prefix-bh}action-02);
+
+// $checkbox-focus-ring:                   0 0 0 1px $ui-border-04, 0 0 0 3px $focus-ring-color;
+
+$checkbox-input-background-active-dark:      var(--#{$prefix-bh}action-02);
+$checkbox-input-border-active-dark:          var(--#{$prefix-bh}action-02);
+$checkbox-icon-check-dark:                   map-get($action-text-colors-dark, "05");
+
+$checkbox-check-svg-dark:                    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$checkbox-icon-check-dark}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/></svg>");
+
+// Disabled
+$checkbox-input-background-disabled-dark:    var(--#{$prefix-bh}disabled-03);
+$checkbox-check-disabled-dark:               map-get($action-text-colors-dark, "05");
+$checkbox-label-disabled-dark:               var(--#{$prefix-bh}disabled-03);
+
+// Read-only
+$checkbox-input-background-readonly-dark:         $checkbox-input-background-dark;
+$checkbox-input-background-readonly-active-dark:  var(--#{$prefix-bh}disabled-04);
+$checkbox-input-border-readonly-dark:             var(--#{$prefix-bh}disabled-04);
+$checkbox-icon-check-readonly-dark:               map-get($action-text-colors-dark, "05");
+$checkbox-check-svg-readonly-dark:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$checkbox-icon-check-readonly-dark}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/></svg>");
+
+// Indeterminate
+$checkbox-icon-indeterminate-dark:               $checkbox-icon-check-dark;
+$checkbox-icon-indeterminate-readonly-dark:      $checkbox-icon-check-readonly-dark;
+$checkbox-input-background-indeterminate-dark:   $checkbox-input-background-active-dark;
+$checkbox-input-border-indeterminate-dark:       $checkbox-input-border-active-dark;
+$checkbox-input-svg-indeterminate-dark:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640' fill='#{$checkbox-icon-indeterminate-dark}'><!--!Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320z'/></svg>");
+$checkbox-input-svg-indeterminate-readonly-dark: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640' fill='#{$checkbox-icon-indeterminate-readonly-dark}'><!--!Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320z'/></svg>");
+
+// Radio
+$radio-pip-active-dark:                      $checkbox-icon-check-dark;
+$radio-pip-readonly-dark:                    $checkbox-icon-check-readonly-dark;
+$radio-pip-svg-dark:                         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$radio-pip-active-dark}'/></svg>");
+$radio-pip-svg-readonly-dark:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$radio-pip-readonly-dark}'/></svg>");
+$radio-pip-disabled-dark:                    $checkbox-check-disabled-dark;
+
+
+
+// Switch _______________________________
+$switch-track-background-dark:       var(--#{$prefix-bh}ui-overlay-03);
+
+$switch-handle-dark:                       map-get($action-colors-dark, "08");
+$switch-handle-on-dark:                    $switch-handle-dark;
+$switch-handle-svg-dark:                   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$switch-handle-dark}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z'/></svg>");
+$switch-handle-svg-on-dark:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$switch-handle-on-dark}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z'/></svg>");
+$switch-track-background-disabled-dark:    var(--#{$prefix-bh}disabled-03);
+
+
+
+// Navs _________________________________
+$nav-link-dark:                       var(--#{$prefix-bh}action-text-03);
+$nav-link-hover-dark:                 var(--#{$prefix-bh}action-text-03);
+$nav-link-active-dark:                var(--#{$prefix-bh}action-text-02);
+$nav-link-disabled-dark:              var(--#{$prefix-bh}disabled-03);
+$nav-link-background-hover-dark:      var(--#{$prefix-bh}action-07);
+$nav-link-background-active-dark:     var(--#{$prefix-bh}action-05);
+
+// $nav-link-border-focus:             var(--#{$prefix-bh}action-07);
+
+
+
+// Card _________________________________
+$card-border-dark:                      var(--ui-border-02);
+$card-background-dark:                  var(--ui-overlay-01);
+$card-background-secondary-dark:        var(--ui-overlay-04);
+
+// $card-cap-background:                var(--ui-overlay-02);
+
+
+// Clickable
+$card-clickable-border-hover-dark:      var(--link-hover); 
+$card-clickable-border-disabled-dark:   $transparent;
+$card-clickable-text-disabled-dark:     var(--#{$prefix-bh}disabled-03);
+
+
+// Selectable
+$card-selectable-border-hover-dark:       $card-clickable-border-hover-dark;
+$card-selectable-background-active-dark:  var(--#{$prefix-bh}action-04);
+$card-selectable-border-active-dark:      var(--#{$prefix-bh}action-01);
+$card-selectable-focus-ring-dark:         $checkbox-focus-ring;
+
+
+
+// Icon _________________________________
+$icon-block-background-dark:              var(--#{$prefix-bh}ui-overlay-02);
+
+
+
+// Collapse _____________________________
+$collapse-card-background-dark:           var(--#{$prefix-bh}ui-overlay-01);
+
+
+// Modal ________________________________
+$modal-background-dark:        var(--#{$prefix-bh}ui-overlay-01);
+$modal-border-dark:            var(--#{$prefix-bh}ui-border-03);
+$modal-background-blur-dark:   2rem;
+
+
+// Modal backdrop
+$modal-backdrop-blur-dark:     1rem;
+
+
+// Table ________________________________
+$table-border-dark:             var(--#{$prefix-bh}ui-border-03);
+$table-hover-background-dark:   var(--#{$prefix-bh}ui-overlay-01);
+$table-header-background-dark:  var(--#{$prefix-bh}ui-overlay-02);

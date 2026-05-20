@@ -1,0 +1,142 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+// scss-docs-start btn-variant-mixin
+// @mixin button-variant(
+//   $variant,
+//   $label:               map-get($variant, "resting", "label"),
+//   $background:          map-get($variant, "resting", "background"),
+//   $border:              map-get($variant, "resting", "border"),
+//   $label-hover:         map-get($variant, "hover", "label"),
+//   $background-hover:    map-get($variant, "hover", "background"),
+//   $border-hover:        map-get($variant, "hover", "border"),
+//   $label-active:        map-get($variant, "active", "label"),
+//   $background-active:   map-get($variant, "active", "background"),
+//   $border-active:       map-get($variant, "active", "border"),
+//   $label-focus:         map-get($variant, "focus", "label"),
+//   $background-focus:    map-get($variant, "focus", "background"),
+//   $border-focus:        map-get($variant, "focus", "border"),
+//   $background-readonly: map-get($variant, "readonly", "background"),
+//   $border-readonly:     map-get($variant, "readonly", "border"),
+//   $label-readonly:      map-get($variant, "readonly", "label"),
+// ) {
+
+//   --#{$prefix-bh}button-label: #{$label};
+//   --#{$prefix-bh}button-background: #{$background};
+//   --#{$prefix-bh}button-border: #{$border};
+
+//   --#{$prefix-bh}button-label-hover: #{$label-hover};
+//   --#{$prefix-bh}button-background-hover: #{$background-hover};
+//   --#{$prefix-bh}button-border-hover: #{$border-hover};
+
+//   --#{$prefix-bh}button-label-active: #{$label-active};
+//   --#{$prefix-bh}button-background-active: #{$background-active};
+//   --#{$prefix-bh}button-border-active: #{$border-active};
+
+//   --#{$prefix-bh}button-label-focus: #{$label-focus};
+//   --#{$prefix-bh}button-background-focus: #{$background-focus};
+//   --#{$prefix-bh}button-border-focus: #{$border-focus};
+
+//   @if($variant == $button-response){
+//     --#{$prefix-bh}button-label-readonly: #{$label-readonly};
+//     --#{$prefix-bh}button-background-readonly: #{$background-readonly};
+//     --#{$prefix-bh}button-border-readonly: #{$border-readonly};
+//   }
+// }
+
+@function map-deep-get($map, $keys...) {
+  $value: $map;
+
+  @each $key in $keys {
+    @if type-of($value) != "map" or not map-has-key($value, $key) {
+      @return null;
+    }
+    $value: map-get($value, $key);
+  }
+
+  @return $value;
+}
+
+@mixin css-var-if($name, $value) {
+  @if $value != null and $value != "" {
+    --#{$prefix-bh}#{$name}: #{$value};
+  }
+}
+
+@mixin button-variant(
+  $variant,
+  $label:              map-deep-get($variant, "resting", "label"),
+  $background:         map-deep-get($variant, "resting", "background"),
+  $background-b:       map-deep-get($variant, "resting", "background-b"),
+  $border:             map-deep-get($variant, "resting", "border"),
+  $gradient:           map-deep-get($variant, "resting", "gradient"),
+
+  $label-hover:        map-deep-get($variant, "hover", "label"),
+  $background-hover:   map-deep-get($variant, "hover", "background"),
+  $border-hover:       map-deep-get($variant, "hover", "border"),
+
+  $label-active:       map-deep-get($variant, "active", "label"),
+  $background-active:  map-deep-get($variant, "active", "background"),
+  $border-active:      map-deep-get($variant, "active", "border"),
+
+  $label-focus:        map-deep-get($variant, "focus", "label"),
+  $background-focus:   map-deep-get($variant, "focus", "background"),
+  $border-focus:       map-deep-get($variant, "focus", "border"),
+
+  $background-readonly: map-deep-get($variant, "readonly", "background"),
+  $border-readonly:     map-deep-get($variant, "readonly", "border"),
+  $label-readonly:      map-deep-get($variant, "readonly", "label"),
+) {
+
+  @include css-var-if("button-label", $label);
+  @include css-var-if("button-background", $background);
+  @if $gradient == true and $button-gradients {
+    @include css-var-if("button-background-b", $background-b);
+    background-image: linear-gradient(
+      0deg,
+      var(--#{$prefix-bh}button-background-b) 0%,
+      var(--#{$prefix-bh}button-background) 100%
+    );
+  }
+  @include css-var-if("button-border", $border);
+
+  @include css-var-if("button-label-hover", $label-hover);
+  @include css-var-if("button-background-hover", $background-hover);
+  @include css-var-if("button-border-hover", $border-hover);
+
+  @include css-var-if("button-label-active", $label-active);
+  @include css-var-if("button-background-active", $background-active);
+  @include css-var-if("button-border-active", $border-active);
+
+  @include css-var-if("button-label-focus", $label-focus);
+  @include css-var-if("button-background-focus", $background-focus);
+  @include css-var-if("button-border-focus", $border-focus);
+
+  @if ($variant == $button-response) {
+    @include css-var-if("button-label-readonly", $label-readonly);
+    @include css-var-if("button-background-readonly", $background-readonly);
+    @include css-var-if("button-border-readonly", $border-readonly);
+  }
+}
+// scss-docs-end btn-variant-mixin
+
+// scss-docs-start btn-outline-variant-mixin
+// REMOVED //
+// scss-docs-end btn-outline-variant-mixin
+
+// scss-docs-start btn-size-mixin
+@mixin button-size($padding-y, $padding-x, $border-radius) {
+  --#{$prefix-bh}button-padding-y:      #{$padding-y};
+  --#{$prefix-bh}button-padding-x:      #{$padding-x};
+  --#{$prefix-bh}button-radius:         #{$border-radius};
+}
+// scss-docs-end btn-size-mixin
+
+
+@mixin css-var-if($name, $value) {
+  @if $value != null and $value != "" {
+    --#{$name}: #{$value};
+  }
+}

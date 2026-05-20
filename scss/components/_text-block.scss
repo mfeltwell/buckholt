@@ -1,0 +1,48 @@
+//
+// Base styles
+//
+
+.text-block {
+    --fa-width: auto; // Fix for Font Awesome icon widths
+    --#{$prefix-bh}eyebrow: #{$eyebrow};
+
+    // color: var(--body-color);
+
+    .icon-block {
+        margin-bottom: $text-block-gap;
+    }
+
+    .heading {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    p, h1, h2, h3, h4, h5, h6, .eyebrow, .heading-content {
+        max-width: var(--#{$prefix-bh}text-max-width);
+    }
+
+}
+
+.eyebrow {
+    @include type($body, "01");
+    color: var(--#{$prefix-bh}eyebrow);
+    margin-bottom: $text-block-gap;
+    display: block;
+}
+
+
+// Component spacing for paragraph and lists inside text block
+.text-block p ~ .list {
+    margin-top: $spacer-04;
+}
+
+.text-block .list:has(~ p) {
+    margin-bottom: $spacer-04;
+}
+
+.text-block .list {
+    margin-top: $paragraph-margin-top;
+    margin-bottom: $paragraph-margin-bottom;
+}

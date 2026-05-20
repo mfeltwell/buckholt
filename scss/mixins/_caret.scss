@@ -1,0 +1,63 @@
+// scss-docs-start caret-mixins
+@mixin caret-down($width: $caret-size) {
+    content: '\f0d7';
+    font-size: $width;
+}
+
+@mixin caret-up($width: $caret-size) {
+    content: '\f0d8';
+    font-size: $width;
+}
+
+@mixin caret-end($width: $caret-size) {
+    content: '\f0da';
+    font-size: $width;
+}
+
+@mixin caret-start($width: $caret-size) {
+    content: '\f0d9';
+    font-size: $width;
+}
+
+@mixin caret(
+    $direction: down,
+    $width: $caret-size,
+) {
+    @if $enable-caret {
+        &::after {
+            --#{$prefix-bh}caret-svg: #{$caret-svg};
+
+            display: inline-block;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font: var(--fa-font-solid);
+            color: var(--#{$prefix-bh}caret-svg);
+            @if $direction == down {
+            @include caret-down($width);
+            } @else if $direction == up {
+            @include caret-up($width);
+            } @else if $direction == end {
+            @include caret-end($width);
+            }
+        }
+
+        @if $direction == start {
+            &::after {
+                display: none;
+            }
+
+            &::before {
+                display: inline-block;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                font: var(--fa-font-solid);
+                @include caret-start($width);
+            }
+        }
+
+        &:empty::after {
+            margin-left: 0;
+        }
+    }
+}
+  // scss-docs-end caret-mixins

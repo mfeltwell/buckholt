@@ -1,0 +1,74 @@
+//
+// Base styles
+//
+
+.avatar {
+    --#{$prefix-bh}avatar-size:         #{$avatar-size};
+    --#{$prefix-bh}avatar-background:   #{$avatar-background};
+    --#{$prefix-bh}avatar-border:       #{$avatar-border};
+    --#{$prefix-bh}avatar-text:         #{$avatar-text};
+    --#{$prefix-bh}avatar-icon-size:    #{$avatar-icon-size};
+
+
+    background-color: var(--#{$prefix-bh}avatar-background);
+    border: $avatar-border-width solid var(--#{$prefix-bh}avatar-border);
+    border-radius: var(--border-radius-full);
+    color: var(--#{$prefix-bh}avatar-text);
+    height: var(--#{$prefix-bh}avatar-size);
+    width: var(--#{$prefix-bh}avatar-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include type($label, "03");
+    overflow: hidden;
+    text-transform: uppercase;
+
+    &:has(img) {
+        --#{$prefix-bh}avatar-border:   #{$avatar-img-border};
+        --#{$prefix-bh}avatar-background:   transparent;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    // Expressive colours
+    &.expressive-dark {
+        --#{$prefix-bh}avatar-text:            #{$text-light};
+        --#{$prefix-bh}avatar-background:      #{$expressive-rich};
+    }
+}
+
+.avatar-icon {
+    font-size: var(--#{$prefix-bh}avatar-icon-size);
+}
+
+.avatar-sm {
+    --#{$prefix-bh}avatar-size:         #{$avatar-size-sm};
+    --#{$prefix-bh}avatar-icon-size:    #{$avatar-icon-size-sm};
+
+    @include type($label, "02");
+}
+
+.avatar-xs {
+    --#{$prefix-bh}avatar-size:         #{$avatar-size-xs};
+    --#{$prefix-bh}avatar-icon-size:    #{$avatar-icon-size-xs};
+
+    @include type($label, "01");
+}
+
+// Avatar set - Check out set.scss for generic set rules.
+.avatar-set {
+    --set-gap: 0;
+    --avatar-set-overlap: #{$avatar-set-overlap};
+
+    // .avatar {
+    //     --#{$prefix-bh}avatar-border:   #{$avatar-img-border};
+    // }
+}
+
+.avatar-set .avatar:not(:first-child) {
+    margin-left: calc(var(--avatar-set-overlap) * -1);
+}

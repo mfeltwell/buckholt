@@ -1,0 +1,18 @@
+//
+// Helper text
+//
+
+.form-helper {
+    --#{$prefix-bh}form-helper:   #{$form-helper};
+
+    margin-top: $form-helper-margin-top;
+    @include type($support, "01");
+    color: var(--#{$prefix-bh}form-helper);
+}
+
+.input:has(.form-control:disabled, .form-select:disabled, .btn-check:disabled) .form-helper,
+.input:has(.form-control[readonly]) .form-helper,
+.input:has(.check-input).disabled .form-helper,
+.input:has(.form-check-input[readonly]) .form-helper {
+    display: none;
+}

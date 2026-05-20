@@ -1,0 +1,80 @@
+// Make the div behave like a button
+.btn-combo {
+  @include border-radius($button-radius);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  // gap: 1px;
+
+  > .btn {
+    position: relative;
+    flex: 1 1 auto;
+  }
+
+  // Bring the hover, focused, and "active" buttons to the front to overlay
+  // the borders properly
+  > .btn-check:checked + .btn,
+  > .btn-check:focus + .btn,
+  > .btn:hover,
+  > .btn:focus,
+  > .btn:active,
+  > .btn.active {
+    z-index: 1;
+  }
+
+  // Prevent double borders when buttons are next to each other
+  > :not(.btn-check:first-child) + .btn,
+  > .btn-combo:not(:first-child) {
+    // margin-left: calc(#{$button-border-width} * -1); // stylelint-disable-line function-disallowed-list
+    border-left-width: 0;
+  }
+
+  // Reset rounded corners
+  > .btn:not(:last-child):not(.menu-toggle),
+  > .btn.menu-toggle-split:first-child,
+  > .btn-combo:not(:last-child) > .btn {
+    @include border-end-radius(0);
+  }
+
+  // The left radius should be 0 if the button is:
+  // - the "third or more" child
+  // - the second child and the previous element isn't `.btn-check` (making it the first child visually)
+  // - part of a btn-group which isn't the first child
+  > .btn:nth-child(n + 3),
+  > :not(.btn-check) + .btn,
+  > .btn-combo:not(:first-child) > .btn {
+    @include border-start-radius(0);
+  }
+}
+
+// Optional: Group multiple button groups together for a toolbar
+.btn-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .input-group {
+    width: auto;
+  }
+}
+
+
+// Sizing
+//
+// Remix the default button sizing classes into new ones for easier manipulation.
+
+.btn-combo-sm > .btn { @extend .btn-sm; }
+.btn-combo-lg > .btn { @extend .btn-lg; }
+
+
+// The clickable button for toggling the menu
+// Set the same inset shadow as the :active state
+.btn-combo.show .menu-toggle {
+  @include box-shadow($btn-active-box-shadow);
+
+  // Show no shadow for `.btn-link` since it has no other button styles.
+  &.btn-link {
+    @include box-shadow(none);
+  }
+}

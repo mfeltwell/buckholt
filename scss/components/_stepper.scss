@@ -1,0 +1,133 @@
+//
+// Base styles
+//
+
+.stepper {
+    --#{$prefix-bh}stepper-item:                    #{$stepper-item};
+    --#{$prefix-bh}stepper-item-connector:          #{$stepper-item-connector};
+    --#{$prefix-bh}stepper-icon-svg:                #{escape-svg($stepper-icon-svg)};
+    --#{$prefix-bh}sub-stepper-icon-svg:            #{escape-svg($sub-stepper-icon-svg)};
+    --#{$prefix-bh}stepper-icon-background:         #{$transparent};
+    --#{$prefix-bh}stepper-icon-size:               #{$stepper-icon-size};
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.stepper-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    column-gap: $stepper-item-gap;
+    flex-wrap: wrap;
+    @include type($title, "01");
+    color: var(--#{$prefix-bh}stepper-item);
+
+    &:not(:first-child) {
+        margin-top: $stepper-item-connector-height;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: $stepper-item-connector-width;
+        height: $stepper-item-connector-height;
+        margin: 0 calc($stepper-icon-width/2 - $stepper-item-connector-width/2);
+        background-color: var(--#{$prefix-bh}stepper-item-connector);
+        border-radius: $border-radius-full;
+        position: absolute;
+        top: -1*$stepper-item-connector-height;
+    }
+
+    &:first-child:not(.sub-stepper &)::before {
+        display: none;
+    }
+
+    &.active {
+        --#{$prefix-bh}stepper-icon-svg: #{escape-svg($stepper-icon-svg-active)};
+        --#{$prefix-bh}stepper-icon-background: #{$stepper-icon-background-active};
+    }
+
+    &.success {
+        --#{$prefix-bh}stepper-icon-svg: #{escape-svg($stepper-icon-svg-success)};
+        --#{$prefix-bh}stepper-item: #{$stepper-item-success};
+        --#{$prefix-bh}stepper-icon-size: #{$stepper-icon-size-success};
+
+        + .stepper-item::before {
+            --#{$prefix-bh}stepper-item-connector: #{$stepper-item-connector-success};
+        }
+    }
+
+    &.disabled {
+        --#{$prefix-bh}stepper-item: #{$stepper-item-disabled};
+        --#{$prefix-bh}stepper-item-connector: #{$stepper-item-disabled};
+        --#{$prefix-bh}stepper-icon-svg: #{escape-svg($stepper-icon-svg-disabled)};
+    }
+
+    &.error {
+        --#{$prefix-bh}stepper-icon-svg: #{escape-svg($stepper-icon-svg-error)};
+        --#{$prefix-bh}stepper-item: #{$stepper-item-error};
+    }
+}
+
+.stepper-icon {
+    background-image: var(--#{$prefix-bh}stepper-icon-svg);
+    background-size: auto var(--#{$prefix-bh}stepper-icon-size);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--#{$prefix-bh}stepper-icon-background);
+    width: calc($stepper-icon-width - 2*$stepper-icon-margin);
+    height: calc($stepper-icon-height - 2*$stepper-icon-margin);
+    margin: $stepper-icon-margin;
+    border-radius: $stepper-icon-radius;
+}
+
+.sub-stepper {
+    --#{$prefix-bh}stepper-item: #{$stepper-item};
+    --#{$prefix-bh}stepper-icon-size: #{$stepper-icon-size};
+
+    padding: 0;
+    width: 100%;
+
+    .stepper-item {
+        margin-top: $sub-stepper-item-connector-height;
+        @include type($body, "01");
+        font-weight: 500;
+
+        &::before {
+            height: $sub-stepper-item-connector-height;
+            top: -1*$sub-stepper-item-connector-height;
+        }
+
+        &.active {
+            --#{$prefix-bh}sub-stepper-icon-svg: #{escape-svg($sub-stepper-icon-svg-active)};
+        }
+
+        &.success {
+            --#{$prefix-bh}sub-stepper-icon-svg: #{escape-svg($sub-stepper-icon-svg-success)};
+            --#{$prefix-bh}stepper-icon-size: #{$stepper-icon-size};
+            --#{$prefix-bh}stepper-item: #{$stepper-item};
+
+            + .stepper-item::before {
+                --#{$prefix-bh}stepper-item-connector: #{$stepper-item-connector};
+            }
+        }
+
+        &.disabled {
+            --#{$prefix-bh}sub-stepper-icon-svg: #{escape-svg($sub-stepper-icon-svg-disabled)};
+        }
+
+        &.error {
+            --#{$prefix-bh}sub-stepper-icon-svg: #{escape-svg($stepper-icon-svg-error)};
+            --#{$prefix-bh}stepper-icon-size: #{$sub-stepper-icon-size-error};
+        }
+    }
+
+    .stepper-icon {
+        background-image: var(--#{$prefix-bh}sub-stepper-icon-svg);
+        background-size: auto var(--#{$prefix-bh}stepper-icon-size);
+        height: $sub-stepper-item-icon-height;
+        background-color: unset;
+    }
+}

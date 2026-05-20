@@ -1,0 +1,12 @@
+//
+// Nested inputs
+//
+
+.nested-inputs {
+    @extend .form;
+    gap: $form-body-gap;
+    margin-top: $nested-inputs-margin-top;
+    padding: $nested-inputs-padding-y $nested-inputs-padding-x;
+    padding-left: $nested-inputs-padding-left;
+    border-left: $nested-inputs-border-width solid $nested-inputs-border;
+}

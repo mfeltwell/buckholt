@@ -1,0 +1,438 @@
+//
+// Check/radio
+//
+
+.form-check {
+  --#{$prefix-bh}form-check-label:          #{$checkbox-label};
+  --#{$prefix-bh}form-check-label-disabled: #{$checkbox-label-disabled};
+
+  display: flex;
+  align-items: flex-start;
+  gap: $checkbox-input-gap;
+}
+
+// .form-check-reverse {
+//   text-align: right;
+
+//   .form-check-label {
+//     order: 1;
+//   }
+
+//   .form-check-input {
+//     order: 2;
+//   }
+// }
+
+.form-check-input {
+  --#{$prefix-bh}form-check-input-background:           #{$checkbox-input-background};
+  --#{$prefix-bh}form-check-input-border:               #{$checkbox-input-border};
+  --#{$prefix-bh}form-check-input-border-width:         #{$checkbox-input-border-width};
+  --#{$prefix-bh}form-check-input-focus:                #{$checkbox-focus-ring};
+
+  --#{$prefix-bh}form-check-input-background-active:    #{$checkbox-input-background-active};
+  --#{$prefix-bh}form-check-input-border-active:        #{$checkbox-input-border-active};
+
+  --#{$prefix-bh}form-check-input-background-disabled:  #{$checkbox-input-background-disabled};
+  --#{$prefix-bh}form-check-input-border-disabled:      #{$checkbox-input-border-disabled};
+
+
+  flex-shrink: 0;
+  width: $checkbox-input-width;
+  height: $checkbox-input-width;
+
+  vertical-align: top;
+  appearance: none;
+  background-color: var(--#{$prefix-bh}form-check-input-background);
+  background-image: var(--#{$prefix-bh}check-svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: var(--#{$prefix-bh}form-check-input-border-width) solid var(--#{$prefix-bh}form-check-input-border);
+  print-color-adjust: exact; // Keep themed appearance for print
+  @include transition($form-check-transition);
+
+  &:has(~ .form-check-label),
+  &:has(~ label) {
+    margin: $checkbox-input-margin-y 0;
+  }
+
+  &[type="checkbox"] {
+    @include border-radius($checkbox-input-radius);
+  }
+
+  &[type="radio"] {
+    // stylelint-disable-next-line property-disallowed-list
+    border-radius: $radio-input-radius;
+  }
+
+  &:active {
+    filter: $form-check-input-active-filter;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: var(--#{$prefix-bh}form-check-input-focus);
+  }
+
+  &:checked {
+    background-color: var(--#{$prefix-bh}form-check-input-background-active);
+    border-color: var(--#{$prefix-bh}form-check-input-border-active);
+
+    &[type="checkbox"] {
+      @if $enable-gradients {
+        --#{$prefix-bh}check-svg: #{escape-svg($checkbox-check-svg)}, var(--#{$prefix}gradient);
+      } @else {
+        --#{$prefix-bh}check-svg: #{escape-svg($checkbox-check-svg)};
+      }
+    }
+
+    &[type="radio"] {
+      @if $enable-gradients {
+        --#{$prefix-bh}check-svg: #{escape-svg($radio-pip-svg)}, var(--#{$prefix}gradient);
+      } @else {
+        --#{$prefix-bh}check-svg: #{escape-svg($radio-pip-svg)};
+      }
+    }
+  }
+
+  &[type="checkbox"]:indeterminate {
+    --#{$prefix-bh}form-check-input-background: #{$checkbox-input-background-indeterminate};
+    --#{$prefix-bh}form-check-input-border:     #{$checkbox-input-border-indeterminate};
+
+    @if $enable-gradients {
+      --#{$prefix-bh}check-svg: #{escape-svg($checkbox-input-svg-indeterminate)}, var(--#{$prefix}gradient);
+    } @else {
+      --#{$prefix-bh}check-svg: #{escape-svg($checkbox-input-svg-indeterminate)};
+    }
+  }
+
+  &:disabled,
+  &:disabled:checked,
+  &:disabled:indeterminate {
+    background-color: var(--#{$prefix-bh}form-check-input-background-disabled);
+    border-color: var(--#{$prefix-bh}form-check-input-border-disabled);
+
+    pointer-events: none;
+    filter: none;
+  }
+
+  // Use disabled attribute in addition of :disabled pseudo-class
+  // See: https://github.com/twbs/bootstrap/issues/28247
+  &[disabled],
+  &:disabled {
+    ~ .form-check-label,
+    ~ .input-label .form-check-label {
+      cursor: default;
+      color: var(--#{$prefix-bh}form-check-label-disabled);
+    }
+  }
+
+  &[readonly],
+  &[readonly]:indeterminate {
+    --#{$prefix-bh}form-check-input-background: #{$checkbox-input-background-readonly};
+    --#{$prefix-bh}form-check-input-border:     #{$checkbox-input-border-readonly};
+
+    background-color: var(--#{$prefix-bh}form-check-input-background);
+    border-color: var(--#{$prefix-bh}form-check-input-border);
+  }
+
+  &[readonly]:checked {
+    &[type="checkbox"] {
+      --#{$prefix-bh}check-svg: #{escape-svg($checkbox-check-svg-readonly)};
+    }
+
+    &[type="radio"] {
+      --#{$prefix-bh}check-svg: #{escape-svg($radio-pip-svg-readonly)};
+    }
+  }
+
+  &[type="checkbox"][readonly]:indeterminate {
+    --#{$prefix-bh}check-svg: #{escape-svg($checkbox-input-svg-indeterminate-readonly)};
+  }
+
+  &:not([readonly]):hover,
+  &:not(:disabled, [disabled], [readonly]) ~ .form-check-label:hover,
+  &:not(:disabled, [disabled], [readonly]) ~ * .form-check-label:hover {
+    cursor: pointer;
+  }
+
+}
+
+.form-check-label {
+  color: var(--#{$prefix-bh}form-check-label);
+  @include type($label, '02');
+  cursor: $form-check-label-cursor;
+}
+
+//
+// Switch
+//
+
+.form-switch {
+  --#{$prefix-bh}switch-track-background:     #{$switch-track-background};
+  --#{$prefix-bh}switch-track-border:         #{$switch-track-border};
+  --#{$prefix-bh}switch-status-tag:           #{$switch-status-tag};
+  --#{$prefix-bh}switch-padding-y:            #{$switch-padding-y};
+  --#{$prefix-bh}switch-padding-x:            #{$switch-padding-x};
+  --#{$prefix-bh}switch-handle-svg:           #{escape-svg($switch-handle-svg)};
+  --#{$prefix-bh}switch-handle-svg-on:        #{escape-svg($switch-handle-svg-on)};
+
+  --#{$prefix-bh}switch-track-background-on:  #{$switch-track-background-on};
+  --#{$prefix-bh}switch-track-border-on:      #{$switch-track-border-on};
+  --#{$prefix-bh}switch-status-tag-on:        #{$switch-status-tag-on};
+
+  --#{$prefix-bh}switch-track-background-disabled:  #{$switch-track-background-disabled};
+  --#{$prefix-bh}switch-track-border-disabled:      #{$switch-track-border-disabled};
+  --#{$prefix-bh}switch-status-tag-disabled:        #{$switch-status-tag-disabled};
+
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: $switch-input-gap;
+
+  &:not(.form-switch-sm),
+  &.form-switch-status {
+    .form-check-input {
+      margin-left: 1.5rem;
+
+      &::before {
+        content: 'Off';
+        position: absolute;
+        top: 50%;
+        left: -0.5rem;  
+        transform: translate(-100%, -50%);
+        @include type($support, "01");
+        text-align: right;
+        color: var(--#{$prefix-bh}switch-status-tag);
+      }
+
+      &:checked {
+        &::before {
+          content: 'On';
+          color: var(--#{$prefix-bh}switch-status-tag-on);
+        }
+      }
+    }
+  }
+
+  .form-check-input {
+    --#{$prefix-bh}form-switch-handle: var(--#{$prefix-bh}switch-handle-svg);
+
+    background-image: var(--#{$prefix-bh}form-switch-handle);
+    background-position: left calc(calc($switch-handle-size-on - $switch-handle-size) / 2 + calc(var(--#{$prefix-bh}switch-padding-x) - $checkbox-input-border-width)) center;
+    background-size: $switch-handle-size;
+    margin: 0;
+    width: calc((var(--#{$prefix-bh}switch-padding-x) * 2) + ($switch-handle-size-on * 2));
+    height: calc($switch-handle-size-on + calc(var(--#{$prefix-bh}switch-padding-y) * 2));
+    background-color: var(--#{$prefix-bh}switch-track-background);
+    border-color: var(--#{$prefix-bh}switch-track-border);
+    @include border-radius($switch-radius, 0);
+    @include transition($form-switch-transition);
+    position: relative;
+
+    // &:focus {
+    //   --#{$prefix-bh}form-switch-handle: #{escape-svg($switch-handle-svg-focus)};
+    // }
+
+    &:checked {
+      background-color: var(--#{$prefix-bh}switch-track-background-on);
+      border-color: var(--#{$prefix-bh}switch-track-border-on);
+      background-size: $switch-handle-size-on;
+      background-position: right calc(var(--#{$prefix-bh}switch-padding-x) - $checkbox-input-border-width) center;
+
+      @if $enable-gradients {
+        --#{$prefix-bh}form-switch-handle: var(--#{$prefix-bh}switch-handle-svg-on), var(--#{$prefix}gradient);
+      } @else {
+        --#{$prefix-bh}form-switch-handle: var(--#{$prefix-bh}switch-handle-svg-on);
+      }
+    }
+
+    &:disabled,
+    &:disabled:checked {
+      --#{$prefix-bh}switch-handle-svg:        #{escape-svg($switch-handle-svg-disabled)};
+      --#{$prefix-bh}switch-handle-svg-on:     #{escape-svg($switch-handle-svg-disabled)};
+
+      background-color: var(--#{$prefix-bh}switch-track-background-disabled);
+      border-color: var(--#{$prefix-bh}switch-track-border-disabled);
+
+      &::before {
+        color: var(--#{$prefix-bh}switch-status-tag-disabled);
+      }
+    }
+  }
+
+  .input-label {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: $switch-status-tag-spacing;
+  }
+
+  .form-check-label {
+    @include type($label, '03');
+  }
+}
+
+// Always active 
+.form-switch-active {
+
+  &::before {
+    content: $switch-active-content;
+    @include type($label, '02');
+    color: var(--#{$prefix-bh}switch-track-background-on)
+  }
+
+  &:not(.form-switch-sm)::before {
+    margin-top: 3px;
+  }
+
+  .form-check-input {
+    display: none;
+  }
+
+  .form-check-label:hover {
+    cursor: default !important;
+  }
+}
+
+// Form switch sizes
+.form-switch-sm {
+  --#{$prefix-bh}switch-padding-y: #{$switch-padding-y-sm};
+  --#{$prefix-bh}switch-padding-x: #{$switch-padding-x-sm};
+  --#{$prefix-bh}switch-handle-svg-on: #{escape-svg($switch-handle-svg-check)};
+
+  .form-check-label {
+    @include type($label, '02');
+  }
+
+  .form-check-input {
+    &:disabled,
+    &:disabled:checked {
+      --#{$prefix-bh}switch-handle-svg:       #{escape-svg($switch-handle-svg-disabled)};
+      --#{$prefix-bh}switch-handle-svg-on:    #{escape-svg($switch-handle-svg-check-disabled)};
+    }
+  }
+}
+
+// .was-validated .response:not(:has(:checked)) .btn {
+//   border-color: var(--#{$prefix-bh}error-01);
+// }
+
+.form-check-inline {
+  display: inline-block;
+  margin-right: $form-check-inline-margin-end;
+}
+
+.btn-check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+
+  &[disabled],
+  &:disabled {
+    + .btn {
+      pointer-events: none;
+      filter: none;
+
+      &:not(.readonly) {
+        opacity: $form-check-btn-check-disabled-opacity;
+      }
+    }
+  }
+}
+
+.form-check + .form-check {
+  margin-top: $checkbox-gap;
+}
+
+.form-switch + .form-switch {
+  margin-top: $switch-gap;
+}
+
+
+
+//
+// Dark mode overrides
+//
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .form-check {
+      --#{$prefix-bh}form-check-label-disabled: #{$checkbox-label-disabled-dark};
+    }
+
+    .form-check-input {
+      --#{$prefix-bh}form-check-input-background:           #{$checkbox-input-background-dark};
+      --#{$prefix-bh}form-check-input-border:               #{$checkbox-input-border-dark};
+      // --#{$prefix-bh}form-check-input-focus:                #{$checkbox-focus-ring-dark};
+      --#{$prefix-bh}form-check-input-background-active:    #{$checkbox-input-background-active-dark};
+      --#{$prefix-bh}form-check-input-border-active:        #{$checkbox-input-border-active-dark};
+      --#{$prefix-bh}form-check-input-background-disabled:  #{$checkbox-input-background-disabled-dark};
+
+      &:checked {
+        &[type="checkbox"] {
+          @if $enable-gradients {
+            --#{$prefix-bh}check-svg: #{escape-svg($checkbox-check-svg-dark)}, var(--#{$prefix}gradient);
+          } @else {
+            --#{$prefix-bh}check-svg: #{escape-svg($checkbox-check-svg-dark)};
+          }
+        }
+
+        &[type="radio"] {
+          @if $enable-gradients {
+            --#{$prefix-bh}check-svg: #{escape-svg($radio-pip-svg-dark)}, var(--#{$prefix}gradient);
+          } @else {
+            --#{$prefix-bh}check-svg: #{escape-svg($radio-pip-svg-dark)};
+          }
+        }
+      }
+
+      &[type="checkbox"]:indeterminate {
+        --#{$prefix-bh}form-check-input-background: #{$checkbox-input-background-indeterminate-dark};
+        --#{$prefix-bh}form-check-input-border:     #{$checkbox-input-border-indeterminate-dark};
+
+        @if $enable-gradients {
+          --#{$prefix-bh}check-svg: #{escape-svg($checkbox-input-svg-indeterminate-dark)}, var(--#{$prefix}gradient);
+        } @else {
+          --#{$prefix-bh}check-svg: #{escape-svg($checkbox-input-svg-indeterminate-dark)};
+        }
+      }
+
+      &:disabled,
+      &:disabled:checked,
+      &:disabled:indeterminate {
+        --#{$prefix-bh}form-check-input-background-disabled:  #{$checkbox-input-background-disabled-dark};
+      }
+
+      &[readonly],
+      &[readonly]:indeterminate {
+        --#{$prefix-bh}form-check-input-background: #{$checkbox-input-background-readonly-dark};
+        --#{$prefix-bh}form-check-input-border:     #{$checkbox-input-border-readonly-dark};
+      }
+
+      &[readonly]:checked {
+        &[type="checkbox"] {
+          --#{$prefix-bh}check-svg: #{escape-svg($checkbox-check-svg-readonly-dark)};
+          --#{$prefix-bh}form-check-input-background: #{$checkbox-input-background-readonly-active-dark};
+
+        }
+
+        &[type="radio"] {
+          --#{$prefix-bh}check-svg: #{escape-svg($radio-pip-svg-readonly-dark)};
+          --#{$prefix-bh}form-check-input-background: #{$checkbox-input-background-readonly-active-dark};
+        }
+      }
+
+      &[type="checkbox"][readonly]:indeterminate {
+        --#{$prefix-bh}check-svg: #{escape-svg($checkbox-input-svg-indeterminate-readonly-dark)};
+        --#{$prefix-bh}form-check-input-background: #{$checkbox-input-background-readonly-active-dark};
+      }
+    }
+
+    .form-switch {
+      --#{$prefix-bh}switch-track-background:     #{$switch-track-background-dark};
+      --#{$prefix-bh}switch-handle-svg:           #{escape-svg($switch-handle-svg-dark)};
+      --#{$prefix-bh}switch-handle-svg-on:        #{escape-svg($switch-handle-svg-on-dark)};
+      --#{$prefix-bh}switch-track-background-disabled:  #{$switch-track-background-disabled-dark};
+    }
+  }
+}

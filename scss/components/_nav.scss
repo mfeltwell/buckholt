@@ -1,0 +1,372 @@
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s, `<ul>`s or `<ol>`s.
+
+.nav {
+  // scss-docs-start nav-css-vars
+  --#{$prefix-bh}nav-gap:                       #{$nav-gap};
+  --#{$prefix-bh}nav-link-padding-x:            #{$nav-link-padding-x};
+  --#{$prefix-bh}nav-link-padding-y:            #{$nav-link-padding-y};
+  --#{$prefix-bh}nav-link-gap:                  #{$nav-link-gap};
+  --#{$prefix-bh}nav-link-radius:               #{$nav-link-radius};
+  --#{$prefix-bh}nav-link-border:               #{$nav-link-border};
+  --#{$prefix-bh}nav-link-border-width:         #{$nav-link-border-width};
+  --#{$prefix-bh}nav-link:                      #{$nav-link};
+  --#{$prefix-bh}nav-link-hover:                #{$nav-link-hover};
+  --#{$prefix-bh}nav-link-background:           #{$nav-link-background};
+  --#{$prefix-bh}nav-link-background-hover:     #{$nav-link-background-hover};
+  --#{$prefix-bh}nav-link-active:               #{$nav-link-active};
+  --#{$prefix-bh}nav-link-background-active:    #{$nav-link-background-active};
+  --#{$prefix-bh}nav-link-border-focus:         #{$nav-link-border-focus};
+  --#{$prefix-bh}nav-link-disabled:             #{$nav-link-disabled};
+  --#{$prefix-bh}nav-link-background-disabled:  #{$nav-link-background-disabled};
+  --#{$prefix-bh}nav-link-height:               #{$nav-link-height};
+
+  // scss-docs-end nav-css-vars
+
+  display: flex;
+  gap: var(--#{$prefix-bh}nav-gap);
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: var(--#{$prefix-bh}nav-link-gap);
+  padding: var(--#{$prefix-bh}nav-link-padding-y) var(--#{$prefix-bh}nav-link-padding-x);
+  @include type($action, "02");
+  color: var(--#{$prefix-bh}nav-link);
+  text-decoration: if($link-decoration == none, null, none);
+  background: var(--#{$prefix-bh}nav-link-background);
+  border: var(--#{$prefix-bh}nav-link-border-width) solid var(--#{$prefix-bh}nav-link-border);
+  border-radius: var(--#{$prefix-bh}nav-link-radius);
+  @include transition($nav-link-transition);
+  min-height: var(--#{$prefix-bh}nav-link-height);
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    color: var(--#{$prefix-bh}nav-link-hover);
+    background-color: var(--#{$prefix-bh}nav-link-background-hover);
+    text-decoration: if($link-hover-decoration == underline, none, null);
+  }
+
+  &:focus-visible {
+    outline: 0;
+    border-color: var(--#{$prefix-bh}nav-link-border-focus);
+    box-shadow: $nav-link-focus-ring;
+    text-decoration: none;
+  }
+
+  &.active {
+    color: var(--#{$prefix-bh}nav-link-active);
+    background-color: var(--#{$prefix-bh}nav-link-background-active);
+  }
+
+  // Disabled state lightens text
+  &.disabled,
+  &:disabled {
+    color: var(--#{$prefix-bh}nav-link-disabled);
+    background: var(--#{$prefix-bh}nav-link-background-disabled);
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.nav-stacked {
+  --#{$prefix-bh}nav-gap: #{$nav-stacked-gap};
+  flex-direction: column;
+}
+
+// Nav size variants
+.nav-lg {
+  --#{$prefix-bh}nav-link-height: #{$nav-link-height-lg};
+}
+
+//
+// Dark mode overrides _______________________
+//
+@if $enable-dark-mode {
+    @include color-mode(dark) {
+        .nav {
+          --#{$prefix-bh}nav-link:                      #{$nav-link-dark};
+          --#{$prefix-bh}nav-link-hover:                #{$nav-link-hover-dark};
+          --#{$prefix-bh}nav-link-background-hover:     #{$nav-link-background-hover-dark};
+          --#{$prefix-bh}nav-link-active:               #{$nav-link-active-dark};
+          --#{$prefix-bh}nav-link-background-active:    #{$nav-link-background-active-dark};
+          // --#{$prefix-bh}nav-link-border-focus:         #{$nav-link-border-focus};
+          // --#{$prefix-bh}nav-link-disabled:             #{$nav-link-disabled};
+          // --#{$prefix-bh}nav-link-background-disabled:  #{$nav-link-background-disabled};
+        }
+    }
+}
+
+//
+// Tabs
+//
+
+// .nav-tabs {
+//   // scss-docs-start nav-tabs-css-vars
+//   --#{$prefix-bh}nav-tabs-border:                   #{$nav-tabs-border};
+//   --#{$prefix-bh}nav-tabs-border-width:             #{$nav-tabs-border-width};
+//   --#{$prefix-bh}nav-tabs-link-padding-x:           #{$nav-tabs-link-padding-x};
+//   --#{$prefix-bh}nav-tabs-link-padding-y:           #{$nav-tabs-link-padding-y};
+//   --#{$prefix-bh}nav-tabs-link:                     #{$nav-tabs-link};
+//   --#{$prefix-bh}nav-tabs-link-background-hover:    #{$nav-tabs-link-background-hover};
+//   --#{$prefix-bh}nav-tabs-link-active:              #{$nav-tabs-link-active};
+//   --#{$prefix-bh}nav-tabs-link-background-active:   #{$nav-tabs-link-background-active};
+
+//   // scss-docs-end nav-tabs-css-vars
+
+//   .nav-link {
+//     color: var(--#{$prefix-bh}nav-tabs-link);
+//     padding: var(--#{$prefix-bh}nav-tabs-link-padding-y) var(--#{$prefix-bh}nav-tabs-link-padding-x);
+//     position: relative;
+  
+//     &:hover,
+//     &:focus {
+//       // Prevents active .nav-link tab overlapping focus outline of previous/next .nav-link
+//       isolation: isolate;
+//       background-color: var(--#{$prefix-bh}nav-tabs-link-background-hover);
+//     }
+//   }
+
+//   .nav-link.active,
+//   .nav-item.show .nav-link {
+//     color: var(--#{$prefix-bh}nav-tabs-link-active);
+//     background-color: var(--#{$prefix-bh}nav-tabs-link-background-active);
+//   }
+
+//   .nav-item:first-child .nav-link.active::before {
+//     --corner-size: #{$nav-tabs-content-radius}; // same size as tab content border radius
+
+//     rotate: unset;
+//     left: calc(-1*#{$nav-tabs-border-width});
+//     bottom: calc(calc(-1* var(--corner-size) - 1px));
+//   }
+
+//   .dropdown-menu {
+//     // Make dropdown border overlap tab border
+//     margin-top: calc(-1 * var(--#{$prefix-bh}nav-tabs-border-width)); // stylelint-disable-line function-disallowed-list
+//     // Remove the top rounded corners here since there is a hard edge above the menu
+//     @include border-top-radius(0);
+//   }
+// }
+
+
+//
+// Pills
+//
+
+// .nav-pills {
+//   // scss-docs-start nav-pills-css-vars
+//   --#{$prefix}nav-pills-border-radius: #{$nav-pills-border-radius};
+//   --#{$prefix}nav-pills-link-active-color: #{$nav-pills-link-active-color};
+//   --#{$prefix}nav-pills-link-active-bg: #{$nav-pills-link-active-bg};
+//   // scss-docs-end nav-pills-css-vars
+
+//   .nav-link {
+//     @include border-radius(var(--#{$prefix}nav-pills-border-radius));
+//   }
+
+//   .nav-link.active,
+//   .show > .nav-link {
+//     color: var(--#{$prefix}nav-pills-link-active-color);
+//     @include gradient-bg(var(--#{$prefix}nav-pills-link-active-bg));
+//   }
+// }
+
+
+//
+// Underline
+//
+
+.nav-underline {
+  // scss-docs-start nav-underline-css-vars
+  --#{$prefix-bh}nav-underline-link-padding-x:          #{$nav-underline-link-padding-x};
+  --#{$prefix-bh}nav-underline-link-padding-y:          #{$nav-underline-link-padding-y};
+  --#{$prefix-bh}nav-link-gap:                          #{$nav-underline-gap};
+  --#{$prefix-bh}nav-underline-border-width:            #{$nav-underline-border-width};
+  --#{$prefix-bh}nav-underline-border-padding:          #{$nav-underline-border-padding};
+  --#{$prefix-bh}nav-underline-label:                   #{$nav-underline-label};
+  --#{$prefix-bh}nav-underline-label-hover:             #{$nav-underline-label-hover};
+  --#{$prefix-bh}nav-underline-link-background-hover:   #{$nav-underline-link-background-hover};
+  --#{$prefix-bh}nav-underline-label-active:            #{$nav-underline-label-active};
+  --#{$prefix-bh}nav-underline-link-radius:             #{$nav-underline-link-radius};
+  --#{$prefix-bh}nav-underline-link-border:             #{$nav-underline-link-border};
+  --#{$prefix-bh}nav-underline-link-height:             #{$nav-underline-link-height};
+  --#{$prefix-bh}nav-underline-items-border:            #{$nav-underline-items-border};
+  --#{$prefix-bh}nav-underline-items-border-width:      #{$nav-underline-items-border-width};
+
+  // scss-docs-end nav-underline-css-vars
+
+  &.nav {
+    border-bottom: var(--#{$prefix-bh}nav-underline-items-border-width) solid var(--#{$prefix-bh}nav-underline-items-border);
+    padding-bottom: var(--#{$prefix-bh}nav-underline-border-padding);
+  }
+
+  .nav-item {
+    margin-bottom: calc(var(--#{$prefix-bh}nav-underline-items-border-width)*-1);
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: calc(100% + var(--#{$prefix-bh}nav-link-gap));
+      height: var(--#{$prefix-bh}nav-underline-items-border-width);
+      background-color: var(--#{$prefix-bh}nav-underline-items-border);
+      left: calc(var(--#{$prefix-bh}nav-link-gap)*-1);
+      bottom: calc(var(--#{$prefix-bh}nav-underline-border-padding)*-1);
+      z-index: -1;
+    }
+  }
+
+  .nav-link {
+    padding: var(--#{$prefix-bh}nav-underline-link-padding-y) var(--#{$prefix-bh}nav-underline-link-padding-x);
+    border: none;
+    border-radius: var(--#{$prefix-bh}nav-underline-link-radius);
+    color: var(--#{$prefix-bh}nav-underline-label);
+    position: relative;
+    min-height: var(--#{$prefix-bh}nav-underline-link-height);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0.75rem;
+      bottom: calc(var(--#{$prefix-bh}nav-underline-border-padding)*-1);
+      display: block;
+      width: calc(100% - calc($nav-underline-link-padding-x*2));
+      height: $border-width-02;
+      background-color: var(--#{$prefix-bh}nav-underline-link-border);
+      border-top-left-radius: $border-radius-xs;
+      border-top-right-radius: $border-radius-xs;
+      transition: $button-transition;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--#{$prefix-bh}nav-underline-label-hover);
+      border-bottom-color: currentcolor;
+      background-color: var(--#{$prefix-bh}nav-underline-link-background-hover);
+
+      &::after {
+        --#{$prefix-bh}nav-underline-link-border: #{$nav-underline-link-border-hover};
+      }
+    }
+
+    &:focus-visible {
+      box-shadow: inset $nav-link-focus-ring;
+    }
+
+    &:disabled {
+      --#{$prefix-bh}nav-underline-label: #{$nav-underline-label-disabled};
+    }
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+    color: var(--#{$prefix-bh}nav-underline-label-active);
+    background-color: $transparent;
+
+    &::after {
+      --#{$prefix-bh}nav-underline-link-border: #{$nav-underline-link-border-active};
+    }
+  }
+}
+
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  > .nav-link,
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  > .nav-link,
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+.nav-fill,
+.nav-justified {
+  .nav-item .nav-link {
+    width: 100%; // Make sure button will grow
+  }
+}
+
+
+// Tabs component
+//
+// Grouped nav-tabs and tab-content for styling
+.tabs {
+  --#{$prefix-bh}tabs-gap:            #{$tabs-gap};
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--#{$prefix-bh}tabs-gap);
+  width: 100%;
+}
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-items {
+    display: flex;
+    align-items: start;
+    gap: $tab-items-gap;
+}
+
+/* Scrollable area */
+.tab-items-scroll {
+    position: relative;
+    flex: 1 1 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;       /* Firefox */
+}
+.tab-items-scroll::-webkit-scrollbar {
+    display: none;               /* WebKit */
+}
+
+.tab-items-scroll .nav {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.tab-items:not(.has-overflow) .tab-scroll {
+    display: none;
+}
+
+.tab-content {
+  --#{$prefix-bh}nav-tabs-content-padding-x: #{$nav-tabs-content-padding-x};
+  --#{$prefix-bh}nav-tabs-content-padding-y: #{$nav-tabs-content-padding-y};
+  --#{$prefix-bh}nav-tabs-content-background: #{$nav-tabs-content-background};
+
+  padding: var(--#{$prefix-bh}nav-tabs-content-padding-y) var(--#{$prefix-bh}nav-tabs-content-padding-x);
+  border-radius: #{$nav-tabs-content-radius};
+  background-color: var(--#{$prefix-bh}nav-tabs-content-background);
+
+  > .tab-pane {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
+
+

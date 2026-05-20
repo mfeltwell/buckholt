@@ -1,0 +1,47 @@
+//
+// Labels
+//
+
+.form-label {
+    --#{$prefix-bh}form-label:          #{$form-label};
+    --#{$prefix-bh}form-label-disabled: #{$form-text-disabled};
+
+    margin-bottom: $form-label-margin-bottom;
+    @include type($label, "03");
+    color: var(--#{$prefix-bh}form-label);
+
+    // Small text in label (required / optional)
+    small {
+        display: inline-block;
+    }
+}
+
+.input:has(.form-control:disabled, .form-select:disabled:not(.readonly)) .form-label,
+.input:has(.btn-check:disabled):not(:has(.readonly)) .form-label,
+.input:has(.check-input).disabled .form-label,
+.input:has(.form-slider:disabled:not(.readonly)) .form-label {
+    color: var(--#{$prefix-bh}form-label-disabled);
+}
+
+// Small size needed
+
+
+
+
+// .col-form-label
+// .col-form-label-lg
+// .col-form-label-sm 
+// REMOVED //
+
+
+
+//
+// Dark mode overrides _______________________
+//
+@if $enable-dark-mode {
+    @include color-mode(dark) {
+        .form-label {
+            --#{$prefix-bh}form-label-disabled: #{$form-text-disabled-dark};
+        }
+    }
+}

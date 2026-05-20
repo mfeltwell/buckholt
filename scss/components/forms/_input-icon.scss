@@ -1,0 +1,27 @@
+// 
+// Input icons
+// 
+
+.input-icon {
+    --#{$prefix-bh}form-input-icon: #{$form-input-icon};
+
+    position: absolute;
+    top: 0;
+    left: calc($form-input-padding-x + $form-input-border-width);
+    transform: translateY($form-input-icon-position-y);
+    color: var(--#{$prefix-bh}form-input-icon);
+    font-size: $form-input-icon-size;
+}
+
+.response:has(input:disabled) .input-icon {
+    color: $form-text-disabled;
+}
+
+.response:has(.input-icon) .form-control {
+    padding-left: $form-input-padding-x + $form-input-icon-size + $form-input-icon-gap;
+}
+
+.response:has(.form-control:invalid) .input-icon,
+.response:has(.is-invalid) .input-icon {
+    display: none;
+}

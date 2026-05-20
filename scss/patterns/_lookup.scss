@@ -1,0 +1,11 @@
+.lookup {
+    display: flex;
+    flex-direction: column;
+    gap: $lookup-gap;
+}
+
+.lookup-actions {
+    display: flex;
+    flex-direction: column;
+    gap: $lookup-actions-gap;
+}

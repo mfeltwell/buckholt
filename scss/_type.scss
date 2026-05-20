@@ -1,0 +1,25 @@
+// Typography ___________________________
+@each $type, $style in $typography {
+    $sizes:         map-get($style, "font-sizes");
+    $weight:        map-get($style, "font-weight");
+
+    @each $scale, $fontsize in $sizes {
+        $lineH:         map-get($style, "line-height", $scale);
+        $letterspacing: map-get($style, "letter-spacing", $scale);
+
+        .#{$type}-#{$scale} {
+            font-size: $fontsize !important;
+            font-weight: $weight !important;
+            @if $lineH {
+                line-height: $fontsize + $lineH !important;            
+            } @else {
+                line-height: $fontsize + .5rem !important;
+            }
+            @if $letterspacing {
+                letter-spacing: $letterspacing !important;
+            } @else {
+                letter-spacing: $letter-spacing-base !important;
+            }
+        }
+    } 
+}

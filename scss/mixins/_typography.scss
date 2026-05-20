@@ -1,0 +1,28 @@
+@mixin type($type, $size) {
+    $font-size:     map-get($type, "font-sizes", $size);
+    $line-height:   map-get($type, "line-height", $size);
+    $letterspacing: map-get($type, "letter-spacing", $size);
+
+    font-size:      $font-size;
+    font-weight:    map-get($type, "font-weight");
+
+    @if $letterspacing {
+        letter-spacing: $letterspacing;
+    } @else {
+        letter-spacing: $letter-spacing-base;
+    }
+
+    @if $line-height {
+        line-height: $font-size + $line-height;            
+    } @else {
+        line-height: $font-size + .5rem;
+    }    
+}
+
+@mixin typography($type...){
+    @for $i from 0 to length($type) {
+        [class^="#{nth($type, $i + 1)}-"] {
+            @content;
+        }
+    }
+}

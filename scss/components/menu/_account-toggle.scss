@@ -1,0 +1,29 @@
+//
+// Base styles
+//
+
+.account-toggle {
+    --#{$prefix-bh}account-toggle-text:         #{$account-toggle-text};
+    --#{$prefix-bh}account-toggle-text-hover:   #{$account-toggle-text-hover};
+
+    padding: $account-toggle-padding-y $account-toggle-padding-x;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    @include type($label, "02");
+    color: var(--#{$prefix-bh}account-toggle-text);
+
+    &::after{
+        --#{$prefix-bh}caret-svg: #{$account-toggle-indicator};
+        display: none;
+    }
+
+    &:has(.account-toggle-label)::after {
+        display: block;
+    }
+
+    &:hover {
+        color: var(--#{$prefix-bh}account-toggle-text-hover);
+    }
+}

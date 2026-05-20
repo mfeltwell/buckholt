@@ -1,0 +1,151 @@
+// Accent 01 ________
+$accent-01-10:      #EEEAFB;
+$accent-01-20:      #CDC1F1;
+$accent-01-30:      #AB98EA;
+$accent-01-40:      #8F71F0;
+$accent-01-50:      #6846D9;
+$accent-01-60:      #5731D6;
+$accent-01-70:      #4E2CBE;
+$accent-01-80:      #3D2295;
+$accent-01-90:      #2C196B;
+$accent-01-100:     #1B0F41;
+
+// Accent 02 __________
+$accent-02-10:        #FBE8EE;
+$accent-02-20:        #F3B8CC;
+$accent-02-30:        #ED89AB;
+$accent-02-40:        #E97099;
+$accent-02-50:        #E84A7F;
+$accent-02-60:        #DB1256;
+$accent-02-70:        #AF0E44;
+$accent-02-80:        #830A33;
+$accent-02-90:        #570722;
+$accent-02-100:       #2C0311;
+
+// Accent 03 __________
+$accent-03-10:        #E7F2F6;
+$accent-03-20:        #B7D9E3;
+$accent-03-30:        #87C0D1;
+$accent-03-40:        #56A6BF;
+$accent-03-50:        #2490AE;
+$accent-03-60:        #0E80A4;
+$accent-03-70:        #0B6683;
+$accent-03-80:        #094D62;
+$accent-03-90:        #053342;
+$accent-03-100:       #031A20;
+
+
+// Accent variables ___________
+$accent-01-palette: (
+    "10":     $accent-01-10,
+    "20":     $accent-01-20,
+    "30":     $accent-01-30,
+    "40":     $accent-01-40,
+    "50":     $accent-01-50,
+    "60":     $accent-01-60,
+    "70":     $accent-01-70,
+    "80":     $accent-01-80,
+    "90":     $accent-01-90,
+    "100":    $accent-01-100
+);
+
+$accent-02-palette: (
+    "10":     $accent-02-10,
+    "20":     $accent-02-20,
+    "30":     $accent-02-30,
+    "40":     $accent-02-40,
+    "50":     $accent-02-50,
+    "60":     $accent-02-60,
+    "70":     $accent-02-70,
+    "80":     $accent-02-80,
+    "90":     $accent-02-90,
+    "100":    $accent-02-100
+);
+
+$accent-03-palette: (
+    "10":     $accent-03-10,
+    "20":     $accent-03-20,
+    "30":     $accent-03-30,
+    "40":     $accent-03-40,
+    "50":     $accent-03-50,
+    "60":     $accent-03-60,
+    "70":     $accent-03-70,
+    "80":     $accent-03-80,
+    "90":     $accent-03-90,
+    "100":    $accent-03-100
+);
+
+
+// Accent map ____________________________
+// Change here to include Accent colours in the css
+$accent-colours: (
+    "01": $accent-01-palette,
+    "02": $accent-02-palette,
+    "03": $accent-03-palette,
+);
+
+
+// Accent primes __________________________________
+// Colour from which the palette is create from.
+$prime-accent-01:     $accent-01-60;
+$prime-accent-02:     $accent-02-60;
+$prime-accent-03:     $accent-03-60;
+
+
+// Tints ___________________________________________________________
+// Accent 01 tint ____
+$accent-01-tint-10:     rgba($prime-accent-01, 0.1);
+$accent-01-tint-20:     rgba($prime-accent-01, 0.3);
+$accent-01-tint-30:     rgba($prime-accent-01, 0.5);
+$accent-01-tint-40:     rgba($prime-accent-01, 0.67);
+
+$accent-01-tint-palette: (
+    "10":     $accent-01-tint-10,
+    "20":     $accent-01-tint-20,
+    "30":     $accent-01-tint-30,
+    "40":     $accent-01-tint-40
+);
+
+// Accent 02 tint ____
+$accent-02-tint-10:     rgba($prime-accent-02, 0.1);
+$accent-02-tint-20:     rgba($prime-accent-02, 0.3);
+$accent-02-tint-30:     rgba($prime-accent-02, 0.5);
+$accent-02-tint-40:     rgba($prime-accent-02, 0.6);
+
+$accent-02-tint-palette: (
+    "10":     $accent-02-tint-10,
+    "20":     $accent-02-tint-20,
+    "30":     $accent-02-tint-30,
+    "40":     $accent-02-tint-40
+);
+
+// Accent 03 tint ____
+$accent-03-tint-10:     rgba($prime-accent-03, 0.1);
+$accent-03-tint-20:     rgba($prime-accent-03, 0.3);
+$accent-03-tint-30:     rgba($prime-accent-03, 0.5);
+$accent-03-tint-40:     rgba($prime-accent-03, 0.7);
+
+$accent-03-tint-palette: (
+    "10":     $accent-03-tint-10,
+    "20":     $accent-03-tint-20,
+    "30":     $accent-03-tint-30,
+    "40":     $accent-03-tint-40
+);
+
+
+// Generate css variable map version
+// $accent-01-palette-vars: generate-css-var-map("accent-01", $accent-01-palette);
+// $accent-02-palette-vars: generate-css-var-map("accent-02", $accent-02-palette);
+// $accent-03-palette-vars: generate-css-var-map("accent-03", $accent-03-palette);
+
+// $accent-01-tint-palette-vars: generate-css-var-map("accent-01-tint", $accent-01-tint-palette);
+// $accent-02-tint-palette-vars: generate-css-var-map("accent-02-tint", $accent-02-tint-palette);
+// $accent-03-tint-palette-vars: generate-css-var-map("accent-03-tint", $accent-03-tint-palette);
+
+// Accent tint map ____________________________
+// Change here to include Accent tints in the css
+$accent-tints: (
+    "01": $accent-01-tint-palette,
+    "02": $accent-02-tint-palette,
+    "03": $accent-03-tint-palette,
+);

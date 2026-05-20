@@ -1,0 +1,2063 @@
+// Prefix for :root CSS variables
+$prefix-bh: '';
+
+// Colour stuff _____________________________________________________________________________________________________________________
+
+// Neutral ______________________________
+// Base __________
+$white:     #ffffff;
+$black:     #1a1a1a;
+$transparent: transparent;
+
+// Neutral __________
+$neutral-10:   #FBFBFB;
+$neutral-20:   #F7F7F7;
+$neutral-30:   #EFEFEF;
+$neutral-40:   #DADADA;
+$neutral-50:   #BABABA; 
+$neutral-60:   #919191;
+$neutral-70:   #707070;
+$neutral-80:   #595959;
+$neutral-90:   #454545;
+$neutral-100:  #2C2C2C;
+
+$neutral-palette: (
+  "10":     $neutral-10,
+  "20":     $neutral-20,
+  "30":     $neutral-30,
+  "40":     $neutral-40,
+  "50":     $neutral-50,
+  "60":     $neutral-60,
+  "70":     $neutral-70,
+  "80":     $neutral-80,
+  "90":     $neutral-90,
+  "100":    $neutral-100
+);
+
+// primary ______________________________
+$primary-10:        #E7ECF9;
+$primary-20:        #B7C6EE;
+$primary-30:        #87A0E2;
+$primary-40:        #5F81DD;
+$primary-50:        #3F66D1;
+$primary-60:        #1748D0;
+$primary-70:        #0F40C5;
+$primary-80:        #0C339E;
+$primary-90:        #092676;
+$primary-100:       #04133B;
+
+$primary-palette: (
+  "10":     $primary-10,
+  "20":     $primary-20,
+  "30":     $primary-30,
+  "40":     $primary-40,
+  "50":     $primary-50,
+  "60":     $primary-60,
+  "70":     $primary-70,
+  "80":     $primary-80,
+  "90":     $primary-90,
+  "100":    $primary-100
+);
+
+// Generate css variable map version
+$primary-palette-vars: generate-css-var-map("primary", $primary-palette);
+
+// System _______________________________
+// danger ___________
+$danger-10:         #FBE7E8;
+$danger-20:         #F4B6B7;
+$danger-30:         #F09F9E;
+$danger-40:         #E86E6D;
+$danger-50:         #EE4949;
+$danger-60:         #D7050C;
+$danger-70:         #AE0A09;
+$danger-80:         #820807;
+$danger-90:         #590407;
+$danger-100:        #2A0202;
+
+$danger-palette: (
+  "10":     $danger-10,
+  "20":     $danger-20,
+  "30":     $danger-30,
+  "40":     $danger-40,
+  "50":     $danger-50,
+  "60":     $danger-60,
+  "70":     $danger-70,
+  "80":     $danger-80,
+  "90":     $danger-90,
+  "100":    $danger-100
+);
+
+// caution ________
+$caution-10:      #FFF3E7;
+$caution-20:      #FFD7B3;
+$caution-30:      #FFBD80;
+$caution-40:      #FEA24D;
+$caution-50:      #FF9533;
+$caution-60:      #FF7A00;
+$caution-70:      #E66E00;
+$caution-80:      #B35400;
+$caution-90:      #7F3D00;
+$caution-100:     #4C2400;
+
+$caution-palette: (
+  "10":     $caution-10,
+  "20":     $caution-20,
+  "30":     $caution-30,
+  "40":     $caution-40,
+  "50":     $caution-50,
+  "60":     $caution-60,
+  "70":     $caution-70,
+  "80":     $caution-80,
+  "90":     $caution-90,
+  "100":    $caution-100
+);
+
+// valid _________
+$valid-10:       #E7F3E7;
+$valid-20:       #B9DDB9;
+$valid-30:       #8AC48A;
+$valid-40:       #5DAC5B;
+$valid-50:       #46A144;
+$valid-60:       #168914;
+$valid-70:       #136E11;
+$valid-80:       #0C520C;
+$valid-90:       #093708;
+$valid-100:      #041B04;
+
+$valid-palette: (
+  "10":     $valid-10,
+  "20":     $valid-20,
+  "30":     $valid-30,
+  "40":     $valid-40,
+  "50":     $valid-50,
+  "60":     $valid-60,
+  "70":     $valid-70,
+  "80":     $valid-80,
+  "90":     $valid-90,
+  "100":    $valid-100
+);
+
+// Info ______________________________
+$info-10:        #E7ECF9;
+$info-20:        #B7C6EE;
+$info-30:        #87A0E2;
+$info-40:        #5F81DD;
+$info-50:        #3F66D1;
+$info-60:        #1748D0;
+$info-70:        #0F40C5;
+$info-80:        #0C339E;
+$info-90:        #092676;
+$info-100:       #04133B;
+
+$info-palette: (
+  "10":     $info-10,
+  "20":     $info-20,
+  "30":     $info-30,
+  "40":     $info-40,
+  "50":     $info-50,
+  "60":     $info-60,
+  "70":     $info-70,
+  "80":     $info-80,
+  "90":     $info-90,
+  "100":    $info-100
+);
+
+// Accent Colours ____________________________
+@import "colours/accent";
+
+
+// Prime colours ________________________
+
+$prime-primary:     $primary-70;
+$prime-danger:      $danger-60;
+$prime-caution:     $caution-60;
+$prime-valid:       $valid-60;
+$prime-info:        $info-60;
+
+$prime-colors: (
+  "white":        $white,
+  "black":        $black,
+  "primary":      $prime-primary,
+  "danger":       $prime-danger,
+  "caution":      $prime-caution,
+  "valid":        $prime-valid,
+  "info":         $prime-info,
+);
+
+// Tints ________________________________
+
+// Black tint ____
+$black-tint-10:   rgba($black, 0.015);
+$black-tint-20:   rgba($black, 0.04);
+$black-tint-30:   rgba($black, 0.07);
+$black-tint-40:   rgba($black, 0.16);
+$black-tint-50:   rgba($black, 0.3);
+$black-tint-60:   rgba($black, 0.48);
+$black-tint-70:   rgba($black, 0.625);
+$black-tint-80:   rgba($black, 0.725);
+$black-tint-90:   rgba($black, 0.81);
+$black-tint-100:  rgba($black, 0.92);
+
+$black-tint-palette: (
+  "10":     $black-tint-10,
+  "20":     $black-tint-20,
+  "30":     $black-tint-30,
+  "40":     $black-tint-40,
+  "50":     $black-tint-50,
+  "60":     $black-tint-60,
+  "70":     $black-tint-70,
+  "80":     $black-tint-80,
+  "90":     $black-tint-90,
+  "100":    $black-tint-100,
+);
+
+// White tint ____
+$white-tint-10:     rgba($white, 0.08);
+$white-tint-20:     rgba($white, 0.185);
+$white-tint-30:     rgba($white, 0.275);
+$white-tint-40:     rgba($white, 0.375);
+$white-tint-50:     rgba($white, 0.52);
+$white-tint-60:     rgba($white, 0.7);
+$white-tint-70:     rgba($white, 0.84);
+$white-tint-80:     rgba($white, 0.93);
+$white-tint-90:     rgba($white, 0.97);
+$white-tint-100:    rgba($white, 0.99);
+
+$white-tint-palette: (
+  "10":     $white-tint-10,
+  "20":     $white-tint-20,
+  "30":     $white-tint-30,
+  "40":     $white-tint-40,
+  "50":     $white-tint-50,
+  "60":     $white-tint-60,
+  "70":     $white-tint-70,
+  "80":     $white-tint-80,
+  "90":     $white-tint-90,
+  "100":    $white-tint-100
+);
+
+// primary tint _____
+$primary-tint-10:     rgba($prime-primary, 0.1);
+$primary-tint-20:     rgba($prime-primary, 0.3);
+$primary-tint-30:     rgba($prime-primary, 0.5);
+$primary-tint-40:     rgba($prime-primary, 0.66);
+
+$primary-tint-palette: (
+  "10":     $primary-tint-10,
+  "20":     $primary-tint-20,
+  "30":     $primary-tint-30,
+  "40":     $primary-tint-40
+);
+
+// Generate css variable map version
+$primary-tint-palette-vars: generate-css-var-map("primary-tint", $primary-tint-palette);
+
+// danger tint ______
+$danger-tint-10:     rgba($prime-danger, 0.1);
+$danger-tint-20:     rgba($prime-danger, 0.3);
+$danger-tint-30:     rgba($prime-danger, 0.4);
+$danger-tint-40:     rgba($prime-danger, 0.6);
+
+$danger-tint-palette: (
+  "10":     $danger-tint-10,
+  "20":     $danger-tint-20,
+  "30":     $danger-tint-30,
+  "40":     $danger-tint-40
+);
+
+// Caution tint ___
+$caution-tint-10:     rgba($prime-caution, 0.1);
+$caution-tint-20:     rgba($prime-caution, 0.3);
+$caution-tint-30:     rgba($prime-caution, 0.5);
+$caution-tint-40:     rgba($prime-caution, 0.7);
+
+$caution-tint-palette: (
+  "10":     $caution-tint-10,
+  "20":     $caution-tint-20,
+  "30":     $caution-tint-30,
+  "40":     $caution-tint-40
+);
+
+// valid tint ____
+$valid-tint-10:     rgba($prime-valid, 0.1);
+$valid-tint-20:     rgba($prime-valid, 0.3);
+$valid-tint-30:     rgba($prime-valid, 0.5);
+$valid-tint-40:     rgba($prime-valid, 0.7);
+
+$valid-tint-palette: (
+  "10":     $valid-tint-10,
+  "20":     $valid-tint-20,
+  "30":     $valid-tint-30,
+  "40":     $valid-tint-40
+);
+
+// Info tint _____
+$info-tint-10:     rgba($prime-info, 0.1);
+$info-tint-20:     rgba($prime-info, 0.31);
+$info-tint-30:     rgba($prime-info, 0.52);
+$info-tint-40:     rgba($prime-info, 0.69);
+
+$info-tint-palette: (
+  "10":     $info-tint-10,
+  "20":     $info-tint-20,
+  "30":     $info-tint-30,
+  "40":     $info-tint-40
+);
+
+
+// Foundation colour stuff __________________________________________________________________________________________________________
+
+// Text _________________________________
+$text-primary:    $black;
+$text-secondary:  $neutral-90;
+$text-tertiary:   $neutral-80;
+$text-muted:      $black-tint-70;
+$text-light:      $white;
+$text-active:     $info-60;
+$text-success:    $valid-60;
+$text-error:      $danger-60;
+
+$text-colors: (
+    "primary":    $text-primary,
+    "secondary":  $text-secondary,
+    "tertiary":   $text-tertiary,
+    "muted":      $text-muted,
+    "light":      $text-light,
+    "active":     $text-active,
+    "success":    $text-success,
+    "error":      $text-error
+);
+
+
+// UI colours ___________________________
+$ui-background-01: $white;
+$ui-background-02: $neutral-10;
+$ui-background-03: $neutral-20;
+$ui-background-04: $neutral-30;
+
+$ui-overlay-01:    $black-tint-10;
+$ui-overlay-02:    $black-tint-20;
+$ui-overlay-03:    $black-tint-30;
+$ui-overlay-04:    $black-tint-60;
+
+$ui-border-01:     $neutral-60;
+$ui-border-02:     $neutral-40;
+$ui-border-03:     $black-tint-30;
+$ui-border-04:     $white;
+
+
+// State colours ________________________
+$focus-01:    $info-60;
+$success-01:  $valid-60;
+$error-01:    $danger-60;
+
+$state-colours: (
+  "focus-01":    $focus-01,
+  "success-01":  $success-01,
+  "error-01":    $error-01,
+);
+
+$disabled-overlay-01: $black-tint-30;
+$disabled-overlay-02: $black-tint-40;
+$disabled-overlay-03: $black-tint-50;
+$disabled-01: $neutral-30;
+$disabled-02: $neutral-40;
+$disabled-03: $neutral-50;
+$disabled-04: $white;
+$disabled-opacity: .65;
+
+$disabled-colors: (
+    "overlay-01":   $disabled-overlay-01, 
+    "overlay-02":   $disabled-overlay-02, 
+    "overlay-03":   $disabled-overlay-03, 
+    "01":           $disabled-01, 
+    "02":           $disabled-02, 
+    "03":           $disabled-03, 
+    "04":           $disabled-04, 
+);
+
+
+// Action colours _______________________
+$action-01:         $primary-70;
+$action-02:         $primary-50;
+$action-03:         $primary-90;
+$action-04:         $primary-tint-10;
+$action-05:         $black-tint-30;
+$action-06:         $neutral-60;
+$action-07:         $white;
+$action-08:         $primary-100;
+
+$action-text-01:    $primary-70;
+$action-text-02:    $white;
+$action-text-03:    $black-tint-70;
+$action-text-04:    $neutral-80;
+$action-text-05:    $neutral-90;
+
+$action-colors: (
+    "01":   $action-01, 
+    "02":   $action-02, 
+    "03":   $action-03, 
+    "04":   $action-04, 
+    "05":   $action-05, 
+    "06":   $action-06, 
+    "07":   $action-07, 
+    "08":   $action-08, 
+);
+
+$action-text-colors: (
+    "01":   $action-text-01, 
+    "02":   $action-text-02, 
+    "03":   $action-text-03, 
+    "04":   $action-text-04, 
+    "05":   $action-text-05,
+);
+
+
+// Action danger colours ________________
+$action-danger-01:         $danger-60;
+$action-danger-02:         $danger-70;
+$action-danger-03:         $danger-90;
+$action-danger-04:         $danger-tint-10;
+$action-text-danger-01:    $danger-60;
+
+$action-danger-colors: (
+    "01":   $action-danger-01, 
+    "02":   $action-danger-02, 
+    "03":   $action-danger-03, 
+    "04":   $action-danger-04, 
+);
+
+$action-text-danger-colors: (
+    "01":   $action-text-danger-01,
+);
+
+
+// Feedback colours _____________________
+$feedback-background-info:        $info-10;
+$feedback-overlay-info:           $info-tint-10;
+$feedback-border-info:            $info-50;
+$feedback-message-info:           $info-60;
+$feedback-body-info:              $info-100;
+$feedback-shadow-info:            $info-100;
+
+$feedback-background-success:     $valid-10;
+$feedback-overlay-success:        $valid-tint-10;
+$feedback-border-success:         $valid-60;
+$feedback-message-success:        $valid-70;
+$feedback-body-success:           $valid-100;
+$feedback-shadow-success:         $valid-100;
+
+$feedback-background-warning:     $caution-10;
+$feedback-overlay-warning:        $caution-tint-10;
+$feedback-border-warning:         $caution-80;
+$feedback-message-warning:        $caution-80;
+$feedback-body-warning:           $caution-100;
+$feedback-shadow-warning:         $caution-100;
+
+$feedback-background-error:       $danger-10;
+$feedback-overlay-error:          $danger-tint-10;
+$feedback-border-error:           $danger-60;
+$feedback-message-error:          $danger-60;
+$feedback-body-error:             $danger-100;
+$feedback-shadow-error:           $danger-100;
+
+$feedback-colours: (
+    "info": (
+        "background":   $feedback-background-info,
+        "overlay":      $feedback-overlay-info,
+        "border":       $feedback-border-info,
+        "message":      $feedback-message-info,
+        "body":         $feedback-body-info,
+        "shadow":       $feedback-shadow-info,
+    ),
+
+    "success": (
+        "background":   $feedback-background-success,
+        "overlay":      $feedback-overlay-success,
+        "border":       $feedback-border-success,
+        "message":      $feedback-message-success,
+        "body":         $feedback-body-success,
+        "shadow":       $feedback-shadow-success,
+    ),
+
+    "warning": (
+        "background":   $feedback-background-warning,
+        "overlay":      $feedback-overlay-warning,
+        "border":       $feedback-border-warning,
+        "message":      $feedback-message-warning,
+        "body":         $feedback-body-warning,
+        "shadow":       $feedback-shadow-warning,
+    ),
+
+    "error": (
+        "background":   $feedback-background-error,
+        "overlay":      $feedback-overlay-error,
+        "border":       $feedback-border-error,
+        "message":      $feedback-message-error,
+        "body":         $feedback-body-error,
+        "shadow":       $feedback-shadow-error,
+    )
+);
+
+
+// Expressive colours ___________________
+// What colours to use for the expressive colours
+$expressive-colours: (
+  "primary": (
+    "palette":    $primary-palette,
+    "tint":       $primary-tint-palette,
+  ),
+
+  "secondary": (
+    "palette":    $accent-01-palette,
+    "tint":       $accent-01-tint-palette,
+  ),
+
+  "tertiary": (
+    "palette":    $accent-02-palette,
+    "tint":       $accent-02-tint-palette,
+  ),
+
+  "quaternary": (
+    "palette":    $accent-03-palette,
+    "tint":       $accent-03-tint-palette,
+  ),
+);
+
+// Expressive defaults
+$expressive-pale:           var(--expressive-pale);
+$expressive-soft:           var(--expressive-soft);
+$expressive-pale-overlay:   var(--expressive-pale-overlay);
+$expressive-soft-overlay:   var(--expressive-soft-overlay);
+$expressive-deep:           var(--expressive-deep);
+$expressive-rich:           var(--expressive-rich);
+
+
+// Options ______________________________
+$enable-shadows:                false;
+$enable-menu-shadows:           true;
+$enable-dark-mode:              true; // Not yet built
+$all-fa-icons-solid:            false; 
+$enable-negative-margins:       true;
+$enable-visited-links:          false;
+$enable-cssgrid:                true;
+$clickable-borders:             true;
+$sidebar-affects-mediaqueries:  false;
+$button-gradients:              true;
+
+
+// UI stuff _________________________________________________________________________________________________________________________
+
+// Spacing ______________________________
+$spacer: 1rem;
+
+$spacer-0:  0;
+$spacer-01: $spacer * .125; // 0.125rem
+$spacer-02: $spacer * .25;  // 0.25rem 
+$spacer-03: $spacer * .5;   // 0.5rem  
+$spacer-04: $spacer;        // 1rem    
+$spacer-05: $spacer * 1.5;  // 1.5rem  
+$spacer-06: $spacer * 2;    // 2rem    
+$spacer-07: $spacer * 3;    // 3rem
+$spacer-08: $spacer * 4;    // 4rem    
+$spacer-09: $spacer * 8;    // 8rem    
+
+$spacers: (
+  0: $spacer-0,
+  1: $spacer-01,
+  2: $spacer-02,
+  3: $spacer-03,
+  4: $spacer-04,
+  5: $spacer-05,
+  6: $spacer-06,
+  7: $spacer-07,
+  8: $spacer-08,
+  9: $spacer-09,
+);
+
+
+// Component padding ____________________
+
+$padding-0: 0;                // Zero
+$padding-01: $spacer-02;      // 4px / 0.25rem
+$padding-02: $spacer * .375;  // 6px / 0.375rem
+$padding-03: $spacer-03;      // 8px / 0.5rem
+$padding-04: $spacer * .75;   // 12px / 0.75rem
+$padding-05: $spacer-04;      // 16px / 1rem
+$padding-06: $spacer * 1.25;  // 20px / 1.25rem
+$padding-07: $spacer-05;      // 24px / 1.5rem
+$padding-08: $spacer-06 ;     // 32px / 2rem
+$padding-09: $spacer-08 ;     // 64px / 4rem
+$padding-10: $spacer-09 ;     // 128px / 8rem
+
+$padding: (
+  "0":  $padding-0,
+  "01": $padding-01,
+  "02": $padding-02,
+  "03": $padding-03,
+  "04": $padding-04,
+  "05": $padding-05,
+  "06": $padding-06,
+  "07": $padding-07,
+  "08": $padding-08,
+  "09": $padding-09,
+  "10": $padding-10
+);
+
+
+// Component Margin _____________________
+
+$margin-0: 0;                // Zero
+$margin-01: $spacer-02;      // 4px / 0.25rem
+$margin-02: $spacer-03;      // 8px / 0.5rem
+$margin-03: $spacer-04;      // 16px / 1rem
+$margin-04: $spacer-05;      // 24px / 1.5rem
+$margin-05: $spacer-06 ;     // 32px / 2rem
+
+$margin: (
+  "0":  $margin-0,
+  "01": $margin-01,
+  "02": $margin-02,
+  "03": $margin-03,
+  "04": $margin-04,
+  "05": $margin-05,
+);
+
+
+// Body _________________________________
+//
+// Settings for the `<body>` element.
+$body-color:            $text-primary;
+$body-secondary-color:  $text-muted;
+$body-background:       $ui-background-02;
+$body-text-align:       null;
+
+
+// Headings _____________________________
+$headings-color:        inherit;
+
+
+// Paragraphs ___________________________
+//
+// Style p element.
+$paragraph-margin-top:      $margin-01;
+$paragraph-margin-bottom:   $margin-0;
+
+
+
+// Min max widths _______________________
+$text-max-width: 54rem;
+
+
+
+// Grid columns _________________________
+$grid-gutter-width:         $spacer-06; // variable to change --bs-gutter x and y
+
+
+// Transitions __________________________
+$transition-time:           .15s;
+
+
+// Borders ______________________________
+$border-width:              1px;
+
+$border-width-0:            0;
+$border-width-01:           $border-width;
+$border-width-02:           0.125rem;
+$border-width-03:           0.25rem;
+$border-width-04:           0.5rem;
+
+$border-widths: (
+  "0":  $border-width-0,
+  "01": $border-width-01,
+  "02": $border-width-02,
+  "03": $border-width-03,
+  "04": $border-width-04
+);
+
+$border-style:              solid;
+$border-color:              $ui-border-02;
+
+
+// Border radius ________________________
+$border-radius:       .5rem;
+
+$border-radius-xs:    .25rem;
+$border-radius-sm:    .375rem;
+$border-radius-md:    $border-radius; // 0.5rem
+$border-radius-lg:    1rem;
+$border-radius-xl:    1.5rem;
+$border-radius-full:  2rem;
+
+$border-radius-xxl:   $border-radius-full; // 2rem
+
+
+// Shadows ______________________________
+$shadow-colour: var(--#{$prefix-bh}black-rgb);
+
+$shadow-xs:   0 1px 3px 0 rgba(var(--#{$prefix-bh}shadow-colour), 0.1), 0 1px 2px -1px rgba(var(--#{$prefix-bh}shadow-colour), 0.1);
+$shadow-sm:   0 4px 6px -1px rgba(var(--#{$prefix-bh}shadow-colour), 0.1), 0 2px 4px -2px rgba(var(--#{$prefix-bh}shadow-colour), 0.1);
+$shadow-md:   0 10px 15px -3px rgba(var(--#{$prefix-bh}shadow-colour), 0.1), 0 4px 6px -4px rgba(var(--#{$prefix-bh}shadow-colour), 0.1);
+$shadow-lg:   0 20px 25px -5px rgba(var(--#{$prefix-bh}shadow-colour), 0.1), 0 8px 10px -6px rgba(var(--#{$prefix-bh}shadow-colour), 0.1);
+$shadow-xl:   0 25px 50px -12px rgba(var(--#{$prefix-bh}shadow-colour), 0.25);
+
+$shadows: (
+  "xs":       $shadow-xs,
+  "sm":       $shadow-sm,
+  "md":       $shadow-md,
+  "lg":       $shadow-lg,
+  "xl":       $shadow-xl,
+);
+
+// Focus styles _________________________
+$focus-ring-width:      .125rem;
+$focus-ring-opacity:    1;
+// $focus-ring-color:      rgba($focus-01, $focus-ring-opacity);
+$focus-ring-color:      $focus-01;
+$focus-ring-blur:       0;
+$focus-ring:            0 0 $focus-ring-blur $focus-ring-width $focus-ring-color;
+
+// Font stuff _______________________________________________________________________________________________________________________
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-size-root:              16px;
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+
+$font-family-sans-serif:  'Proxima-soft', Arial, sans-serif;
+$font-family-base:        var(--#{$prefix-bh}font-sans-serif);
+
+$font-awesome:            var(--fa-family-classic);
+
+$font-size-base:          1rem;
+$letter-spacing-base:     0.16px;
+$line-height-base:        1.5;
+
+// Type scale ____
+$typescale-01:   $font-size-base * .75;
+$typescale-02:   $font-size-base * .875;
+$typescale-03:   $font-size-base;
+$typescale-04:   $font-size-base * 1.25;
+$typescale-05:   $font-size-base * 1.5;
+$typescale-06:   $font-size-base * 1.75;
+$typescale-07:   $font-size-base * 2;
+$typescale-08:   $font-size-base * 2.25;
+$typescale-09:   $font-size-base * 2.5;
+$typescale-10:   $font-size-base * 3.5;
+
+$typescales: (
+  "01":   $typescale-01,
+  "02":   $typescale-02,
+  "03":   $typescale-03,
+  "04":   $typescale-04,
+  "05":   $typescale-05,
+  "06":   $typescale-06,
+  "07":   $typescale-07,
+  "08":   $typescale-08,
+  "09":   $typescale-09,
+  "10":   $typescale-10,
+);
+
+$font-weight-th:          100;  // Thin
+$font-weight-lt:          300;  // Light
+$font-weight-rg:          400;  // Regular
+$font-weight-md:          500;  // Medium
+$font-weight-sb:          600;  // Semi bold
+$font-weight-bd:          700;  // Bold
+$font-weight-eb:          800;  // Extra bold
+$font-weight-bl:          900;  // Black
+
+$font-weights: (
+  "th":   $font-weight-th,
+  "lt":   $font-weight-lt,
+  "rg":   $font-weight-rg,
+  "md":   $font-weight-md,
+  "sb":   $font-weight-sb,
+  "bd":   $font-weight-bd,
+  "eb":   $font-weight-eb,
+  "bl":   $font-weight-bl
+);
+
+// Bootstrap overrides
+$font-weight-lighter:     $font-weight-th;
+$font-weight-light:       $font-weight-lt;
+$font-weight-normal:      $font-weight-rg;
+$font-weight-medium:      $font-weight-md;
+$font-weight-bold:        $font-weight-bd;
+$font-weight-bolder:      $font-weight-eb;
+
+$font-weight-base:        $font-weight-lt;
+
+// Links ________________________________
+//
+// Style anchor elements.
+
+$link-colour:           $text-active;
+$link-icon:             $link-colour;
+$link-decoration:       underline;
+
+$link-hover:            $link-colour;
+$link-icon-hover:       $link-hover;
+$link-decoration-hover: none;
+
+$link-font-weight:      $font-weight-rg;
+
+$link-standalone-decoration:        none;
+$link-standalone-decoration-hover:  underline;
+
+$link-focus:            $link-colour;
+$link-icon-focus:       $link-focus;
+
+$link-active:           $text-primary;
+$link-icon-active:      $link-active;
+
+// Visited links
+// To enable a colour change on visit change this colour to var(--expressive-secondary-deep) (recommeded)
+// By default this is this same as link.
+$link-visited:          $link-colour;
+$link-icon-visited:     $link-visited;
+
+$link-set-gap:          $spacer-04;
+$link-set-row-gap:      $spacer-03;
+
+
+// Bootstrap overrides
+$link-color:            $link-colour;
+$link-hover-color:      $link-hover;
+$link-hover-decoration: $link-decoration-hover;
+
+
+
+// Heading styles _______________________
+$h1-font-size:            $typescale-09;
+$h2-font-size:            $typescale-07;
+$h3-font-size:            $typescale-06;
+$h4-font-size:            $typescale-05;
+$h5-font-size:            $typescale-04;
+$h6-font-size:            $typescale-03;
+
+$headings-margin-bottom:      0;
+$headings-font-family:        null;
+$headings-font-style:         null;
+$headings-font-weight:        $font-weight-sb;
+$headings-line-height:        1.2;
+$headings-color:              inherit;
+
+
+
+// Horizontal rule ______________________
+$hr-margin-y:       $spacer;
+$hr-color:          $ui-border-02;
+
+$hr-border:         null; // Allows for inherited colors (hr-color)
+$hr-border-width:   var(--#{$prefix-bh}border-width);
+$hr-opacity:        1;
+
+
+
+// Layout options _______________________
+$layout-area-margin:      $margin-02;
+$layout-area-radius:      $border-radius-lg;
+
+$page-body-spacing-y:     $spacer-08;
+$page-body-spacing-x:     $page-body-spacing-y;
+
+$page-frame-spacing-y:    $page-body-spacing-y;
+$page-frame-spacing-x:    $page-body-spacing-y;
+$page-frame-gap:          $page-body-spacing-y;
+
+$page-pane-gap:           $page-body-spacing-y;
+$page-panel-gap:          $grid-gutter-width;
+$content-spacing:         $spacer-05;
+
+
+
+// Grid _________________________________
+$bento-columns-xxl:          7;
+$bento-columns-xl:           6;
+$bento-columns-lg:           5;
+$bento-columns-md:           4;
+$bento-columns-sm:           3;
+$bento-columns-xs:           2;
+$bento-gap:                  $spacer-05;
+
+// Bento boxes __________________________
+$bento-box-size:           10rem;
+$bento-box-radius:         $border-radius-lg;
+$bento-box-padding:        $padding-05;
+
+// $bento-box-md-width-span:  2;
+// $bento-box-md-width:       ($grid-gap * ($bento-box-md-width-span - 1)) + ($bento-box-size* 2);
+
+
+// Bento boxes __________________________
+
+
+
+// Icon sizes ___________________________
+$icon-sm:     $typescale-02;
+$icon-md:     $typescale-03;
+$icon-lg:     $typescale-04;
+$icon-xl:     $typescale-05;
+$icon-xxl:    $typescale-07;
+
+
+// Code _________________________________
+$code-font-size:            0.875em;
+$code-color:                $accent-02-60;
+
+
+
+// Component stuff __________________________________________________________________________________________________________________
+
+// Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+
+// scss-docs-start zindex-stack
+$zindex-menu:                       1000;
+$zindex-sticky:                     1020;
+$zindex-fixed:                      1030;
+$zindex-offcanvas-backdrop:         1040;
+$zindex-offcanvas:                  1045;
+$zindex-modal-backdrop:             1050;
+$zindex-modal:                      1055;
+$zindex-popover:                    1070;
+$zindex-tooltip:                    1080;
+$zindex-toast:                      1090;
+// scss-docs-end zindex-stack
+
+// Button & forms _______________________
+// Shared variables that are reassigned to `$form-input-` and `$btn-` specific variables.#
+
+// Caret svg ____________________________
+$caret-size:                  $typescale-03;
+$caret-svg:                   inherit;
+
+// Button _______________________________
+$button-border-width:         $border-width;
+$button-border-bottom-width:  add($border-width, 0.125rem);
+
+$button-padding-y:            $padding-01;
+$button-padding-x:            $padding-05;
+
+$button-padding-y-sm:         $button-padding-y;
+$button-padding-x-sm:         $padding-04;
+
+$button-padding-y-lg:         $button-padding-y;
+$button-padding-x-lg:         $padding-06;
+
+$button-icon-padding-y:       $padding-01;
+$button-icon-padding-x:       $padding-03;
+
+$button-radius:               var(--border-radius-md); 
+$button-radius-sm:            var(--border-radius-sm);
+$button-radius-lg:            $button-radius;
+
+$button-disabled-opacity:     $disabled-opacity;
+$button-focus-ring:           $focus-ring;
+
+$button-white-space:          wrap;
+$button-height:               2.5rem;
+$button-height-sm:            2rem;
+$button-height-lg:            3rem;
+$button-min-width:            4rem;
+$icon-button-width:           $button-height;
+$icon-button-width-sm:        $button-height-sm;
+$button-spacing:              $spacer-03;
+
+$button-set-gap:              $spacer-03; // space between buttons
+$button-icon-set-gap:         $spacer-02; // space between icon buttons
+$button-set-row-gap:          $button-set-gap;
+$button-set-margin:           $margin-02;
+
+$button-transition:           color $transition-time ease-in-out, background-color $transition-time ease-in-out, border-color $transition-time ease-in-out, box-shadow $transition-time ease-in-out;
+
+// Forms ________________________________
+$form-input-spacing:          $spacer-03;
+$form-input-height:           2.75rem;  
+$form-input-min-width:        4rem;  
+$form-input-field-spacing:    $spacer-03;
+
+$form-label-margin-bottom:    0;
+$form-label:                  var(--#{$prefix-bh}text-secondary);
+
+$form-helper-margin-top:      0;
+$form-helper:                 var(--text-muted);
+
+$form-input-padding-y:        $padding-03;
+$form-input-padding-x:        $padding-05;
+$form-input-padding-start:    $form-input-padding-x;
+$form-input-padding-end:      $padding-03;
+$form-input-text:             var(--#{$prefix-bh}text-primary);
+$form-input-background:       var(--#{$prefix-bh}ui-background-01);
+$form-input-border:           var(--#{$prefix-bh}ui-border-01);
+$form-input-border-width:     $border-width;
+
+$form-input-radius:           $border-radius-md;
+
+$form-input-placeholder:      var(--#{$prefix-bh}text-muted);
+
+$form-input-background-disabled:  var(--#{$prefix-bh}disabled-overlay-01);
+$form-input-border-disabled:      var(--#{$prefix-bh}disabled-overlay-02);
+$form-text-disabled:              var(--#{$prefix-bh}disabled-overlay-03);
+
+$form-input-border-focus:         $focus-ring-color;
+$form-input-focus-ring-width:     1px;
+$form-input-focus-ring:           0 0 $focus-ring-blur $form-input-focus-ring-width $focus-ring-color;
+
+$form-input-icon:                 var(--#{$prefix-bh}text-muted);
+$form-input-icon-size:            $icon-md;
+$form-input-icon-gap:             $spacer-03;
+$form-input-icon-position-y:      ($form-input-height - $form-input-icon-size) / 2;
+
+// Short form
+$short-form-body-gap:             $spacer-05;
+
+
+
+// Form wrapper __________________________
+$form-gap:                        $spacer-06;
+$form-body-gap:                   $form-gap;
+$form-body-margin-top:            $margin-05;
+$form-body-max-width:             36rem;
+$form-actions-gap:                $form-gap;
+$form-actions-margin-top:         $margin-05;
+
+$nested-inputs-padding-y:      $padding-03;
+$nested-inputs-padding-x:      0;
+$nested-inputs-padding-left:   $padding-08;
+$nested-inputs-border:         $focus-01;
+$nested-inputs-border-width:   $border-width-02;
+$nested-inputs-margin-top:     $spacer-05 - $form-gap;
+
+
+// Input group __________________________
+$input-group-addon-padding-y:           $padding-02;
+$input-group-addon-padding-x:           $form-input-padding-x;
+$input-group-addon-text:                $text-secondary;
+$input-group-addon-border:              $form-input-border;
+$input-group-addon-border-width:        $form-input-border-width;
+$input-group-addon-background:          $ui-overlay-02;
+$input-group-button-gap:                $button-set-gap;
+
+$input-group-addon-text-disabled:       $form-text-disabled;
+$input-group-addon-border-disabled:     $form-input-border-disabled;
+$input-group-addon-background-disabled: $form-input-background-disabled;
+
+
+
+// Input row ____________________________
+$input-row-gutter-x:                  $spacer-03;
+$input-row-gutter-y:                  $grid-gutter-width;
+
+
+
+// Form input buttons ___________________
+$form-input-button-height:            1.75rem;
+$form-input-button-width:             $form-input-button-height;
+$form-input-button-radius:            $border-radius-xs;
+$form-input-button-spacing-y:         $form-input-padding-y;
+$form-input-button-spacing-x:         $form-input-button-spacing-y;
+$form-input-button-gap:               $spacer-01;
+
+$form-input-button-background:        var(--#{$prefix-bh}transparent);
+$form-input-button-icon:              var(--#{$prefix-bh}action-text-01);
+$form-input-button-background-hover:  var(--#{$prefix-bh}action-04);
+$form-input-clear-icon:               var(--#{$prefix-bh}action-text-03);
+$form-input-clear-background-hover:   var(--#{$prefix-bh}action-05);
+$form-input-button-border-focus:      $form-input-border-focus;
+$form-input-button-focus-ring:        $form-input-focus-ring;
+
+
+
+// Form counter _________________________
+$form-counter:                        $form-helper;
+$form-counter-spacing:                4rem;
+$form-counter-warning:                var(--#{$prefix-bh}error-01);
+
+
+
+// Form validation ______________________
+$form-validation-error:             var(--#{$prefix-bh}error-01);
+
+$form-input-border-error:           $form-validation-error;
+$form-input-icon-error:             map-get($state-colours, "error-01");
+$form-input-icon-svg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$form-input-icon-error}'><!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--><path d='M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z'/></svg>");
+$form-feedback-icon-svg:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$form-input-icon-error}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z'/></svg>");
+
+
+$form-validation-states: (
+  // "valid" // REMOVED //
+
+  "invalid": (
+    "color": $form-validation-error,
+    "icon": $form-input-icon-svg,
+    "feedback-icon": $form-feedback-icon-svg,
+    "tooltip-color": $white,
+    "tooltip-bg-color": var(--#{$prefix-bh}error-01),
+    "focus-box-shadow": 0 0 $focus-ring-blur $form-input-focus-ring-width $form-validation-error,
+    "border-color": $form-input-border-error,
+  )
+);
+
+
+
+// Form select __________________________
+$form-select-padding-y:               subtract($form-input-padding-y, $form-input-border-width);
+$form-select-padding-x:               $form-input-padding-x;
+$form-select-border:                  $form-input-border;
+$form-select-border-width:            $form-input-border-width;
+$form-select-background:              $form-input-background;
+$form-select-radius:                  $form-input-radius;
+
+$form-select-text:                    $form-input-text;
+
+$form-select-indicator:               map-get($text-colors, "muted");
+$form-select-indicator-svg:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$form-select-indicator}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z'/></svg>");
+$form-select-indicator-size-x:        1.75rem;
+$form-select-indicator-size-y:        1rem;
+$form-select-indicator-size:          $form-select-indicator-size-x $form-select-indicator-size-y;
+$form-select-indicator-gap:           $spacer-03;
+$form-select-indicator-padding:       calc($form-select-indicator-gap + $form-select-indicator-size-x + $form-select-padding-y);
+$form-select-indicator-position:      right $form-select-padding-y center;
+
+$form-select-border-focus:            $form-input-border-focus;
+$form-select-focus-ring:              $form-input-focus-ring;
+
+
+$form-select-feedback-icon-padding-end: 0; // set to zero to remove default value
+
+$form-select-text-disabled:           $form-text-disabled;
+$form-select-border-disabled:         $form-input-border-disabled;
+$form-select-background-disabled:     $form-input-background-disabled;
+$form-select-indicator-svg-disabled:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$form-select-text-disabled}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z'/></svg>");
+
+
+// Checkbox _____________________________
+$checkbox-input-width:                  1rem;
+$checkbox-input-margin-y:               $margin-01;
+$checkbox-label:                        var(--#{$prefix-bh}text-secondary);
+$checkbox-input-gap:                    $spacer-03;
+$checkbox-input-background:             $form-input-background;
+$checkbox-input-border:                 var(--#{$prefix-bh}action-01);
+$checkbox-input-border-width:           $form-input-border-width;
+$checkbox-input-radius:                 $border-radius-xs;
+$checkbox-focus-ring:                   0 0 0 1px $ui-border-04, 0 0 0 3px $focus-ring-color;
+
+$checkbox-input-background-active:      var(--#{$prefix-bh}action-01);
+$checkbox-input-border-active:          var(--#{$prefix-bh}action-01);
+$checkbox-icon-check:                   map-get($action-text-colors, "02");
+
+$checkbox-gap:                          $spacer-03;
+$checkbox-check-svg:                    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$checkbox-icon-check}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/></svg>");
+
+// Disabled
+$checkbox-input-background-disabled:    var(--#{$prefix-bh}disabled-overlay-02);
+$checkbox-input-border-disabled:        var(--#{$prefix-bh}transparent);
+$checkbox-check-disabled:               var(--#{$prefix-bh}disabled-04);
+$checkbox-label-disabled:               var(--#{$prefix-bh}disabled-overlay-03);
+
+// Read-only
+$checkbox-input-background-readonly:    $checkbox-input-background;
+$checkbox-input-border-readonly:        var(--#{$prefix-bh}disabled-overlay-02);
+$checkbox-icon-check-readonly:          map-get($action-text-colors, "04");
+$checkbox-check-svg-readonly:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$checkbox-icon-check-readonly}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/></svg>");
+
+// Indeterminate
+$checkbox-icon-indeterminate:               $checkbox-icon-check;
+$checkbox-icon-indeterminate-readonly:      $checkbox-icon-check-readonly;
+$checkbox-input-background-indeterminate:   $checkbox-input-background-active;
+$checkbox-input-border-indeterminate:       $checkbox-input-border-active;
+$checkbox-input-svg-indeterminate:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640' fill='#{$checkbox-icon-indeterminate}'><!--!Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320z'/></svg>");
+$checkbox-input-svg-indeterminate-readonly: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640' fill='#{$checkbox-icon-indeterminate-readonly}'><!--!Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320z'/></svg>");
+
+
+// Radio
+$radio-pip-active:                      $checkbox-icon-check;
+$radio-pip-readonly:                    $checkbox-icon-check-readonly;
+$radio-pip-svg:                         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$radio-pip-active}'/></svg>");
+$radio-pip-svg-readonly:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$radio-pip-readonly}'/></svg>");
+$radio-input-radius:                    $border-radius-full;
+$radio-pip-disabled:                    $checkbox-check-disabled;
+
+// Response button
+$response-button-height:                $form-input-height;
+$response-button-height-lg:             5rem;
+$response-button-width-lg:              7.5rem;
+$response-button-gap-lg:                $spacer-02;
+$response-button-icon-height-lg:        100%;
+$response-button-padding-y-lg:          $padding-03;
+$response-button-padding-x-lg:          $padding-05;
+
+
+
+// Switch _______________________________
+$switch-input-gap:                    $spacer-04;
+$switch-track-background:             var(--#{$prefix-bh}ui-overlay-04);
+$switch-track-background-on:          var(--#{$prefix-bh}success-01);
+$switch-track-background-disabled:    var(--#{$prefix-bh}disabled-overlay-02);
+$switch-track-border:                 var(--#{$prefix-bh}transparent);
+$switch-track-border-disabled:        $switch-track-border;
+$switch-track-border-on:              $switch-track-border;
+$switch-handle:                       map-get($action-colors, "07");
+$switch-handle-on:                    $switch-handle;
+$switch-handle-disabled:              var(--#{$prefix-bh}disabled-overlay-03);
+$switch-handle-focus:                 $switch-handle;
+$switch-status-tag:                   var(--#{$prefix-bh}text-muted);
+$switch-status-tag-on:                $switch-status-tag;
+$switch-status-tag-disabled:          var(--#{$prefix-bh}disabled-overlay-03);
+$switch-status-tag-spacing:           $spacer-02;
+
+$switch-handle-svg:                   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$switch-handle}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z'/></svg>");
+$switch-handle-svg-on:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$switch-handle-on}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z'/></svg>");
+$switch-handle-svg-check:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$switch-handle-on}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z'/></svg>");
+
+$switch-handle-svg-disabled:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$switch-handle-disabled}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z'/></svg>");
+$switch-handle-svg-check-disabled:    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$switch-handle-disabled}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z'/></svg>");
+
+
+$switch-handle-size:                  0.875rem;
+$switch-handle-size-on:               1.25rem;
+$switch-padding-y:                    $padding-01;
+$switch-padding-x:                    $switch-padding-y;
+
+$switch-padding-y-sm:                 $padding-05 * .125;
+$switch-padding-x-sm:                 $switch-padding-y-sm;
+
+$switch-radius:                       $border-radius-full;
+
+$switch-padding-start:                0; // set to zero to remove default value
+
+$switch-gap:                          $spacer-04;
+
+$switch-active-content:               'Always active';
+
+$switch-set-gap:                      $spacer-04;
+
+
+
+// Notification base styles _____________  
+//
+// Variables are shared between Alerts & Toast
+
+$notification-padding-y:                $padding-03;
+$notification-padding-x:                $padding-03;
+$notification-content-padding-y:        $padding-01;
+$notification-content-padding-x:        $padding-03;
+$notification-content-gap:              $spacer-03;
+$notification-radius:                   $border-radius-md;
+$notification-border-width:             $border-width-03;
+$notification-note-sm:                  var(--#{$prefix-bh}text-muted);
+$notification-contextbar-margin-top:    $margin-03;
+$notification-contextbar-margin-bottom: $margin-01;
+$notification-backdrop-blur:            2rem;
+
+
+// Alert ________________________________
+$alert-padding-y:                 $notification-padding-y;
+$alert-padding-x:                 $notification-padding-x;
+$alert-content-padding-y:         $notification-content-padding-y;
+$alert-content-padding-x:         $notification-content-padding-x;
+$alert-content-gap:               $notification-content-gap;
+$alert-radius:                    $notification-radius;
+$alert-border-width:              $notification-border-width;
+$alert-note-sm:                   $notification-note-sm;
+$alert-contextbar-margin-top:     $notification-contextbar-margin-top;
+$alert-contextbar-margin-bottom:  $notification-contextbar-margin-bottom;
+
+
+
+// Toast ________________________________
+$toast-padding-y:                   $notification-padding-y;
+$toast-padding-x:                   $notification-padding-x;
+$toast-content-padding-y:           $notification-content-padding-y;
+$toast-content-padding-x:           $notification-content-padding-x;
+$toast-content-gap:                 $notification-content-gap;
+$toast-radius:                      $notification-radius;
+$toast-border-width:                $notification-border-width;
+$toast-note-sm:                     $notification-note-sm;
+$toast-max-width:                   22rem;
+$toast-spacing:                     $spacer-04;
+$toast-shadow:                      $shadow-lg;
+$toast-contextbar-margin-top:       $notification-contextbar-margin-top;
+$toast-contextbar-margin-bottom:    $notification-contextbar-margin-bottom;
+$toast-container-position-y:        bottom;
+$toast-container-position-x:        right;
+$toast-container-position-value-y:  2.5rem;
+$toast-container-position-value-x:  2.5rem;
+$toast-backdrop-blur:               $notification-backdrop-blur;
+
+
+
+// Close ________________________________
+$btn-close-icon:              $action-text-03;
+$btn-close-focus-ring:        $focus-ring;
+$btn-close-width:             2rem;
+$btn-close-height:            $btn-close-width;
+$btn-close-icon-size:         $icon-md;
+$btn-close-radius:            $border-radius-sm;
+
+$btn-close-background:        $transparent;
+$btn-close-background-hover:  $action-05;
+$btn-close-background-focus:  $action-05;
+
+
+
+// Tag __________________________________
+$tag-border:                  $transparent;
+$tag-border-width:            $border-width-01;
+$tag-padding-y:               subtract($padding-01, $tag-border-width);
+$tag-padding-x:               subtract($padding-03, $tag-border-width);
+$tag-radius:                  $border-radius-full;
+$tag-background:              $action-05;
+$tag-label:                   $action-text-04;
+$tag-label-padding-x:         $padding-01;
+$tag-height:                  2rem;
+$tag-min-width:               4rem;
+
+$tag-set-gap:                 $spacer-02;
+$tag-set-row-gap:             $spacer-03;
+
+$tag-selectable-background:         $transparent;
+$tag-selectable-border:             $action-06;
+$tag-selectable-border-bottom-width:$border-width-02;
+$tag-selectable-label:              $action-text-04;
+$tag-selectable-icon:               $tag-selectable-label;
+
+$tag-selectable-background-hover:   $action-05;
+$tag-selectable-border-hover:       $action-06;
+$tag-selectable-label-hover:        $action-text-04;
+$tag-selectable-icon-hover:         $tag-selectable-label-hover;
+
+$tag-selectable-background-active:  $action-04;
+$tag-selectable-border-active:      $action-04;
+$tag-selectable-label-active:       $action-text-01;
+$tag-selectable-icon-active:        $tag-selectable-label-active;
+
+// Small tag
+$tag-height-sm:               1.5rem;
+$tag-min-width-sm:            3rem;
+$tag-padding-y-sm:            add($padding-01/2, $tag-border-width*-1);
+$tag-padding-x-sm:            add($padding-02, $tag-border-width*-1);
+
+// Tags used in inputs (e.g. dropdown)
+$tag-height-input:            1.75rem;
+
+// Navs _________________________________
+$nav-gap:                           $spacer-02;
+$nav-link-padding-y:                $padding-01;
+$nav-link-padding-x:                $padding-05;
+$nav-link-gap:                      $spacer-03;
+$nav-link-radius:                   $border-radius-md;
+$nav-link-border:                   var(--#{$prefix-bh}transparent);
+$nav-link-border-width:             $border-width-01;
+$nav-link-height:                   3rem;
+
+$nav-link:                          var(--#{$prefix-bh}action-text-05);
+$nav-link-hover:                    var(--#{$prefix-bh}action-text-05);
+$nav-link-active:                   var(--#{$prefix-bh}action-text-01);
+$nav-link-disabled:                 var(--#{$prefix-bh}disabled-overlay-03);
+
+$nav-link-background:               var(--#{$prefix-bh}transparent);
+$nav-link-background-hover:         var(--#{$prefix-bh}action-05);
+$nav-link-background-active:        var(--#{$prefix-bh}action-04);
+$nav-link-background-disabled:      var(--#{$prefix-bh}transparent);
+$nav-link-border-focus:             var(--#{$prefix-bh}action-07);
+
+$nav-link-focus-ring:               $focus-ring;
+
+//Nav link sizes
+$nav-link-height-lg:                3.5rem;
+
+// Nav stacked
+$nav-stacked-gap:                    $spacer-01;
+
+// Nav tabs
+$nav-tabs-border:                   $ui-border-02;
+$nav-tabs-border-width:             $border-width-01;            
+
+$nav-tabs-link-padding-x:           $padding-04;
+$nav-tabs-link-padding-y:           $padding-03;
+$nav-tabs-link:                     $action-text-04;
+$nav-tabs-link-background-hover:    $nav-link-background-hover;
+$nav-tabs-link-active:              $action-text-05;
+$nav-tabs-link-background-active:   $action-05;
+
+// Nav underline
+$nav-underline-link-padding-x:        $nav-tabs-link-padding-x;
+$nav-underline-link-padding-y:        $padding-01;
+$nav-underline-gap:                   $spacer-03;
+$nav-underline-border-width:          $border-width-02;
+$nav-underline-border-padding:        $padding-03;
+
+$nav-underline-link-radius:           $border-radius-sm;
+$nav-underline-label:                 $action-text-03;
+$nav-underline-label-hover:           $action-text-05;
+$nav-underline-label-disabled:        $disabled-overlay-03;
+$nav-underline-link-background-hover: $action-05;
+$nav-underline-label-active:          $action-text-01;
+$nav-underline-link-height:           2.5rem;
+
+$nav-underline-link-border:           $transparent;
+$nav-underline-link-border-hover:     $action-06;
+$nav-underline-link-border-active:    $action-01;
+
+$nav-underline-items-border:          $ui-border-02;
+$nav-underline-items-border-width:    $border-width;
+
+// Tabs component
+$tabs-gap:                          $spacer-05;
+$tab-items-gap:                     $nav-link-gap;
+
+// Tab content
+$nav-tabs-content-padding-x:        0;
+$nav-tabs-content-padding-y:        0;
+$nav-tabs-content-radius:           0;
+$nav-tabs-content-background:       $transparent;
+
+
+
+// Card _________________________________
+$card-padding-y:                    $padding-08;
+$card-padding-x:                    $padding-08;
+$card-height:                       100%;
+$card-border-width:                 $border-width;
+$card-border:                       var(--ui-border-02);
+$card-background:                   var(--ui-background-01);
+$card-radius:                       $border-radius-lg;
+$card-text:                         null;
+
+$card-cap-padding-y:                $padding-04;
+$card-cap-padding-x:                $card-padding-x;
+$card-cap-background:               $ui-overlay-02;
+$card-cap-text:                     $card-text;
+$card-cap-border:                   none;
+$card-header-padding-top:           add($card-cap-padding-y, .25rem);
+
+$card-image-max-height:             10rem;
+
+$card-body-gap:                     $content-spacing;
+
+$card-padding-y-lg:                 $padding-09;
+$card-padding-x-lg:                 $padding-09;
+
+$card-padding-y-sm:                 $padding-07;
+$card-padding-x-sm:                 $padding-07;
+
+$card-border-secondary:             $transparent;
+$card-background-secondary:         var(--ui-overlay-02);
+
+// Clickable
+$card-clickable-border-hover:       $link-hover;
+
+$card-clickable-background-disabled:    null;
+$card-clickable-border-disabled:        $disabled-overlay-01;
+$card-clickable-text-disabled:          $disabled-overlay-03;
+$card-clickable-image-disabled-opacity: 0.5;
+$card-clickable-border-width:           3px;
+
+// Selectable
+$card-selectable-check-position-top:    1.5rem;
+$card-selectable-check-position-right:  $card-selectable-check-position-top;
+$card-selectable-border-width:          $card-clickable-border-width;
+
+$card-selectable-border-hover:          $card-clickable-border-hover;
+
+$card-selectable-background-active:     $action-04;
+$card-selectable-border-active:         $action-01;
+
+$card-selectable-focus-ring:            $checkbox-focus-ring;
+
+// Emphasis tile
+$emphasis-tile-padding-y:              $card-padding-y;
+$emphasis-tile-padding-x:              $card-padding-x;
+$emphasis-tile-content-gap:            $card-body-gap;
+$emphasis-tile-radius:                 $border-radius-md;
+$emphasis-tile-border-width:           $card-border-width;
+$emphasis-tile-background:             $card-background-secondary;
+$emphasis-tile-border:                 $card-border-secondary;
+$emphasis-tile-width:                  20rem;
+
+$emphasis-tile-background-secondary:   $card-background;
+$emphasis-tile-border-secondary:       $card-border;
+
+
+
+// Accordion ____________________________
+$accordion-padding-y:                     $padding-05;
+$accordion-padding-x:                     $padding-08;
+$accordion-spacing:                       $spacer-02;
+
+$accordion-background:                    $ui-background-01;
+$accordion-border:                        $ui-border-02;
+$accordion-border-width:                  $border-width;
+$accordion-radius:                        $border-radius-md;
+$accordion-text:                          $text-primary;
+$accordion-text-active:                   $accordion-text;
+
+$accordion-body-padding-y:                $accordion-padding-y;
+$accordion-body-padding-x:                $accordion-padding-x;
+$accordion-body-padding-bottom:           $padding-07;
+$accordion-body-spacing:                  $spacer-05;
+
+$accordion-button-height:                 4rem;
+$accordion-button-padding-y:              $accordion-padding-y;
+$accordion-button-padding-x:              $accordion-padding-x;
+$accordion-button-padding-right:          $padding-07;
+
+$accordion-header-label:                  $accordion-text;
+
+
+$accordion-icon:                          $text-muted;
+$accordion-icon-svg:                      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$accordion-icon}'><!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--><path d='M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z'/></svg>");
+$accordion-icon-size:                     $icon-md;
+
+$accordion-header-background-active:      $ui-overlay-02;
+$accordion-header-background-hover:       $action-04;
+
+$accordion-border-focus:                  $focus-ring-color;
+$accordion-focus-ring:                    $form-input-focus-ring;
+
+// Large accordion
+$accordion-button-padding-y-lg:               $padding-08;
+$accordion-button-padding-x-lg:               $padding-08;
+$accordion-button-padding-bottom-active-lg:   $padding-07;
+$accordion-radius-lg:                         $border-radius-lg;
+$accordion-body-padding-y-lg:                 $padding-07;
+$accordion-body-padding-x-lg:                 $padding-08;
+$accordion-body-padding-bottom-lg:            $padding-08;
+
+
+
+
+// Icon _________________________________
+$icon-gap-right:                      $margin-02;
+$icon-gap-right-lg:                   $margin-03;
+
+$icon-block-icon:                     var(--#{$prefix-bh}text-secondary);
+$icon-block-background:               var(--#{$prefix-bh}ui-overlay-03);
+$icon-block-border:                   $transparent;
+$icon-block-border-width:             $border-width;
+$icon-block-radius:                   $border-radius-md;
+$icon-block-size:                     3rem;    
+$icon-block-icon-size:                $icon-xl;     
+
+// Extra small
+$icon-block-size-xs:                  2rem;    
+$icon-block-icon-size-xs:             $icon-md;  
+$icon-block-radius-xs:                $border-radius-sm;
+
+// Small
+$icon-block-size-sm:                  2.75rem;    
+$icon-block-icon-size-sm:             $icon-xl;  
+$icon-block-radius-sm:                $border-radius-sm;
+
+// Large
+$icon-block-size-lg:                  3.5rem;    
+$icon-block-icon-size-lg:             $icon-xl;  
+$icon-block-radius-lg:                $border-radius-md;
+
+// Extra large
+$icon-block-size-xl:                  4rem;    
+$icon-block-icon-size-xl:             $icon-xxl;  
+$icon-block-radius-xl:                $border-radius-md;
+
+// Extra extra large
+$icon-block-size-xxl:                 5rem;    
+$icon-block-icon-size-xxl:            $icon-xxl;  
+$icon-block-radius-xxl:               $border-radius-md;
+
+
+
+// Text block ___________________________
+$text-block-gap:            $margin-03;
+$eyebrow:                   $text-tertiary;
+
+
+// Menu _________________________________
+// Styles used for menu and dropdown items
+$menu-background:                   $ui-background-01;
+$menu-border:                       $transparent;
+$menu-border-width:                 0;
+$menu-radius:                       $border-radius-lg;
+$menu-shadow:                       $shadow-sm;
+$menu-padding-x:                    $padding-05;
+$menu-padding-y:                    $padding-05;
+$menu-min-width:                    10rem;
+$menu-max-width:                    18rem;
+$menu-spacer:                       $spacer-01;
+
+
+// Menu item
+$menu-item-padding-y:               $padding-03;
+$menu-item-padding-x:               $padding-04;
+$menu-item-height:                  2.5rem;
+$menu-item-radius:                  $border-radius-md;
+$menu-item-label:                   $action-text-05;
+$menu-item-background:              $transparent;
+$menu-item-border:                  $transparent;
+$menu-item-border-width:            0;
+$menu-item-transition:              $button-transition;
+$menu-item-gap:                     $spacer-01;
+$menu-item-icon-spacing:            $spacer-03;
+
+$menu-item-label-hover:             $menu-item-label;
+$menu-item-background-hover:        $action-05;
+$menu-item-border-hover:            $menu-item-border;
+
+$menu-item-label-active:            $action-text-01;
+$menu-item-background-active:       $action-04;
+$menu-item-border-active:           $menu-item-border;
+
+$menu-item-label-disabled:          $disabled-overlay-03;
+
+$menu-item-focus:                   $focus-ring;
+
+$menu-section-header:               $text-secondary;
+$menu-section-header-padding-x:     $menu-item-padding-x;
+$menu-section-header-padding-y:     $padding-02;
+
+$menu-divider-margin-y:             6px;
+$menu-divider-border:               $ui-border-03;
+
+$menu-itemt-icon-size:              $icon-md;
+$menu-item-check:                   $menu-item-label;
+$menu-item-check-svg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$menu-item-check}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M441 103c9.4 9.4 9.4 24.6 0 33.9L177 401c-9.4 9.4-24.6 9.4-33.9 0L7 265c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l119 119L407 103c9.4-9.4 24.6-9.4 33.9 0z'/></svg>");
+$menu-item-check-active:            $menu-item-label-active;
+$menu-item-check-svg-active:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$menu-item-check-active}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M441 103c9.4 9.4 9.4 24.6 0 33.9L177 401c-9.4 9.4-24.6 9.4-33.9 0L7 265c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l119 119L407 103c9.4-9.4 24.6-9.4 33.9 0z'/></svg>");
+
+$menu-item-selectable-caret:        $menu-item-label;
+$menu-item-selectable-caret-svg:    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' fill='#{$menu-item-selectable-caret}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z'/></svg>");
+
+$menu-item-label-danger:            $action-text-danger-01;
+$menu-item-background-danger:       $action-danger-04;
+$menu-item-border-danger:           $transparent;
+
+// Avatar _______________________________
+$avatar-size:               3rem;
+$avatar-size-sm:            2.5rem;
+$avatar-size-xs:            2rem;
+
+$avatar-icon-size:          $icon-lg;
+$avatar-icon-size-sm:       $icon-lg;
+$avatar-icon-size-xs:       $icon-md;
+
+$avatar-background:         $expressive-soft;
+$avatar-border:             $transparent;
+$avatar-border-width:       $border-width-02;
+$avatar-text:               $expressive-rich;
+
+$avatar-img-border:         $ui-border-04;
+
+// Avatar set
+$avatar-set-overlap:        0.75rem;
+
+// Account toggle _______________________
+$account-toggle-text:         $text-secondary;
+$account-toggle-text-hover:   $account-toggle-text;
+$account-toggle-indicator:    $text-muted;
+$account-toggle-padding-y:    $padding-03;
+$account-toggle-padding-x:    $account-toggle-padding-y;
+
+
+
+// Dropdown _____________________________
+$dropdown-zindex:                   $zindex-menu;
+$dropdown-background:               $menu-background;
+$dropdown-border:                   $menu-border;
+$dropdown-border-width:             $menu-border-width;
+$dropdown-radius:                   $menu-radius;
+$dropdown-shadow:                   $menu-shadow;
+$dropdown-padding-x:                $menu-padding-x;
+$dropdown-padding-y:                $menu-padding-y;
+$dropdown-min-width:                $menu-min-width;
+$dropdown-spacer:                   $menu-spacer;
+$dropdown-show-max-items:           5;
+
+// Dropdown item
+$dropdown-item-padding-y:           $menu-item-padding-y;
+$dropdown-item-padding-x:           $menu-item-padding-x;
+$dropdown-item-height:              $menu-item-height;
+$dropdown-item-radius:              $menu-item-radius;
+$dropdown-item-label:               $menu-item-label;
+$dropdown-item-background:          $menu-item-background;
+$dropdown-item-border:              $menu-item-border;
+$dropdown-item-border-width:        $menu-item-border-width;
+$dropdown-item-transition:          $menu-item-transition;
+$dropdown-item-gap:                 $menu-item-gap;
+
+$dropdown-item-icon-spacing:        $menu-item-icon-spacing;
+
+$dropdown-item-label-hover:         $menu-item-label-hover;
+$dropdown-item-background-hover:    $menu-item-background-hover;
+$dropdown-item-border-hover:        $menu-item-border-hover;
+
+$dropdown-item-label-active:        $menu-item-label-active;
+$dropdown-item-background-active:   $menu-item-background-active;
+$dropdown-item-border-active:       $menu-item-border-active;
+
+$dropdown-item-label-disabled:      $menu-item-label-disabled;
+
+$dropdown-item-focus:               $menu-item-focus;
+$dropdown-item-icon-spacing:        $menu-item-icon-spacing; 
+
+$dropdown-check-active:             $dropdown-item-label-active;
+$dropdown-check-svg-active:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$dropdown-check-active}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/></svg>");
+$dropdown-check-svg-size:           $icon-md;
+$dropdown-check-svg-gap:            $spacer-03;
+
+$dropdown-indicator-position-top:   calc(subtract($form-input-height/2, $form-select-indicator-size-y/2) - $form-select-border-width);
+$dropdown-indicator-position:       right $form-select-padding-y top $dropdown-indicator-position-top;
+
+$dropdown-divider-margin-y:         $margin-01;
+$dropdown-divider-border:           $menu-divider-border;
+
+// Carousel _____________________________
+$carousel-padding-x:                    $spacer-04;
+$carousel-button-style:                 btn-ghost;
+$carousel-indicator-position:           center; // flex-start, center or flex-end
+$carousel-indicator-width:              0.75rem;
+$carousel-indicator-height:             0.75rem;
+$carousel-indicator-margin-top:         $margin-03;
+$carousel-indicator-gap:                $spacer-01;
+$carousel-indicator-padding-y:          $padding-03;
+$carousel-indicator-padding-x:          $padding-02;
+$carousel-indicator-radius:             $border-radius-full;
+$carousel-indicator-border-width:       $border-width;
+
+$carousel-indicator-background:         $action-05;
+$carousel-indicator-background-hover:   $action-05;
+$carousel-indicator-background-active:  $action-06;
+
+$carousel-indicator-border:             $action-05;
+$carousel-indicator-border-hover:       $action-06;
+$carousel-indicator-border-active:      $transparent;
+
+$carousel-indicator-transition:         $button-transition;
+
+
+
+// Collapse _____________________________
+$collapse-trigger:                  var(--#{$prefix-bh}text-tertiary);
+$collapse-trigger-hover:            var(--#{$prefix-bh}text-tertiary);
+$collapse-trigger-gap:              $margin-02;
+
+$collapse-card-background:          var(--#{$prefix-bh}ui-overlay-02);
+$collapse-card-padding-y:           $padding-03;
+$collapse-card-padding-x:           $collapse-card-padding-y;
+$collapse-card-radius:              $border-radius-md;
+
+$collapse-card-content-padding-y:   $padding-01;
+$collapse-card-content-padding-x:   $padding-03;
+$collapse-card-text:                var(--body-color);
+$collapse-card-title:               var(--heading-color);
+
+$collapse-contextbar-margin-top:    $margin-03;
+$collapse-contextbar-margin-bottom: $margin-01; 
+$collapse-contextbar-gap:           $spacer-04;
+
+
+
+// List _________________________________
+$list-padding-start:        $padding-06 + $padding-03;
+$list-gap:                  $spacer-03;
+$list-heading:              var(--text-secondary);
+$list-item:                 var(--text-primary);
+$list-item-spacing:         $spacer-03;
+
+
+
+// Stepper ______________________________
+$stepper-item:                      $feedback-message-info;
+$stepper-item-gap:                  $spacer-04;
+
+$stepper-item-success:              $success-01;
+$stepper-item-error:                var(--#{$prefix-bh}error-01);
+$stepper-item-disabled:             $disabled-overlay-03;
+
+$stepper-item-connector:            $feedback-border-info;
+$stepper-item-connector-width:      0.125rem; 
+$stepper-item-connector-height:     1.5rem; 
+$stepper-item-connector-success:    $feedback-border-success;
+
+$stepper-icon-width:                2.5rem;
+$stepper-icon-height:               $stepper-icon-width;
+$stepper-icon-margin:               0.125rem;
+$stepper-icon-size:                 $icon-md;
+$stepper-icon-size-success:         $icon-xl;
+$stepper-icon-radius:               $border-radius-full;
+
+$stepper-icon-svg:                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$stepper-item}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z'/></svg>");
+$stepper-icon-svg-active:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$stepper-item}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M36.4 360.9L13.4 439 1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1L73 498.6l78.1-23c10.4-3 20.1-8 28.6-14.5l.3 .2 .5-.8c1.4-1.1 2.7-2.2 4-3.3c1.4-1.2 2.7-2.5 4-3.8L492.7 149.3c21.9-21.9 24.6-55.6 8.2-80.5c-2.3-3.5-5.1-6.9-8.2-10L453.3 19.3c-25-25-65.5-25-90.5 0L58.6 323.5c-2.5 2.5-4.9 5.2-7.1 8l-.8 .5 .2 .3c-6.5 8.5-11.4 18.2-14.5 28.6zM383 191L197.4 376.6l-49.6-12.4-12.4-49.6L321 129 383 191zM97 358.9l7.7 31c2.1 8.6 8.9 15.3 17.5 17.5l31 7.7-7.4 11.2c-2.6 1.4-5.3 2.6-8.1 3.4l-23.4 6.9L59.4 452.6l16.1-54.8 6.9-23.4c.8-2.8 2-5.6 3.4-8.1L97 358.9zM315.3 218.7c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0l-96 96c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l96-96z'/></svg>");
+$stepper-icon-svg-success:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$stepper-item-success}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z'/></svg>");
+$stepper-icon-svg-disabled:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$stepper-item-disabled}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z'/></svg>");
+$stepper-icon-svg-error:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$stepper-item-error}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z'/></svg>");
+
+$stepper-icon-background-active:    $feedback-overlay-info;
+
+$sub-stepper-item-connector-height: .5rem; 
+
+$sub-stepper-item-icon-height:      1.25rem; 
+$sub-stepper-icon-svg:              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$stepper-item}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M272 256A112 112 0 1 0 48 256a112 112 0 1 0 224 0zM0 256a160 160 0 1 1 320 0A160 160 0 1 1 0 256z'/></svg>");
+$sub-stepper-icon-svg-active:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$stepper-item}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M0 256a160 160 0 1 1 320 0A160 160 0 1 1 0 256z'/></svg>");
+$sub-stepper-icon-svg-success:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$stepper-item}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M441 103c9.4 9.4 9.4 24.6 0 33.9L177 401c-9.4 9.4-24.6 9.4-33.9 0L7 265c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l119 119L407 103c9.4-9.4 24.6-9.4 33.9 0z'/></svg>");
+$sub-stepper-icon-svg-disabled:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$stepper-item-disabled}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M272 256A112 112 0 1 0 48 256a112 112 0 1 0 224 0zM0 256a160 160 0 1 1 320 0A160 160 0 1 1 0 256z'/></svg>");
+
+$sub-stepper-icon-size-error:       $icon-sm;
+
+
+
+// Badge ________________________________
+$badge-padding-x:             $padding-03;
+$badge-padding-y:             0;
+$badge-label:                 $expressive-rich;
+$badge-radius:                $border-radius;
+$badge-border:                $expressive-soft;
+$badge-border-width:          $border-width;
+$badge-background:            $expressive-soft;
+$badge-height:                1.25rem;
+
+
+
+// Modal ________________________________
+$modal-padding:           $padding-08;
+$modal-margin:            $margin-02;
+$modal-margin-y-sm-up:    $margin-05;
+$modal-spacing:           $spacer-05;
+
+$modal-text:              var(--#{$prefix-bh}text-primary);
+$modal-background:        var(--#{$prefix-bh}ui-background-01);
+$modal-border:            var(--#{$prefix-bh}ui-border-02);
+$modal-border-width:      $border-width;  
+$modal-radius:            $border-radius-lg;  
+$modal-shadow:            $shadow-md;
+$modal-shadow-sm-up:      $shadow-xl;
+
+$modal-body-spacing:      $spacer-05;
+
+$modal-sm:                384px;
+$modal-md:                500px;
+$modal-lg:                800px;
+$modal-xl:                1140px;
+
+// Modal backdrop
+$modal-backdrop-blur:     0.5rem;
+$modal-backdrop-opacity:  1;
+$modal-backdrop-background: var(--#{$prefix-bh}black-tint-60);
+
+
+
+// Tooltip ______________________________
+$tooltip-max-width:                 280px;
+$tooltip-label:                     $text-primary;
+$tooltip-background:                $ui-background-03;
+$tooltip-border:                    $ui-border-02;
+$tooltip-border-width:              $border-width;
+$tooltip-radius:                    $border-radius-sm;
+$tooltip-opacity:                   1;
+$tooltip-padding-y:                 $padding-01;
+$tooltip-padding-x:                 $padding-03;
+$tooltip-margin:                    null;
+$tooltip-shadow:                    $shadow-xs;
+
+$tooltip-arrow-display:             none; // None to hide, block to show
+$tooltip-arrow-width:               0.8rem;
+$tooltip-arrow-height:              0.25rem;
+
+$tooltip-definition-trigger-border: $link-colour;
+
+
+
+// Progress _____________________________
+$progress-container-spacing:        $form-input-spacing;
+
+$progress-height:                   0.5rem;
+$progress-height-sm:                0.25rem;
+$progress-background:               $expressive-pale-overlay;
+$progress-border:                   $expressive-pale-overlay;
+$progress-border-width:             $border-width;
+$progress-border-radius:            $border-radius-full;
+$progress-bar-text:                 $white;
+$progress-bar-background:           $expressive-deep;
+$progress-bar-animation-timing:     1s linear infinite;
+$progress-bar-transition:           width .6s ease;
+
+$progress-label:                    $form-label;
+$progress-label-gap:                $spacer-04;
+$progress-helper:                   $form-helper;
+$progress-note:                     $text-primary;
+
+$progress-icon-size:                $icon-md;
+$progress-status-icon-success:      $success-01;
+$progress-status-icon-error:        var(--#{$prefix-bh}error-01);
+$progress-status-icon-success-svg:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$progress-status-icon-success}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z'/></svg>");
+$progress-status-icon-error-svg:    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$progress-status-icon-error}'><!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--><path d='M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z'/></svg>");
+
+$progress-background-error:         $feedback-background-error;
+$progress-border-error:             $feedback-overlay-error;
+$progress-bar-background-error:     $feedback-border-error;
+
+$progress-background-success:       $feedback-background-success;
+$progress-border-success:           $feedback-overlay-success;
+$progress-bar-background-success:   $feedback-border-success;
+
+$progress-background-inactive:      $disabled-02;
+$progress-border-inactive:          $disabled-overlay-01;
+$progress-bar-background-inactive:  $disabled-03;
+
+
+// Slider _______________________________
+$form-slider-track-width:                   100%;
+$form-slider-track-height:                  .25rem;
+$form-slider-track-cursor:                  pointer;
+$form-slider-track-background:              $ui-overlay-03;
+$form-slider-track-background-disabled:     $disabled-overlay-01;
+$form-slider-track-border-radius:           $border-radius-full;
+
+$form-slider-handle-width:                  0.875rem;
+$form-slider-handle-height:                 $form-slider-handle-width;
+$form-slider-handle-width-active:           1.25rem;
+$form-slider-handle-height-active:          $form-slider-handle-width-active;
+$form-slider-handle-background:             $action-01;
+$form-slider-handle-border:                 none;
+$form-slider-handle-border-radius:          1rem;
+// $form-slider-handle-box-shadow:             0 .1rem .25rem $black-tint-20;
+
+$form-slider-shadow-width:                  ($form-slider-handle-width-active - $form-slider-handle-width) / 2;
+$form-slider-handle-expand:                 0 0 $focus-ring-blur $form-slider-shadow-width $form-slider-handle-background;
+$form-slider-handle-expand-error:           0 0 $focus-ring-blur $form-slider-shadow-width $error-01;
+$form-slider-handle-focus-box-shadow:       0 0 $focus-ring-blur $form-slider-shadow-width $focus-ring-color;
+$form-slider-handle-focus-box-shadow-error: 0 0 $focus-ring-blur $form-slider-shadow-width $error-01;
+// $form-slider-handle-focus-box-shadow-width:  $input-focus-width; // For focus box shadow issue in Edge
+// $form-slider-handle-active-bg:               tint-color($component-active-bg, 70%);
+$form-slider-handle-background-disabled:    $disabled-03;
+$form-slider-handle-background-error:       var(--#{$prefix-bh}error-01);
+$form-slider-handle-transition:             background-color $transition-time ease-in-out, border-color $transition-time ease-in-out, width $transition-time ease-in-out, height $transition-time ease-in-out, margin $transition-time ease-in-out, box-shadow $transition-time ease-in-out;
+
+$form-slider-filled-background:             $form-slider-handle-background;
+$form-slider-filled-background-disabled:    $form-slider-handle-background-disabled;
+$form-slider-filled-background-readonly:    $action-06;
+$form-slider-filled-background-error:       $form-slider-handle-background-error;
+$form-slider-minmax:                        $text-secondary;
+$form-slider-minmax-disabled:               $form-text-disabled;
+$form-slider-tick:                          $ui-overlay-04;
+$form-slider-tick-padding:                  1px;
+$form-slider-tick-radius:                   $border-radius-full;
+$form-slider-tick-height:                   calc(#{$form-slider-track-height} - (#{$form-slider-tick-padding} * 2));
+$form-slider-tick-width:                    $form-slider-tick-height;
+
+$form-slider-container-height:              $form-input-height;
+
+$form-slider-outcome-margin:                $form-slider-shadow-width + $spacer-01;
+$form-slider-output-background:             $tooltip-background;
+$form-slider-output-border:                 $tooltip-border;
+$form-slider-output-border-width:           $tooltip-border-width;
+$form-slider-output-radius:                 $tooltip-radius;
+$form-slider-output-padding-y:              $tooltip-padding-y;
+$form-slider-output-padding-x:              $tooltip-padding-x;
+$form-slider-output-label:                  $tooltip-label;
+$form-slider-output-shadow:                 $tooltip-shadow;
+$form-slider-output-opacity:                $tooltip-opacity;
+$form-slider-output-zindex:                 $zindex-tooltip;
+$form-slider-output-transition:             opacity $transition-time ease-in-out;
+
+
+
+// Breadcrumb ___________________________
+$breadcrumb-padding-x:                0;
+$breadcrumb-padding-y:                0;
+$breadcrumb-margin-bottom:            0;
+$breadcrumb-background:               null;
+$breadcrumb-radius:                   null;  
+
+$breadcrumb-current:                  var(--#{$prefix-bh}text-muted);
+$breadcrumb-divider:                  var(--#{$prefix-bh}text-muted);
+$breadcrumb-item-padding-x:           $padding-03;
+
+$breadcrumb-divider-icon:             quote("/");
+$breadcrumb-divider-flipped:          $breadcrumb-divider-icon;
+
+
+
+// Key-value pair _______________________
+$keyvalue-gap:              $spacer-03;
+$keyvalue-key:              var(--#{$prefix-bh}text-secondary);
+$keyvalue-value:            var(--#{$prefix-bh}text-primary);
+
+// Key-value list
+$key-value-item-gap:          $spacer-04;
+$key-value-list-row-gap:      $spacer-05;
+
+// Key-value grid
+$key-value-grid-gap:         $spacer-02;
+$key-value-grid-background:  var(--#{$prefix-bh}ui-overlay-02);
+$key-value-grid-padding-x:   $padding-07;
+$key-value-grid-padding-y:   $padding-05;
+$key-value-grid-radius:      $border-radius-md;
+$key-value-columns-default:  3;
+
+// Key-value table
+$key-value-table-gap:        $key-value-item-gap;
+$key-value-key-col:          2fr;  
+$key-value-value-col:        3fr;
+
+
+
+// Side bar _____________________________
+$sidebar-width:         20rem;
+$sidebar-width-closed:  4.5rem;
+
+
+
+// Versa-tile ___________________________
+$versatile-padding-y:        $padding-05;
+$versatile-padding-x:        $padding-05;
+
+$versatile-radius:           $border-radius-md;
+$versatile-background:       $ui-overlay-01;
+$versatile-border:           $ui-border-02;
+$versatile-border-width:     $border-width;
+
+$versatile-content-gap:      $spacer-04;
+$versatile-body-gap:         $spacer-04;
+$versatile-actions-gap:      $spacer-04;
+
+$versatile-label:            var(--#{$prefix-bh}text-primary);
+$versatile-text:             var(--body-color);
+
+
+
+// Lookup _______________________________
+$lookup-gap:                $spacer-04;
+$lookup-actions-gap:        $spacer-03;
+
+
+
+// Table ________________________________
+$table-text:                var(--#{$prefix-bh}text-primary);
+$table-text-secondary:      var(--#{$prefix-bh}text-muted);
+$table-background:          var(--#{$prefix-bh}transparent);
+$table-border:              var(--#{$prefix-bh}ui-border-02);
+$table-border-width:        $border-width;
+
+$table-hover-text:          $table-text;
+$table-hover-background:    var(--#{$prefix-bh}ui-overlay-02);
+
+$table-row-height:          3.25rem;
+$table-row-gap:             0.25rem;
+
+$table-cell-padding-y:      $padding-05*0.125;
+$table-cell-padding-x:      $padding-05;
+$table-cell-vertical-align: middle;
+
+$table-header-background:   var(--#{$prefix-bh}ui-overlay-03);
+$table-header-text:         var(--#{$prefix-bh}text-secondary);
+$table-header-radius:       $border-radius-md;
+$table-header-row-height:   3.5rem;
+$table-header-gap:          $spacer-03;
+
+$table-sort-icon:           var(--#{$prefix-bh}text-active);
+$table-sort-icon-size:      $icon-sm;

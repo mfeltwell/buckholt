@@ -1,0 +1,15 @@
+[class*="-info"] {
+    --#{$prefix-bh}shadow-colour: var(--#{$prefix-bh}feedback-shadow-info);
+}
+
+[class*="-success"] {
+    --#{$prefix-bh}shadow-colour: var(--#{$prefix-bh}feedback-shadow-success);
+}
+
+[class*="-warning"] {
+    --#{$prefix-bh}shadow-colour: var(--#{$prefix-bh}feedback-shadow-warning);
+}
+
+[class*="-error"] {
+    --#{$prefix-bh}shadow-colour: var(--#{$prefix-bh}feedback-shadow-error);
+}

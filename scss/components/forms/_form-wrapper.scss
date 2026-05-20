@@ -1,0 +1,49 @@
+//
+// Form
+//
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: $form-gap;
+}
+
+.form-body {
+    @extend .form;
+    gap: $form-body-gap;
+    max-width: $form-body-max-width;
+
+    + .form-body {
+        margin-top: $form-body-margin-top;
+    }
+}
+
+.form-actions {
+    @extend .form;
+    gap: $form-actions-gap;
+    margin-top: $form-actions-margin-top;
+
+    > .btn {
+        align-self: flex-start;
+    }
+}
+
+
+//
+// Short form
+//
+
+.short-form {
+    display: flex;
+    flex-direction: column;
+    gap: $short-form-body-gap;
+    width: 100%;
+
+    .btn {
+        width: 100%;
+    }
+
+    .input {
+        min-width: 100%;
+    }
+}

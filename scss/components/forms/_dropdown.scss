@@ -1,0 +1,321 @@
+// The dropdown wrapper (`<div>`)
+.dropup,
+.dropend,
+.dropdown,
+.dropstart,
+.dropup-center,
+.dropdown-center {
+  position: relative;
+}
+
+.dropdown-toggle {
+  @extend .form-select;
+  min-height: $form-input-height;
+  max-height: unset;
+  overflow: hidden;
+  background-position: $dropdown-indicator-position;
+
+  // Placeholder
+  &::placeholder {
+    @include type($placeholder, "02");
+    color: $form-input-placeholder;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
+}
+
+// The dropdown menu
+.dropdown-menu-panel {
+  // scss-docs-start dropdown-css-vars
+  --#{$prefix-bh}dropdown-zindex:                 #{$dropdown-zindex};
+  --#{$prefix-bh}dropdown-background:             #{$dropdown-background};
+  --#{$prefix-bh}dropdown-border:                 #{$dropdown-border};
+  --#{$prefix-bh}dropdown-border-width:           #{$dropdown-border-width};
+  --#{$prefix-bh}dropdown-radius:                 #{$dropdown-radius};
+  --#{$prefix-bh}dropdown-shadow:                 #{$dropdown-shadow};
+  --#{$prefix-bh}dropdown-padding-x:              #{$dropdown-padding-x};
+  --#{$prefix-bh}dropdown-padding-y:              #{$dropdown-padding-y};
+  --#{$prefix-bh}dropdown-min-width:              #{$dropdown-min-width};
+  --#{$prefix-bh}dropdown-spacer:                 #{$dropdown-spacer};
+  --#{$prefix-bh}dropdown-item-padding-x:         #{$dropdown-item-padding-x};
+  --#{$prefix-bh}dropdown-item-padding-y:         #{$dropdown-item-padding-y};
+  --#{$prefix-bh}dropdown-item-height:            #{$dropdown-item-height};
+  --#{$prefix-bh}dropdown-item-radius:            #{$dropdown-item-radius};
+  --#{$prefix-bh}dropdown-item-label:             #{$dropdown-item-label};
+  --#{$prefix-bh}dropdown-item-background:        #{$dropdown-item-background};
+  --#{$prefix-bh}dropdown-item-border:            #{$dropdown-item-border};
+  --#{$prefix-bh}dropdown-item-border-width:      #{dropdown-item-border-width};
+  --#{$prefix-bh}dropdown-item-gap:               #{$dropdown-item-gap};
+  --#{$prefix-bh}dropdown-item-icon-spacing:      #{$dropdown-item-icon-spacing};
+
+  --#{$prefix-bh}dropdown-item-label-hover:       #{$dropdown-item-label-hover};
+  --#{$prefix-bh}dropdown-item-background-hover:  #{$dropdown-item-background-hover};
+  --#{$prefix-bh}dropdown-item-border-hover:      #{$dropdown-item-border-hover};
+
+  --#{$prefix-bh}dropdown-item-label-active:      #{$dropdown-item-label-active};
+  --#{$prefix-bh}dropdown-item-background-active: #{$dropdown-item-background-active};
+  --#{$prefix-bh}dropdown-item-border-active:     #{$dropdown-item-border-active};
+
+  --#{$prefix-bh}dropdown-item-label-disabled:    #{$dropdown-item-label-disabled};
+
+  --#{$prefix-bh}dropdown-divider-border:         #{$dropdown-divider-border};
+  --#{$prefix-bh}dropdown-divider-margin-y:       #{$dropdown-divider-margin-y};
+  // scss-docs-end dropdown-css-vars
+
+  position: absolute;
+  z-index: var(--#{$prefix-bh}dropdown-zindex);
+  display: none; // none by default, but flex on "open" of the menu
+  flex-direction: column;
+  gap: var(--#{$prefix-bh}dropdown-item-gap);
+  width: 100%;
+  min-width: var(--#{$prefix-bh}dropdown-min-width);
+  max-height: calc($dropdown-item-height*$dropdown-show-max-items) + calc($dropdown-item-height*0.5) + $dropdown-padding-y + calc($dropdown-item-gap*$dropdown-show-max-items) + 0.4375rem; // 0.4375rem is divider height
+  overflow-y: auto;
+  padding: var(--#{$prefix-bh}dropdown-padding-y) var(--#{$prefix-bh}dropdown-padding-x);
+  margin: 0; // Override default margin of ul
+  @include type($action, "02");
+  color: var(--#{$prefix-bh}dropdown-item-label);
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  list-style: none;
+  background-color: var(--#{$prefix-bh}dropdown-background);
+  background-clip: padding-box;
+  border: var(--#{$prefix-bh}dropdown-border-width) solid var(--#{$prefix-bh}dropdown-border);
+  @include border-radius(var(--#{$prefix-bh}dropdown-radius));
+  @if($enable-shadows == true or $enable-menu-shadows == true){
+    box-shadow: var(--#{$prefix-bh}dropdown-shadow);
+  }
+
+  &[data-bs-popper] {
+    top: 100%;
+    left: 0;
+    margin-top: var(--#{$prefix-bh}dropdown-spacer);
+  }
+}
+
+// scss-docs-start responsive-breakpoints
+// We deliberately hardcode the `bs-` prefix because we check
+// this custom property in JS to determine Popper's positioning
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .dropdown-menu#{$infix}-start {
+      --bs-position: start;
+
+      &[data-bs-popper] {
+        right: auto;
+        left: 0;
+      }
+    }
+
+    .dropdown-menu#{$infix}-end {
+      --bs-position: end;
+
+      &[data-bs-popper] {
+        right: 0;
+        left: auto;
+      }
+    }
+  }
+}
+// scss-docs-end responsive-breakpoints
+
+// Allow for dropdowns to go bottom up (aka, dropup-menu)
+// Just add .dropup after the standard .dropdown class and you're set.
+.dropup {
+  .dropdown-menu[data-bs-popper] {
+    top: auto;
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: var(--#{$prefix-bh}dropdown-spacer);
+  }
+
+  .dropdown-toggle {
+    @include caret(up);
+  }
+}
+
+.dropend {
+  .dropdown-menu[data-bs-popper] {
+    top: 0;
+    right: auto;
+    left: 100%;
+    margin-top: 0;
+    margin-left: var(--#{$prefix-bh}dropdown-spacer);
+  }
+
+  .dropdown-toggle {
+    @include caret(end);
+    &::after {
+      vertical-align: 0;
+    }
+  }
+}
+
+.dropstart {
+  .dropdown-menu[data-bs-popper] {
+    top: 0;
+    right: 100%;
+    left: auto;
+    margin-top: 0;
+    margin-right: var(--#{$prefix-bh}dropdown-spacer);
+  }
+
+  .dropdown-toggle {
+    @include caret(start);
+    &::before {
+      vertical-align: 0;
+    }
+  }
+}
+
+
+// Dividers (basically an `<hr>`) within the dropdown
+.dropdown-divider {
+  height: 0;
+  margin: var(--#{$prefix-bh}dropdown-divider-margin-y) 0;
+  overflow: hidden;
+  border-top: 1px solid var(--#{$prefix-bh}dropdown-divider-border);
+  opacity: 1; // Revisit in v6 to de-dupe styles that conflict with <hr> element
+}
+
+// Links, buttons, and more within the dropdown menu
+//
+// `<button>`-specific styles are denoted with `// For <button>s`
+.dropdown-item,
+.dropdown-link {
+    display: block;
+    cursor: pointer;
+    width: 100%; // For `<button>`s
+    height: var(--#{$prefix-bh}dropdown-item-height);
+    padding: var(--#{$prefix-bh}dropdown-item-padding-y) var(--#{$prefix-bh}dropdown-item-padding-x);
+    clear: both;
+    @include type($action, "02");
+    color: var(--#{$prefix-bh}dropdown-item-label);
+    text-align: inherit; // For `<button>`s
+    text-decoration: if($link-decoration == none, null, none);
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    overflow: clip;
+    text-overflow: ellipsis; // truncate text
+    background-color: var(--#{$prefix-bh}dropdown-item-background); // For `<button>`s
+    border: solid var(--#{$prefix-bh}dropdown-item-border-width) var(--#{$prefix-bh}dropdown-item-border); // For `<button>`s
+    @include border-radius(var(--#{$prefix-bh}dropdown-item-radius, 0));
+    @include transition($dropdown-item-transition);
+
+    &:hover:not(.dropdown-link) {
+        color: var(--#{$prefix-bh}dropdown-item-label-hover);
+        text-decoration: if($link-hover-decoration == underline, none, null);
+        border-color: var(--#{$prefix-bh}dropdown-item-border-hover);
+        @include gradient-bg(var(--#{$prefix-bh}dropdown-item-background-hover));
+    }
+
+    &:focus-visible {
+      outline: 0;
+      // Avoid using mixin so we can pass custom focus shadow properly
+            box-shadow: $dropdown-item-focus;
+    } 
+
+    &.active:not(.dropdown-link),
+    &:active:not(.dropdown-link) {
+      color: var(--#{$prefix-bh}dropdown-item-label-active);
+      text-decoration: none;
+      border-color: var(--#{$prefix-bh}dropdown-item-border-active);
+      @include gradient-bg(var(--#{$prefix-bh}dropdown-item-background-active));
+
+      &:not(:has([type="checkbox"])){
+        background-image: escape-svg($dropdown-check-svg-active);
+        background-repeat: no-repeat;
+        background-position: right $dropdown-item-padding-x center;
+        background-size: auto $dropdown-check-svg-size;
+        padding-right: $dropdown-item-padding-x + $dropdown-check-svg-size + $dropdown-check-svg-gap;
+      }
+    }
+
+  &.disabled:not(.dropdown-link),
+  &:disabled:not(.dropdown-link) {
+    color: var(--#{$prefix-bh}dropdown-item-label-disabled);
+    pointer-events: none;
+    background-color: transparent;
+    // Remove CSS gradients if they're enabled
+    background-image: if($enable-gradients, none, null);
+  }
+
+  .icon:not(.dropdown-link) {
+    margin-right: var(--#{$prefix-bh}dropdown-item-icon-spacing);
+
+    i[class^="fa-"] {
+      text-align: center;
+      width: 1.25em;
+    }
+  }
+
+  & .form-check-label {
+    @include type($action, "02");
+    color: inherit;
+  }
+
+  & [type="checkbox"] {
+    margin-right: $dropdown-item-icon-spacing;
+  }
+}
+
+.dropdown-menu-panel.show {
+  display: flex;
+}
+
+// Dropdown text
+// .dropdown-item-text {
+//   display: block;
+//   padding: var(--#{$prefix-bh}dropdown-item-padding-y) var(--#{$prefix-bh}dropdown-item-padding-x);
+//   color: var(--#{$prefix-bh}dropdown-item-label);
+// }
+
+// Dark dropdowns
+// .dropdown-menu-dark {
+//   // scss-docs-start dropdown-dark-css-vars
+//   --#{$prefix}dropdown-color: #{$dropdown-dark-color};
+//   --#{$prefix-bh}dropdown-background: #{$dropdown-dark-bg};
+//   --#{$prefix-bh}dropdown-border: #{$dropdown-dark-border-color};
+//   --#{$prefix-bh}dropdown-shadow: #{$dropdown-dark-box-shadow};
+//   --#{$prefix-bh}dropdown-item: #{$dropdown-dark-link-color};
+//   --#{$prefix-bh}dropdown-item-label-hover: #{$dropdown-dark-link-hover-color};
+//   --#{$prefix-bh}dropdown-divider-border: #{$dropdown-dark-divider-bg};
+//   --#{$prefix-bh}dropdown-item-background-hover: #{$dropdown-dark-link-hover-bg};
+//   --#{$prefix-bh}dropdown-item-label-active: #{$dropdown-dark-link-active-color};
+//   --#{$prefix-bh}dropdown-item-background-active: #{$dropdown-dark-link-active-bg};
+//   --#{$prefix-bh}dropdown-item-label-disabled: #{$dropdown-dark-link-disabled-color};
+//   --#{$prefix-bh}dropdown-header: #{$dropdown-dark-header-color};
+//   // scss-docs-end dropdown-dark-css-vars
+// }
+
+// Variant styles
+.dropdown { 
+  & .tag-set {
+      position: absolute;
+      padding: #{$form-input-padding-y} #{$form-input-padding-x};
+      padding-right: $form-select-indicator-padding;
+      cursor: pointer;
+      gap: 0.25rem;
+  }
+
+  & .tag {
+    --tag-height: #{$tag-height-input};
+    --tag-padding-y: #{$tag-padding-y-sm};
+    --tag-padding-x: #{$tag-padding-x-sm};
+  }
+
+  &:has(.input-btn) {
+    & .input-btn {
+      right: calc($form-input-button-width + $form-input-button-gap + $form-input-padding-end);
+    }
+
+    & .dropdown-toggle {
+      padding-right: calc(calc($form-input-button-width * 2) + $form-input-button-gap + $form-input-icon-gap + $form-input-padding-end);
+    }
+  }
+
+  & input[type="text"].dropdown-toggle {
+    cursor: auto;
+  }
+}

@@ -1,0 +1,143 @@
+
+
+.key-value {
+    --#{$prefix-bh}keyvalue-gap:    #{$keyvalue-gap};
+    --#{$prefix-bh}keyvalue-key:    #{$keyvalue-key};
+    --#{$prefix-bh}keyvalue-value:  #{$keyvalue-value};
+
+    display: flex;
+    gap: var(--#{$prefix-bh}keyvalue-gap);
+
+    // Expressive colours
+    &.expressive {
+        .value {
+            color: var(--#{$prefix-bh}expressive-deep);
+        }
+    }
+}
+
+.key-value-stacked {
+    flex-direction: column;
+    gap: unset;
+}
+
+.key-value-list-stacked {
+    .key-value {
+        flex-direction: column;
+        gap: unset;
+    }
+}
+
+
+// Sizes
+.key-value-xs {
+    .key {
+        @include type($key, "01");
+    }
+}
+
+.key-value-sm {
+    .key {
+        @include type($key, "02");
+    }
+}
+
+.key-value-lg {
+    .value {
+        @include type($value, "02");
+    }
+}
+
+.key-value-xl {
+    .value {
+        @include type($value, "03");
+    }
+}
+
+.key-value-display {
+    .value {
+        @include type($value, "04");
+    }
+}
+
+.key-value-flipped {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    &.key-value-stacked {
+        flex-direction: column-reverse;
+    }
+}
+
+.key {
+    @include type($key, "03");
+    color: var(--#{$prefix-bh}keyvalue-key);
+}
+
+.value {
+    @include type($value, "01");
+    color: var(--#{$prefix-bh}keyvalue-value);
+}
+
+.key-value-center {
+    align-items: center;
+}
+
+// Key-value list
+.key-value-list {
+    display: flex;
+    flex-direction: column;
+    gap: $key-value-item-gap;
+}
+
+.key-value-list-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $key-value-list-row-gap;
+}
+
+// Key-value table
+.key-value-table {
+    --keyvalue-key-col: #{$key-value-key-col};
+    --keyvalue-value-col: #{$key-value-value-col};
+
+    display: grid;
+    grid-template-columns: var(--keyvalue-key-col) var(--keyvalue-value-col);
+    gap: $key-value-table-gap;
+    width: 100%;
+
+    .key-value {
+        display: contents;
+    }
+
+    .key {
+        grid-column: 1;
+    }
+
+    .value {
+        grid-column: 2;
+    }
+
+    hr {
+        grid-column: 1 / -1;
+    }
+}
+
+// Key-value grid
+.key-value-grid {
+    --#{$prefix-bh}gap:                         #{$key-value-grid-gap};
+    --#{$prefix-bh}key-value-grid-background:   #{$key-value-grid-background};
+    --#{$prefix-bh}key-value-grid-padding-x:    #{$key-value-grid-padding-x};
+    --#{$prefix-bh}key-value-grid-padding-y:    #{$key-value-grid-padding-y};
+    --#{$prefix-bh}key-value-grid-radius:       #{$key-value-grid-radius};
+    --#{$prefix-bh}columns:                     #{$key-value-columns-default};
+
+    border-radius: var(--#{$prefix-bh}key-value-grid-radius);
+    overflow: hidden;
+}
+
+.key-value-item {
+    background-color: var(--#{$prefix-bh}key-value-grid-background);
+    padding: var(--#{$prefix-bh}key-value-grid-padding-y) var(--#{$prefix-bh}key-value-grid-padding-x);
+}

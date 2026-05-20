@@ -1,0 +1,297 @@
+//
+// Base styles
+//
+
+.btn {
+    // scss-docs-start btn-css-vars
+    --#{$prefix-bh}button-padding-x:            #{$button-padding-x};
+    --#{$prefix-bh}button-padding-y:            #{$button-padding-y};
+    --#{$prefix-bh}button-font-family:          #{$btn-font-family};
+    --#{$prefix-bh}button-label:                #{$btn-color};
+    --#{$prefix-bh}button-background:           #{$transparent};
+    --#{$prefix-bh}button-background-b:         #{$transparent};
+    --#{$prefix-bh}button-border-width:         #{$button-border-width};
+    --#{$prefix-bh}button-border-bottom-width:  #{$button-border-bottom-width};
+    --#{$prefix-bh}button-border:               #{$transparent};
+    --#{$prefix-bh}button-radius:               #{$button-radius};
+    --#{$prefix-bh}button-shadow:               #{$btn-box-shadow};
+    --#{$prefix-bh}button-border-hover:         #{$transparent};
+    --#{$prefix-bh}button-disabled-opacity:     #{$button-disabled-opacity};
+    --#{$prefix-bh}button-shadow-focus:         #{$button-focus-ring};
+    --#{$prefix-bh}button-height:               #{$button-height};
+    --#{$prefix-bh}button-min-width:            #{$button-min-width};
+    --#{$prefix-bh}icon-button-width:           #{$icon-button-width};
+    --#{$prefix-bh}button-spacing:              #{$button-spacing};
+    --#{$prefix-bh}button-gradient:             false;
+    
+    // scss-docs-end btn-css-vars
+
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    gap: var(--#{$prefix-bh}button-spacing);
+    min-height: var(--#{$prefix-bh}button-height);
+    min-width: var(--#{$prefix-bh}button-min-width);
+    padding: var(--#{$prefix-bh}button-padding-y) var(--#{$prefix-bh}button-padding-x);
+    font-family: var(--#{$prefix-bh}button-font-family);
+    @include type($action, '02');
+    color: var(--#{$prefix-bh}button-label);
+    text-align: center;
+    text-decoration: none;
+    white-space: $button-white-space;
+    vertical-align: middle;
+    cursor: if($enable-button-pointers, pointer, null);
+    user-select: none;
+    border: var(--#{$prefix-bh}button-border-width) solid var(--#{$prefix-bh}button-border);
+    @if $clickable-borders {
+        border-bottom-width: var(--#{$prefix-bh}button-border-bottom-width);
+    }
+    @include border-radius(var(--#{$prefix-bh}button-radius));
+    @include box-shadow(var(--#{$prefix-bh}button-shadow));
+    @include transition($button-transition);
+    
+    background-color: var(--#{$prefix-bh}button-background);
+    // @if $button-gradients {
+    //     background-image: linear-gradient(0deg, var(--#{$prefix-bh}button-background-b) 0%, var(--#{$prefix-bh}button-background) 100%);
+    // }
+    background-image: none;
+
+    &:hover {
+        color: var(--#{$prefix-bh}button-label-hover);
+        background-color: var(--#{$prefix-bh}button-background-hover);
+        border-color: var(--#{$prefix-bh}button-border-hover);
+        background-image: none !important;
+    }
+
+    // .btn-check + &:hover {
+    //   // override for the checkbox/radio buttons
+    //     color: var(--#{$prefix-bh}button-label);
+    //     background-color: var(--#{$prefix-bh}button-background);
+    //     border-color: var(--#{$prefix-bh}button-border);
+    // }
+
+    &:focus-visible {
+        --#{$prefix-bh}button-border-bottom-width:  #{$button-border-width};
+
+        color: var(--#{$prefix-bh}button-label-focus);
+        @include gradient-bg(var(--#{$prefix-bh}button-background-focus));
+        border-color: var(--#{$prefix-bh}button-border-focus);
+        outline: 0;
+      // Avoid using mixin so we can pass custom focus shadow properly
+            box-shadow: var(--#{$prefix-bh}button-shadow-focus);
+    }
+
+    .btn-check:focus-visible + & {
+        --#{$prefix-bh}button-border-bottom-width:  #{$button-border-width};
+
+        color: var(--#{$prefix-bh}button-label-focus);
+        @include gradient-bg(var(--#{$prefix-bh}button-background-focus));
+        border-color: var(--#{$prefix-bh}button-border-focus);
+        outline: 0;
+        // Avoid using mixin so we can pass custom focus shadow properly
+            box-shadow: var(--#{$prefix-bh}button-shadow-focus);
+    }
+
+    .btn-check:checked + &,
+    :not(.btn-check) + &:active,
+    &:first-child:active,
+    &.active,
+    &.show {
+        --#{$prefix-bh}button-border-bottom-width:  #{$button-border-width};
+
+        color: var(--#{$prefix-bh}button-label-active);
+        background-color: var(--#{$prefix-bh}button-background-active);
+        // Remove CSS gradients if they're enabled
+        background-image: #{if($enable-gradients, "none", "unset !important")};
+        border-color: var(--#{$prefix-bh}button-border-active);
+        @include box-shadow(var(--#{$prefix-bh}button-shadow-active));
+    
+        &:focus-visible {
+            box-shadow: var(--#{$prefix-bh}button-shadow-focus);
+        }
+    }
+
+    .btn-check:checked:focus-visible + & {
+        color: var(--#{$prefix-bh}button-label-focus);
+        @include gradient-bg(var(--#{$prefix-bh}button-background-focus));
+        border-color: var(--#{$prefix-bh}button-border-focus);
+      // Avoid using mixin so we can pass custom focus shadow properly
+            box-shadow: var(--#{$prefix-bh}button-shadow-focus);
+        }
+
+    &:disabled,
+    &.disabled,
+    fieldset:disabled & {
+        color: var(--#{$prefix-bh}button-label);
+        pointer-events: none;
+        background-color: var(--#{$prefix-bh}button-background);
+        background-image: if($enable-gradients, none, null);
+        border-color: var(--#{$prefix-bh}button-border);
+        opacity: var(--#{$prefix-bh}button-disabled-opacity);
+        @include box-shadow(none);
+    }
+
+    .btn-icon {
+        --fa-width: auto;
+        min-width: 1rem;
+    }
+
+    &:has(.btn-icon:first-child):not(:not(:has(.button-label)), .btn-response-lg) {
+        padding-left: calc(var(--#{$prefix-bh}button-padding-x) - $padding-01);
+    }
+
+    &:has(.btn-icon:last-child):not(:not(:has(.button-label)), .btn-response-lg) {
+        padding-right: calc(var(--#{$prefix-bh}button-padding-x) - $padding-01);
+    }
+
+    &:not(:has(.button-label), .btn-response) {
+        --#{$prefix-bh}button-padding-y: #{$button-icon-padding-y};
+        --#{$prefix-bh}button-padding-x: #{$button-icon-padding-x};
+        width: var(--#{$prefix-bh}icon-button-width);
+        min-width: var(--#{$prefix-bh}icon-button-width);
+        line-height: 1rem;
+    }
+
+}
+
+
+//
+// Buttons variants
+//
+
+
+
+
+// Light/default button variants
+@each $colour, $value in $button-colours {
+    .btn-#{$colour} {
+        @include button-variant($value);
+    }
+
+    @if $colour != response and map-has-key($danger-colours, $colour) {
+        .btn-danger.btn-#{$colour},
+        .btn-#{$colour}.btn-danger {
+            @include button-variant(map-get($danger-colours, $colour));
+        }
+    }
+}
+
+
+// Dark button variant overrides
+@if $enable-dark-mode {
+    @include color-mode(dark) {
+
+        // Standard dark overrides
+        @each $colour, $dark-value in $button-colours-dark {
+            @if map-has-key($button-colours, $colour) {
+                .btn-#{$colour} {
+                    @include button-variant(
+                        map-merge-deep(
+                            map-get($button-colours, $colour),
+                            $dark-value
+                        )
+                    );
+                }
+            }
+        }
+
+        // Danger dark overrides
+        @each $colour, $danger-value in $danger-colours {
+            @if $colour != response {
+
+                $variant: $danger-value;
+
+                @if variable-exists(danger-colours-dark) and map-has-key($danger-colours-dark, $colour) {
+                    $variant: map-merge-deep(
+                        $variant,
+                        map-get($danger-colours-dark, $colour)
+                    );
+                }
+
+                .btn-danger.btn-#{$colour},
+                .btn-#{$colour}.btn-danger {
+                    @include button-variant($variant);
+                }
+            }
+        }
+    }
+}
+
+
+
+// btn-outline // REMOVED //
+
+// scss-docs-end btn-variant-loops
+
+
+//
+// Link buttons // REMOVED //
+//
+
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+    @include button-size($button-padding-y-lg, $button-padding-x-lg, $button-radius-lg);
+    @include type($action, '02');
+    min-height: $button-height-lg;
+}
+
+.btn-sm {
+    @include button-size($button-padding-y-sm, $button-padding-x-sm, $button-radius-sm);
+    @include type($action, "01");
+    min-height: $button-height-sm;
+
+    .btn-icon:not(:not(:has(.button-label)) .btn-icon) {
+        min-width: 0.875rem;
+    }
+
+    &:not(:has(.button-label)) {
+        @include type($action, '02');
+        width: $icon-button-width-sm;
+        min-width: $icon-button-width-sm;
+        line-height: 1rem;
+    }
+}
+
+// Ghost button
+.btn-ghost {
+    --#{$prefix-bh}button-border-bottom-width:  #{$button-border-width};
+}
+
+
+//
+// Response buttons
+//
+
+.btn-response {
+    min-height: $response-button-height;
+    @include type($action, "02");
+
+    &.readonly {
+        --#{$prefix-bh}button-label:                var(--#{$prefix-bh}button-label-readonly);
+        --#{$prefix-bh}button-background:           var(--#{$prefix-bh}button-background-readonly);
+        --#{$prefix-bh}button-border:               var(--#{$prefix-bh}button-border-readonly);
+        --#{$prefix-bh}button-border-bottom-width:  #{$button-border-width};
+    }
+}
+
+.btn-response-lg {
+    min-height: $response-button-height-lg;
+    min-width: $response-button-width-lg;
+    display: flex;
+    flex-direction: column;
+    gap: $response-button-gap-lg;
+    padding: $response-button-padding-y-lg $response-button-padding-x-lg;
+}
+
+.btn-response-lg .btn-icon {
+    line-height: $response-button-icon-height-lg;
+}
+
+.response-btn-equal .btn-response-lg {
+    flex: 1;
+}

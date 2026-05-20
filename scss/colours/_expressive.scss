@@ -1,0 +1,33 @@
+// Expressive ___________________________
+    @each $value, $colour in $expressive-colours {
+        @if($value != primary){
+            .expressive-#{$value} {
+
+                @each $type, $var in $colour {
+
+                    @if($type == tint){
+                        $tint: $var;
+                        $color-pale-overlay: map-get($tint, "10");
+                        $color-soft-overlay: map-get($tint, "20");
+
+                        --#{$prefix-bh}expressive-pale-overlay: var(--#{$prefix-bh}expressive-#{$value}-pale-overlay);
+                        --#{$prefix-bh}expressive-soft-overlay: var(--#{$prefix-bh}expressive-#{$value}-soft-overlay);
+                    }
+
+                    @if($type == palette){
+                        $palette: $var;
+
+                        $color-pale: map-get($palette, "10");
+                        $color-soft: map-get($palette, "20");
+                        $color-deep: map-get($palette, "60");
+                        $color-rich: map-get($palette, "90");
+
+                        --#{$prefix-bh}expressive-pale: var(--#{$prefix-bh}expressive-#{$value}-pale);
+                        --#{$prefix-bh}expressive-soft: var(--#{$prefix-bh}expressive-#{$value}-soft);
+                        --#{$prefix-bh}expressive-deep: var(--#{$prefix-bh}expressive-#{$value}-deep);
+                        --#{$prefix-bh}expressive-rich: var(--#{$prefix-bh}expressive-#{$value}-rich);
+                    }
+                }
+            }
+        }
+    }

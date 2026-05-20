@@ -1,0 +1,49 @@
+// Buckholt functions
+//
+// Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
+
+
+@function bh-rgba-css-var($identifier, $target) {
+    @if $target == "text" {
+        @return var(--#{$prefix-bh}text-#{$identifier});
+    } @else {
+        @return rgba(var(--#{$prefix-bh}#{$identifier}-rgb), var(--#{$prefix-bh}#{$target}-opacity));
+    }
+}
+
+// CSS variable map generation
+@function generate-css-var-map($map-name, $map) {
+  $new-map: ();
+
+  @each $key, $value in $map {
+    $css-var: unquote("var(--#{$map-name}-#{$key})");
+    $new-map: map-merge($new-map, ($key: $css-var));
+  }
+
+  @return $new-map;
+}
+
+// Deep merge function for maps
+@function map-merge-deep($map, $updates) {
+  $merged: $map;
+
+  @each $key, $value in $updates {
+    @if type-of($value) == "map" and type-of(map-get($merged, $key)) == "map" {
+      $merged: map-merge(
+        $merged,
+        (
+          $key: map-merge-deep(map-get($merged, $key), $value)
+        )
+      );
+    } @else {
+      $merged: map-merge(
+        $merged,
+        (
+          $key: $value
+        )
+      );
+    }
+  }
+
+  @return $merged;
+}

@@ -1,0 +1,68 @@
+// Base class
+//
+//
+
+.badge {
+    // scss-docs-start badge-css-vars
+    --#{$prefix-bh}badge-padding-x:     #{$badge-padding-x};
+    --#{$prefix-bh}badge-padding-y:     #{$badge-padding-y};
+    --#{$prefix-bh}badge-label:         #{$badge-label};
+    --#{$prefix-bh}badge-radius:        #{$badge-radius};
+    --#{$prefix-bh}badge-border:        #{$badge-border};
+    --#{$prefix-bh}badge-border-width:  #{$badge-border-width};
+    --#{$prefix-bh}badge-background:    #{$badge-background};
+    // scss-docs-end badge-css-vars
+
+    display: flex;
+    align-items: center;
+    @include type($support, "01");
+    line-height: 1;
+    color: var(--#{$prefix-bh}badge-label);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    @include border-radius(var(--#{$prefix-bh}badge-radius));
+    border: var(--#{$prefix-bh}badge-border-width) solid var(--#{$prefix-bh}badge-border);
+    background-color: var(--#{$prefix-bh}badge-background);
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    transform: translate(0, -50%);
+
+    &:not(:empty){
+        min-height: $badge-height;
+        padding: var(--#{$prefix-bh}badge-padding-y) var(--#{$prefix-bh}badge-padding-x);
+    }
+
+    // Empty badges collapse automatically
+    // &:empty {
+    //     display: none;
+    // }
+
+    &:empty {
+        --#{$prefix-bh}badge-background: #{$expressive-deep};
+        padding: 0;
+        width: 0.75rem;
+        height: 0.75rem;
+    }
+
+    &.badge-floating{
+    top: -0.5rem;
+    right: -0.25rem;
+    transform: none;
+    
+        &:empty {
+            top: 0.125rem;
+        }
+    }
+}
+
+
+
+
+// Quick fix for badges in buttons
+// .btn .badge {
+// position: relative;
+// top: -1px;
+// }

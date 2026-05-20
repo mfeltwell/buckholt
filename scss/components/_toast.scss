@@ -1,0 +1,125 @@
+.toast {
+  // scss-docs-start toast-css-vars
+  --#{$prefix-bh}toast-padding-x: #{$toast-padding-x};
+  --#{$prefix-bh}toast-padding-y: #{$toast-padding-y};
+  --#{$prefix-bh}toast-content-padding-x: #{$toast-content-padding-x};
+  --#{$prefix-bh}toast-content-padding-y: #{$toast-content-padding-y};
+  --#{$prefix-bh}toast-content-gap: #{$toast-content-gap};
+  --#{$prefix-bh}toast-radius: #{$toast-radius};
+  --#{$prefix-bh}toast-border: #{$transparent};
+  --#{$prefix-bh}toast-border-width: #{$toast-border-width};
+  --#{$prefix-bh}toast-background: #{$transparent};
+  --#{$prefix-bh}toast-message: inherit;
+  --#{$prefix-bh}toast-note: inherit;
+  --#{$prefix-bh}toast-note-sm: #{$toast-note-sm};
+  --#{$prefix-bh}toast-icon: var(--#{$prefix-bh}toast-message);
+  --#{$prefix-bh}toast-max-width: #{$toast-max-width};
+  --#{$prefix-bh}toast-zindex: #{$zindex-toast};
+  --#{$prefix-bh}toast-shadow: #{$toast-shadow};
+  --#{$prefix-bh}toast-contextbar-margin-top: #{$toast-contextbar-margin-top};
+  --#{$prefix-bh}toast-contextbar-margin-bottom: #{$toast-contextbar-margin-bottom};
+  --#{$prefix-bh}toast-backdrop-blur: #{$toast-backdrop-blur};
+
+  // scss-docs-end toast-css-vars
+  position: relative;
+  width: var(--#{$prefix-bh}toast-max-width);
+  max-width: 100%;
+  padding: var(--#{$prefix-bh}toast-padding-y) var(--#{$prefix-bh}toast-padding-x);
+  color: var(--#{$prefix-bh}toast-note);
+  pointer-events: auto;
+  background-color: var(--#{$prefix-bh}toast-background);
+  background-clip: padding-box;
+  border: none;
+  box-shadow: var(--#{$prefix-bh}toast-shadow);
+  @include border-radius(var(--#{$prefix-bh}toast-radius));
+  overflow: hidden;
+  display: flex;
+
+  &.showing {
+    opacity: 0;
+  }
+
+  &:not(.show) {
+    display: none;
+  }
+}
+
+.toast::before {
+  content: '';
+  width: var(--#{$prefix-bh}toast-border-width);
+  height: 100%;
+  background-color: var(--#{$prefix-bh}toast-border);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.toast-content {
+  display: flex;
+  gap: var(--#{$prefix-bh}toast-content-gap);
+  padding: var(--#{$prefix-bh}toast-content-padding-y) var(--#{$prefix-bh}toast-content-padding-x);
+  width: 100%;
+}
+
+.toast-body {
+  @include type($body, "02");
+}
+
+.toast-message * {
+  color: var(--#{$prefix-bh}toast-message);
+  @include type($title, "01");
+}
+
+.toast-icon {
+  font-size: 1rem;
+  margin: $spacer-02 0;
+  color: var(--#{$prefix-bh}toast-icon);
+
+  & i {
+    display: block;
+  }
+}
+
+.toast-contextbar {
+  margin: var(--#{$prefix-bh}toast-contextbar-margin-top) 0 var(--#{$prefix-bh}toast-contextbar-margin-bottom);
+}
+
+.toast-container {
+  --#{$prefix-bh}toast-container-position-value-y: #{$toast-container-position-value-y};
+  --#{$prefix-bh}toast-container-position-value-x: #{$toast-container-position-value-x};
+  --#{$prefix-bh}toast-zindex: #{$zindex-toast};
+  --#{$prefix-bh}toast-spacing: #{$toast-spacing};
+
+  position: fixed;
+  #{$toast-container-position-y}: var(--#{$prefix-bh}toast-container-position-value-y);
+  #{$toast-container-position-x}: var(--#{$prefix-bh}toast-container-position-value-x);
+  z-index: var(--#{$prefix-bh}toast-zindex);
+  width: max-content;
+  max-width: 100%;
+  pointer-events: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--#{$prefix-bh}toast-spacing);
+}
+
+// Generate contextual modifier classes for colorizing toasts
+@each $state in map-keys($feedback-colours) {
+  .toast-#{$state} {
+    --#{$prefix-bh}toast-note: var(--#{$prefix-bh}feedback-body-#{$state});
+    --#{$prefix-bh}toast-background: var(--#{$prefix-bh}feedback-background-#{$state});
+    --#{$prefix-bh}toast-border: var(--#{$prefix-bh}feedback-border-#{$state});
+    --#{$prefix-bh}toast-message: var(--#{$prefix-bh}feedback-message-#{$state});
+  }
+}
+
+
+
+// Dark mode adjustments
+@if $enable-dark-mode {
+      @include color-mode(dark) {
+          .toast {
+            backdrop-filter: blur(var(--#{$prefix-bh}toast-backdrop-blur));
+          }
+  }
+}

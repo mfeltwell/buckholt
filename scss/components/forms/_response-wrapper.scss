@@ -1,0 +1,24 @@
+.response {
+    position: relative;
+
+}
+
+// Response buttons
+.response_btn_input .response {
+    gap: $button-set-gap;
+}
+
+// Multi input
+.response:has(:is(.form-control, .form-select) ~ :is(.form-control, .form-select)) {
+    display: flex;
+    gap: $form-input-field-spacing;
+
+    :is(.form-control, .form-select):has(~ :is(.form-control, .form-select)),
+    :is(.form-control, .form-select) ~ :is(.form-control, .form-select) {
+        flex: 0 1 auto;
+    }
+}
+
+.multi-input-stacked {
+    flex-direction: column;
+}

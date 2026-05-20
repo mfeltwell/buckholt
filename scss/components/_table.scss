@@ -1,0 +1,194 @@
+.table {
+  // Reset needed for nesting tables
+    --#{$prefix-bh}table-text-type: initial;
+    --#{$prefix-bh}table-background-type: initial;
+    --#{$prefix-bh}table-text-state: initial;
+    --#{$prefix-bh}table-background-state: initial;
+    // End of reset
+    --#{$prefix-bh}table-text: #{$table-text};
+    --#{$prefix-bh}table-text-secondary: #{$table-text-secondary};
+    --#{$prefix-bh}table-background: #{$table-background};
+    --#{$prefix-bh}table-border: #{$table-border};
+    // --#{$prefix-bh}table-accent-background: #{$table-accent-background};
+    // --#{$prefix-bh}table-striped-color: #{$table-striped-color};
+    // --#{$prefix-bh}table-striped-background: #{$table-striped-background};
+    // --#{$prefix-bh}table-active-color: #{$table-active-color};
+    // --#{$prefix-bh}table-active-background: #{$table-active-background};
+    --#{$prefix-bh}table-hover-color: #{$table-hover-color};
+    --#{$prefix-bh}table-hover-background: #{$table-hover-background};
+    --#{$prefix-bh}table-row-height: #{$table-row-height};
+    --#{$prefix-bh}table-header-row-height: #{$table-header-row-height};
+    --#{$prefix-bh}table-header-background: #{$table-header-background};
+    --#{$prefix-bh}table-header-text: #{$table-header-text};
+    --#{$prefix-bh}table-header-radius: #{$table-header-radius};
+    --#{$prefix-bh}table-row-gap: #{$table-row-gap};
+
+
+    width: 100%;
+    border-collapse: collapse;
+    border-color: var(--#{$prefix-bh}table-border);
+
+    // Target th & td
+    // We need the child combinator to prevent styles leaking to nested tables which doesn't have a `.table` class.
+    // We use the universal selectors here to simplify the selector (else we would need 6 different selectors).
+    // Another advantage is that this generates less code and makes the selector less specific making it easier to override.
+    // stylelint-disable-next-line selector-max-universal
+    > :not(caption) > * > * {
+        padding: $table-cell-padding-y $table-cell-padding-x;
+        // Following the precept of cascades: https://codepen.io/miriamsuzanne/full/vYNgodb
+        @include type($body, "02");
+        color: var(--#{$prefix-bh}table-text);
+        background-color: var(--#{$prefix-bh}table-background);
+        border-bottom-width: $table-border-width;
+        box-shadow: inset 0 0 0 9999px var(--#{$prefix-bh}table-background-state, var(--#{$prefix-bh}table-background-type, var(--#{$prefix-bh}table-accent-background)));
+        block-size: var(--#{$prefix-bh}table-row-height);
+        vertical-align: $table-cell-vertical-align;
+    }
+
+    > tbody {
+        vertical-align: inherit;
+    }
+
+    > thead {
+        vertical-align: bottom;
+
+    }
+
+    th {
+        background-color: var(--#{$prefix-bh}table-header-background);
+        white-space: nowrap;
+        block-size: var(--#{$prefix-bh}table-header-row-height);
+        @include type($label, "02");
+        border: none;
+        color: var(--#{$prefix-bh}table-header-text);
+
+        &:first-child {
+            border-top-left-radius: var(--#{$prefix-bh}table-header-radius);
+            border-bottom-left-radius: var(--#{$prefix-bh}table-header-radius);
+        }
+
+        &:last-child {
+            border-top-right-radius: var(--#{$prefix-bh}table-header-radius);
+            border-bottom-right-radius: var(--#{$prefix-bh}table-header-radius);
+        }
+    }
+
+    tr:hover {
+        td {
+            background-color: var(--#{$prefix-bh}table-hover-background);
+            color: var(--#{$prefix-bh}table-hover-color);
+        }
+    }
+
+    // Sets display inline only inside table
+    [class$="-set"],
+    [class*="-set "] {
+        flex-wrap: nowrap;
+    }
+}
+
+.table-container {
+    width: 100%;
+}
+
+.table-content {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-gap {
+    border: none;
+
+    td {
+        height: var(--#{$prefix-bh}table-row-gap);
+        padding: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    th[align="right"],
+    td[align="right"] {
+        text-align: right;  
+    }
+}
+
+// Sorting table
+th:has(.table-sort) {
+    padding: 0;
+}
+
+.table-sort {
+    display: flex;
+    align-items: center;
+    gap: $table-header-gap;
+    padding: $table-cell-padding-y $table-cell-padding-x;
+    min-block-size: 100%;
+    inline-size: 100%;
+    background: none;
+    border: none;
+    @include type($label, "02");
+    color: var(--#{$prefix-bh}table-header-text);
+
+    &:hover {
+        color: var(--#{$prefix-bh}table-hover-color);
+        background-color: var(--#{$prefix-bh}table-hover-background);
+
+        .table-sort-icon {
+            opacity: 1;
+        }
+    }
+}
+
+.table-sort-icon {
+    color: $table-sort-icon;
+    font-size: $table-sort-icon-size;
+    opacity: 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.table-header-label {
+    display: inline-block;
+}
+
+.data-secondary {
+    display: block;
+    color: var(--#{$prefix-bh}table-text-secondary);
+    @include type($body, "01");
+}
+
+.table-cell-number {
+    text-align: right;
+}
+
+.table-sort-asc,
+.table-sort-desc {
+    .table-sort-icon {
+        opacity: 1;
+    }
+}
+
+// Utility class to make the column fit its content.
+.col-fit {
+    width: 1%;
+    white-space: nowrap;
+}
+
+.cell-data-right {
+    text-align: right !important;
+}
+
+
+//
+// Dark mode overrides
+//
+@if $enable-dark-mode {
+    @include color-mode(dark) {
+        .table {
+            --#{$prefix-bh}table-border: #{$table-border-dark};
+            --#{$prefix-bh}table-hover-background: #{$table-hover-background-dark};
+            --#{$prefix-bh}table-header-background: #{$table-header-background-dark};
+
+        }
+    }
+}

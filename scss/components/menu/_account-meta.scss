@@ -1,0 +1,20 @@
+//
+// Base styles
+//
+
+.account-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    @include type($body, "01");
+
+    .meta-line-one {
+        @include type($label, "02");
+    }
+}
+
+.meta-body > * {
+    display: block;
+}

@@ -1,0 +1,538 @@
+//
+// Base styles
+//
+
+.card {
+  // scss-docs-start card-css-vars
+  --#{$prefix-bh}card-padding-y: #{$card-padding-y};
+  --#{$prefix-bh}card-padding-x: #{$card-padding-x};
+  --#{$prefix-bh}card-padding-y-lg: #{$card-padding-y-lg};
+  --#{$prefix-bh}card-padding-x-lg: #{$card-padding-x-lg};
+  --#{$prefix-bh}card-border-width: #{$card-border-width};
+  --#{$prefix-bh}card-border: #{$card-border};
+  --#{$prefix-bh}card-radius: #{$card-radius};
+  --#{$prefix-bh}card-background: #{$card-background};
+  --#{$prefix-bh}card-body-gap: #{$card-body-gap};
+
+  --#{$prefix-bh}card-background-secondary: #{$card-background-secondary};
+  --#{$prefix-bh}card-border-secondary: #{$card-border-secondary};
+
+  --#{$prefix-bh}card-text: #{$card-text};
+
+  --#{$prefix-bh}card-cap-padding-y: #{$card-cap-padding-y};
+  --#{$prefix-bh}card-cap-padding-x: #{$card-cap-padding-x};
+  --#{$prefix-bh}card-cap-background: #{$card-cap-background};
+  --#{$prefix-bh}card-cap-border: #{$card-cap-border};
+  --#{$prefix-bh}card-cap-text: #{$card-cap-text};
+
+  --#{$prefix-bh}card-image-max-height: #{$card-image-max-height};
+
+  --#{$prefix}card-box-shadow: #{$card-box-shadow};
+  --#{$prefix-bh}card-height: #{$card-height};
+
+  --#{$prefix}card-img-overlay-padding: #{$card-img-overlay-padding};
+  --#{$prefix}card-group-margin: #{$card-group-margin};
+  // scss-docs-end card-css-vars
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+  height: var(--#{$prefix-bh}card-height);
+  color: inherit;
+  word-wrap: break-word;
+  background-color: var(--#{$prefix-bh}card-background);
+  background-clip: border-box;
+  border: var(--#{$prefix-bh}card-border-width) solid var(--#{$prefix-bh}card-border);
+  @include border-radius(var(--#{$prefix-bh}card-radius));
+  @include box-shadow(var(--#{$prefix}card-box-shadow));
+
+  &.card-secondary {
+    background-color: var(--#{$prefix-bh}card-background-secondary);
+    border-color: var(--#{$prefix-bh}card-border-secondary);
+  }
+
+  > hr {
+      margin-right: 0;
+      margin-left: 0;
+  }
+
+  > .list-group {
+      border-top: inherit;
+      border-bottom: inherit;
+
+      // &:first-child {
+      //     border-top-width: 0;
+      //     @include border-top-radius(var(--#{$prefix-bh}card-inner-radius));
+      // }
+
+      // &:last-child  {
+      //     border-bottom-width: 0;
+      //     @include border-bottom-radius(var(--#{$prefix-bh}card-inner-radius));
+      // }
+  }
+
+  // Due to specificity of the above selector (`.card > .list-group`), we must
+  // use a child selector here to prevent double borders.
+  > .card-header + .list-group,
+  > .list-group + .card-footer {
+    border-top: 0;
+  }
+}
+  
+.card-body {
+  // Enable `flex-grow: 1` for decks and groups so that card blocks take up
+  // as much space as possible, ensuring footers are aligned to the bottom.
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--#{$prefix-bh}card-body-gap);
+  padding: var(--#{$prefix-bh}card-padding-y) var(--#{$prefix-bh}card-padding-x);
+  color: var(--#{$prefix-bh}card-text);  
+
+  // > * {
+  //   align-self: flex-start;
+  // }
+}
+  // .card-text:last-child {
+  //   margin-bottom: 0;
+  // }
+  
+  // .card-link {
+  //   &:hover {
+  //     text-decoration: if($link-hover-decoration == underline, none, null);
+  //   }
+  
+  //   + .card-link {
+  //     margin-left: var(--#{$prefix-bh}card-padding-x);
+  //   }
+  // }
+  
+  //
+  // Optional textual caps
+  //
+  
+.card-header {
+  padding: var(--#{$prefix-bh}card-cap-padding-y) var(--#{$prefix-bh}card-cap-padding-x);
+  padding-top: calc(var(--#{$prefix-bh}card-cap-padding-y) + 0.25rem);
+  margin-bottom: 0; // Removes the default margin-bottom of <hN>
+  color: var(--#{$prefix-bh}card-cap-text);
+  background-color: var(--#{$prefix-bh}card-cap-background);
+  border-bottom: var(--#{$prefix-bh}card-cap-border);
+
+  // &:first-child {
+  //   @include border-radius(var(--#{$prefix-bh}card-inner-radius) var(--#{$prefix-bh}card-inner-radius) 0 0);
+  // }
+
+  + .card-body {
+    padding-top: calc(var(--#{$prefix-bh}card-padding-y) - calc(calc(var(--#{$prefix-bh}card-padding-y) / 2) - 0.5rem));
+  }
+}
+
+.card-footer {
+  padding: var(--#{$prefix-bh}card-cap-padding-y) var(--#{$prefix-bh}card-cap-padding-x);
+  color: var(--#{$prefix-bh}card-cap-text);
+  background-color: var(--#{$prefix-bh}card-cap-background);
+  border-top: var(--#{$prefix-bh}card-cap-border);
+
+  // &:last-child {
+  //   @include border-radius(0 0 var(--#{$prefix-bh}card-inner-radius) var(--#{$prefix-bh}card-inner-radius));
+  // }
+}
+
+.card:has(.card-footer) .card-body {
+  padding-bottom: calc(var(--#{$prefix-bh}card-padding-y) - calc(calc(var(--#{$prefix-bh}card-padding-y) / 2) - 0.5rem)); // Formular X-((X/2)-8)
+}
+  
+  
+  //
+  // Header navs
+  //
+  
+.card-header-tabs {
+  margin-right: calc(-.5 * var(--#{$prefix-bh}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
+  margin-bottom: calc(-1 * var(--#{$prefix-bh}card-cap-padding-y)); // stylelint-disable-line function-disallowed-list
+  margin-left: calc(-.5 * var(--#{$prefix-bh}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
+  border-bottom: 0;
+
+  .nav-link.active {
+    background-color: var(--#{$prefix}card-bg);
+    border-bottom-color: var(--#{$prefix}card-bg);
+  }
+}
+
+.card-header-pills {
+  margin-right: calc(-.5 * var(--#{$prefix-bh}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
+  margin-left: calc(-.5 * var(--#{$prefix-bh}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
+}
+  
+// Card image
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: var(--#{$prefix}card-img-overlay-padding);
+}
+
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+  height: var(--#{$prefix-bh}card-image-max-height);
+  overflow: hidden;
+  position: relative;
+  border-top-left-radius: calc(var(--#{$prefix-bh}card-radius) - var(--#{$prefix-bh}card-border-width));
+  border-top-right-radius: calc(var(--#{$prefix-bh}card-radius) - var(--#{$prefix-bh}card-border-width));
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+// .card-img-top {
+//   @include border-top-radius(var(--#{$prefix-bh}card-inner-radius));
+// }
+
+// .card-img-bottom {
+//   @include border-bottom-radius(var(--#{$prefix-bh}card-inner-radius));
+// }
+
+
+//
+// Card groups
+//
+
+.card-group {
+  // The child selector allows nested `.card` within `.card-group`
+  // to display properly.
+  > .card {
+    margin-bottom: var(--#{$prefix}card-group-margin);
+  }
+
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    flex-flow: row wrap;
+    // The child selector allows nested `.card` within `.card-group`
+    // to display properly.
+    > .card {
+      // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+      flex: 1 0 0%;
+      margin-bottom: 0;
+
+      + .card {
+        margin-left: 0;
+        border-left: 0;
+      }
+
+      // Handle rounded corners
+      @if $enable-rounded {
+        &:not(:last-child) {
+          @include border-end-radius(0);
+
+          .card-img-top,
+          .card-header {
+            // stylelint-disable-next-line property-disallowed-list
+            border-top-right-radius: 0;
+          }
+          .card-img-bottom,
+          .card-footer {
+            // stylelint-disable-next-line property-disallowed-list
+            border-bottom-right-radius: 0;
+          }
+        }
+
+        &:not(:first-child) {
+          @include border-start-radius(0);
+
+          .card-img-top,
+          .card-header {
+            // stylelint-disable-next-line property-disallowed-list
+            border-top-left-radius: 0;
+          }
+          .card-img-bottom,
+          .card-footer {
+            // stylelint-disable-next-line property-disallowed-list
+            border-bottom-left-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+// Card orientation
+//
+
+.card-horizontal {
+  --#{$prefix-bh}card-img-width: 33.33333333%;
+
+  display: flex;
+  flex-direction: row;
+
+  .card-img {
+    flex: 0 0 var(--#{$prefix-bh}card-img-width);
+    width: var(--#{$prefix-bh}card-img-width);
+    height: auto;
+    border-top-left-radius: calc(var(--#{$prefix-bh}card-radius) - var(--#{$prefix-bh}card-border-width));
+    border-bottom-left-radius: calc(var(--#{$prefix-bh}card-radius) - var(--#{$prefix-bh}card-border-width));
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+}
+
+.card-horizontal-right {
+  .card-img {
+    order: 2 !important;
+    border-top-right-radius: calc(var(--#{$prefix-bh}card-radius) - var(--#{$prefix-bh}card-border-width));
+    border-bottom-right-radius: calc(var(--#{$prefix-bh}card-radius) - var(--#{$prefix-bh}card-border-width));
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+//
+// Card sizes
+//
+
+.card-lg {
+  .card-body {
+    padding: $card-padding-y-lg $card-padding-x-lg;
+  }
+}
+
+.card-sm {
+  .card-body {
+    padding: $card-padding-y-sm $card-padding-x-sm;
+  }
+}
+
+//
+// Card clickable
+//
+
+.card-clickable {
+  text-decoration: none;
+  font-weight: $font-weight-base;
+  transition: $button-transition;
+  @if $clickable-borders {
+    border-bottom-width: $card-clickable-border-width;
+  }
+
+  .card-body::after {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: #{$font-awesome};
+    font-weight: 400;
+    content: '\f061';
+    font-size: 1.5rem;
+    height: 1rem;
+    width: 100%;
+    margin-top: auto;
+    text-align: right;
+    color: var(--#{$prefix-bh}link-icon);
+    transition: .15s ease-in-out;
+  }
+
+  &:hover {
+    --#{$prefix-bh}card-border: #{$card-clickable-border-hover};
+
+    .card-body::after {
+      margin-left: 0.25rem;
+    }
+  }
+
+  &:focus-visible {
+    text-decoration: none !important;
+  }
+
+  &.disabled {
+    background-color: #{$card-clickable-background-disabled};
+    border-color: #{$card-clickable-border-disabled};
+    transition: none;
+
+    .card-body {
+      color: #{$card-clickable-text-disabled};
+
+      &::after {
+        display: none;
+      }
+    }
+
+    img {
+      opacity: #{$card-clickable-image-disabled-opacity};
+    }
+  }
+
+  &.card-secondary {
+    --#{$prefix-bh}card-border-secondary: #{$card-border};
+    &:hover {
+      --#{$prefix-bh}card-border-secondary: #{$card-clickable-border-hover};
+    }
+  }
+
+}
+
+//
+// Card selectable
+//
+
+.card-selectable {
+  --#{$prefix-bh}card-selectable-focus-ring: #{$card-selectable-focus-ring};
+
+  cursor: pointer;
+  @if $clickable-borders {
+    border-bottom-width: $card-selectable-border-width;
+  }
+  transition: $button-transition;
+
+  &:hover {
+    --#{$prefix-bh}card-border: #{$card-selectable-border-hover};
+  }
+
+  .card-body {
+    padding-right: calc(var(--#{$prefix-bh}card-padding-x) + $checkbox-input-width);
+  }
+
+  .form-check-input {
+    position: absolute;
+    top: $card-selectable-check-position-top;
+    right: $card-selectable-check-position-right;
+  }
+
+  &.active {
+    --#{$prefix-bh}card-background: #{$card-selectable-background-active};
+    --#{$prefix-bh}card-border: #{$card-selectable-border-active};
+  }
+
+  &:has(.form-check-input:focus) {
+    box-shadow: var(--#{$prefix-bh}card-selectable-focus-ring);
+  }
+
+  .form-check-input:focus {
+    box-shadow: none;
+  }
+}
+
+//
+// Emphasis tile
+//
+
+.emphasis-tile {
+  --#{$prefix-bh}emphasis-tile-padding-y:     #{$emphasis-tile-padding-y};
+  --#{$prefix-bh}emphasis-tile-padding-x:     #{$emphasis-tile-padding-x};
+  --#{$prefix-bh}emphasis-tile-border-width:  #{$emphasis-tile-border-width};
+  --#{$prefix-bh}emphasis-tile-border:        #{$emphasis-tile-border};
+  --#{$prefix-bh}emphasis-tile-radius:        #{$emphasis-tile-radius};
+  --#{$prefix-bh}emphasis-tile-background:    #{$emphasis-tile-background};
+
+    padding: var(--#{$prefix-bh}emphasis-tile-padding-y) var(--#{$prefix-bh}emphasis-tile-padding-x);
+    border-radius: var(--#{$prefix-bh}emphasis-tile-radius);
+    display: flex;
+    flex-direction: column;
+    gap: $emphasis-tile-content-gap;
+    width: 100%;
+    background-color: var(--#{$prefix-bh}emphasis-tile-background);
+    border: var(--#{$prefix-bh}emphasis-tile-border-width) solid var(--#{$prefix-bh}emphasis-tile-border);
+}
+
+.card-secondary .emphasis-tile:not(.emphasis-tile-secondary) {
+  --#{$prefix-bh}emphasis-tile-background:    #{$emphasis-tile-background-secondary};
+  --#{$prefix-bh}emphasis-tile-border:        #{$emphasis-tile-border-secondary};
+}
+
+.emphasis-tile-inline {
+  --#{$prefix-bh}emphasis-tile-width:         #{$emphasis-tile-width};
+  
+  max-width: 100%;
+  width: var(--#{$prefix-bh}emphasis-tile-width);
+  height: 100%;
+}
+
+.emphasis-tile-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.card:has(.emphasis-tile-inline) {
+  flex-direction: row;
+}
+
+.card-body {
+  &:has(.emphasis-tile-inline) {
+    flex: 0 1 auto;
+  }
+
+  &:has(.emphasis-tile:not(.emphasis-tile-inline)) {
+    padding-top: 0;
+  }
+}
+
+.emphasis-tile-secondary {
+    --#{$prefix-bh}emphasis-tile-border:        #{$emphasis-tile-border-secondary};
+    
+  &:not(.card-secondary .emphasis-tile-secondary) {
+    --#{$prefix-bh}emphasis-tile-background:    #{$emphasis-tile-background-secondary};
+    --#{$prefix-bh}emphasis-tile-border:        #{$emphasis-tile-border-secondary};
+  }
+}
+
+//
+// Rules for components inside cards
+//
+
+.col > .card .text-block:not(form .text-block),
+.carousel-item .card .text-block:not(form .text-block) {
+  flex-grow: 1; // Allow text blocks to take up as much space as possible, ensuring footers are aligned to the bottom.
+}
+
+// Dark mode overrides
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .card {
+      --#{$prefix-bh}card-border: #{$card-border-dark};
+      --#{$prefix-bh}card-background: #{$card-background-dark};
+      --#{$prefix-bh}card-background-secondary: #{$card-background-secondary-dark};
+    }
+
+    .card-clickable {
+      &:hover {
+        --#{$prefix-bh}card-border: #{$card-clickable-border-hover-dark};
+      }
+
+      &.disabled {
+        border-color: #{$card-clickable-border-disabled-dark};
+        
+        .card-body {
+          color: #{$card-clickable-text-disabled-dark};
+        }
+      }
+    }
+
+    .card-selectable {
+      --#{$prefix-bh}card-selectable-focus-ring: #{$card-selectable-focus-ring-dark};
+
+      &:hover {
+        --#{$prefix-bh}card-border: #{$card-selectable-border-hover-dark};
+      }
+
+      &.active {
+        --#{$prefix-bh}card-background: #{$card-selectable-background-active-dark};
+        --#{$prefix-bh}card-border: #{$card-selectable-border-active-dark};
+      }
+    }
+  }
+}

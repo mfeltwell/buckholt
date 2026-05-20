@@ -1,0 +1,82 @@
+//
+// Base styles
+//
+
+.collapse-item {
+    --#{$prefix-bh}collapse-title:           #{$collapse-card-title};
+    --#{$prefix-bh}collapse-text:            #{$collapse-card-text};
+    --#{$prefix-bh}collapse-trigger:         #{$collapse-trigger};
+    --#{$prefix-bh}collapse-trigger-hover:   #{$collapse-trigger-hover};
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.collapse-trigger {
+    @include type($link, "02");
+    color: var(--#{$prefix-bh}collapse-trigger);
+    align-self: flex-start;
+    
+    &::before {
+        content: '\f054';
+        display: inline-block;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font: var(--fa-font-solid);
+        margin-right: $collapse-trigger-gap;
+        transition: .15s ease-in-out;
+    }
+
+    &:has(~ .collapse.show) {
+        &::before {
+            transform: rotate(90deg);
+        }
+    }
+
+    &:hover {
+        color: var(--#{$prefix-bh}collapse-trigger-hover);
+    }
+}
+
+.collapse-card {
+    display: flex;
+    flex-direction: row;
+    background-color: $collapse-card-background;
+    padding: $collapse-card-padding-y $collapse-card-padding-x;
+    border-radius: $collapse-card-radius;
+    color: var(--#{$prefix-bh}collapse-text);
+}
+
+.collapse-content {
+    padding: $collapse-card-content-padding-y $collapse-card-content-padding-x;
+    width: 100%;
+
+    // Spacing for text block before context bar 
+    .text-block + .collapse-contextbar {
+        margin-top: $collapse-contextbar-margin-top;
+    }
+}
+
+.collapse-contextbar {
+    margin-bottom: $collapse-contextbar-margin-bottom;
+    display: flex;
+    flex-direction: column;
+    gap: $collapse-contextbar-gap;
+}
+
+.collapse-title {
+    color: var(--#{$prefix-bh}collapse-title);
+    @include type($title, "01");
+}
+
+
+
+// Dark mode overrides
+@if $enable-dark-mode {
+    @include color-mode(dark) {
+        .collapse-card {
+            background-color: $collapse-card-background-dark;
+        }
+    }
+}

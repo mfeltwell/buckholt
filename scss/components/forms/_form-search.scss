@@ -1,0 +1,16 @@
+// form-search uses the dropdown styles to render properly.
+
+.form-search {
+    &:not(.form-search-dropdown) {
+        @extend .form-control;
+    }
+
+    &.form-search-dropdown {
+        @extend .dropdown-toggle;
+        background-image: none;
+    }
+
+    &~ .dropdown-menu .dropdown-item:active {
+        background-image: none;
+    }
+}

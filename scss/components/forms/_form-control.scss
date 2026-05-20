@@ -1,0 +1,171 @@
+//
+// General form controls (plus a few specific high-level interventions)
+//
+
+.form-control {
+    --#{$prefix-bh}form-input-border:               #{$form-input-border};
+    --#{$prefix-bh}form-input-border-width:         #{$form-input-border-width};
+    --#{$prefix-bh}form-input-background:           #{$form-input-background};
+    --#{$prefix-bh}form-input-text:                 #{$form-input-text};
+    --#{$prefix-bh}form-input-placeholder:          #{$form-input-placeholder};
+    --#{$prefix-bh}form-input-border-focus:         #{$form-input-border-focus};
+    --#{$prefix-bh}form-input-focus-ring:           #{$form-input-focus-ring};
+    --#{$prefix-bh}form-input-background-disabled:  #{$form-input-background-disabled};
+    --#{$prefix-bh}form-input-border-disabled:      #{$form-input-border-disabled};
+    --#{$prefix-bh}form-text-disabled:              #{$form-text-disabled};
+
+
+    display: block;
+    width: 100%;
+    min-width: $form-input-min-width;
+    // padding: $form-input-padding-y $form-input-padding-end $form-input-padding-y $form-input-padding-start;
+    padding: $form-input-padding-y $form-input-padding-x;
+    @include type($input-text, "02");
+    color: var(--#{$prefix-bh}form-input-text);
+    appearance: none; // Fix appearance for date inputs in Safari
+    background-color: var(--#{$prefix-bh}form-input-background);
+    border: var(--#{$prefix-bh}form-input-border-width) solid var(--#{$prefix-bh}form-input-border);
+
+    // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+    @include border-radius($form-input-radius, 0);
+
+    @include box-shadow($input-box-shadow);
+    @include transition($input-transition);
+
+
+    &[type="file"] {
+        overflow: hidden; // prevent pseudo element button overlap
+    
+        &:not(:disabled):not([readonly]) {
+            cursor: pointer;
+        }
+    }
+
+    // Customize the `:focus` state to imitate native WebKit styles.
+    &:focus {
+        color: var(--#{$prefix-bh}form-input-text);
+        background-color: var(--#{$prefix-bh}form-input-background);
+        border-color: var(--#{$prefix-bh}form-input-border-focus);
+        outline: 0;
+        @if $enable-shadows {
+        @include box-shadow($input-box-shadow, $input-focus-box-shadow);
+        } @else {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        box-shadow: var(--#{$prefix-bh}form-input-focus-ring);
+        }
+    }
+
+    &::-webkit-date-and-time-value {
+        // On Android Chrome, form-control's "width: 100%" makes the input width too small
+        // Tested under Android 11 / Chrome 89, Android 12 / Chrome 100, Android 13 / Chrome 109
+        //
+        // On iOS Safari, form-control's "appearance: none" + "width: 100%" makes the input width too small
+        // Tested under iOS 16.2 / Safari 16.2
+        min-width: 85px; // Seems to be a good minimum safe width
+    
+        // Add some height to date inputs on iOS
+        // https://github.com/twbs/bootstrap/issues/23307
+        // TODO: we can remove this workaround once https://bugs.webkit.org/show_bug.cgi?id=198959 is resolved
+        // Multiply line-height by 1em if it has no unit
+        height: if(unit($input-line-height) == "", $input-line-height * 1em, $input-line-height);
+    
+        // Android Chrome type="date" is taller than the other inputs
+        // because of "margin: 1px 24px 1px 4px" inside the shadow DOM
+        // Tested under Android 11 / Chrome 89, Android 12 / Chrome 100, Android 13 / Chrome 109
+        margin: 0;
+    }
+
+    // Prevent excessive date input height in Webkit
+    // https://github.com/twbs/bootstrap/issues/34433
+    &::-webkit-datetime-edit {
+        display: block;
+        padding: 0;
+    }
+
+    // Placeholder
+    &::placeholder {
+        @include type($placeholder, "02");
+        color: var(--#{$prefix-bh}form-input-placeholder);
+        // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+        opacity: 1;
+    }
+
+    // Disabled inputs
+    //
+    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    // disabled if the fieldset is disabled. Due to implementation difficulty, we
+    // don't honor that edge case; we style them as disabled anyway.
+    &:disabled {
+        color: $form-text-disabled;
+
+        &::placeholder {
+            color: $form-text-disabled;
+        }
+    }
+
+    &:disabled,
+    &[readonly] {
+        background-color: var(--#{$prefix-bh}form-input-background-disabled);
+        border-color: var(--#{$prefix-bh}form-input-border-disabled);
+        // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+        opacity: 1;
+    }
+
+    &[readonly] {
+        &:focus {
+            border-color: var(--#{$prefix-bh}form-input-border-focus);
+        }
+    }
+
+
+  // File input buttons theming
+//   &::file-selector-button {
+//     padding: $input-padding-y $input-padding-x;
+//     margin: (-$input-padding-y) (-$input-padding-x);
+//     margin-inline-end: $input-padding-x;
+//     color: $form-file-button-color;
+//     @include gradient-bg($form-file-button-bg);
+//     pointer-events: none;
+//     border-color: inherit;
+//     border-style: solid;
+//     border-width: 0;
+//     border-inline-end-width: $input-border-width;
+//     border-radius: 0; // stylelint-disable-line property-disallowed-list
+//     @include transition($btn-transition);
+//   }
+
+//   &:hover:not(:disabled):not([readonly])::file-selector-button {
+//     background-color: $form-file-button-hover-bg;
+//   }
+
+}
+
+.form-control:not(textarea) {
+    max-height: $form-input-height;
+}
+
+// Text area
+textarea.form-control {
+    min-height: $form-input-height;
+}
+
+
+
+//
+// Dark mode overrides _______________________
+//
+@if $enable-dark-mode {
+    @include color-mode(dark) {
+        .form-control {
+            // --#{$prefix-bh}form-input-border:               #{$form-input-border-dark};
+            --#{$prefix-bh}form-input-background:           #{$form-input-background-dark};
+            // --#{$prefix-bh}form-input-text:                 #{$form-input-text};
+            // --#{$prefix-bh}form-input-placeholder:          #{$form-input-placeholder};
+            // --#{$prefix-bh}form-input-border-focus:         #{$form-input-border-focus};
+            // --#{$prefix-bh}form-input-focus-ring:           #{$form-input-focus-ring};
+            --#{$prefix-bh}form-input-background-disabled:  #{$form-input-background-disabled-dark};
+            --#{$prefix-bh}form-input-border-disabled:      #{$form-input-border-disabled-dark};
+            --#{$prefix-bh}form-text-disabled:              #{$form-text-disabled-dark};
+        }
+    }
+}

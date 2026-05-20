@@ -1,0 +1,89 @@
+//
+// Base styles
+//
+
+.icon {
+    font-size: inherit;
+    color: inherit;
+    display: inline-block;
+}
+
+.icon-block {
+    --#{$prefix-bh}icon-block-icon:            #{$icon-block-icon};
+    --#{$prefix-bh}icon-block-background:      #{$icon-block-background};
+    --#{$prefix-bh}icon-block-border:          #{$icon-block-border};
+    --#{$prefix-bh}icon-block-border-width:    #{$icon-block-border-width};
+    --#{$prefix-bh}icon-block-radius:          #{$icon-block-radius};
+    --#{$prefix-bh}icon-block-size:            #{$icon-block-size};
+    --#{$prefix-bh}icon-block-icon-size:       #{$icon-block-icon-size};
+
+    background-color: var(--#{$prefix-bh}icon-block-background);
+    border-radius: var(--#{$prefix-bh}icon-block-radius);
+    color: var(--#{$prefix-bh}icon-block-icon);
+    height: var(--#{$prefix-bh}icon-block-size);
+    width: var(--#{$prefix-bh}icon-block-size);
+    font-size: var(--#{$prefix-bh}icon-block-icon-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // Expressive colours
+    &.expressive-light {
+        --#{$prefix-bh}icon-block-icon:            #{$expressive-deep};
+        --#{$prefix-bh}icon-block-background:      #{$expressive-pale-overlay};
+    }
+
+    &.expressive-dark {
+        --#{$prefix-bh}icon-block-icon:            #{$text-light};
+        --#{$prefix-bh}icon-block-background:      #{$expressive-rich};
+    }
+
+    &.feedback-success {
+        --#{$prefix-bh}icon-block-icon:            #{$feedback-message-success};
+        --#{$prefix-bh}icon-block-background:      #{$feedback-overlay-success};
+    }
+
+    &.feedback-error {
+        --#{$prefix-bh}icon-block-icon:            #{$feedback-message-error};
+        --#{$prefix-bh}icon-block-background:      #{$feedback-overlay-error};
+    }
+}
+
+// Sizes
+@each $key, $values in $icon-block-sizes {
+    .icon-block-#{$key} {
+        --#{$prefix-bh}icon-block-size: #{map-get($values, size)};
+        --#{$prefix-bh}icon-block-icon-size: #{map-get($values, icon-size)};
+        --#{$prefix-bh}icon-block-radius: #{map-get($values, radius)};
+    }
+}
+
+//
+// Inline heading icons
+//
+
+%heading-icon-style {
+    .icon {
+        margin-right: $icon-gap-right;
+    }
+}
+
+@include typography('display', 'headline', 'title') {
+    @extend %heading-icon-style;
+}
+
+.display-03 .icon {
+    margin-right: $icon-gap-right-lg;
+}
+
+
+//
+// Dark mode overrides _______________________
+//
+@if $enable-dark-mode {
+    @include color-mode(dark) {
+        .icon-block {
+            --#{$prefix-bh}icon-block-background:      #{$icon-block-background-dark};
+        }
+    }
+}

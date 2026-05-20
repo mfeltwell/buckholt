@@ -1,0 +1,55 @@
+// Bento boxes
+
+.grid-bento {
+    --#{$prefix-bh}columns: #{$bento-columns-xs};
+    --#{$prefix-bh}gap: #{$bento-gap};
+
+    grid-template-rows: unset;
+    grid-auto-rows: 10rem;
+    grid-template-columns: repeat(var(--#{$prefix-bh}columns, #{$grid-columns}), #{$bento-box-size});
+    width: max-content;
+    // margin: auto;
+
+      // Default (mobile first)
+    @include media-breakpoint-up(sm) {
+        --#{$prefix-bh}columns: #{$bento-columns-sm};
+    }
+
+    @include media-breakpoint-up(md) {
+        --#{$prefix-bh}columns: #{$bento-columns-md};
+    }
+
+    @include media-breakpoint-up(lg) {
+        --#{$prefix-bh}columns: #{$bento-columns-lg};
+    }
+
+    @include media-breakpoint-up(xl) {
+        --#{$prefix-bh}columns: #{$bento-columns-xl};
+    }
+
+    @include media-breakpoint-up(xxl) {
+        --#{$prefix-bh}columns: #{$bento-columns-xxl};
+    }
+}
+
+.bento-box {
+    background-color: #dadada;
+    border-radius: #{$bento-box-radius};
+    height: 100%;
+    width: 100%;
+    padding: #{$bento-box-padding};
+}
+
+@each $name, $size in $bento-sizes {
+    $rows: nth($size, 1);
+    $cols: nth($size, 2);
+
+    // Width & height formula
+    $width:  calc(#{$cols} * #{$bento-box-size} + (#{$cols} - 1) * #{$bento-gap});
+    $height: calc(#{$rows} * #{$bento-box-size} + (#{$rows} - 1) * #{$bento-gap});
+
+    .bento-#{$name} {
+        grid-row: span #{$rows};
+        grid-column: span #{$cols};
+    }
+}

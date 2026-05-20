@@ -1,0 +1,80 @@
+//
+// Input buttons
+//
+
+.input-btn {
+    --#{$prefix-bh}form-input-button-width: #{$form-input-button-width};
+    --#{$prefix-bh}form-input-button-height: #{$form-input-button-height};
+    --#{$prefix-bh}form-input-button-radius: #{$form-input-button-radius};
+
+    --#{$prefix-bh}form-input-button-background: #{$form-input-button-background};
+    --#{$prefix-bh}form-input-button-background-hover: #{$form-input-button-background-hover};
+    --#{$prefix-bh}form-input-button-icon: #{$form-input-button-icon};
+    --#{$prefix-bh}form-input-button-border-focus: #{$form-input-button-border-focus};
+    --#{$prefix-bh}form-input-button-focus-ring: #{$form-input-button-focus-ring};
+    
+
+    height: var(--#{$prefix-bh}form-input-button-height);
+    width: var(--#{$prefix-bh}form-input-button-width);
+    border-radius: var(--#{$prefix-bh}form-input-button-radius);
+    border: 1px solid transparent;
+    padding: 0;
+    background-color: var(--#{$prefix-bh}form-input-button-background);
+    color: var(--#{$prefix-bh}form-input-button-icon);
+    @include transition($btn-transition);
+
+    position: absolute;
+    top: $form-input-button-spacing-y;
+    right: calc($form-input-button-spacing-x + $form-input-border-width);
+
+    &:hover {
+        background-color: var(--#{$prefix-bh}form-input-button-background-hover);
+    }
+
+    &:focus-visible {
+        box-shadow: var(--#{$prefix-bh}form-input-button-focus-ring);
+        border-color: var(--#{$prefix-bh}form-input-button-border-focus);
+        outline: 0;
+        background-color: var(--#{$prefix-bh}form-input-button-background-hover);
+    }
+
+    &.input-clear {
+        --#{$prefix-bh}form-input-button-icon: #{$form-input-clear-icon};
+        --#{$prefix-bh}form-input-button-background-hover: #{$form-input-clear-background-hover};
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.15s ease-in-out;
+
+        &::before {
+            display: block;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font: var(--fa-font-regular);
+            font-size: var(--#{$prefix-bh}btn-close-icon-size);
+            content: '\f00d';
+        }
+    }
+}
+
+.response:has(.input-btn) .form-control {
+    padding-right: calc($form-input-button-width + $form-input-icon-gap + $form-input-padding-end);
+}
+
+.response:has(input:disabled) .input-btn,
+.response:has(input[readonly]) .input-btn {
+    display: none;
+}
+
+.response:hover .input-clear {
+    visibility: visible;
+    opacity: 1;
+}
+
+// Two input buttons
+.input-btn + .input-btn {
+    right: calc($form-input-button-spacing-x + $form-input-border-width + $form-input-button-width + $form-input-button-gap);
+}
+
+.response:has(.input-btn + .input-btn) .form-control {
+    padding-right: calc(calc($form-input-button-width * 2) + $form-input-button-gap + $form-input-icon-gap + $form-input-padding-end);
+}

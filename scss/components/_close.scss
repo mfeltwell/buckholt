@@ -1,0 +1,115 @@
+// Transparent background and border properties included for button version.
+// iOS requires the button element instead of an anchor tag.
+// If you want the anchor version, it requires `href="#"`.
+// See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+
+.btn-close {
+  // scss-docs-start close-css-vars
+  --#{$prefix-bh}btn-close-width: #{$btn-close-width};
+  --#{$prefix-bh}btn-close-height: #{$btn-close-height};
+
+  --#{$prefix-bh}btn-close-icon: #{$btn-close-icon};
+  --#{$prefix-bh}btn-close-icon-size: #{$btn-close-icon-size};
+  --#{$prefix-bh}btn-close-focus-ring: #{$btn-close-focus-ring};
+  --#{$prefix-bh}btn-close-radius: #{$btn-close-radius};
+  --#{$prefix-bh}btn-close-background: #{$btn-close-background};
+
+  --#{$prefix-bh}btn-close-opacity: #{$btn-close-opacity};
+  --#{$prefix-bh}btn-close-hover-opacity: #{$btn-close-hover-opacity};
+  
+  --#{$prefix-bh}btn-close-focus-opacity: #{$btn-close-focus-opacity};
+  --#{$prefix-bh}btn-close-disabled-opacity: #{$btn-close-disabled-opacity};
+  --#{$prefix-bh}btn-close-white-filter: #{$btn-close-white-filter};
+  // scss-docs-end close-css-vars
+
+  box-sizing: content-box;
+  width: var(--#{$prefix-bh}btn-close-width);
+  height: var(--#{$prefix-bh}btn-close-height);
+  color: var(--#{$prefix-bh}btn-close-icon);
+  padding: 0;
+  background-color: var(--#{$prefix-bh}btn-close-background);
+  border: 0; // for button elements
+  @include border-radius(var(--#{$prefix-bh}btn-close-radius));
+  flex: none;
+  @include transition($btn-transition);
+
+  // Override <a>'s hover style
+  &:hover {
+    --#{$prefix-bh}btn-close-background: #{$btn-close-background-hover};
+
+    color: var(--#{$prefix-bh}btn-close-icon);
+    text-decoration: none;
+  }
+
+  &:focus {
+    --#{$prefix-bh}btn-close-background: #{$btn-close-background-focus};
+
+    outline: 0;
+    box-shadow: var(--#{$prefix-bh}btn-close-focus-ring);
+  }
+
+  // Font Awesome v6 settings to display icon
+  &::before {
+    display: block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font: var(--fa-font-regular);
+    font-size: var(--#{$prefix-bh}btn-close-icon-size);
+    content: '\f00d';
+  }
+
+  // &:disabled,
+  // &.disabled {
+  //   pointer-events: none;
+  //   user-select: none;
+  //   opacity: var(--#{$prefix}btn-close-disabled-opacity);
+  // }
+}
+
+// @mixin btn-close-white() {
+//   filter: var(--#{$prefix}btn-close-white-filter);
+// }
+
+// .btn-close-white {
+//   @include btn-close-white();
+// }
+
+// @if $enable-dark-mode {
+//   @include color-mode(dark) {
+//     .btn-close {
+//       @include btn-close-white();
+//     }
+//   }
+// }
+
+@each $state in map-keys($feedback-colours) {
+  [class*="-#{$state}"] .btn-close {
+    &:hover,
+    &:focus {
+      --#{$prefix-bh}btn-close-background: var(--#{$prefix-bh}feedback-overlay-#{$state});
+    }
+  }
+}
+
+.btn-close-sm {
+  --#{$prefix-bh}btn-close-width: 1.5rem;
+  --#{$prefix-bh}btn-close-height: var(--#{$prefix-bh}btn-close-width);
+  --#{$prefix-bh}btn-close-radius: #{$border-radius-full};
+}
+
+@each $state in map-keys($feedback-colours) {
+  [class*="-#{$state}"] .btn-close-sm {
+    --#{$prefix-bh}btn-close-icon: var(--#{$prefix-bh}feedback-message-#{$state});
+  }
+}
+
+// expressive colours
+.expressive-light .btn-close,
+.btn-close.expressive-light {
+  --#{$prefix-bh}btn-close-icon: var(--#{$prefix-bh}expressive-deep);
+
+  &:hover,
+  &:focus {
+    --#{$prefix-bh}btn-close-background: var(--#{$prefix-bh}expressive-pale-overlay);
+  }
+}

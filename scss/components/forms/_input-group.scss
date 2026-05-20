@@ -1,0 +1,189 @@
+//
+// Base styles
+//
+
+.input-group {
+    --#{$prefix-bh}input-group-addon-text:          #{$input-group-addon-text};
+    --#{$prefix-bh}input-group-addon-border:        #{$input-group-addon-border};
+    --#{$prefix-bh}input-group-addon-border-width:  #{$input-group-addon-border-width};
+    --#{$prefix-bh}input-group-addon-background:    #{$input-group-addon-background};
+
+
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; // For form validation feedback
+    align-items: stretch;
+    width: 100%;
+
+    .response:not(.num-input) {
+        flex: 1;
+    }
+
+    > .form-control,
+    > .form-select,
+    > .form-floating {
+        position: relative; // For focus state's z-index
+        flex: 1 1 auto;
+        width: 1%;
+        min-width: 0; // https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size
+    }
+
+    // Bring the "active" form control to the top of surrounding elements
+    > .form-control:focus,
+    > .form-select:focus,
+    > .form-floating:focus-within {
+        z-index: 5;
+    }
+
+    // Ensure buttons are always above inputs for more visually pleasing borders.
+    // This isn't needed for `.input-group-text` since it shares the same border-color
+    // as our inputs.
+    .btn {
+        position: relative;
+        z-index: 2;
+        margin-left: $input-group-button-gap;
+
+        &:focus {
+            z-index: 5;
+        }
+    }
+}
+
+
+// Textual addons
+//
+// Serves as a catch-all element for any text or radio/checkbox input you wish
+// to prepend or append to an input.
+
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: $input-group-addon-padding-y $input-group-addon-padding-x;
+    @include type($placeholder, "02");
+    color: var(--#{$prefix-bh}input-group-addon-text);
+    text-align: center;
+    white-space: nowrap;
+    background-color: var(--#{$prefix-bh}input-group-addon-background);
+    border: var(--#{$prefix-bh}input-group-addon-border-width) solid var(--#{$prefix-bh}input-group-addon-border);
+    @include border-radius($form-input-radius);
+}
+
+
+// Sizing
+//
+// Remix the default form control sizing classes into new ones for easier
+// manipulation.
+
+.input-group-lg > .form-control,
+.input-group-lg > .form-select,
+.input-group-lg > .input-group-text,
+.input-group-lg > .btn {
+    padding: $input-padding-y-lg $input-padding-x-lg;
+    @include font-size($input-font-size-lg);
+    @include border-radius($input-border-radius-lg);
+}
+
+.input-group-sm > .form-control,
+.input-group-sm > .form-select,
+.input-group-sm > .input-group-text,
+.input-group-sm > .btn {
+    padding: $input-padding-y-sm $input-padding-x-sm;
+    @include font-size($input-font-size-sm);
+    @include border-radius($input-border-radius-sm);
+}
+
+.input-group-lg > .form-select,
+.input-group-sm > .form-select {
+    padding-right: calc($form-select-padding-x + $form-select-indicator-padding);
+}
+
+
+// Rounded corners
+//
+// These rulesets must come after the sizing ones to properly override sm and lg
+// border-radius values when extending. They're more specific than we'd like
+// with the `.input-group >` part, but without it, we cannot override the sizing.
+
+// stylelint-disable-next-line no-duplicate-selectors
+.input-group {
+    &:not(.has-validation):not(:has(.btn)) {
+        > :not(:last-child):not(.menu-toggle):not(.dropdown-menu):not(.form-floating),
+        > .menu-toggle:nth-last-child(n + 3),
+        > .form-floating:not(:last-child) > .form-control,
+        > .form-floating:not(:last-child) > .form-select,
+        .response:not(:last-child) > :not(.menu-toggle):not(.dropdown-menu):not(.form-floating):not(.input-btn),
+        .response:not(:last-child) .dropdown-toggle,
+        .response > .menu-toggle:nth-last-child(n + 3),
+        .response > .form-floating:not(:last-child) > .form-control,
+        .response > .form-floating:not(:last-child) > .form-select {
+            @include border-end-radius(0);
+        }
+    }
+
+    // &.has-validation {
+    //     > :not(:last-child):not(.menu-toggle):not(.dropdown-menu):not(.form-floating),
+    //     > .menu-toggle:nth-last-child(n + 3),
+    //     > .form-floating:not(:last-child) > .form-control,
+    //     > .form-floating:not(:last-child) > .form-select,
+    //     .response > :not(:last-child):not(.menu-toggle):not(.dropdown-menu):not(.form-floating):not(.input-btn),
+    //     .response > .menu-toggle:nth-last-child(n + 3),
+    //     .response > .form-floating:not(:last-child) > .form-control,
+    //     .response > .form-floating:not(:last-child) > .form-select {
+    //         @include border-end-radius(0);
+    //     }
+    // }
+
+    $validation-messages: "";
+    @each $state in map-keys($form-validation-states) {
+        $validation-messages: $validation-messages + ":not(." + unquote($state) + "-tooltip)" + ":not(." + unquote($state) + "-feedback)";
+    }
+
+    > :not(:first-child):not(.dropdown-menu, .btn)#{$validation-messages},
+    > :not(:first-child) .dropdown-toggle {
+        @include border-start-radius(0);
+    }
+
+    .response:not(:first-child) > :not(.dropdown-menu, .btn)#{$validation-messages},
+    .response:not(:first-child) .dropdown-toggle {
+        @include border-start-radius(0);
+    }
+
+    > .input-group-text:first-child {
+        border-right: calc(#{$input-border-width} * -1);
+    }
+
+    > .input-group-text:last-child {
+        border-left: calc(#{$input-border-width} * -1);
+    }
+
+
+
+    // Form floating not in use
+    // > .form-floating:not(:first-child) > .form-control,
+    // > .form-floating:not(:first-child) > .form-select {
+    //     @include border-start-radius(0);
+    // }
+}
+
+
+// Disabled state
+.input-group:has(.form-control:disabled, .form-select:disabled) .input-group-text,
+.input-group:has(.form-control[readonly]) .input-group-text {
+    --#{$prefix-bh}input-group-addon-border:        #{$input-group-addon-border-disabled};
+    --#{$prefix-bh}input-group-addon-background:    #{$input-group-addon-background-disabled};
+}
+
+.input-group:has(.form-control:disabled, .form-select:not(.readonly):disabled) .input-group-text {
+    --#{$prefix-bh}input-group-addon-text:  #{$input-group-addon-text-disabled};
+}
+
+.input-group:has(.form-control:disabled, .form-select:disabled) > .btn,
+.input-group:has([readonly]) > .btn {
+    display: none;
+}
+
+// Including menu buttons into input groups
+.input-group .btn,
+.input-group .btn-combo {
+    height: 100%;
+}

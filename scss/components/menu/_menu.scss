@@ -1,0 +1,267 @@
+//
+// Menu styles
+// Dependant on Dropdown.scss
+//
+
+// The menu wrapper (`<div>`)
+.menu-button {
+    position: relative;
+}
+
+.menu-toggle {
+    position: relative;
+}
+
+
+
+// The menu
+.menu-panel {
+    // scss-docs-start menu-css-vars
+    --#{$prefix}menu-zindex:                        #{$zindex-menu};
+    --#{$prefix-bh}menu-background:                 #{$menu-background};
+    --#{$prefix-bh}menu-border:                     #{$menu-border};
+    --#{$prefix-bh}menu-border-width:               #{$menu-border-width};
+    --#{$prefix-bh}menu-radius:                     #{$menu-radius};
+    --#{$prefix-bh}menu-shadow:                     #{$menu-shadow};
+    --#{$prefix-bh}menu-padding-x:                  #{$menu-padding-x};
+    --#{$prefix-bh}menu-padding-y:                  #{$menu-padding-y};
+    --#{$prefix-bh}menu-min-width:                  #{$menu-min-width};
+    --#{$prefix-bh}menu-max-width:                  #{$menu-max-width};
+    --#{$prefix-bh}menu-spacer:                     #{$menu-spacer};
+    --#{$prefix-bh}menu-item-padding-x:             #{$menu-item-padding-x};
+    --#{$prefix-bh}menu-item-padding-y:             #{$menu-item-padding-y};
+    --#{$prefix-bh}menu-item-height:                #{$menu-item-height};
+    --#{$prefix-bh}menu-item-radius:                #{$menu-item-radius};
+    --#{$prefix-bh}menu-item-label:                 #{$menu-item-label};
+    --#{$prefix-bh}menu-item-background:            #{$menu-item-background};
+    --#{$prefix-bh}menu-item-border:                #{$menu-item-border};
+    --#{$prefix-bh}menu-item-border-width:          #{menu-item-border-width};
+    --#{$prefix-bh}menu-item-gap:                   #{$menu-item-gap};
+    --#{$prefix-bh}menu-item-icon-spacing:          #{$menu-item-icon-spacing};
+    --#{$prefix-bh}menu-item-label-hover:           #{$menu-item-label-hover};
+    --#{$prefix-bh}menu-item-background-hover:      #{$menu-item-background-hover};
+    --#{$prefix-bh}menu-item-border-hover:          #{$menu-item-border-hover};
+    --#{$prefix-bh}menu-item-label-active:          #{$menu-item-label-active};
+    --#{$prefix-bh}menu-item-background-active:     #{$menu-item-background-active};
+    --#{$prefix-bh}menu-item-border-active:         #{$menu-item-border-active};
+    --#{$prefix-bh}menu-item-label-disabled:        #{$menu-item-label-disabled};
+    --#{$prefix-bh}menu-divider-border:             #{$menu-divider-border};
+    --#{$prefix-bh}menu-divider-margin-y:           #{$menu-divider-margin-y};
+    --#{$prefix-bh}menu-section-header:             #{$menu-section-header};
+    --#{$prefix-bh}menu-section-header-padding-x:   #{$menu-section-header-padding-x};
+    --#{$prefix-bh}menu-section-header-padding-y:   #{$menu-section-header-padding-y};
+    // scss-docs-end menu-css-vars
+
+    position: absolute;
+    z-index: var(--#{$prefix}menu-zindex);
+    display: none; // none by default, but block on "open" of the menu
+    flex-direction: column;
+    gap: var(--#{$prefix-bh}menu-item-gap);
+    min-width: var(--#{$prefix-bh}menu-min-width);
+    max-width: var(--#{$prefix-bh}menu-max-width);
+    padding: var(--#{$prefix-bh}menu-padding-y) var(--#{$prefix-bh}menu-padding-x);
+    color: var(--#{$prefix-bh}menu-item-label);
+    background-color: var(--#{$prefix-bh}menu-background);
+    background-clip: padding-box;
+    border: var(--#{$prefix-bh}menu-border-width) solid var(--#{$prefix-bh}menu-border);
+    @include border-radius(var(--#{$prefix-bh}menu-radius));
+    @if($enable-shadows == true or $enable-menu-shadows == true){
+        box-shadow: var(--#{$prefix-bh}menu-shadow);
+    }
+
+    // &:not(.submenu){
+    //     min-width: max(100%, var(--#{$prefix-bh}menu-min-width));
+    // }
+
+    &[data-bs-popper] {
+        top: 100%;
+        left: 0;
+        margin-top: var(--#{$prefix-bh}menu-spacer);
+    }
+}
+
+.menu-body {
+    margin: 0; // Override default margin of ul
+    padding: 0; // Override default padding of ul
+    list-style: none;
+    text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+    @include type($action, "02");
+    display: flex;
+    flex-direction: column;
+    gap: var(--#{$prefix-bh}menu-item-gap);
+}
+
+// Dropdown section headers
+.menu-section-header {
+    display: block;
+    padding: var(--#{$prefix-bh}menu-section-header-padding-y) var(--#{$prefix-bh}menu-section-header-padding-x);
+    margin-bottom: 0; // for use with heading elements
+    @include type($title, "01");
+    color: var(--#{$prefix-bh}menu-section-header);
+}
+
+// Dividers (basically an `<hr>`) within the dropdown
+.menu-divider {
+    height: 0;
+    margin: var(--#{$prefix-bh}menu-divider-margin-y) 0;
+    overflow: hidden;
+    border-top: 1px solid var(--#{$prefix-bh}menu-divider-border);
+    opacity: 1; // Revisit in v6 to de-dupe styles that conflict with <hr> element
+}
+
+// menu-item hover styles
+%menuitem-hover {
+    color: var(--#{$prefix-bh}menu-item-label-hover);
+    text-decoration: if($link-hover-decoration == underline, none, null);
+    border-color: var(--#{$prefix-bh}menu-item-border-hover);
+    @include gradient-bg(var(--#{$prefix-bh}menu-item-background-hover));
+}
+
+.menu-item {
+    display: block;
+    cursor: pointer;
+    width: 100%; // For `<button>`s
+    height: var(--#{$prefix-bh}menu-item-height);
+    padding: var(--#{$prefix-bh}menu-item-padding-y) var(--#{$prefix-bh}menu-item-padding-x);
+    clear: both;
+    @include type($action, "02");
+    color: var(--#{$prefix-bh}menu-item-label);
+    text-align: inherit; // For `<button>`s
+    text-decoration: if($link-decoration == none, null, none);
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    overflow: clip;
+    text-overflow: ellipsis; // truncate text
+    background-color: var(--#{$prefix-bh}menu-item-background); // For `<button>`s
+    border: solid var(--#{$prefix-bh}menu-item-border-width) var(--#{$prefix-bh}menu-item-border); // For `<button>`s
+    @include border-radius(var(--#{$prefix-bh}menu-item-radius, 0));
+    @include transition($menu-item-transition);
+
+    &:hover {
+        @extend %menuitem-hover;
+    }
+
+    &:focus-visible {
+        outline: 0;
+        // Avoid using mixin so we can pass custom focus shadow properly
+        box-shadow: $menu-item-focus;
+        text-decoration: none;
+    } 
+
+    &:active {
+        color: var(--#{$prefix-bh}menu-item-label-active);
+        text-decoration: none;
+        border-color: var(--#{$prefix-bh}menu-item-border-active);
+        @include gradient-bg(var(--#{$prefix-bh}menu-item-background-active));
+    }
+
+    &.disabled,
+    &:disabled {
+        color: var(--#{$prefix-bh}menu-item-label-disabled);
+        pointer-events: none;
+        background-color: transparent;
+        // Remove CSS gradients if they're enabled
+        background-image: if($enable-gradients, none, null);
+    }
+
+    i[class^="fa-"] {
+        text-align: center;
+        width: 1.25em;
+        margin-right: var(--#{$prefix-bh}menu-item-icon-spacing);
+    }
+
+    & .form-check-label {
+        @include type($action, "02");
+        color: inherit;
+    }
+}
+
+.menu-panel.show {
+    display: flex;
+}
+
+// Submenu
+.submenu {
+    @extend .menu-panel;
+    transform: translate(100%, 0);
+    top: 0;
+    right: -2px;
+    list-style-type: none;
+
+    [type="checkbox"],
+    [type="radio"] {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+        pointer-events: none;
+    }
+
+    [type=radio] ~ .menu-item,
+    [type=checkbox] ~ .menu-item {
+        padding-left: $menu-item-padding-x + $menu-itemt-icon-size + $menu-item-icon-spacing;
+
+        &.active,
+        &:active {
+            background-image: escape-svg($menu-item-check-svg);
+            background-repeat: no-repeat;
+            background-position: left $menu-item-padding-x center;
+            background-size: auto $menu-itemt-icon-size;
+        }
+
+        &:active {
+            background-image: escape-svg($menu-item-check-svg-active);
+        }
+    }
+}
+
+.submenu-toggle {
+    padding-right: $menu-item-padding-x + $menu-itemt-icon-size + $menu-item-icon-spacing;
+    background-image: escape-svg($menu-item-selectable-caret-svg);
+    background-repeat: no-repeat;
+    background-position: right $menu-item-padding-x center;
+    background-size: auto $menu-itemt-icon-size;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0.5rem;
+        top: 0;
+        height: 100%;
+        width: 1rem;
+        transform: translate(100%, 0);
+        z-index: 0;
+    }
+}
+
+
+// Hover still opens
+*:has(> .submenu):hover > .submenu,
+*:has(> .submenu) > .submenu:hover {
+    display: flex;
+}
+
+// Keyboard: keep open while focus is anywhere inside the LI (toggle or submenu items)
+*:has(> .submenu):focus-within > .submenu,
+*:has(> .submenu) > .submenu:focus-within {
+    display: flex;
+}
+
+// (Optional) If you later toggle aria-expanded via JS, this supports click-to-open too
+// *:has(> .submenu) > .submenu-toggle[aria-expanded="true"] + .submenu {
+//     display: flex;
+// }
+
+*:has(> .submenu) {
+    position: relative;
+
+    // Keep hover state on menu-item when submenu is open
+    &:hover > .menu-item,
+    &:focus-within > .menu-item {
+        @extend %menuitem-hover;
+    }
+}
+
+// Danger hover
+.menu-item-danger {
+    --#{$prefix-bh}menu-item-label-hover:       #{$menu-item-label-danger};
+    --#{$prefix-bh}menu-item-background-hover:  #{$menu-item-background-danger};
+    --#{$prefix-bh}menu-item-border-hover:      #{$menu-item-border-danger};
+}

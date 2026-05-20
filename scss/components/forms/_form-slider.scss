@@ -1,0 +1,274 @@
+// Slider
+//
+// Style slider inputs the same across browsers. Vendor-specific rules for pseudo
+// elements cannot be mixed. As such, there are no shared styles for focus or
+// active states on prefixed selectors.
+
+.slider-container {
+  --#{$prefix-bh}form-slider-minmax: #{$form-slider-minmax};
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: $form-slider-container-height;
+
+  .form-control {
+    min-width: unset;
+    box-sizing: content-box;
+    max-height: calc($form-input-height - calc($form-input-padding-y * 2) - calc($form-input-border-width * 2));
+  }
+
+  // Remove input step buttons
+  // Chrome, Safari, Edge, Opera
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  // Firefox
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  &:has(.form-slider:disabled:not(.readonly)) {
+    --#{$prefix-bh}form-slider-minmax: #{$form-slider-minmax-disabled};
+  }
+}
+
+.slider-wrapper {
+  --#{$prefix-bh}form-slider-focus-ring: #{$form-slider-handle-focus-box-shadow};
+  --#{$prefix-bh}form-slider-handle-expand: #{$form-slider-handle-expand};
+  --#{$prefix-bh}form-slider-handle-width:   #{$form-slider-handle-width};
+  --#{$prefix-bh}form-slider-handle-height:  #{$form-slider-handle-height};
+  --#{$prefix-bh}form-slider-track-background: #{$form-slider-track-background};
+  --#{$prefix-bh}form-slider-handle-background: #{$form-slider-handle-background};
+  --#{$prefix-bh}form-slider-filled-background: #{$form-slider-filled-background};
+
+  width: $form-slider-track-width;
+  position: relative;
+  background-color: var(--#{$prefix-bh}form-slider-track-background);
+  border-radius: $form-slider-track-border-radius;
+  z-index: 0;
+}
+
+.form-slider {
+  width: $form-slider-track-width;
+  height: $form-slider-track-height;
+  padding: 0; // Need to reset padding
+  appearance: none;
+  background-color: transparent;
+  border-radius: $form-slider-track-border-radius;
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  // Filled track effect
+  // background-image: linear-gradient(to right, var(--#{$prefix-bh}form-slider-filled-background) 0%, var(--#{$prefix-bh}form-slider-filled-background) 50%, transparent 50%, transparent 100%);
+
+  &.is-invalid {
+    --#{$prefix-bh}form-slider-filled-background: #{$form-slider-filled-background-error};
+    --#{$prefix-bh}form-slider-handle-background: #{$form-slider-handle-background-error};
+    --#{$prefix-bh}form-slider-focus-ring: #{$form-slider-handle-focus-box-shadow-error};
+    --#{$prefix-bh}form-slider-handle-expand: #{$form-slider-handle-expand-error};
+  }
+
+  &:hover {
+    $form-slider-focus-ring-color: #{$form-slider-handle-background};
+
+    &::-webkit-slider-thumb {
+      box-shadow: var(--#{$prefix-bh}form-slider-handle-expand);
+    }
+
+    &::-moz-range-thumb {
+      box-shadow: var(--#{$prefix-bh}form-slider-handle-expand);
+    }
+  }
+
+  &:focus {
+    outline: 0;
+
+    // Pseudo-elements must be split across multiple rulesets to have an effect.
+    // No box-shadow() mixin for focus accessibility.
+    &::-webkit-slider-thumb {
+      box-shadow: var(--#{$prefix-bh}form-slider-focus-ring);
+      outline: 1px solid white;
+    }
+
+    &::-moz-range-thumb {
+      box-shadow: var(--#{$prefix-bh}form-slider-focus-ring);
+      outline: 1px solid white;
+    }
+  }
+
+  &::-moz-focus-outer {
+    border: 0;
+  }
+
+  &::-webkit-slider-thumb {
+    width: var(--#{$prefix-bh}form-slider-handle-width);
+    height: var(--#{$prefix-bh}form-slider-handle-height);
+    margin-top: calc(( #{$form-slider-track-height} - var(--#{$prefix-bh}form-slider-handle-height) ) * 0.5); // Webkit specific
+    appearance: none;
+    @include gradient-bg(var(--#{$prefix-bh}form-slider-handle-background));
+    border: $form-slider-handle-border;
+    @include border-radius($form-slider-handle-border-radius);
+    // @include box-shadow($form-slider-handle-box-shadow);
+    @include transition($form-slider-handle-transition);
+    anchor-name: --handle;
+    view-timeline: --handle-view inline;
+
+    &:active {
+      // @include gradient-bg($form-slider-handle-active-bg);
+    }
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: $form-slider-track-width;
+    height: $form-slider-track-height;
+    color: transparent; // Why?
+    cursor: $form-slider-track-cursor;
+    // background-color: $form-slider-track-background; // Now on slider-wrapper
+    border: none;
+    @include border-radius($form-slider-track-border-radius);
+    // @include box-shadow($form-slider-track-box-shadow);
+  }
+
+  &::-moz-range-thumb {
+    width: $form-slider-handle-width;
+    height: $form-slider-handle-height;
+    appearance: none;
+    @include gradient-bg(var(--#{$prefix-bh}form-slider-handle-background));
+    border: $form-slider-handle-border;
+    @include border-radius($form-slider-handle-border-radius);
+    // @include box-shadow($form-slider-handle-box-shadow);
+    @include transition($form-slider-handle-transition);
+
+    &:active {
+      // @include gradient-bg($form-slider-handle-active-bg);
+    }
+  }
+
+  &::-moz-range-track {
+    width: $form-slider-track-width;
+    height: $form-slider-track-height;
+    color: transparent;
+    cursor: $form-slider-track-cursor;
+    background-color: $form-slider-track-background;
+    border: none;
+    @include border-radius($form-slider-track-border-radius);
+    // @include box-shadow($form-slider-track-box-shadow);
+  }
+
+  &:disabled {
+    --#{$prefix-bh}form-slider-filled-background: #{$form-slider-filled-background-disabled};
+    --#{$prefix-bh}form-slider-handle-background: #{$form-slider-handle-background-disabled};
+    pointer-events: none;
+
+    &::-webkit-slider-runnable-track {
+      @include gradient-bg($form-slider-track-background-disabled);
+    }
+
+    &::-moz-range-track {
+      @include gradient-bg($form-slider-track-background-disabled);
+    }
+  }
+
+  &.readonly {
+    &:disabled {
+      --#{$prefix-bh}form-slider-filled-background: #{$form-slider-filled-background-readonly};
+
+      &::-webkit-slider-thumb {
+        display: none;
+      }
+
+      &::-moz-range-thumb {
+        display: none;
+      }
+    }
+  }
+}
+
+.minmax {
+  color: var(--#{$prefix-bh}form-slider-minmax);
+  @include type($body, "01");
+}
+
+.ticks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $form-slider-tick-padding;
+    z-index: 0;
+}
+
+.ticks .tick {
+    display: block;
+    background-color: $form-slider-tick;
+    border-radius: $form-slider-tick-radius;
+    height: $form-slider-tick-height;
+    width: $form-slider-tick-width;
+}
+
+output {
+  position-anchor: --handle;
+  position: absolute;
+  position-area: center;
+  inset: 0 -4em;
+  padding-block: .5em;
+  animation: range linear both;
+  animation-timeline: --handle-view;
+  animation-range: entry 100% exit 0%;
+  display: block;
+  opacity: 0;
+  @include type($support, "01");
+  padding: $form-slider-output-padding-y $form-slider-output-padding-x;
+  color: $form-slider-output-label;
+  text-align: center;
+  background-color: $form-slider-output-background;
+  border: $form-slider-output-border-width solid $form-slider-output-border;
+  @include border-radius($form-slider-output-radius);
+  box-shadow: $form-slider-output-shadow;
+  margin-bottom: $form-slider-outcome-margin;
+  z-index: $form-slider-output-zindex;
+  transition: $form-slider-output-transition;
+  transform: translate(0, calc(calc(#{$form-slider-handle-height} + #{$form-slider-shadow-width}) * -1 - 0.5em));
+}
+
+@supports not (anchor-name: ---) {
+  output {
+    display: none;
+  }
+}
+
+.slider-container:has(.form-slider:focus),
+.slider-container:has(.form-slider:hover) {
+  output {
+    opacity: $form-slider-output-opacity;
+  }
+}
+
+// Focus state for Number input - copied from form-control.scss
+.response.slider-input:has(.form-slider:focus) {
+  .form-control {
+    color: var(--#{$prefix-bh}form-input-text);
+    background-color: var(--#{$prefix-bh}form-input-background);
+    border-color: var(--#{$prefix-bh}form-input-border-focus);
+    outline: 0;
+    @if $enable-shadows {
+      @include box-shadow($input-box-shadow, $input-focus-box-shadow);
+    } @else {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        box-shadow: var(--#{$prefix-bh}form-input-focus-ring);
+    }
+
+    &.is-invalid {
+      border-color: #{$form-validation-error};
+      box-shadow: 0 0 0 1px #{$form-validation-error};
+    }
+  }
+}

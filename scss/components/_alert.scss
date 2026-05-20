@@ -1,0 +1,111 @@
+//
+// Base styles
+//
+
+.alert {
+    // scss-docs-start alert-css-vars
+    --#{$prefix-bh}alert-padding-x: #{$alert-padding-x};
+    --#{$prefix-bh}alert-padding-y: #{$alert-padding-y};
+    --#{$prefix-bh}alert-content-padding-x: #{$alert-content-padding-x};
+    --#{$prefix-bh}alert-content-padding-y: #{$alert-content-padding-y};
+    --#{$prefix-bh}alert-content-gap: #{$alert-content-gap};
+    --#{$prefix-bh}alert-radius: #{$alert-radius};
+    --#{$prefix-bh}alert-border: #{$transparent};
+    --#{$prefix-bh}alert-border-width: #{$alert-border-width};
+    --#{$prefix-bh}alert-background: #{$transparent};
+    --#{$prefix-bh}alert-message: inherit;
+    --#{$prefix-bh}alert-note: inherit;
+    --#{$prefix-bh}alert-note-sm: #{$alert-note-sm};
+    --#{$prefix-bh}alert-icon: var(--#{$prefix-bh}alert-message);
+    --#{$prefix-bh}alert-link: var(--#{$prefix-bh}alert-message);
+    --#{$prefix-bh}alert-contextbar-margin-top: #{$alert-contextbar-margin-top};
+    --#{$prefix-bh}alert-contextbar-margin-bottom: #{$alert-contextbar-margin-bottom};
+    // scss-docs-end alert-css-vars
+
+    position: relative;
+    padding: var(--#{$prefix-bh}alert-padding-y) var(--#{$prefix-bh}alert-padding-x);
+    margin: 0;
+    @include border-radius(var(--#{$prefix-bh}alert-radius));
+    color: var(--#{$prefix-bh}alert-note);
+    background-color: var(--#{$prefix-bh}alert-background);
+    border: none;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+} 
+
+.alert::before {
+  content: '';
+  width: var(--#{$prefix-bh}alert-border-width);
+  height: 100%;
+  background-color: var(--#{$prefix-bh}alert-border);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.alert-content {
+  display: flex;
+  gap: var(--#{$prefix-bh}alert-content-gap);
+  padding: var(--#{$prefix-bh}alert-content-padding-y) var(--#{$prefix-bh}alert-content-padding-x);
+  width: 100%;
+}
+
+.alert-message * {
+  color: var(--#{$prefix-bh}alert-message);
+  @include type($title, "01");
+}
+
+.alert-icon {
+  font-size: 1rem;
+  margin: $spacer-02 0;
+  color: var(--#{$prefix-bh}alert-icon);
+
+  & i {
+    display: block;
+  }
+}
+
+.alert-contextbar {
+  margin: var(--#{$prefix-bh}alert-contextbar-margin-top) 0 var(--#{$prefix-bh}alert-contextbar-margin-bottom);
+}
+
+// Alert heading // REMOVED //
+
+
+  // Provide class for links that match alerts
+.alert-link {
+  color: var(--#{$prefix-bh}alert-link);
+}
+
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.alert-dismissible {
+  padding-right: $alert-dismissible-padding-r;
+
+  // Adjust close link position
+  .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: $stretched-link-z-index + 1;
+    padding: $alert-padding-y * 1.25 $alert-padding-x;
+  }
+}
+
+
+// scss-docs-start alert-modifiers
+// Generate contextual modifier classes for colorizing the alert
+@each $state in map-keys($feedback-colours) {
+  .alert-#{$state} {
+    --#{$prefix-bh}alert-note: var(--#{$prefix-bh}feedback-body-#{$state});
+    --#{$prefix-bh}alert-background: var(--#{$prefix-bh}feedback-overlay-#{$state});
+    --#{$prefix-bh}alert-border: var(--#{$prefix-bh}feedback-border-#{$state});
+    --#{$prefix-bh}alert-message: var(--#{$prefix-bh}feedback-message-#{$state});
+  }
+}
+// scss-docs-end alert-modifiers
+

@@ -1,0 +1,28 @@
+//
+// Input wrapper
+//
+
+// inputs that need a supportive icon in the invalid-feedback
+$inputs: (".response-btn-input", ".select-input", ".check-input", "textarea", ".dropdown-input", ".form-slider-output");
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: $form-input-spacing;
+    width: 100%;
+
+    @each $input in $inputs{
+        @if #{$input} == ".select-input" {
+            // Only apply to first select in a select-input group
+            &:has(#{$input} > .form-select:first-child) .invalid-feedback::before {
+                display: block;
+            }
+        } @else {
+            &:has(#{$input}) .invalid-feedback::before {
+                display: block;
+            }
+        }
+
+        
+    }
+}

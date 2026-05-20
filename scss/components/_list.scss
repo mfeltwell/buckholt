@@ -1,0 +1,53 @@
+//
+// Base styles
+//
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: $list-gap;
+    margin: 0;
+    max-width: var(--#{$prefix-bh}text-max-width);
+    color: $list-item;
+
+    &:not(.list-unstyled){
+        padding-left: $list-padding-start;
+    }
+
+    &:has(.list-icon) {
+        padding: 0;
+        list-style: none;
+    
+        .list-item {
+            display: flex;
+            align-items: center;
+            gap: $list-item-spacing;
+        }
+    }
+
+    & ul,
+    & ol {
+        @extend .list;
+        gap: $spacer-02;
+        margin-top: $margin-01;
+    }
+}
+
+.list-icon {
+    display: inline-block;
+}
+
+.list-icon i {
+    text-align: center;
+    width: 1.25em;
+}
+
+.list-heading {
+    list-style: none;
+    @include type($title, '01');
+    color: $list-heading;
+
+    &:not(.list-unstyled &, .list:has(.list-icon) &) {
+        margin-left: -1*$list-padding-start;
+    }
+}

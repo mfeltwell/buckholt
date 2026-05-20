@@ -1,0 +1,201 @@
+// Disable animation if transitions are disabled
+
+// scss-docs-start progress-keyframes
+@if $enable-transitions {
+  @keyframes progress-bar-stripes {
+    0% { background-position-x: $progress-height; }
+  }
+}
+// scss-docs-end progress-keyframes
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: $progress-container-spacing;
+  color: $progress-note;
+  @include type($body, '01');
+
+  &:has(.is-valid),
+  &:has(.is-invalid) {
+    .progress-note {
+      display: none;
+    }
+  }
+}
+
+.progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $progress-label-gap;
+
+  &:has(~ .is-valid),
+  &:has(~ .is-invalid) {
+    padding-right: $progress-label-gap + $progress-icon-size;
+    background-image: escape-svg(var(--#{$prefix-bh}progress-status-icon));
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto $progress-icon-size;
+  }
+
+  &:has(~ .is-valid) {
+    background-image: escape-svg($progress-status-icon-success-svg);
+  }
+
+  &:has(~ .is-invalid) {
+    background-image: escape-svg($progress-status-icon-error-svg);
+  }
+}
+
+.progress-label {
+  @include type($label, '02');
+  color: $progress-label;
+}
+
+.progress,
+.progress-stacked {
+  // scss-docs-start progress-css-vars
+  --#{$prefix-bh}progress-height:          #{$progress-height};
+  --#{$prefix-bh}progress-background:      #{$progress-background};
+  --#{$prefix-bh}progress-border:          #{$progress-border};
+  --#{$prefix-bh}progress-border-width:    #{$progress-border-width};
+  --#{$prefix-bh}progress-border-radius:   #{$progress-border-radius};
+  --#{$prefix-bh}progress-box-shadow:      #{$progress-box-shadow};
+  --#{$prefix-bh}progress-bar-color:       #{$progress-bar-color};
+  --#{$prefix-bh}progress-bar-background:  #{$progress-bar-background};
+  --#{$prefix-bh}progress-bar-transition:  #{$progress-bar-transition};
+  // scss-docs-end progress-css-vars
+
+  display: flex;
+  height: var(--#{$prefix-bh}progress-height);
+  min-width: 22rem;
+  overflow: hidden; // force rounded corners by cropping it
+  background-color: var(--#{$prefix-bh}progress-background);
+  @include border-radius(var(--#{$prefix-bh}progress-border-radius));
+  @include box-shadow(var(--#{$prefix-bh}progress-box-shadow));
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: var(--#{$prefix-bh}progress-border-width) solid var(--#{$prefix-bh}progress-border);
+    @include border-radius(var(--#{$prefix-bh}progress-border-radius));
+  }
+
+  &.is-invalid {
+    --#{$prefix-bh}progress-background:      #{$progress-background-error};
+    --#{$prefix-bh}progress-border:          #{$progress-border-error};
+    --#{$prefix-bh}progress-bar-background:  #{$progress-bar-background-error};
+
+    ~ .progress-helper {
+      display: none;
+    }
+
+    ~ .invalid-feedback {
+      display: flex;
+    }
+
+    .progress-bar {
+      width: 100% !important;
+    }
+  }
+
+    &.is-valid {
+    --#{$prefix-bh}progress-background:      #{$progress-background-success};
+    --#{$prefix-bh}progress-border:          #{$progress-border-success};
+    --#{$prefix-bh}progress-bar-background:  #{$progress-bar-background-success};
+
+    .progress-bar {
+      width: 100% !important;
+    }
+
+  }
+
+}
+
+// Small size
+.progress-sm {
+  --#{$prefix-bh}progress-height: #{$progress-height-sm};
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--#{$prefix-bh}progress-bar-color);
+  text-align: center;
+  white-space: nowrap;
+  background-color: var(--#{$prefix-bh}progress-bar-background);
+  @include transition(var(--#{$prefix-bh}progress-bar-transition));
+  z-index: 1;
+}
+
+.progress-bar-striped {
+  @include gradient-striped();
+  background-size: var(--#{$prefix-bh}progress-height) var(--#{$prefix-bh}progress-height);
+}
+
+.progress-stacked > .progress {
+  overflow: visible;
+}
+
+.progress-stacked > .progress > .progress-bar {
+  width: 100%;
+}
+
+@if $enable-transitions {
+  .progress-bar-animated {
+    animation: $progress-bar-animation-timing progress-bar-stripes;
+
+    @if $enable-reduced-motion {
+      @media (prefers-reduced-motion: reduce) {
+        animation: none;
+      }
+    }
+  }
+}
+
+.progress-helper {
+  @include type($support, '01');
+  color: $progress-helper;
+}
+
+// Indeterminate progress bar
+.progress-bar-indeterminate {
+  width: 100%;
+  animation: indeterminateAnimation calc(1s * var(--indeterminate-speed, 1))
+    infinite var(--indeterminate-easing, linear);
+  transform-origin: var(--indeterminate-start, 0%) 50%;
+  will-change: transform;
+}
+
+.progress-ease {
+  --indeterminate-easing: ease-in-out;
+}
+
+@keyframes indeterminateAnimation {
+  0% {
+    transform: translateX(0) scaleX(0);
+  }
+  40% {
+    transform: translateX(0) scaleX(0.4);
+  }
+  100% {
+    transform: translateX(var(--indeterminate-end, 100%)) scaleX(0.5);
+  }
+}
+
+// Inactive progress bar
+.progress-inactive {
+  --#{$prefix-bh}progress-background:      #{$progress-background-inactive};
+  --#{$prefix-bh}progress-border:          #{$progress-border-inactive};
+  --#{$prefix-bh}progress-bar-background:  #{$progress-bar-background-inactive};
+
+  .progress-bar {
+    width: 100% !important;
+  }
+}

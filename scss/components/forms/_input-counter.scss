@@ -1,0 +1,25 @@
+//
+// Input counter
+//
+
+.response .counter {
+    position: absolute;
+    right: 0;
+    bottom: -1*$form-input-spacing;
+    transform: translateY(100%);
+    @include type($support, "01");
+    color: $form-counter;
+
+    &.counter-warning {
+        color: $form-counter-warning;
+    }
+}
+
+.response:has(.counter) ~ * {
+    padding-right: $form-counter-spacing;
+}
+
+.response:has(.form-control:disabled) .counter,
+.response:has(.form-control[readonly]) .counter {
+    display: none;
+}

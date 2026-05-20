@@ -1,0 +1,35 @@
+$utilities: map-merge(
+    $utilities,
+    (
+        "color": (
+            property: color,
+            class: text,
+            local-vars: (
+                "text-opacity": 1
+            ),
+            values: map-merge(
+                $utilities-text-colors,
+                (   
+                    "light": var(--#{$prefix-bh}white),
+                    "success": var(--#{$prefix-bh}valid-60),
+                    "error": var(--#{$prefix-bh}danger-60),
+                    "reset": inherit,
+                )
+            )
+        ),
+        // scss-docs-start utils-shadow
+        "shadow": (
+            property: box-shadow,
+            class: shadow,
+            values: (
+            xs: var(--#{$prefix-bh}shadow-xs),
+            sm: var(--#{$prefix-bh}shadow-sm),
+            md: var(--#{$prefix-bh}shadow-md),
+            lg: var(--#{$prefix-bh}shadow-lg),
+            xl: var(--#{$prefix-bh}shadow-xl),
+            none: none,
+            )
+        ),
+        // scss-docs-end utils-shadow
+    )
+);
