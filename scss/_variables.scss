@@ -1574,7 +1574,7 @@ $icon-block-radius-xxl:               $border-radius-md !default;
 
 // Text block ___________________________
 $text-block-gap:            $margin-03 !default;
-$eyebrow:                   $text-tertiary !default;
+$eyebrow:                   var(--#{$prefix-bh}text-tertiary) !default;
 
 
 // Menu _________________________________
