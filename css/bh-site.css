@@ -6845,7 +6845,7 @@ fieldset:disabled .carousel-control-next {
 
 .text-block {
   --fa-width: auto;
-  --eyebrow: var(--text-error);
+  --eyebrow: var(--text-tertiary);
 }
 .text-block .icon-block {
   margin-bottom: 1rem;
