@@ -2,21 +2,21 @@
 
 // Neutral ______________________________
 // Base __________
-$white:     #ffffff !default;
-$black:     #1a1a1a !default;
-$transparent: transparent !default;
+$white:     #ffffff;
+$black:     #1a1a1a;
+$transparent: transparent;
 
 // primary ______________________________
-$primary-10:        #E0E9FF !default;
-$primary-20:        #C7D7FF !default;
-$primary-30:        #A8C1FF !default;
-$primary-40:        #7FA3F7 !default;
-$primary-50:        #5F88EA !default;
-$primary-60:        #3F6FDD !default;
-$primary-70:        #2557D0 !default;
-$primary-80:        #0F40C5 !default;
-$primary-90:        #0A2E99 !default;
-$primary-100:       #02091D !default;
+$primary-10:        #E0E9FF;
+$primary-20:        #C7D7FF;
+$primary-30:        #A8C1FF;
+$primary-40:        #7FA3F7;
+$primary-50:        #5F88EA;
+$primary-60:        #3F6FDD;
+$primary-70:        #2557D0;
+$primary-80:        #0F40C5;
+$primary-90:        #0A2E99;
+$primary-100:       #02091D;
 
 $primary-palette-dark: (
   "10":     $primary-10,
@@ -36,16 +36,16 @@ $primary-palette-vars: generate-css-var-map("primary", $primary-palette) !defaul
 
 // System _______________________________
 // danger ___________
-$danger-10:         #FFF0F0 !default;
-$danger-20:         #FFD4D4 !default;
-$danger-30:         #FFB0AF !default;
-$danger-40:         #FF8886 !default;
-$danger-50:         #FF6663 !default;
-$danger-60:         #FF4442 !default;
-$danger-70:         #E62F2D !default;
-$danger-80:         #B81F1D !default;
-$danger-90:         #7D1514 !default;
-$danger-100:        #2B0909 !default;
+$danger-10:         #FFF0F0;
+$danger-20:         #FFD4D4;
+$danger-30:         #FFB0AF;
+$danger-40:         #FF8886;
+$danger-50:         #FF6663;
+$danger-60:         #FF4442;
+$danger-70:         #E62F2D;
+$danger-80:         #B81F1D;
+$danger-90:         #7D1514;
+$danger-100:        #2B0909;
 
 $danger-palette-dark: (
   "10":     $danger-10,
@@ -61,16 +61,16 @@ $danger-palette-dark: (
 ) !default;
 
 // caution ________
-$caution-10:      #FFF4E8 !default;
-$caution-20:      #FFE0BD !default;
-$caution-30:      #FFC785 !default;
-$caution-40:      #FFAE52 !default;
-$caution-50:      #FF9A24 !default;
-$caution-60:      #FF8901 !default;
-$caution-70:      #DB7200 !default;
-$caution-80:      #A85700 !default;
-$caution-90:      #733C00 !default;
-$caution-100:     #261300 !default;
+$caution-10:      #FFF4E8;
+$caution-20:      #FFE0BD;
+$caution-30:      #FFC785;
+$caution-40:      #FFAE52;
+$caution-50:      #FF9A24;
+$caution-60:      #FF8901;
+$caution-70:      #DB7200;
+$caution-80:      #A85700;
+$caution-90:      #733C00;
+$caution-100:     #261300;
 
 $caution-palette-dark: (
   "10":     $caution-10,
@@ -86,16 +86,16 @@ $caution-palette-dark: (
 ) !default;
 
 // valid _________
-$valid-10:       #E8FFF4 !default;
-$valid-20:       #C7FFE3 !default;
-$valid-30:       #98F5C3 !default;
-$valid-40:       #63E69E !default;
-$valid-50:       #2FD57F !default;
-$valid-60:       #00C56B !default;
-$valid-70:       #00A85B !default;
-$valid-80:       #007D45 !default;
-$valid-90:       #035C33 !default;
-$valid-100:      #021F12 !default;
+$valid-10:       #E8FFF4;
+$valid-20:       #C7FFE3;
+$valid-30:       #98F5C3;
+$valid-40:       #63E69E;
+$valid-50:       #2FD57F;
+$valid-60:       #00C56B;
+$valid-70:       #00A85B;
+$valid-80:       #007D45;
+$valid-90:       #035C33;
+$valid-100:      #021F12;
 
 $valid-palette-dark: (
   "10":     $valid-10,
@@ -111,16 +111,16 @@ $valid-palette-dark: (
 ) !default;
 
 // Info ______________________________
-$info-10:        #E0E9FF !default;
-$info-20:        #C7D7FF !default;
-$info-30:        #A8C1FF !default;
-$info-40:        #7FA3F7 !default;
-$info-50:        #5F88EA !default;
-$info-60:        #3F6FDD !default;
-$info-70:        #2557D0 !default;
-$info-80:        #0F40C5 !default;
-$info-90:        #0A2E99 !default;
-$info-100:       #02091D !default;
+$info-10:        #E0E9FF;
+$info-20:        #C7D7FF;
+$info-30:        #A8C1FF;
+$info-40:        #7FA3F7;
+$info-50:        #5F88EA;
+$info-60:        #3F6FDD;
+$info-70:        #2557D0;
+$info-80:        #0F40C5;
+$info-90:        #0A2E99;
+$info-100:       #02091D;
 
 $info-palette-dark: (
   "10":     $info-10,
@@ -137,11 +137,11 @@ $info-palette-dark: (
 
 // Prime colours ________________________
 
-$prime-primary:     $primary-80 !default;
-$prime-danger:      $danger-60 !default;
-$prime-caution:     $caution-60 !default;
-$prime-valid:       $valid-60 !default;
-$prime-info:        $info-80 !default;
+$prime-primary:     $primary-80;
+$prime-danger:      $danger-60;
+$prime-caution:     $caution-60;
+$prime-valid:       $valid-60;
+$prime-info:        $info-80;
 
 $prime-colors-dark: (
   "white":        $white,
@@ -153,16 +153,16 @@ $prime-colors-dark: (
 ) !default;
 
 // White tint ____
-$white-tint-10:     rgba($white, 0.04) !default;
-$white-tint-20:     rgba($white, 0.08) !default;
-$white-tint-30:     rgba($white, 0.13) !default;
-$white-tint-40:     rgba($white, 0.19) !default;
-$white-tint-50:     rgba($white, 0.27) !default;
-$white-tint-60:     rgba($white, 0.39) !default;
-$white-tint-70:     rgba($white, 0.53) !default;
-$white-tint-80:     rgba($white, 0.68) !default;
-$white-tint-90:     rgba($white, 0.84) !default;
-$white-tint-100:    rgba($white, 0.97) !default;
+$white-tint-10:     rgba($white, 0.04);
+$white-tint-20:     rgba($white, 0.08);
+$white-tint-30:     rgba($white, 0.13);
+$white-tint-40:     rgba($white, 0.19);
+$white-tint-50:     rgba($white, 0.27);
+$white-tint-60:     rgba($white, 0.39);
+$white-tint-70:     rgba($white, 0.53);
+$white-tint-80:     rgba($white, 0.68);
+$white-tint-90:     rgba($white, 0.84);
+$white-tint-100:    rgba($white, 0.97);
 
 $white-tint-palette-dark: (
   "10":     $white-tint-10,
@@ -178,12 +178,12 @@ $white-tint-palette-dark: (
 ) !default;
 
 // primary tint _____
-$primary-tint-10:     rgba($prime-primary, 0.1) !default;
-$primary-tint-20:     rgba($prime-primary, 0.18) !default;
-$primary-tint-30:     rgba($prime-primary, 0.28) !default;
-$primary-tint-40:     rgba($prime-primary, 0.4) !default;
-$primary-tint-50:     rgba($prime-primary, 0.55) !default;
-$primary-tint-60:     rgba($prime-primary, 0.75) !default;
+$primary-tint-10:     rgba($prime-primary, 0.1);
+$primary-tint-20:     rgba($prime-primary, 0.18);
+$primary-tint-30:     rgba($prime-primary, 0.28);
+$primary-tint-40:     rgba($prime-primary, 0.4);
+$primary-tint-50:     rgba($prime-primary, 0.55);
+$primary-tint-60:     rgba($prime-primary, 0.75);
 
 $primary-tint-palette-dark: (
   "10":     $primary-tint-10,
@@ -195,12 +195,12 @@ $primary-tint-palette-dark: (
 ) !default;
 
 // danger tint ______
-$danger-tint-10:     rgba($prime-danger, 0.14) !default;
-$danger-tint-20:     rgba($prime-danger, 0.22) !default;
-$danger-tint-30:     rgba($prime-danger, 0.32) !default;
-$danger-tint-40:     rgba($prime-danger, 0.46) !default;
-$danger-tint-50:     rgba($prime-danger, 0.62) !default;
-$danger-tint-60:     rgba($prime-danger, 0.80) !default;
+$danger-tint-10:     rgba($prime-danger, 0.14);
+$danger-tint-20:     rgba($prime-danger, 0.22);
+$danger-tint-30:     rgba($prime-danger, 0.32);
+$danger-tint-40:     rgba($prime-danger, 0.46);
+$danger-tint-50:     rgba($prime-danger, 0.62);
+$danger-tint-60:     rgba($prime-danger, 0.80);
 
 $danger-tint-palette-dark: (
   "10":     $danger-tint-10,
@@ -212,12 +212,12 @@ $danger-tint-palette-dark: (
 ) !default;
 
 // Caution tint ___
-$caution-tint-10:     rgba($prime-caution, 0.14) !default;
-$caution-tint-20:     rgba($prime-caution, 0.22) !default;
-$caution-tint-30:     rgba($prime-caution, 0.32) !default;
-$caution-tint-40:     rgba($prime-caution, 0.46) !default;
-$caution-tint-50:     rgba($prime-caution, 0.62) !default;
-$caution-tint-60:     rgba($prime-caution, 0.80) !default;
+$caution-tint-10:     rgba($prime-caution, 0.14);
+$caution-tint-20:     rgba($prime-caution, 0.22);
+$caution-tint-30:     rgba($prime-caution, 0.32);
+$caution-tint-40:     rgba($prime-caution, 0.46);
+$caution-tint-50:     rgba($prime-caution, 0.62);
+$caution-tint-60:     rgba($prime-caution, 0.80);
 
 $caution-tint-palette-dark: (
   "10":     $caution-tint-10,
@@ -229,12 +229,12 @@ $caution-tint-palette-dark: (
 ) !default;
 
 // valid tint ____
-$valid-tint-10:     rgba($prime-valid, 0.14) !default;
-$valid-tint-20:     rgba($prime-valid, 0.22) !default;
-$valid-tint-30:     rgba($prime-valid, 0.32) !default;
-$valid-tint-40:     rgba($prime-valid, 0.46) !default;
-$valid-tint-50:     rgba($prime-valid, 0.62) !default;
-$valid-tint-60:     rgba($prime-valid, 0.80) !default;
+$valid-tint-10:     rgba($prime-valid, 0.14);
+$valid-tint-20:     rgba($prime-valid, 0.22);
+$valid-tint-30:     rgba($prime-valid, 0.32);
+$valid-tint-40:     rgba($prime-valid, 0.46);
+$valid-tint-50:     rgba($prime-valid, 0.62);
+$valid-tint-60:     rgba($prime-valid, 0.80);
 
 $valid-tint-palette-dark: (
   "10":     $valid-tint-10,
@@ -246,12 +246,12 @@ $valid-tint-palette-dark: (
 ) !default;
 
 // info tint _____
-$info-tint-10:     rgba($prime-info, 0.1) !default;
-$info-tint-20:     rgba($prime-info, 0.18) !default;
-$info-tint-30:     rgba($prime-info, 0.28) !default;
-$info-tint-40:     rgba($prime-info, 0.4) !default;
-$info-tint-50:     rgba($prime-info, 0.55) !default;
-$info-tint-60:     rgba($prime-info, 0.75) !default;
+$info-tint-10:     rgba($prime-info, 0.1);
+$info-tint-20:     rgba($prime-info, 0.18);
+$info-tint-30:     rgba($prime-info, 0.28);
+$info-tint-40:     rgba($prime-info, 0.4);
+$info-tint-50:     rgba($prime-info, 0.55);
+$info-tint-60:     rgba($prime-info, 0.75);
 
 $info-tint-palette-dark: (
   "10":     $info-tint-10,
@@ -320,9 +320,9 @@ $ui-border-colors-dark: (
 
 
 // State colours ________________________
-$focus-01:    $info-60 !default;
-$success-01:  $valid-60 !default;
-$error-01:    $danger-60 !default;
+$focus-01:    $info-60;
+$success-01:  $valid-60;
+$error-01:    $danger-60;
 
 $state-colours-dark: (
   "focus-01":    $focus-01,
