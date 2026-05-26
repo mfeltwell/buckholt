@@ -32,6 +32,14 @@
     display: block;
 }
 
+.text-block-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 
 // Component spacing for paragraph and lists inside text block
 .text-block p ~ .list {

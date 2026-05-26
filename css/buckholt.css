@@ -6870,6 +6870,14 @@ fieldset:disabled .carousel-control-next {
   display: block;
 }
 
+.text-block-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .text-block p ~ .list, .text-block .list p ~ ul, .list .text-block p ~ ul, .text-block .list p ~ ol, .list .text-block p ~ ol {
   margin-top: 1rem;
 }
