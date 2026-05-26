@@ -985,7 +985,7 @@ $form-label-margin-bottom:    0 !default;
 $form-label:                  var(--#{$prefix-bh}text-secondary) !default;
 
 $form-helper-margin-top:      0 !default;
-$form-helper:                 var(--text-muted) !default;
+$form-helper:                 var(--#{$prefix-bh}text-muted) !default;
 
 $form-input-padding-y:        $padding-03 !default;
 $form-input-padding-x:        $padding-05 !default;
@@ -1574,7 +1574,7 @@ $icon-block-radius-xxl:               $border-radius-md !default;
 
 // Text block ___________________________
 $text-block-gap:            $margin-03 !default;
-$eyebrow:                   var(--#{$prefix-bh}text-tertiary) !default;
+$eyebrow:                   var(--#{$prefix-bh}text-error) !default;
 
 
 // Menu _________________________________
