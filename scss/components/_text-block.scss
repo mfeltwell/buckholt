@@ -54,3 +54,10 @@
     margin-top: $paragraph-margin-top;
     margin-bottom: $paragraph-margin-bottom;
 }
+
+
+// Utility class to remove max-width from text elements
+.no-text-max-width, 
+.no-text-max-width * {
+    --#{$prefix-bh}text-max-width: none;
+}

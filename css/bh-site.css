@@ -6891,6 +6891,11 @@ fieldset:disabled .carousel-control-next {
   margin-bottom: 0;
 }
 
+.no-text-max-width,
+.no-text-max-width * {
+  --text-max-width: none;
+}
+
 [class$=-set],
 [class*="-set "] {
   --set-gap: 0.5rem;
