@@ -322,6 +322,7 @@
   --border-radius-lg: 1rem;
   --border-radius-xl: 1.5rem;
   --border-radius-full: 2rem;
+  --border-radius-round: 100%;
   --form-validation-error: var(--error-01);
   --form-input-border-error: var(--error-01);
   --page-body-spacing-y: 4rem;
