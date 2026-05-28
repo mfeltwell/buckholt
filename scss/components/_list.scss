@@ -47,7 +47,7 @@
     @include type($title, '01');
     color: $list-heading;
 
-    &:not(.list-unstyled &, .list:has(.list-icon) &) {
+    &:not(.list-unstyled &, .list:has(.list-icon) &, .link-set &) {
         margin-left: -1*$list-padding-start;
     }
 }

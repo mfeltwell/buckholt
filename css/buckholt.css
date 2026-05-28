@@ -7509,7 +7509,7 @@ fieldset:disabled .carousel-control-next {
   line-height: 1.5rem;
   color: var(--text-secondary);
 }
-.list-heading:not(.list-unstyled .list-heading, .list:has(.list-icon) .list-heading, .list ul:has(.list-icon) .list-heading, .list ol:has(.list-icon) .list-heading) {
+.list-heading:not(.list-unstyled .list-heading, .list:has(.list-icon) .list-heading, .list ul:has(.list-icon) .list-heading, .list ol:has(.list-icon) .list-heading, .link-set .list-heading) {
   margin-left: -1.75rem;
 }
 
