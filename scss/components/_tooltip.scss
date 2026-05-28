@@ -123,7 +123,7 @@
 }
 
 // Definition tooltip trigger styling 
-a[data-bs-toggle="tooltip"] {
+a[data-bs-toggle="tooltip"]:not(.btn) {
     text-decoration-style: dotted;
     text-underline-offset: 2px;
     color: inherit;

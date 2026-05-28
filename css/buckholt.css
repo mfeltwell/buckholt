@@ -8037,7 +8037,7 @@ fieldset:disabled .carousel-control-next {
   box-shadow: var(--tooltip-shadow);
 }
 
-a[data-bs-toggle=tooltip] {
+a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-control-next) {
   text-decoration-style: dotted;
   text-underline-offset: 2px;
   color: inherit;
