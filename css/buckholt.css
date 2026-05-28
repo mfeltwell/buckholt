@@ -6921,6 +6921,10 @@ fieldset:disabled .carousel-control-next {
 [class*="-set "][class|=button][class*=-set][class|=button]:has(~ *) {
   margin-bottom: 0.5rem;
 }
+[class$=-set][class|=button].button-set-no-offset,
+[class*="-set "][class|=button].button-set-no-offset {
+  margin: 0;
+}
 [class$=-set][class|=tag],
 [class*="-set "][class|=tag] {
   --set-gap: 0.25rem;

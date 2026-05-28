@@ -23,6 +23,10 @@
         &[class*=-set][class|=button]:has(~ *) {
             margin-bottom: #{$button-set-margin};
         }
+
+        &.button-set-no-offset {
+            margin: 0;
+        }
     }
 
     &[class|="tag"] {
