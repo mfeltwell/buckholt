@@ -6900,6 +6900,7 @@ fieldset:disabled .carousel-control-next {
 [class$=-set],
 [class*="-set "] {
   --set-gap: 0.5rem;
+  --set-row-gap: null;
   display: flex;
   flex-wrap: wrap;
   gap: var(--set-gap);

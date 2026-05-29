@@ -5,6 +5,7 @@
 [class$="-set"],
 [class*="-set "] {
     --#{$prefix-bh}set-gap:     #{$spacer-03};
+    --#{$prefix-bh}set-row-gap: null;
 
     display: flex;
     flex-wrap: wrap;
