@@ -11,6 +11,18 @@
     gap: var(--#{$prefix-bh}set-gap);
     row-gap: var(--#{$prefix-bh}set-row-gap);
 
+    &[class*="-set-start"] {
+        justify-content: flex-start;
+    }
+
+    &[class*="-set-center"] {
+        justify-content: center;
+    }
+
+    &[class*="-set-end"] {
+        justify-content: flex-end;
+    }
+
     &[class|="button"] {
         --#{$prefix-bh}set-gap: #{$button-set-gap};
         --#{$prefix-bh}set-row-gap: #{$button-set-row-gap};

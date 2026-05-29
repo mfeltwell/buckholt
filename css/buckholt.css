@@ -6905,6 +6905,18 @@ fieldset:disabled .carousel-control-next {
   gap: var(--set-gap);
   row-gap: var(--set-row-gap);
 }
+[class$=-set][class*=-set-start],
+[class*="-set "][class*=-set-start] {
+  justify-content: flex-start;
+}
+[class$=-set][class*=-set-center],
+[class*="-set "][class*=-set-center] {
+  justify-content: center;
+}
+[class$=-set][class*=-set-end],
+[class*="-set "][class*=-set-end] {
+  justify-content: flex-end;
+}
 [class$=-set][class|=button],
 [class*="-set "][class|=button] {
   --set-gap: 0.5rem;
