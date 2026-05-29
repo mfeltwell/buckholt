@@ -23,7 +23,8 @@
         max-width: var(--#{$prefix-bh}text-max-width);
     }
 
-    [class^="display-"] {
+    [class^="display-"],
+    [class*=" display-"] {
         margin-bottom: #{$display-margin-bottom};
     }
 

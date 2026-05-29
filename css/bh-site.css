@@ -6860,7 +6860,8 @@ fieldset:disabled .carousel-control-next {
 .text-block p, .text-block h1, .text-block .h1, .text-block h2, .text-block .h2, .text-block h3, .text-block .h3, .text-block h4, .text-block .h4, .text-block h5, .text-block .h5, .text-block h6, .text-block .h6, .text-block .eyebrow, .text-block .heading-content {
   max-width: var(--text-max-width);
 }
-.text-block [class^=display-] {
+.text-block [class^=display-],
+.text-block [class*=" display-"] {
   margin-bottom: 1rem;
 }
 
