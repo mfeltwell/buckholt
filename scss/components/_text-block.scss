@@ -23,6 +23,10 @@
         max-width: var(--#{$prefix-bh}text-max-width);
     }
 
+    [class^="display-"] {
+        margin-bottom: #{$display-margin-bottom};
+    }
+
 }
 
 .eyebrow {

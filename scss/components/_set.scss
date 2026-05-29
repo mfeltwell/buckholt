@@ -12,9 +12,9 @@
     gap: var(--#{$prefix-bh}set-gap);
     row-gap: var(--#{$prefix-bh}set-row-gap);
 
-    &[class*="-set-start"] {
-        justify-content: flex-start;
-    }
+    // &[class*="-set-start"] {
+    //     justify-content: flex-start;
+    // }
 
     &[class*="-set-center"] {
         justify-content: center;

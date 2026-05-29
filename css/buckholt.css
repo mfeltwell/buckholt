@@ -6860,6 +6860,9 @@ fieldset:disabled .carousel-control-next {
 .text-block p, .text-block h1, .text-block .h1, .text-block h2, .text-block .h2, .text-block h3, .text-block .h3, .text-block h4, .text-block .h4, .text-block h5, .text-block .h5, .text-block h6, .text-block .h6, .text-block .eyebrow, .text-block .heading-content {
   max-width: var(--text-max-width);
 }
+.text-block [class^=display-] {
+  margin-bottom: 1rem;
+}
 
 .eyebrow {
   font-size: 0.875rem;
@@ -6905,10 +6908,6 @@ fieldset:disabled .carousel-control-next {
   flex-wrap: wrap;
   gap: var(--set-gap);
   row-gap: var(--set-row-gap);
-}
-[class$=-set][class*=-set-start],
-[class*="-set "][class*=-set-start] {
-  justify-content: flex-start;
 }
 [class$=-set][class*=-set-center],
 [class*="-set "][class*=-set-center] {
