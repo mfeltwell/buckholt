@@ -512,6 +512,7 @@ $button-primary-danger-dark: (
     "resting": (
         "background": var(--#{$prefix-bh}action-danger-02),
         "background-b": var(--#{$prefix-bh}action-danger-02),
+        "gradient":     false,
     ),
     "hover": (
         "background":   var(--#{$prefix-bh}action-danger-01),

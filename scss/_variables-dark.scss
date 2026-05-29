@@ -362,6 +362,7 @@ $action-08-dark:         $primary-100 !default;
 $action-09-dark:         $white-tint-50 !default;
 $action-10-dark:         $white-tint-70 !default;
 $action-11-dark:         $white-tint-90 !default;
+$action-12-dark:         $white !default;
 
 $action-text-01-dark:    $primary-40 !default;
 $action-text-02-dark:    $white !default;
@@ -381,6 +382,7 @@ $action-colors-dark: (
     "09":   $action-09-dark,
     "10":   $action-10-dark,
     "11":   $action-11-dark,
+    "12":   $action-12-dark,
 ) !default;
 
 $action-text-colors-dark: (
