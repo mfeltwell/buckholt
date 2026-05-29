@@ -493,7 +493,9 @@ $button-colours-dark: (
 $button-primary-danger: (
     "resting": (
         "background":   var(--#{$prefix-bh}action-danger-01),
+        "background-b":   var(--#{$prefix-bh}action-danger-01),
         "border":       var(--#{$prefix-bh}action-danger-03),
+        "gradient":     true,
     ),
     "hover": (
         "background":   var(--#{$prefix-bh}action-danger-02),

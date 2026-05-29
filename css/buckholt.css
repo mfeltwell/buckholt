@@ -5239,6 +5239,8 @@ fieldset:disabled .carousel-control-next {
 .btn-danger.btn-primary,
 .btn-primary.btn-danger {
   --button-background: var(--action-danger-01);
+  --button-background-b: var(--action-danger-01);
+  background-image: linear-gradient(0deg, var(--button-background-b) 0%, var(--button-background) 100%);
   --button-border: var(--action-danger-03);
   --button-background-hover: var(--action-danger-02);
   --button-border-hover: var(--action-danger-03);
@@ -5367,6 +5369,8 @@ fieldset:disabled .carousel-control-next {
 [data-bs-theme=dark] .btn-danger.btn-primary,
 [data-bs-theme=dark] .btn-primary.btn-danger {
   --button-background: var(--action-danger-02);
+  --button-background-b: var(--action-danger-01);
+  background-image: linear-gradient(0deg, var(--button-background-b) 0%, var(--button-background) 100%);
   --button-border: var(--action-danger-03);
   --button-background-hover: var(--action-danger-01);
   --button-border-hover: var(--action-danger-03);
