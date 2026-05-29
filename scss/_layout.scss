@@ -155,8 +155,14 @@ footer {
     height: 100%;
 }
 
+
+// Content group ________________________
 .content-group {
     display: flex;
     flex-direction: column;
     gap: var(--#{$prefix-bh}content-spacing);
+}
+
+.content-group-xl {
+    gap: var(--#{$prefix-bh}content-spacing-xl);
 }

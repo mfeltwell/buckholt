@@ -870,7 +870,9 @@ $page-frame-gap:          $page-body-spacing-y !default;
 
 $page-pane-gap:           $page-body-spacing-y !default;
 $page-panel-gap:          $grid-gutter-width !default;
+
 $content-spacing:         $spacer-05 !default;
+$content-spacing-xl:      $spacer-08 !default;
 
 
 
@@ -890,10 +892,6 @@ $bento-box-padding:        $padding-05 !default;
 
 // $bento-box-md-width-span:  2;
 // $bento-box-md-width:       ($grid-gap * ($bento-box-md-width-span - 1)) + ($bento-box-size* 2);
-
-
-// Bento boxes __________________________
-
 
 
 // Icon sizes ___________________________

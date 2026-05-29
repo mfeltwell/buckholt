@@ -1121,6 +1121,10 @@ footer {
   gap: var(--content-spacing);
 }
 
+.content-group-xl {
+  gap: var(--content-spacing-xl);
+}
+
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
