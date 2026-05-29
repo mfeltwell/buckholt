@@ -333,6 +333,7 @@
   --page-pane-gap: 4rem;
   --page-panel-gap: 2rem;
   --content-spacing: 1.5rem;
+  --content-spacing-xl: 4rem;
   --text-max-width: 54rem;
   --shadow-colour: var(--black-rgb);
   --shadow-xs: 0 1px 3px 0 rgba(var(--shadow-colour), 0.1), 0 1px 2px -1px rgba(var(--shadow-colour), 0.1);
