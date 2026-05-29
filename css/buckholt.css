@@ -6931,9 +6931,9 @@ fieldset:disabled .carousel-control-next {
   margin-top: 0.5rem;
 }
 [class$=-set][class|=button]:has(.btn-icon, .carousel-control-prev,
-.carousel-control-next),
+.carousel-control-next):not(:has(.button-label)),
 [class*="-set "][class|=button]:has(.btn-icon, .carousel-control-prev,
-.carousel-control-next) {
+.carousel-control-next):not(:has(.button-label)) {
   --set-gap: 0.25rem;
 }
 [class$=-set][class|=button][class*=-set][class|=button]:has(~ *),

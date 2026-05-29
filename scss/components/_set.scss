@@ -28,8 +28,8 @@
         --#{$prefix-bh}set-gap: #{$button-set-gap};
         --#{$prefix-bh}set-row-gap: #{$button-set-row-gap};
         margin-top: #{$button-set-margin};
-
-        &:has(.btn-icon){
+        
+        &:has(.btn-icon):not(:has(.button-label)) {
             --#{$prefix-bh}set-gap: #{$button-icon-set-gap};
         }
 
