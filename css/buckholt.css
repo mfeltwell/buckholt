@@ -7418,25 +7418,28 @@ fieldset:disabled .carousel-control-next {
   margin-left: calc(var(--avatar-set-overlap) * -1);
 }
 
-.account-meta {
+.user-meta {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem;
-  margin-bottom: 1rem;
   font-size: 0.875rem;
   font-weight: 300;
   letter-spacing: 0.25px;
   line-height: 1.25rem;
 }
-.account-meta .meta-line-one {
+.user-meta .user-meta-first-line {
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.25px;
   line-height: 1.5rem;
 }
 
-.meta-body > * {
+.user-meta-compact {
+  padding: 0;
+}
+
+.user-meta-body > * {
   display: block;
 }
 

@@ -2,19 +2,22 @@
 // Base styles
 //
 
-.account-meta {
+.user-meta {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem;
-    margin-bottom: 1rem;
     @include type($body, "01");
 
-    .meta-line-one {
+    .user-meta-first-line {
         @include type($label, "02");
     }
 }
 
-.meta-body > * {
+.user-meta-compact {
+    padding: 0;
+}
+
+.user-meta-body > * {
     display: block;
 }
