@@ -1124,6 +1124,10 @@ footer {
   gap: var(--content-spacing);
 }
 
+.content-group-sm {
+  gap: var(--content-spacing-sm);
+}
+
 .content-group-xl {
   gap: var(--content-spacing-xl);
 }

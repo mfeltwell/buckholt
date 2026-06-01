@@ -163,6 +163,10 @@ footer {
     gap: var(--#{$prefix-bh}content-spacing);
 }
 
+.content-group-sm {
+    gap: var(--#{$prefix-bh}content-spacing-sm);
+}
+
 .content-group-xl {
     gap: var(--#{$prefix-bh}content-spacing-xl);
 }
