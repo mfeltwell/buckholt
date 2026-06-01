@@ -24,7 +24,6 @@
     text-transform: uppercase;
 
     &:has(img) {
-        --#{$prefix-bh}avatar-border:   #{$avatar-img-border};
         --#{$prefix-bh}avatar-background:   transparent;
     }
 
@@ -64,9 +63,11 @@
     --set-gap: 0;
     --avatar-set-overlap: #{$avatar-set-overlap};
 
-    // .avatar {
-    //     --#{$prefix-bh}avatar-border:   #{$avatar-img-border};
-    // }
+    .avatar {
+        &:has(img) {
+            --#{$prefix-bh}avatar-border:   #{$avatar-img-border};
+        }
+    }
 }
 
 .avatar-set .avatar:not(:first-child) {

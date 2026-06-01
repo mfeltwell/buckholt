@@ -7374,7 +7374,6 @@ fieldset:disabled .carousel-control-next {
   text-transform: uppercase;
 }
 .avatar:has(img) {
-  --avatar-border: #ffffff;
   --avatar-background: transparent;
 }
 .avatar img {
@@ -7412,6 +7411,9 @@ fieldset:disabled .carousel-control-next {
 .avatar-set {
   --set-gap: 0;
   --avatar-set-overlap: 0.75rem;
+}
+.avatar-set .avatar:has(img) {
+  --avatar-border: #ffffff;
 }
 
 .avatar-set .avatar:not(:first-child) {
