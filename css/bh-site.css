@@ -7355,6 +7355,7 @@ fieldset:disabled .carousel-control-next {
   --avatar-size: 3rem;
   --avatar-background: var(--expressive-soft);
   --avatar-border: transparent;
+  --avatar-border-width: null;
   --avatar-text: var(--expressive-rich);
   --avatar-icon-size: 1.25rem;
   background-color: var(--avatar-background);
@@ -7414,6 +7415,7 @@ fieldset:disabled .carousel-control-next {
 }
 .avatar-set .avatar:has(img) {
   --avatar-border: #ffffff;
+  --avatar-border-width: 0.125rem;
 }
 
 .avatar-set .avatar:not(:first-child) {

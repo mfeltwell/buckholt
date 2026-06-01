@@ -6,6 +6,7 @@
     --#{$prefix-bh}avatar-size:         #{$avatar-size};
     --#{$prefix-bh}avatar-background:   #{$avatar-background};
     --#{$prefix-bh}avatar-border:       #{$avatar-border};
+    --#{$prefix-bh}avatar-border-width: null;
     --#{$prefix-bh}avatar-text:         #{$avatar-text};
     --#{$prefix-bh}avatar-icon-size:    #{$avatar-icon-size};
 
@@ -66,6 +67,7 @@
     .avatar {
         &:has(img) {
             --#{$prefix-bh}avatar-border:   #{$avatar-img-border};
+            --#{$prefix-bh}avatar-border-width: #{$avatar-border-width};
         }
     }
 }
