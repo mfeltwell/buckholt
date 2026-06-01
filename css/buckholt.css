@@ -511,6 +511,7 @@
   --hr-color: rgba(255, 255, 255, 0.13);
   --body-color: var(--text-primary);
   --body-background: var(--ui-background-01);
+  color: var(--body-color);
 }
 
 *,

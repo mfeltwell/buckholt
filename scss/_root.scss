@@ -482,5 +482,7 @@
         --#{$prefix-bh}body-color: #{$body-color-dark};
         --#{$prefix-bh}body-background: #{$body-background-dark};
 
+        color: var(--body-color);
+
     }
 }
