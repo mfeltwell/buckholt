@@ -3068,6 +3068,145 @@ footer {
     --bs-gutter-y: 8rem;
   }
 }
+.masonry-row {
+  --bs-gutter-x: 2rem;
+  display: block;
+  column-gap: var(--bs-gutter-x);
+  margin-top: 0;
+}
+.masonry-row > * {
+  width: 100%;
+  break-inside: avoid;
+  margin-bottom: var(--bs-gutter-x);
+}
+.masonry-row > *:first-child {
+  margin-top: 0;
+}
+
+.masonry-row-cols-1 {
+  columns: 1;
+}
+
+.masonry-row-cols-2 {
+  columns: 2;
+}
+
+.masonry-row-cols-3 {
+  columns: 3;
+}
+
+.masonry-row-cols-4 {
+  columns: 4;
+}
+
+.masonry-row-cols-5 {
+  columns: 5;
+}
+
+.masonry-row-cols-6 {
+  columns: 6;
+}
+
+@media (min-width: 576px) {
+  .masonry-row-cols-sm-1 {
+    columns: 1;
+  }
+  .masonry-row-cols-sm-2 {
+    columns: 2;
+  }
+  .masonry-row-cols-sm-3 {
+    columns: 3;
+  }
+  .masonry-row-cols-sm-4 {
+    columns: 4;
+  }
+  .masonry-row-cols-sm-5 {
+    columns: 5;
+  }
+  .masonry-row-cols-sm-6 {
+    columns: 6;
+  }
+}
+@media (min-width: 768px) {
+  .masonry-row-cols-md-1 {
+    columns: 1;
+  }
+  .masonry-row-cols-md-2 {
+    columns: 2;
+  }
+  .masonry-row-cols-md-3 {
+    columns: 3;
+  }
+  .masonry-row-cols-md-4 {
+    columns: 4;
+  }
+  .masonry-row-cols-md-5 {
+    columns: 5;
+  }
+  .masonry-row-cols-md-6 {
+    columns: 6;
+  }
+}
+@media (min-width: 992px) {
+  .masonry-row-cols-lg-1 {
+    columns: 1;
+  }
+  .masonry-row-cols-lg-2 {
+    columns: 2;
+  }
+  .masonry-row-cols-lg-3 {
+    columns: 3;
+  }
+  .masonry-row-cols-lg-4 {
+    columns: 4;
+  }
+  .masonry-row-cols-lg-5 {
+    columns: 5;
+  }
+  .masonry-row-cols-lg-6 {
+    columns: 6;
+  }
+}
+@media (min-width: 1200px) {
+  .masonry-row-cols-xl-1 {
+    columns: 1;
+  }
+  .masonry-row-cols-xl-2 {
+    columns: 2;
+  }
+  .masonry-row-cols-xl-3 {
+    columns: 3;
+  }
+  .masonry-row-cols-xl-4 {
+    columns: 4;
+  }
+  .masonry-row-cols-xl-5 {
+    columns: 5;
+  }
+  .masonry-row-cols-xl-6 {
+    columns: 6;
+  }
+}
+@media (min-width: 1400px) {
+  .masonry-row-cols-xxl-1 {
+    columns: 1;
+  }
+  .masonry-row-cols-xxl-2 {
+    columns: 2;
+  }
+  .masonry-row-cols-xxl-3 {
+    columns: 3;
+  }
+  .masonry-row-cols-xxl-4 {
+    columns: 4;
+  }
+  .masonry-row-cols-xxl-5 {
+    columns: 5;
+  }
+  .masonry-row-cols-xxl-6 {
+    columns: 6;
+  }
+}
 .grid-bento {
   --columns: 2;
   --gap: 1.5rem;

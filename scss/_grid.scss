@@ -37,3 +37,30 @@
 @if $enable-grid-classes {
     @include make-grid-columns();
 }
+
+
+// Masonry
+.masonry-row {
+    @include masonry-row();
+}
+
+@mixin make-masonry-row-cols(
+    $columns: $grid-row-columns,
+    $breakpoints: $grid-breakpoints
+) {
+    @each $breakpoint in map-keys($breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            @if $columns > 0 {
+                @for $i from 1 through $columns {
+                    .masonry-row-cols#{$infix}-#{$i} {
+                        @include masonry-row-cols($i);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include make-masonry-row-cols();

@@ -9,3 +9,26 @@
     margin-right: calc(-.5 * var(--#{$prefix}gutter-x)); // stylelint-disable-line function-disallowed-list
     margin-left: calc(-.5 * var(--#{$prefix}gutter-x)); // stylelint-disable-line function-disallowed-list
 }
+
+// Masonry row columns
+@mixin masonry-row-cols($count) {
+    columns: $count;
+}
+
+@mixin masonry-row($gutter: $grid-gutter-width) {
+    --#{$prefix}gutter-x: #{$gutter};
+
+    display: block;
+    column-gap: var(--#{$prefix}gutter-x);
+    margin-top: 0;
+
+    > * {
+        width: 100%;
+        break-inside: avoid;
+        margin-bottom: var(--#{$prefix}gutter-x);
+    }
+
+    > *:first-child {
+        margin-top: 0;
+    }
+}
