@@ -9,7 +9,7 @@
     padding: 0.5rem;
     @include type($body, "01");
 
-    .user-meta-first-line {
+    .user-meta-first {
         @include type($label, "02");
     }
 }
