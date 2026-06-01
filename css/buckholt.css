@@ -3071,7 +3071,7 @@ footer {
 .masonry-row {
   --bs-gutter-x: 2rem;
   display: block;
-  column-gap: var(--bs-gutter-x);
+  column-gap: 0;
   margin-top: 0;
 }
 .masonry-row > * {

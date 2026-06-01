@@ -19,7 +19,7 @@
     --#{$prefix}gutter-x: #{$gutter};
 
     display: block;
-    column-gap: var(--#{$prefix}gutter-x);
+    column-gap: 0;
     margin-top: 0;
 
     > * {
