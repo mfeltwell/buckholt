@@ -12,7 +12,7 @@
 
 
     background-color: var(--#{$prefix-bh}avatar-background);
-    border: $avatar-border-width solid var(--#{$prefix-bh}avatar-border);
+    border: var(--#{$prefix-bh}avatar-border-width) solid var(--#{$prefix-bh}avatar-border);
     border-radius: var(--border-radius-full);
     color: var(--#{$prefix-bh}avatar-text);
     height: var(--#{$prefix-bh}avatar-size);

@@ -7359,7 +7359,7 @@ fieldset:disabled .carousel-control-next {
   --avatar-text: var(--expressive-rich);
   --avatar-icon-size: 1.25rem;
   background-color: var(--avatar-background);
-  border: 0.125rem solid var(--avatar-border);
+  border: var(--avatar-border-width) solid var(--avatar-border);
   border-radius: var(--border-radius-full);
   color: var(--avatar-text);
   height: var(--avatar-size);
