@@ -1974,6 +1974,7 @@ $breadcrumb-margin-bottom:            0 !default;
 $breadcrumb-background:               null !default;
 $breadcrumb-radius:                   null !default;  
 
+$breadcrumb-link:                     var(--#{$prefix-bh}link-colour) !default; 
 $breadcrumb-current:                  var(--#{$prefix-bh}text-muted) !default;
 $breadcrumb-divider:                  var(--#{$prefix-bh}text-muted) !default;
 $breadcrumb-item-padding-x:           $padding-03 !default;

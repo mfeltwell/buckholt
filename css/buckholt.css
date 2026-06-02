@@ -8417,6 +8417,7 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   --breadcrumb-divider: var(--text-muted);
   --breadcrumb-item-padding-x: 0.5rem;
   --breadcrumb-item-current: var(--text-muted);
+  --breadcrumb-link: var(--link-colour);
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.16px;
@@ -8444,6 +8445,7 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
 }
 .breadcrumb-item .breadcrumb-link {
   text-decoration: none;
+  color: var(--breadcrumb-link);
 }
 .breadcrumb-item .breadcrumb-link:hover {
   text-decoration: underline;
@@ -8452,6 +8454,10 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   display: flex;
   justify-content: center;
   min-width: 1rem;
+}
+
+[data-bs-theme=dark] .breadcrumb {
+  --breadcrumb-link: var(--action-text-02);
 }
 
 .key-value {

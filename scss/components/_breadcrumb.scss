@@ -8,6 +8,7 @@
     --#{$prefix-bh}breadcrumb-divider:          #{$breadcrumb-divider};
     --#{$prefix-bh}breadcrumb-item-padding-x:   #{$breadcrumb-item-padding-x};
     --#{$prefix-bh}breadcrumb-item-current:     #{$breadcrumb-current};
+    --#{$prefix-bh}breadcrumb-link:             #{$breadcrumb-link};
     // scss-docs-end breadcrumb-css-vars
 
     @include type($link, "03");
@@ -39,6 +40,7 @@
 
     .breadcrumb-link {
         text-decoration: none;
+        color: var(--#{$prefix-bh}breadcrumb-link);
 
         &:hover {
             text-decoration: underline;
@@ -49,5 +51,16 @@
         display: flex;
         justify-content: center;
         min-width: 1rem;
+    }
+}
+
+
+
+// Dark mode adjustments
+@if $enable-dark-mode {
+    @include color-mode(dark) {
+        .breadcrumb {
+            --#{$prefix-bh}breadcrumb-link: #{$breadcrumb-link-dark};
+        }
     }
 }
