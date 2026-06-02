@@ -23,6 +23,7 @@
     @include type($label, "03");
     overflow: hidden;
     text-transform: uppercase;
+    flex-shrink: 0;
 
     &:has(img) {
         --#{$prefix-bh}avatar-background:   transparent;

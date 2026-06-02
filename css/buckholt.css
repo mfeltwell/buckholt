@@ -7378,6 +7378,7 @@ fieldset:disabled .carousel-control-next {
   line-height: 1.75rem;
   overflow: hidden;
   text-transform: uppercase;
+  flex-shrink: 0;
 }
 .avatar:has(img) {
   --avatar-background: transparent;
