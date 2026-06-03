@@ -1,20 +1,11 @@
-// import './components/menu.js';
-// import './components/tag.js';
-// import './components/form.js';
-// import './components/card.js';
-// import './components/slider.js';
-// import './components/tabs.js';
-// import './components/table.js';
-// import './components/dropdown.js';
-
-import 'https://mfeltwell.github.io/buckholt/js/components/menu.js';
-import 'https://mfeltwell.github.io/buckholt/js/components/tag.js';
-import 'https://mfeltwell.github.io/buckholt/js/components/form.js';
-import 'https://mfeltwell.github.io/buckholt/js/components/card.js';
-import 'https://mfeltwell.github.io/buckholt/js/components/slider.js';
-import 'https://mfeltwell.github.io/buckholt/js/components/tabs.js';
-import 'https://mfeltwell.github.io/buckholt/js/components/table.js';
-import 'https://mfeltwell.github.io/buckholt/js/components/dropdown.js';
+import './components/menu.js';
+import './components/tag.js';
+import './components/form.js';
+import './components/card.js';
+import './components/slider.js';
+import './components/tabs.js';
+import './components/table.js';
+import './components/dropdown.js';
 
 // Add class to Gutenberg group block ____________________________________________
 if($('.wp-block-group').children().length > 0) {
