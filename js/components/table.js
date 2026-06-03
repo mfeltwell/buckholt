@@ -1,3 +1,5 @@
+const $ = window.jQuery;
+
 document.querySelectorAll(".table").forEach((table) => {
     const tbody = table.querySelector("tbody");
     const sortButtons = table.querySelectorAll(".table-sort");

@@ -1,3 +1,5 @@
+const $ = window.jQuery;
+
 // Menu selectable active class _____________________________________________________
 (() => {
     // Utility: apply .active to the label that points at an input (by id)

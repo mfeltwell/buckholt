@@ -1,3 +1,5 @@
+const $ = window.jQuery;
+
 // Selectable card __________________________________________________________________
 // Checkbox
 $(document).ready(function () {

@@ -1,3 +1,5 @@
+const $ = window.jQuery;
+
 // Selectable tag ___________________________________________________________________
 // Multi
 $(document).ready(function () {

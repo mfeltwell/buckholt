@@ -1,3 +1,5 @@
+const $ = window.jQuery;
+
 // Scrollable tabs ______________________________________________________________
 document.addEventListener('DOMContentLoaded', function () {
     const tabContainers = document.querySelectorAll('.tab-items');

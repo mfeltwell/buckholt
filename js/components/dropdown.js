@@ -1,3 +1,5 @@
+const $ = window.jQuery;
+
 // Dropdown _________________________________________________________________________
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.dropdown').forEach(function (dropdown) {

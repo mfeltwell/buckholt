@@ -1,3 +1,5 @@
+const $ = window.jQuery;
+
 // Slider ________________________________________________________________________
 document.addEventListener('DOMContentLoaded', () => {
     // Select all sliders on the page (in case there are multiple)

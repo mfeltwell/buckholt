@@ -1,3 +1,5 @@
+const $ = window.jQuery;
+
 // Input clear button ____________________________________________________________
 $( document ).ready(function() {
     var fadeTime = 150;
