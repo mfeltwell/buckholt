@@ -7,6 +7,8 @@ import './components/tabs.js';
 import './components/table.js';
 import './components/dropdown.js';
 
+const $ = window.jQuery;
+
 // Add class to Gutenberg group block ____________________________________________
 if($('.wp-block-group').children().length > 0) {
     $('.wp-block-group > .wp-block-group__inner-container').addClass('page-panel');
