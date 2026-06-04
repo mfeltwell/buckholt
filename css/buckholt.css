@@ -316,6 +316,7 @@
   --border-width: 1px;
   --border-style: solid;
   --border-color: #DADADA;
+  --border-radius-0: 0;
   --border-radius-xs: 0.25rem;
   --border-radius-sm: 0.375rem;
   --border-radius-md: 0.5rem;
@@ -3511,6 +3512,20 @@ footer {
   font-weight: 500 !important;
   line-height: 4rem !important;
   letter-spacing: -0.25px !important;
+}
+
+.border-radius-0 {
+  border-radius: var(--border-radius-0) !important;
+}
+
+.border-top-radius-0 {
+  border-top-left-radius: var(--border-radius-0) !important;
+  border-top-right-radius: var(--border-radius-0) !important;
+}
+
+.border-bottom-radius-0 {
+  border-bottom-left-radius: var(--border-radius-0) !important;
+  border-bottom-right-radius: var(--border-radius-0) !important;
 }
 
 .border-radius-xs {

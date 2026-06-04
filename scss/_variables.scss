@@ -683,6 +683,7 @@ $border-color:              $ui-border-02 !default;
 // Border radius ________________________
 $border-radius:       .5rem !default;
 
+$border-radius-0:     0 !default;
 $border-radius-xs:    .25rem !default;
 $border-radius-sm:    .375rem !default;
 $border-radius-md:    $border-radius !default; // 0.5rem
@@ -693,6 +694,7 @@ $border-radius-full:  625rem !default;
 $border-radius-round: 50% !default;
 
 $border-radii: (
+  "0":    $border-radius-0,
   "xs":   $border-radius-xs,
   "sm":   $border-radius-sm,
   "md":   $border-radius-md,
