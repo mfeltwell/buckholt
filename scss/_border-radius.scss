@@ -1,0 +1,16 @@
+@each $radius, $value in $border-radii {
+
+    .border-radius-#{$radius} {
+        border-radius: var(--#{$prefix-bh}border-radius-#{$radius}) !important;
+    }
+
+    .border-top-radius-#{$radius} {
+        border-top-left-radius: var(--#{$prefix-bh}border-radius-#{$radius}) !important;
+        border-top-right-radius: var(--#{$prefix-bh}border-radius-#{$radius}) !important;
+    }
+
+    .border-bottom-radius-#{$radius} {
+        border-bottom-left-radius: var(--#{$prefix-bh}border-radius-#{$radius}) !important;
+        border-bottom-right-radius: var(--#{$prefix-bh}border-radius-#{$radius}) !important;
+    }
+}

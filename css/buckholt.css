@@ -321,8 +321,9 @@
   --border-radius-md: 0.5rem;
   --border-radius-lg: 1rem;
   --border-radius-xl: 1.5rem;
-  --border-radius-full: 2rem;
-  --border-radius-round: 100%;
+  --border-radius-xxl: 2rem;
+  --border-radius-full: 625rem;
+  --border-radius-round: 50%;
   --form-validation-error: var(--error-01);
   --form-input-border-error: var(--error-01);
   --page-body-spacing-y: 4rem;
@@ -3512,6 +3513,118 @@ footer {
   letter-spacing: -0.25px !important;
 }
 
+.border-radius-xs {
+  border-radius: var(--border-radius-xs) !important;
+}
+
+.border-top-radius-xs {
+  border-top-left-radius: var(--border-radius-xs) !important;
+  border-top-right-radius: var(--border-radius-xs) !important;
+}
+
+.border-bottom-radius-xs {
+  border-bottom-left-radius: var(--border-radius-xs) !important;
+  border-bottom-right-radius: var(--border-radius-xs) !important;
+}
+
+.border-radius-sm {
+  border-radius: var(--border-radius-sm) !important;
+}
+
+.border-top-radius-sm {
+  border-top-left-radius: var(--border-radius-sm) !important;
+  border-top-right-radius: var(--border-radius-sm) !important;
+}
+
+.border-bottom-radius-sm {
+  border-bottom-left-radius: var(--border-radius-sm) !important;
+  border-bottom-right-radius: var(--border-radius-sm) !important;
+}
+
+.border-radius-md {
+  border-radius: var(--border-radius-md) !important;
+}
+
+.border-top-radius-md {
+  border-top-left-radius: var(--border-radius-md) !important;
+  border-top-right-radius: var(--border-radius-md) !important;
+}
+
+.border-bottom-radius-md {
+  border-bottom-left-radius: var(--border-radius-md) !important;
+  border-bottom-right-radius: var(--border-radius-md) !important;
+}
+
+.border-radius-lg {
+  border-radius: var(--border-radius-lg) !important;
+}
+
+.border-top-radius-lg {
+  border-top-left-radius: var(--border-radius-lg) !important;
+  border-top-right-radius: var(--border-radius-lg) !important;
+}
+
+.border-bottom-radius-lg {
+  border-bottom-left-radius: var(--border-radius-lg) !important;
+  border-bottom-right-radius: var(--border-radius-lg) !important;
+}
+
+.border-radius-xl {
+  border-radius: var(--border-radius-xl) !important;
+}
+
+.border-top-radius-xl {
+  border-top-left-radius: var(--border-radius-xl) !important;
+  border-top-right-radius: var(--border-radius-xl) !important;
+}
+
+.border-bottom-radius-xl {
+  border-bottom-left-radius: var(--border-radius-xl) !important;
+  border-bottom-right-radius: var(--border-radius-xl) !important;
+}
+
+.border-radius-xxl {
+  border-radius: var(--border-radius-xxl) !important;
+}
+
+.border-top-radius-xxl {
+  border-top-left-radius: var(--border-radius-xxl) !important;
+  border-top-right-radius: var(--border-radius-xxl) !important;
+}
+
+.border-bottom-radius-xxl {
+  border-bottom-left-radius: var(--border-radius-xxl) !important;
+  border-bottom-right-radius: var(--border-radius-xxl) !important;
+}
+
+.border-radius-full {
+  border-radius: var(--border-radius-full) !important;
+}
+
+.border-top-radius-full {
+  border-top-left-radius: var(--border-radius-full) !important;
+  border-top-right-radius: var(--border-radius-full) !important;
+}
+
+.border-bottom-radius-full {
+  border-bottom-left-radius: var(--border-radius-full) !important;
+  border-bottom-right-radius: var(--border-radius-full) !important;
+}
+
+.border-radius-round {
+  border-radius: var(--border-radius-round) !important;
+}
+
+.border-top-radius-round {
+  border-top-left-radius: var(--border-radius-round) !important;
+  border-top-right-radius: var(--border-radius-round) !important;
+}
+
+.border-bottom-radius-round {
+  border-bottom-left-radius: var(--border-radius-round) !important;
+  border-bottom-right-radius: var(--border-radius-round) !important;
+}
+
 .input {
   display: flex;
   flex-direction: column;
@@ -3868,7 +3981,7 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
   border-radius: 0.25rem;
 }
 .form-check-input[type=radio] {
-  border-radius: 2rem;
+  border-radius: 625rem;
 }
 .form-check-input:active {
   filter: brightness(90%);
@@ -3980,7 +4093,7 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
   height: calc(1.25rem + var(--switch-padding-y) * 2);
   background-color: var(--switch-track-background);
   border-color: var(--switch-track-border);
-  border-radius: 2rem;
+  border-radius: 625rem;
   transition: background-position 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -4166,7 +4279,7 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
   width: 100%;
   position: relative;
   background-color: var(--form-slider-track-background);
-  border-radius: 2rem;
+  border-radius: 625rem;
   z-index: 0;
 }
 
@@ -4176,7 +4289,7 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
   padding: 0;
   appearance: none;
   background-color: transparent;
-  border-radius: 2rem;
+  border-radius: 625rem;
   display: block;
   position: relative;
   z-index: 1;
@@ -4232,7 +4345,7 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
   color: transparent;
   cursor: pointer;
   border: none;
-  border-radius: 2rem;
+  border-radius: 625rem;
 }
 .form-slider::-moz-range-thumb {
   width: 0.875rem;
@@ -4255,7 +4368,7 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
   cursor: pointer;
   background-color: rgba(26, 26, 26, 0.07);
   border: none;
-  border-radius: 2rem;
+  border-radius: 625rem;
 }
 .form-slider:disabled {
   --form-slider-filled-background: #BABABA;
@@ -4302,7 +4415,7 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
 .ticks .tick {
   display: block;
   background-color: rgba(26, 26, 26, 0.48);
-  border-radius: 2rem;
+  border-radius: 625rem;
   height: calc(0.25rem - 1px * 2);
   width: calc(0.25rem - 1px * 2);
 }
@@ -5758,7 +5871,7 @@ fieldset:disabled .carousel-control-next {
 .btn-close-sm {
   --btn-close-width: 1.5rem;
   --btn-close-height: var(--btn-close-width);
-  --btn-close-radius: 2rem;
+  --btn-close-radius: 625rem;
 }
 
 [class*=-info] .btn-close-sm {
@@ -6036,7 +6149,7 @@ fieldset:disabled .carousel-control-next {
 .tag {
   --tag-padding-y: calc(0.25rem - 1px);
   --tag-padding-x: calc(0.5rem - 1px);
-  --tag-radius: 2rem;
+  --tag-radius: 625rem;
   --tag-border: transparent;
   --tag-border-width: 1px;
   --tag-background: rgba(26, 26, 26, 0.07);
@@ -7558,7 +7671,7 @@ fieldset:disabled .carousel-control-next {
   height: 0.75rem;
   background: rgba(26, 26, 26, 0.07);
   border: 1px solid rgba(26, 26, 26, 0.07);
-  border-radius: 2rem;
+  border-radius: 625rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -7727,7 +7840,7 @@ fieldset:disabled .carousel-control-next {
   height: 1.5rem;
   margin: 0 1.1875rem;
   background-color: var(--stepper-item-connector);
-  border-radius: 2rem;
+  border-radius: 625rem;
   position: absolute;
   top: -1.5rem;
 }
@@ -7765,7 +7878,7 @@ fieldset:disabled .carousel-control-next {
   width: 2.25rem;
   height: 2.25rem;
   margin: 0.125rem;
-  border-radius: 2rem;
+  border-radius: 625rem;
 }
 
 .sub-stepper {
@@ -8274,7 +8387,7 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   --progress-background: var(--expressive-pale-overlay);
   --progress-border: var(--expressive-pale-overlay);
   --progress-border-width: 1px;
-  --progress-border-radius: 2rem;
+  --progress-border-radius: 625rem;
   --progress-box-shadow: var(--bs-box-shadow-inset);
   --progress-bar-color: #ffffff;
   --progress-bar-background: var(--expressive-deep);

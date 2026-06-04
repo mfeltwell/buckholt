@@ -306,13 +306,17 @@
     
 
     // Border radius ____________________________________________________________________________________________________________________
-    --#{$prefix-bh}border-radius-xs: #{$border-radius-xs};
-    --#{$prefix-bh}border-radius-sm: #{$border-radius-sm};
-    --#{$prefix-bh}border-radius-md: #{$border-radius-md};
-    --#{$prefix-bh}border-radius-lg: #{$border-radius-lg};
-    --#{$prefix-bh}border-radius-xl: #{$border-radius-xl};
-    --#{$prefix-bh}border-radius-full: #{$border-radius-full};
-    --#{$prefix-bh}border-radius-round: #{$border-radius-round};
+    // --#{$prefix-bh}border-radius-xs: #{$border-radius-xs};
+    // --#{$prefix-bh}border-radius-sm: #{$border-radius-sm};
+    // --#{$prefix-bh}border-radius-md: #{$border-radius-md};
+    // --#{$prefix-bh}border-radius-lg: #{$border-radius-lg};
+    // --#{$prefix-bh}border-radius-xl: #{$border-radius-xl};
+    // --#{$prefix-bh}border-radius-full: #{$border-radius-full};
+    // --#{$prefix-bh}border-radius-round: #{$border-radius-round};
+
+    @each $radius, $value in $border-radii {
+        --#{$prefix-bh}border-radius-#{$radius}: #{$value};
+    }
 
     
     // Validation _______________________________________________________________________________________________________________________
