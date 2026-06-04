@@ -16889,7 +16889,7 @@ th:has(.table-sort) {
 
 .code-example::after {
   content: "";
-  background: url(/wp-content/themes/buckholt/blocks/swatches/chequered.png);
+  background: url("https://mfeltwell.github.io/buckholt/images/chequered.png");
   background-repeat: repeat;
   height: 100%;
   width: calc(100% + 1rem);
@@ -17006,7 +17006,7 @@ th:has(.table-sort) {
 .swatch_tint .swatch_header::after,
 .swatch_tint .swatch_block::after {
   content: "";
-  background: url(/wp-content/themes/buckholt/blocks/swatches/chequered.png);
+  background: url("https://mfeltwell.github.io/buckholt/images/chequered.png");
   background-repeat: repeat;
   height: 100%;
   width: calc(100% + 1rem);
@@ -17097,7 +17097,7 @@ span.swatch_role {
 
 .swatch_dot::after {
   content: "";
-  background: url(/wp-content/themes/buckholt/blocks/swatches/chequered.png);
+  background: url("https://mfeltwell.github.io/buckholt/images/chequered.png");
   background-repeat: repeat;
   height: 100%;
   width: calc(100% + 1rem);
