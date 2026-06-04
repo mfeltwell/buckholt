@@ -7657,13 +7657,10 @@ fieldset:disabled .carousel-control-next {
   padding-left: 1.75rem;
 }
 .list:has(.list-icon), .list ul:has(.list-icon), .list ol:has(.list-icon) {
-  padding: 0;
   list-style: none;
 }
 .list:has(.list-icon) .list-item, .list ul:has(.list-icon) .list-item, .list ol:has(.list-icon) .list-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  position: relative;
 }
 .list ul, .list ol {
   gap: 0.25rem;
@@ -7672,6 +7669,10 @@ fieldset:disabled .carousel-control-next {
 
 .list-icon {
   display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -0.5rem;
+  transform: translate(-100%, 0);
 }
 
 .list-icon i {
@@ -7687,7 +7688,8 @@ fieldset:disabled .carousel-control-next {
   line-height: 1.5rem;
   color: var(--text-secondary);
 }
-.list-heading:not(.list-unstyled .list-heading, .list:has(.list-icon) .list-heading, .list ul:has(.list-icon) .list-heading, .list ol:has(.list-icon) .list-heading, .link-set .list-heading) {
+.list-heading:not(.list-unstyled .list-heading, .link-set .list-heading) {
+  position: relative;
   margin-left: -1.75rem;
 }
 
