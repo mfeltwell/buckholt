@@ -20,6 +20,13 @@
   padding: 0;
 }
 
-.user-meta-body > * {
-  display: block;
+.user-meta-body {
+  & > * {
+    display: block;
+  }
+
+  [class^="fa-"],
+  [class*=" fa-"] {
+    margin-right: 0.5rem;
+  }
 }
