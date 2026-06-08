@@ -6216,6 +6216,11 @@ fieldset:disabled .carousel-control-next {
   padding-right: var(--tag-padding-y);
 }
 
+a.tag {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .tag-selectable {
   --tag-background: transparent;
   --tag-border: #919191;
@@ -6245,25 +6250,33 @@ fieldset:disabled .carousel-control-next {
 }
 
 .tag-status-info {
-  --tag-background: var(--feedback-background-info);
+  --tag-background: var(
+    --feedback-background-info
+  );
   --tag-border: var(--feedback-border-info);
   --tag-label: var(--feedback-message-info);
 }
 
 .tag-status-success {
-  --tag-background: var(--feedback-background-success);
+  --tag-background: var(
+    --feedback-background-success
+  );
   --tag-border: var(--feedback-border-success);
   --tag-label: var(--feedback-message-success);
 }
 
 .tag-status-warning {
-  --tag-background: var(--feedback-background-warning);
+  --tag-background: var(
+    --feedback-background-warning
+  );
   --tag-border: var(--feedback-border-warning);
   --tag-label: var(--feedback-message-warning);
 }
 
 .tag-status-error {
-  --tag-background: var(--feedback-background-error);
+  --tag-background: var(
+    --feedback-background-error
+  );
   --tag-border: var(--feedback-border-error);
   --tag-label: var(--feedback-message-error);
 }

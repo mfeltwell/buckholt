@@ -1,107 +1,114 @@
 /* Tag ________________________________________________________________________ */
 .tag {
-    --#{$prefix-bh}tag-padding-y: #{$tag-padding-y};
-    --#{$prefix-bh}tag-padding-x: #{$tag-padding-x};
-    --#{$prefix-bh}tag-radius: #{$tag-radius};
-    --#{$prefix-bh}tag-border: #{$tag-border};
-    --#{$prefix-bh}tag-border-width: #{$tag-border-width};
-    --#{$prefix-bh}tag-background: #{$tag-background};
-    --#{$prefix-bh}tag-label: #{$tag-label};
-    --#{$prefix-bh}tag-icon: var(--#{$prefix-bh}tag-label);
-    --#{$prefix-bh}tag-height: #{$tag-height};
-    --#{$prefix-bh}tag-min-width: #{$tag-min-width};
+  --#{$prefix-bh}tag-padding-y: #{$tag-padding-y};
+  --#{$prefix-bh}tag-padding-x: #{$tag-padding-x};
+  --#{$prefix-bh}tag-radius: #{$tag-radius};
+  --#{$prefix-bh}tag-border: #{$tag-border};
+  --#{$prefix-bh}tag-border-width: #{$tag-border-width};
+  --#{$prefix-bh}tag-background: #{$tag-background};
+  --#{$prefix-bh}tag-label: #{$tag-label};
+  --#{$prefix-bh}tag-icon: var(--#{$prefix-bh}tag-label);
+  --#{$prefix-bh}tag-height: #{$tag-height};
+  --#{$prefix-bh}tag-min-width: #{$tag-min-width};
 
+  border-radius: var(--#{$prefix-bh}tag-radius);
+  @include type($action, "01");
+  height: var(--#{$prefix-bh}tag-height);
+  min-width: var(--#{$prefix-bh}tag-min-width);
+  padding: var(--#{$prefix-bh}tag-padding-y) var(--#{$prefix-bh}tag-padding-x);
+  white-space: nowrap;
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  @include transition($btn-transition);
+  cursor: default;
 
-    border-radius: var(--#{$prefix-bh}tag-radius);
-    @include type($action, "01");
-    height: var(--#{$prefix-bh}tag-height);
-    min-width: var(--#{$prefix-bh}tag-min-width);
-    padding: var(--#{$prefix-bh}tag-padding-y) var(--#{$prefix-bh}tag-padding-x);
-    white-space: nowrap;
-    display: inline-flex;
-    align-self: flex-start;
-    align-items: center;
-    justify-content: center;
-    @include transition($btn-transition);
-    cursor: default;
+  background-color: var(--#{$prefix-bh}tag-background);
+  border: var(--#{$prefix-bh}tag-border-width) solid
+    var(--#{$prefix-bh}tag-border);
+  color: var(--#{$prefix-bh}tag-label);
 
-    background-color: var(--#{$prefix-bh}tag-background);
-    border: var(--#{$prefix-bh}tag-border-width) solid var(--#{$prefix-bh}tag-border);
-    color: var(--#{$prefix-bh}tag-label);
-
-    // Expressive colours
-    &.expressive-light {
-        --#{$prefix-bh}tag-background: var(--#{$prefix-bh}expressive-pale-overlay);
-        --#{$prefix-bh}tag-label: var(--#{$prefix-bh}expressive-deep);
-        --#{$prefix-bh}tag-icon: var(--#{$prefix-bh}expressive-deep);
-    }
+  // Expressive colours
+  &.expressive-light {
+    --#{$prefix-bh}tag-background: var(--#{$prefix-bh}expressive-pale-overlay);
+    --#{$prefix-bh}tag-label: var(--#{$prefix-bh}expressive-deep);
+    --#{$prefix-bh}tag-icon: var(--#{$prefix-bh}expressive-deep);
+  }
 }
 
 .tag .tag-label {
-    padding: 0 #{$tag-label-padding-x};
+  padding: 0 #{$tag-label-padding-x};
 }
 
 .tag .icon {
-    color: var(--#{$prefix-bh}tag-icon);
+  color: var(--#{$prefix-bh}tag-icon);
 }
 
 .tag:has(.btn-close) {
-    padding-right: var(--#{$prefix-bh}tag-padding-y);
+  padding-right: var(--#{$prefix-bh}tag-padding-y);
+}
+
+a.tag {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .tag-selectable {
-    --#{$prefix-bh}tag-background: #{$tag-selectable-background};
-    --#{$prefix-bh}tag-border: #{$tag-selectable-border};
-    --#{$prefix-bh}tag-label: #{$tag-selectable-label};
+  --#{$prefix-bh}tag-background: #{$tag-selectable-background};
+  --#{$prefix-bh}tag-border: #{$tag-selectable-border};
+  --#{$prefix-bh}tag-label: #{$tag-selectable-label};
 
-    cursor: pointer;
-    @if $clickable-borders {
-        border-bottom-width: #{$tag-selectable-border-bottom-width};
+  cursor: pointer;
+  @if $clickable-borders {
+    border-bottom-width: #{$tag-selectable-border-bottom-width};
 
-        &:not(:active){
-            .tag-label {
-                margin-bottom: 1px
-            }
-        }
+    &:not(:active) {
+      .tag-label {
+        margin-bottom: 1px;
+      }
     }
+  }
 
-    &:hover {
-        --#{$prefix-bh}tag-background: #{$tag-selectable-background-hover};
-        --#{$prefix-bh}tag-border: #{$tag-selectable-border-hover};
-        --#{$prefix-bh}tag-label: #{$tag-selectable-label-hover};
-    }
+  &:hover {
+    --#{$prefix-bh}tag-background: #{$tag-selectable-background-hover};
+    --#{$prefix-bh}tag-border: #{$tag-selectable-border-hover};
+    --#{$prefix-bh}tag-label: #{$tag-selectable-label-hover};
+  }
 
-    &.active {
-        --#{$prefix-bh}tag-background: #{$tag-selectable-background-active};
-        --#{$prefix-bh}tag-border: #{$tag-selectable-border-active};
-        --#{$prefix-bh}tag-label: #{$tag-selectable-label-active};
+  &.active {
+    --#{$prefix-bh}tag-background: #{$tag-selectable-background-active};
+    --#{$prefix-bh}tag-border: #{$tag-selectable-border-active};
+    --#{$prefix-bh}tag-label: #{$tag-selectable-label-active};
 
-        border-bottom-width: var(--#{$prefix-bh}tag-border-width);
-    }
+    border-bottom-width: var(--#{$prefix-bh}tag-border-width);
+  }
 
-    &:focus-visible {
-        outline-offset: 0.25rem;
-    }
+  &:focus-visible {
+    outline-offset: 0.25rem;
+  }
 
-    input {
-        display: none;
-    }
+  input {
+    display: none;
+  }
 }
 
 // Generate contextual modifier classes for colorizing toasts
 @each $state in map-keys($feedback-colours) {
-    .tag-status-#{$state} {
-        --#{$prefix-bh}tag-background: var(--#{$prefix-bh}feedback-background-#{$state});
-        --#{$prefix-bh}tag-border: var(--#{$prefix-bh}feedback-border-#{$state});
-        --#{$prefix-bh}tag-label: var(--#{$prefix-bh}feedback-message-#{$state});
-    }
+  .tag-status-#{$state} {
+    --#{$prefix-bh}tag-background: var(
+      --#{$prefix-bh}feedback-background-#{$state}
+    );
+    --#{$prefix-bh}tag-border: var(--#{$prefix-bh}feedback-border-#{$state});
+    --#{$prefix-bh}tag-label: var(--#{$prefix-bh}feedback-message-#{$state});
+  }
 }
 
 // Size
 .tag-sm:not(.tag-dismissible, .tag-selectable) {
-    --#{$prefix-bh}tag-padding-y:   #{$tag-padding-y-sm};
-    --#{$prefix-bh}tag-padding-x:   #{$tag-padding-x-sm};
-    --#{$prefix-bh}tag-height:      #{$tag-height-sm};
-    --#{$prefix-bh}tag-min-width:   #{$tag-min-width-sm};
-    @include type($action, "00");
+  --#{$prefix-bh}tag-padding-y: #{$tag-padding-y-sm};
+  --#{$prefix-bh}tag-padding-x: #{$tag-padding-x-sm};
+  --#{$prefix-bh}tag-height: #{$tag-height-sm};
+  --#{$prefix-bh}tag-min-width: #{$tag-min-width-sm};
+  @include type($action, "00");
 }
