@@ -3,66 +3,83 @@
 //
 
 .text-block {
-    --fa-width: auto; // Fix for Font Awesome icon widths
-    --#{$prefix-bh}eyebrow: #{$eyebrow};
+  --fa-width: auto; // Fix for Font Awesome icon widths
+  --#{$prefix-bh}eyebrow: #{$eyebrow};
 
-    // color: var(--body-color);
+  // color: var(--body-color);
 
-    .icon-block {
-        margin-bottom: $text-block-gap;
-    }
+  .icon-block {
+    margin-bottom: $text-block-gap;
+  }
 
-    .heading {
-        display: flex;
-        align-items: start;
-        justify-content: space-between;
-        gap: 1rem;
-    }
+  .heading {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 1rem;
+  }
 
-    p, h1, h2, h3, h4, h5, h6, .eyebrow, .heading-content {
-        max-width: var(--#{$prefix-bh}text-max-width);
-    }
+  .heading-align-top > *:not(.heading-content) {
+    align-self: flex-start;
+  }
 
-    [class^="display-"],
-    [class*=" display-"] {
-        margin-bottom: #{$display-margin-bottom};
-    }
+  .heading-align-center > *:not(.heading-content) {
+    align-self: center;
+  }
 
+  .heading-align-bottom > *:not(.heading-content) {
+    align-self: flex-end;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .eyebrow,
+  .heading-content {
+    max-width: var(--#{$prefix-bh}text-max-width);
+  }
+
+  [class^="display-"],
+  [class*=" display-"] {
+    margin-bottom: #{$display-margin-bottom};
+  }
 }
 
 .eyebrow {
-    @include type($body, "01");
-    color: var(--#{$prefix-bh}eyebrow);
-    margin-bottom: $text-block-gap;
-    display: block;
+  @include type($body, "01");
+  color: var(--#{$prefix-bh}eyebrow);
+  margin-bottom: $text-block-gap;
+  display: block;
 }
 
 .text-block-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-
 
 // Component spacing for paragraph and lists inside text block
 .text-block p ~ .list {
-    margin-top: $spacer-04;
+  margin-top: $spacer-04;
 }
 
 .text-block .list:has(~ p) {
-    margin-bottom: $spacer-04;
+  margin-bottom: $spacer-04;
 }
 
 .text-block .list {
-    margin-top: $paragraph-margin-top;
-    margin-bottom: $paragraph-margin-bottom;
+  margin-top: $paragraph-margin-top;
+  margin-bottom: $paragraph-margin-bottom;
 }
 
-
 // Utility class to remove max-width from text elements
-.no-text-max-width, 
+.no-text-max-width,
 .no-text-max-width * {
-    --#{$prefix-bh}text-max-width: none;
+  --#{$prefix-bh}text-max-width: none;
 }

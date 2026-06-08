@@ -7151,7 +7151,30 @@ a.tag {
   justify-content: space-between;
   gap: 1rem;
 }
-.text-block p, .text-block h1, .text-block .h1, .text-block h2, .text-block .h2, .text-block h3, .text-block .h3, .text-block h4, .text-block .h4, .text-block h5, .text-block .h5, .text-block h6, .text-block .h6, .text-block .eyebrow, .text-block .heading-content {
+.text-block .heading-align-top > *:not(.heading-content) {
+  align-self: flex-start;
+}
+.text-block .heading-align-center > *:not(.heading-content) {
+  align-self: center;
+}
+.text-block .heading-align-bottom > *:not(.heading-content) {
+  align-self: flex-end;
+}
+.text-block p,
+.text-block h1,
+.text-block .h1,
+.text-block h2,
+.text-block .h2,
+.text-block h3,
+.text-block .h3,
+.text-block h4,
+.text-block .h4,
+.text-block h5,
+.text-block .h5,
+.text-block h6,
+.text-block .h6,
+.text-block .eyebrow,
+.text-block .heading-content {
   max-width: var(--text-max-width);
 }
 .text-block [class^=display-],
