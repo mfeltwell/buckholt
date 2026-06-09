@@ -6558,7 +6558,6 @@ a.tag {
   flex-direction: column;
   min-width: 0;
   height: var(--card-height);
-  aspect-ratio: var(--card-aspect-ratio);
   color: inherit;
   word-wrap: break-word;
   background-color: var(--card-background);
@@ -6645,6 +6644,7 @@ a.tag {
 .card-img-bottom {
   width: 100%;
   height: var(--card-image-max-height);
+  aspect-ratio: var(--card-aspect-ratio);
   overflow: hidden;
   position: relative;
   border-top-left-radius: calc(var(--card-radius) - var(--card-border-width));

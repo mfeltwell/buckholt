@@ -40,7 +40,6 @@
   flex-direction: column;
   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
   height: var(--#{$prefix-bh}card-height);
-  aspect-ratio: var(--#{$prefix-bh}card-aspect-ratio);
   color: inherit;
   word-wrap: break-word;
   background-color: var(--#{$prefix-bh}card-background);
@@ -203,6 +202,7 @@
 .card-img-bottom {
   width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
   height: var(--#{$prefix-bh}card-image-max-height);
+  aspect-ratio: var(--#{$prefix-bh}card-aspect-ratio);
   overflow: hidden;
   position: relative;
   border-top-left-radius: calc(
