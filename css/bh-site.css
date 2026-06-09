@@ -4,66 +4,66 @@
   --white: #ffffff;
   --black: #1a1a1a;
   --transparent: transparent;
-  --neutral-10: #FBFBFB;
-  --neutral-20: #F7F7F7;
-  --neutral-30: #EFEFEF;
-  --neutral-40: #DADADA;
-  --neutral-50: #BABABA;
+  --neutral-10: #fbfbfb;
+  --neutral-20: #f7f7f7;
+  --neutral-30: #efefef;
+  --neutral-40: #dadada;
+  --neutral-50: #bababa;
   --neutral-60: #919191;
   --neutral-70: #707070;
   --neutral-80: #595959;
   --neutral-90: #454545;
-  --neutral-100: #2C2C2C;
-  --primary-10: #E7ECF9;
-  --primary-20: #B7C6EE;
-  --primary-30: #87A0E2;
-  --primary-40: #5F81DD;
-  --primary-50: #3F66D1;
-  --primary-60: #1748D0;
-  --primary-70: #0F40C5;
-  --primary-80: #0C339E;
+  --neutral-100: #2c2c2c;
+  --primary-10: #e7ecf9;
+  --primary-20: #b7c6ee;
+  --primary-30: #87a0e2;
+  --primary-40: #5f81dd;
+  --primary-50: #3f66d1;
+  --primary-60: #1748d0;
+  --primary-70: #0f40c5;
+  --primary-80: #0c339e;
   --primary-90: #092676;
-  --primary-100: #04133B;
-  --danger-10: #FBE7E8;
-  --danger-20: #F4B6B7;
-  --danger-30: #F09F9E;
-  --danger-40: #E86E6D;
-  --danger-50: #EE4949;
-  --danger-60: #D7050C;
-  --danger-70: #AE0A09;
+  --primary-100: #04133b;
+  --danger-10: #fbe7e8;
+  --danger-20: #f4b6b7;
+  --danger-30: #f09f9e;
+  --danger-40: #e86e6d;
+  --danger-50: #ee4949;
+  --danger-60: #d7050c;
+  --danger-70: #ae0a09;
   --danger-80: #820807;
   --danger-90: #590407;
-  --danger-100: #2A0202;
-  --caution-10: #FFF3E7;
-  --caution-20: #FFD7B3;
-  --caution-30: #FFBD80;
-  --caution-40: #FEA24D;
-  --caution-50: #FF9533;
-  --caution-60: #FF7A00;
-  --caution-70: #E66E00;
-  --caution-80: #B35400;
-  --caution-90: #7F3D00;
-  --caution-100: #4C2400;
-  --valid-10: #E7F3E7;
-  --valid-20: #B9DDB9;
-  --valid-30: #8AC48A;
-  --valid-40: #5DAC5B;
-  --valid-50: #46A144;
+  --danger-100: #2a0202;
+  --caution-10: #fff3e7;
+  --caution-20: #ffd7b3;
+  --caution-30: #ffbd80;
+  --caution-40: #fea24d;
+  --caution-50: #ff9533;
+  --caution-60: #ff7a00;
+  --caution-70: #e66e00;
+  --caution-80: #b35400;
+  --caution-90: #7f3d00;
+  --caution-100: #4c2400;
+  --valid-10: #e7f3e7;
+  --valid-20: #b9ddb9;
+  --valid-30: #8ac48a;
+  --valid-40: #5dac5b;
+  --valid-50: #46a144;
   --valid-60: #168914;
-  --valid-70: #136E11;
-  --valid-80: #0C520C;
+  --valid-70: #136e11;
+  --valid-80: #0c520c;
   --valid-90: #093708;
-  --valid-100: #041B04;
-  --info-10: #E7ECF9;
-  --info-20: #B7C6EE;
-  --info-30: #87A0E2;
-  --info-40: #5F81DD;
-  --info-50: #3F66D1;
-  --info-60: #1748D0;
-  --info-70: #0F40C5;
-  --info-80: #0C339E;
+  --valid-100: #041b04;
+  --info-10: #e7ecf9;
+  --info-20: #b7c6ee;
+  --info-30: #87a0e2;
+  --info-40: #5f81dd;
+  --info-50: #3f66d1;
+  --info-60: #1748d0;
+  --info-70: #0f40c5;
+  --info-80: #0c339e;
   --info-90: #092676;
-  --info-100: #04133B;
+  --info-100: #04133b;
   --accent-01-10: #EEEAFB;
   --accent-01-20: #CDC1F1;
   --accent-01-30: #AB98EA;
@@ -158,76 +158,76 @@
   --text-tertiary: #595959;
   --text-muted: rgba(26, 26, 26, 0.625);
   --text-light: #ffffff;
-  --text-active: #1748D0;
+  --text-active: #1748d0;
   --text-success: #168914;
-  --text-error: #D7050C;
+  --text-error: #d7050c;
   --ui-background-01: #ffffff;
-  --ui-background-02: #FBFBFB;
-  --ui-background-03: #F7F7F7;
-  --ui-background-04: #EFEFEF;
+  --ui-background-02: #fbfbfb;
+  --ui-background-03: #f7f7f7;
+  --ui-background-04: #efefef;
   --ui-overlay-01: rgba(26, 26, 26, 0.015);
   --ui-overlay-02: rgba(26, 26, 26, 0.04);
   --ui-overlay-03: rgba(26, 26, 26, 0.07);
   --ui-overlay-04: rgba(26, 26, 26, 0.48);
   --ui-border-01: #919191;
-  --ui-border-02: #DADADA;
+  --ui-border-02: #dadada;
   --ui-border-03: rgba(26, 26, 26, 0.07);
   --ui-border-04: #ffffff;
-  --action-01: #0F40C5;
-  --action-02: #3F66D1;
+  --action-01: #0f40c5;
+  --action-02: #3f66d1;
   --action-03: #092676;
   --action-04: rgba(15, 64, 197, 0.1);
   --action-05: rgba(26, 26, 26, 0.07);
   --action-06: #919191;
   --action-07: #ffffff;
-  --action-08: #04133B;
-  --action-text-01: #0F40C5;
+  --action-08: #04133b;
+  --action-text-01: #0f40c5;
   --action-text-02: #ffffff;
   --action-text-03: rgba(26, 26, 26, 0.625);
   --action-text-04: #595959;
   --action-text-05: #454545;
-  --action-danger-01: #D7050C;
-  --action-danger-02: #AE0A09;
+  --action-danger-01: #d7050c;
+  --action-danger-02: #ae0a09;
   --action-danger-03: #590407;
   --action-danger-04: rgba(215, 5, 12, 0.1);
-  --action-text-danger-01: #D7050C;
+  --action-text-danger-01: #d7050c;
   --disabled-overlay-01: rgba(26, 26, 26, 0.07);
   --disabled-overlay-02: rgba(26, 26, 26, 0.16);
   --disabled-overlay-03: rgba(26, 26, 26, 0.3);
-  --disabled-01: #EFEFEF;
-  --disabled-02: #DADADA;
-  --disabled-03: #BABABA;
+  --disabled-01: #efefef;
+  --disabled-02: #dadada;
+  --disabled-03: #bababa;
   --disabled-04: #ffffff;
-  --focus-01: #1748D0;
+  --focus-01: #1748d0;
   --success-01: #168914;
-  --error-01: #D7050C;
-  --feedback-background-info: #E7ECF9;
+  --error-01: #d7050c;
+  --feedback-background-info: #e7ecf9;
   --feedback-overlay-info: rgba(23, 72, 208, 0.1);
-  --feedback-border-info: #3F66D1;
-  --feedback-message-info: #1748D0;
-  --feedback-body-info: #04133B;
+  --feedback-border-info: #3f66d1;
+  --feedback-message-info: #1748d0;
+  --feedback-body-info: #04133b;
   --feedback-shadow-info: 4, 19, 59;
-  --feedback-background-success: #E7F3E7;
+  --feedback-background-success: #e7f3e7;
   --feedback-overlay-success: rgba(22, 137, 20, 0.1);
   --feedback-border-success: #168914;
-  --feedback-message-success: #136E11;
-  --feedback-body-success: #041B04;
+  --feedback-message-success: #136e11;
+  --feedback-body-success: #041b04;
   --feedback-shadow-success: 4, 27, 4;
-  --feedback-background-warning: #FFF3E7;
+  --feedback-background-warning: #fff3e7;
   --feedback-overlay-warning: rgba(255, 122, 0, 0.1);
-  --feedback-border-warning: #B35400;
-  --feedback-message-warning: #B35400;
-  --feedback-body-warning: #4C2400;
+  --feedback-border-warning: #b35400;
+  --feedback-message-warning: #b35400;
+  --feedback-body-warning: #4c2400;
   --feedback-shadow-warning: 76, 36, 0;
-  --feedback-background-error: #FBE7E8;
+  --feedback-background-error: #fbe7e8;
   --feedback-overlay-error: rgba(215, 5, 12, 0.1);
-  --feedback-border-error: #D7050C;
-  --feedback-message-error: #D7050C;
-  --feedback-body-error: #2A0202;
+  --feedback-border-error: #d7050c;
+  --feedback-message-error: #d7050c;
+  --feedback-body-error: #2a0202;
   --feedback-shadow-error: 42, 2, 2;
-  --expressive-pale: #E7ECF9;
-  --expressive-soft: #B7C6EE;
-  --expressive-deep: #1748D0;
+  --expressive-pale: #e7ecf9;
+  --expressive-soft: #b7c6ee;
+  --expressive-deep: #1748d0;
   --expressive-rich: #092676;
   --expressive-pale-overlay: rgba(15, 64, 197, 0.1);
   --expressive-soft-overlay: rgba(15, 64, 197, 0.3);
@@ -249,17 +249,17 @@
   --expressive-quaternary-rich: #053342;
   --expressive-quaternary-pale-overlay: rgba(14, 128, 164, 0.1);
   --expressive-quaternary-soft-overlay: rgba(14, 128, 164, 0.3);
-  --link-colour: #1748D0;
-  --link-icon: #1748D0;
+  --link-colour: #1748d0;
+  --link-icon: #1748d0;
   --link-decoration: underline;
-  --link-hover: #1748D0;
-  --link-icon-hover: #1748D0;
+  --link-hover: #1748d0;
+  --link-icon-hover: #1748d0;
   --link-active: #1a1a1a;
   --link-icon-active: #1a1a1a;
   --link-decoration-hover: none;
-  --link-visited: #1748D0;
-  --link-icon-visited: #1748D0;
-  --hr-color: #DADADA;
+  --link-visited: #1748d0;
+  --link-icon-visited: #1748d0;
+  --hr-color: #dadada;
   --font-sans-serif: "Proxima-soft", Arial, sans-serif;
   --body-font-family: var(--font-sans-serif);
   --font-weight-th: 100;
@@ -274,7 +274,7 @@
   --body-font-weight: 300;
   --body-line-height: 1.5;
   --body-color: #1a1a1a;
-  --body-background: #FBFBFB;
+  --body-background: #fbfbfb;
   --heading-color: inherit;
   --typescale-01: 0.75rem;
   --typescale-02: 0.875rem;
@@ -315,7 +315,7 @@
   --margin-05: 2rem;
   --border-width: 1px;
   --border-style: solid;
-  --border-color: #DADADA;
+  --border-color: #dadada;
   --border-radius-0: 0;
   --border-radius-xs: 0.25rem;
   --border-radius-sm: 0.375rem;
@@ -3713,8 +3713,8 @@ footer {
   --form-input-background: var(--ui-background-01);
   --form-input-text: var(--text-primary);
   --form-input-placeholder: var(--text-muted);
-  --form-input-border-focus: #1748D0;
-  --form-input-focus-ring: 0 0 0 1px #1748D0;
+  --form-input-border-focus: #1748d0;
+  --form-input-focus-ring: 0 0 0 1px #1748d0;
   --form-input-background-disabled: var(--disabled-overlay-01);
   --form-input-border-disabled: var(--disabled-overlay-02);
   --form-text-disabled: var(--disabled-overlay-03);
@@ -3826,8 +3826,8 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
   --form-input-button-background: var(--transparent);
   --form-input-button-background-hover: var(--action-04);
   --form-input-button-icon: var(--action-text-01);
-  --form-input-button-border-focus: #1748D0;
-  --form-input-button-focus-ring: 0 0 0 1px #1748D0;
+  --form-input-button-border-focus: #1748d0;
+  --form-input-button-focus-ring: 0 0 0 1px #1748d0;
   height: var(--form-input-button-height);
   width: var(--form-input-button-width);
   border-radius: var(--form-input-button-radius);
@@ -3899,8 +3899,8 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
   --form-select-background: var(--ui-background-01);
   --form-select-border: var(--ui-border-01);
   --form-select-text: var(--text-primary);
-  --form-select-border-focus: #1748D0;
-  --form-select-focus-ring: 0 0 0 1px #1748D0;
+  --form-select-border-focus: #1748d0;
+  --form-select-focus-ring: 0 0 0 1px #1748d0;
   --form-select-background-disabled: var(--disabled-overlay-01);
   --form-select-border-disabled: var(--disabled-overlay-02);
   --form-select-text-disabled: var(--disabled-overlay-03);
@@ -3971,7 +3971,7 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
   --form-check-input-background: var(--ui-background-01);
   --form-check-input-border: var(--action-01);
   --form-check-input-border-width: 1px;
-  --form-check-input-focus: 0 0 0 1px #ffffff, 0 0 0 3px #1748D0;
+  --form-check-input-focus: 0 0 0 1px #ffffff, 0 0 0 3px #1748d0;
   --form-check-input-background-active: var(--action-01);
   --form-check-input-border-active: var(--action-01);
   --form-check-input-background-disabled: var(--disabled-overlay-02);
@@ -4284,13 +4284,13 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
 }
 
 .slider-wrapper {
-  --form-slider-focus-ring: 0 0 0 0.1875rem #1748D0;
-  --form-slider-handle-expand: 0 0 0 0.1875rem #0F40C5;
+  --form-slider-focus-ring: 0 0 0 0.1875rem #1748d0;
+  --form-slider-handle-expand: 0 0 0 0.1875rem #0f40c5;
   --form-slider-handle-width: 0.875rem;
   --form-slider-handle-height: 0.875rem;
   --form-slider-track-background: rgba(26, 26, 26, 0.07);
-  --form-slider-handle-background: #0F40C5;
-  --form-slider-filled-background: #0F40C5;
+  --form-slider-handle-background: #0f40c5;
+  --form-slider-filled-background: #0f40c5;
   width: 100%;
   position: relative;
   background-color: var(--form-slider-track-background);
@@ -4312,8 +4312,8 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
 .form-slider.is-invalid {
   --form-slider-filled-background: var(--error-01);
   --form-slider-handle-background: var(--error-01);
-  --form-slider-focus-ring: 0 0 0 0.1875rem #D7050C;
-  --form-slider-handle-expand: 0 0 0 0.1875rem #D7050C;
+  --form-slider-focus-ring: 0 0 0 0.1875rem #d7050c;
+  --form-slider-handle-expand: 0 0 0 0.1875rem #d7050c;
 }
 .form-slider:hover::-webkit-slider-thumb {
   box-shadow: var(--form-slider-handle-expand);
@@ -4386,8 +4386,8 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
   border-radius: 625rem;
 }
 .form-slider:disabled {
-  --form-slider-filled-background: #BABABA;
-  --form-slider-handle-background: #BABABA;
+  --form-slider-filled-background: #bababa;
+  --form-slider-handle-background: #bababa;
   pointer-events: none;
 }
 .form-slider:disabled::-webkit-slider-runnable-track {
@@ -4453,8 +4453,8 @@ output {
   padding: 0.25rem 0.5rem;
   color: #1a1a1a;
   text-align: center;
-  background-color: #F7F7F7;
-  border: 1px solid #DADADA;
+  background-color: #f7f7f7;
+  border: 1px solid #dadada;
   border-radius: 0.375rem;
   box-shadow: 0 1px 3px 0 rgba(var(--shadow-colour), 0.1), 0 1px 2px -1px rgba(var(--shadow-colour), 0.1);
   margin-bottom: 0.3125rem;
@@ -4658,7 +4658,7 @@ output {
 }
 .invalid-feedback::before {
   content: "";
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%23D7050C'%3e%3c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%23d7050c'%3e%3c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z'/%3e%3c/svg%3e");
   background-size: 0.875rem;
   background-repeat: no-repeat;
   background-position: center;
@@ -4684,7 +4684,7 @@ output {
 }
 .was-validated .form-control:invalid:not(textarea):not(:is(.form-control, .form-search:not(.form-search-dropdown), .form-select, .dropdown-toggle, .form-search.form-search-dropdown) + :is(.form-control, .form-search:not(.form-search-dropdown), .form-select, .dropdown-toggle, .form-search.form-search-dropdown)), .was-validated .form-search:invalid:not(textarea):not(:is(.form-control, .form-search:not(.form-search-dropdown), .form-select, .dropdown-toggle, .form-search.form-search-dropdown) + :is(.form-control, .form-search:not(.form-search-dropdown), .form-select, .dropdown-toggle, .form-search.form-search-dropdown)):not(.form-search-dropdown), .form-control.is-invalid:not(textarea):not(:is(.form-control, .form-search:not(.form-search-dropdown), .form-select, .dropdown-toggle, .form-search.form-search-dropdown) + :is(.form-control, .form-search:not(.form-search-dropdown), .form-select, .dropdown-toggle, .form-search.form-search-dropdown)), .is-invalid.form-search:not(textarea):not(:is(.form-control, .form-search:not(.form-search-dropdown), .form-select, .dropdown-toggle, .form-search.form-search-dropdown) + :is(.form-control, .form-search:not(.form-search-dropdown), .form-select, .dropdown-toggle, .form-search.form-search-dropdown)):not(.form-search-dropdown) {
   padding-left: 2.5rem;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%23D7050C'%3e%3c!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license %28Commercial License%29 Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%23d7050c'%3e%3c!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license %28Commercial License%29 Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: left 1rem center;
   background-size: auto 1rem;
@@ -4956,7 +4956,7 @@ output {
   margin-top: -0.5rem;
   padding: 0.5rem 0;
   padding-left: 2rem;
-  border-left: 0.125rem solid #1748D0;
+  border-left: 0.125rem solid #1748d0;
 }
 
 .dropup,
@@ -5007,7 +5007,7 @@ output {
   --dropdown-item-label-hover: #454545;
   --dropdown-item-background-hover: rgba(26, 26, 26, 0.07);
   --dropdown-item-border-hover: transparent;
-  --dropdown-item-label-active: #0F40C5;
+  --dropdown-item-label-active: #0f40c5;
   --dropdown-item-background-active: rgba(15, 64, 197, 0.1);
   --dropdown-item-border-active: transparent;
   --dropdown-item-label-disabled: rgba(26, 26, 26, 0.3);
@@ -5262,7 +5262,7 @@ output {
 .dropdown-item:focus-visible,
 .dropdown-link:focus-visible {
   outline: 0;
-  box-shadow: 0 0 0 0.125rem #1748D0;
+  box-shadow: 0 0 0 0.125rem #1748d0;
 }
 .dropdown-item.active:not(.dropdown-link), .dropdown-item:active:not(.dropdown-link),
 .dropdown-link.active:not(.dropdown-link),
@@ -5275,7 +5275,7 @@ output {
 .dropdown-item.active:not(.dropdown-link):not(:has([type=checkbox])), .dropdown-item:active:not(.dropdown-link):not(:has([type=checkbox])),
 .dropdown-link.active:not(.dropdown-link):not(:has([type=checkbox])),
 .dropdown-link:active:not(.dropdown-link):not(:has([type=checkbox])) {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='%230F40C5'%3e%3c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='%230f40c5'%3e%3c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: auto 1rem;
@@ -5358,7 +5358,7 @@ output {
   --button-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(26, 26, 26, 0.075);
   --button-border-hover: transparent;
   --button-disabled-opacity: 0.65;
-  --button-shadow-focus: 0 0 0 0.125rem #1748D0;
+  --button-shadow-focus: 0 0 0 0.125rem #1748d0;
   --button-height: 2.5rem;
   --button-min-width: 4rem;
   --icon-button-width: 2.5rem;
@@ -5824,7 +5824,7 @@ fieldset:disabled .carousel-control-next {
   --btn-close-height: 2rem;
   --btn-close-icon: rgba(26, 26, 26, 0.625);
   --btn-close-icon-size: 1rem;
-  --btn-close-focus-ring: 0 0 0 0.125rem #1748D0;
+  --btn-close-focus-ring: 0 0 0 0.125rem #1748d0;
   --btn-close-radius: 0.375rem;
   --btn-close-background: transparent;
   --btn-close-opacity: 0.5;
@@ -6239,7 +6239,7 @@ a.tag {
 .tag-selectable.active {
   --tag-background: rgba(15, 64, 197, 0.1);
   --tag-border: rgba(15, 64, 197, 0.1);
-  --tag-label: #0F40C5;
+  --tag-label: #0f40c5;
   border-bottom-width: var(--tag-border-width);
 }
 .tag-selectable:focus-visible {
@@ -6350,7 +6350,7 @@ a.tag {
 .nav-link:focus-visible {
   outline: 0;
   border-color: var(--nav-link-border-focus);
-  box-shadow: 0 0 0 0.125rem #1748D0;
+  box-shadow: 0 0 0 0.125rem #1748d0;
   text-decoration: none;
 }
 .nav-link.active {
@@ -6390,11 +6390,11 @@ a.tag {
   --nav-underline-label: rgba(26, 26, 26, 0.625);
   --nav-underline-label-hover: #454545;
   --nav-underline-link-background-hover: rgba(26, 26, 26, 0.07);
-  --nav-underline-label-active: #0F40C5;
+  --nav-underline-label-active: #0f40c5;
   --nav-underline-link-radius: 0.375rem;
   --nav-underline-link-border: transparent;
   --nav-underline-link-height: 2.5rem;
-  --nav-underline-items-border: #DADADA;
+  --nav-underline-items-border: #dadada;
   --nav-underline-items-border-width: 1px;
 }
 .nav-underline.nav {
@@ -6445,7 +6445,7 @@ a.tag {
   --nav-underline-link-border: #919191;
 }
 .nav-underline .nav-link:focus-visible {
-  box-shadow: inset 0 0 0 0.125rem #1748D0;
+  box-shadow: inset 0 0 0 0.125rem #1748d0;
 }
 .nav-underline .nav-link:disabled {
   --nav-underline-label: rgba(26, 26, 26, 0.3);
@@ -6457,7 +6457,7 @@ a.tag {
 }
 .nav-underline .nav-link.active::after,
 .nav-underline .show > .nav-link::after {
-  --nav-underline-link-border: #0F40C5;
+  --nav-underline-link-border: #0f40c5;
 }
 
 .nav-fill > .nav-link,
@@ -6550,6 +6550,7 @@ a.tag {
   --card-image-max-height: 10rem;
   --bs-card-box-shadow: ;
   --card-height: 100%;
+  --card-aspect-ratio: ;
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 1rem;
   position: relative;
@@ -6557,6 +6558,7 @@ a.tag {
   flex-direction: column;
   min-width: 0;
   height: var(--card-height);
+  aspect-ratio: var(--card-aspect-ratio);
   color: inherit;
   word-wrap: break-word;
   background-color: var(--card-background);
@@ -6758,7 +6760,7 @@ a.tag {
   transition: 0.15s ease-in-out;
 }
 .card-clickable:hover {
-  --card-border: #1748D0;
+  --card-border: #1748d0;
 }
 .card-clickable:hover .card-body::after {
   margin-left: 0.25rem;
@@ -6783,17 +6785,17 @@ a.tag {
   --card-border-secondary: var(--ui-border-02);
 }
 .card-clickable.card-secondary:hover {
-  --card-border-secondary: #1748D0;
+  --card-border-secondary: #1748d0;
 }
 
 .card-selectable {
-  --card-selectable-focus-ring: 0 0 0 1px #ffffff, 0 0 0 3px #1748D0;
+  --card-selectable-focus-ring: 0 0 0 1px #ffffff, 0 0 0 3px #1748d0;
   cursor: pointer;
   border-bottom-width: 3px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .card-selectable:hover {
-  --card-border: #1748D0;
+  --card-border: #1748d0;
 }
 .card-selectable .card-body {
   padding-right: calc(var(--card-padding-x) + 1rem);
@@ -6805,7 +6807,7 @@ a.tag {
 }
 .card-selectable.active {
   --card-background: rgba(15, 64, 197, 0.1);
-  --card-border: #0F40C5;
+  --card-border: #0f40c5;
 }
 .card-selectable:has(.form-check-input:focus) {
   box-shadow: var(--card-selectable-focus-ring);
@@ -6887,7 +6889,7 @@ a.tag {
   color: var(--disabled-03);
 }
 [data-bs-theme=dark] .card-selectable {
-  --card-selectable-focus-ring: 0 0 0 1px #ffffff, 0 0 0 3px #1748D0;
+  --card-selectable-focus-ring: 0 0 0 1px #ffffff, 0 0 0 3px #1748d0;
 }
 [data-bs-theme=dark] .card-selectable:hover {
   --card-border: var(--link-hover);
@@ -6900,7 +6902,7 @@ a.tag {
 .accordion {
   --accordion-spacing: 0.25rem;
   --accordion-background: #ffffff;
-  --accordion-border: #DADADA;
+  --accordion-border: #dadada;
   --accordion-border-width: 1px;
   --accordion-radius: 0.5rem;
   --accordion-text: #1a1a1a;
@@ -6918,7 +6920,7 @@ a.tag {
   --accordion-body-padding-bottom: 1.5rem;
   --accordion-body-spacing: 1.5rem;
   --accordion-text-active: #1a1a1a;
-  --accordion-focus-ring: 0 0 0 1px #1748D0;
+  --accordion-focus-ring: 0 0 0 1px #1748d0;
   --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
@@ -7002,7 +7004,7 @@ a.tag {
   overflow: hidden;
 }
 .accordion-item:has(.accordion-button:focus) {
-  --accordion-border: #1748D0;
+  --accordion-border: #1748d0;
   box-shadow: var(--accordion-focus-ring);
 }
 
@@ -7088,11 +7090,11 @@ a.tag {
   --icon-block-background: var(--expressive-rich);
 }
 .icon-block.feedback-success {
-  --icon-block-icon: #136E11;
+  --icon-block-icon: #136e11;
   --icon-block-background: rgba(22, 137, 20, 0.1);
 }
 .icon-block.feedback-error {
-  --icon-block-icon: #D7050C;
+  --icon-block-icon: #d7050c;
   --icon-block-background: rgba(215, 5, 12, 0.1);
 }
 
@@ -7325,7 +7327,7 @@ a.tag {
   --menu-item-label-hover: #454545;
   --menu-item-background-hover: rgba(26, 26, 26, 0.07);
   --menu-item-border-hover: transparent;
-  --menu-item-label-active: #0F40C5;
+  --menu-item-label-active: #0f40c5;
   --menu-item-background-active: rgba(15, 64, 197, 0.1);
   --menu-item-border-active: transparent;
   --menu-item-label-disabled: rgba(26, 26, 26, 0.3);
@@ -7423,7 +7425,7 @@ a.tag {
 }
 .menu-item:focus-visible {
   outline: 0;
-  box-shadow: 0 0 0 0.125rem #1748D0;
+  box-shadow: 0 0 0 0.125rem #1748d0;
   text-decoration: none;
 }
 .menu-item:active {
@@ -7480,7 +7482,7 @@ a.tag {
 }
 .submenu [type=radio] ~ .menu-item:active,
 .submenu [type=checkbox] ~ .menu-item:active {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='%230F40C5'%3e%3c!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license %28Commercial License%29 Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M441 103c9.4 9.4 9.4 24.6 0 33.9L177 401c-9.4 9.4-24.6 9.4-33.9 0L7 265c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l119 119L407 103c9.4-9.4 24.6-9.4 33.9 0z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='%230f40c5'%3e%3c!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license %28Commercial License%29 Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M441 103c9.4 9.4 9.4 24.6 0 33.9L177 401c-9.4 9.4-24.6 9.4-33.9 0L7 265c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l119 119L407 103c9.4-9.4 24.6-9.4 33.9 0z'/%3e%3c/svg%3e");
 }
 
 .submenu-toggle {
@@ -7515,7 +7517,7 @@ a.tag {
   position: relative;
 }
 .menu-item-danger {
-  --menu-item-label-hover: #D7050C;
+  --menu-item-label-hover: #d7050c;
   --menu-item-background-hover: rgba(215, 5, 12, 0.1);
   --menu-item-border-hover: transparent;
 }
@@ -7864,10 +7866,10 @@ a.tag {
 }
 
 .stepper {
-  --stepper-item: #1748D0;
-  --stepper-item-connector: #3F66D1;
-  --stepper-icon-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%231748D0'%3e%3c!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z'/%3e%3c/svg%3e");
-  --sub-stepper-icon-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='%231748D0'%3e%3c!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license %28Commercial License%29 Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M272 256A112 112 0 1 0 48 256a112 112 0 1 0 224 0zM0 256a160 160 0 1 1 320 0A160 160 0 1 1 0 256z'/%3e%3c/svg%3e");
+  --stepper-item: #1748d0;
+  --stepper-item-connector: #3f66d1;
+  --stepper-icon-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%231748d0'%3e%3c!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z'/%3e%3c/svg%3e");
+  --sub-stepper-icon-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='%231748d0'%3e%3c!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license %28Commercial License%29 Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M272 256A112 112 0 1 0 48 256a112 112 0 1 0 224 0zM0 256a160 160 0 1 1 320 0A160 160 0 1 1 0 256z'/%3e%3c/svg%3e");
   --stepper-icon-background: transparent;
   --stepper-icon-size: 1rem;
   margin: 0;
@@ -7905,7 +7907,7 @@ a.tag {
   display: none;
 }
 .stepper-item.active {
-  --stepper-icon-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%231748D0'%3e%3c!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license %28Commercial License%29 Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M36.4 360.9L13.4 439 1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1L73 498.6l78.1-23c10.4-3 20.1-8 28.6-14.5l.3 .2 .5-.8c1.4-1.1 2.7-2.2 4-3.3c1.4-1.2 2.7-2.5 4-3.8L492.7 149.3c21.9-21.9 24.6-55.6 8.2-80.5c-2.3-3.5-5.1-6.9-8.2-10L453.3 19.3c-25-25-65.5-25-90.5 0L58.6 323.5c-2.5 2.5-4.9 5.2-7.1 8l-.8 .5 .2 .3c-6.5 8.5-11.4 18.2-14.5 28.6zM383 191L197.4 376.6l-49.6-12.4-12.4-49.6L321 129 383 191zM97 358.9l7.7 31c2.1 8.6 8.9 15.3 17.5 17.5l31 7.7-7.4 11.2c-2.6 1.4-5.3 2.6-8.1 3.4l-23.4 6.9L59.4 452.6l16.1-54.8 6.9-23.4c.8-2.8 2-5.6 3.4-8.1L97 358.9zM315.3 218.7c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0l-96 96c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l96-96z'/%3e%3c/svg%3e");
+  --stepper-icon-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%231748d0'%3e%3c!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license %28Commercial License%29 Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M36.4 360.9L13.4 439 1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1L73 498.6l78.1-23c10.4-3 20.1-8 28.6-14.5l.3 .2 .5-.8c1.4-1.1 2.7-2.2 4-3.3c1.4-1.2 2.7-2.5 4-3.8L492.7 149.3c21.9-21.9 24.6-55.6 8.2-80.5c-2.3-3.5-5.1-6.9-8.2-10L453.3 19.3c-25-25-65.5-25-90.5 0L58.6 323.5c-2.5 2.5-4.9 5.2-7.1 8l-.8 .5 .2 .3c-6.5 8.5-11.4 18.2-14.5 28.6zM383 191L197.4 376.6l-49.6-12.4-12.4-49.6L321 129 383 191zM97 358.9l7.7 31c2.1 8.6 8.9 15.3 17.5 17.5l31 7.7-7.4 11.2c-2.6 1.4-5.3 2.6-8.1 3.4l-23.4 6.9L59.4 452.6l16.1-54.8 6.9-23.4c.8-2.8 2-5.6 3.4-8.1L97 358.9zM315.3 218.7c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0l-96 96c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l96-96z'/%3e%3c/svg%3e");
   --stepper-icon-background: rgba(23, 72, 208, 0.1);
 }
 .stepper-item.success {
@@ -7939,7 +7941,7 @@ a.tag {
 }
 
 .sub-stepper {
-  --stepper-item: #1748D0;
+  --stepper-item: #1748d0;
   --stepper-icon-size: 1rem;
   padding: 0;
   width: 100%;
@@ -7957,15 +7959,15 @@ a.tag {
   top: -0.5rem;
 }
 .sub-stepper .stepper-item.active {
-  --sub-stepper-icon-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='%231748D0'%3e%3c!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license %28Commercial License%29 Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M0 256a160 160 0 1 1 320 0A160 160 0 1 1 0 256z'/%3e%3c/svg%3e");
+  --sub-stepper-icon-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='%231748d0'%3e%3c!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license %28Commercial License%29 Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M0 256a160 160 0 1 1 320 0A160 160 0 1 1 0 256z'/%3e%3c/svg%3e");
 }
 .sub-stepper .stepper-item.success {
-  --sub-stepper-icon-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='%231748D0'%3e%3c!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license %28Commercial License%29 Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M441 103c9.4 9.4 9.4 24.6 0 33.9L177 401c-9.4 9.4-24.6 9.4-33.9 0L7 265c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l119 119L407 103c9.4-9.4 24.6-9.4 33.9 0z'/%3e%3c/svg%3e");
+  --sub-stepper-icon-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='%231748d0'%3e%3c!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license %28Commercial License%29 Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M441 103c9.4 9.4 9.4 24.6 0 33.9L177 401c-9.4 9.4-24.6 9.4-33.9 0L7 265c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l119 119L407 103c9.4-9.4 24.6-9.4 33.9 0z'/%3e%3c/svg%3e");
   --stepper-icon-size: 1rem;
-  --stepper-item: #1748D0;
+  --stepper-item: #1748d0;
 }
 .sub-stepper .stepper-item.success + .stepper-item::before {
-  --stepper-item-connector: #3F66D1;
+  --stepper-item-connector: #3f66d1;
 }
 .sub-stepper .stepper-item.disabled {
   --sub-stepper-icon-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='rgba%2826, 26, 26, 0.3%29'%3e%3c!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license %28Commercial License%29 Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M272 256A112 112 0 1 0 48 256a112 112 0 1 0 224 0zM0 256a160 160 0 1 1 320 0A160 160 0 1 1 0 256z'/%3e%3c/svg%3e");
@@ -8295,8 +8297,8 @@ a.tag {
   --tooltip-padding-y: 0.25rem;
   --tooltip-margin: ;
   --tooltip-label: #1a1a1a;
-  --tooltip-background: #F7F7F7;
-  --tooltip-border: #DADADA;
+  --tooltip-background: #f7f7f7;
+  --tooltip-border: #dadada;
   --tooltip-border-width: 1px;
   --tooltip-radius: 0.375rem;
   --tooltip-shadow: 0 1px 3px 0 rgba(var(--shadow-colour), 0.1), 0 1px 2px -1px rgba(var(--shadow-colour), 0.1);
@@ -8387,7 +8389,7 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   text-decoration-style: dotted;
   text-underline-offset: 2px;
   color: inherit;
-  text-decoration-color: #1748D0;
+  text-decoration-color: #1748d0;
 }
 
 @keyframes progress-bar-stripes {
@@ -8468,9 +8470,9 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
 }
 .progress.is-invalid,
 .progress-stacked.is-invalid {
-  --progress-background: #FBE7E8;
+  --progress-background: #fbe7e8;
   --progress-border: rgba(215, 5, 12, 0.1);
-  --progress-bar-background: #D7050C;
+  --progress-bar-background: #d7050c;
 }
 .progress.is-invalid ~ .progress-helper,
 .progress-stacked.is-invalid ~ .progress-helper {
@@ -8486,7 +8488,7 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
 }
 .progress.is-valid,
 .progress-stacked.is-valid {
-  --progress-background: #E7F3E7;
+  --progress-background: #e7f3e7;
   --progress-border: rgba(22, 137, 20, 0.1);
   --progress-bar-background: #168914;
 }
@@ -8572,9 +8574,9 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   }
 }
 .progress-inactive {
-  --progress-background: #DADADA;
+  --progress-background: #dadada;
   --progress-border: rgba(26, 26, 26, 0.07);
-  --progress-bar-background: #BABABA;
+  --progress-bar-background: #bababa;
 }
 .progress-inactive .progress-bar {
   width: 100% !important;
@@ -8774,7 +8776,7 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   --versatile-body-gap: 1rem;
   --versatile-actions-gap: 1rem;
   --versatile-radius: 0.5rem;
-  --versatile-border: #DADADA;
+  --versatile-border: #dadada;
   --versatile-border-width: 1px;
   --versatile-background: rgba(26, 26, 26, 0.015);
   --versatile-text: var(--body-color);
@@ -16916,10 +16918,10 @@ th:has(.table-sort) {
 .link-hover {
   text-decoration: none;
   position: relative;
-  color: #1748D0 !important;
+  color: #1748d0 !important;
 }
 .link-hover .icon {
-  color: #1748D0 !important;
+  color: #1748d0 !important;
 }
 .link-hover::after {
   content: url(../images/pointer.png);
@@ -16937,10 +16939,10 @@ th:has(.table-sort) {
   text-decoration: underline !important;
   border-radius: 1px;
   outline: var(--focus-01) auto 1px;
-  color: #1748D0 !important;
+  color: #1748d0 !important;
 }
 .link-focus .icon {
-  color: #1748D0 !important;
+  color: #1748d0 !important;
 }
 
 .link-active {

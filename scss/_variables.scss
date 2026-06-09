@@ -1,334 +1,337 @@
 // Prefix for :root CSS variables
-$prefix-bh: '' !default;
+$prefix-bh: "" !default;
 
 // Colour stuff _____________________________________________________________________________________________________________________
 
 // Neutral ______________________________
 // Base __________
-$white:     #ffffff !default;
-$black:     #1a1a1a !default;
+$white: #ffffff !default;
+$black: #1a1a1a !default;
 $transparent: transparent !default;
 
 // Neutral __________
-$neutral-10:   #FBFBFB !default;
-$neutral-20:   #F7F7F7 !default;
-$neutral-30:   #EFEFEF !default;
-$neutral-40:   #DADADA !default;
-$neutral-50:   #BABABA !default;
-$neutral-60:   #919191 !default;
-$neutral-70:   #707070 !default;
-$neutral-80:   #595959 !default;
-$neutral-90:   #454545 !default;
-$neutral-100:  #2C2C2C !default;
+$neutral-10: #fbfbfb !default;
+$neutral-20: #f7f7f7 !default;
+$neutral-30: #efefef !default;
+$neutral-40: #dadada !default;
+$neutral-50: #bababa !default;
+$neutral-60: #919191 !default;
+$neutral-70: #707070 !default;
+$neutral-80: #595959 !default;
+$neutral-90: #454545 !default;
+$neutral-100: #2c2c2c !default;
 
 $neutral-palette: (
-  "10":     $neutral-10,
-  "20":     $neutral-20,
-  "30":     $neutral-30,
-  "40":     $neutral-40,
-  "50":     $neutral-50,
-  "60":     $neutral-60,
-  "70":     $neutral-70,
-  "80":     $neutral-80,
-  "90":     $neutral-90,
-  "100":    $neutral-100
+  "10": $neutral-10,
+  "20": $neutral-20,
+  "30": $neutral-30,
+  "40": $neutral-40,
+  "50": $neutral-50,
+  "60": $neutral-60,
+  "70": $neutral-70,
+  "80": $neutral-80,
+  "90": $neutral-90,
+  "100": $neutral-100,
 ) !default;
 
 // primary ______________________________
-$primary-10:        #E7ECF9 !default;
-$primary-20:        #B7C6EE !default;
-$primary-30:        #87A0E2 !default;
-$primary-40:        #5F81DD !default;
-$primary-50:        #3F66D1 !default;
-$primary-60:        #1748D0 !default;
-$primary-70:        #0F40C5 !default;
-$primary-80:        #0C339E !default;
-$primary-90:        #092676 !default;
-$primary-100:       #04133B !default;
+$primary-10: #e7ecf9 !default;
+$primary-20: #b7c6ee !default;
+$primary-30: #87a0e2 !default;
+$primary-40: #5f81dd !default;
+$primary-50: #3f66d1 !default;
+$primary-60: #1748d0 !default;
+$primary-70: #0f40c5 !default;
+$primary-80: #0c339e !default;
+$primary-90: #092676 !default;
+$primary-100: #04133b !default;
 
 $primary-palette: (
-  "10":     $primary-10,
-  "20":     $primary-20,
-  "30":     $primary-30,
-  "40":     $primary-40,
-  "50":     $primary-50,
-  "60":     $primary-60,
-  "70":     $primary-70,
-  "80":     $primary-80,
-  "90":     $primary-90,
-  "100":    $primary-100
+  "10": $primary-10,
+  "20": $primary-20,
+  "30": $primary-30,
+  "40": $primary-40,
+  "50": $primary-50,
+  "60": $primary-60,
+  "70": $primary-70,
+  "80": $primary-80,
+  "90": $primary-90,
+  "100": $primary-100,
 ) !default;
 
 // Generate css variable map version
-$primary-palette-vars: generate-css-var-map("primary", $primary-palette) !default;
+$primary-palette-vars: generate-css-var-map(
+  "primary",
+  $primary-palette
+) !default;
 
 // System _______________________________
 // danger ___________
-$danger-10:         #FBE7E8 !default;
-$danger-20:         #F4B6B7 !default;
-$danger-30:         #F09F9E !default;
-$danger-40:         #E86E6D !default;
-$danger-50:         #EE4949 !default;
-$danger-60:         #D7050C !default;
-$danger-70:         #AE0A09 !default;
-$danger-80:         #820807 !default;
-$danger-90:         #590407 !default;
-$danger-100:        #2A0202 !default;
+$danger-10: #fbe7e8 !default;
+$danger-20: #f4b6b7 !default;
+$danger-30: #f09f9e !default;
+$danger-40: #e86e6d !default;
+$danger-50: #ee4949 !default;
+$danger-60: #d7050c !default;
+$danger-70: #ae0a09 !default;
+$danger-80: #820807 !default;
+$danger-90: #590407 !default;
+$danger-100: #2a0202 !default;
 
 $danger-palette: (
-  "10":     $danger-10,
-  "20":     $danger-20,
-  "30":     $danger-30,
-  "40":     $danger-40,
-  "50":     $danger-50,
-  "60":     $danger-60,
-  "70":     $danger-70,
-  "80":     $danger-80,
-  "90":     $danger-90,
-  "100":    $danger-100
+  "10": $danger-10,
+  "20": $danger-20,
+  "30": $danger-30,
+  "40": $danger-40,
+  "50": $danger-50,
+  "60": $danger-60,
+  "70": $danger-70,
+  "80": $danger-80,
+  "90": $danger-90,
+  "100": $danger-100,
 ) !default;
 
 // caution ________
-$caution-10:      #FFF3E7 !default;
-$caution-20:      #FFD7B3 !default;
-$caution-30:      #FFBD80 !default;
-$caution-40:      #FEA24D !default;
-$caution-50:      #FF9533 !default;
-$caution-60:      #FF7A00 !default;
-$caution-70:      #E66E00 !default;
-$caution-80:      #B35400 !default;
-$caution-90:      #7F3D00 !default;
-$caution-100:     #4C2400 !default;
+$caution-10: #fff3e7 !default;
+$caution-20: #ffd7b3 !default;
+$caution-30: #ffbd80 !default;
+$caution-40: #fea24d !default;
+$caution-50: #ff9533 !default;
+$caution-60: #ff7a00 !default;
+$caution-70: #e66e00 !default;
+$caution-80: #b35400 !default;
+$caution-90: #7f3d00 !default;
+$caution-100: #4c2400 !default;
 
 $caution-palette: (
-  "10":     $caution-10,
-  "20":     $caution-20,
-  "30":     $caution-30,
-  "40":     $caution-40,
-  "50":     $caution-50,
-  "60":     $caution-60,
-  "70":     $caution-70,
-  "80":     $caution-80,
-  "90":     $caution-90,
-  "100":    $caution-100
+  "10": $caution-10,
+  "20": $caution-20,
+  "30": $caution-30,
+  "40": $caution-40,
+  "50": $caution-50,
+  "60": $caution-60,
+  "70": $caution-70,
+  "80": $caution-80,
+  "90": $caution-90,
+  "100": $caution-100,
 ) !default;
 
 // valid _________
-$valid-10:       #E7F3E7 !default;
-$valid-20:       #B9DDB9 !default;
-$valid-30:       #8AC48A !default;
-$valid-40:       #5DAC5B !default;
-$valid-50:       #46A144 !default;
-$valid-60:       #168914 !default;
-$valid-70:       #136E11 !default;
-$valid-80:       #0C520C !default;
-$valid-90:       #093708 !default;
-$valid-100:      #041B04 !default;
+$valid-10: #e7f3e7 !default;
+$valid-20: #b9ddb9 !default;
+$valid-30: #8ac48a !default;
+$valid-40: #5dac5b !default;
+$valid-50: #46a144 !default;
+$valid-60: #168914 !default;
+$valid-70: #136e11 !default;
+$valid-80: #0c520c !default;
+$valid-90: #093708 !default;
+$valid-100: #041b04 !default;
 
 $valid-palette: (
-  "10":     $valid-10,
-  "20":     $valid-20,
-  "30":     $valid-30,
-  "40":     $valid-40,
-  "50":     $valid-50,
-  "60":     $valid-60,
-  "70":     $valid-70,
-  "80":     $valid-80,
-  "90":     $valid-90,
-  "100":    $valid-100
+  "10": $valid-10,
+  "20": $valid-20,
+  "30": $valid-30,
+  "40": $valid-40,
+  "50": $valid-50,
+  "60": $valid-60,
+  "70": $valid-70,
+  "80": $valid-80,
+  "90": $valid-90,
+  "100": $valid-100,
 ) !default;
 
 // Info ______________________________
-$info-10:        #E7ECF9 !default;
-$info-20:        #B7C6EE !default;
-$info-30:        #87A0E2 !default;
-$info-40:        #5F81DD !default;
-$info-50:        #3F66D1 !default;
-$info-60:        #1748D0 !default;
-$info-70:        #0F40C5 !default;
-$info-80:        #0C339E !default;
-$info-90:        #092676 !default;
-$info-100:       #04133B !default;
+$info-10: #e7ecf9 !default;
+$info-20: #b7c6ee !default;
+$info-30: #87a0e2 !default;
+$info-40: #5f81dd !default;
+$info-50: #3f66d1 !default;
+$info-60: #1748d0 !default;
+$info-70: #0f40c5 !default;
+$info-80: #0c339e !default;
+$info-90: #092676 !default;
+$info-100: #04133b !default;
 
 $info-palette: (
-  "10":     $info-10,
-  "20":     $info-20,
-  "30":     $info-30,
-  "40":     $info-40,
-  "50":     $info-50,
-  "60":     $info-60,
-  "70":     $info-70,
-  "80":     $info-80,
-  "90":     $info-90,
-  "100":    $info-100
+  "10": $info-10,
+  "20": $info-20,
+  "30": $info-30,
+  "40": $info-40,
+  "50": $info-50,
+  "60": $info-60,
+  "70": $info-70,
+  "80": $info-80,
+  "90": $info-90,
+  "100": $info-100,
 ) !default;
 
 // Accent Colours ____________________________
 @import "colours/accent";
 
-
 // Prime colours ________________________
 
-$prime-primary:     $primary-70 !default;
-$prime-danger:      $danger-60 !default;
-$prime-caution:     $caution-60 !default;
-$prime-valid:       $valid-60 !default;
-$prime-info:        $info-60 !default;
+$prime-primary: $primary-70 !default;
+$prime-danger: $danger-60 !default;
+$prime-caution: $caution-60 !default;
+$prime-valid: $valid-60 !default;
+$prime-info: $info-60 !default;
 
 $prime-colors: (
-  "white":        $white,
-  "black":        $black,
-  "primary":      $prime-primary,
-  "danger":       $prime-danger,
-  "caution":      $prime-caution,
-  "valid":        $prime-valid,
-  "info":         $prime-info,
+  "white": $white,
+  "black": $black,
+  "primary": $prime-primary,
+  "danger": $prime-danger,
+  "caution": $prime-caution,
+  "valid": $prime-valid,
+  "info": $prime-info,
 ) !default;
 
 // Tints ________________________________
 
 // Black tint ____
-$black-tint-10:   rgba($black, 0.015) !default;
-$black-tint-20:   rgba($black, 0.04) !default;
-$black-tint-30:   rgba($black, 0.07) !default;
-$black-tint-40:   rgba($black, 0.16) !default;
-$black-tint-50:   rgba($black, 0.3) !default;
-$black-tint-60:   rgba($black, 0.48) !default;
-$black-tint-70:   rgba($black, 0.625) !default;
-$black-tint-80:   rgba($black, 0.725) !default;
-$black-tint-90:   rgba($black, 0.81) !default;
-$black-tint-100:  rgba($black, 0.92) !default;
+$black-tint-10: rgba($black, 0.015) !default;
+$black-tint-20: rgba($black, 0.04) !default;
+$black-tint-30: rgba($black, 0.07) !default;
+$black-tint-40: rgba($black, 0.16) !default;
+$black-tint-50: rgba($black, 0.3) !default;
+$black-tint-60: rgba($black, 0.48) !default;
+$black-tint-70: rgba($black, 0.625) !default;
+$black-tint-80: rgba($black, 0.725) !default;
+$black-tint-90: rgba($black, 0.81) !default;
+$black-tint-100: rgba($black, 0.92) !default;
 
 $black-tint-palette: (
-  "10":     $black-tint-10,
-  "20":     $black-tint-20,
-  "30":     $black-tint-30,
-  "40":     $black-tint-40,
-  "50":     $black-tint-50,
-  "60":     $black-tint-60,
-  "70":     $black-tint-70,
-  "80":     $black-tint-80,
-  "90":     $black-tint-90,
-  "100":    $black-tint-100,
+  "10": $black-tint-10,
+  "20": $black-tint-20,
+  "30": $black-tint-30,
+  "40": $black-tint-40,
+  "50": $black-tint-50,
+  "60": $black-tint-60,
+  "70": $black-tint-70,
+  "80": $black-tint-80,
+  "90": $black-tint-90,
+  "100": $black-tint-100,
 ) !default;
 
 // White tint ____
-$white-tint-10:     rgba($white, 0.08) !default;
-$white-tint-20:     rgba($white, 0.185) !default;
-$white-tint-30:     rgba($white, 0.275) !default;
-$white-tint-40:     rgba($white, 0.375) !default;
-$white-tint-50:     rgba($white, 0.52) !default;
-$white-tint-60:     rgba($white, 0.7) !default;
-$white-tint-70:     rgba($white, 0.84) !default;
-$white-tint-80:     rgba($white, 0.93) !default;
-$white-tint-90:     rgba($white, 0.97) !default;
-$white-tint-100:    rgba($white, 0.99) !default;
+$white-tint-10: rgba($white, 0.08) !default;
+$white-tint-20: rgba($white, 0.185) !default;
+$white-tint-30: rgba($white, 0.275) !default;
+$white-tint-40: rgba($white, 0.375) !default;
+$white-tint-50: rgba($white, 0.52) !default;
+$white-tint-60: rgba($white, 0.7) !default;
+$white-tint-70: rgba($white, 0.84) !default;
+$white-tint-80: rgba($white, 0.93) !default;
+$white-tint-90: rgba($white, 0.97) !default;
+$white-tint-100: rgba($white, 0.99) !default;
 
 $white-tint-palette: (
-  "10":     $white-tint-10,
-  "20":     $white-tint-20,
-  "30":     $white-tint-30,
-  "40":     $white-tint-40,
-  "50":     $white-tint-50,
-  "60":     $white-tint-60,
-  "70":     $white-tint-70,
-  "80":     $white-tint-80,
-  "90":     $white-tint-90,
-  "100":    $white-tint-100
+  "10": $white-tint-10,
+  "20": $white-tint-20,
+  "30": $white-tint-30,
+  "40": $white-tint-40,
+  "50": $white-tint-50,
+  "60": $white-tint-60,
+  "70": $white-tint-70,
+  "80": $white-tint-80,
+  "90": $white-tint-90,
+  "100": $white-tint-100,
 ) !default;
 
 // primary tint _____
-$primary-tint-10:     rgba($prime-primary, 0.1) !default;
-$primary-tint-20:     rgba($prime-primary, 0.3) !default;
-$primary-tint-30:     rgba($prime-primary, 0.5) !default;
-$primary-tint-40:     rgba($prime-primary, 0.66) !default;
+$primary-tint-10: rgba($prime-primary, 0.1) !default;
+$primary-tint-20: rgba($prime-primary, 0.3) !default;
+$primary-tint-30: rgba($prime-primary, 0.5) !default;
+$primary-tint-40: rgba($prime-primary, 0.66) !default;
 
 $primary-tint-palette: (
-  "10":     $primary-tint-10,
-  "20":     $primary-tint-20,
-  "30":     $primary-tint-30,
-  "40":     $primary-tint-40
+  "10": $primary-tint-10,
+  "20": $primary-tint-20,
+  "30": $primary-tint-30,
+  "40": $primary-tint-40,
 ) !default;
 
 // Generate css variable map version
-$primary-tint-palette-vars: generate-css-var-map("primary-tint", $primary-tint-palette) !default;
+$primary-tint-palette-vars: generate-css-var-map(
+  "primary-tint",
+  $primary-tint-palette
+) !default;
 
 // danger tint ______
-$danger-tint-10:     rgba($prime-danger, 0.1) !default;
-$danger-tint-20:     rgba($prime-danger, 0.3) !default;
-$danger-tint-30:     rgba($prime-danger, 0.4) !default;
-$danger-tint-40:     rgba($prime-danger, 0.6) !default;
+$danger-tint-10: rgba($prime-danger, 0.1) !default;
+$danger-tint-20: rgba($prime-danger, 0.3) !default;
+$danger-tint-30: rgba($prime-danger, 0.4) !default;
+$danger-tint-40: rgba($prime-danger, 0.6) !default;
 
 $danger-tint-palette: (
-  "10":     $danger-tint-10,
-  "20":     $danger-tint-20,
-  "30":     $danger-tint-30,
-  "40":     $danger-tint-40
+  "10": $danger-tint-10,
+  "20": $danger-tint-20,
+  "30": $danger-tint-30,
+  "40": $danger-tint-40,
 ) !default;
 
 // Caution tint ___
-$caution-tint-10:     rgba($prime-caution, 0.1) !default;
-$caution-tint-20:     rgba($prime-caution, 0.3) !default;
-$caution-tint-30:     rgba($prime-caution, 0.5) !default;
-$caution-tint-40:     rgba($prime-caution, 0.7) !default;
+$caution-tint-10: rgba($prime-caution, 0.1) !default;
+$caution-tint-20: rgba($prime-caution, 0.3) !default;
+$caution-tint-30: rgba($prime-caution, 0.5) !default;
+$caution-tint-40: rgba($prime-caution, 0.7) !default;
 
 $caution-tint-palette: (
-  "10":     $caution-tint-10,
-  "20":     $caution-tint-20,
-  "30":     $caution-tint-30,
-  "40":     $caution-tint-40
+  "10": $caution-tint-10,
+  "20": $caution-tint-20,
+  "30": $caution-tint-30,
+  "40": $caution-tint-40,
 ) !default;
 
 // valid tint ____
-$valid-tint-10:     rgba($prime-valid, 0.1) !default;
-$valid-tint-20:     rgba($prime-valid, 0.3) !default;
-$valid-tint-30:     rgba($prime-valid, 0.5) !default;
-$valid-tint-40:     rgba($prime-valid, 0.7) !default;
+$valid-tint-10: rgba($prime-valid, 0.1) !default;
+$valid-tint-20: rgba($prime-valid, 0.3) !default;
+$valid-tint-30: rgba($prime-valid, 0.5) !default;
+$valid-tint-40: rgba($prime-valid, 0.7) !default;
 
 $valid-tint-palette: (
-  "10":     $valid-tint-10,
-  "20":     $valid-tint-20,
-  "30":     $valid-tint-30,
-  "40":     $valid-tint-40
+  "10": $valid-tint-10,
+  "20": $valid-tint-20,
+  "30": $valid-tint-30,
+  "40": $valid-tint-40,
 ) !default;
 
 // Info tint _____
-$info-tint-10:     rgba($prime-info, 0.1) !default;
-$info-tint-20:     rgba($prime-info, 0.31) !default;
-$info-tint-30:     rgba($prime-info, 0.52) !default;
-$info-tint-40:     rgba($prime-info, 0.69) !default;
+$info-tint-10: rgba($prime-info, 0.1) !default;
+$info-tint-20: rgba($prime-info, 0.31) !default;
+$info-tint-30: rgba($prime-info, 0.52) !default;
+$info-tint-40: rgba($prime-info, 0.69) !default;
 
 $info-tint-palette: (
-  "10":     $info-tint-10,
-  "20":     $info-tint-20,
-  "30":     $info-tint-30,
-  "40":     $info-tint-40
+  "10": $info-tint-10,
+  "20": $info-tint-20,
+  "30": $info-tint-30,
+  "40": $info-tint-40,
 ) !default;
-
 
 // Foundation colour stuff __________________________________________________________________________________________________________
 
 // Text _________________________________
-$text-primary:    $black !default;
-$text-secondary:  $neutral-90 !default;
-$text-tertiary:   $neutral-80 !default;
-$text-muted:      $black-tint-70 !default;
-$text-light:      $white !default;
-$text-active:     $info-60 !default;
-$text-success:    $valid-60 !default;
-$text-error:      $danger-60 !default;
+$text-primary: $black !default;
+$text-secondary: $neutral-90 !default;
+$text-tertiary: $neutral-80 !default;
+$text-muted: $black-tint-70 !default;
+$text-light: $white !default;
+$text-active: $info-60 !default;
+$text-success: $valid-60 !default;
+$text-error: $danger-60 !default;
 
 $text-colors: (
-    "primary":    $text-primary,
-    "secondary":  $text-secondary,
-    "tertiary":   $text-tertiary,
-    "muted":      $text-muted,
-    "light":      $text-light,
-    "active":     $text-active,
-    "success":    $text-success,
-    "error":      $text-error
+  "primary": $text-primary,
+  "secondary": $text-secondary,
+  "tertiary": $text-tertiary,
+  "muted": $text-muted,
+  "light": $text-light,
+  "active": $text-active,
+  "success": $text-success,
+  "error": $text-error,
 ) !default;
-
 
 // UI colours ___________________________
 $ui-background-01: $white !default;
@@ -336,26 +339,25 @@ $ui-background-02: $neutral-10 !default;
 $ui-background-03: $neutral-20 !default;
 $ui-background-04: $neutral-30 !default;
 
-$ui-overlay-01:    $black-tint-10 !default;
-$ui-overlay-02:    $black-tint-20 !default;
-$ui-overlay-03:    $black-tint-30 !default;
-$ui-overlay-04:    $black-tint-60 !default;
+$ui-overlay-01: $black-tint-10 !default;
+$ui-overlay-02: $black-tint-20 !default;
+$ui-overlay-03: $black-tint-30 !default;
+$ui-overlay-04: $black-tint-60 !default;
 
-$ui-border-01:     $neutral-60 !default;
-$ui-border-02:     $neutral-40 !default;
-$ui-border-03:     $black-tint-30 !default;
-$ui-border-04:     $white !default;
-
+$ui-border-01: $neutral-60 !default;
+$ui-border-02: $neutral-40 !default;
+$ui-border-03: $black-tint-30 !default;
+$ui-border-04: $white !default;
 
 // State colours ________________________
-$focus-01:    $info-60 !default;
-$success-01:  $valid-60 !default;
-$error-01:    $danger-60 !default;
+$focus-01: $info-60 !default;
+$success-01: $valid-60 !default;
+$error-01: $danger-60 !default;
 
 $state-colours: (
-  "focus-01":    $focus-01,
-  "success-01":  $success-01,
-  "error-01":    $error-01,
+  "focus-01": $focus-01,
+  "success-01": $success-01,
+  "error-01": $error-01,
 ) !default;
 
 $disabled-overlay-01: $black-tint-30 !default;
@@ -365,203 +367,197 @@ $disabled-01: $neutral-30 !default;
 $disabled-02: $neutral-40 !default;
 $disabled-03: $neutral-50 !default;
 $disabled-04: $white !default;
-$disabled-opacity: .65 !default;
+$disabled-opacity: 0.65 !default;
 
 $disabled-colors: (
-    "overlay-01":   $disabled-overlay-01, 
-    "overlay-02":   $disabled-overlay-02, 
-    "overlay-03":   $disabled-overlay-03, 
-    "01":           $disabled-01, 
-    "02":           $disabled-02, 
-    "03":           $disabled-03, 
-    "04":           $disabled-04, 
+  "overlay-01": $disabled-overlay-01,
+  "overlay-02": $disabled-overlay-02,
+  "overlay-03": $disabled-overlay-03,
+  "01": $disabled-01,
+  "02": $disabled-02,
+  "03": $disabled-03,
+  "04": $disabled-04,
 ) !default;
 
-
 // Action colours _______________________
-$action-01:         $primary-70 !default;
-$action-02:         $primary-50 !default;
-$action-03:         $primary-90 !default;
-$action-04:         $primary-tint-10 !default;
-$action-05:         $black-tint-30 !default;
-$action-06:         $neutral-60 !default;
-$action-07:         $white !default;
-$action-08:         $primary-100 !default;
+$action-01: $primary-70 !default;
+$action-02: $primary-50 !default;
+$action-03: $primary-90 !default;
+$action-04: $primary-tint-10 !default;
+$action-05: $black-tint-30 !default;
+$action-06: $neutral-60 !default;
+$action-07: $white !default;
+$action-08: $primary-100 !default;
 
-$action-text-01:    $primary-70 !default;
-$action-text-02:    $white !default;
-$action-text-03:    $black-tint-70 !default;
-$action-text-04:    $neutral-80 !default;
-$action-text-05:    $neutral-90 !default;
+$action-text-01: $primary-70 !default;
+$action-text-02: $white !default;
+$action-text-03: $black-tint-70 !default;
+$action-text-04: $neutral-80 !default;
+$action-text-05: $neutral-90 !default;
 
 $action-colors: (
-    "01":   $action-01, 
-    "02":   $action-02, 
-    "03":   $action-03, 
-    "04":   $action-04, 
-    "05":   $action-05, 
-    "06":   $action-06, 
-    "07":   $action-07, 
-    "08":   $action-08, 
+  "01": $action-01,
+  "02": $action-02,
+  "03": $action-03,
+  "04": $action-04,
+  "05": $action-05,
+  "06": $action-06,
+  "07": $action-07,
+  "08": $action-08,
 ) !default;
 
 $action-text-colors: (
-    "01":   $action-text-01, 
-    "02":   $action-text-02, 
-    "03":   $action-text-03, 
-    "04":   $action-text-04, 
-    "05":   $action-text-05,
+  "01": $action-text-01,
+  "02": $action-text-02,
+  "03": $action-text-03,
+  "04": $action-text-04,
+  "05": $action-text-05,
 ) !default;
 
-
 // Action danger colours ________________
-$action-danger-01:         $danger-60 !default;
-$action-danger-02:         $danger-70 !default;
-$action-danger-03:         $danger-90 !default;
-$action-danger-04:         $danger-tint-10 !default;
-$action-text-danger-01:    $danger-60 !default;
+$action-danger-01: $danger-60 !default;
+$action-danger-02: $danger-70 !default;
+$action-danger-03: $danger-90 !default;
+$action-danger-04: $danger-tint-10 !default;
+$action-text-danger-01: $danger-60 !default;
 
 $action-danger-colors: (
-    "01":   $action-danger-01, 
-    "02":   $action-danger-02, 
-    "03":   $action-danger-03, 
-    "04":   $action-danger-04, 
+  "01": $action-danger-01,
+  "02": $action-danger-02,
+  "03": $action-danger-03,
+  "04": $action-danger-04,
 ) !default;
 
 $action-text-danger-colors: (
-    "01":   $action-text-danger-01,
+  "01": $action-text-danger-01,
 ) !default;
-
 
 // Feedback colours _____________________
-$feedback-background-info:        $info-10 !default;
-$feedback-overlay-info:           $info-tint-10 !default;
-$feedback-border-info:            $info-50 !default;
-$feedback-message-info:           $info-60 !default;
-$feedback-body-info:              $info-100 !default;
-$feedback-shadow-info:            $info-100 !default;
+$feedback-background-info: $info-10 !default;
+$feedback-overlay-info: $info-tint-10 !default;
+$feedback-border-info: $info-50 !default;
+$feedback-message-info: $info-60 !default;
+$feedback-body-info: $info-100 !default;
+$feedback-shadow-info: $info-100 !default;
 
-$feedback-background-success:     $valid-10 !default;
-$feedback-overlay-success:        $valid-tint-10 !default;
-$feedback-border-success:         $valid-60 !default;
-$feedback-message-success:        $valid-70 !default;
-$feedback-body-success:           $valid-100 !default;
-$feedback-shadow-success:         $valid-100 !default;
+$feedback-background-success: $valid-10 !default;
+$feedback-overlay-success: $valid-tint-10 !default;
+$feedback-border-success: $valid-60 !default;
+$feedback-message-success: $valid-70 !default;
+$feedback-body-success: $valid-100 !default;
+$feedback-shadow-success: $valid-100 !default;
 
-$feedback-background-warning:     $caution-10 !default;
-$feedback-overlay-warning:        $caution-tint-10 !default;
-$feedback-border-warning:         $caution-80 !default;
-$feedback-message-warning:        $caution-80 !default;
-$feedback-body-warning:           $caution-100 !default;
-$feedback-shadow-warning:         $caution-100 !default;
+$feedback-background-warning: $caution-10 !default;
+$feedback-overlay-warning: $caution-tint-10 !default;
+$feedback-border-warning: $caution-80 !default;
+$feedback-message-warning: $caution-80 !default;
+$feedback-body-warning: $caution-100 !default;
+$feedback-shadow-warning: $caution-100 !default;
 
-$feedback-background-error:       $danger-10 !default;
-$feedback-overlay-error:          $danger-tint-10 !default;
-$feedback-border-error:           $danger-60 !default;
-$feedback-message-error:          $danger-60 !default;
-$feedback-body-error:             $danger-100 !default;
-$feedback-shadow-error:           $danger-100 !default;
+$feedback-background-error: $danger-10 !default;
+$feedback-overlay-error: $danger-tint-10 !default;
+$feedback-border-error: $danger-60 !default;
+$feedback-message-error: $danger-60 !default;
+$feedback-body-error: $danger-100 !default;
+$feedback-shadow-error: $danger-100 !default;
 
 $feedback-colours: (
-    "info": (
-        "background":   $feedback-background-info,
-        "overlay":      $feedback-overlay-info,
-        "border":       $feedback-border-info,
-        "message":      $feedback-message-info,
-        "body":         $feedback-body-info,
-        "shadow":       $feedback-shadow-info,
-    ),
+  "info": (
+    "background": $feedback-background-info,
+    "overlay": $feedback-overlay-info,
+    "border": $feedback-border-info,
+    "message": $feedback-message-info,
+    "body": $feedback-body-info,
+    "shadow": $feedback-shadow-info,
+  ),
 
-    "success": (
-        "background":   $feedback-background-success,
-        "overlay":      $feedback-overlay-success,
-        "border":       $feedback-border-success,
-        "message":      $feedback-message-success,
-        "body":         $feedback-body-success,
-        "shadow":       $feedback-shadow-success,
-    ),
+  "success": (
+    "background": $feedback-background-success,
+    "overlay": $feedback-overlay-success,
+    "border": $feedback-border-success,
+    "message": $feedback-message-success,
+    "body": $feedback-body-success,
+    "shadow": $feedback-shadow-success,
+  ),
 
-    "warning": (
-        "background":   $feedback-background-warning,
-        "overlay":      $feedback-overlay-warning,
-        "border":       $feedback-border-warning,
-        "message":      $feedback-message-warning,
-        "body":         $feedback-body-warning,
-        "shadow":       $feedback-shadow-warning,
-    ),
+  "warning": (
+    "background": $feedback-background-warning,
+    "overlay": $feedback-overlay-warning,
+    "border": $feedback-border-warning,
+    "message": $feedback-message-warning,
+    "body": $feedback-body-warning,
+    "shadow": $feedback-shadow-warning,
+  ),
 
-    "error": (
-        "background":   $feedback-background-error,
-        "overlay":      $feedback-overlay-error,
-        "border":       $feedback-border-error,
-        "message":      $feedback-message-error,
-        "body":         $feedback-body-error,
-        "shadow":       $feedback-shadow-error,
-    )
+  "error": (
+    "background": $feedback-background-error,
+    "overlay": $feedback-overlay-error,
+    "border": $feedback-border-error,
+    "message": $feedback-message-error,
+    "body": $feedback-body-error,
+    "shadow": $feedback-shadow-error,
+  ),
 ) !default;
-
 
 // Expressive colours ___________________
 // What colours to use for the expressive colours
 $expressive-colours: (
   "primary": (
-    "palette":    $primary-palette,
-    "tint":       $primary-tint-palette,
+    "palette": $primary-palette,
+    "tint": $primary-tint-palette,
   ),
 
   "secondary": (
-    "palette":    $accent-01-palette,
-    "tint":       $accent-01-tint-palette,
+    "palette": $accent-01-palette,
+    "tint": $accent-01-tint-palette,
   ),
 
   "tertiary": (
-    "palette":    $accent-02-palette,
-    "tint":       $accent-02-tint-palette,
+    "palette": $accent-02-palette,
+    "tint": $accent-02-tint-palette,
   ),
 
   "quaternary": (
-    "palette":    $accent-03-palette,
-    "tint":       $accent-03-tint-palette,
+    "palette": $accent-03-palette,
+    "tint": $accent-03-tint-palette,
   ),
 ) !default;
 
 // Expressive defaults
-$expressive-pale:           var(--expressive-pale) !default;
-$expressive-soft:           var(--expressive-soft) !default;
-$expressive-pale-overlay:   var(--expressive-pale-overlay) !default;
-$expressive-soft-overlay:   var(--expressive-soft-overlay) !default;
-$expressive-deep:           var(--expressive-deep) !default;
-$expressive-rich:           var(--expressive-rich) !default;
-
+$expressive-pale: var(--expressive-pale) !default;
+$expressive-soft: var(--expressive-soft) !default;
+$expressive-pale-overlay: var(--expressive-pale-overlay) !default;
+$expressive-soft-overlay: var(--expressive-soft-overlay) !default;
+$expressive-deep: var(--expressive-deep) !default;
+$expressive-rich: var(--expressive-rich) !default;
 
 // Options ______________________________
-$enable-shadows:                false !default;
-$enable-menu-shadows:           true !default;
-$enable-dark-mode:              true !default; // Not yet built
-$all-fa-icons-solid:            false !default; 
-$enable-negative-margins:       true !default;
-$enable-visited-links:          false !default;
-$enable-cssgrid:                true !default;
-$clickable-borders:             true !default;
-$sidebar-affects-mediaqueries:  false !default;
-$button-gradients:              true !default;
-
+$enable-shadows: false !default;
+$enable-menu-shadows: true !default;
+$enable-dark-mode: true !default; // Not yet built
+$all-fa-icons-solid: false !default;
+$enable-negative-margins: true !default;
+$enable-visited-links: false !default;
+$enable-cssgrid: true !default;
+$clickable-borders: true !default;
+$sidebar-affects-mediaqueries: false !default;
+$button-gradients: true !default;
 
 // UI stuff _________________________________________________________________________________________________________________________
 
 // Spacing ______________________________
 $spacer: 1rem !default;
 
-$spacer-0:  0 !default;
-$spacer-01: $spacer * .125 !default; // 0.125rem
-$spacer-02: $spacer * .25 !default;  // 0.25rem 
-$spacer-03: $spacer * .5 !default;   // 0.5rem  
-$spacer-04: $spacer !default;        // 1rem    
-$spacer-05: $spacer * 1.5 !default;  // 1.5rem  
-$spacer-06: $spacer * 2 !default;    // 2rem    
-$spacer-07: $spacer * 3 !default;    // 3rem
-$spacer-08: $spacer * 4 !default;    // 4rem    
-$spacer-09: $spacer * 8 !default;    // 8rem    
+$spacer-0: 0 !default;
+$spacer-01: $spacer * 0.125 !default; // 0.125rem
+$spacer-02: $spacer * 0.25 !default; // 0.25rem
+$spacer-03: $spacer * 0.5 !default; // 0.5rem
+$spacer-04: $spacer !default; // 1rem
+$spacer-05: $spacer * 1.5 !default; // 1.5rem
+$spacer-06: $spacer * 2 !default; // 2rem
+$spacer-07: $spacer * 3 !default; // 3rem
+$spacer-08: $spacer * 4 !default; // 4rem
+$spacer-09: $spacer * 8 !default; // 8rem
 
 $spacers: (
   0: $spacer-0,
@@ -576,23 +572,22 @@ $spacers: (
   9: $spacer-09,
 ) !default;
 
-
 // Component padding ____________________
 
-$padding-0: 0 !default;                // Zero
-$padding-01: $spacer-02 !default;      // 4px / 0.25rem
-$padding-02: $spacer * .375 !default;  // 6px / 0.375rem
-$padding-03: $spacer-03 !default;      // 8px / 0.5rem
-$padding-04: $spacer * .75 !default;   // 12px / 0.75rem
-$padding-05: $spacer-04 !default;      // 16px / 1rem
-$padding-06: $spacer * 1.25 !default;  // 20px / 1.25rem
-$padding-07: $spacer-05 !default;      // 24px / 1.5rem
-$padding-08: $spacer-06  !default;     // 32px / 2rem
-$padding-09: $spacer-08  !default;     // 64px / 4rem
-$padding-10: $spacer-09  !default;     // 128px / 8rem
+$padding-0: 0 !default; // Zero
+$padding-01: $spacer-02 !default; // 4px / 0.25rem
+$padding-02: $spacer * 0.375 !default; // 6px / 0.375rem
+$padding-03: $spacer-03 !default; // 8px / 0.5rem
+$padding-04: $spacer * 0.75 !default; // 12px / 0.75rem
+$padding-05: $spacer-04 !default; // 16px / 1rem
+$padding-06: $spacer * 1.25 !default; // 20px / 1.25rem
+$padding-07: $spacer-05 !default; // 24px / 1.5rem
+$padding-08: $spacer-06 !default; // 32px / 2rem
+$padding-09: $spacer-08 !default; // 64px / 4rem
+$padding-10: $spacer-09 !default; // 128px / 8rem
 
 $padding: (
-  "0":  $padding-0,
+  "0": $padding-0,
   "01": $padding-01,
   "02": $padding-02,
   "03": $padding-03,
@@ -602,21 +597,20 @@ $padding: (
   "07": $padding-07,
   "08": $padding-08,
   "09": $padding-09,
-  "10": $padding-10
+  "10": $padding-10,
 ) !default;
-
 
 // Component Margin _____________________
 
-$margin-0: 0 !default;                // Zero
-$margin-01: $spacer-02 !default;      // 4px / 0.25rem
-$margin-02: $spacer-03 !default;      // 8px / 0.5rem
-$margin-03: $spacer-04 !default;      // 16px / 1rem
-$margin-04: $spacer-05 !default;      // 24px / 1.5rem
-$margin-05: $spacer-06  !default;     // 32px / 2rem
+$margin-0: 0 !default; // Zero
+$margin-01: $spacer-02 !default; // 4px / 0.25rem
+$margin-02: $spacer-03 !default; // 8px / 0.5rem
+$margin-03: $spacer-04 !default; // 16px / 1rem
+$margin-04: $spacer-05 !default; // 24px / 1.5rem
+$margin-05: $spacer-06 !default; // 32px / 2rem
 
 $margin: (
-  "0":  $margin-0,
+  "0": $margin-0,
   "01": $margin-01,
   "02": $margin-02,
   "03": $margin-03,
@@ -624,302 +618,286 @@ $margin: (
   "05": $margin-05,
 ) !default;
 
-
 // Body _________________________________
 //
 // Settings for the `<body>` element.
-$body-color:            $text-primary !default;
-$body-secondary-color:  $text-muted !default;
-$body-background:       $ui-background-02 !default;
-$body-text-align:       null !default;
-
+$body-color: $text-primary !default;
+$body-secondary-color: $text-muted !default;
+$body-background: $ui-background-02 !default;
+$body-text-align: null !default;
 
 // Headings _____________________________
-$headings-color:        inherit !default;
-
+$headings-color: inherit !default;
 
 // Paragraphs ___________________________
 //
 // Style p element.
-$paragraph-margin-top:      $margin-01 !default;
-$paragraph-margin-bottom:   $margin-0 !default;
-
-
+$paragraph-margin-top: $margin-01 !default;
+$paragraph-margin-bottom: $margin-0 !default;
 
 // Min max widths _______________________
 $text-max-width: 54rem !default;
 
-
-
 // Grid columns _________________________
-$grid-gutter-width:         $spacer-06 !default; // variable to change --bs-gutter x and y
-
+$grid-gutter-width: $spacer-06 !default; // variable to change --bs-gutter x and y
 
 // Transitions __________________________
-$transition-time:           .15s !default;
-
+$transition-time: 0.15s !default;
 
 // Borders ______________________________
-$border-width:              1px !default;
+$border-width: 1px !default;
 
-$border-width-0:            0 !default;
-$border-width-01:           $border-width !default;
-$border-width-02:           0.125rem !default;
-$border-width-03:           0.25rem !default;
-$border-width-04:           0.5rem !default;
+$border-width-0: 0 !default;
+$border-width-01: $border-width !default;
+$border-width-02: 0.125rem !default;
+$border-width-03: 0.25rem !default;
+$border-width-04: 0.5rem !default;
 
 $border-widths: (
-  "0":  $border-width-0,
+  "0": $border-width-0,
   "01": $border-width-01,
   "02": $border-width-02,
   "03": $border-width-03,
-  "04": $border-width-04
+  "04": $border-width-04,
 ) !default;
 
-$border-style:              solid !default;
-$border-color:              $ui-border-02 !default;
-
+$border-style: solid !default;
+$border-color: $ui-border-02 !default;
 
 // Border radius ________________________
-$border-radius:       .5rem !default;
+$border-radius: 0.5rem !default;
 
-$border-radius-0:     0 !default;
-$border-radius-xs:    .25rem !default;
-$border-radius-sm:    .375rem !default;
-$border-radius-md:    $border-radius !default; // 0.5rem
-$border-radius-lg:    1rem !default;
-$border-radius-xl:    1.5rem !default;
-$border-radius-xxl:   2rem !default;
-$border-radius-full:  625rem !default;
+$border-radius-0: 0 !default;
+$border-radius-xs: 0.25rem !default;
+$border-radius-sm: 0.375rem !default;
+$border-radius-md: $border-radius !default; // 0.5rem
+$border-radius-lg: 1rem !default;
+$border-radius-xl: 1.5rem !default;
+$border-radius-xxl: 2rem !default;
+$border-radius-full: 625rem !default;
 $border-radius-round: 50% !default;
 
 $border-radii: (
-  "0":    $border-radius-0,
-  "xs":   $border-radius-xs,
-  "sm":   $border-radius-sm,
-  "md":   $border-radius-md,
-  "lg":   $border-radius-lg,
-  "xl":   $border-radius-xl,
-  "xxl":  $border-radius-xxl,
+  "0": $border-radius-0,
+  "xs": $border-radius-xs,
+  "sm": $border-radius-sm,
+  "md": $border-radius-md,
+  "lg": $border-radius-lg,
+  "xl": $border-radius-xl,
+  "xxl": $border-radius-xxl,
   "full": $border-radius-full,
   "round": $border-radius-round,
 ) !default;
 
-
 // Shadows ______________________________
 $shadow-colour: var(--#{$prefix-bh}black-rgb) !default;
 
-$shadow-xs:   0 1px 3px 0 rgba(var(--#{$prefix-bh}shadow-colour), 0.1), 0 1px 2px -1px rgba(var(--#{$prefix-bh}shadow-colour), 0.1) !default;
-$shadow-sm:   0 4px 6px -1px rgba(var(--#{$prefix-bh}shadow-colour), 0.1), 0 2px 4px -2px rgba(var(--#{$prefix-bh}shadow-colour), 0.1) !default;
-$shadow-md:   0 10px 15px -3px rgba(var(--#{$prefix-bh}shadow-colour), 0.1), 0 4px 6px -4px rgba(var(--#{$prefix-bh}shadow-colour), 0.1) !default;
-$shadow-lg:   0 20px 25px -5px rgba(var(--#{$prefix-bh}shadow-colour), 0.1), 0 8px 10px -6px rgba(var(--#{$prefix-bh}shadow-colour), 0.1) !default;
-$shadow-xl:   0 25px 50px -12px rgba(var(--#{$prefix-bh}shadow-colour), 0.25) !default;
+$shadow-xs:
+  0 1px 3px 0 rgba(var(--#{$prefix-bh}shadow-colour), 0.1),
+  0 1px 2px -1px rgba(var(--#{$prefix-bh}shadow-colour), 0.1) !default;
+$shadow-sm:
+  0 4px 6px -1px rgba(var(--#{$prefix-bh}shadow-colour), 0.1),
+  0 2px 4px -2px rgba(var(--#{$prefix-bh}shadow-colour), 0.1) !default;
+$shadow-md:
+  0 10px 15px -3px rgba(var(--#{$prefix-bh}shadow-colour), 0.1),
+  0 4px 6px -4px rgba(var(--#{$prefix-bh}shadow-colour), 0.1) !default;
+$shadow-lg:
+  0 20px 25px -5px rgba(var(--#{$prefix-bh}shadow-colour), 0.1),
+  0 8px 10px -6px rgba(var(--#{$prefix-bh}shadow-colour), 0.1) !default;
+$shadow-xl: 0 25px 50px -12px rgba(var(--#{$prefix-bh}shadow-colour), 0.25) !default;
 
 $shadows: (
-  "xs":       $shadow-xs,
-  "sm":       $shadow-sm,
-  "md":       $shadow-md,
-  "lg":       $shadow-lg,
-  "xl":       $shadow-xl,
+  "xs": $shadow-xs,
+  "sm": $shadow-sm,
+  "md": $shadow-md,
+  "lg": $shadow-lg,
+  "xl": $shadow-xl,
 ) !default;
 
 // Focus styles _________________________
-$focus-ring-width:      .125rem !default;
-$focus-ring-opacity:    1 !default;
+$focus-ring-width: 0.125rem !default;
+$focus-ring-opacity: 1 !default;
 // $focus-ring-color:      rgba($focus-01, $focus-ring-opacity);
-$focus-ring-color:      $focus-01 !default;
-$focus-ring-blur:       0 !default;
-$focus-ring:            0 0 $focus-ring-blur $focus-ring-width $focus-ring-color !default;
+$focus-ring-color: $focus-01 !default;
+$focus-ring-blur: 0 !default;
+$focus-ring: 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color !default;
 
 // Font stuff _______________________________________________________________________________________________________________________
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
-$font-size-root:              16px !default;
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-root: 16px !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 
-$font-family-sans-serif:  'Proxima-soft', Arial, sans-serif !default;
-$font-family-base:        var(--#{$prefix-bh}font-sans-serif) !default;
+$font-family-sans-serif: "Proxima-soft", Arial, sans-serif !default;
+$font-family-base: var(--#{$prefix-bh}font-sans-serif) !default;
 
-$font-awesome:            var(--fa-family-classic) !default;
+$font-awesome: var(--fa-family-classic) !default;
 
-$font-size-base:          1rem !default;
-$letter-spacing-base:     0.16px !default;
-$line-height-base:        1.5 !default;
+$font-size-base: 1rem !default;
+$letter-spacing-base: 0.16px !default;
+$line-height-base: 1.5 !default;
 
 // Type scale ____
-$typescale-01:   $font-size-base * .75 !default;
-$typescale-02:   $font-size-base * .875 !default;
-$typescale-03:   $font-size-base !default;
-$typescale-04:   $font-size-base * 1.25 !default;
-$typescale-05:   $font-size-base * 1.5 !default;
-$typescale-06:   $font-size-base * 1.75 !default;
-$typescale-07:   $font-size-base * 2 !default;
-$typescale-08:   $font-size-base * 2.25 !default;
-$typescale-09:   $font-size-base * 2.5 !default;
-$typescale-10:   $font-size-base * 3.5 !default;
+$typescale-01: $font-size-base * 0.75 !default;
+$typescale-02: $font-size-base * 0.875 !default;
+$typescale-03: $font-size-base !default;
+$typescale-04: $font-size-base * 1.25 !default;
+$typescale-05: $font-size-base * 1.5 !default;
+$typescale-06: $font-size-base * 1.75 !default;
+$typescale-07: $font-size-base * 2 !default;
+$typescale-08: $font-size-base * 2.25 !default;
+$typescale-09: $font-size-base * 2.5 !default;
+$typescale-10: $font-size-base * 3.5 !default;
 
 $typescales: (
-  "01":   $typescale-01,
-  "02":   $typescale-02,
-  "03":   $typescale-03,
-  "04":   $typescale-04,
-  "05":   $typescale-05,
-  "06":   $typescale-06,
-  "07":   $typescale-07,
-  "08":   $typescale-08,
-  "09":   $typescale-09,
-  "10":   $typescale-10,
+  "01": $typescale-01,
+  "02": $typescale-02,
+  "03": $typescale-03,
+  "04": $typescale-04,
+  "05": $typescale-05,
+  "06": $typescale-06,
+  "07": $typescale-07,
+  "08": $typescale-08,
+  "09": $typescale-09,
+  "10": $typescale-10,
 ) !default;
 
-$font-weight-th:          100 !default;  // Thin
-$font-weight-lt:          300 !default;  // Light
-$font-weight-rg:          400 !default;  // Regular
-$font-weight-md:          500 !default;  // Medium
-$font-weight-sb:          600 !default;  // Semi bold
-$font-weight-bd:          700 !default;  // Bold
-$font-weight-eb:          800 !default;  // Extra bold
-$font-weight-bl:          900 !default;  // Black
+$font-weight-th: 100 !default; // Thin
+$font-weight-lt: 300 !default; // Light
+$font-weight-rg: 400 !default; // Regular
+$font-weight-md: 500 !default; // Medium
+$font-weight-sb: 600 !default; // Semi bold
+$font-weight-bd: 700 !default; // Bold
+$font-weight-eb: 800 !default; // Extra bold
+$font-weight-bl: 900 !default; // Black
 
 $font-weights: (
-  "th":   $font-weight-th,
-  "lt":   $font-weight-lt,
-  "rg":   $font-weight-rg,
-  "md":   $font-weight-md,
-  "sb":   $font-weight-sb,
-  "bd":   $font-weight-bd,
-  "eb":   $font-weight-eb,
-  "bl":   $font-weight-bl
+  "th": $font-weight-th,
+  "lt": $font-weight-lt,
+  "rg": $font-weight-rg,
+  "md": $font-weight-md,
+  "sb": $font-weight-sb,
+  "bd": $font-weight-bd,
+  "eb": $font-weight-eb,
+  "bl": $font-weight-bl,
 ) !default;
 
 // Bootstrap overrides
-$font-weight-lighter:     $font-weight-th !default;
-$font-weight-light:       $font-weight-lt !default;
-$font-weight-normal:      $font-weight-rg !default;
-$font-weight-medium:      $font-weight-md !default;
-$font-weight-bold:        $font-weight-bd !default;
-$font-weight-bolder:      $font-weight-eb !default;
+$font-weight-lighter: $font-weight-th !default;
+$font-weight-light: $font-weight-lt !default;
+$font-weight-normal: $font-weight-rg !default;
+$font-weight-medium: $font-weight-md !default;
+$font-weight-bold: $font-weight-bd !default;
+$font-weight-bolder: $font-weight-eb !default;
 
-$font-weight-base:        $font-weight-lt !default;
+$font-weight-base: $font-weight-lt !default;
 
 // Links ________________________________
 //
 // Style anchor elements.
 
-$link-colour:           $text-active !default;
-$link-icon:             $link-colour !default;
-$link-decoration:       underline !default;
+$link-colour: $text-active !default;
+$link-icon: $link-colour !default;
+$link-decoration: underline !default;
 
-$link-hover:            $link-colour !default;
-$link-icon-hover:       $link-hover !default;
+$link-hover: $link-colour !default;
+$link-icon-hover: $link-hover !default;
 $link-decoration-hover: none !default;
 
-$link-font-weight:      $font-weight-rg !default;
+$link-font-weight: $font-weight-rg !default;
 
-$link-standalone-decoration:        none !default;
-$link-standalone-decoration-hover:  underline !default;
+$link-standalone-decoration: none !default;
+$link-standalone-decoration-hover: underline !default;
 
-$link-focus:            $link-colour !default;
-$link-icon-focus:       $link-focus !default;
+$link-focus: $link-colour !default;
+$link-icon-focus: $link-focus !default;
 
-$link-active:           $text-primary !default;
-$link-icon-active:      $link-active !default;
+$link-active: $text-primary !default;
+$link-icon-active: $link-active !default;
 
 // Visited links
 // To enable a colour change on visit change this colour to var(--expressive-secondary-deep) (recommeded)
 // By default this is this same as link.
-$link-visited:          $link-colour !default;
-$link-icon-visited:     $link-visited !default;
+$link-visited: $link-colour !default;
+$link-icon-visited: $link-visited !default;
 
-$link-set-gap:          $spacer-04 !default;
-$link-set-row-gap:      $link-set-gap !default;
-
+$link-set-gap: $spacer-04 !default;
+$link-set-row-gap: $link-set-gap !default;
 
 // Bootstrap overrides
-$link-color:            $link-colour !default;
-$link-hover-color:      $link-hover !default;
+$link-color: $link-colour !default;
+$link-hover-color: $link-hover !default;
 $link-hover-decoration: $link-decoration-hover !default;
 
-
-
 // Heading styles _______________________
-$h1-font-size:            $typescale-09 !default;
-$h2-font-size:            $typescale-07 !default;
-$h3-font-size:            $typescale-06 !default;
-$h4-font-size:            $typescale-05 !default;
-$h5-font-size:            $typescale-04 !default;
-$h6-font-size:            $typescale-03 !default;
+$h1-font-size: $typescale-09 !default;
+$h2-font-size: $typescale-07 !default;
+$h3-font-size: $typescale-06 !default;
+$h4-font-size: $typescale-05 !default;
+$h5-font-size: $typescale-04 !default;
+$h6-font-size: $typescale-03 !default;
 
-$headings-margin-bottom:      0 !default;
-$headings-font-family:        null !default;
-$headings-font-style:         null !default;
-$headings-font-weight:        $font-weight-sb !default;
-$headings-line-height:        1.2 !default;
-$headings-color:              inherit !default;
-
-
+$headings-margin-bottom: 0 !default;
+$headings-font-family: null !default;
+$headings-font-style: null !default;
+$headings-font-weight: $font-weight-sb !default;
+$headings-line-height: 1.2 !default;
+$headings-color: inherit !default;
 
 // Horizontal rule ______________________
-$hr-margin-y:       $spacer !default;
-$hr-color:          $ui-border-02 !default;
+$hr-margin-y: $spacer !default;
+$hr-color: $ui-border-02 !default;
 
-$hr-border:         null !default; // Allows for inherited colors (hr-color)
-$hr-border-width:   var(--#{$prefix-bh}border-width) !default;
-$hr-opacity:        1 !default;
-
-
+$hr-border: null !default; // Allows for inherited colors (hr-color)
+$hr-border-width: var(--#{$prefix-bh}border-width) !default;
+$hr-opacity: 1 !default;
 
 // Layout options _______________________
-$layout-area-margin:      $margin-02 !default;
-$layout-area-radius:      $border-radius-lg !default;
+$layout-area-margin: $margin-02 !default;
+$layout-area-radius: $border-radius-lg !default;
 
-$page-body-spacing-y:     $spacer-08 !default;
-$page-body-spacing-x:     $page-body-spacing-y !default;
+$page-body-spacing-y: $spacer-08 !default;
+$page-body-spacing-x: $page-body-spacing-y !default;
 
-$page-frame-spacing-y:    $page-body-spacing-y !default;
-$page-frame-spacing-x:    $page-body-spacing-y !default;
-$page-frame-gap:          $page-body-spacing-y !default;
+$page-frame-spacing-y: $page-body-spacing-y !default;
+$page-frame-spacing-x: $page-body-spacing-y !default;
+$page-frame-gap: $page-body-spacing-y !default;
 
-$page-pane-gap:           $page-body-spacing-y !default;
-$page-panel-gap:          $grid-gutter-width !default;
+$page-pane-gap: $page-body-spacing-y !default;
+$page-panel-gap: $grid-gutter-width !default;
 
-$content-spacing:         $spacer-05 !default;
-$content-spacing-sm:      $spacer-03 !default;
-$content-spacing-xl:      $spacer-08 !default;
-
-
+$content-spacing: $spacer-05 !default;
+$content-spacing-sm: $spacer-03 !default;
+$content-spacing-xl: $spacer-08 !default;
 
 // Grid _________________________________
-$bento-columns-xxl:          7 !default;
-$bento-columns-xl:           6 !default;
-$bento-columns-lg:           5 !default;
-$bento-columns-md:           4 !default;
-$bento-columns-sm:           3 !default;
-$bento-columns-xs:           2 !default;
-$bento-gap:                  $spacer-05 !default;
+$bento-columns-xxl: 7 !default;
+$bento-columns-xl: 6 !default;
+$bento-columns-lg: 5 !default;
+$bento-columns-md: 4 !default;
+$bento-columns-sm: 3 !default;
+$bento-columns-xs: 2 !default;
+$bento-gap: $spacer-05 !default;
 
 // Bento boxes __________________________
-$bento-box-size:           10rem !default;
-$bento-box-radius:         $border-radius-lg !default;
-$bento-box-padding:        $padding-05 !default;
+$bento-box-size: 10rem !default;
+$bento-box-radius: $border-radius-lg !default;
+$bento-box-padding: $padding-05 !default;
 
 // $bento-box-md-width-span:  2;
 // $bento-box-md-width:       ($grid-gap * ($bento-box-md-width-span - 1)) + ($bento-box-size* 2);
 
-
 // Icon sizes ___________________________
-$icon-sm:     $typescale-02 !default;
-$icon-md:     $typescale-03 !default;
-$icon-lg:     $typescale-04 !default;
-$icon-xl:     $typescale-05 !default;
-$icon-xxl:    $typescale-07 !default;
-
+$icon-sm: $typescale-02 !default;
+$icon-md: $typescale-03 !default;
+$icon-lg: $typescale-04 !default;
+$icon-xl: $typescale-05 !default;
+$icon-xxl: $typescale-07 !default;
 
 // Code _________________________________
-$code-font-size:            0.875em !default;
-$code-color:                $accent-02-60 !default;
-
-
+$code-font-size: 0.875em !default;
+$code-color: $accent-02-60 !default;
 
 // Component stuff __________________________________________________________________________________________________________________
 
@@ -929,1149 +907,1121 @@ $code-color:                $accent-02-60 !default;
 // of components dependent on the z-axis and are designed to all work together.
 
 // scss-docs-start zindex-stack
-$zindex-menu:                       1000 !default;
-$zindex-sticky:                     1020 !default;
-$zindex-fixed:                      1030 !default;
-$zindex-offcanvas-backdrop:         1040 !default;
-$zindex-offcanvas:                  1045 !default;
-$zindex-modal-backdrop:             1050 !default;
-$zindex-modal:                      1055 !default;
-$zindex-popover:                    1070 !default;
-$zindex-tooltip:                    1080 !default;
-$zindex-toast:                      1090 !default;
+$zindex-menu: 1000 !default;
+$zindex-sticky: 1020 !default;
+$zindex-fixed: 1030 !default;
+$zindex-offcanvas-backdrop: 1040 !default;
+$zindex-offcanvas: 1045 !default;
+$zindex-modal-backdrop: 1050 !default;
+$zindex-modal: 1055 !default;
+$zindex-popover: 1070 !default;
+$zindex-tooltip: 1080 !default;
+$zindex-toast: 1090 !default;
 // scss-docs-end zindex-stack
 
 // Button & forms _______________________
 // Shared variables that are reassigned to `$form-input-` and `$btn-` specific variables.#
 
 // Caret svg ____________________________
-$caret-size:                  $typescale-03 !default;
-$caret-svg:                   inherit !default;
+$caret-size: $typescale-03 !default;
+$caret-svg: inherit !default;
 
 // Button _______________________________
-$button-border-width:         $border-width !default;
-$button-border-bottom-width:  add($border-width, 0.125rem) !default;
+$button-border-width: $border-width !default;
+$button-border-bottom-width: add($border-width, 0.125rem) !default;
 
-$button-padding-y:            $padding-01 !default;
-$button-padding-x:            $padding-05 !default;
+$button-padding-y: $padding-01 !default;
+$button-padding-x: $padding-05 !default;
 
-$button-padding-y-sm:         $button-padding-y !default;
-$button-padding-x-sm:         $padding-04 !default;
+$button-padding-y-sm: $button-padding-y !default;
+$button-padding-x-sm: $padding-04 !default;
 
-$button-padding-y-lg:         $button-padding-y !default;
-$button-padding-x-lg:         $padding-06 !default;
+$button-padding-y-lg: $button-padding-y !default;
+$button-padding-x-lg: $padding-06 !default;
 
-$button-icon-padding-y:       $padding-01 !default;
-$button-icon-padding-x:       $padding-03 !default;
+$button-icon-padding-y: $padding-01 !default;
+$button-icon-padding-x: $padding-03 !default;
 
-$button-radius:               var(--border-radius-md) !default; 
-$button-radius-sm:            var(--border-radius-sm) !default;
-$button-radius-lg:            $button-radius !default;
+$button-radius: var(--border-radius-md) !default;
+$button-radius-sm: var(--border-radius-sm) !default;
+$button-radius-lg: $button-radius !default;
 
-$button-disabled-opacity:     $disabled-opacity !default;
-$button-focus-ring:           $focus-ring !default;
+$button-disabled-opacity: $disabled-opacity !default;
+$button-focus-ring: $focus-ring !default;
 
-$button-white-space:          wrap !default;
-$button-height:               2.5rem !default;
-$button-height-sm:            2rem !default;
-$button-height-lg:            3rem !default;
-$button-min-width:            4rem !default;
-$icon-button-width:           $button-height !default;
-$icon-button-width-sm:        $button-height-sm !default;
-$button-spacing:              $spacer-03 !default;
+$button-white-space: wrap !default;
+$button-height: 2.5rem !default;
+$button-height-sm: 2rem !default;
+$button-height-lg: 3rem !default;
+$button-min-width: 4rem !default;
+$icon-button-width: $button-height !default;
+$icon-button-width-sm: $button-height-sm !default;
+$button-spacing: $spacer-03 !default;
 
-$button-set-gap:              $spacer-03 !default; // space between buttons
-$button-icon-set-gap:         $spacer-02 !default; // space between icon buttons
-$button-set-row-gap:          $button-set-gap !default;
-$button-set-margin:           $margin-02 !default;
+$button-set-gap: $spacer-03 !default; // space between buttons
+$button-icon-set-gap: $spacer-02 !default; // space between icon buttons
+$button-set-row-gap: $button-set-gap !default;
+$button-set-margin: $margin-02 !default;
 
-$button-transition:           color $transition-time ease-in-out, background-color $transition-time ease-in-out, border-color $transition-time ease-in-out, box-shadow $transition-time ease-in-out !default;
+$button-transition:
+  color $transition-time ease-in-out,
+  background-color $transition-time ease-in-out,
+  border-color $transition-time ease-in-out,
+  box-shadow $transition-time ease-in-out !default;
 
 // Forms ________________________________
-$form-input-spacing:          $spacer-03 !default;
-$form-input-height:           2.75rem !default;  
-$form-input-min-width:        4rem !default;  
-$form-input-field-spacing:    $spacer-03 !default;
+$form-input-spacing: $spacer-03 !default;
+$form-input-height: 2.75rem !default;
+$form-input-min-width: 4rem !default;
+$form-input-field-spacing: $spacer-03 !default;
 
-$form-label-margin-bottom:    0 !default;
-$form-label:                  var(--#{$prefix-bh}text-secondary) !default;
+$form-label-margin-bottom: 0 !default;
+$form-label: var(--#{$prefix-bh}text-secondary) !default;
 
-$form-helper-margin-top:      0 !default;
-$form-helper:                 var(--#{$prefix-bh}text-muted) !default;
+$form-helper-margin-top: 0 !default;
+$form-helper: var(--#{$prefix-bh}text-muted) !default;
 
-$form-input-padding-y:        $padding-03 !default;
-$form-input-padding-x:        $padding-05 !default;
-$form-input-padding-start:    $form-input-padding-x !default;
-$form-input-padding-end:      $padding-03 !default;
-$form-input-text:             var(--#{$prefix-bh}text-primary) !default;
-$form-input-background:       var(--#{$prefix-bh}ui-background-01) !default;
-$form-input-border:           var(--#{$prefix-bh}ui-border-01) !default;
-$form-input-border-width:     $border-width !default;
+$form-input-padding-y: $padding-03 !default;
+$form-input-padding-x: $padding-05 !default;
+$form-input-padding-start: $form-input-padding-x !default;
+$form-input-padding-end: $padding-03 !default;
+$form-input-text: var(--#{$prefix-bh}text-primary) !default;
+$form-input-background: var(--#{$prefix-bh}ui-background-01) !default;
+$form-input-border: var(--#{$prefix-bh}ui-border-01) !default;
+$form-input-border-width: $border-width !default;
 
-$form-input-radius:           $border-radius-md !default;
+$form-input-radius: $border-radius-md !default;
 
-$form-input-placeholder:      var(--#{$prefix-bh}text-muted) !default;
+$form-input-placeholder: var(--#{$prefix-bh}text-muted) !default;
 
-$form-input-background-disabled:  var(--#{$prefix-bh}disabled-overlay-01) !default;
-$form-input-border-disabled:      var(--#{$prefix-bh}disabled-overlay-02) !default;
-$form-text-disabled:              var(--#{$prefix-bh}disabled-overlay-03) !default;
+$form-input-background-disabled: var(
+  --#{$prefix-bh}disabled-overlay-01
+) !default;
+$form-input-border-disabled: var(--#{$prefix-bh}disabled-overlay-02) !default;
+$form-text-disabled: var(--#{$prefix-bh}disabled-overlay-03) !default;
 
-$form-input-border-focus:         $focus-ring-color !default;
-$form-input-focus-ring-width:     1px !default;
-$form-input-focus-ring:           0 0 $focus-ring-blur $form-input-focus-ring-width $focus-ring-color !default;
+$form-input-border-focus: $focus-ring-color !default;
+$form-input-focus-ring-width: 1px !default;
+$form-input-focus-ring: 0 0 $focus-ring-blur $form-input-focus-ring-width
+  $focus-ring-color !default;
 
-$form-input-icon:                 var(--#{$prefix-bh}text-muted) !default;
-$form-input-icon-size:            $icon-md !default;
-$form-input-icon-gap:             $spacer-03 !default;
-$form-input-icon-position-y:      ($form-input-height - $form-input-icon-size) / 2 !default;
+$form-input-icon: var(--#{$prefix-bh}text-muted) !default;
+$form-input-icon-size: $icon-md !default;
+$form-input-icon-gap: $spacer-03 !default;
+$form-input-icon-position-y: ($form-input-height - $form-input-icon-size) / 2 !default;
 
 // Short form
-$short-form-body-gap:             $spacer-05 !default;
-
-
+$short-form-body-gap: $spacer-05 !default;
 
 // Form wrapper __________________________
-$form-gap:                        $spacer-06 !default;
-$form-body-gap:                   $form-gap !default;
-$form-body-margin-top:            $margin-05 !default;
-$form-body-max-width:             36rem !default;
-$form-actions-gap:                $form-gap !default;
-$form-actions-margin-top:         $margin-05 !default;
+$form-gap: $spacer-06 !default;
+$form-body-gap: $form-gap !default;
+$form-body-margin-top: $margin-05 !default;
+$form-body-max-width: 36rem !default;
+$form-actions-gap: $form-gap !default;
+$form-actions-margin-top: $margin-05 !default;
 
-$nested-inputs-padding-y:      $padding-03 !default;
-$nested-inputs-padding-x:      0 !default;
-$nested-inputs-padding-left:   $padding-08 !default;
-$nested-inputs-border:         $focus-01 !default;
-$nested-inputs-border-width:   $border-width-02 !default;
-$nested-inputs-margin-top:     $spacer-05 - $form-gap !default;
-
+$nested-inputs-padding-y: $padding-03 !default;
+$nested-inputs-padding-x: 0 !default;
+$nested-inputs-padding-left: $padding-08 !default;
+$nested-inputs-border: $focus-01 !default;
+$nested-inputs-border-width: $border-width-02 !default;
+$nested-inputs-margin-top: $spacer-05 - $form-gap !default;
 
 // Input group __________________________
-$input-group-addon-padding-y:           $padding-02 !default;
-$input-group-addon-padding-x:           $form-input-padding-x !default;
-$input-group-addon-text:                $text-secondary !default;
-$input-group-addon-border:              $form-input-border !default;
-$input-group-addon-border-width:        $form-input-border-width !default;
-$input-group-addon-background:          $ui-overlay-02 !default;
-$input-group-button-gap:                $button-set-gap !default;
+$input-group-addon-padding-y: $padding-02 !default;
+$input-group-addon-padding-x: $form-input-padding-x !default;
+$input-group-addon-text: $text-secondary !default;
+$input-group-addon-border: $form-input-border !default;
+$input-group-addon-border-width: $form-input-border-width !default;
+$input-group-addon-background: $ui-overlay-02 !default;
+$input-group-button-gap: $button-set-gap !default;
 
-$input-group-addon-text-disabled:       $form-text-disabled !default;
-$input-group-addon-border-disabled:     $form-input-border-disabled !default;
+$input-group-addon-text-disabled: $form-text-disabled !default;
+$input-group-addon-border-disabled: $form-input-border-disabled !default;
 $input-group-addon-background-disabled: $form-input-background-disabled !default;
 
-
-
 // Input row ____________________________
-$input-row-gutter-x:                  $spacer-03 !default;
-$input-row-gutter-y:                  $grid-gutter-width !default;
-
-
+$input-row-gutter-x: $spacer-03 !default;
+$input-row-gutter-y: $grid-gutter-width !default;
 
 // Form input buttons ___________________
-$form-input-button-height:            1.75rem !default;
-$form-input-button-width:             $form-input-button-height !default;
-$form-input-button-radius:            $border-radius-xs !default;
-$form-input-button-spacing-y:         $form-input-padding-y !default;
-$form-input-button-spacing-x:         $form-input-button-spacing-y !default;
-$form-input-button-gap:               $spacer-01 !default;
+$form-input-button-height: 1.75rem !default;
+$form-input-button-width: $form-input-button-height !default;
+$form-input-button-radius: $border-radius-xs !default;
+$form-input-button-spacing-y: $form-input-padding-y !default;
+$form-input-button-spacing-x: $form-input-button-spacing-y !default;
+$form-input-button-gap: $spacer-01 !default;
 
-$form-input-button-background:        var(--#{$prefix-bh}transparent) !default;
-$form-input-button-icon:              var(--#{$prefix-bh}action-text-01) !default;
-$form-input-button-background-hover:  var(--#{$prefix-bh}action-04) !default;
-$form-input-clear-icon:               var(--#{$prefix-bh}action-text-03) !default;
-$form-input-clear-background-hover:   var(--#{$prefix-bh}action-05) !default;
-$form-input-button-border-focus:      $form-input-border-focus !default;
-$form-input-button-focus-ring:        $form-input-focus-ring !default;
-
-
+$form-input-button-background: var(--#{$prefix-bh}transparent) !default;
+$form-input-button-icon: var(--#{$prefix-bh}action-text-01) !default;
+$form-input-button-background-hover: var(--#{$prefix-bh}action-04) !default;
+$form-input-clear-icon: var(--#{$prefix-bh}action-text-03) !default;
+$form-input-clear-background-hover: var(--#{$prefix-bh}action-05) !default;
+$form-input-button-border-focus: $form-input-border-focus !default;
+$form-input-button-focus-ring: $form-input-focus-ring !default;
 
 // Form counter _________________________
-$form-counter:                        $form-helper !default;
-$form-counter-spacing:                4rem !default;
-$form-counter-warning:                var(--#{$prefix-bh}error-01) !default;
-
-
+$form-counter: $form-helper !default;
+$form-counter-spacing: 4rem !default;
+$form-counter-warning: var(--#{$prefix-bh}error-01) !default;
 
 // Form validation ______________________
-$form-validation-error:             var(--#{$prefix-bh}error-01) !default;
+$form-validation-error: var(--#{$prefix-bh}error-01) !default;
 
-$form-input-border-error:           $form-validation-error !default;
-$form-input-icon-error:             map-get($state-colours, "error-01") !default;
-$form-input-icon-svg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$form-input-icon-error}'><!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--><path d='M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z'/></svg>") !default;
-$form-feedback-icon-svg:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$form-input-icon-error}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z'/></svg>") !default;
-
+$form-input-border-error: $form-validation-error !default;
+$form-input-icon-error: map-get($state-colours, "error-01") !default;
+$form-input-icon-svg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$form-input-icon-error}'><!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--><path d='M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z'/></svg>") !default;
+$form-feedback-icon-svg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$form-input-icon-error}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z'/></svg>") !default;
 
 $form-validation-states: (
   // "valid" // REMOVED //
-
   "invalid": (
-    "color": $form-validation-error,
-    "icon": $form-input-icon-svg,
-    "feedback-icon": $form-feedback-icon-svg,
-    "tooltip-color": $white,
-    "tooltip-bg-color": var(--#{$prefix-bh}error-01),
-    "focus-box-shadow": 0 0 $focus-ring-blur $form-input-focus-ring-width $form-validation-error,
-    "border-color": $form-input-border-error,
-  )
+      "color": $form-validation-error,
+      "icon": $form-input-icon-svg,
+      "feedback-icon": $form-feedback-icon-svg,
+      "tooltip-color": $white,
+      "tooltip-bg-color": var(--#{$prefix-bh}error-01),
+      "focus-box-shadow": 0 0 $focus-ring-blur $form-input-focus-ring-width
+        $form-validation-error,
+      "border-color": $form-input-border-error,
+    )
 ) !default;
 
-
-
 // Form select __________________________
-$form-select-padding-y:               subtract($form-input-padding-y, $form-input-border-width) !default;
-$form-select-padding-x:               $form-input-padding-x !default;
-$form-select-border:                  $form-input-border !default;
-$form-select-border-width:            $form-input-border-width !default;
-$form-select-background:              $form-input-background !default;
-$form-select-radius:                  $form-input-radius !default;
+$form-select-padding-y: subtract(
+  $form-input-padding-y,
+  $form-input-border-width
+) !default;
+$form-select-padding-x: $form-input-padding-x !default;
+$form-select-border: $form-input-border !default;
+$form-select-border-width: $form-input-border-width !default;
+$form-select-background: $form-input-background !default;
+$form-select-radius: $form-input-radius !default;
 
-$form-select-text:                    $form-input-text !default;
+$form-select-text: $form-input-text !default;
 
-$form-select-indicator:               map-get($text-colors, "muted") !default;
-$form-select-indicator-svg:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$form-select-indicator}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z'/></svg>") !default;
-$form-select-indicator-size-x:        1.75rem !default;
-$form-select-indicator-size-y:        1rem !default;
-$form-select-indicator-size:          $form-select-indicator-size-x $form-select-indicator-size-y !default;
-$form-select-indicator-gap:           $spacer-03 !default;
-$form-select-indicator-padding:       calc($form-select-indicator-gap + $form-select-indicator-size-x + $form-select-padding-y) !default;
-$form-select-indicator-position:      right $form-select-padding-y center !default;
+$form-select-indicator: map-get($text-colors, "muted") !default;
+$form-select-indicator-svg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$form-select-indicator}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z'/></svg>") !default;
+$form-select-indicator-size-x: 1.75rem !default;
+$form-select-indicator-size-y: 1rem !default;
+$form-select-indicator-size: $form-select-indicator-size-x
+  $form-select-indicator-size-y !default;
+$form-select-indicator-gap: $spacer-03 !default;
+$form-select-indicator-padding: calc(
+  $form-select-indicator-gap + $form-select-indicator-size-x +
+    $form-select-padding-y
+) !default;
+$form-select-indicator-position: right $form-select-padding-y center !default;
 
-$form-select-border-focus:            $form-input-border-focus !default;
-$form-select-focus-ring:              $form-input-focus-ring !default;
-
+$form-select-border-focus: $form-input-border-focus !default;
+$form-select-focus-ring: $form-input-focus-ring !default;
 
 $form-select-feedback-icon-padding-end: 0 !default; // set to zero to remove default value
 
-$form-select-text-disabled:           $form-text-disabled !default;
-$form-select-border-disabled:         $form-input-border-disabled !default;
-$form-select-background-disabled:     $form-input-background-disabled !default;
-$form-select-indicator-svg-disabled:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$form-select-text-disabled}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z'/></svg>") !default;
-
+$form-select-text-disabled: $form-text-disabled !default;
+$form-select-border-disabled: $form-input-border-disabled !default;
+$form-select-background-disabled: $form-input-background-disabled !default;
+$form-select-indicator-svg-disabled: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$form-select-text-disabled}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z'/></svg>") !default;
 
 // Checkbox _____________________________
-$checkbox-input-width:                  1rem !default;
-$checkbox-input-margin-y:               $margin-01 !default;
-$checkbox-label:                        var(--#{$prefix-bh}text-secondary) !default;
-$checkbox-input-gap:                    $spacer-03 !default;
-$checkbox-input-background:             $form-input-background !default;
-$checkbox-input-border:                 var(--#{$prefix-bh}action-01) !default;
-$checkbox-input-border-width:           $form-input-border-width !default;
-$checkbox-input-radius:                 $border-radius-xs !default;
-$checkbox-focus-ring:                   0 0 0 1px $ui-border-04, 0 0 0 3px $focus-ring-color !default;
+$checkbox-input-width: 1rem !default;
+$checkbox-input-margin-y: $margin-01 !default;
+$checkbox-label: var(--#{$prefix-bh}text-secondary) !default;
+$checkbox-input-gap: $spacer-03 !default;
+$checkbox-input-background: $form-input-background !default;
+$checkbox-input-border: var(--#{$prefix-bh}action-01) !default;
+$checkbox-input-border-width: $form-input-border-width !default;
+$checkbox-input-radius: $border-radius-xs !default;
+$checkbox-focus-ring:
+  0 0 0 1px $ui-border-04,
+  0 0 0 3px $focus-ring-color !default;
 
-$checkbox-input-background-active:      var(--#{$prefix-bh}action-01) !default;
-$checkbox-input-border-active:          var(--#{$prefix-bh}action-01) !default;
-$checkbox-icon-check:                   map-get($action-text-colors, "02") !default;
+$checkbox-input-background-active: var(--#{$prefix-bh}action-01) !default;
+$checkbox-input-border-active: var(--#{$prefix-bh}action-01) !default;
+$checkbox-icon-check: map-get($action-text-colors, "02") !default;
 
-$checkbox-gap:                          $spacer-03 !default;
-$checkbox-check-svg:                    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$checkbox-icon-check}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/></svg>") !default;
+$checkbox-gap: $spacer-03 !default;
+$checkbox-check-svg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$checkbox-icon-check}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/></svg>") !default;
 
 // Disabled
-$checkbox-input-background-disabled:    var(--#{$prefix-bh}disabled-overlay-02) !default;
-$checkbox-input-border-disabled:        var(--#{$prefix-bh}transparent) !default;
-$checkbox-check-disabled:               var(--#{$prefix-bh}disabled-04) !default;
-$checkbox-label-disabled:               var(--#{$prefix-bh}disabled-overlay-03) !default;
+$checkbox-input-background-disabled: var(
+  --#{$prefix-bh}disabled-overlay-02
+) !default;
+$checkbox-input-border-disabled: var(--#{$prefix-bh}transparent) !default;
+$checkbox-check-disabled: var(--#{$prefix-bh}disabled-04) !default;
+$checkbox-label-disabled: var(--#{$prefix-bh}disabled-overlay-03) !default;
 
 // Read-only
-$checkbox-input-background-readonly:    $checkbox-input-background !default;
-$checkbox-input-border-readonly:        var(--#{$prefix-bh}disabled-overlay-02) !default;
-$checkbox-icon-check-readonly:          map-get($action-text-colors, "04") !default;
-$checkbox-check-svg-readonly:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$checkbox-icon-check-readonly}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/></svg>") !default;
+$checkbox-input-background-readonly: $checkbox-input-background !default;
+$checkbox-input-border-readonly: var(
+  --#{$prefix-bh}disabled-overlay-02
+) !default;
+$checkbox-icon-check-readonly: map-get($action-text-colors, "04") !default;
+$checkbox-check-svg-readonly: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$checkbox-icon-check-readonly}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/></svg>") !default;
 
 // Indeterminate
-$checkbox-icon-indeterminate:               $checkbox-icon-check !default;
-$checkbox-icon-indeterminate-readonly:      $checkbox-icon-check-readonly !default;
-$checkbox-input-background-indeterminate:   $checkbox-input-background-active !default;
-$checkbox-input-border-indeterminate:       $checkbox-input-border-active !default;
-$checkbox-input-svg-indeterminate:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640' fill='#{$checkbox-icon-indeterminate}'><!--!Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320z'/></svg>") !default;
+$checkbox-icon-indeterminate: $checkbox-icon-check !default;
+$checkbox-icon-indeterminate-readonly: $checkbox-icon-check-readonly !default;
+$checkbox-input-background-indeterminate: $checkbox-input-background-active !default;
+$checkbox-input-border-indeterminate: $checkbox-input-border-active !default;
+$checkbox-input-svg-indeterminate: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640' fill='#{$checkbox-icon-indeterminate}'><!--!Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320z'/></svg>") !default;
 $checkbox-input-svg-indeterminate-readonly: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640' fill='#{$checkbox-icon-indeterminate-readonly}'><!--!Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320z'/></svg>") !default;
 
-
 // Radio
-$radio-pip-active:                      $checkbox-icon-check !default;
-$radio-pip-readonly:                    $checkbox-icon-check-readonly !default;
-$radio-pip-svg:                         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$radio-pip-active}'/></svg>") !default;
-$radio-pip-svg-readonly:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$radio-pip-readonly}'/></svg>") !default;
-$radio-input-radius:                    $border-radius-full !default;
-$radio-pip-disabled:                    $checkbox-check-disabled !default;
+$radio-pip-active: $checkbox-icon-check !default;
+$radio-pip-readonly: $checkbox-icon-check-readonly !default;
+$radio-pip-svg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$radio-pip-active}'/></svg>") !default;
+$radio-pip-svg-readonly: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$radio-pip-readonly}'/></svg>") !default;
+$radio-input-radius: $border-radius-full !default;
+$radio-pip-disabled: $checkbox-check-disabled !default;
 
 // Response button
-$response-button-height:                $form-input-height !default;
-$response-button-height-lg:             5rem !default;
-$response-button-width-lg:              7.5rem !default;
-$response-button-gap-lg:                $spacer-02 !default;
-$response-button-icon-height-lg:        100% !default;
-$response-button-padding-y-lg:          $padding-03 !default;
-$response-button-padding-x-lg:          $padding-05 !default;
-
-
+$response-button-height: $form-input-height !default;
+$response-button-height-lg: 5rem !default;
+$response-button-width-lg: 7.5rem !default;
+$response-button-gap-lg: $spacer-02 !default;
+$response-button-icon-height-lg: 100% !default;
+$response-button-padding-y-lg: $padding-03 !default;
+$response-button-padding-x-lg: $padding-05 !default;
 
 // Switch _______________________________
-$switch-input-gap:                    $spacer-04 !default;
-$switch-track-background:             var(--#{$prefix-bh}ui-overlay-04) !default;
-$switch-track-background-on:          var(--#{$prefix-bh}success-01) !default;
-$switch-track-background-disabled:    var(--#{$prefix-bh}disabled-overlay-02) !default;
-$switch-track-border:                 var(--#{$prefix-bh}transparent) !default;
-$switch-track-border-disabled:        $switch-track-border !default;
-$switch-track-border-on:              $switch-track-border !default;
-$switch-handle:                       map-get($action-colors, "07") !default;
-$switch-handle-on:                    $switch-handle !default;
-$switch-handle-disabled:              var(--#{$prefix-bh}disabled-overlay-03) !default;
-$switch-handle-focus:                 $switch-handle !default;
-$switch-status-tag:                   var(--#{$prefix-bh}text-muted) !default;
-$switch-status-tag-on:                $switch-status-tag !default;
-$switch-status-tag-disabled:          var(--#{$prefix-bh}disabled-overlay-03) !default;
-$switch-status-tag-spacing:           $spacer-02 !default;
+$switch-input-gap: $spacer-04 !default;
+$switch-track-background: var(--#{$prefix-bh}ui-overlay-04) !default;
+$switch-track-background-on: var(--#{$prefix-bh}success-01) !default;
+$switch-track-background-disabled: var(
+  --#{$prefix-bh}disabled-overlay-02
+) !default;
+$switch-track-border: var(--#{$prefix-bh}transparent) !default;
+$switch-track-border-disabled: $switch-track-border !default;
+$switch-track-border-on: $switch-track-border !default;
+$switch-handle: map-get($action-colors, "07") !default;
+$switch-handle-on: $switch-handle !default;
+$switch-handle-disabled: var(--#{$prefix-bh}disabled-overlay-03) !default;
+$switch-handle-focus: $switch-handle !default;
+$switch-status-tag: var(--#{$prefix-bh}text-muted) !default;
+$switch-status-tag-on: $switch-status-tag !default;
+$switch-status-tag-disabled: var(--#{$prefix-bh}disabled-overlay-03) !default;
+$switch-status-tag-spacing: $spacer-02 !default;
 
-$switch-handle-svg:                   url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$switch-handle}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z'/></svg>") !default;
-$switch-handle-svg-on:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$switch-handle-on}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z'/></svg>") !default;
-$switch-handle-svg-check:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$switch-handle-on}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z'/></svg>") !default;
+$switch-handle-svg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$switch-handle}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z'/></svg>") !default;
+$switch-handle-svg-on: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$switch-handle-on}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z'/></svg>") !default;
+$switch-handle-svg-check: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$switch-handle-on}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z'/></svg>") !default;
 
-$switch-handle-svg-disabled:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$switch-handle-disabled}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z'/></svg>") !default;
-$switch-handle-svg-check-disabled:    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$switch-handle-disabled}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z'/></svg>") !default;
+$switch-handle-svg-disabled: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$switch-handle-disabled}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z'/></svg>") !default;
+$switch-handle-svg-check-disabled: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$switch-handle-disabled}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z'/></svg>") !default;
 
+$switch-handle-size: 0.875rem !default;
+$switch-handle-size-on: 1.25rem !default;
+$switch-padding-y: $padding-01 !default;
+$switch-padding-x: $switch-padding-y !default;
 
-$switch-handle-size:                  0.875rem !default;
-$switch-handle-size-on:               1.25rem !default;
-$switch-padding-y:                    $padding-01 !default;
-$switch-padding-x:                    $switch-padding-y !default;
+$switch-padding-y-sm: $padding-05 * 0.125 !default;
+$switch-padding-x-sm: $switch-padding-y-sm !default;
 
-$switch-padding-y-sm:                 $padding-05 * .125 !default;
-$switch-padding-x-sm:                 $switch-padding-y-sm !default;
+$switch-radius: $border-radius-full !default;
 
-$switch-radius:                       $border-radius-full !default;
+$switch-padding-start: 0 !default; // set to zero to remove default value
 
-$switch-padding-start:                0 !default; // set to zero to remove default value
+$switch-gap: $spacer-04 !default;
 
-$switch-gap:                          $spacer-04 !default;
+$switch-active-content: "Always active" !default;
 
-$switch-active-content:               'Always active' !default;
+$switch-set-gap: $spacer-04 !default;
 
-$switch-set-gap:                      $spacer-04 !default;
-
-
-
-// Notification base styles _____________  
+// Notification base styles _____________
 //
 // Variables are shared between Alerts & Toast
 
-$notification-padding-y:                $padding-03 !default;
-$notification-padding-x:                $padding-03 !default;
-$notification-content-padding-y:        $padding-01 !default;
-$notification-content-padding-x:        $padding-03 !default;
-$notification-content-gap:              $spacer-03 !default;
-$notification-radius:                   $border-radius-md !default;
-$notification-border-width:             $border-width-03 !default;
-$notification-note-sm:                  var(--#{$prefix-bh}text-muted) !default;
-$notification-contextbar-margin-top:    $margin-03 !default;
+$notification-padding-y: $padding-03 !default;
+$notification-padding-x: $padding-03 !default;
+$notification-content-padding-y: $padding-01 !default;
+$notification-content-padding-x: $padding-03 !default;
+$notification-content-gap: $spacer-03 !default;
+$notification-radius: $border-radius-md !default;
+$notification-border-width: $border-width-03 !default;
+$notification-note-sm: var(--#{$prefix-bh}text-muted) !default;
+$notification-contextbar-margin-top: $margin-03 !default;
 $notification-contextbar-margin-bottom: $margin-01 !default;
-$notification-backdrop-blur:            2rem !default;
-
+$notification-backdrop-blur: 2rem !default;
 
 // Alert ________________________________
-$alert-padding-y:                 $notification-padding-y !default;
-$alert-padding-x:                 $notification-padding-x !default;
-$alert-content-padding-y:         $notification-content-padding-y !default;
-$alert-content-padding-x:         $notification-content-padding-x !default;
-$alert-content-gap:               $notification-content-gap !default;
-$alert-radius:                    $notification-radius !default;
-$alert-border-width:              $notification-border-width !default;
-$alert-note-sm:                   $notification-note-sm !default;
-$alert-contextbar-margin-top:     $notification-contextbar-margin-top !default;
-$alert-contextbar-margin-bottom:  $notification-contextbar-margin-bottom !default;
-
-
+$alert-padding-y: $notification-padding-y !default;
+$alert-padding-x: $notification-padding-x !default;
+$alert-content-padding-y: $notification-content-padding-y !default;
+$alert-content-padding-x: $notification-content-padding-x !default;
+$alert-content-gap: $notification-content-gap !default;
+$alert-radius: $notification-radius !default;
+$alert-border-width: $notification-border-width !default;
+$alert-note-sm: $notification-note-sm !default;
+$alert-contextbar-margin-top: $notification-contextbar-margin-top !default;
+$alert-contextbar-margin-bottom: $notification-contextbar-margin-bottom !default;
 
 // Toast ________________________________
-$toast-padding-y:                   $notification-padding-y !default;
-$toast-padding-x:                   $notification-padding-x !default;
-$toast-content-padding-y:           $notification-content-padding-y !default;
-$toast-content-padding-x:           $notification-content-padding-x !default;
-$toast-content-gap:                 $notification-content-gap !default;
-$toast-radius:                      $notification-radius !default;
-$toast-border-width:                $notification-border-width !default;
-$toast-note-sm:                     $notification-note-sm !default;
-$toast-max-width:                   22rem !default;
-$toast-spacing:                     $spacer-04 !default;
-$toast-shadow:                      $shadow-lg !default;
-$toast-contextbar-margin-top:       $notification-contextbar-margin-top !default;
-$toast-contextbar-margin-bottom:    $notification-contextbar-margin-bottom !default;
-$toast-container-position-y:        bottom !default;
-$toast-container-position-x:        right !default;
-$toast-container-position-value-y:  2.5rem !default;
-$toast-container-position-value-x:  2.5rem !default;
-$toast-backdrop-blur:               $notification-backdrop-blur !default;
-
-
+$toast-padding-y: $notification-padding-y !default;
+$toast-padding-x: $notification-padding-x !default;
+$toast-content-padding-y: $notification-content-padding-y !default;
+$toast-content-padding-x: $notification-content-padding-x !default;
+$toast-content-gap: $notification-content-gap !default;
+$toast-radius: $notification-radius !default;
+$toast-border-width: $notification-border-width !default;
+$toast-note-sm: $notification-note-sm !default;
+$toast-max-width: 22rem !default;
+$toast-spacing: $spacer-04 !default;
+$toast-shadow: $shadow-lg !default;
+$toast-contextbar-margin-top: $notification-contextbar-margin-top !default;
+$toast-contextbar-margin-bottom: $notification-contextbar-margin-bottom !default;
+$toast-container-position-y: bottom !default;
+$toast-container-position-x: right !default;
+$toast-container-position-value-y: 2.5rem !default;
+$toast-container-position-value-x: 2.5rem !default;
+$toast-backdrop-blur: $notification-backdrop-blur !default;
 
 // Close ________________________________
-$btn-close-icon:              $action-text-03 !default;
-$btn-close-focus-ring:        $focus-ring !default;
-$btn-close-width:             2rem !default;
-$btn-close-height:            $btn-close-width !default;
-$btn-close-icon-size:         $icon-md !default;
-$btn-close-radius:            $border-radius-sm !default;
+$btn-close-icon: $action-text-03 !default;
+$btn-close-focus-ring: $focus-ring !default;
+$btn-close-width: 2rem !default;
+$btn-close-height: $btn-close-width !default;
+$btn-close-icon-size: $icon-md !default;
+$btn-close-radius: $border-radius-sm !default;
 
-$btn-close-background:        $transparent !default;
-$btn-close-background-hover:  $action-05 !default;
-$btn-close-background-focus:  $action-05 !default;
-
-
+$btn-close-background: $transparent !default;
+$btn-close-background-hover: $action-05 !default;
+$btn-close-background-focus: $action-05 !default;
 
 // Tag __________________________________
-$tag-border:                  $transparent !default;
-$tag-border-width:            $border-width-01 !default;
-$tag-padding-y:               subtract($padding-01, $tag-border-width) !default;
-$tag-padding-x:               subtract($padding-03, $tag-border-width) !default;
-$tag-radius:                  $border-radius-full !default;
-$tag-background:              $action-05 !default;
-$tag-label:                   $action-text-04 !default;
-$tag-label-padding-x:         $padding-01 !default;
-$tag-height:                  2rem !default;
-$tag-min-width:               4rem !default;
+$tag-border: $transparent !default;
+$tag-border-width: $border-width-01 !default;
+$tag-padding-y: subtract($padding-01, $tag-border-width) !default;
+$tag-padding-x: subtract($padding-03, $tag-border-width) !default;
+$tag-radius: $border-radius-full !default;
+$tag-background: $action-05 !default;
+$tag-label: $action-text-04 !default;
+$tag-label-padding-x: $padding-01 !default;
+$tag-height: 2rem !default;
+$tag-min-width: 4rem !default;
 
-$tag-set-gap:                 $spacer-02 !default;
-$tag-set-row-gap:             $spacer-03 !default;
+$tag-set-gap: $spacer-02 !default;
+$tag-set-row-gap: $spacer-03 !default;
 
-$tag-selectable-background:         $transparent !default;
-$tag-selectable-border:             $action-06 !default;
-$tag-selectable-border-bottom-width:$border-width-02 !default;
-$tag-selectable-label:              $action-text-04 !default;
-$tag-selectable-icon:               $tag-selectable-label !default;
+$tag-selectable-background: $transparent !default;
+$tag-selectable-border: $action-06 !default;
+$tag-selectable-border-bottom-width: $border-width-02 !default;
+$tag-selectable-label: $action-text-04 !default;
+$tag-selectable-icon: $tag-selectable-label !default;
 
-$tag-selectable-background-hover:   $action-05 !default;
-$tag-selectable-border-hover:       $action-06 !default;
-$tag-selectable-label-hover:        $action-text-04 !default;
-$tag-selectable-icon-hover:         $tag-selectable-label-hover !default;
+$tag-selectable-background-hover: $action-05 !default;
+$tag-selectable-border-hover: $action-06 !default;
+$tag-selectable-label-hover: $action-text-04 !default;
+$tag-selectable-icon-hover: $tag-selectable-label-hover !default;
 
-$tag-selectable-background-active:  $action-04 !default;
-$tag-selectable-border-active:      $action-04 !default;
-$tag-selectable-label-active:       $action-text-01 !default;
-$tag-selectable-icon-active:        $tag-selectable-label-active !default;
+$tag-selectable-background-active: $action-04 !default;
+$tag-selectable-border-active: $action-04 !default;
+$tag-selectable-label-active: $action-text-01 !default;
+$tag-selectable-icon-active: $tag-selectable-label-active !default;
 
 // Small tag
-$tag-height-sm:               1.5rem !default;
-$tag-min-width-sm:            3rem !default;
-$tag-padding-y-sm:            add($padding-01/2, $tag-border-width*-1) !default;
-$tag-padding-x-sm:            add($padding-02, $tag-border-width*-1) !default;
+$tag-height-sm: 1.5rem !default;
+$tag-min-width-sm: 3rem !default;
+$tag-padding-y-sm: add($padding-01/2, $tag-border-width * -1) !default;
+$tag-padding-x-sm: add($padding-02, $tag-border-width * -1) !default;
 
 // Tags used in inputs (e.g. dropdown)
-$tag-height-input:            1.75rem !default;
+$tag-height-input: 1.75rem !default;
 
 // Navs _________________________________
-$nav-gap:                           $spacer-02 !default;
-$nav-link-padding-y:                $padding-01 !default;
-$nav-link-padding-x:                $padding-05 !default;
-$nav-link-gap:                      $spacer-03 !default;
-$nav-link-radius:                   $border-radius-md !default;
-$nav-link-border:                   var(--#{$prefix-bh}transparent) !default;
-$nav-link-border-width:             $border-width-01 !default;
-$nav-link-height:                   3rem !default;
+$nav-gap: $spacer-02 !default;
+$nav-link-padding-y: $padding-01 !default;
+$nav-link-padding-x: $padding-05 !default;
+$nav-link-gap: $spacer-03 !default;
+$nav-link-radius: $border-radius-md !default;
+$nav-link-border: var(--#{$prefix-bh}transparent) !default;
+$nav-link-border-width: $border-width-01 !default;
+$nav-link-height: 3rem !default;
 
-$nav-link:                          var(--#{$prefix-bh}action-text-05) !default;
-$nav-link-hover:                    var(--#{$prefix-bh}action-text-05) !default;
-$nav-link-active:                   var(--#{$prefix-bh}action-text-01) !default;
-$nav-link-disabled:                 var(--#{$prefix-bh}disabled-overlay-03) !default;
+$nav-link: var(--#{$prefix-bh}action-text-05) !default;
+$nav-link-hover: var(--#{$prefix-bh}action-text-05) !default;
+$nav-link-active: var(--#{$prefix-bh}action-text-01) !default;
+$nav-link-disabled: var(--#{$prefix-bh}disabled-overlay-03) !default;
 
-$nav-link-background:               var(--#{$prefix-bh}transparent) !default;
-$nav-link-background-hover:         var(--#{$prefix-bh}action-05) !default;
-$nav-link-background-active:        var(--#{$prefix-bh}action-04) !default;
-$nav-link-background-disabled:      var(--#{$prefix-bh}transparent) !default;
-$nav-link-border-focus:             var(--#{$prefix-bh}action-07) !default;
+$nav-link-background: var(--#{$prefix-bh}transparent) !default;
+$nav-link-background-hover: var(--#{$prefix-bh}action-05) !default;
+$nav-link-background-active: var(--#{$prefix-bh}action-04) !default;
+$nav-link-background-disabled: var(--#{$prefix-bh}transparent) !default;
+$nav-link-border-focus: var(--#{$prefix-bh}action-07) !default;
 
-$nav-link-focus-ring:               $focus-ring !default;
+$nav-link-focus-ring: $focus-ring !default;
 
 //Nav link sizes
-$nav-link-height-lg:                3.5rem !default;
+$nav-link-height-lg: 3.5rem !default;
 
 // Nav stacked
-$nav-stacked-gap:                    $spacer-01 !default;
+$nav-stacked-gap: $spacer-01 !default;
 
 // Nav tabs
-$nav-tabs-border:                   $ui-border-02 !default;
-$nav-tabs-border-width:             $border-width-01 !default;            
+$nav-tabs-border: $ui-border-02 !default;
+$nav-tabs-border-width: $border-width-01 !default;
 
-$nav-tabs-link-padding-x:           $padding-04 !default;
-$nav-tabs-link-padding-y:           $padding-03 !default;
-$nav-tabs-link:                     $action-text-04 !default;
-$nav-tabs-link-background-hover:    $nav-link-background-hover !default;
-$nav-tabs-link-active:              $action-text-05 !default;
-$nav-tabs-link-background-active:   $action-05 !default;
+$nav-tabs-link-padding-x: $padding-04 !default;
+$nav-tabs-link-padding-y: $padding-03 !default;
+$nav-tabs-link: $action-text-04 !default;
+$nav-tabs-link-background-hover: $nav-link-background-hover !default;
+$nav-tabs-link-active: $action-text-05 !default;
+$nav-tabs-link-background-active: $action-05 !default;
 
 // Nav underline
-$nav-underline-link-padding-x:        $nav-tabs-link-padding-x !default;
-$nav-underline-link-padding-y:        $padding-01 !default;
-$nav-underline-gap:                   $spacer-03 !default;
-$nav-underline-border-width:          $border-width-02 !default;
-$nav-underline-border-padding:        $padding-03 !default;
+$nav-underline-link-padding-x: $nav-tabs-link-padding-x !default;
+$nav-underline-link-padding-y: $padding-01 !default;
+$nav-underline-gap: $spacer-03 !default;
+$nav-underline-border-width: $border-width-02 !default;
+$nav-underline-border-padding: $padding-03 !default;
 
-$nav-underline-link-radius:           $border-radius-sm !default;
-$nav-underline-label:                 $action-text-03 !default;
-$nav-underline-label-hover:           $action-text-05 !default;
-$nav-underline-label-disabled:        $disabled-overlay-03 !default;
+$nav-underline-link-radius: $border-radius-sm !default;
+$nav-underline-label: $action-text-03 !default;
+$nav-underline-label-hover: $action-text-05 !default;
+$nav-underline-label-disabled: $disabled-overlay-03 !default;
 $nav-underline-link-background-hover: $action-05 !default;
-$nav-underline-label-active:          $action-text-01 !default;
-$nav-underline-link-height:           2.5rem !default;
+$nav-underline-label-active: $action-text-01 !default;
+$nav-underline-link-height: 2.5rem !default;
 
-$nav-underline-link-border:           $transparent !default;
-$nav-underline-link-border-hover:     $action-06 !default;
-$nav-underline-link-border-active:    $action-01 !default;
+$nav-underline-link-border: $transparent !default;
+$nav-underline-link-border-hover: $action-06 !default;
+$nav-underline-link-border-active: $action-01 !default;
 
-$nav-underline-items-border:          $ui-border-02 !default;
-$nav-underline-items-border-width:    $border-width !default;
+$nav-underline-items-border: $ui-border-02 !default;
+$nav-underline-items-border-width: $border-width !default;
 
 // Tabs component
-$tabs-gap:                          $spacer-05 !default;
-$tab-items-gap:                     $nav-link-gap !default;
+$tabs-gap: $spacer-05 !default;
+$tab-items-gap: $nav-link-gap !default;
 
 // Tab content
-$nav-tabs-content-padding-x:        0 !default;
-$nav-tabs-content-padding-y:        0 !default;
-$nav-tabs-content-radius:           0 !default;
-$nav-tabs-content-background:       $transparent !default;
-
-
+$nav-tabs-content-padding-x: 0 !default;
+$nav-tabs-content-padding-y: 0 !default;
+$nav-tabs-content-radius: 0 !default;
+$nav-tabs-content-background: $transparent !default;
 
 // Card _________________________________
-$card-padding-y:                    $padding-08 !default;
-$card-padding-x:                    $padding-08 !default;
-$card-height:                       100% !default;
-$card-border-width:                 $border-width !default;
-$card-border:                       var(--ui-border-02) !default;
-$card-background:                   var(--ui-background-01) !default;
-$card-radius:                       $border-radius-lg !default;
-$card-text:                         null !default;
+$card-padding-y: $padding-08 !default;
+$card-padding-x: $padding-08 !default;
+$card-height: 100% !default;
+$card-aspect-ratio: null !default;
+$card-border-width: $border-width !default;
+$card-border: var(--ui-border-02) !default;
+$card-background: var(--ui-background-01) !default;
+$card-radius: $border-radius-lg !default;
+$card-text: null !default;
 
-$card-cap-padding-y:                $padding-04 !default;
-$card-cap-padding-x:                $card-padding-x !default;
-$card-cap-background:               $ui-overlay-02 !default;
-$card-cap-text:                     $card-text !default;
-$card-cap-border:                   none !default;
-$card-header-padding-top:           add($card-cap-padding-y, .25rem) !default;
+$card-cap-padding-y: $padding-04 !default;
+$card-cap-padding-x: $card-padding-x !default;
+$card-cap-background: $ui-overlay-02 !default;
+$card-cap-text: $card-text !default;
+$card-cap-border: none !default;
+$card-header-padding-top: add($card-cap-padding-y, 0.25rem) !default;
 
-$card-image-max-height:             10rem !default;
+$card-image-max-height: 10rem !default;
 
-$card-body-gap:                     $content-spacing !default;
+$card-body-gap: $content-spacing !default;
 
-$card-padding-y-lg:                 $padding-09 !default;
-$card-padding-x-lg:                 $padding-09 !default;
+$card-padding-y-lg: $padding-09 !default;
+$card-padding-x-lg: $padding-09 !default;
 
-$card-padding-y-sm:                 $padding-07 !default;
-$card-padding-x-sm:                 $padding-07 !default;
+$card-padding-y-sm: $padding-07 !default;
+$card-padding-x-sm: $padding-07 !default;
 
-$card-border-secondary:             $transparent !default;
-$card-background-secondary:         var(--ui-overlay-02) !default;
+$card-border-secondary: $transparent !default;
+$card-background-secondary: var(--ui-overlay-02) !default;
 
 // Clickable
-$card-clickable-border-hover:       $link-hover !default;
+$card-clickable-border-hover: $link-hover !default;
 
-$card-clickable-background-disabled:    null !default;
-$card-clickable-border-disabled:        $disabled-overlay-01 !default;
-$card-clickable-text-disabled:          $disabled-overlay-03 !default;
+$card-clickable-background-disabled: null !default;
+$card-clickable-border-disabled: $disabled-overlay-01 !default;
+$card-clickable-text-disabled: $disabled-overlay-03 !default;
 $card-clickable-image-disabled-opacity: 0.5 !default;
-$card-clickable-border-width:           3px !default;
+$card-clickable-border-width: 3px !default;
 
 // Selectable
-$card-selectable-check-position-top:    1.5rem !default;
-$card-selectable-check-position-right:  $card-selectable-check-position-top !default;
-$card-selectable-border-width:          $card-clickable-border-width !default;
+$card-selectable-check-position-top: 1.5rem !default;
+$card-selectable-check-position-right: $card-selectable-check-position-top !default;
+$card-selectable-border-width: $card-clickable-border-width !default;
 
-$card-selectable-border-hover:          $card-clickable-border-hover !default;
+$card-selectable-border-hover: $card-clickable-border-hover !default;
 
-$card-selectable-background-active:     $action-04 !default;
-$card-selectable-border-active:         $action-01 !default;
+$card-selectable-background-active: $action-04 !default;
+$card-selectable-border-active: $action-01 !default;
 
-$card-selectable-focus-ring:            $checkbox-focus-ring !default;
+$card-selectable-focus-ring: $checkbox-focus-ring !default;
 
 // Emphasis tile
-$emphasis-tile-padding-y:              $card-padding-y !default;
-$emphasis-tile-padding-x:              $card-padding-x !default;
-$emphasis-tile-content-gap:            $card-body-gap !default;
-$emphasis-tile-radius:                 $border-radius-md !default;
-$emphasis-tile-border-width:           $card-border-width !default;
-$emphasis-tile-background:             $card-background-secondary !default;
-$emphasis-tile-border:                 $card-border-secondary !default;
-$emphasis-tile-width:                  20rem !default;
+$emphasis-tile-padding-y: $card-padding-y !default;
+$emphasis-tile-padding-x: $card-padding-x !default;
+$emphasis-tile-content-gap: $card-body-gap !default;
+$emphasis-tile-radius: $border-radius-md !default;
+$emphasis-tile-border-width: $card-border-width !default;
+$emphasis-tile-background: $card-background-secondary !default;
+$emphasis-tile-border: $card-border-secondary !default;
+$emphasis-tile-width: 20rem !default;
 
-$emphasis-tile-background-secondary:   $card-background !default;
-$emphasis-tile-border-secondary:       $card-border !default;
-
-
+$emphasis-tile-background-secondary: $card-background !default;
+$emphasis-tile-border-secondary: $card-border !default;
 
 // Accordion ____________________________
-$accordion-padding-y:                     $padding-05 !default;
-$accordion-padding-x:                     $padding-08 !default;
-$accordion-spacing:                       $spacer-02 !default;
+$accordion-padding-y: $padding-05 !default;
+$accordion-padding-x: $padding-08 !default;
+$accordion-spacing: $spacer-02 !default;
 
-$accordion-background:                    $ui-background-01 !default;
-$accordion-border:                        $ui-border-02 !default;
-$accordion-border-width:                  $border-width !default;
-$accordion-radius:                        $border-radius-md !default;
-$accordion-text:                          $text-primary !default;
-$accordion-text-active:                   $accordion-text !default;
+$accordion-background: $ui-background-01 !default;
+$accordion-border: $ui-border-02 !default;
+$accordion-border-width: $border-width !default;
+$accordion-radius: $border-radius-md !default;
+$accordion-text: $text-primary !default;
+$accordion-text-active: $accordion-text !default;
 
-$accordion-body-padding-y:                $accordion-padding-y !default;
-$accordion-body-padding-x:                $accordion-padding-x !default;
-$accordion-body-padding-bottom:           $padding-07 !default;
-$accordion-body-spacing:                  $spacer-05 !default;
+$accordion-body-padding-y: $accordion-padding-y !default;
+$accordion-body-padding-x: $accordion-padding-x !default;
+$accordion-body-padding-bottom: $padding-07 !default;
+$accordion-body-spacing: $spacer-05 !default;
 
-$accordion-button-height:                 4rem !default;
-$accordion-button-padding-y:              $accordion-padding-y !default;
-$accordion-button-padding-x:              $accordion-padding-x !default;
-$accordion-button-padding-right:          $padding-07 !default;
+$accordion-button-height: 4rem !default;
+$accordion-button-padding-y: $accordion-padding-y !default;
+$accordion-button-padding-x: $accordion-padding-x !default;
+$accordion-button-padding-right: $padding-07 !default;
 
-$accordion-header-label:                  $accordion-text !default;
+$accordion-header-label: $accordion-text !default;
 
+$accordion-icon: $text-muted !default;
+$accordion-icon-svg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$accordion-icon}'><!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--><path d='M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z'/></svg>") !default;
+$accordion-icon-size: $icon-md !default;
 
-$accordion-icon:                          $text-muted !default;
-$accordion-icon-svg:                      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$accordion-icon}'><!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--><path d='M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z'/></svg>") !default;
-$accordion-icon-size:                     $icon-md !default;
+$accordion-header-background-active: $ui-overlay-02 !default;
+$accordion-header-background-hover: $action-04 !default;
 
-$accordion-header-background-active:      $ui-overlay-02 !default;
-$accordion-header-background-hover:       $action-04 !default;
-
-$accordion-border-focus:                  $focus-ring-color !default;
-$accordion-focus-ring:                    $form-input-focus-ring !default;
+$accordion-border-focus: $focus-ring-color !default;
+$accordion-focus-ring: $form-input-focus-ring !default;
 
 // Large accordion
-$accordion-button-padding-y-lg:               $padding-08 !default;
-$accordion-button-padding-x-lg:               $padding-08 !default;
-$accordion-button-padding-bottom-active-lg:   $padding-07 !default;
-$accordion-radius-lg:                         $border-radius-lg !default;
-$accordion-body-padding-y-lg:                 $padding-07 !default;
-$accordion-body-padding-x-lg:                 $padding-08 !default;
-$accordion-body-padding-bottom-lg:            $padding-08 !default;
-
-
-
+$accordion-button-padding-y-lg: $padding-08 !default;
+$accordion-button-padding-x-lg: $padding-08 !default;
+$accordion-button-padding-bottom-active-lg: $padding-07 !default;
+$accordion-radius-lg: $border-radius-lg !default;
+$accordion-body-padding-y-lg: $padding-07 !default;
+$accordion-body-padding-x-lg: $padding-08 !default;
+$accordion-body-padding-bottom-lg: $padding-08 !default;
 
 // Icon _________________________________
-$icon-gap-right:                      $margin-02 !default;
-$icon-gap-right-lg:                   $margin-03 !default;
+$icon-gap-right: $margin-02 !default;
+$icon-gap-right-lg: $margin-03 !default;
 
-$icon-block-icon:                     var(--#{$prefix-bh}text-secondary) !default;
-$icon-block-background:               var(--#{$prefix-bh}ui-overlay-03) !default;
-$icon-block-border:                   $transparent !default;
-$icon-block-border-width:             $border-width !default;
-$icon-block-radius:                   $border-radius-md !default;
-$icon-block-size:                     3rem !default;    
-$icon-block-icon-size:                $icon-xl !default;     
+$icon-block-icon: var(--#{$prefix-bh}text-secondary) !default;
+$icon-block-background: var(--#{$prefix-bh}ui-overlay-03) !default;
+$icon-block-border: $transparent !default;
+$icon-block-border-width: $border-width !default;
+$icon-block-radius: $border-radius-md !default;
+$icon-block-size: 3rem !default;
+$icon-block-icon-size: $icon-xl !default;
 
 // Extra small
-$icon-block-size-xs:                  2rem !default;    
-$icon-block-icon-size-xs:             $icon-md !default;  
-$icon-block-radius-xs:                $border-radius-sm !default;
+$icon-block-size-xs: 2rem !default;
+$icon-block-icon-size-xs: $icon-md !default;
+$icon-block-radius-xs: $border-radius-sm !default;
 
 // Small
-$icon-block-size-sm:                  2.75rem !default;    
-$icon-block-icon-size-sm:             $icon-xl !default;  
-$icon-block-radius-sm:                $border-radius-sm !default;
+$icon-block-size-sm: 2.75rem !default;
+$icon-block-icon-size-sm: $icon-xl !default;
+$icon-block-radius-sm: $border-radius-sm !default;
 
 // Large
-$icon-block-size-lg:                  3.5rem !default;    
-$icon-block-icon-size-lg:             $icon-xl !default;  
-$icon-block-radius-lg:                $border-radius-md !default;
+$icon-block-size-lg: 3.5rem !default;
+$icon-block-icon-size-lg: $icon-xl !default;
+$icon-block-radius-lg: $border-radius-md !default;
 
 // Extra large
-$icon-block-size-xl:                  4rem !default;    
-$icon-block-icon-size-xl:             $icon-xxl !default;  
-$icon-block-radius-xl:                $border-radius-md !default;
+$icon-block-size-xl: 4rem !default;
+$icon-block-icon-size-xl: $icon-xxl !default;
+$icon-block-radius-xl: $border-radius-md !default;
 
 // Extra extra large
-$icon-block-size-xxl:                 5rem !default;    
-$icon-block-icon-size-xxl:            $icon-xxl !default;  
-$icon-block-radius-xxl:               $border-radius-md !default;
-
-
+$icon-block-size-xxl: 5rem !default;
+$icon-block-icon-size-xxl: $icon-xxl !default;
+$icon-block-radius-xxl: $border-radius-md !default;
 
 // Text block ___________________________
-$text-block-gap:            $margin-03 !default;
-$eyebrow:                   var(--#{$prefix-bh}text-tertiary) !default;
-$display-margin-bottom:     $margin-03;
-
+$text-block-gap: $margin-03 !default;
+$eyebrow: var(--#{$prefix-bh}text-tertiary) !default;
+$display-margin-bottom: $margin-03;
 
 // Menu _________________________________
 // Styles used for menu and dropdown items
-$menu-background:                   $ui-background-01 !default;
-$menu-border:                       $transparent !default;
-$menu-border-width:                 0 !default;
-$menu-radius:                       $border-radius-lg !default;
-$menu-shadow:                       $shadow-sm !default;
-$menu-padding-x:                    $padding-05 !default;
-$menu-padding-y:                    $padding-05 !default;
-$menu-min-width:                    10rem !default;
-$menu-max-width:                    18rem !default;
-$menu-spacer:                       $spacer-01 !default;
-
+$menu-background: $ui-background-01 !default;
+$menu-border: $transparent !default;
+$menu-border-width: 0 !default;
+$menu-radius: $border-radius-lg !default;
+$menu-shadow: $shadow-sm !default;
+$menu-padding-x: $padding-05 !default;
+$menu-padding-y: $padding-05 !default;
+$menu-min-width: 10rem !default;
+$menu-max-width: 18rem !default;
+$menu-spacer: $spacer-01 !default;
 
 // Menu item
-$menu-item-padding-y:               $padding-03 !default;
-$menu-item-padding-x:               $padding-04 !default;
-$menu-item-height:                  2.5rem !default;
-$menu-item-radius:                  $border-radius-md !default;
-$menu-item-label:                   $action-text-05 !default;
-$menu-item-background:              $transparent !default;
-$menu-item-border:                  $transparent !default;
-$menu-item-border-width:            0 !default;
-$menu-item-transition:              $button-transition !default;
-$menu-item-gap:                     $spacer-01 !default;
-$menu-item-icon-spacing:            $spacer-03 !default;
+$menu-item-padding-y: $padding-03 !default;
+$menu-item-padding-x: $padding-04 !default;
+$menu-item-height: 2.5rem !default;
+$menu-item-radius: $border-radius-md !default;
+$menu-item-label: $action-text-05 !default;
+$menu-item-background: $transparent !default;
+$menu-item-border: $transparent !default;
+$menu-item-border-width: 0 !default;
+$menu-item-transition: $button-transition !default;
+$menu-item-gap: $spacer-01 !default;
+$menu-item-icon-spacing: $spacer-03 !default;
 
-$menu-item-label-hover:             $menu-item-label !default;
-$menu-item-background-hover:        $action-05 !default;
-$menu-item-border-hover:            $menu-item-border !default;
+$menu-item-label-hover: $menu-item-label !default;
+$menu-item-background-hover: $action-05 !default;
+$menu-item-border-hover: $menu-item-border !default;
 
-$menu-item-label-active:            $action-text-01 !default;
-$menu-item-background-active:       $action-04 !default;
-$menu-item-border-active:           $menu-item-border !default;
+$menu-item-label-active: $action-text-01 !default;
+$menu-item-background-active: $action-04 !default;
+$menu-item-border-active: $menu-item-border !default;
 
-$menu-item-label-disabled:          $disabled-overlay-03 !default;
+$menu-item-label-disabled: $disabled-overlay-03 !default;
 
-$menu-item-focus:                   $focus-ring !default;
+$menu-item-focus: $focus-ring !default;
 
-$menu-section-header:               $text-secondary !default;
-$menu-section-header-padding-x:     $menu-item-padding-x !default;
-$menu-section-header-padding-y:     $padding-02 !default;
+$menu-section-header: $text-secondary !default;
+$menu-section-header-padding-x: $menu-item-padding-x !default;
+$menu-section-header-padding-y: $padding-02 !default;
 
-$menu-divider-margin-y:             6px !default;
-$menu-divider-border:               $ui-border-03 !default;
+$menu-divider-margin-y: 6px !default;
+$menu-divider-border: $ui-border-03 !default;
 
-$menu-itemt-icon-size:              $icon-md !default;
-$menu-item-check:                   $menu-item-label !default;
-$menu-item-check-svg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$menu-item-check}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M441 103c9.4 9.4 9.4 24.6 0 33.9L177 401c-9.4 9.4-24.6 9.4-33.9 0L7 265c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l119 119L407 103c9.4-9.4 24.6-9.4 33.9 0z'/></svg>") !default;
-$menu-item-check-active:            $menu-item-label-active !default;
-$menu-item-check-svg-active:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$menu-item-check-active}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M441 103c9.4 9.4 9.4 24.6 0 33.9L177 401c-9.4 9.4-24.6 9.4-33.9 0L7 265c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l119 119L407 103c9.4-9.4 24.6-9.4 33.9 0z'/></svg>") !default;
+$menu-itemt-icon-size: $icon-md !default;
+$menu-item-check: $menu-item-label !default;
+$menu-item-check-svg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$menu-item-check}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M441 103c9.4 9.4 9.4 24.6 0 33.9L177 401c-9.4 9.4-24.6 9.4-33.9 0L7 265c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l119 119L407 103c9.4-9.4 24.6-9.4 33.9 0z'/></svg>") !default;
+$menu-item-check-active: $menu-item-label-active !default;
+$menu-item-check-svg-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$menu-item-check-active}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M441 103c9.4 9.4 9.4 24.6 0 33.9L177 401c-9.4 9.4-24.6 9.4-33.9 0L7 265c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l119 119L407 103c9.4-9.4 24.6-9.4 33.9 0z'/></svg>") !default;
 
-$menu-item-selectable-caret:        $menu-item-label !default;
-$menu-item-selectable-caret-svg:    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' fill='#{$menu-item-selectable-caret}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z'/></svg>") !default;
+$menu-item-selectable-caret: $menu-item-label !default;
+$menu-item-selectable-caret-svg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512' fill='#{$menu-item-selectable-caret}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z'/></svg>") !default;
 
-$menu-item-label-danger:            $action-text-danger-01 !default;
-$menu-item-background-danger:       $action-danger-04 !default;
-$menu-item-border-danger:           $transparent !default;
+$menu-item-label-danger: $action-text-danger-01 !default;
+$menu-item-background-danger: $action-danger-04 !default;
+$menu-item-border-danger: $transparent !default;
 
 // Avatar _______________________________
-$avatar-size:               3rem !default;
-$avatar-size-sm:            2.5rem !default;
-$avatar-size-xs:            2rem !default;
+$avatar-size: 3rem !default;
+$avatar-size-sm: 2.5rem !default;
+$avatar-size-xs: 2rem !default;
 
-$avatar-icon-size:          $icon-lg !default;
-$avatar-icon-size-sm:       $icon-lg !default;
-$avatar-icon-size-xs:       $icon-md !default;
+$avatar-icon-size: $icon-lg !default;
+$avatar-icon-size-sm: $icon-lg !default;
+$avatar-icon-size-xs: $icon-md !default;
 
-$avatar-background:         $expressive-soft !default;
-$avatar-border:             $transparent !default;
-$avatar-border-width:       $border-width-02 !default;
-$avatar-text:               $expressive-rich !default;
+$avatar-background: $expressive-soft !default;
+$avatar-border: $transparent !default;
+$avatar-border-width: $border-width-02 !default;
+$avatar-text: $expressive-rich !default;
 
-$avatar-img-border:         $ui-border-04 !default;
+$avatar-img-border: $ui-border-04 !default;
 
 // Avatar set
-$avatar-set-overlap:        0.75rem !default;
+$avatar-set-overlap: 0.75rem !default;
 
 // Account toggle _______________________
-$account-toggle-text:         $text-secondary !default;
-$account-toggle-text-hover:   $account-toggle-text !default;
-$account-toggle-indicator:    $text-muted !default;
-$account-toggle-padding-y:    $padding-03 !default;
-$account-toggle-padding-x:    $account-toggle-padding-y !default;
-
-
+$account-toggle-text: $text-secondary !default;
+$account-toggle-text-hover: $account-toggle-text !default;
+$account-toggle-indicator: $text-muted !default;
+$account-toggle-padding-y: $padding-03 !default;
+$account-toggle-padding-x: $account-toggle-padding-y !default;
 
 // Dropdown _____________________________
-$dropdown-zindex:                   $zindex-menu !default;
-$dropdown-background:               $menu-background !default;
-$dropdown-border:                   $menu-border !default;
-$dropdown-border-width:             $menu-border-width !default;
-$dropdown-radius:                   $menu-radius !default;
-$dropdown-shadow:                   $menu-shadow !default;
-$dropdown-padding-x:                $menu-padding-x !default;
-$dropdown-padding-y:                $menu-padding-y !default;
-$dropdown-min-width:                $menu-min-width !default;
-$dropdown-spacer:                   $menu-spacer !default;
-$dropdown-show-max-items:           5 !default;
+$dropdown-zindex: $zindex-menu !default;
+$dropdown-background: $menu-background !default;
+$dropdown-border: $menu-border !default;
+$dropdown-border-width: $menu-border-width !default;
+$dropdown-radius: $menu-radius !default;
+$dropdown-shadow: $menu-shadow !default;
+$dropdown-padding-x: $menu-padding-x !default;
+$dropdown-padding-y: $menu-padding-y !default;
+$dropdown-min-width: $menu-min-width !default;
+$dropdown-spacer: $menu-spacer !default;
+$dropdown-show-max-items: 5 !default;
 
 // Dropdown item
-$dropdown-item-padding-y:           $menu-item-padding-y !default;
-$dropdown-item-padding-x:           $menu-item-padding-x !default;
-$dropdown-item-height:              $menu-item-height !default;
-$dropdown-item-radius:              $menu-item-radius !default;
-$dropdown-item-label:               $menu-item-label !default;
-$dropdown-item-background:          $menu-item-background !default;
-$dropdown-item-border:              $menu-item-border !default;
-$dropdown-item-border-width:        $menu-item-border-width !default;
-$dropdown-item-transition:          $menu-item-transition !default;
-$dropdown-item-gap:                 $menu-item-gap !default;
+$dropdown-item-padding-y: $menu-item-padding-y !default;
+$dropdown-item-padding-x: $menu-item-padding-x !default;
+$dropdown-item-height: $menu-item-height !default;
+$dropdown-item-radius: $menu-item-radius !default;
+$dropdown-item-label: $menu-item-label !default;
+$dropdown-item-background: $menu-item-background !default;
+$dropdown-item-border: $menu-item-border !default;
+$dropdown-item-border-width: $menu-item-border-width !default;
+$dropdown-item-transition: $menu-item-transition !default;
+$dropdown-item-gap: $menu-item-gap !default;
 
-$dropdown-item-icon-spacing:        $menu-item-icon-spacing !default;
+$dropdown-item-icon-spacing: $menu-item-icon-spacing !default;
 
-$dropdown-item-label-hover:         $menu-item-label-hover !default;
-$dropdown-item-background-hover:    $menu-item-background-hover !default;
-$dropdown-item-border-hover:        $menu-item-border-hover !default;
+$dropdown-item-label-hover: $menu-item-label-hover !default;
+$dropdown-item-background-hover: $menu-item-background-hover !default;
+$dropdown-item-border-hover: $menu-item-border-hover !default;
 
-$dropdown-item-label-active:        $menu-item-label-active !default;
-$dropdown-item-background-active:   $menu-item-background-active !default;
-$dropdown-item-border-active:       $menu-item-border-active !default;
+$dropdown-item-label-active: $menu-item-label-active !default;
+$dropdown-item-background-active: $menu-item-background-active !default;
+$dropdown-item-border-active: $menu-item-border-active !default;
 
-$dropdown-item-label-disabled:      $menu-item-label-disabled !default;
+$dropdown-item-label-disabled: $menu-item-label-disabled !default;
 
-$dropdown-item-focus:               $menu-item-focus !default;
-$dropdown-item-icon-spacing:        $menu-item-icon-spacing !default; 
+$dropdown-item-focus: $menu-item-focus !default;
+$dropdown-item-icon-spacing: $menu-item-icon-spacing !default;
 
-$dropdown-check-active:             $dropdown-item-label-active !default;
-$dropdown-check-svg-active:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$dropdown-check-active}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/></svg>") !default;
-$dropdown-check-svg-size:           $icon-md !default;
-$dropdown-check-svg-gap:            $spacer-03 !default;
+$dropdown-check-active: $dropdown-item-label-active !default;
+$dropdown-check-svg-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$dropdown-check-active}'><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/></svg>") !default;
+$dropdown-check-svg-size: $icon-md !default;
+$dropdown-check-svg-gap: $spacer-03 !default;
 
-$dropdown-indicator-position-top:   calc(subtract($form-input-height/2, $form-select-indicator-size-y/2) - $form-select-border-width) !default;
-$dropdown-indicator-position:       right $form-select-padding-y top $dropdown-indicator-position-top !default;
+$dropdown-indicator-position-top: calc(
+  subtract($form-input-height/2, $form-select-indicator-size-y/2) -
+    $form-select-border-width
+) !default;
+$dropdown-indicator-position: right $form-select-padding-y top
+  $dropdown-indicator-position-top !default;
 
-$dropdown-divider-margin-y:         $margin-01 !default;
-$dropdown-divider-border:           $menu-divider-border !default;
+$dropdown-divider-margin-y: $margin-01 !default;
+$dropdown-divider-border: $menu-divider-border !default;
 
 // Carousel _____________________________
-$carousel-padding-x:                    $spacer-04 !default;
-$carousel-button-style:                 btn-ghost !default;
-$carousel-indicator-position:           center !default; // flex-start, center or flex-end
-$carousel-indicator-width:              0.75rem !default;
-$carousel-indicator-height:             0.75rem !default;
-$carousel-indicator-margin-top:         $margin-03 !default;
-$carousel-indicator-gap:                $spacer-01 !default;
-$carousel-indicator-padding-y:          $padding-03 !default;
-$carousel-indicator-padding-x:          $padding-02 !default;
-$carousel-indicator-radius:             $border-radius-full !default;
-$carousel-indicator-border-width:       $border-width !default;
+$carousel-padding-x: $spacer-04 !default;
+$carousel-button-style: btn-ghost !default;
+$carousel-indicator-position: center !default; // flex-start, center or flex-end
+$carousel-indicator-width: 0.75rem !default;
+$carousel-indicator-height: 0.75rem !default;
+$carousel-indicator-margin-top: $margin-03 !default;
+$carousel-indicator-gap: $spacer-01 !default;
+$carousel-indicator-padding-y: $padding-03 !default;
+$carousel-indicator-padding-x: $padding-02 !default;
+$carousel-indicator-radius: $border-radius-full !default;
+$carousel-indicator-border-width: $border-width !default;
 
-$carousel-indicator-background:         $action-05 !default;
-$carousel-indicator-background-hover:   $action-05 !default;
-$carousel-indicator-background-active:  $action-06 !default;
+$carousel-indicator-background: $action-05 !default;
+$carousel-indicator-background-hover: $action-05 !default;
+$carousel-indicator-background-active: $action-06 !default;
 
-$carousel-indicator-border:             $action-05 !default;
-$carousel-indicator-border-hover:       $action-06 !default;
-$carousel-indicator-border-active:      $transparent !default;
+$carousel-indicator-border: $action-05 !default;
+$carousel-indicator-border-hover: $action-06 !default;
+$carousel-indicator-border-active: $transparent !default;
 
-$carousel-indicator-transition:         $button-transition !default;
-
-
+$carousel-indicator-transition: $button-transition !default;
 
 // Collapse _____________________________
-$collapse-trigger:                  var(--#{$prefix-bh}text-tertiary) !default;
-$collapse-trigger-hover:            var(--#{$prefix-bh}text-tertiary) !default;
-$collapse-trigger-gap:              $margin-02 !default;
+$collapse-trigger: var(--#{$prefix-bh}text-tertiary) !default;
+$collapse-trigger-hover: var(--#{$prefix-bh}text-tertiary) !default;
+$collapse-trigger-gap: $margin-02 !default;
 
-$collapse-card-background:          var(--#{$prefix-bh}ui-overlay-02) !default;
-$collapse-card-padding-y:           $padding-03 !default;
-$collapse-card-padding-x:           $collapse-card-padding-y !default;
-$collapse-card-radius:              $border-radius-md !default;
+$collapse-card-background: var(--#{$prefix-bh}ui-overlay-02) !default;
+$collapse-card-padding-y: $padding-03 !default;
+$collapse-card-padding-x: $collapse-card-padding-y !default;
+$collapse-card-radius: $border-radius-md !default;
 
-$collapse-card-content-padding-y:   $padding-01 !default;
-$collapse-card-content-padding-x:   $padding-03 !default;
-$collapse-card-text:                var(--body-color) !default;
-$collapse-card-title:               var(--heading-color) !default;
+$collapse-card-content-padding-y: $padding-01 !default;
+$collapse-card-content-padding-x: $padding-03 !default;
+$collapse-card-text: var(--body-color) !default;
+$collapse-card-title: var(--heading-color) !default;
 
-$collapse-contextbar-margin-top:    $margin-03 !default;
-$collapse-contextbar-margin-bottom: $margin-01 !default; 
-$collapse-contextbar-gap:           $spacer-04 !default;
-
-
+$collapse-contextbar-margin-top: $margin-03 !default;
+$collapse-contextbar-margin-bottom: $margin-01 !default;
+$collapse-contextbar-gap: $spacer-04 !default;
 
 // List _________________________________
-$list-padding-start:        $padding-06 + $padding-03 !default;
-$list-gap:                  $spacer-03 !default;
-$list-heading:              var(--text-secondary) !default;
-$list-item:                 var(--text-primary) !default;
-$list-item-spacing:         $spacer-03 !default;
-
-
+$list-padding-start: $padding-06 + $padding-03 !default;
+$list-gap: $spacer-03 !default;
+$list-heading: var(--text-secondary) !default;
+$list-item: var(--text-primary) !default;
+$list-item-spacing: $spacer-03 !default;
 
 // Stepper ______________________________
-$stepper-item:                      $feedback-message-info !default;
-$stepper-item-gap:                  $spacer-04 !default;
+$stepper-item: $feedback-message-info !default;
+$stepper-item-gap: $spacer-04 !default;
 
-$stepper-item-success:              $success-01 !default;
-$stepper-item-error:                var(--#{$prefix-bh}error-01) !default;
-$stepper-item-disabled:             $disabled-overlay-03 !default;
+$stepper-item-success: $success-01 !default;
+$stepper-item-error: var(--#{$prefix-bh}error-01) !default;
+$stepper-item-disabled: $disabled-overlay-03 !default;
 
-$stepper-item-connector:            $feedback-border-info !default;
-$stepper-item-connector-width:      0.125rem !default; 
-$stepper-item-connector-height:     1.5rem !default; 
-$stepper-item-connector-success:    $feedback-border-success !default;
+$stepper-item-connector: $feedback-border-info !default;
+$stepper-item-connector-width: 0.125rem !default;
+$stepper-item-connector-height: 1.5rem !default;
+$stepper-item-connector-success: $feedback-border-success !default;
 
-$stepper-icon-width:                2.5rem !default;
-$stepper-icon-height:               $stepper-icon-width !default;
-$stepper-icon-margin:               0.125rem !default;
-$stepper-icon-size:                 $icon-md !default;
-$stepper-icon-size-success:         $icon-xl !default;
-$stepper-icon-radius:               $border-radius-full !default;
+$stepper-icon-width: 2.5rem !default;
+$stepper-icon-height: $stepper-icon-width !default;
+$stepper-icon-margin: 0.125rem !default;
+$stepper-icon-size: $icon-md !default;
+$stepper-icon-size-success: $icon-xl !default;
+$stepper-icon-radius: $border-radius-full !default;
 
-$stepper-icon-svg:                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$stepper-item}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z'/></svg>") !default;
-$stepper-icon-svg-active:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$stepper-item}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M36.4 360.9L13.4 439 1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1L73 498.6l78.1-23c10.4-3 20.1-8 28.6-14.5l.3 .2 .5-.8c1.4-1.1 2.7-2.2 4-3.3c1.4-1.2 2.7-2.5 4-3.8L492.7 149.3c21.9-21.9 24.6-55.6 8.2-80.5c-2.3-3.5-5.1-6.9-8.2-10L453.3 19.3c-25-25-65.5-25-90.5 0L58.6 323.5c-2.5 2.5-4.9 5.2-7.1 8l-.8 .5 .2 .3c-6.5 8.5-11.4 18.2-14.5 28.6zM383 191L197.4 376.6l-49.6-12.4-12.4-49.6L321 129 383 191zM97 358.9l7.7 31c2.1 8.6 8.9 15.3 17.5 17.5l31 7.7-7.4 11.2c-2.6 1.4-5.3 2.6-8.1 3.4l-23.4 6.9L59.4 452.6l16.1-54.8 6.9-23.4c.8-2.8 2-5.6 3.4-8.1L97 358.9zM315.3 218.7c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0l-96 96c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l96-96z'/></svg>") !default;
-$stepper-icon-svg-success:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$stepper-item-success}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z'/></svg>") !default;
-$stepper-icon-svg-disabled:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$stepper-item-disabled}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z'/></svg>") !default;
-$stepper-icon-svg-error:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$stepper-item-error}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z'/></svg>") !default;
+$stepper-icon-svg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$stepper-item}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z'/></svg>") !default;
+$stepper-icon-svg-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$stepper-item}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M36.4 360.9L13.4 439 1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1L73 498.6l78.1-23c10.4-3 20.1-8 28.6-14.5l.3 .2 .5-.8c1.4-1.1 2.7-2.2 4-3.3c1.4-1.2 2.7-2.5 4-3.8L492.7 149.3c21.9-21.9 24.6-55.6 8.2-80.5c-2.3-3.5-5.1-6.9-8.2-10L453.3 19.3c-25-25-65.5-25-90.5 0L58.6 323.5c-2.5 2.5-4.9 5.2-7.1 8l-.8 .5 .2 .3c-6.5 8.5-11.4 18.2-14.5 28.6zM383 191L197.4 376.6l-49.6-12.4-12.4-49.6L321 129 383 191zM97 358.9l7.7 31c2.1 8.6 8.9 15.3 17.5 17.5l31 7.7-7.4 11.2c-2.6 1.4-5.3 2.6-8.1 3.4l-23.4 6.9L59.4 452.6l16.1-54.8 6.9-23.4c.8-2.8 2-5.6 3.4-8.1L97 358.9zM315.3 218.7c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0l-96 96c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l96-96z'/></svg>") !default;
+$stepper-icon-svg-success: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$stepper-item-success}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z'/></svg>") !default;
+$stepper-icon-svg-disabled: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$stepper-item-disabled}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z'/></svg>") !default;
+$stepper-icon-svg-error: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$stepper-item-error}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z'/></svg>") !default;
 
-$stepper-icon-background-active:    $feedback-overlay-info !default;
+$stepper-icon-background-active: $feedback-overlay-info !default;
 
-$sub-stepper-item-connector-height: .5rem !default; 
+$sub-stepper-item-connector-height: 0.5rem !default;
 
-$sub-stepper-item-icon-height:      1.25rem !default; 
-$sub-stepper-icon-svg:              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$stepper-item}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M272 256A112 112 0 1 0 48 256a112 112 0 1 0 224 0zM0 256a160 160 0 1 1 320 0A160 160 0 1 1 0 256z'/></svg>") !default;
-$sub-stepper-icon-svg-active:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$stepper-item}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M0 256a160 160 0 1 1 320 0A160 160 0 1 1 0 256z'/></svg>") !default;
-$sub-stepper-icon-svg-success:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$stepper-item}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M441 103c9.4 9.4 9.4 24.6 0 33.9L177 401c-9.4 9.4-24.6 9.4-33.9 0L7 265c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l119 119L407 103c9.4-9.4 24.6-9.4 33.9 0z'/></svg>") !default;
-$sub-stepper-icon-svg-disabled:     url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$stepper-item-disabled}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M272 256A112 112 0 1 0 48 256a112 112 0 1 0 224 0zM0 256a160 160 0 1 1 320 0A160 160 0 1 1 0 256z'/></svg>") !default;
+$sub-stepper-item-icon-height: 1.25rem !default;
+$sub-stepper-icon-svg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$stepper-item}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M272 256A112 112 0 1 0 48 256a112 112 0 1 0 224 0zM0 256a160 160 0 1 1 320 0A160 160 0 1 1 0 256z'/></svg>") !default;
+$sub-stepper-icon-svg-active: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$stepper-item}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M0 256a160 160 0 1 1 320 0A160 160 0 1 1 0 256z'/></svg>") !default;
+$sub-stepper-icon-svg-success: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='#{$stepper-item}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M441 103c9.4 9.4 9.4 24.6 0 33.9L177 401c-9.4 9.4-24.6 9.4-33.9 0L7 265c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l119 119L407 103c9.4-9.4 24.6-9.4 33.9 0z'/></svg>") !default;
+$sub-stepper-icon-svg-disabled: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='#{$stepper-item-disabled}'><!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2025 Fonticons, Inc.--><path d='M272 256A112 112 0 1 0 48 256a112 112 0 1 0 224 0zM0 256a160 160 0 1 1 320 0A160 160 0 1 1 0 256z'/></svg>") !default;
 
-$sub-stepper-icon-size-error:       $icon-sm !default;
-
-
+$sub-stepper-icon-size-error: $icon-sm !default;
 
 // Badge ________________________________
-$badge-padding-x:             $padding-03 !default;
-$badge-padding-y:             0 !default;
-$badge-label:                 $expressive-rich !default;
-$badge-radius:                $border-radius !default;
-$badge-border:                $expressive-soft !default;
-$badge-border-width:          $border-width !default;
-$badge-background:            $expressive-soft !default;
-$badge-height:                1.25rem !default;
-
-
+$badge-padding-x: $padding-03 !default;
+$badge-padding-y: 0 !default;
+$badge-label: $expressive-rich !default;
+$badge-radius: $border-radius !default;
+$badge-border: $expressive-soft !default;
+$badge-border-width: $border-width !default;
+$badge-background: $expressive-soft !default;
+$badge-height: 1.25rem !default;
 
 // Modal ________________________________
-$modal-padding:           $padding-08 !default;
-$modal-margin:            $margin-02 !default;
-$modal-margin-y-sm-up:    $margin-05 !default;
-$modal-spacing:           $spacer-05 !default;
+$modal-padding: $padding-08 !default;
+$modal-margin: $margin-02 !default;
+$modal-margin-y-sm-up: $margin-05 !default;
+$modal-spacing: $spacer-05 !default;
 
-$modal-text:              var(--#{$prefix-bh}text-primary) !default;
-$modal-background:        var(--#{$prefix-bh}ui-background-01) !default;
-$modal-border:            var(--#{$prefix-bh}ui-border-02) !default;
-$modal-border-width:      $border-width !default;  
-$modal-radius:            $border-radius-lg !default;  
-$modal-shadow:            $shadow-md !default;
-$modal-shadow-sm-up:      $shadow-xl !default;
+$modal-text: var(--#{$prefix-bh}text-primary) !default;
+$modal-background: var(--#{$prefix-bh}ui-background-01) !default;
+$modal-border: var(--#{$prefix-bh}ui-border-02) !default;
+$modal-border-width: $border-width !default;
+$modal-radius: $border-radius-lg !default;
+$modal-shadow: $shadow-md !default;
+$modal-shadow-sm-up: $shadow-xl !default;
 
-$modal-body-spacing:      $spacer-05 !default;
+$modal-body-spacing: $spacer-05 !default;
 
-$modal-sm:                384px !default;
-$modal-md:                500px !default;
-$modal-lg:                800px !default;
-$modal-xl:                1140px !default;
+$modal-sm: 384px !default;
+$modal-md: 500px !default;
+$modal-lg: 800px !default;
+$modal-xl: 1140px !default;
 
 // Modal backdrop
-$modal-backdrop-blur:     0.5rem !default;
-$modal-backdrop-opacity:  1 !default;
+$modal-backdrop-blur: 0.5rem !default;
+$modal-backdrop-opacity: 1 !default;
 $modal-backdrop-background: var(--#{$prefix-bh}black-tint-60) !default;
 
-
-
 // Tooltip ______________________________
-$tooltip-max-width:                 280px !default;
-$tooltip-label:                     $text-primary !default;
-$tooltip-background:                $ui-background-03 !default;
-$tooltip-border:                    $ui-border-02 !default;
-$tooltip-border-width:              $border-width !default;
-$tooltip-radius:                    $border-radius-sm !default;
-$tooltip-opacity:                   1 !default;
-$tooltip-padding-y:                 $padding-01 !default;
-$tooltip-padding-x:                 $padding-03 !default;
-$tooltip-margin:                    null !default;
-$tooltip-shadow:                    $shadow-xs !default;
+$tooltip-max-width: 280px !default;
+$tooltip-label: $text-primary !default;
+$tooltip-background: $ui-background-03 !default;
+$tooltip-border: $ui-border-02 !default;
+$tooltip-border-width: $border-width !default;
+$tooltip-radius: $border-radius-sm !default;
+$tooltip-opacity: 1 !default;
+$tooltip-padding-y: $padding-01 !default;
+$tooltip-padding-x: $padding-03 !default;
+$tooltip-margin: null !default;
+$tooltip-shadow: $shadow-xs !default;
 
-$tooltip-arrow-display:             none !default; // None to hide, block to show
-$tooltip-arrow-width:               0.8rem !default;
-$tooltip-arrow-height:              0.25rem !default;
+$tooltip-arrow-display: none !default; // None to hide, block to show
+$tooltip-arrow-width: 0.8rem !default;
+$tooltip-arrow-height: 0.25rem !default;
 
 $tooltip-definition-trigger-border: $link-colour !default;
 
-
-
 // Progress _____________________________
-$progress-container-spacing:        $form-input-spacing !default;
+$progress-container-spacing: $form-input-spacing !default;
 
-$progress-height:                   0.5rem !default;
-$progress-height-sm:                0.25rem !default;
-$progress-background:               $expressive-pale-overlay !default;
-$progress-border:                   $expressive-pale-overlay !default;
-$progress-border-width:             $border-width !default;
-$progress-border-radius:            $border-radius-full !default;
-$progress-bar-text:                 $white !default;
-$progress-bar-background:           $expressive-deep !default;
-$progress-bar-animation-timing:     1s linear infinite !default;
-$progress-bar-transition:           width .6s ease !default;
+$progress-height: 0.5rem !default;
+$progress-height-sm: 0.25rem !default;
+$progress-background: $expressive-pale-overlay !default;
+$progress-border: $expressive-pale-overlay !default;
+$progress-border-width: $border-width !default;
+$progress-border-radius: $border-radius-full !default;
+$progress-bar-text: $white !default;
+$progress-bar-background: $expressive-deep !default;
+$progress-bar-animation-timing: 1s linear infinite !default;
+$progress-bar-transition: width 0.6s ease !default;
 
-$progress-label:                    $form-label !default;
-$progress-label-gap:                $spacer-04 !default;
-$progress-helper:                   $form-helper !default;
-$progress-note:                     $text-primary !default;
+$progress-label: $form-label !default;
+$progress-label-gap: $spacer-04 !default;
+$progress-helper: $form-helper !default;
+$progress-note: $text-primary !default;
 
-$progress-icon-size:                $icon-md !default;
-$progress-status-icon-success:      $success-01 !default;
-$progress-status-icon-error:        var(--#{$prefix-bh}error-01) !default;
-$progress-status-icon-success-svg:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$progress-status-icon-success}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z'/></svg>") !default;
-$progress-status-icon-error-svg:    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$progress-status-icon-error}'><!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--><path d='M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z'/></svg>") !default;
+$progress-icon-size: $icon-md !default;
+$progress-status-icon-success: $success-01 !default;
+$progress-status-icon-error: var(--#{$prefix-bh}error-01) !default;
+$progress-status-icon-success-svg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$progress-status-icon-success}'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z'/></svg>") !default;
+$progress-status-icon-error-svg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='#{$progress-status-icon-error}'><!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2024 Fonticons, Inc.--><path d='M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z'/></svg>") !default;
 
-$progress-background-error:         $feedback-background-error !default;
-$progress-border-error:             $feedback-overlay-error !default;
-$progress-bar-background-error:     $feedback-border-error !default;
+$progress-background-error: $feedback-background-error !default;
+$progress-border-error: $feedback-overlay-error !default;
+$progress-bar-background-error: $feedback-border-error !default;
 
-$progress-background-success:       $feedback-background-success !default;
-$progress-border-success:           $feedback-overlay-success !default;
-$progress-bar-background-success:   $feedback-border-success !default;
+$progress-background-success: $feedback-background-success !default;
+$progress-border-success: $feedback-overlay-success !default;
+$progress-bar-background-success: $feedback-border-success !default;
 
-$progress-background-inactive:      $disabled-02 !default;
-$progress-border-inactive:          $disabled-overlay-01 !default;
-$progress-bar-background-inactive:  $disabled-03 !default;
-
+$progress-background-inactive: $disabled-02 !default;
+$progress-border-inactive: $disabled-overlay-01 !default;
+$progress-bar-background-inactive: $disabled-03 !default;
 
 // Slider _______________________________
-$form-slider-track-width:                   100% !default;
-$form-slider-track-height:                  .25rem !default;
-$form-slider-track-cursor:                  pointer !default;
-$form-slider-track-background:              $ui-overlay-03 !default;
-$form-slider-track-background-disabled:     $disabled-overlay-01 !default;
-$form-slider-track-border-radius:           $border-radius-full !default;
+$form-slider-track-width: 100% !default;
+$form-slider-track-height: 0.25rem !default;
+$form-slider-track-cursor: pointer !default;
+$form-slider-track-background: $ui-overlay-03 !default;
+$form-slider-track-background-disabled: $disabled-overlay-01 !default;
+$form-slider-track-border-radius: $border-radius-full !default;
 
-$form-slider-handle-width:                  0.875rem !default;
-$form-slider-handle-height:                 $form-slider-handle-width !default;
-$form-slider-handle-width-active:           1.25rem !default;
-$form-slider-handle-height-active:          $form-slider-handle-width-active !default;
-$form-slider-handle-background:             $action-01 !default;
-$form-slider-handle-border:                 none !default;
-$form-slider-handle-border-radius:          1rem !default;
+$form-slider-handle-width: 0.875rem !default;
+$form-slider-handle-height: $form-slider-handle-width !default;
+$form-slider-handle-width-active: 1.25rem !default;
+$form-slider-handle-height-active: $form-slider-handle-width-active !default;
+$form-slider-handle-background: $action-01 !default;
+$form-slider-handle-border: none !default;
+$form-slider-handle-border-radius: 1rem !default;
 // $form-slider-handle-box-shadow:             0 .1rem .25rem $black-tint-20;
 
-$form-slider-shadow-width:                  ($form-slider-handle-width-active - $form-slider-handle-width) / 2 !default;
-$form-slider-handle-expand:                 0 0 $focus-ring-blur $form-slider-shadow-width $form-slider-handle-background !default;
-$form-slider-handle-expand-error:           0 0 $focus-ring-blur $form-slider-shadow-width $error-01 !default;
-$form-slider-handle-focus-box-shadow:       0 0 $focus-ring-blur $form-slider-shadow-width $focus-ring-color !default;
-$form-slider-handle-focus-box-shadow-error: 0 0 $focus-ring-blur $form-slider-shadow-width $error-01 !default;
+$form-slider-shadow-width: (
+    $form-slider-handle-width-active - $form-slider-handle-width
+  ) /
+  2 !default;
+$form-slider-handle-expand: 0 0 $focus-ring-blur $form-slider-shadow-width
+  $form-slider-handle-background !default;
+$form-slider-handle-expand-error: 0 0 $focus-ring-blur $form-slider-shadow-width
+  $error-01 !default;
+$form-slider-handle-focus-box-shadow: 0 0 $focus-ring-blur
+  $form-slider-shadow-width $focus-ring-color !default;
+$form-slider-handle-focus-box-shadow-error: 0 0 $focus-ring-blur
+  $form-slider-shadow-width $error-01 !default;
 // $form-slider-handle-focus-box-shadow-width:  $input-focus-width; // For focus box shadow issue in Edge
 // $form-slider-handle-active-bg:               tint-color($component-active-bg, 70%);
-$form-slider-handle-background-disabled:    $disabled-03 !default;
-$form-slider-handle-background-error:       var(--#{$prefix-bh}error-01) !default;
-$form-slider-handle-transition:             background-color $transition-time ease-in-out, border-color $transition-time ease-in-out, width $transition-time ease-in-out, height $transition-time ease-in-out, margin $transition-time ease-in-out, box-shadow $transition-time ease-in-out !default;
+$form-slider-handle-background-disabled: $disabled-03 !default;
+$form-slider-handle-background-error: var(--#{$prefix-bh}error-01) !default;
+$form-slider-handle-transition:
+  background-color $transition-time ease-in-out,
+  border-color $transition-time ease-in-out,
+  width $transition-time ease-in-out,
+  height $transition-time ease-in-out,
+  margin $transition-time ease-in-out,
+  box-shadow $transition-time ease-in-out !default;
 
-$form-slider-filled-background:             $form-slider-handle-background !default;
-$form-slider-filled-background-disabled:    $form-slider-handle-background-disabled !default;
-$form-slider-filled-background-readonly:    $action-06 !default;
-$form-slider-filled-background-error:       $form-slider-handle-background-error !default;
-$form-slider-minmax:                        $text-secondary !default;
-$form-slider-minmax-disabled:               $form-text-disabled !default;
-$form-slider-tick:                          $ui-overlay-04 !default;
-$form-slider-tick-padding:                  1px !default;
-$form-slider-tick-radius:                   $border-radius-full !default;
-$form-slider-tick-height:                   calc(#{$form-slider-track-height} - (#{$form-slider-tick-padding} * 2)) !default;
-$form-slider-tick-width:                    $form-slider-tick-height !default;
+$form-slider-filled-background: $form-slider-handle-background !default;
+$form-slider-filled-background-disabled: $form-slider-handle-background-disabled !default;
+$form-slider-filled-background-readonly: $action-06 !default;
+$form-slider-filled-background-error: $form-slider-handle-background-error !default;
+$form-slider-minmax: $text-secondary !default;
+$form-slider-minmax-disabled: $form-text-disabled !default;
+$form-slider-tick: $ui-overlay-04 !default;
+$form-slider-tick-padding: 1px !default;
+$form-slider-tick-radius: $border-radius-full !default;
+$form-slider-tick-height: calc(
+  #{$form-slider-track-height} - (#{$form-slider-tick-padding} * 2)
+) !default;
+$form-slider-tick-width: $form-slider-tick-height !default;
 
-$form-slider-container-height:              $form-input-height !default;
+$form-slider-container-height: $form-input-height !default;
 
-$form-slider-outcome-margin:                $form-slider-shadow-width + $spacer-01 !default;
-$form-slider-output-background:             $tooltip-background !default;
-$form-slider-output-border:                 $tooltip-border !default;
-$form-slider-output-border-width:           $tooltip-border-width !default;
-$form-slider-output-radius:                 $tooltip-radius !default;
-$form-slider-output-padding-y:              $tooltip-padding-y !default;
-$form-slider-output-padding-x:              $tooltip-padding-x !default;
-$form-slider-output-label:                  $tooltip-label !default;
-$form-slider-output-shadow:                 $tooltip-shadow !default;
-$form-slider-output-opacity:                $tooltip-opacity !default;
-$form-slider-output-zindex:                 $zindex-tooltip !default;
-$form-slider-output-transition:             opacity $transition-time ease-in-out !default;
-
-
+$form-slider-outcome-margin: $form-slider-shadow-width + $spacer-01 !default;
+$form-slider-output-background: $tooltip-background !default;
+$form-slider-output-border: $tooltip-border !default;
+$form-slider-output-border-width: $tooltip-border-width !default;
+$form-slider-output-radius: $tooltip-radius !default;
+$form-slider-output-padding-y: $tooltip-padding-y !default;
+$form-slider-output-padding-x: $tooltip-padding-x !default;
+$form-slider-output-label: $tooltip-label !default;
+$form-slider-output-shadow: $tooltip-shadow !default;
+$form-slider-output-opacity: $tooltip-opacity !default;
+$form-slider-output-zindex: $zindex-tooltip !default;
+$form-slider-output-transition: opacity $transition-time ease-in-out !default;
 
 // Breadcrumb ___________________________
-$breadcrumb-padding-x:                0 !default;
-$breadcrumb-padding-y:                0 !default;
-$breadcrumb-margin-bottom:            0 !default;
-$breadcrumb-background:               null !default;
-$breadcrumb-radius:                   null !default;  
+$breadcrumb-padding-x: 0 !default;
+$breadcrumb-padding-y: 0 !default;
+$breadcrumb-margin-bottom: 0 !default;
+$breadcrumb-background: null !default;
+$breadcrumb-radius: null !default;
 
-$breadcrumb-link:                     var(--#{$prefix-bh}link-colour) !default; 
-$breadcrumb-current:                  var(--#{$prefix-bh}text-muted) !default;
-$breadcrumb-divider:                  var(--#{$prefix-bh}text-muted) !default;
-$breadcrumb-item-padding-x:           $padding-03 !default;
+$breadcrumb-link: var(--#{$prefix-bh}link-colour) !default;
+$breadcrumb-current: var(--#{$prefix-bh}text-muted) !default;
+$breadcrumb-divider: var(--#{$prefix-bh}text-muted) !default;
+$breadcrumb-item-padding-x: $padding-03 !default;
 
-$breadcrumb-divider-icon:             quote("/") !default;
-$breadcrumb-divider-flipped:          $breadcrumb-divider-icon !default;
-
-
+$breadcrumb-divider-icon: quote("/") !default;
+$breadcrumb-divider-flipped: $breadcrumb-divider-icon !default;
 
 // Key-value pair _______________________
-$keyvalue-gap:              $spacer-03 !default;
-$keyvalue-key:              var(--#{$prefix-bh}text-secondary) !default;
-$keyvalue-value:            var(--#{$prefix-bh}text-primary) !default;
+$keyvalue-gap: $spacer-03 !default;
+$keyvalue-key: var(--#{$prefix-bh}text-secondary) !default;
+$keyvalue-value: var(--#{$prefix-bh}text-primary) !default;
 
 // Key-value list
-$key-value-item-gap:          $spacer-04 !default;
-$key-value-list-row-gap:      $spacer-05 !default;
+$key-value-item-gap: $spacer-04 !default;
+$key-value-list-row-gap: $spacer-05 !default;
 
 // Key-value grid
-$key-value-grid-gap:         $spacer-02 !default;
-$key-value-grid-background:  var(--#{$prefix-bh}ui-overlay-02) !default;
-$key-value-grid-padding-x:   $padding-07 !default;
-$key-value-grid-padding-y:   $padding-05 !default;
-$key-value-grid-radius:      $border-radius-md !default;
-$key-value-columns-default:  3 !default;
+$key-value-grid-gap: $spacer-02 !default;
+$key-value-grid-background: var(--#{$prefix-bh}ui-overlay-02) !default;
+$key-value-grid-padding-x: $padding-07 !default;
+$key-value-grid-padding-y: $padding-05 !default;
+$key-value-grid-radius: $border-radius-md !default;
+$key-value-columns-default: 3 !default;
 
 // Key-value table
-$key-value-table-gap:        $key-value-item-gap !default;
-$key-value-key-col:          2fr !default;  
-$key-value-value-col:        3fr !default;
-
-
+$key-value-table-gap: $key-value-item-gap !default;
+$key-value-key-col: 2fr !default;
+$key-value-value-col: 3fr !default;
 
 // Side bar _____________________________
-$sidebar-width:         20rem !default;
-$sidebar-width-closed:  4.5rem !default;
-
-
+$sidebar-width: 20rem !default;
+$sidebar-width-closed: 4.5rem !default;
 
 // Versa-tile ___________________________
-$versatile-padding-y:        $padding-05 !default;
-$versatile-padding-x:        $padding-05 !default;
+$versatile-padding-y: $padding-05 !default;
+$versatile-padding-x: $padding-05 !default;
 
-$versatile-radius:           $border-radius-md !default;
-$versatile-background:       $ui-overlay-01 !default;
-$versatile-border:           $ui-border-02 !default;
-$versatile-border-width:     $border-width !default;
+$versatile-radius: $border-radius-md !default;
+$versatile-background: $ui-overlay-01 !default;
+$versatile-border: $ui-border-02 !default;
+$versatile-border-width: $border-width !default;
 
-$versatile-content-gap:      $spacer-04 !default;
-$versatile-body-gap:         $spacer-04 !default;
-$versatile-actions-gap:      $spacer-04 !default;
+$versatile-content-gap: $spacer-04 !default;
+$versatile-body-gap: $spacer-04 !default;
+$versatile-actions-gap: $spacer-04 !default;
 
-$versatile-label:            var(--#{$prefix-bh}text-primary) !default;
-$versatile-text:             var(--body-color) !default;
-
-
+$versatile-label: var(--#{$prefix-bh}text-primary) !default;
+$versatile-text: var(--body-color) !default;
 
 // Lookup _______________________________
-$lookup-gap:                $spacer-04 !default;
-$lookup-actions-gap:        $spacer-03 !default;
-
-
+$lookup-gap: $spacer-04 !default;
+$lookup-actions-gap: $spacer-03 !default;
 
 // Table ________________________________
-$table-text:                var(--#{$prefix-bh}text-primary) !default;
-$table-text-secondary:      var(--#{$prefix-bh}text-muted) !default;
-$table-background:          var(--#{$prefix-bh}transparent) !default;
-$table-border:              var(--#{$prefix-bh}ui-border-02) !default;
-$table-border-width:        $border-width !default;
+$table-text: var(--#{$prefix-bh}text-primary) !default;
+$table-text-secondary: var(--#{$prefix-bh}text-muted) !default;
+$table-background: var(--#{$prefix-bh}transparent) !default;
+$table-border: var(--#{$prefix-bh}ui-border-02) !default;
+$table-border-width: $border-width !default;
 
-$table-hover-text:          $table-text !default;
-$table-hover-background:    var(--#{$prefix-bh}ui-overlay-02) !default;
+$table-hover-text: $table-text !default;
+$table-hover-background: var(--#{$prefix-bh}ui-overlay-02) !default;
 
-$table-row-height:          3.25rem !default;
-$table-row-gap:             0.25rem !default;
+$table-row-height: 3.25rem !default;
+$table-row-gap: 0.25rem !default;
 
-$table-cell-padding-y:      $padding-05*0.125 !default;
-$table-cell-padding-x:      $padding-05 !default;
+$table-cell-padding-y: $padding-05 * 0.125 !default;
+$table-cell-padding-x: $padding-05 !default;
 $table-cell-vertical-align: middle !default;
 
-$table-header-background:   var(--#{$prefix-bh}ui-overlay-03) !default;
-$table-header-text:         var(--#{$prefix-bh}text-secondary) !default;
-$table-header-radius:       $border-radius-md !default;
-$table-header-row-height:   3.5rem !default;
-$table-header-gap:          $spacer-03 !default;
+$table-header-background: var(--#{$prefix-bh}ui-overlay-03) !default;
+$table-header-text: var(--#{$prefix-bh}text-secondary) !default;
+$table-header-radius: $border-radius-md !default;
+$table-header-row-height: 3.5rem !default;
+$table-header-gap: $spacer-03 !default;
 
-$table-sort-icon:           var(--#{$prefix-bh}text-active) !default;
-$table-sort-icon-size:      $icon-sm !default;
+$table-sort-icon: var(--#{$prefix-bh}text-active) !default;
+$table-sort-icon-size: $icon-sm !default;

@@ -29,6 +29,7 @@
 
   --#{$prefix}card-box-shadow: #{$card-box-shadow};
   --#{$prefix-bh}card-height: #{$card-height};
+  --#{$prefix-bh}card-aspect-ratio: #{$card-aspect-ratio};
 
   --#{$prefix}card-img-overlay-padding: #{$card-img-overlay-padding};
   --#{$prefix}card-group-margin: #{$card-group-margin};
@@ -39,11 +40,13 @@
   flex-direction: column;
   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
   height: var(--#{$prefix-bh}card-height);
+  aspect-ratio: var(--#{$prefix-bh}card-aspect-ratio);
   color: inherit;
   word-wrap: break-word;
   background-color: var(--#{$prefix-bh}card-background);
   background-clip: border-box;
-  border: var(--#{$prefix-bh}card-border-width) solid var(--#{$prefix-bh}card-border);
+  border: var(--#{$prefix-bh}card-border-width) solid
+    var(--#{$prefix-bh}card-border);
   @include border-radius(var(--#{$prefix-bh}card-radius));
   @include box-shadow(var(--#{$prefix}card-box-shadow));
 
@@ -53,23 +56,23 @@
   }
 
   > hr {
-      margin-right: 0;
-      margin-left: 0;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   > .list-group {
-      border-top: inherit;
-      border-bottom: inherit;
+    border-top: inherit;
+    border-bottom: inherit;
 
-      // &:first-child {
-      //     border-top-width: 0;
-      //     @include border-top-radius(var(--#{$prefix-bh}card-inner-radius));
-      // }
+    // &:first-child {
+    //     border-top-width: 0;
+    //     @include border-top-radius(var(--#{$prefix-bh}card-inner-radius));
+    // }
 
-      // &:last-child  {
-      //     border-bottom-width: 0;
-      //     @include border-bottom-radius(var(--#{$prefix-bh}card-inner-radius));
-      // }
+    // &:last-child  {
+    //     border-bottom-width: 0;
+    //     @include border-bottom-radius(var(--#{$prefix-bh}card-inner-radius));
+    // }
   }
 
   // Due to specificity of the above selector (`.card > .list-group`), we must
@@ -79,7 +82,7 @@
     border-top: 0;
   }
 }
-  
+
 .card-body {
   // Enable `flex-grow: 1` for decks and groups so that card blocks take up
   // as much space as possible, ensuring footers are aligned to the bottom.
@@ -88,32 +91,33 @@
   flex-direction: column;
   gap: var(--#{$prefix-bh}card-body-gap);
   padding: var(--#{$prefix-bh}card-padding-y) var(--#{$prefix-bh}card-padding-x);
-  color: var(--#{$prefix-bh}card-text);  
+  color: var(--#{$prefix-bh}card-text);
 
   // > * {
   //   align-self: flex-start;
   // }
 }
-  // .card-text:last-child {
-  //   margin-bottom: 0;
-  // }
-  
-  // .card-link {
-  //   &:hover {
-  //     text-decoration: if($link-hover-decoration == underline, none, null);
-  //   }
-  
-  //   + .card-link {
-  //     margin-left: var(--#{$prefix-bh}card-padding-x);
-  //   }
-  // }
-  
-  //
-  // Optional textual caps
-  //
-  
+// .card-text:last-child {
+//   margin-bottom: 0;
+// }
+
+// .card-link {
+//   &:hover {
+//     text-decoration: if($link-hover-decoration == underline, none, null);
+//   }
+
+//   + .card-link {
+//     margin-left: var(--#{$prefix-bh}card-padding-x);
+//   }
+// }
+
+//
+// Optional textual caps
+//
+
 .card-header {
-  padding: var(--#{$prefix-bh}card-cap-padding-y) var(--#{$prefix-bh}card-cap-padding-x);
+  padding: var(--#{$prefix-bh}card-cap-padding-y)
+    var(--#{$prefix-bh}card-cap-padding-x);
   padding-top: calc(var(--#{$prefix-bh}card-cap-padding-y) + 0.25rem);
   margin-bottom: 0; // Removes the default margin-bottom of <hN>
   color: var(--#{$prefix-bh}card-cap-text);
@@ -125,12 +129,17 @@
   // }
 
   + .card-body {
-    padding-top: calc(var(--#{$prefix-bh}card-padding-y) - calc(calc(var(--#{$prefix-bh}card-padding-y) / 2) - 0.5rem));
+    padding-top: calc(
+      var(--#{$prefix-bh}card-padding-y) - calc(
+          calc(var(--#{$prefix-bh}card-padding-y) / 2) - 0.5rem
+        )
+    );
   }
 }
 
 .card-footer {
-  padding: var(--#{$prefix-bh}card-cap-padding-y) var(--#{$prefix-bh}card-cap-padding-x);
+  padding: var(--#{$prefix-bh}card-cap-padding-y)
+    var(--#{$prefix-bh}card-cap-padding-x);
   color: var(--#{$prefix-bh}card-cap-text);
   background-color: var(--#{$prefix-bh}card-cap-background);
   border-top: var(--#{$prefix-bh}card-cap-border);
@@ -141,18 +150,27 @@
 }
 
 .card:has(.card-footer) .card-body {
-  padding-bottom: calc(var(--#{$prefix-bh}card-padding-y) - calc(calc(var(--#{$prefix-bh}card-padding-y) / 2) - 0.5rem)); // Formular X-((X/2)-8)
+  padding-bottom: calc(
+    var(--#{$prefix-bh}card-padding-y) - calc(
+        calc(var(--#{$prefix-bh}card-padding-y) / 2) - 0.5rem
+      )
+  ); // Formular X-((X/2)-8)
 }
-  
-  
-  //
-  // Header navs
-  //
-  
+
+//
+// Header navs
+//
+
 .card-header-tabs {
-  margin-right: calc(-.5 * var(--#{$prefix-bh}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
-  margin-bottom: calc(-1 * var(--#{$prefix-bh}card-cap-padding-y)); // stylelint-disable-line function-disallowed-list
-  margin-left: calc(-.5 * var(--#{$prefix-bh}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
+  margin-right: calc(
+    -0.5 * var(--#{$prefix-bh}card-cap-padding-x)
+  ); // stylelint-disable-line function-disallowed-list
+  margin-bottom: calc(
+    -1 * var(--#{$prefix-bh}card-cap-padding-y)
+  ); // stylelint-disable-line function-disallowed-list
+  margin-left: calc(
+    -0.5 * var(--#{$prefix-bh}card-cap-padding-x)
+  ); // stylelint-disable-line function-disallowed-list
   border-bottom: 0;
 
   .nav-link.active {
@@ -162,10 +180,14 @@
 }
 
 .card-header-pills {
-  margin-right: calc(-.5 * var(--#{$prefix-bh}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
-  margin-left: calc(-.5 * var(--#{$prefix-bh}card-cap-padding-x)); // stylelint-disable-line function-disallowed-list
+  margin-right: calc(
+    -0.5 * var(--#{$prefix-bh}card-cap-padding-x)
+  ); // stylelint-disable-line function-disallowed-list
+  margin-left: calc(
+    -0.5 * var(--#{$prefix-bh}card-cap-padding-x)
+  ); // stylelint-disable-line function-disallowed-list
 }
-  
+
 // Card image
 .card-img-overlay {
   position: absolute;
@@ -183,8 +205,12 @@
   height: var(--#{$prefix-bh}card-image-max-height);
   overflow: hidden;
   position: relative;
-  border-top-left-radius: calc(var(--#{$prefix-bh}card-radius) - var(--#{$prefix-bh}card-border-width));
-  border-top-right-radius: calc(var(--#{$prefix-bh}card-radius) - var(--#{$prefix-bh}card-border-width));
+  border-top-left-radius: calc(
+    var(--#{$prefix-bh}card-radius) - var(--#{$prefix-bh}card-border-width)
+  );
+  border-top-right-radius: calc(
+    var(--#{$prefix-bh}card-radius) - var(--#{$prefix-bh}card-border-width)
+  );
 
   img {
     position: absolute;
@@ -205,7 +231,6 @@
 // .card-img-bottom {
 //   @include border-bottom-radius(var(--#{$prefix-bh}card-inner-radius));
 // }
-
 
 //
 // Card groups
@@ -283,19 +308,26 @@
     flex: 0 0 var(--#{$prefix-bh}card-img-width);
     width: var(--#{$prefix-bh}card-img-width);
     height: auto;
-    border-top-left-radius: calc(var(--#{$prefix-bh}card-radius) - var(--#{$prefix-bh}card-border-width));
-    border-bottom-left-radius: calc(var(--#{$prefix-bh}card-radius) - var(--#{$prefix-bh}card-border-width));
+    border-top-left-radius: calc(
+      var(--#{$prefix-bh}card-radius) - var(--#{$prefix-bh}card-border-width)
+    );
+    border-bottom-left-radius: calc(
+      var(--#{$prefix-bh}card-radius) - var(--#{$prefix-bh}card-border-width)
+    );
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-
 }
 
 .card-horizontal-right {
   .card-img {
     order: 2 !important;
-    border-top-right-radius: calc(var(--#{$prefix-bh}card-radius) - var(--#{$prefix-bh}card-border-width));
-    border-bottom-right-radius: calc(var(--#{$prefix-bh}card-radius) - var(--#{$prefix-bh}card-border-width));
+    border-top-right-radius: calc(
+      var(--#{$prefix-bh}card-radius) - var(--#{$prefix-bh}card-border-width)
+    );
+    border-bottom-right-radius: calc(
+      var(--#{$prefix-bh}card-radius) - var(--#{$prefix-bh}card-border-width)
+    );
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
@@ -337,14 +369,14 @@
     -webkit-font-smoothing: antialiased;
     font-family: #{$font-awesome};
     font-weight: 400;
-    content: '\f061';
+    content: "\f061";
     font-size: 1.5rem;
     height: 1rem;
     width: 100%;
     margin-top: auto;
     text-align: right;
     color: var(--#{$prefix-bh}link-icon);
-    transition: .15s ease-in-out;
+    transition: 0.15s ease-in-out;
   }
 
   &:hover {
@@ -383,7 +415,6 @@
       --#{$prefix-bh}card-border-secondary: #{$card-clickable-border-hover};
     }
   }
-
 }
 
 //
@@ -404,7 +435,9 @@
   }
 
   .card-body {
-    padding-right: calc(var(--#{$prefix-bh}card-padding-x) + $checkbox-input-width);
+    padding-right: calc(
+      var(--#{$prefix-bh}card-padding-x) + $checkbox-input-width
+    );
   }
 
   .form-check-input {
@@ -432,39 +465,41 @@
 //
 
 .emphasis-tile {
-  --#{$prefix-bh}emphasis-tile-padding-y:     #{$emphasis-tile-padding-y};
-  --#{$prefix-bh}emphasis-tile-padding-x:     #{$emphasis-tile-padding-x};
-  --#{$prefix-bh}emphasis-tile-border-width:  #{$emphasis-tile-border-width};
-  --#{$prefix-bh}emphasis-tile-border:        #{$emphasis-tile-border};
-  --#{$prefix-bh}emphasis-tile-radius:        #{$emphasis-tile-radius};
-  --#{$prefix-bh}emphasis-tile-background:    #{$emphasis-tile-background};
+  --#{$prefix-bh}emphasis-tile-padding-y: #{$emphasis-tile-padding-y};
+  --#{$prefix-bh}emphasis-tile-padding-x: #{$emphasis-tile-padding-x};
+  --#{$prefix-bh}emphasis-tile-border-width: #{$emphasis-tile-border-width};
+  --#{$prefix-bh}emphasis-tile-border: #{$emphasis-tile-border};
+  --#{$prefix-bh}emphasis-tile-radius: #{$emphasis-tile-radius};
+  --#{$prefix-bh}emphasis-tile-background: #{$emphasis-tile-background};
 
-    padding: var(--#{$prefix-bh}emphasis-tile-padding-y) var(--#{$prefix-bh}emphasis-tile-padding-x);
-    border-radius: var(--#{$prefix-bh}emphasis-tile-radius);
-    display: flex;
-    flex-direction: column;
-    gap: $emphasis-tile-content-gap;
-    width: 100%;
-    background-color: var(--#{$prefix-bh}emphasis-tile-background);
-    border: var(--#{$prefix-bh}emphasis-tile-border-width) solid var(--#{$prefix-bh}emphasis-tile-border);
+  padding: var(--#{$prefix-bh}emphasis-tile-padding-y)
+    var(--#{$prefix-bh}emphasis-tile-padding-x);
+  border-radius: var(--#{$prefix-bh}emphasis-tile-radius);
+  display: flex;
+  flex-direction: column;
+  gap: $emphasis-tile-content-gap;
+  width: 100%;
+  background-color: var(--#{$prefix-bh}emphasis-tile-background);
+  border: var(--#{$prefix-bh}emphasis-tile-border-width) solid
+    var(--#{$prefix-bh}emphasis-tile-border);
 }
 
 .card-secondary .emphasis-tile:not(.emphasis-tile-secondary) {
-  --#{$prefix-bh}emphasis-tile-background:    #{$emphasis-tile-background-secondary};
-  --#{$prefix-bh}emphasis-tile-border:        #{$emphasis-tile-border-secondary};
+  --#{$prefix-bh}emphasis-tile-background: #{$emphasis-tile-background-secondary};
+  --#{$prefix-bh}emphasis-tile-border: #{$emphasis-tile-border-secondary};
 }
 
 .emphasis-tile-inline {
-  --#{$prefix-bh}emphasis-tile-width:         #{$emphasis-tile-width};
-  
+  --#{$prefix-bh}emphasis-tile-width: #{$emphasis-tile-width};
+
   max-width: 100%;
   width: var(--#{$prefix-bh}emphasis-tile-width);
   height: 100%;
 }
 
 .emphasis-tile-center {
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .card:has(.emphasis-tile-inline) {
@@ -482,11 +517,11 @@
 }
 
 .emphasis-tile-secondary {
-    --#{$prefix-bh}emphasis-tile-border:        #{$emphasis-tile-border-secondary};
-    
+  --#{$prefix-bh}emphasis-tile-border: #{$emphasis-tile-border-secondary};
+
   &:not(.card-secondary .emphasis-tile-secondary) {
-    --#{$prefix-bh}emphasis-tile-background:    #{$emphasis-tile-background-secondary};
-    --#{$prefix-bh}emphasis-tile-border:        #{$emphasis-tile-border-secondary};
+    --#{$prefix-bh}emphasis-tile-background: #{$emphasis-tile-background-secondary};
+    --#{$prefix-bh}emphasis-tile-border: #{$emphasis-tile-border-secondary};
   }
 }
 
@@ -515,7 +550,7 @@
 
       &.disabled {
         border-color: #{$card-clickable-border-disabled-dark};
-        
+
         .card-body {
           color: #{$card-clickable-text-disabled-dark};
         }
