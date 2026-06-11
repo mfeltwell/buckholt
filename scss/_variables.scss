@@ -626,9 +626,6 @@ $body-secondary-color: $text-muted !default;
 $body-background: $ui-background-02 !default;
 $body-text-align: null !default;
 
-// Headings _____________________________
-$headings-color: inherit !default;
-
 // Paragraphs ___________________________
 //
 // Style p element.
@@ -844,6 +841,10 @@ $headings-font-style: null !default;
 $headings-font-weight: $font-weight-sb !default;
 $headings-line-height: 1.2 !default;
 $headings-color: inherit !default;
+
+$headings-weight-display: $font-weight-md !default;
+$headings-weight-headline: $headings-font-weight !default;
+$headings-weight-title: $font-weight-md !default;
 
 // Horizontal rule ______________________
 $hr-margin-y: $spacer !default;

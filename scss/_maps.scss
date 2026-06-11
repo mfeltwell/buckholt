@@ -2,636 +2,630 @@
 //
 // Placed here so that others can override the default Sass maps and see automatic updates to utilities and more.
 
-
 // Prime colours ________________________
 $prime-colors-rgb: map-loop($prime-colors, to-rgb, "$value");
 
 // UI background colours ________________
 $ui-background-colors: (
-    "01":   $ui-background-01, 
-    "02":   $ui-background-02, 
-    "03":   $ui-background-03,
-    "04":   $ui-background-04
+  "01": $ui-background-01,
+  "02": $ui-background-02,
+  "03": $ui-background-03,
+  "04": $ui-background-04,
 );
 
 $ui-overlay-colors: (
-    "01":   $ui-overlay-01, 
-    "02":   $ui-overlay-02, 
-    "03":   $ui-overlay-03, 
-    "04":   $ui-overlay-04, 
+  "01": $ui-overlay-01,
+  "02": $ui-overlay-02,
+  "03": $ui-overlay-03,
+  "04": $ui-overlay-04,
 );
 
 // UI border colours ____________________
 $ui-border-colors: (
-    "01":   $ui-border-01, 
-    "02":   $ui-border-02, 
-    "03":   $ui-border-03,
-    "04":   $ui-border-04
+  "01": $ui-border-01,
+  "02": $ui-border-02,
+  "03": $ui-border-03,
+  "04": $ui-border-04,
 );
-
 
 // $state-colours-rgb: map-loop($state-colours, to-rgb, "$value");
 
 // Typography _______________________________________________________________________________________________________________________
 // Display ______________________________
 $display: (
-    "font-sizes": (
-        "01": $typescale-08,
-        "02": $typescale-09,
-        "03": $typescale-10,
+  "font-sizes": (
+    "01": $typescale-08,
+    "02": $typescale-09,
+    "03": $typescale-10,
+  ),
+
+  "font-weight": $headings-weight-display,
+
+  // Letter spacing default set by $letter-spacing-base
+  "letter-spacing": (
+      "01": 0,
+      "02": 0,
+      "03": -0.25px,
     ),
 
-    "font-weight": $font-weight-md,
-
-    // Letter spacing default set by $letter-spacing-base
-    "letter-spacing": (
-        "01": 0,
-        "02": 0,
-        "03": -0.25px
-    ),
-
-    // Line height = font-size + height (default 0.5rem)
-    "line-height": (
-    ),
+  // Line height = font-size + height (default 0.5rem)
+  "line-height": (),
 );
 
 // Headline _____________________________
 $headline: (
-    "font-sizes": (
-        "01": $typescale-05,
-        "02": $typescale-06,
-        "03": $typescale-07,
+  "font-sizes": (
+    "01": $typescale-05,
+    "02": $typescale-06,
+    "03": $typescale-07,
+  ),
+
+  "font-weight": $headings-weight-headline,
+
+  // Letter spacing default set by $letter-spacing-base
+  "letter-spacing": (
+      "01": 0,
+      "02": 0,
+      "03": 0,
     ),
 
-    "font-weight": $headings-font-weight,
-
-    // Letter spacing default set by $letter-spacing-base
-    "letter-spacing": (
-        "01": 0,
-        "02": 0,
-        "03": 0,
-    ),
-
-    // Line height = font-size + height (default 0.5rem)
-    "line-height": (
-    ),
+  // Line height = font-size + height (default 0.5rem)
+  "line-height": (),
 );
 
 // Title ________________________________
 $title: (
-    "font-sizes": (
-        "00": $typescale-02,
-        "01": $typescale-03,
-        "02": $typescale-04,
-        "03": $typescale-05
+  "font-sizes": (
+    "00": $typescale-02,
+    "01": $typescale-03,
+    "02": $typescale-04,
+    "03": $typescale-05,
+  ),
+
+  "font-weight": $headings-weight-title,
+
+  // Letter spacing default set by $letter-spacing-base
+  "letter-spacing": (
+      "00": 0.25px,
+      "02": 0,
+      "03": 0,
     ),
 
-    "font-weight": $font-weight-md,
-
-    // Letter spacing default set by $letter-spacing-base
-    "letter-spacing": (
-        "00": 0.25px,
-        "02": 0,
-        "03": 0,
-    ),
-
-    // Line height = font-size + height (default 0.5rem)
-    "line-height": (
-        "00": 0.375rem,
-        "02": 0.25rem,
+  // Line height = font-size + height (default 0.5rem)
+  "line-height": (
+      "00": 0.375rem,
+      "02": 0.25rem,
     ),
 );
 
 // Body _________________________________
 $body: (
-    "font-sizes": (
-        "00": $typescale-01,
-        "01": $typescale-02,
-        "02": $font-size-base,
+  "font-sizes": (
+    "00": $typescale-01,
+    "01": $typescale-02,
+    "02": $font-size-base,
+  ),
+
+  "font-weight": $font-weight-base,
+
+  // Letter spacing default set by $letter-spacing-base
+  "letter-spacing": (
+      "00": 0.25px,
+      "01": 0.25px,
     ),
 
-    "font-weight": $font-weight-base,
-
-    // Letter spacing default set by $letter-spacing-base
-    "letter-spacing": (
-        "00": 0.25px,
-        "01": 0.25px,
-    ),
-
-    // Line height = font-size + height (default 0.5rem)
-    "line-height": (
-        "00": 0.25rem,
-        "01": 0.375rem,
+  // Line height = font-size + height (default 0.5rem)
+  "line-height": (
+      "00": 0.25rem,
+      "01": 0.375rem,
     ),
 );
 
 // Action _______________________________
 $action: (
-    "font-sizes": (
-        "00": $typescale-01,
-        "01": $typescale-02,
-        "02": $typescale-03,
+  "font-sizes": (
+    "00": $typescale-01,
+    "01": $typescale-02,
+    "02": $typescale-03,
+  ),
+
+  "font-weight": $font-weight-rg,
+
+  // Letter spacing default set by $letter-spacing-base
+  "letter-spacing": (
+      "00": 0.25px,
+      "01": 0.25px,
     ),
 
-    "font-weight": $font-weight-rg,
-
-    // Letter spacing default set by $letter-spacing-base
-    "letter-spacing": (
-        "00": 0.25px,
-        "01": 0.25px,
-    ),
-
-    // Line height = font-size + height (default 0.5rem)
-    "line-height": (
-        "00": 0.25rem,
-        "01": 0.375rem,
+  // Line height = font-size + height (default 0.5rem)
+  "line-height": (
+      "00": 0.25rem,
+      "01": 0.375rem,
     ),
 );
 
 // Label ________________________________
 $label: (
-    "font-sizes": (
-        "01": $typescale-02,
-        "02": $typescale-03,
-        "03": $typescale-04,
+  "font-sizes": (
+    "01": $typescale-02,
+    "02": $typescale-03,
+    "03": $typescale-04,
+  ),
+
+  "font-weight": $font-weight-md,
+
+  // Letter spacing default set by $letter-spacing-base
+  "letter-spacing": (
+      "01": 0.25px,
+      "02": 0.25px,
     ),
 
-    "font-weight": $font-weight-md,
-
-    // Letter spacing default set by $letter-spacing-base
-    "letter-spacing": (
-        "01": 0.25px,
-        "02": 0.25px,
-    ),
-
-    // Line height = font-size + height (default 0.5rem)
-    "line-height": (
-        "01": 0.375rem,
+  // Line height = font-size + height (default 0.5rem)
+  "line-height": (
+      "01": 0.375rem,
     ),
 );
 
 // Input text ___________________________
 $input-text: (
-    "font-sizes": (
-        "01": $typescale-03,
-        "02": $typescale-03,
-    ),
+  "font-sizes": (
+    "01": $typescale-03,
+    "02": $typescale-03,
+  ),
 
-    "font-weight": $font-weight-rg,
+  "font-weight": $font-weight-rg,
 
-    // Letter spacing default set by $letter-spacing-base
-    "letter-spacing": (
-    ),
-
-    // Line height = font-size + height (default 0.5rem)
-    "line-height": (
-        "02": 0.75rem,
+  // Letter spacing default set by $letter-spacing-base
+  "letter-spacing": (),
+  // Line height = font-size + height (default 0.5rem)
+  "line-height": (
+      "02": 0.75rem,
     ),
 );
 
 // Placeholder __________________________
 $placeholder: (
-    "font-sizes": (
-        "01": $typescale-03,
-        "02": $typescale-03,
-    ),
+  "font-sizes": (
+    "01": $typescale-03,
+    "02": $typescale-03,
+  ),
 
-    "font-weight": $font-weight-lt,
+  "font-weight": $font-weight-lt,
 
-    // Letter spacing default set by $letter-spacing-base
-    "letter-spacing": (
-    ),
-
-    // Line height = font-size + height (default 0.5rem)
-    "line-height": (
-        "02": 0.75rem,
+  // Letter spacing default set by $letter-spacing-base
+  "letter-spacing": (),
+  // Line height = font-size + height (default 0.5rem)
+  "line-height": (
+      "02": 0.75rem,
     ),
 );
 
 // Support _______________________________
 // Max one support style!!
 $support: (
-    "font-sizes": (
-        "01": $typescale-01,
+  "font-sizes": (
+    "01": $typescale-01,
+  ),
+
+  "font-weight": $font-weight-rg,
+
+  // Letter spacing default set by $letter-spacing-base
+  "letter-spacing": (
+      "01": 0.25px,
     ),
 
-    "font-weight": $font-weight-rg,
-
-    // Letter spacing default set by $letter-spacing-base
-    "letter-spacing": (
-        "01": 0.25px,
-    ),
-
-    // Line height = font-size + height (default 0.5rem)
-    "line-height": (
-        "01": 0.25rem,
+  // Line height = font-size + height (default 0.5rem)
+  "line-height": (
+      "01": 0.25rem,
     ),
 );
 
 // Link _________________________________
 $link: (
-    "font-sizes": (
-        "01": $typescale-01,
-        "02": $typescale-02,
-        "03": $typescale-03,
+  "font-sizes": (
+    "01": $typescale-01,
+    "02": $typescale-02,
+    "03": $typescale-03,
+  ),
+
+  "font-weight": $link-font-weight,
+
+  // Letter spacing default set by $letter-spacing-base
+  "letter-spacing": (
+      "01": 0.25px,
+      "02": 0.25px,
     ),
 
-    "font-weight": $link-font-weight,
-
-    // Letter spacing default set by $letter-spacing-base
-    "letter-spacing": (
-        "01": 0.25px,
-        "02": 0.25px,
-    ),
-
-    // Line height = font-size + height (default 0.5rem)
-    "line-height": (
-        "01": 0.25rem,
-        "02": 0.375rem,
+  // Line height = font-size + height (default 0.5rem)
+  "line-height": (
+      "01": 0.25rem,
+      "02": 0.375rem,
     ),
 );
 
 // Key __________________________________
 $key: (
-    "font-sizes": (
-        "01": $typescale-01,
-        "02": $typescale-02,
-        "03": $typescale-03
+  "font-sizes": (
+    "01": $typescale-01,
+    "02": $typescale-02,
+    "03": $typescale-03,
+  ),
+
+  "font-weight": $font-weight-lt,
+
+  // Letter spacing default set by $letter-spacing-base
+  "letter-spacing": (
+      "01": 0.25px,
+      "02": 0.25px,
     ),
 
-    "font-weight": $font-weight-lt,
-
-    // Letter spacing default set by $letter-spacing-base
-    "letter-spacing": (
-        "01": 0.25px,
-        "02": 0.25px
-    ),
-
-    // Line height = font-size + height (default 0.5rem)
-    "line-height": (
-        "01": 0.25rem,
-        "02": 0.375rem
+  // Line height = font-size + height (default 0.5rem)
+  "line-height": (
+      "01": 0.25rem,
+      "02": 0.375rem,
     ),
 );
 
 // Value ________________________________
 $value: (
-    "font-sizes": (
-        "01": $typescale-03,
-        "02": $typescale-05,
-        "03": $typescale-07,
-        "04": $typescale-10,
+  "font-sizes": (
+    "01": $typescale-03,
+    "02": $typescale-05,
+    "03": $typescale-07,
+    "04": $typescale-10,
+  ),
+
+  "font-weight": $font-weight-md,
+
+  // Letter spacing default set by $letter-spacing-base
+  "letter-spacing": (
+      "02": 0,
+      "03": 0,
+      "04": -0.25px,
     ),
 
-    "font-weight": $font-weight-md,
-
-    // Letter spacing default set by $letter-spacing-base
-    "letter-spacing": (
-        "02": 0,
-        "03": 0,
-        "04": -0.25px,
-    ),
-
-    // Line height = font-size + height (default 0.5rem)
-    "line-height": (
-
-    ),
+  // Line height = font-size + height (default 0.5rem)
+  "line-height": (),
 );
 
 // Typography ___________________________
 $typography: (
-    "display":      $display,
-    "headline":     $headline,
-    "title":        $title,
-    "body":         $body,
-    "action":       $action,
-    "label":        $label,
-    "input-text":   $input-text,
-    "placeholder":  $placeholder,
-    "support":      $support,
-    "link":         $link,
-    "key":          $key,
-    "value":        $value,
+  "display": $display,
+  "headline": $headline,
+  "title": $title,
+  "body": $body,
+  "action": $action,
+  "label": $label,
+  "input-text": $input-text,
+  "placeholder": $placeholder,
+  "support": $support,
+  "link": $link,
+  "key": $key,
+  "value": $value,
 );
-
 
 // Buttons __________________________________________________________________________________________________________________________
 $button-primary: (
-    "resting": (
-        "background":   var(--#{$prefix-bh}action-01),
-        "border":       var(--#{$prefix-bh}action-08),
-        "label":        var(--#{$prefix-bh}action-text-02),
-        "icon":         var(--#{$prefix-bh}action-text-02),
-    ),
-    "hover": (
-        "background":   var(--#{$prefix-bh}action-02),
-        "border":       var(--#{$prefix-bh}action-01),
-        "label":        var(--#{$prefix-bh}action-text-02),
-        "icon":         var(--#{$prefix-bh}action-text-02),
-    ),
-    "active": (
-        "background":   var(--#{$prefix-bh}action-03),
-        "border":       var(--#{$prefix-bh}action-08),
-        "label":        var(--#{$prefix-bh}action-text-02),
-        "icon":         var(--#{$prefix-bh}action-text-02),
-    ),
-    "focus": (
-        "background":   var(--#{$prefix-bh}action-02),
-        "border":       var(--#{$prefix-bh}action-07),
-        "label":        var(--#{$prefix-bh}action-text-02),
-        "icon":         var(--#{$prefix-bh}action-text-02),
-    ),
+  "resting": (
+    "background": var(--#{$prefix-bh}action-01),
+    "border": var(--#{$prefix-bh}action-08),
+    "label": var(--#{$prefix-bh}action-text-02),
+    "icon": var(--#{$prefix-bh}action-text-02),
+  ),
+  "hover": (
+    "background": var(--#{$prefix-bh}action-02),
+    "border": var(--#{$prefix-bh}action-01),
+    "label": var(--#{$prefix-bh}action-text-02),
+    "icon": var(--#{$prefix-bh}action-text-02),
+  ),
+  "active": (
+    "background": var(--#{$prefix-bh}action-03),
+    "border": var(--#{$prefix-bh}action-08),
+    "label": var(--#{$prefix-bh}action-text-02),
+    "icon": var(--#{$prefix-bh}action-text-02),
+  ),
+  "focus": (
+    "background": var(--#{$prefix-bh}action-02),
+    "border": var(--#{$prefix-bh}action-07),
+    "label": var(--#{$prefix-bh}action-text-02),
+    "icon": var(--#{$prefix-bh}action-text-02),
+  ),
 );
 
 $button-primary-dark: (
-    "resting": (
-        "background-b": var(--#{$prefix-bh}action-08),
-        "border":       var(--#{$prefix-bh}action-01),
-        "gradient":     true,
-    ),
-    "hover": (
-        "background":   var(--#{$prefix-bh}action-01),
-        "border":       var(--#{$prefix-bh}action-03),
-    ),
-    "active": (
-        "border":       var(--#{$prefix-bh}action-03),
-    ),
-
+  "resting": (
+    "background-b": var(--#{$prefix-bh}action-08),
+    "border": var(--#{$prefix-bh}action-01),
+    "gradient": true,
+  ),
+  "hover": (
+    "background": var(--#{$prefix-bh}action-01),
+    "border": var(--#{$prefix-bh}action-03),
+  ),
+  "active": (
+    "border": var(--#{$prefix-bh}action-03),
+  ),
 );
 
 $button-secondary: (
-    "resting": (
-        "background":   var(--#{$prefix-bh}action-07),
-        "border":       var(--#{$prefix-bh}action-01),
-        "label":        var(--#{$prefix-bh}action-text-01),
-        "icon":         var(--#{$prefix-bh}action-text-01),
-    ),
-    "hover": (
-        "background":   var(--#{$prefix-bh}action-04),
-        "border":       var(--#{$prefix-bh}action-01),
-        "label":        var(--#{$prefix-bh}action-text-01),
-        "icon":         var(--#{$prefix-bh}action-text-01),
-    ),
-    "active": (
-        "background":   var(--#{$prefix-bh}action-01),
-        "border":       var(--#{$prefix-bh}action-08),
-        "label":        var(--#{$prefix-bh}action-text-02),
-        "icon":         var(--#{$prefix-bh}action-text-02),
-    ),
-    "focus": (
-        "background":   var(--#{$prefix-bh}action-04),
-        "border":       var(--#{$prefix-bh}action-07),
-        "label":        var(--#{$prefix-bh}action-text-01),
-        "icon":         var(--#{$prefix-bh}action-text-01),
-    ),
+  "resting": (
+    "background": var(--#{$prefix-bh}action-07),
+    "border": var(--#{$prefix-bh}action-01),
+    "label": var(--#{$prefix-bh}action-text-01),
+    "icon": var(--#{$prefix-bh}action-text-01),
+  ),
+  "hover": (
+    "background": var(--#{$prefix-bh}action-04),
+    "border": var(--#{$prefix-bh}action-01),
+    "label": var(--#{$prefix-bh}action-text-01),
+    "icon": var(--#{$prefix-bh}action-text-01),
+  ),
+  "active": (
+    "background": var(--#{$prefix-bh}action-01),
+    "border": var(--#{$prefix-bh}action-08),
+    "label": var(--#{$prefix-bh}action-text-02),
+    "icon": var(--#{$prefix-bh}action-text-02),
+  ),
+  "focus": (
+    "background": var(--#{$prefix-bh}action-04),
+    "border": var(--#{$prefix-bh}action-07),
+    "label": var(--#{$prefix-bh}action-text-01),
+    "icon": var(--#{$prefix-bh}action-text-01),
+  ),
 );
 
 $button-secondary-dark: (
-    "resting": (
-        "background":   var(--#{$prefix-bh}transparent),
-        "border":       var(--#{$prefix-bh}action-02),
-    ),
-    "hover": (
-        "border":       var(--#{$prefix-bh}action-02),
-    ),
+  "resting": (
+    "background": var(--#{$prefix-bh}transparent),
+    "border": var(--#{$prefix-bh}action-02),
+  ),
+  "hover": (
+    "border": var(--#{$prefix-bh}action-02),
+  ),
 );
 
 $button-ghost: (
-    "resting": (
-        "background":   var(--#{$prefix-bh}transparent),
-        "border":       var(--#{$prefix-bh}transparent),
-        "label":        var(--#{$prefix-bh}action-text-01),
-        "icon":         var(--#{$prefix-bh}action-text-01),
-    ),
-    "hover": (
-        "background":   var(--#{$prefix-bh}action-04),
-        "border":       var(--#{$prefix-bh}transparent),
-        "label":        var(--#{$prefix-bh}action-text-01),
-        "icon":         var(--#{$prefix-bh}action-text-01),
-    ),
-    "active": (
-        "background":   var(--#{$prefix-bh}action-01),
-        "border":       var(--#{$prefix-bh}action-01),
-        "label":        var(--#{$prefix-bh}action-text-02),
-        "icon":         var(--#{$prefix-bh}action-text-02),
-    ),
-    "focus": (
-        "background":   var(--#{$prefix-bh}action-07),
-        "border":       var(--#{$prefix-bh}transparent),
-        "label":        var(--#{$prefix-bh}action-text-01),
-        "icon":         var(--#{$prefix-bh}action-text-01),
-    ),
+  "resting": (
+    "background": var(--#{$prefix-bh}transparent),
+    "border": var(--#{$prefix-bh}transparent),
+    "label": var(--#{$prefix-bh}action-text-01),
+    "icon": var(--#{$prefix-bh}action-text-01),
+  ),
+  "hover": (
+    "background": var(--#{$prefix-bh}action-04),
+    "border": var(--#{$prefix-bh}transparent),
+    "label": var(--#{$prefix-bh}action-text-01),
+    "icon": var(--#{$prefix-bh}action-text-01),
+  ),
+  "active": (
+    "background": var(--#{$prefix-bh}action-01),
+    "border": var(--#{$prefix-bh}action-01),
+    "label": var(--#{$prefix-bh}action-text-02),
+    "icon": var(--#{$prefix-bh}action-text-02),
+  ),
+  "focus": (
+    "background": var(--#{$prefix-bh}action-07),
+    "border": var(--#{$prefix-bh}transparent),
+    "label": var(--#{$prefix-bh}action-text-01),
+    "icon": var(--#{$prefix-bh}action-text-01),
+  ),
 );
 
 $button-response: (
-    "resting": (
-        "background":   var(--#{$prefix-bh}action-05),
-        "border":       var(--#{$prefix-bh}action-05),
-        "label":        var(--#{$prefix-bh}action-text-05),
-        "icon":         var(--#{$prefix-bh}action-text-05),
-    ),
-    "hover": (
-        "background":   var(--#{$prefix-bh}action-05),
-        "border":       var(--#{$prefix-bh}action-06),
-        "label":        var(--#{$prefix-bh}action-text-05),
-        "icon":         var(--#{$prefix-bh}action-text-05),
-    ),
-    "active": (
-        "background":   var(--#{$prefix-bh}action-04),
-        "border":       var(--#{$prefix-bh}action-02),
-        "label":        var(--#{$prefix-bh}action-text-01),
-        "icon":         var(--#{$prefix-bh}action-text-01),
-    ),
-    "focus": (
-        "background":   var(--#{$prefix-bh}action-05),
-        "border":       var(--#{$prefix-bh}action-07),
-        "label":        var(--#{$prefix-bh}action-text-05),
-        "icon":         var(--#{$prefix-bh}action-text-05),
-    ),
-    "readonly": (
-        "background":   var(--#{$prefix-bh}transparent),
-        "border":       var(--#{$prefix-bh}disabled-02),
-        "label":        var(--#{$prefix-bh}action-text-05),
-        "icon":         var(--#{$prefix-bh}action-text-05),
-    ),
+  "resting": (
+    "background": var(--#{$prefix-bh}action-05),
+    "border": var(--#{$prefix-bh}action-05),
+    "label": var(--#{$prefix-bh}action-text-05),
+    "icon": var(--#{$prefix-bh}action-text-05),
+  ),
+  "hover": (
+    "background": var(--#{$prefix-bh}action-05),
+    "border": var(--#{$prefix-bh}action-06),
+    "label": var(--#{$prefix-bh}action-text-05),
+    "icon": var(--#{$prefix-bh}action-text-05),
+  ),
+  "active": (
+    "background": var(--#{$prefix-bh}action-04),
+    "border": var(--#{$prefix-bh}action-02),
+    "label": var(--#{$prefix-bh}action-text-01),
+    "icon": var(--#{$prefix-bh}action-text-01),
+  ),
+  "focus": (
+    "background": var(--#{$prefix-bh}action-05),
+    "border": var(--#{$prefix-bh}action-07),
+    "label": var(--#{$prefix-bh}action-text-05),
+    "icon": var(--#{$prefix-bh}action-text-05),
+  ),
+  "readonly": (
+    "background": var(--#{$prefix-bh}transparent),
+    "border": var(--#{$prefix-bh}disabled-02),
+    "label": var(--#{$prefix-bh}action-text-05),
+    "icon": var(--#{$prefix-bh}action-text-05),
+  ),
 );
 
 $button-response-dark: (
-    "resting": (
-        "background":   var(--#{$prefix-bh}action-06),
-        "border":       var(--#{$prefix-bh}action-09),
-        "label":        var(--#{$prefix-bh}action-text-04),
-        "icon":         var(--#{$prefix-bh}action-text-04),
-    ),
-    "hover": (
-        "border":       var(--#{$prefix-bh}action-09),
-        "label":        var(--#{$prefix-bh}action-text-04),
-        "icon":         var(--#{$prefix-bh}action-text-04),
-    ),
-    "active": (
-        "background":   var(--#{$prefix-bh}action-10),
-        "border":       var(--#{$prefix-bh}action-11),
-        "label":        var(--#{$prefix-bh}action-text-05),
-        "icon":         var(--#{$prefix-bh}action-text-05),
-    ),
+  "resting": (
+    "background": var(--#{$prefix-bh}action-06),
+    "border": var(--#{$prefix-bh}action-09),
+    "label": var(--#{$prefix-bh}action-text-04),
+    "icon": var(--#{$prefix-bh}action-text-04),
+  ),
+  "hover": (
+    "border": var(--#{$prefix-bh}action-09),
+    "label": var(--#{$prefix-bh}action-text-04),
+    "icon": var(--#{$prefix-bh}action-text-04),
+  ),
+  "active": (
+    "background": var(--#{$prefix-bh}action-10),
+    "border": var(--#{$prefix-bh}action-11),
+    "label": var(--#{$prefix-bh}action-text-05),
+    "icon": var(--#{$prefix-bh}action-text-05),
+  ),
 );
 
 $button-colours: (
-    "primary":      $button-primary,
-    "secondary":    $button-secondary,
-    "ghost":        $button-ghost,
-    "response":     $button-response,
+  "primary": $button-primary,
+  "secondary": $button-secondary,
+  "ghost": $button-ghost,
+  "response": $button-response,
 );
 
 $button-colours-dark: (
-    "primary":      $button-primary-dark,
-    "secondary":    $button-secondary-dark,
-    "response":     $button-response-dark,
+  "primary": $button-primary-dark,
+  "secondary": $button-secondary-dark,
+  "response": $button-response-dark,
 );
 
 // Danger button colour overrides
 $button-primary-danger: (
-    "resting": (
-        "background":   var(--#{$prefix-bh}action-danger-01),
-        "border":       var(--#{$prefix-bh}action-danger-03),
-    ),
-    "hover": (
-        "background":   var(--#{$prefix-bh}action-danger-02),
-        "border":       var(--#{$prefix-bh}action-danger-03),
-    ),
-    "active": (
-        "background":   var(--#{$prefix-bh}action-danger-03),
-        "border":       var(--#{$prefix-bh}action-danger-03),
-    ),
-    "focus": (
-        "background":   var(--#{$prefix-bh}action-danger-02),
-    ),
+  "resting": (
+    "background": var(--#{$prefix-bh}action-danger-01),
+    "border": var(--#{$prefix-bh}action-danger-03),
+  ),
+  "hover": (
+    "background": var(--#{$prefix-bh}action-danger-02),
+    "border": var(--#{$prefix-bh}action-danger-03),
+  ),
+  "active": (
+    "background": var(--#{$prefix-bh}action-danger-03),
+    "border": var(--#{$prefix-bh}action-danger-03),
+  ),
+  "focus": (
+    "background": var(--#{$prefix-bh}action-danger-02),
+  ),
 );
 
 $button-primary-danger-dark: (
-    "resting": (
-        "background":   var(--#{$prefix-bh}action-danger-02),
-        "background-b": var(--#{$prefix-bh}action-danger-02),
-        "gradient":     true,
-    ),
-    "hover": (
-        "background":   var(--#{$prefix-bh}action-danger-01),
-        "border":       var(--#{$prefix-bh}action-danger-03),
-    ),
+  "resting": (
+    "background": var(--#{$prefix-bh}action-danger-02),
+    "background-b": var(--#{$prefix-bh}action-danger-02),
+    "gradient": true,
+  ),
+  "hover": (
+    "background": var(--#{$prefix-bh}action-danger-01),
+    "border": var(--#{$prefix-bh}action-danger-03),
+  ),
 );
 
 $button-secondary-danger: (
-    "resting": (
-        "border":       var(--#{$prefix-bh}action-danger-01),
-        "label":        var(--#{$prefix-bh}action-text-danger-01),
-        "icon":         var(--#{$prefix-bh}action-text-danger-01),
-    ),
-    "hover": (
-        "background":   var(--#{$prefix-bh}action-danger-04),
-        "border":       var(--#{$prefix-bh}action-danger-01),
-        "label":        var(--#{$prefix-bh}action-text-danger-01),
-        "icon":         var(--#{$prefix-bh}action-text-danger-01),
-    ),
-    "active": (
-        "background":   var(--#{$prefix-bh}action-danger-01),
-        "border":       var(--#{$prefix-bh}action-danger-03),
-    ),
-    "focus": (
-        "background":   var(--#{$prefix-bh}action-danger-04),
-        "label":        var(--#{$prefix-bh}action-text-danger-01),
-        "icon":         var(--#{$prefix-bh}action-text-danger-01),
-    ),
+  "resting": (
+    "border": var(--#{$prefix-bh}action-danger-01),
+    "label": var(--#{$prefix-bh}action-text-danger-01),
+    "icon": var(--#{$prefix-bh}action-text-danger-01),
+  ),
+  "hover": (
+    "background": var(--#{$prefix-bh}action-danger-04),
+    "border": var(--#{$prefix-bh}action-danger-01),
+    "label": var(--#{$prefix-bh}action-text-danger-01),
+    "icon": var(--#{$prefix-bh}action-text-danger-01),
+  ),
+  "active": (
+    "background": var(--#{$prefix-bh}action-danger-01),
+    "border": var(--#{$prefix-bh}action-danger-03),
+  ),
+  "focus": (
+    "background": var(--#{$prefix-bh}action-danger-04),
+    "label": var(--#{$prefix-bh}action-text-danger-01),
+    "icon": var(--#{$prefix-bh}action-text-danger-01),
+  ),
 );
 
 $button-secondary-danger-dark: (
-    "active": (
-        "background": var(--#{$prefix-bh}action-danger-02),
-        "border": var(--#{$prefix-bh}action-danger-02),
-    ),
+  "active": (
+    "background": var(--#{$prefix-bh}action-danger-02),
+    "border": var(--#{$prefix-bh}action-danger-02),
+  ),
 );
 
 $button-ghost-danger: (
-    "resting": (
-        "label":        var(--#{$prefix-bh}action-text-danger-01),
-        "icon":         var(--#{$prefix-bh}action-text-danger-01),
-    ),
-    "hover": (
-        "background":   var(--#{$prefix-bh}action-danger-04),
-        "label":        var(--#{$prefix-bh}action-text-danger-01),
-        "icon":         var(--#{$prefix-bh}action-text-danger-01),
-    ),
-    "active": (
-        "background":   var(--#{$prefix-bh}action-danger-01),
-        "border":       var(--#{$prefix-bh}action-danger-01),
-    ),
-    "focus": (
-        "label":        var(--#{$prefix-bh}action-text-danger-01),
-        "icon":         var(--#{$prefix-bh}action-text-danger-01),
-    ),
+  "resting": (
+    "label": var(--#{$prefix-bh}action-text-danger-01),
+    "icon": var(--#{$prefix-bh}action-text-danger-01),
+  ),
+  "hover": (
+    "background": var(--#{$prefix-bh}action-danger-04),
+    "label": var(--#{$prefix-bh}action-text-danger-01),
+    "icon": var(--#{$prefix-bh}action-text-danger-01),
+  ),
+  "active": (
+    "background": var(--#{$prefix-bh}action-danger-01),
+    "border": var(--#{$prefix-bh}action-danger-01),
+  ),
+  "focus": (
+    "label": var(--#{$prefix-bh}action-text-danger-01),
+    "icon": var(--#{$prefix-bh}action-text-danger-01),
+  ),
 );
 
 $button-ghost-danger-dark: (
-    "active": (
-        "background": var(--#{$prefix-bh}action-danger-02),
-        "border": var(--#{$prefix-bh}action-danger-02),
-    ),
+  "active": (
+    "background": var(--#{$prefix-bh}action-danger-02),
+    "border": var(--#{$prefix-bh}action-danger-02),
+  ),
 );
 
 $danger-colours: (
-    "primary":      $button-primary-danger,
-    "secondary":    $button-secondary-danger,
-    "ghost":        $button-ghost-danger,
+  "primary": $button-primary-danger,
+  "secondary": $button-secondary-danger,
+  "ghost": $button-ghost-danger,
 );
 
 $danger-colours-dark: (
-    "primary": $button-primary-danger-dark,
-    "secondary": $button-secondary-danger-dark,
-    "ghost": $button-ghost-danger-dark,
+  "primary": $button-primary-danger-dark,
+  "secondary": $button-secondary-danger-dark,
+  "ghost": $button-ghost-danger-dark,
 );
-
-
 
 // Grid _____________________________________________________________________________________________________________________________
 // Bento boxes __________________________
 $bento-sizes: (
-    '1x2': (1, 2),
-    '2x2': (2, 2),
-    '3x2': (3, 2),
-    '2x3': (2, 3)
+  "1x2": (
+    1,
+    2,
+  ),
+  "2x2": (
+    2,
+    2,
+  ),
+  "3x2": (
+    3,
+    2,
+  ),
+  "2x3": (
+    2,
+    3,
+  ),
 );
-
-
 
 // Icons ____________________________________________________________________________________________________________________________
 $icon-block-sizes: (
-    xs: (
-        size: $icon-block-size-xs,
-        icon-size: $icon-block-icon-size-xs,
-        radius: $icon-block-radius-xs
-    ),
-    sm: (
-        size: $icon-block-size-sm,
-        icon-size: $icon-block-icon-size-sm,
-        radius: $icon-block-radius-sm
-    ),
-    lg: (
-        size: $icon-block-size-lg,
-        icon-size: $icon-block-icon-size-lg,
-        radius: $icon-block-radius-lg
-    ),
-    xl: (
-        size: $icon-block-size-xl,
-        icon-size: $icon-block-icon-size-xl,
-        radius: $icon-block-radius-xl
-    ),
-    xxl: (
-        size: $icon-block-size-xxl,
-        icon-size: $icon-block-icon-size-xxl,
-        radius: $icon-block-radius-xxl
-    )
+  xs: (
+    size: $icon-block-size-xs,
+    icon-size: $icon-block-icon-size-xs,
+    radius: $icon-block-radius-xs,
+  ),
+  sm: (
+    size: $icon-block-size-sm,
+    icon-size: $icon-block-icon-size-sm,
+    radius: $icon-block-radius-sm,
+  ),
+  lg: (
+    size: $icon-block-size-lg,
+    icon-size: $icon-block-icon-size-lg,
+    radius: $icon-block-radius-lg,
+  ),
+  xl: (
+    size: $icon-block-size-xl,
+    icon-size: $icon-block-icon-size-xl,
+    radius: $icon-block-radius-xl,
+  ),
+  xxl: (
+    size: $icon-block-size-xxl,
+    icon-size: $icon-block-icon-size-xxl,
+    radius: $icon-block-radius-xxl,
+  ),
 );
-
-
 
 // Utilities maps
 //
@@ -639,10 +633,10 @@ $icon-block-sizes: (
 
 $utilities-colors: $text-colors;
 
-$utilities-text: map-merge(
-    $utilities-colors,
-    (
-
-    )
+$utilities-text: map-merge($utilities-colors, ());
+$utilities-text-colors: map-loop(
+  $utilities-text,
+  bh-rgba-css-var,
+  "$key",
+  "text"
 );
-$utilities-text-colors: map-loop($utilities-text, bh-rgba-css-var, "$key", "text");
