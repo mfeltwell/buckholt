@@ -6526,7 +6526,7 @@ a.tag {
   justify-content: center;
 }
 .tab-items-center.has-overflow .tab-items-scroll {
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .tab-content {
