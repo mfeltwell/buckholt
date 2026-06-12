@@ -5,23 +5,23 @@
 
 .nav {
   // scss-docs-start nav-css-vars
-  --#{$prefix-bh}nav-gap:                       #{$nav-gap};
-  --#{$prefix-bh}nav-link-padding-x:            #{$nav-link-padding-x};
-  --#{$prefix-bh}nav-link-padding-y:            #{$nav-link-padding-y};
-  --#{$prefix-bh}nav-link-gap:                  #{$nav-link-gap};
-  --#{$prefix-bh}nav-link-radius:               #{$nav-link-radius};
-  --#{$prefix-bh}nav-link-border:               #{$nav-link-border};
-  --#{$prefix-bh}nav-link-border-width:         #{$nav-link-border-width};
-  --#{$prefix-bh}nav-link:                      #{$nav-link};
-  --#{$prefix-bh}nav-link-hover:                #{$nav-link-hover};
-  --#{$prefix-bh}nav-link-background:           #{$nav-link-background};
-  --#{$prefix-bh}nav-link-background-hover:     #{$nav-link-background-hover};
-  --#{$prefix-bh}nav-link-active:               #{$nav-link-active};
-  --#{$prefix-bh}nav-link-background-active:    #{$nav-link-background-active};
-  --#{$prefix-bh}nav-link-border-focus:         #{$nav-link-border-focus};
-  --#{$prefix-bh}nav-link-disabled:             #{$nav-link-disabled};
-  --#{$prefix-bh}nav-link-background-disabled:  #{$nav-link-background-disabled};
-  --#{$prefix-bh}nav-link-height:               #{$nav-link-height};
+  --#{$prefix-bh}nav-gap: #{$nav-gap};
+  --#{$prefix-bh}nav-link-padding-x: #{$nav-link-padding-x};
+  --#{$prefix-bh}nav-link-padding-y: #{$nav-link-padding-y};
+  --#{$prefix-bh}nav-link-gap: #{$nav-link-gap};
+  --#{$prefix-bh}nav-link-radius: #{$nav-link-radius};
+  --#{$prefix-bh}nav-link-border: #{$nav-link-border};
+  --#{$prefix-bh}nav-link-border-width: #{$nav-link-border-width};
+  --#{$prefix-bh}nav-link: #{$nav-link};
+  --#{$prefix-bh}nav-link-hover: #{$nav-link-hover};
+  --#{$prefix-bh}nav-link-background: #{$nav-link-background};
+  --#{$prefix-bh}nav-link-background-hover: #{$nav-link-background-hover};
+  --#{$prefix-bh}nav-link-active: #{$nav-link-active};
+  --#{$prefix-bh}nav-link-background-active: #{$nav-link-background-active};
+  --#{$prefix-bh}nav-link-border-focus: #{$nav-link-border-focus};
+  --#{$prefix-bh}nav-link-disabled: #{$nav-link-disabled};
+  --#{$prefix-bh}nav-link-background-disabled: #{$nav-link-background-disabled};
+  --#{$prefix-bh}nav-link-height: #{$nav-link-height};
 
   // scss-docs-end nav-css-vars
 
@@ -37,12 +37,14 @@
   display: flex;
   align-items: center;
   gap: var(--#{$prefix-bh}nav-link-gap);
-  padding: var(--#{$prefix-bh}nav-link-padding-y) var(--#{$prefix-bh}nav-link-padding-x);
+  padding: var(--#{$prefix-bh}nav-link-padding-y)
+    var(--#{$prefix-bh}nav-link-padding-x);
   @include type($action, "02");
   color: var(--#{$prefix-bh}nav-link);
   text-decoration: if($link-decoration == none, null, none);
   background: var(--#{$prefix-bh}nav-link-background);
-  border: var(--#{$prefix-bh}nav-link-border-width) solid var(--#{$prefix-bh}nav-link-border);
+  border: var(--#{$prefix-bh}nav-link-border-width) solid
+    var(--#{$prefix-bh}nav-link-border);
   border-radius: var(--#{$prefix-bh}nav-link-radius);
   @include transition($nav-link-transition);
   min-height: var(--#{$prefix-bh}nav-link-height);
@@ -77,6 +79,10 @@
   }
 }
 
+.nav-center {
+  justify-content: center;
+}
+
 .nav-stacked {
   --#{$prefix-bh}nav-gap: #{$nav-stacked-gap};
   flex-direction: column;
@@ -91,18 +97,18 @@
 // Dark mode overrides _______________________
 //
 @if $enable-dark-mode {
-    @include color-mode(dark) {
-        .nav {
-          --#{$prefix-bh}nav-link:                      #{$nav-link-dark};
-          --#{$prefix-bh}nav-link-hover:                #{$nav-link-hover-dark};
-          --#{$prefix-bh}nav-link-background-hover:     #{$nav-link-background-hover-dark};
-          --#{$prefix-bh}nav-link-active:               #{$nav-link-active-dark};
-          --#{$prefix-bh}nav-link-background-active:    #{$nav-link-background-active-dark};
-          // --#{$prefix-bh}nav-link-border-focus:         #{$nav-link-border-focus};
-          // --#{$prefix-bh}nav-link-disabled:             #{$nav-link-disabled};
-          // --#{$prefix-bh}nav-link-background-disabled:  #{$nav-link-background-disabled};
-        }
+  @include color-mode(dark) {
+    .nav {
+      --#{$prefix-bh}nav-link: #{$nav-link-dark};
+      --#{$prefix-bh}nav-link-hover: #{$nav-link-hover-dark};
+      --#{$prefix-bh}nav-link-background-hover: #{$nav-link-background-hover-dark};
+      --#{$prefix-bh}nav-link-active: #{$nav-link-active-dark};
+      --#{$prefix-bh}nav-link-background-active: #{$nav-link-background-active-dark};
+      // --#{$prefix-bh}nav-link-border-focus:         #{$nav-link-border-focus};
+      // --#{$prefix-bh}nav-link-disabled:             #{$nav-link-disabled};
+      // --#{$prefix-bh}nav-link-background-disabled:  #{$nav-link-background-disabled};
     }
+  }
 }
 
 //
@@ -126,7 +132,7 @@
 //     color: var(--#{$prefix-bh}nav-tabs-link);
 //     padding: var(--#{$prefix-bh}nav-tabs-link-padding-y) var(--#{$prefix-bh}nav-tabs-link-padding-x);
 //     position: relative;
-  
+
 //     &:hover,
 //     &:focus {
 //       // Prevents active .nav-link tab overlapping focus outline of previous/next .nav-link
@@ -157,29 +163,27 @@
 //   }
 // }
 
-
 //
 // Pills
 //
 
-// .nav-pills {
-//   // scss-docs-start nav-pills-css-vars
-//   --#{$prefix}nav-pills-border-radius: #{$nav-pills-border-radius};
-//   --#{$prefix}nav-pills-link-active-color: #{$nav-pills-link-active-color};
-//   --#{$prefix}nav-pills-link-active-bg: #{$nav-pills-link-active-bg};
-//   // scss-docs-end nav-pills-css-vars
+.nav-pills {
+  // scss-docs-start nav-pills-css-vars
+  --#{$prefix}nav-pills-border-radius: #{$nav-pills-border-radius};
+  --#{$prefix}nav-pills-link-active-color: #{$nav-pills-link-active-color};
+  --#{$prefix}nav-pills-link-active-bg: #{$nav-pills-link-active-bg};
+  // scss-docs-end nav-pills-css-vars
 
-//   .nav-link {
-//     @include border-radius(var(--#{$prefix}nav-pills-border-radius));
-//   }
+  .nav-link {
+    @include border-radius(var(--#{$prefix}nav-pills-border-radius));
+  }
 
-//   .nav-link.active,
-//   .show > .nav-link {
-//     color: var(--#{$prefix}nav-pills-link-active-color);
-//     @include gradient-bg(var(--#{$prefix}nav-pills-link-active-bg));
-//   }
-// }
-
+  .nav-link.active,
+  .show > .nav-link {
+    color: var(--#{$prefix}nav-pills-link-active-color);
+    @include gradient-bg(var(--#{$prefix}nav-pills-link-active-bg));
+  }
+}
 
 //
 // Underline
@@ -187,30 +191,33 @@
 
 .nav-underline {
   // scss-docs-start nav-underline-css-vars
-  --#{$prefix-bh}nav-underline-link-padding-x:          #{$nav-underline-link-padding-x};
-  --#{$prefix-bh}nav-underline-link-padding-y:          #{$nav-underline-link-padding-y};
-  --#{$prefix-bh}nav-link-gap:                          #{$nav-underline-gap};
-  --#{$prefix-bh}nav-underline-border-width:            #{$nav-underline-border-width};
-  --#{$prefix-bh}nav-underline-border-padding:          #{$nav-underline-border-padding};
-  --#{$prefix-bh}nav-underline-label:                   #{$nav-underline-label};
-  --#{$prefix-bh}nav-underline-label-hover:             #{$nav-underline-label-hover};
-  --#{$prefix-bh}nav-underline-link-background-hover:   #{$nav-underline-link-background-hover};
-  --#{$prefix-bh}nav-underline-label-active:            #{$nav-underline-label-active};
-  --#{$prefix-bh}nav-underline-link-radius:             #{$nav-underline-link-radius};
-  --#{$prefix-bh}nav-underline-link-border:             #{$nav-underline-link-border};
-  --#{$prefix-bh}nav-underline-link-height:             #{$nav-underline-link-height};
-  --#{$prefix-bh}nav-underline-items-border:            #{$nav-underline-items-border};
-  --#{$prefix-bh}nav-underline-items-border-width:      #{$nav-underline-items-border-width};
+  --#{$prefix-bh}nav-underline-link-padding-x: #{$nav-underline-link-padding-x};
+  --#{$prefix-bh}nav-underline-link-padding-y: #{$nav-underline-link-padding-y};
+  --#{$prefix-bh}nav-link-gap: #{$nav-underline-gap};
+  --#{$prefix-bh}nav-underline-border-width: #{$nav-underline-border-width};
+  --#{$prefix-bh}nav-underline-border-padding: #{$nav-underline-border-padding};
+  --#{$prefix-bh}nav-underline-label: #{$nav-underline-label};
+  --#{$prefix-bh}nav-underline-label-hover: #{$nav-underline-label-hover};
+  --#{$prefix-bh}nav-underline-link-background-hover: #{$nav-underline-link-background-hover};
+  --#{$prefix-bh}nav-underline-label-active: #{$nav-underline-label-active};
+  --#{$prefix-bh}nav-underline-link-radius: #{$nav-underline-link-radius};
+  --#{$prefix-bh}nav-underline-link-border: #{$nav-underline-link-border};
+  --#{$prefix-bh}nav-underline-link-height: #{$nav-underline-link-height};
+  --#{$prefix-bh}nav-underline-items-border: #{$nav-underline-items-border};
+  --#{$prefix-bh}nav-underline-items-border-width: #{$nav-underline-items-border-width};
 
   // scss-docs-end nav-underline-css-vars
 
   &.nav {
-    border-bottom: var(--#{$prefix-bh}nav-underline-items-border-width) solid var(--#{$prefix-bh}nav-underline-items-border);
+    border-bottom: var(--#{$prefix-bh}nav-underline-items-border-width) solid
+      var(--#{$prefix-bh}nav-underline-items-border);
     padding-bottom: var(--#{$prefix-bh}nav-underline-border-padding);
   }
 
   .nav-item {
-    margin-bottom: calc(var(--#{$prefix-bh}nav-underline-items-border-width)*-1);
+    margin-bottom: calc(
+      var(--#{$prefix-bh}nav-underline-items-border-width) * -1
+    );
     position: relative;
 
     &::after {
@@ -219,14 +226,15 @@
       width: calc(100% + var(--#{$prefix-bh}nav-link-gap));
       height: var(--#{$prefix-bh}nav-underline-items-border-width);
       background-color: var(--#{$prefix-bh}nav-underline-items-border);
-      left: calc(var(--#{$prefix-bh}nav-link-gap)*-1);
-      bottom: calc(var(--#{$prefix-bh}nav-underline-border-padding)*-1);
+      left: calc(var(--#{$prefix-bh}nav-link-gap) * -1);
+      bottom: calc(var(--#{$prefix-bh}nav-underline-border-padding) * -1);
       z-index: -1;
     }
   }
 
   .nav-link {
-    padding: var(--#{$prefix-bh}nav-underline-link-padding-y) var(--#{$prefix-bh}nav-underline-link-padding-x);
+    padding: var(--#{$prefix-bh}nav-underline-link-padding-y)
+      var(--#{$prefix-bh}nav-underline-link-padding-x);
     border: none;
     border-radius: var(--#{$prefix-bh}nav-underline-link-radius);
     color: var(--#{$prefix-bh}nav-underline-label);
@@ -237,9 +245,9 @@
       content: "";
       position: absolute;
       left: 0.75rem;
-      bottom: calc(var(--#{$prefix-bh}nav-underline-border-padding)*-1);
+      bottom: calc(var(--#{$prefix-bh}nav-underline-border-padding) * -1);
       display: block;
-      width: calc(100% - calc($nav-underline-link-padding-x*2));
+      width: calc(100% - calc($nav-underline-link-padding-x * 2));
       height: $border-width-02;
       background-color: var(--#{$prefix-bh}nav-underline-link-border);
       border-top-left-radius: $border-radius-xs;
@@ -278,7 +286,6 @@
   }
 }
 
-
 //
 // Justified variants
 //
@@ -307,12 +314,11 @@
   }
 }
 
-
 // Tabs component
 //
 // Grouped nav-tabs and tab-content for styling
 .tabs {
-  --#{$prefix-bh}tabs-gap:            #{$tabs-gap};
+  --#{$prefix-bh}tabs-gap: #{$tabs-gap};
 
   display: flex;
   flex-direction: column;
@@ -325,30 +331,30 @@
 // Hide tabbable panes to start, show them when `.active`
 
 .tab-items {
-    display: flex;
-    align-items: start;
-    gap: $tab-items-gap;
+  display: flex;
+  align-items: start;
+  gap: $tab-items-gap;
 }
 
 /* Scrollable area */
 .tab-items-scroll {
-    position: relative;
-    flex: 1 1 auto;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: none;       /* Firefox */
+  position: relative;
+  flex: 1 1 auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none; /* Firefox */
 }
 .tab-items-scroll::-webkit-scrollbar {
-    display: none;               /* WebKit */
+  display: none; /* WebKit */
 }
 
 .tab-items-scroll .nav {
-    flex-wrap: nowrap;
-    white-space: nowrap;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .tab-items:not(.has-overflow) .tab-scroll {
-    display: none;
+  display: none;
 }
 
 .tab-content {
@@ -356,7 +362,8 @@
   --#{$prefix-bh}nav-tabs-content-padding-y: #{$nav-tabs-content-padding-y};
   --#{$prefix-bh}nav-tabs-content-background: #{$nav-tabs-content-background};
 
-  padding: var(--#{$prefix-bh}nav-tabs-content-padding-y) var(--#{$prefix-bh}nav-tabs-content-padding-x);
+  padding: var(--#{$prefix-bh}nav-tabs-content-padding-y)
+    var(--#{$prefix-bh}nav-tabs-content-padding-x);
   border-radius: #{$nav-tabs-content-radius};
   background-color: var(--#{$prefix-bh}nav-tabs-content-background);
 
@@ -368,5 +375,3 @@
     display: block;
   }
 }
-
-
