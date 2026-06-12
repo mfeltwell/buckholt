@@ -6,7 +6,6 @@
 @import "variables";
 @import "variables-dark";
 
-
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import "../bootstrap/scss/variables";
 
@@ -21,7 +20,6 @@
 @import "mixins";
 @import "root";
 
-
 // 6. Optionally include any other parts as needed
 @import "../bootstrap/scss/utilities";
 @import "utilities";
@@ -33,9 +31,8 @@
 
 @import "../bootstrap/scss/type";
 @import "../bootstrap/scss/images";
-@import "../bootstrap/scss/containers";
+@import "containers";
 @import "../bootstrap/scss/transitions";
-
 
 // Custom imports
 @import "grid";
