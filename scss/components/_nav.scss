@@ -342,6 +342,21 @@
   display: none;
 }
 
+// Center tab items
+.tab-items-center {
+  .tab-items-scroll {
+    display: flex;
+    justify-content: center;
+  }
+
+  &.has-overflow {
+    .tab-items-scroll {
+      justify-content: flex-end;
+    }
+  }
+}
+
+// Tab content
 .tab-content {
   --#{$prefix-bh}nav-tabs-content-padding-x: #{$nav-tabs-content-padding-x};
   --#{$prefix-bh}nav-tabs-content-padding-y: #{$nav-tabs-content-padding-y};
