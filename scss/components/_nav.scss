@@ -79,10 +79,6 @@
   }
 }
 
-.nav-center {
-  justify-content: center;
-}
-
 .nav-stacked {
   --#{$prefix-bh}nav-gap: #{$nav-stacked-gap};
   flex-direction: column;
@@ -167,22 +163,11 @@
 // Pills
 //
 
-.nav-pills {
-  // scss-docs-start nav-pills-css-vars
-  --#{$prefix}nav-pills-border-radius: #{$nav-pills-border-radius};
-  --#{$prefix}nav-pills-link-active-color: #{$nav-pills-link-active-color};
-  --#{$prefix}nav-pills-link-active-bg: #{$nav-pills-link-active-bg};
-  // scss-docs-end nav-pills-css-vars
-
-  .nav-link {
-    @include border-radius(var(--#{$prefix}nav-pills-border-radius));
-  }
-
-  .nav-link.active,
-  .show > .nav-link {
-    color: var(--#{$prefix}nav-pills-link-active-color);
-    @include gradient-bg(var(--#{$prefix}nav-pills-link-active-bg));
-  }
+.nav-group {
+  display: inline-flex;
+  border: $nav-group-border-width solid $nav-group-border;
+  border-radius: $nav-group-radius;
+  padding: $nav-group-padding;
 }
 
 //

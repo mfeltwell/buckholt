@@ -6364,10 +6364,6 @@ a.tag {
   cursor: default;
 }
 
-.nav-center {
-  justify-content: center;
-}
-
 .nav-stacked {
   --nav-gap: 0.125rem;
   flex-direction: column;
@@ -6385,18 +6381,11 @@ a.tag {
   --nav-link-background-active: var(--action-05);
 }
 
-.nav-pills {
-  --bs-nav-pills-border-radius: var(--bs-border-radius);
-  --bs-nav-pills-link-active-color: #ffffff;
-  --bs-nav-pills-link-active-bg: #0d6efd;
-}
-.nav-pills .nav-link {
-  border-radius: var(--bs-nav-pills-border-radius);
-}
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  color: var(--bs-nav-pills-link-active-color);
-  background-color: var(--bs-nav-pills-link-active-bg);
+.nav-group {
+  display: inline-flex;
+  border: 1px solid var(--ui-border-02);
+  border-radius: 0.625rem;
+  padding: 0.125rem;
 }
 
 .nav-underline {

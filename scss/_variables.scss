@@ -1370,6 +1370,12 @@ $nav-tabs-link-background-hover: $nav-link-background-hover !default;
 $nav-tabs-link-active: $action-text-05 !default;
 $nav-tabs-link-background-active: $action-05 !default;
 
+// Nav group
+$nav-group-border: var(--ui-#{$prefix-bh}border-02);
+$nav-group-border-width: $border-width-01;
+$nav-group-padding: $padding-05 * 0.125;
+$nav-group-radius: $nav-link-radius + $nav-group-padding;
+
 // Nav underline
 $nav-underline-link-padding-x: $nav-tabs-link-padding-x !default;
 $nav-underline-link-padding-y: $padding-01 !default;
