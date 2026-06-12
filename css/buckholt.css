@@ -1295,7 +1295,8 @@ footer {
 .container-sm {
   --bs-gutter-x: 2rem;
   --bs-gutter-y: 0;
-  width: 100%;
+  --container-width: 100%;
+  width: var(--container-width);
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
@@ -1304,27 +1305,32 @@ footer {
 
 @media (min-width: 576px) {
   .container-sm, .container {
-    max-width: 540px;
+    --container-width: 540px;
+    max-width: var(--container-width);
   }
 }
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
-    max-width: 720px;
+    --container-width: 720px;
+    max-width: var(--container-width);
   }
 }
 @media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container {
-    max-width: 960px;
+    --container-width: 960px;
+    max-width: var(--container-width);
   }
 }
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1140px;
+    --container-width: 1140px;
+    max-width: var(--container-width);
   }
 }
 @media (min-width: 1400px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1320px;
+    --container-width: 1320px;
+    max-width: var(--container-width);
   }
 }
 .fade {
