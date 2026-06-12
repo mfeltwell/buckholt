@@ -1295,6 +1295,7 @@ footer {
 .container-sm {
   --bs-gutter-x: 2rem;
   --bs-gutter-y: 0;
+  --container-width: 100%;
   width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
