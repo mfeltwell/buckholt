@@ -4,6 +4,9 @@
   --#{$prefix}gutter-x: #{$gutter};
   --#{$prefix}gutter-y: 0;
   --#{$prefix-bh}container-width: 100%;
+  --#{$prefix-bh}container-width-m-padding: calc(
+    var(--container-width) - var(--bs-gutter-x)
+  );
 
   width: 100%;
   padding-right: calc(
