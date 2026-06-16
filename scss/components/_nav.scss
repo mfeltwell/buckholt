@@ -31,6 +31,15 @@
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+
+  // Nav has dropdown menu
+  .menu-toggle {
+    padding-right: 2.25rem;
+    background-image: escape-svg($nav-item-menu-svg);
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: auto 1rem;
+  }
 }
 
 .nav-link {
