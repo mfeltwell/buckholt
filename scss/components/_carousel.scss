@@ -14,39 +14,38 @@
 $carousel-framework: null; // null for Bootstrap carousel
 
 .#{$carousel-framework}carousel {
-    position: relative;
+  position: relative;
 }
 
 .#{$carousel-framework}carousel-header {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .#{$carousel-framework}carousel-controls {
-    display: flex;
-    align-items: center;
-    gap: $button-icon-set-gap;
+  display: flex;
+  align-items: center;
+  gap: $button-icon-set-gap;
+  margin-left: auto;
 }
 
 .#{$carousel-framework}carousel-body {
-    margin-right: calc(-0.5* $carousel-padding-x);
-    margin-left: calc(-0.5* $carousel-padding-x);
-    display: grid;
+  margin-right: calc(-0.5 * $carousel-padding-x);
+  margin-left: calc(-0.5 * $carousel-padding-x);
+  display: grid;
 
-    .slick-track {
-        display: flex;
-    }
+  .slick-track {
+    display: flex;
+  }
 }
 
 .#{$carousel-framework}carousel-item {
-    padding: 0 calc($carousel-padding-x * 0.5);
-    height: inherit;
+  padding: 0 calc($carousel-padding-x * 0.5);
+  height: inherit;
 }
-
-
 
 //
 // Left/right controls for nav
@@ -54,36 +53,44 @@ $carousel-framework: null; // null for Bootstrap carousel
 
 .#{$carousel-framework}carousel-control-prev,
 .#{$carousel-framework}carousel-control-next {
-    @extend .btn;
-    @extend .btn-icon;
-    @extend .#{$carousel-button-style};
+  @extend .btn;
+  @extend .btn-icon;
+  @extend .#{$carousel-button-style};
 }
 
 .#{$carousel-framework}carousel-control-prev {
-    left: 0;
-    background-image: if($enable-gradients, linear-gradient(90deg, rgba($black, .25), rgba($black, .001)), null);
+  left: 0;
+  background-image: if(
+    $enable-gradients,
+    linear-gradient(90deg, rgba($black, 0.25), rgba($black, 0.001)),
+    null
+  );
 }
 
 .#{$carousel-framework}carousel-control-next {
-    right: 0;
-    background-image: if($enable-gradients, linear-gradient(270deg, rgba($black, .25), rgba($black, .001)), null);
+  right: 0;
+  background-image: if(
+    $enable-gradients,
+    linear-gradient(270deg, rgba($black, 0.25), rgba($black, 0.001)),
+    null
+  );
 }
 
 // Icons for within
 .#{$carousel-framework}carousel-control-prev-icon::before,
 .#{$carousel-framework}carousel-control-next-icon::before {
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font: var(--fa-font-regular);
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-regular);
 }
 
 .#{$carousel-framework}carousel-control-prev-icon::before {
-    content: '\f053';
+  content: "\f053";
 }
 
 .#{$carousel-framework}carousel-control-next-icon::before {
-    content: '\f054';
+  content: "\f054";
 }
 
 // Optional indicator pips/controls
@@ -91,46 +98,46 @@ $carousel-framework: null; // null for Bootstrap carousel
 // Add a container (such as a list) with the following class and add an item (ideally a focusable control,
 // like a button) with data-bs-target for each slide your carousel holds.
 
+.#{$carousel-framework}carousel-indicators,
+.slick-dots {
+  display: flex;
+  justify-content: $carousel-indicator-position;
+  padding: 0
+    calc(calc($carousel-padding-x * 0.5) - $carousel-indicator-padding-x);
+  margin: 0;
+  margin-top: $carousel-indicator-margin-top;
+  gap: $carousel-indicator-gap;
+  list-style-type: none;
 
-.#{$carousel-framework}carousel-indicators, .slick-dots {
-    display: flex;
-    justify-content: $carousel-indicator-position;
-    padding: 0 calc(calc($carousel-padding-x * 0.5) - $carousel-indicator-padding-x);
-    margin: 0;
-    margin-top: $carousel-indicator-margin-top;
-    gap: $carousel-indicator-gap;
-    list-style-type: none;
+  button {
+    padding: $carousel-indicator-padding-y $carousel-indicator-padding-x;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 0;
+    line-height: 0;
 
-    button {
-        padding: $carousel-indicator-padding-y $carousel-indicator-padding-x;
-        cursor: pointer;
-        border: none;
-        background: none;
-        font-size: 0;
-        line-height: 0;
-
-        &::before {
-            content: '';
-            display: block;
-            width: $carousel-indicator-width;
-            height: $carousel-indicator-height;
-            background: $carousel-indicator-background;
-            border: $carousel-indicator-border-width solid $carousel-indicator-border;
-            border-radius: $carousel-indicator-radius;
-            @include transition($carousel-indicator-transition);
-        }
-
-        &:hover::before {
-            border-color: $carousel-indicator-border-hover;
-            background-color: $carousel-indicator-background-hover;
-        }
-
+    &::before {
+      content: "";
+      display: block;
+      width: $carousel-indicator-width;
+      height: $carousel-indicator-height;
+      background: $carousel-indicator-background;
+      border: $carousel-indicator-border-width solid $carousel-indicator-border;
+      border-radius: $carousel-indicator-radius;
+      @include transition($carousel-indicator-transition);
     }
 
-    [class*='active'] button::before {
-        border-color: $carousel-indicator-border-active;
-        background-color: $carousel-indicator-background-active;
+    &:hover::before {
+      border-color: $carousel-indicator-border-hover;
+      background-color: $carousel-indicator-background-hover;
     }
+  }
+
+  [class*="active"] button::before {
+    border-color: $carousel-indicator-border-active;
+    background-color: $carousel-indicator-background-active;
+  }
 }
 
 //

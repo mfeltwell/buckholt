@@ -1,13 +1,11 @@
 // stylelint-disable declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix
 
-
 // Reboot
 //
 // Normalization of HTML elements, manually forked from Normalize.css to remove
 // styles targeting irrelevant browsers while applying new styles.
 //
 // Normalize is licensed MIT. https://github.com/necolas/normalize.css
-
 
 // Document
 //
@@ -19,6 +17,11 @@
   box-sizing: border-box;
 }
 
+@property --scrollbar {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0px;
+}
 
 // Root
 //
@@ -37,6 +40,9 @@
   }
 }
 
+html {
+  container-type: inline-size;
+}
 
 // Body
 //
@@ -47,33 +53,38 @@
 
 // scss-docs-start reboot-body-rules
 body {
-    margin: 0; // 1
-    font-family: var(--#{$prefix-bh}body-font-family);
-    @include type($body, '02');
-    color: var(--#{$prefix-bh}body-color);
-    text-align: var(--#{$prefix-bh}body-text-align);
-    background-color: var(--#{$prefix-bh}body-background); // 2
-    -webkit-text-size-adjust: 100%; // 3
-    -webkit-tap-highlight-color: rgba($black, 0); // 4
-    -webkit-font-smoothing: antialiased;
+  --scrollbar: calc(100vw - 100cqw);
+
+  margin: 0; // 1
+  font-family: var(--#{$prefix-bh}body-font-family);
+  @include type($body, "02");
+  color: var(--#{$prefix-bh}body-color);
+  text-align: var(--#{$prefix-bh}body-text-align);
+  background-color: var(--#{$prefix-bh}body-background); // 2
+  -webkit-text-size-adjust: 100%; // 3
+  -webkit-tap-highlight-color: rgba($black, 0); // 4
+  -webkit-font-smoothing: antialiased;
 }
 
 @if $enable-dark-mode {
-    @include color-mode(dark) {
-        body::after {
-          content: '';
-          position: fixed;
-          top: 0;
-          left: 0;
-          height: 100vh;
-          width: 100%;
-          background-image: linear-gradient(180deg, #{$body-background-dark} 10%, #{$body-background-b-dark} 120%);
-          z-index: -1;
-      }
+  @include color-mode(dark) {
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      background-image: linear-gradient(
+        180deg,
+        #{$body-background-dark} 10%,
+        #{$body-background-b-dark} 120%
+      );
+      z-index: -1;
     }
   }
+}
 // scss-docs-end reboot-body-rules
-
 
 // Content grouping
 //
@@ -134,14 +145,12 @@ h6 {
   @include font-size($h6-font-size);
 }
 
-
 // Set default for focus
 :focus-visible {
   outline-color: var(--focus-01);
   outline-offset: 0.5rem;
   border-radius: 1px;
 }
-
 
 // Reset margins on paragraphs
 //
@@ -157,7 +166,6 @@ p + p {
   margin-top: $margin-03;
 }
 
-
 // Abbreviations
 //
 // 1. Add the correct text decoration in Chrome, Edge, Opera, and Safari.
@@ -170,7 +178,6 @@ abbr[title] {
   text-decoration-skip-ink: none; // 3
 }
 
-
 // Address
 
 address {
@@ -178,7 +185,6 @@ address {
   font-style: normal;
   line-height: inherit;
 }
-
 
 // Lists
 
@@ -213,17 +219,15 @@ dt {
 // 1. Undo browser default
 
 dd {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   margin-left: 0; // 1
 }
-
 
 // Blockquote
 
 blockquote {
   margin: 0 0 1rem;
 }
-
 
 // Strong
 //
@@ -234,17 +238,15 @@ strong {
   font-weight: $font-weight-md;
 }
 
-
 // Small
 //
 // Add the correct font size in all browsers
 
 small {
-  @include type($body, '01');
+  @include type($body, "01");
   display: block;
   color: var(--#{$prefix-bh}text-muted);
 }
-
 
 // Mark
 
@@ -253,7 +255,6 @@ mark {
   color: var(--#{$prefix}highlight-color);
   background-color: var(--#{$prefix}highlight-bg);
 }
-
 
 // Sub and Sup
 //
@@ -268,9 +269,12 @@ sup {
   vertical-align: baseline;
 }
 
-sub { bottom: -.25em; }
-sup { top: -.5em; }
-
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
 
 // Links
 
@@ -279,7 +283,7 @@ a {
   text-decoration: $link-decoration;
   text-underline-offset: 0.1875rem;
 
-  &:not(a p){
+  &:not(a p) {
     font-weight: $link-font-weight;
   }
 
@@ -320,21 +324,18 @@ a {
     }
 
     &:visited .icon {
-        color: var(--#{$prefix-bh}link-icon-visited);
+      color: var(--#{$prefix-bh}link-icon-visited);
     }
-    
 
     &:active .icon {
       color: var(--#{$prefix-bh}link-icon-active);
     }
-
   }
 
-    &:focus-visible {
+  &:focus-visible {
     outline-offset: 0.25rem;
     text-decoration: underline;
   }
-
 }
 
 // And undo these styles for placeholder links/named anchors (without href).
@@ -349,7 +350,6 @@ a:not([href]):not([class]) {
     text-decoration: none;
   }
 }
-
 
 // Code
 
@@ -409,7 +409,6 @@ kbd {
   }
 }
 
-
 // Figures
 //
 // Apply a consistent margin strategy (matches our type styles).
@@ -418,14 +417,12 @@ figure {
   margin: 0 0 1rem;
 }
 
-
 // Images and content
 
 img,
 svg {
   vertical-align: middle;
 }
-
 
 // Tables
 //
@@ -463,7 +460,6 @@ th {
   border-style: solid;
   border-width: 0;
 }
-
 
 // Forms
 //
@@ -529,7 +525,9 @@ select {
 // Remove the dropdown arrow only from text type inputs built with datalists in Chrome.
 // See https://stackoverflow.com/a/54997118
 
-[list]:not([type="date"]):not([type="datetime-local"]):not([type="month"]):not([type="week"]):not([type="time"])::-webkit-calendar-picker-indicator {
+[list]:not([type="date"]):not([type="datetime-local"]):not([type="month"]):not(
+    [type="week"]
+  ):not([type="time"])::-webkit-calendar-picker-indicator {
   display: none !important;
 }
 
@@ -651,7 +649,6 @@ legend {
   padding: 0;
 }
 
-
 // 1. Inherit font family and line height for file input buttons
 // 2. Correct the inability to style clickable types in iOS and Safari.
 
@@ -681,7 +678,6 @@ summary {
   cursor: pointer;
 }
 
-
 // Progress
 //
 // Add the correct vertical alignment in Chrome, Firefox, and Opera.
@@ -689,7 +685,6 @@ summary {
 progress {
   vertical-align: baseline;
 }
-
 
 // Hidden attribute
 //
@@ -699,10 +694,10 @@ progress {
   display: none !important;
 }
 
-
-// Font Awesome icons 
+// Font Awesome icons
 @if $all-fa-icons-solid == true {
-  .far, .fa-regular {
+  .far,
+  .fa-regular {
     font-weight: 700;
   }
 }

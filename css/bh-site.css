@@ -523,6 +523,11 @@
   box-sizing: border-box;
 }
 
+@property --scrollbar {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0px;
+}
 :root {
   font-size: var(--bs-root-font-size);
 }
@@ -532,7 +537,12 @@
   }
 }
 
+html {
+  container-type: inline-size;
+}
+
 body {
+  --scrollbar: calc(100vw - 100cqw);
   margin: 0;
   font-family: var(--body-font-family);
   font-size: 1rem;
@@ -7690,6 +7700,7 @@ a.tag {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  margin-left: auto;
 }
 
 .carousel-body {
@@ -7730,7 +7741,8 @@ a.tag {
   content: "\f054";
 }
 
-.carousel-indicators, .slick-dots {
+.carousel-indicators,
+.slick-dots {
   display: flex;
   justify-content: center;
   padding: 0 0.125rem;
@@ -7739,7 +7751,8 @@ a.tag {
   gap: 0.125rem;
   list-style-type: none;
 }
-.carousel-indicators button, .slick-dots button {
+.carousel-indicators button,
+.slick-dots button {
   padding: 0.5rem 0.375rem;
   cursor: pointer;
   border: none;
@@ -7747,7 +7760,8 @@ a.tag {
   font-size: 0;
   line-height: 0;
 }
-.carousel-indicators button::before, .slick-dots button::before {
+.carousel-indicators button::before,
+.slick-dots button::before {
   content: "";
   display: block;
   width: 0.75rem;
@@ -7758,15 +7772,18 @@ a.tag {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .carousel-indicators button::before, .slick-dots button::before {
+  .carousel-indicators button::before,
+  .slick-dots button::before {
     transition: none;
   }
 }
-.carousel-indicators button:hover::before, .slick-dots button:hover::before {
+.carousel-indicators button:hover::before,
+.slick-dots button:hover::before {
   border-color: #919191;
   background-color: rgba(26, 26, 26, 0.07);
 }
-.carousel-indicators [class*=active] button::before, .slick-dots [class*=active] button::before {
+.carousel-indicators [class*=active] button::before,
+.slick-dots [class*=active] button::before {
   border-color: transparent;
   background-color: #919191;
 }
