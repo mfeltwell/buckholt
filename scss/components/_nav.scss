@@ -85,6 +85,10 @@
 }
 
 // Nav size variants
+.nav-sm {
+  --#{$prefix-bh}nav-link-height: #{$nav-link-height-sm};
+}
+
 .nav-lg {
   --#{$prefix-bh}nav-link-height: #{$nav-link-height-lg};
 }

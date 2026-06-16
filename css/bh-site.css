@@ -6388,6 +6388,10 @@ a.tag {
   flex-direction: column;
 }
 
+.nav-sm {
+  --nav-link-height: 2.75rem;
+}
+
 .nav-lg {
   --nav-link-height: 3.5rem;
 }
