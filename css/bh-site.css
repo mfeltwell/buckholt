@@ -348,56 +348,56 @@
 
 [data-bs-theme=dark] {
   color-scheme: dark;
-  --primary-10: #E0E9FF;
-  --primary-20: #C7D7FF;
-  --primary-30: #A8C1FF;
-  --primary-40: #7FA3F7;
-  --primary-50: #5F88EA;
-  --primary-60: #3F6FDD;
-  --primary-70: #2557D0;
-  --primary-80: #0F40C5;
-  --primary-90: #0A2E99;
-  --primary-100: #02091D;
-  --danger-10: #FFF0F0;
-  --danger-20: #FFD4D4;
-  --danger-30: #FFB0AF;
-  --danger-40: #FF8886;
-  --danger-50: #FF6663;
-  --danger-60: #FF4442;
-  --danger-70: #E62F2D;
-  --danger-80: #B81F1D;
-  --danger-90: #7D1514;
-  --danger-100: #2B0909;
-  --caution-10: #FFF4E8;
-  --caution-20: #FFE0BD;
-  --caution-30: #FFC785;
-  --caution-40: #FFAE52;
-  --caution-50: #FF9A24;
-  --caution-60: #FF8901;
-  --caution-70: #DB7200;
-  --caution-80: #A85700;
-  --caution-90: #733C00;
+  --primary-10: #e0e9ff;
+  --primary-20: #c7d7ff;
+  --primary-30: #a8c1ff;
+  --primary-40: #7fa3f7;
+  --primary-50: #5f88ea;
+  --primary-60: #3f6fdd;
+  --primary-70: #2557d0;
+  --primary-80: #0f40c5;
+  --primary-90: #0a2e99;
+  --primary-100: #02091d;
+  --danger-10: #fff0f0;
+  --danger-20: #ffd4d4;
+  --danger-30: #ffb0af;
+  --danger-40: #ff8886;
+  --danger-50: #ff6663;
+  --danger-60: #ff4442;
+  --danger-70: #e62f2d;
+  --danger-80: #b81f1d;
+  --danger-90: #7d1514;
+  --danger-100: #2b0909;
+  --caution-10: #fff4e8;
+  --caution-20: #ffe0bd;
+  --caution-30: #ffc785;
+  --caution-40: #ffae52;
+  --caution-50: #ff9a24;
+  --caution-60: #ff8901;
+  --caution-70: #db7200;
+  --caution-80: #a85700;
+  --caution-90: #733c00;
   --caution-100: #261300;
-  --valid-10: #E8FFF4;
-  --valid-20: #C7FFE3;
-  --valid-30: #98F5C3;
-  --valid-40: #63E69E;
-  --valid-50: #2FD57F;
-  --valid-60: #00C56B;
-  --valid-70: #00A85B;
-  --valid-80: #007D45;
-  --valid-90: #035C33;
-  --valid-100: #021F12;
-  --info-10: #E0E9FF;
-  --info-20: #C7D7FF;
-  --info-30: #A8C1FF;
-  --info-40: #7FA3F7;
-  --info-50: #5F88EA;
-  --info-60: #3F6FDD;
-  --info-70: #2557D0;
-  --info-80: #0F40C5;
-  --info-90: #0A2E99;
-  --info-100: #02091D;
+  --valid-10: #e8fff4;
+  --valid-20: #c7ffe3;
+  --valid-30: #98f5c3;
+  --valid-40: #63e69e;
+  --valid-50: #2fd57f;
+  --valid-60: #00c56b;
+  --valid-70: #00a85b;
+  --valid-80: #007d45;
+  --valid-90: #035c33;
+  --valid-100: #021f12;
+  --info-10: #e0e9ff;
+  --info-20: #c7d7ff;
+  --info-30: #a8c1ff;
+  --info-40: #7fa3f7;
+  --info-50: #5f88ea;
+  --info-60: #3f6fdd;
+  --info-70: #2557d0;
+  --info-80: #0f40c5;
+  --info-90: #0a2e99;
+  --info-100: #02091d;
   --primary-tint-10: rgba(15, 64, 197, 0.1);
   --primary-tint-20: rgba(15, 64, 197, 0.18);
   --primary-tint-30: rgba(15, 64, 197, 0.28);
@@ -442,8 +442,8 @@
   --text-secondary: rgba(255, 255, 255, 0.84);
   --text-tertiary: rgba(255, 255, 255, 0.68);
   --text-muted: rgba(255, 255, 255, 0.53);
-  --text-active: #7FA3F7;
-  --ui-background-01: #02091D;
+  --text-active: #7fa3f7;
+  --ui-background-01: #02091d;
   --ui-overlay-01: rgba(255, 255, 255, 0.04);
   --ui-overlay-02: rgba(255, 255, 255, 0.08);
   --ui-overlay-03: rgba(255, 255, 255, 0.39);
@@ -451,66 +451,66 @@
   --ui-border-01: rgba(255, 255, 255, 0.39);
   --ui-border-02: rgba(255, 255, 255, 0.19);
   --ui-border-03: rgba(255, 255, 255, 0.13);
-  --action-01: #2557D0;
-  --action-02: #7FA3F7;
-  --action-03: #0F40C5;
+  --action-01: #2557d0;
+  --action-02: #7fa3f7;
+  --action-03: #0f40c5;
   --action-04: rgba(15, 64, 197, 0.18);
   --action-05: rgba(255, 255, 255, 0.19);
   --action-06: rgba(255, 255, 255, 0.13);
   --action-07: rgba(255, 255, 255, 0.08);
-  --action-08: #02091D;
+  --action-08: #02091d;
   --action-09: rgba(255, 255, 255, 0.27);
   --action-10: rgba(255, 255, 255, 0.53);
   --action-11: rgba(255, 255, 255, 0.84);
   --action-12: #ffffff;
-  --action-text-01: #7FA3F7;
+  --action-text-01: #7fa3f7;
   --action-text-02: #ffffff;
   --action-text-03: rgba(255, 255, 255, 0.84);
   --action-text-04: rgba(255, 255, 255, 0.68);
-  --action-text-05: #02091D;
-  --action-danger-01: #FF4442;
-  --action-danger-02: #B81F1D;
-  --action-danger-03: #7D1514;
+  --action-text-05: #02091d;
+  --action-danger-01: #ff4442;
+  --action-danger-02: #b81f1d;
+  --action-danger-03: #7d1514;
   --action-danger-04: rgba(255, 68, 66, 0.14);
-  --action-text-danger-01: #FF4442;
+  --action-text-danger-01: #ff4442;
   --disabled-01: rgba(255, 255, 255, 0.08);
   --disabled-03: rgba(255, 255, 255, 0.27);
   --disabled-04: #ffffff;
-  --focus-01: #3F6FDD;
-  --success-01: #00C56B;
-  --error-01: #FF4442;
+  --focus-01: #3f6fdd;
+  --success-01: #00c56b;
+  --error-01: #ff4442;
   --feedback-background-info: rgba(15, 64, 197, 0.18);
   --feedback-overlay-info: rgba(15, 64, 197, 0.18);
-  --feedback-border-info: #5F88EA;
-  --feedback-message-info: #7FA3F7;
-  --feedback-body-info: #E0E9FF;
+  --feedback-border-info: #5f88ea;
+  --feedback-message-info: #7fa3f7;
+  --feedback-body-info: #e0e9ff;
   --feedback-shadow-info: 2, 9, 29;
   --feedback-background-success: rgba(0, 197, 107, 0.22);
   --feedback-overlay-success: rgba(0, 197, 107, 0.14);
-  --feedback-border-success: #00C56B;
-  --feedback-message-success: #2FD57F;
-  --feedback-body-success: #E8FFF4;
+  --feedback-border-success: #00c56b;
+  --feedback-message-success: #2fd57f;
+  --feedback-body-success: #e8fff4;
   --feedback-shadow-success: 2, 31, 18;
   --feedback-background-warning: rgba(255, 137, 1, 0.14);
   --feedback-overlay-warning: rgba(255, 137, 1, 0.14);
-  --feedback-border-warning: #FF8901;
-  --feedback-message-warning: #FF9A24;
-  --feedback-body-warning: #FFF4E8;
+  --feedback-border-warning: #ff8901;
+  --feedback-message-warning: #ff9a24;
+  --feedback-body-warning: #fff4e8;
   --feedback-shadow-warning: 38, 19, 0;
   --feedback-background-error: rgba(255, 68, 66, 0.14);
   --feedback-overlay-error: rgba(255, 68, 66, 0.14);
-  --feedback-border-error: #FF4442;
-  --feedback-message-error: #FF8886;
-  --feedback-body-error: #FFF0F0;
+  --feedback-border-error: #ff4442;
+  --feedback-message-error: #ff8886;
+  --feedback-body-error: #fff0f0;
   --feedback-shadow-error: 43, 9, 9;
-  --link-colour: #7FA3F7;
-  --link-icon: #7FA3F7;
-  --link-hover: #7FA3F7;
-  --link-icon-hover: #7FA3F7;
+  --link-colour: #7fa3f7;
+  --link-icon: #7fa3f7;
+  --link-hover: #7fa3f7;
+  --link-icon-hover: #7fa3f7;
   --link-active: #ffffff;
   --link-icon-active: #ffffff;
-  --link-visited: #7FA3F7;
-  --link-icon-visited: #7FA3F7;
+  --link-visited: #7fa3f7;
+  --link-icon-visited: #7fa3f7;
   --hr-color: rgba(255, 255, 255, 0.13);
   --body-color: var(--text-primary);
   --body-background: var(--ui-background-01);
@@ -4242,15 +4242,15 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
   --form-check-input-background-disabled: var(--disabled-03);
 }
 [data-bs-theme=dark] .form-check-input:checked[type=checkbox] {
-  --check-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='%2302091D'%3e%3c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3e%3c/svg%3e");
+  --check-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='%2302091d'%3e%3c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3e%3c/svg%3e");
 }
 [data-bs-theme=dark] .form-check-input:checked[type=radio] {
-  --check-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%2302091D'/%3e%3c/svg%3e");
+  --check-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%2302091d'/%3e%3c/svg%3e");
 }
 [data-bs-theme=dark] .form-check-input[type=checkbox]:indeterminate {
   --form-check-input-background: var(--action-02);
   --form-check-input-border: var(--action-02);
-  --check-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640' fill='%2302091D'%3e%3c!--!Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320z'/%3e%3c/svg%3e");
+  --check-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640' fill='%2302091d'%3e%3c!--!Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320z'/%3e%3c/svg%3e");
 }
 [data-bs-theme=dark] .form-check-input:disabled, [data-bs-theme=dark] .form-check-input:disabled:checked, [data-bs-theme=dark] .form-check-input:disabled:indeterminate {
   --form-check-input-background-disabled: var(--disabled-03);
@@ -4260,21 +4260,21 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
   --form-check-input-border: var(--disabled-04);
 }
 [data-bs-theme=dark] .form-check-input[readonly]:checked[type=checkbox] {
-  --check-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='%2302091D'%3e%3c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3e%3c/svg%3e");
+  --check-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='%2302091d'%3e%3c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3e%3c/svg%3e");
   --form-check-input-background: var(--disabled-04);
 }
 [data-bs-theme=dark] .form-check-input[readonly]:checked[type=radio] {
-  --check-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%2302091D'/%3e%3c/svg%3e");
+  --check-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%2302091d'/%3e%3c/svg%3e");
   --form-check-input-background: var(--disabled-04);
 }
 [data-bs-theme=dark] .form-check-input[type=checkbox][readonly]:indeterminate {
-  --check-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640' fill='%2302091D'%3e%3c!--!Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320z'/%3e%3c/svg%3e");
+  --check-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640' fill='%2302091d'%3e%3c!--!Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320z'/%3e%3c/svg%3e");
   --form-check-input-background: var(--disabled-04);
 }
 [data-bs-theme=dark] .form-switch {
   --switch-track-background: var(--ui-overlay-03);
-  --switch-handle-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%2302091D'%3e%3c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z'/%3e%3c/svg%3e");
-  --switch-handle-svg-on: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%2302091D'%3e%3c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z'/%3e%3c/svg%3e");
+  --switch-handle-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%2302091d'%3e%3c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z'/%3e%3c/svg%3e");
+  --switch-handle-svg-on: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%2302091d'%3e%3c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z'/%3e%3c/svg%3e");
   --switch-track-background-disabled: var(--disabled-03);
 }
 
@@ -4783,7 +4783,7 @@ output {
 }
 [data-bs-theme=dark] .invalid-feedback::before {
   content: "";
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%23FF4442'%3e%3c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%23ff4442'%3e%3c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24l0 112c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-112c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z'/%3e%3c/svg%3e");
   background-size: 0.875rem;
   background-repeat: no-repeat;
   background-position: center;
@@ -4805,7 +4805,7 @@ output {
 }
 .was-validated [data-bs-theme=dark] .form-control:invalid:not(textarea):not(:is(.form-control, .form-search:not(.form-search-dropdown), .form-select, .dropdown-toggle, .form-search.form-search-dropdown) + :is(.form-control, .form-search:not(.form-search-dropdown), .form-select, .dropdown-toggle, .form-search.form-search-dropdown)), .was-validated [data-bs-theme=dark] .form-search:invalid:not(textarea):not(:is(.form-control, .form-search:not(.form-search-dropdown), .form-select, .dropdown-toggle, .form-search.form-search-dropdown) + :is(.form-control, .form-search:not(.form-search-dropdown), .form-select, .dropdown-toggle, .form-search.form-search-dropdown)):not(.form-search-dropdown), [data-bs-theme=dark] .form-control.is-invalid:not(textarea):not(:is(.form-control, .form-search:not(.form-search-dropdown), .form-select, .dropdown-toggle, .form-search.form-search-dropdown) + :is(.form-control, .form-search:not(.form-search-dropdown), .form-select, .dropdown-toggle, .form-search.form-search-dropdown)), [data-bs-theme=dark] .is-invalid.form-search:not(textarea):not(:is(.form-control, .form-search:not(.form-search-dropdown), .form-select, .dropdown-toggle, .form-search.form-search-dropdown) + :is(.form-control, .form-search:not(.form-search-dropdown), .form-select, .dropdown-toggle, .form-search.form-search-dropdown)):not(.form-search-dropdown) {
   padding-left: 2.5rem;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%23FF4442'%3e%3c!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license %28Commercial License%29 Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%23ff4442'%3e%3c!--!Font Awesome Pro 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license %28Commercial License%29 Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: left 1rem center;
   background-size: auto 1rem;
@@ -6329,6 +6329,7 @@ a.tag {
   --nav-link-disabled: var(--disabled-overlay-03);
   --nav-link-background-disabled: var(--transparent);
   --nav-link-height: 3rem;
+  --nav-item-menu-svg: escape-svg($nav-item-menu-svg);
   display: flex;
   gap: var(--nav-gap);
   flex-wrap: wrap;
@@ -6338,7 +6339,7 @@ a.tag {
 }
 .nav .menu-toggle {
   padding-right: 2.25rem;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640' fill='%23454545'%3e%3c!--!Font Awesome Pro 7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license %28Commercial License%29 Copyright 2026 Fonticons, Inc.--%3e%3cpath d='M303.5 473C312.9 482.4 328.1 482.4 337.4 473L537.4 273C546.8 263.6 546.8 248.4 537.4 239.1C528 229.8 512.8 229.7 503.5 239.1L320.5 422.1L137.5 239.1C128.1 229.7 112.9 229.7 103.6 239.1C94.3 248.5 94.2 263.7 103.6 273L303.6 473z'/%3e%3c/svg%3e");
+  background-image: var(--nav-item-menu-svg);
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: auto 1rem;
@@ -6409,6 +6410,7 @@ a.tag {
   --nav-link-background-hover: var(--action-07);
   --nav-link-active: var(--action-text-02);
   --nav-link-background-active: var(--action-05);
+  --nav-item-menu-svg: escape-svg($nav-item-menu-svg-dark);
 }
 
 .nav-group {
@@ -16937,7 +16939,7 @@ th:has(.table-sort) {
 }
 
 .bg-dark {
-  background-color: #02091D !important;
+  background-color: #02091d !important;
 }
 
 .bg-dark {
