@@ -36,7 +36,7 @@
   // Nav has dropdown menu
   .menu-toggle {
     padding-right: 2.25rem;
-    background-image: escape-svg(var(--#{$prefix-bh}nav-item-menu-svg));
+    background-image: var(--#{$prefix-bh}nav-item-menu-svg);
     background-repeat: no-repeat;
     background-position: right 0.75rem center;
     background-size: auto 1rem;
