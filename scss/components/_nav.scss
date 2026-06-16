@@ -22,7 +22,7 @@
   --#{$prefix-bh}nav-link-disabled: #{$nav-link-disabled};
   --#{$prefix-bh}nav-link-background-disabled: #{$nav-link-background-disabled};
   --#{$prefix-bh}nav-link-height: #{$nav-link-height};
-  --#{$prefix-bh}nav-item-menu-svg: escape-svg($nav-item-menu-svg);
+  --#{$prefix-bh}nav-item-menu-svg: #{$nav-item-menu-svg};
 
   // scss-docs-end nav-css-vars
 
@@ -36,7 +36,7 @@
   // Nav has dropdown menu
   .menu-toggle {
     padding-right: 2.25rem;
-    background-image: var(--#{$prefix-bh}nav-item-menu-svg);
+    background-image: escape-svg(var(--#{$prefix-bh}nav-item-menu-svg));
     background-repeat: no-repeat;
     background-position: right 0.75rem center;
     background-size: auto 1rem;
@@ -117,7 +117,7 @@
       // --#{$prefix-bh}nav-link-border-focus:         #{$nav-link-border-focus};
       // --#{$prefix-bh}nav-link-disabled:             #{$nav-link-disabled};
       // --#{$prefix-bh}nav-link-background-disabled:  #{$nav-link-background-disabled};
-      --#{$prefix-bh}nav-item-menu-svg: escape-svg($nav-item-menu-svg-dark);
+      --#{$prefix-bh}nav-item-menu-svg: #{$nav-item-menu-svg-dark};
     }
   }
 }
