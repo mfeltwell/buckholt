@@ -9104,6 +9104,16 @@ th:has(.table-sort) {
   gap: 0.5rem;
 }
 
+.vr {
+  display: inline-block;
+  align-self: stretch;
+  width: 1px;
+  height: 100%;
+  min-height: 1em;
+  background-color: #dadada;
+  opacity: 1;
+}
+
 .expressive-secondary {
   --expressive-pale: var(--expressive-secondary-pale);
   --expressive-soft: var(--expressive-secondary-soft);
