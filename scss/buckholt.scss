@@ -41,12 +41,12 @@
 @import "border-radius";
 @import "components";
 @import "patterns";
-@import "helpers";
 @import "colours/expressive";
 @import "colours/shadow-colour";
 
 // Helpers
 @import "../bootstrap/scss/helpers";
+@import "helpers";
 
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../bootstrap/scss/utilities/api";
