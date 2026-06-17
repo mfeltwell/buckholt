@@ -608,6 +608,7 @@ $margin-02: $spacer-03 !default; // 8px / 0.5rem
 $margin-03: $spacer-04 !default; // 16px / 1rem
 $margin-04: $spacer-05 !default; // 24px / 1.5rem
 $margin-05: $spacer-06 !default; // 32px / 2rem
+$margin-06: $spacer * 2.5 !default; // 40px / 2.5rem
 
 $margin: (
   "0": $margin-0,
@@ -616,6 +617,7 @@ $margin: (
   "03": $margin-03,
   "04": $margin-04,
   "05": $margin-05,
+  "06": $margin-06,
 ) !default;
 
 // Body _________________________________
