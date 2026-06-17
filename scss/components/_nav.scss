@@ -22,7 +22,7 @@
   --#{$prefix-bh}nav-link-disabled: #{$nav-link-disabled};
   --#{$prefix-bh}nav-link-background-disabled: #{$nav-link-background-disabled};
   --#{$prefix-bh}nav-link-height: #{$nav-link-height};
-  --#{$prefix-bh}nav-item-menu-svg: #{$nav-item-menu-svg};
+  --#{$prefix-bh}nav-item-menu-svg: #{escape-svg($nav-item-menu-svg)};
 
   // scss-docs-end nav-css-vars
 
@@ -117,7 +117,7 @@
       // --#{$prefix-bh}nav-link-border-focus:         #{$nav-link-border-focus};
       // --#{$prefix-bh}nav-link-disabled:             #{$nav-link-disabled};
       // --#{$prefix-bh}nav-link-background-disabled:  #{$nav-link-background-disabled};
-      // --#{$prefix-bh}nav-item-menu-svg: #{$nav-item-menu-svg-dark};
+      --#{$prefix-bh}nav-item-menu-svg: #{escape-svg($nav-item-menu-svg-dark)};
     }
   }
 }
