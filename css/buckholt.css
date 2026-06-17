@@ -3095,6 +3095,10 @@ footer {
     --bs-gutter-y: 8rem;
   }
 }
+.col-collapsed {
+  flex: 0;
+}
+
 .masonry-row {
   --bs-gutter-x: 2rem;
   display: block;
@@ -9470,7 +9474,7 @@ th:has(.table-sort) {
 .vr {
   display: inline-block;
   align-self: stretch;
-  width: var(--bs-border-width);
+  width: 1px;
   min-height: 1em;
   background-color: currentcolor;
   opacity: 1;

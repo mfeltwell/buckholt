@@ -848,9 +848,11 @@ $headings-weight-display: $font-weight-md !default;
 $headings-weight-headline: $headings-font-weight !default;
 $headings-weight-title: $font-weight-md !default;
 
-// Horizontal rule ______________________
+// Horizontal / vertical  rule ______________________
 $hr-margin-y: $spacer !default;
 $hr-color: $ui-border-02 !default;
+$hr-opacity: 1;
+$vr-border-width: $border-width !default;
 
 $hr-border: null !default; // Allows for inherited colors (hr-color)
 $hr-border-width: var(--#{$prefix-bh}border-width) !default;

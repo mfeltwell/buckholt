@@ -3,64 +3,70 @@
 // Rows contain your columns.
 
 :root {
-    @each $name, $value in $grid-breakpoints {
-        --#{$prefix-bh}breakpoint-#{$name}: #{$value};
-    }
+  @each $name, $value in $grid-breakpoints {
+    --#{$prefix-bh}breakpoint-#{$name}: #{$value};
+  }
 }
 
 @if $enable-grid-classes {
-    .row {
-        @include make-row();
+  .row {
+    @include make-row();
 
-        > * {
-        @include make-col-ready();
-        }
+    > * {
+      @include make-col-ready();
     }
+  }
 }
 
 @if $enable-cssgrid {
-    .grid {
-        display: grid;
-        grid-template-rows: repeat(var(--#{$prefix-bh}rows, 1), 1fr);
-        grid-template-columns: repeat(var(--#{$prefix-bh}columns, #{$grid-columns}), 1fr);
-        gap: var(--#{$prefix-bh}gap, #{$grid-gutter-width});
+  .grid {
+    display: grid;
+    grid-template-rows: repeat(var(--#{$prefix-bh}rows, 1), 1fr);
+    grid-template-columns: repeat(
+      var(--#{$prefix-bh}columns, #{$grid-columns}),
+      1fr
+    );
+    gap: var(--#{$prefix-bh}gap, #{$grid-gutter-width});
 
-        @include make-cssgrid();
-    }
+    @include make-cssgrid();
+  }
 }
-
 
 // Columns
 //
 // Common styles for small and large grid columns
 
 @if $enable-grid-classes {
-    @include make-grid-columns();
+  @include make-grid-columns();
 }
 
+// Collapsed column
+.col-collapsed {
+  flex: 0;
+}
 
 // Masonry
 .masonry-row {
-    @include masonry-row();
+  @include masonry-row();
 }
 
 @mixin make-masonry-row-cols(
-    $columns: $grid-row-columns,
-    $breakpoints: $grid-breakpoints
+  $columns: $grid-row-columns,
+  $breakpoints: $grid-breakpoints
 ) {
-    @each $breakpoint in map-keys($breakpoints) {
-        $infix: breakpoint-infix($breakpoint, $breakpoints);
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
 
-        @include media-breakpoint-up($breakpoint, $breakpoints) {
-            @if $columns > 0 {
-                @for $i from 1 through $columns {
-                    .masonry-row-cols#{$infix}-#{$i} {
-                        @include masonry-row-cols($i);
-                    }
-                }
-            }
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      @if $columns > 0 {
+        @for $i from 1 through $columns {
+          .masonry-row-cols#{$infix}-#{$i} {
+            @include masonry-row-cols($i);
+          }
         }
+      }
     }
+  }
 }
 
 @include make-masonry-row-cols();
