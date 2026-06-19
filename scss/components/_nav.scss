@@ -248,7 +248,7 @@
       bottom: calc(var(--#{$prefix-bh}nav-underline-border-padding) * -1);
       display: block;
       width: calc(100% - calc($nav-underline-link-padding-x * 2));
-      height: $border-width-02;
+      height: $border-width-03;
       background-color: var(--#{$prefix-bh}nav-underline-link-border);
       border-top-left-radius: $border-radius-xs;
       border-top-right-radius: $border-radius-xs;
