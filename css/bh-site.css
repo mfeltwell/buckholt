@@ -16968,14 +16968,14 @@ th:has(.table-sort) {
 .state_focus .form-select,
 .state_focus .dropdown-toggle,
 .state_focus .form-search.form-search-dropdown {
-  border-color: #1748D0;
+  border-color: #1748d0;
   outline: 0;
   box-shadow: 0 0 0 1px #1748d0;
 }
 
 .state_focus .form-check-input {
   outline: 0;
-  box-shadow: 0 0 0 1px #ffffff, 0 0 0 3px #1748D0;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 3px #1748d0;
 }
 
 .link-hover {
@@ -17042,7 +17042,8 @@ th:has(.table-sort) {
   box-shadow: 0 20px 25px -5px rgba(var(--feedback-shadow-error), 0.1), 0 8px 10px -6px rgba(var(--feedback-shadow-error), 0.1);
 }
 
-.component_card .input:not(:has(.response-btn-input, .check-input, .num-input), .input-row .input) {
+.component_card .input:not(:has(.response-btn-input, .check-input, .num-input),
+.input-row .input) {
   min-width: 22rem;
 }
 
@@ -17158,7 +17159,6 @@ th:has(.table-sort) {
   background: var(--white-tint-20);
 }
 
-/* Table _______________________________________________________________________*/
 /* Swatches ____________________________________________________________________*/
 .swatches {
   display: flex;
