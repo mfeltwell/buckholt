@@ -128,7 +128,7 @@ footer {
 .page-frame {
   --#{$prefix-bh}page-frame-padding-y: var(--#{$prefix-bh}page-body-spacing-y);
   --#{$prefix-bh}page-frame-padding-x: calc(
-    var(--#{$prefix-bh}page-body-spacing-x) - calc($grid-gutter-width * 0.5)
+    var(--#{$prefix-bh}page-body-spacing-x) - calc(#{$grid-gutter-width} * 0.5)
   );
 
   display: flex;

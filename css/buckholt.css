@@ -1109,7 +1109,7 @@ footer {
 .page-frame {
   --page-frame-padding-y: var(--page-body-spacing-y);
   --page-frame-padding-x: calc(
-    var(--page-body-spacing-x) - calc($grid-gutter-width * 0.5)
+    var(--page-body-spacing-x) - calc(2rem * 0.5)
   );
   display: flex;
   flex-direction: column;
