@@ -47,6 +47,11 @@
   [class*=" display-"] {
     margin-bottom: #{$display-margin-bottom};
   }
+
+  [class^="headline-"],
+  [class*=" headline-"] {
+    margin-bottom: #{$headline-margin-bottom};
+  }
 }
 
 .eyebrow {
