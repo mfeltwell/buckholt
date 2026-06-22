@@ -763,9 +763,6 @@ a.link-standalone:hover {
 a.link-standalone:hover .icon {
   color: var(--link-icon-hover);
 }
-a.link-standalone:visited .icon {
-  color: var(--link-icon-visited);
-}
 a.link-standalone:active .icon {
   color: var(--link-icon-active);
 }

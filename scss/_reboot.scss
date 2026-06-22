@@ -323,8 +323,10 @@ a {
       }
     }
 
-    &:visited .icon {
-      color: var(--#{$prefix-bh}link-icon-visited);
+    @if $enable-visited-links {
+      &:visited .icon {
+        color: var(--#{$prefix-bh}link-icon-visited);
+      }
     }
 
     &:active .icon {
