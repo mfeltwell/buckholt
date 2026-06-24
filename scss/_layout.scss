@@ -127,6 +127,13 @@ footer {
 
 .page-frame {
   --#{$prefix-bh}page-frame-padding-y: var(--#{$prefix-bh}page-body-spacing-y);
+  --#{$prefix-bh}page-frame-padding-top: var(
+    --#{$prefix-bh}page-frame-padding-y
+  );
+  --#{$prefix-bh}page-frame-padding-bottom: var(
+    --#{$prefix-bh}page-frame-padding-y
+  );
+
   --#{$prefix-bh}page-frame-padding-x: calc(
     var(--#{$prefix-bh}page-body-spacing-x) - calc(#{$grid-gutter-width} * 0.5)
   );
@@ -134,8 +141,9 @@ footer {
   display: flex;
   flex-direction: column;
   gap: var(--#{$prefix-bh}page-frame-gap);
-  padding: var(--#{$prefix-bh}page-frame-padding-y)
-    var(--#{$prefix-bh}page-frame-padding-x);
+  padding: var(--#{$prefix-bh}page-frame-padding-top)
+    var(--#{$prefix-bh}page-frame-padding-x)
+    var(--#{$prefix-bh}page-frame-padding-bottom);
 
   > .container {
     display: flex;
