@@ -7246,6 +7246,20 @@ a.tag {
 .text-block [class*=" headline-"] {
   margin-bottom: 0.5rem;
 }
+.text-block [class^=display-] small, .text-block [class^=display-] .small,
+.text-block [class*=" display-"] small,
+.text-block [class*=" display-"] .small,
+.text-block [class^=headline-] small,
+.text-block [class^=headline-] .small,
+.text-block [class*=" headline-"] small,
+.text-block [class*=" headline-"] .small,
+.text-block [class^=title-] small,
+.text-block [class^=title-] .small,
+.text-block [class*=" title-"] small,
+.text-block [class*=" title-"] .small {
+  font-size: 0.5em;
+  display: inline;
+}
 
 .eyebrow {
   font-size: 0.875rem;

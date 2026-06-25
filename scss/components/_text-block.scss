@@ -52,6 +52,18 @@
   [class*=" headline-"] {
     margin-bottom: #{$headline-margin-bottom};
   }
+
+  [class^="display-"],
+  [class*=" display-"],
+  [class^="headline-"],
+  [class*=" headline-"],
+  [class^="title-"],
+  [class*=" title-"] {
+    small {
+      font-size: 0.5em;
+      display: inline;
+    }
+  }
 }
 
 .eyebrow {
