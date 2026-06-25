@@ -7259,6 +7259,8 @@ a.tag {
 .text-block [class*=" title-"] .small {
   font-size: 0.5em;
   display: inline;
+  color: inherit;
+  margin-left: 0.125em;
 }
 
 .eyebrow {
