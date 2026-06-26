@@ -72,6 +72,7 @@
 
 a.versatile {
   text-decoration: none;
+  transition: $button-transition;
   @if $clickable-borders {
     border-bottom-width: var(--#{$prefix-bh}versatile-border-bottom-width);
   }
