@@ -8,6 +8,7 @@
   --#{$prefix-bh}versatile-radius: #{$versatile-radius};
   --#{$prefix-bh}versatile-border: #{$versatile-border};
   --#{$prefix-bh}versatile-border-width: #{$versatile-border-width};
+  --#{$prefix-bh}versatile-border-bottom-width: #{$versatile-border-bottom-width};
   --#{$prefix-bh}versatile-background: #{$versatile-background};
   --#{$prefix-bh}versatile-text: #{$versatile-text};
   --#{$prefix-bh}versatile-label: #{$versatile-label};
@@ -16,11 +17,6 @@
   background-color: var(--#{$prefix-bh}versatile-background);
   border: var(--#{$prefix-bh}versatile-border-width) solid
     var(--#{$prefix-bh}versatile-border);
-  @if $clickable-borders {
-    border-bottom-width: var(
-      --#{$prefix-bh}$versatile-border-border-bottom-width
-    );
-  }
   border-radius: var(--#{$prefix-bh}versatile-radius);
   color: var(--#{$prefix-bh}versatile-text);
   overflow: hidden;
@@ -76,4 +72,7 @@
 
 a.versatile {
   text-decoration: none;
+  @if $clickable-borders {
+    border-bottom-width: var(--#{$prefix-bh}versatile-border-bottom-width);
+  }
 }

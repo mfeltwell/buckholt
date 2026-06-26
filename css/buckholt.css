@@ -8863,13 +8863,13 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   --versatile-radius: 0.5rem;
   --versatile-border: #dadada;
   --versatile-border-width: 1px;
+  --versatile-border-bottom-width: calc(1px + 0.125rem);
   --versatile-background: rgba(26, 26, 26, 0.015);
   --versatile-text: var(--body-color);
   --versatile-label: var(--text-primary);
   display: block;
   background-color: var(--versatile-background);
   border: var(--versatile-border-width) solid var(--versatile-border);
-  border-bottom-width: var(-- calc(1px + 0.125rem));
   border-radius: var(--versatile-radius);
   color: var(--versatile-text);
   overflow: hidden;
@@ -8922,6 +8922,7 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
 
 a.versatile {
   text-decoration: none;
+  border-bottom-width: var(--versatile-border-bottom-width);
 }
 
 .summary-meta {
