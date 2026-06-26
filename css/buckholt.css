@@ -8869,6 +8869,7 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   display: block;
   background-color: var(--versatile-background);
   border: var(--versatile-border-width) solid var(--versatile-border);
+  border-bottom-width: var(-- calc(1px + 0.125rem));
   border-radius: var(--versatile-radius);
   color: var(--versatile-text);
   overflow: hidden;

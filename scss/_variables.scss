@@ -2005,6 +2005,10 @@ $versatile-radius: $border-radius-md !default;
 $versatile-background: $ui-overlay-01 !default;
 $versatile-border: $ui-border-02 !default;
 $versatile-border-width: $border-width !default;
+$versatile-border-border-bottom-width: add(
+  $border-width,
+  0.125rem
+) !default; // For clickable versatiles
 
 $versatile-content-gap: $spacer-04 !default;
 $versatile-body-gap: $spacer-04 !default;

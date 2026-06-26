@@ -16,6 +16,11 @@
   background-color: var(--#{$prefix-bh}versatile-background);
   border: var(--#{$prefix-bh}versatile-border-width) solid
     var(--#{$prefix-bh}versatile-border);
+  @if $clickable-borders {
+    border-bottom-width: var(
+      --#{$prefix-bh}$versatile-border-border-bottom-width
+    );
+  }
   border-radius: var(--#{$prefix-bh}versatile-radius);
   color: var(--#{$prefix-bh}versatile-text);
   overflow: hidden;
