@@ -75,4 +75,8 @@ a.versatile {
   @if $clickable-borders {
     border-bottom-width: var(--#{$prefix-bh}versatile-border-bottom-width);
   }
+
+  &:hover {
+    --#{$prefix-bh}versatile-border: #{$versatile-border-hover};
+  }
 }

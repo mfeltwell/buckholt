@@ -361,7 +361,7 @@
     border-bottom-width: $card-clickable-border-width;
   }
 
-  .card-body::after {
+  &:not(.hide-indicator) .card-body::after {
     display: inline-block;
     font-style: normal;
     font-variant: normal;

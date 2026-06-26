@@ -6801,7 +6801,7 @@ a.tag {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   border-bottom-width: 3px;
 }
-.card-clickable .card-body::after {
+.card-clickable:not(.hide-indicator) .card-body::after {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -8923,6 +8923,9 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
 a.versatile {
   text-decoration: none;
   border-bottom-width: var(--versatile-border-bottom-width);
+}
+a.versatile:hover {
+  --versatile-border: #1748d0;
 }
 
 .summary-meta {
