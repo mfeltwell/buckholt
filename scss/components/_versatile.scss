@@ -1,67 +1,70 @@
 /* Versatile ________________________________________________________________________ */
 .versatile {
-    --#{$prefix-bh}versatile-padding-y:     #{$versatile-padding-y};
-    --#{$prefix-bh}versatile-padding-x:     #{$versatile-padding-x};
-    --#{$prefix-bh}versatile-content-gap:   #{$versatile-content-gap};
-    --#{$prefix-bh}versatile-body-gap:      #{$versatile-body-gap};
-    --#{$prefix-bh}versatile-actions-gap:   #{$versatile-actions-gap};
-    --#{$prefix-bh}versatile-radius:        #{$versatile-radius};
-    --#{$prefix-bh}versatile-border:        #{$versatile-border};
-    --#{$prefix-bh}versatile-border-width:  #{$versatile-border-width};
-    --#{$prefix-bh}versatile-background:    #{$versatile-background};
-    --#{$prefix-bh}versatile-text:          #{$versatile-text};
-    --#{$prefix-bh}versatile-label:         #{$versatile-label};
+  --#{$prefix-bh}versatile-padding-y: #{$versatile-padding-y};
+  --#{$prefix-bh}versatile-padding-x: #{$versatile-padding-x};
+  --#{$prefix-bh}versatile-content-gap: #{$versatile-content-gap};
+  --#{$prefix-bh}versatile-body-gap: #{$versatile-body-gap};
+  --#{$prefix-bh}versatile-actions-gap: #{$versatile-actions-gap};
+  --#{$prefix-bh}versatile-radius: #{$versatile-radius};
+  --#{$prefix-bh}versatile-border: #{$versatile-border};
+  --#{$prefix-bh}versatile-border-width: #{$versatile-border-width};
+  --#{$prefix-bh}versatile-background: #{$versatile-background};
+  --#{$prefix-bh}versatile-text: #{$versatile-text};
+  --#{$prefix-bh}versatile-label: #{$versatile-label};
 
-    background-color: var(--#{$prefix-bh}versatile-background);
-    border: var(--#{$prefix-bh}versatile-border-width) solid var(--#{$prefix-bh}versatile-border);
-    border-radius: var(--#{$prefix-bh}versatile-radius);
-    color: var(--#{$prefix-bh}versatile-text);
-    overflow: hidden;
+  display: block;
+  background-color: var(--#{$prefix-bh}versatile-background);
+  border: var(--#{$prefix-bh}versatile-border-width) solid
+    var(--#{$prefix-bh}versatile-border);
+  border-radius: var(--#{$prefix-bh}versatile-radius);
+  color: var(--#{$prefix-bh}versatile-text);
+  overflow: hidden;
 
-    // Validation state
-    &:has(.is-invalid) {
-        border-color: var(--#{$prefix-bh}error-01);
-    }
+  // Validation state
+  &:has(.is-invalid) {
+    border-color: var(--#{$prefix-bh}error-01);
+  }
 }
 
 .versatile-content {
-    display: flex;
-    gap: var(--#{$prefix-bh}versatile-content-gap);
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: var(--#{$prefix-bh}versatile-padding-y) var(--#{$prefix-bh}versatile-padding-x);
+  display: flex;
+  gap: var(--#{$prefix-bh}versatile-content-gap);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--#{$prefix-bh}versatile-padding-y)
+    var(--#{$prefix-bh}versatile-padding-x);
 }
 
 .versatile-body {
-    display: flex;
-    gap: var(--#{$prefix-bh}versatile-body-gap);
-    align-items: flex-start;
+  display: flex;
+  gap: var(--#{$prefix-bh}versatile-body-gap);
+  align-items: flex-start;
 
-    .icon-block {
-        flex: 0 0 auto;
-    }
+  .icon-block {
+    flex: 0 0 auto;
+  }
 }
 
 .versatile-actions {
-    display: flex;
-    align-items: center;
-    gap: var(--#{$prefix-bh}versatile-actions-gap);
+  display: flex;
+  align-items: center;
+  gap: var(--#{$prefix-bh}versatile-actions-gap);
 
-    .button-set {
-        margin: 0;
-    }
+  .button-set {
+    margin: 0;
+  }
 
-    &:empty {
-        display: none;
-    }
+  &:empty {
+    display: none;
+  }
 }
 
 .versatile-label {
-    @include type($label, "02");
-    color: var(--#{$prefix-bh}versatile-label);
+  @include type($label, "02");
+  color: var(--#{$prefix-bh}versatile-label);
 }
 
 .versatile-text {
-    margin: 0;
+  margin: 0;
 }
