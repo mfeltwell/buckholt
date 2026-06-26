@@ -8919,6 +8919,10 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   margin: 0;
 }
 
+a.versatile {
+  text-decoration: none;
+}
+
 .summary-meta {
   display: flex;
   gap: 1rem;
