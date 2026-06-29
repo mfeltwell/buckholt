@@ -6349,10 +6349,11 @@ a.tag {
   margin-bottom: 0;
   list-style: none;
 }
-.nav .menu-toggle {
+
+.nav-item .menu-toggle {
   padding-right: 2.25rem;
 }
-.nav .menu-toggle::before {
+.nav-item .menu-toggle::before {
   content: "";
   padding-right: 2.25rem;
   background-image: var(-- nav-item-menu-svg);
@@ -6366,7 +6367,6 @@ a.tag {
   right: 0;
   transition: 0.15s;
 }
-
 .nav-item:hover .menu-toggle::before {
   transform: rotate(180deg);
 }

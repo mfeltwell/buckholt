@@ -32,7 +32,9 @@
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+}
 
+.nav-item {
   // Nav has dropdown menu
   .menu-toggle {
     padding-right: 2.25rem;
@@ -52,9 +54,7 @@
       transition: 0.15s;
     }
   }
-}
 
-.nav-item {
   &:hover {
     .menu-toggle {
       &::before {
