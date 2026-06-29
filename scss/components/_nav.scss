@@ -36,10 +36,31 @@
   // Nav has dropdown menu
   .menu-toggle {
     padding-right: 2.25rem;
-    background-image: var(--#{$prefix-bh}nav-item-menu-svg);
-    background-repeat: no-repeat;
-    background-position: right 0.75rem center;
-    background-size: auto 1rem;
+
+    &::before {
+      content: "";
+      padding-right: 2.25rem;
+      background-image: var(--#{$prefix-bh} nav-item-menu-svg);
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      background-size: auto 1rem;
+      width: 1rem;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: 0.15s;
+    }
+  }
+}
+
+.nav-item {
+  &:hover {
+    .menu-toggle {
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
   }
 }
 
