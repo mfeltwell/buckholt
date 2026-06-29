@@ -8898,6 +8898,7 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  min-width: 0;
   padding: var(--versatile-padding-y) var(--versatile-padding-x);
 }
 
@@ -8905,9 +8906,16 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   display: flex;
   gap: var(--versatile-body-gap);
   align-items: flex-start;
+  width: 100%;
+  min-width: 0;
 }
 .versatile-body .icon-block {
   flex: 0 0 auto;
+}
+
+.versatile-meta {
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 .versatile-actions {
@@ -8928,10 +8936,16 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   letter-spacing: 0.25px;
   line-height: 1.5rem;
   color: var(--versatile-label);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .versatile-text {
   margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 a.versatile {

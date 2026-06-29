@@ -33,6 +33,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  min-width: 0;
   padding: var(--#{$prefix-bh}versatile-padding-y)
     var(--#{$prefix-bh}versatile-padding-x);
 }
@@ -41,10 +42,17 @@
   display: flex;
   gap: var(--#{$prefix-bh}versatile-body-gap);
   align-items: flex-start;
+  width: 100%;
+  min-width: 0;
 
   .icon-block {
     flex: 0 0 auto;
   }
+}
+
+.versatile-meta {
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 .versatile-actions {
@@ -64,10 +72,16 @@
 .versatile-label {
   @include type($label, "02");
   color: var(--#{$prefix-bh}versatile-label);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .versatile-text {
   margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 a.versatile {
