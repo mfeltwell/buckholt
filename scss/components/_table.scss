@@ -90,25 +90,25 @@
   [class*="-set "] {
     flex-wrap: nowrap;
   }
-}
 
-.table-gap {
-  border: none;
-
-  td {
-    height: var(--#{$prefix-bh}table-row-gap);
-    padding: 0;
+  .table-gap {
     border: none;
-    box-shadow: none;
-  }
 
-  th[align="right"],
-  td[align="right"] {
-    text-align: right;
-  }
+    td {
+      height: var(--#{$prefix-bh}table-row-gap);
+      padding: 0;
+      border: none;
+      box-shadow: none;
+    }
 
-  &:hover td {
-    background: transparent;
+    th[align="right"],
+    td[align="right"] {
+      text-align: right;
+    }
+
+    &:hover td {
+      background: transparent;
+    }
   }
 }
 

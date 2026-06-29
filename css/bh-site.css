@@ -9047,21 +9047,20 @@ a.versatile:hover {
 .table [class*="-set "] {
   flex-wrap: nowrap;
 }
-
-.table-gap {
+.table .table-gap {
   border: none;
 }
-.table-gap td {
+.table .table-gap td {
   height: var(--table-row-gap);
   padding: 0;
   border: none;
   box-shadow: none;
 }
-.table-gap th[align=right],
-.table-gap td[align=right] {
+.table .table-gap th[align=right],
+.table .table-gap td[align=right] {
   text-align: right;
 }
-.table-gap:hover td {
+.table .table-gap:hover td {
   background: transparent;
 }
 
