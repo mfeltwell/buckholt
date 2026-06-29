@@ -9034,15 +9034,6 @@ a.versatile:hover {
   flex-wrap: nowrap;
 }
 
-.table-container {
-  width: 100%;
-}
-
-.table-content {
-  width: 100%;
-  overflow-x: auto;
-}
-
 .table-gap {
   border: none;
 }
@@ -9055,6 +9046,18 @@ a.versatile:hover {
 .table-gap th[align=right],
 .table-gap td[align=right] {
   text-align: right;
+}
+.table-gap:hover td {
+  background: transparent;
+}
+
+.table-container {
+  width: 100%;
+}
+
+.table-content {
+  width: 100%;
+  overflow-x: auto;
 }
 
 th:has(.table-sort) {
