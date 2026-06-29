@@ -6356,7 +6356,7 @@ a.tag {
 .nav-item .menu-toggle::before {
   content: "";
   padding-right: 2.25rem;
-  background-image: var(-- nav-item-menu-svg);
+  background-image: var(--nav-item-menu-svg);
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: auto 1rem;
