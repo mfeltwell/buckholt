@@ -7209,7 +7209,7 @@ a.tag {
   margin-right: 1rem;
 }
 
-[data-bs-theme=dark] .icon-block {
+[data-bs-theme=dark] .icon-block:not([class*=expressive-]):not([class*=feedback-]) {
   --icon-block-background: var(--ui-overlay-02);
 }
 
