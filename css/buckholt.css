@@ -7136,9 +7136,16 @@ a.tag {
   display: inline-block;
 }
 
+[data-bs-theme=buckholt] {
+  --icon-block-background-theme: var(--ui-overlay-03);
+}
+
 .icon-block {
   --icon-block-icon: var(--text-secondary);
-  --icon-block-background: var(--ui-overlay-03);
+  --icon-block-background: var(
+    --icon-block-background-theme,
+    var(--ui-overlay-03)
+  );
   --icon-block-border: transparent;
   --icon-block-border-width: 1px;
   --icon-block-radius: 0.5rem;
@@ -7209,8 +7216,8 @@ a.tag {
   margin-right: 1rem;
 }
 
-[data-bs-theme=dark] .icon-block:not([class*=expressive-]):not([class*=feedback-]) {
-  --icon-block-background: var(--ui-overlay-02);
+[data-bs-theme=dark] .icon-block {
+  --icon-block-background-theme: var(--ui-overlay-02);
 }
 
 .text-block {

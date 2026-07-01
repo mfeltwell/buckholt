@@ -8,9 +8,16 @@
   display: inline-block;
 }
 
+[data-bs-theme="buckholt"] {
+  --#{$prefix-bh}icon-block-background-theme: #{$icon-block-background};
+}
+
 .icon-block {
   --#{$prefix-bh}icon-block-icon: #{$icon-block-icon};
-  --#{$prefix-bh}icon-block-background: #{$icon-block-background};
+  --#{$prefix-bh}icon-block-background: var(
+    --#{$prefix-bh}icon-block-background-theme,
+    #{$icon-block-background}
+  );
   --#{$prefix-bh}icon-block-border: #{$icon-block-border};
   --#{$prefix-bh}icon-block-border-width: #{$icon-block-border-width};
   --#{$prefix-bh}icon-block-radius: #{$icon-block-radius};
@@ -81,8 +88,8 @@
 //
 @if $enable-dark-mode {
   @include color-mode(dark) {
-    .icon-block:not([class*="expressive-"]):not([class*="feedback-"]) {
-      --#{$prefix-bh}icon-block-background: #{$icon-block-background-dark};
+    .icon-block {
+      --#{$prefix-bh}icon-block-background-theme: #{$icon-block-background-dark};
     }
   }
 }
