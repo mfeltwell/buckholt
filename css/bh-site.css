@@ -7259,12 +7259,12 @@ a.tag {
 .text-block .heading-content {
   max-width: var(--text-max-width);
 }
-.text-block [class^=display-],
-.text-block [class*=" display-"] {
+.text-block [class^=display-]:has(+ p),
+.text-block [class*=" display-"]:has(+ p) {
   margin-bottom: 1rem;
 }
-.text-block [class^=headline-],
-.text-block [class*=" headline-"] {
+.text-block [class^=headline-]:has(+ p),
+.text-block [class*=" headline-"]:has(+ p) {
   margin-bottom: 0.5rem;
 }
 .text-block [class^=display-] small, .text-block [class^=display-] .small,

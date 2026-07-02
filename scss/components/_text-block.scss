@@ -43,13 +43,13 @@
     max-width: var(--#{$prefix-bh}text-max-width);
   }
 
-  [class^="display-"],
-  [class*=" display-"] {
+  [class^="display-"]:has(+ p),
+  [class*=" display-"]:has(+ p) {
     margin-bottom: #{$display-margin-bottom};
   }
 
-  [class^="headline-"],
-  [class*=" headline-"] {
+  [class^="headline-"]:has(+ p),
+  [class*=" headline-"]:has(+ p) {
     margin-bottom: #{$headline-margin-bottom};
   }
 
