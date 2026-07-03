@@ -570,11 +570,16 @@ body {
 }
 
 hr {
-  margin: 1rem 0;
+  --hr-margin-y: 1rem;
+  margin: var(--hr-margin-y) 0;
   color: var(--hr-color);
   border: 0;
   border-top: var(--border-width) solid;
   opacity: 1;
+}
+
+.hr-sm {
+  --hr-margin-y: 0.25rem;
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {

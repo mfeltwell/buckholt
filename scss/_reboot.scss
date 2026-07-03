@@ -91,11 +91,16 @@ body {
 // 1. Reset Firefox's gray color
 
 hr {
-  margin: $hr-margin-y 0;
+  --#{$prefix-bh}hr-margin-y: #{$hr-margin-y};
+  margin: var(--#{$prefix-bh}hr-margin-y) 0;
   color: var(--#{$prefix-bh}hr-color); // 1
   border: 0;
   border-top: $hr-border-width solid $hr-border;
   opacity: $hr-opacity;
+}
+
+.hr-sm {
+  --#{$prefix-bh}hr-margin-y: #{$hr-margin-y-sm};
 }
 
 // Typography
