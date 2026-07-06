@@ -13,7 +13,8 @@
   --#{$prefix-bh}badge-background: #{$badge-background};
   --#{$prefix-bh}badge-position: #{$badge-position};
   --#{$prefix-bh}badge-position-top: #{$badge-position-top};
-  --#{$prefix-bh}badge-position-right: #{$badge-position-right};
+  --#{$prefix-bh}badge-position-start: #{$badge-position-start};
+  --#{$prefix-bh}badge-position-end: #{$badge-position-end};
   // scss-docs-end badge-css-vars
 
   display: flex;
@@ -31,7 +32,8 @@
   z-index: 999;
   position: var(--#{$prefix-bh}badge-position, absolute);
   top: var(--#{$prefix-bh}badge-position-top, 50%);
-  right: var(--#{$prefix-bh}badge-position-right, 0.75rem);
+  inset-inline-start: var(--#{$prefix-bh}badge-position-start, auto);
+  inset-inline-end: var(--#{$prefix-bh}badge-position-end, 0.75rem);
   transform: translate(0, -50%);
 
   &:not(:empty) {

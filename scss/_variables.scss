@@ -1806,7 +1806,8 @@ $badge-background: $expressive-soft !default;
 $badge-height: 1.25rem !default;
 $badge-position: absolute !default;
 $badge-position-top: 50% !default;
-$badge-position-right: 0.75rem !default;
+$badge-position-start: auto !default;
+$badge-position-end: 0.75rem !default;
 
 // Modal ________________________________
 $modal-padding: $padding-08 !default;
