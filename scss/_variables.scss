@@ -1804,6 +1804,9 @@ $badge-border: $expressive-soft !default;
 $badge-border-width: $border-width !default;
 $badge-background: $expressive-soft !default;
 $badge-height: 1.25rem !default;
+$badge-position: absolute !default;
+$badge-position-top: 50% !default;
+$badge-position-right: 0.75rem !default;
 
 // Modal ________________________________
 $modal-padding: $padding-08 !default;

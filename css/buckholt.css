@@ -8101,6 +8101,9 @@ a.tag {
   --badge-border: var(--expressive-soft);
   --badge-border-width: 1px;
   --badge-background: var(--expressive-soft);
+  --badge-position: absolute;
+  --badge-position-top: 50%;
+  --badge-position-right: 0.75rem;
   display: flex;
   align-items: center;
   font-size: 0.75rem;
@@ -8116,9 +8119,9 @@ a.tag {
   border: var(--badge-border-width) solid var(--badge-border);
   background-color: var(--badge-background);
   z-index: 999;
-  position: absolute;
-  top: 50%;
-  right: 0.75rem;
+  position: var(--badge-position, absolute);
+  top: var(--badge-position-top, 50%);
+  right: var(--badge-position-right, 0.75rem);
   transform: translate(0, -50%);
 }
 .badge:not(:empty) {
