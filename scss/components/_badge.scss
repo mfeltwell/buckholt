@@ -15,6 +15,8 @@
   --#{$prefix-bh}badge-position-top: #{$badge-position-top};
   --#{$prefix-bh}badge-position-start: #{$badge-position-start};
   --#{$prefix-bh}badge-position-end: #{$badge-position-end};
+  --#{$prefix-bh}badge-translate-x: #{$badge-translate-x};
+  --#{$prefix-bh}badge-translate-y: #{$badge-translate-y};
   // scss-docs-end badge-css-vars
 
   display: flex;
@@ -34,7 +36,10 @@
   top: var(--#{$prefix-bh}badge-position-top, 50%);
   inset-inline-start: var(--#{$prefix-bh}badge-position-start, auto);
   inset-inline-end: var(--#{$prefix-bh}badge-position-end, 0.75rem);
-  transform: translate(0, -50%);
+  transform: translate(
+    var(--#{$prefix-bh}badge-translate-x),
+    var(--#{$prefix-bh}badge-translate-y)
+  );
 
   &:not(:empty) {
     min-height: $badge-height;

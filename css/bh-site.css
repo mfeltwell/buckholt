@@ -8105,6 +8105,8 @@ a.tag {
   --badge-position-top: 50%;
   --badge-position-start: auto;
   --badge-position-end: 0.75rem;
+  --badge-translate-x: 0;
+  --badge-translate-y: -50%;
   display: flex;
   align-items: center;
   font-size: 0.75rem;
@@ -8124,7 +8126,7 @@ a.tag {
   top: var(--badge-position-top, 50%);
   inset-inline-start: var(--badge-position-start, auto);
   inset-inline-end: var(--badge-position-end, 0.75rem);
-  transform: translate(0, -50%);
+  transform: translate(var(--badge-translate-x), var(--badge-translate-y));
 }
 .badge:not(:empty) {
   min-height: 1.25rem;
