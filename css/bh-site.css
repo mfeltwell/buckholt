@@ -6920,7 +6920,7 @@ a.tag {
 
 .emphasis-tile-inline {
   --emphasis-tile-width: 20rem;
-  --emphasis-tile-min-width: 0;
+  --emphasis-tile-min-width: 12rem;
   max-width: 100%;
   min-width: var(--emphasis-tile-min-width);
   width: var(--emphasis-tile-width);
