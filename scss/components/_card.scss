@@ -482,6 +482,10 @@
   background-color: var(--#{$prefix-bh}emphasis-tile-background);
   border: var(--#{$prefix-bh}emphasis-tile-border-width) solid
     var(--#{$prefix-bh}emphasis-tile-border);
+
+  &:not(.emphasis-tile-inline) {
+    flex-grow: 1;
+  }
 }
 
 .card-secondary .emphasis-tile:not(.emphasis-tile-secondary) {
@@ -523,6 +527,10 @@
     --#{$prefix-bh}emphasis-tile-background: #{$emphasis-tile-background-secondary};
     --#{$prefix-bh}emphasis-tile-border: #{$emphasis-tile-border-secondary};
   }
+}
+
+.card-body:has(+ .card-body > .emphasis-tile:not(.emphasis-tile-inline)) {
+  flex: 0;
 }
 
 //

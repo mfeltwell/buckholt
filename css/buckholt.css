@@ -6909,6 +6909,9 @@ a.tag {
   background-color: var(--emphasis-tile-background);
   border: var(--emphasis-tile-border-width) solid var(--emphasis-tile-border);
 }
+.emphasis-tile:not(.emphasis-tile-inline) {
+  flex-grow: 1;
+}
 
 .card-secondary .emphasis-tile:not(.emphasis-tile-secondary) {
   --emphasis-tile-background: var(--ui-background-01);
@@ -6944,6 +6947,10 @@ a.tag {
 .emphasis-tile-secondary:not(.card-secondary .emphasis-tile-secondary) {
   --emphasis-tile-background: var(--ui-background-01);
   --emphasis-tile-border: var(--ui-border-02);
+}
+
+.card-body:has(+ .card-body > .emphasis-tile:not(.emphasis-tile-inline)) {
+  flex: 0;
 }
 
 .col > .card .text-block:not(form .text-block),
@@ -8122,10 +8129,10 @@ a.tag {
   border: var(--badge-border-width) solid var(--badge-border);
   background-color: var(--badge-background);
   z-index: 999;
-  position: var(--badge-position, absolute);
-  top: var(--badge-position-top, 50%);
-  inset-inline-start: var(--badge-position-start, auto);
-  inset-inline-end: var(--badge-position-end, 0.75rem);
+  position: var(--badge-position);
+  top: var(--badge-position-top);
+  inset-inline-start: var(--badge-position-start);
+  inset-inline-end: var(--badge-position-end);
   transform: translate(var(--badge-translate-x), var(--badge-translate-y));
 }
 .badge:not(:empty) {

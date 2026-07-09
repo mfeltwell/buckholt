@@ -32,10 +32,10 @@
     var(--#{$prefix-bh}badge-border);
   background-color: var(--#{$prefix-bh}badge-background);
   z-index: 999;
-  position: var(--#{$prefix-bh}badge-position, absolute);
-  top: var(--#{$prefix-bh}badge-position-top, 50%);
-  inset-inline-start: var(--#{$prefix-bh}badge-position-start, auto);
-  inset-inline-end: var(--#{$prefix-bh}badge-position-end, 0.75rem);
+  position: var(--#{$prefix-bh}badge-position);
+  top: var(--#{$prefix-bh}badge-position-top);
+  inset-inline-start: var(--#{$prefix-bh}badge-position-start);
+  inset-inline-end: var(--#{$prefix-bh}badge-position-end);
   transform: translate(
     var(--#{$prefix-bh}badge-translate-x),
     var(--#{$prefix-bh}badge-translate-y)
