@@ -495,8 +495,10 @@
 
 .emphasis-tile-inline {
   --#{$prefix-bh}emphasis-tile-width: #{$emphasis-tile-width};
+  --#{$prefix-bh}emphasis-tile-min-width: #{$emphasis-tile-min-width};
 
   max-width: 100%;
+  min-width: var(--#{$prefix-bh}emphasis-tile-min-width);
   width: var(--#{$prefix-bh}emphasis-tile-width);
   height: 100%;
 }
