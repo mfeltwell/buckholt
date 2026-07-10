@@ -6601,9 +6601,11 @@ a.tag {
 }
 .tab-content > .tab-pane {
   display: none;
+  flex-direction: column;
+  gap: var(--content-spacing);
 }
 .tab-content > .active {
-  display: block;
+  display: flex;
 }
 
 .card {
