@@ -7083,6 +7083,9 @@ a.tag {
   margin-bottom: 0;
   width: 100%;
 }
+.accordion-header i {
+  margin-right: var(--margin-02);
+}
 
 .accordion-item {
   color: var(--accordion-text);
