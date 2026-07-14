@@ -6448,6 +6448,7 @@ a.tag {
   border: 1px solid var(--ui-border-02);
   border-radius: 0.625rem;
   padding: 0.125rem;
+  margin-bottom: 1rem;
 }
 
 .nav-underline {
