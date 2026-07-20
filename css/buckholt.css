@@ -538,10 +538,6 @@
   }
 }
 
-html {
-  container-type: inline-size;
-}
-
 body {
   --scrollbar: calc(100vw - 100cqw);
   margin: 0;
