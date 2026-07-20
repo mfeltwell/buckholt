@@ -539,7 +539,6 @@
 }
 
 body {
-  --scrollbar: calc(100vw - 100cqw);
   margin: 0;
   font-family: var(--body-font-family);
   font-size: 1rem;

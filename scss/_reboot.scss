@@ -49,8 +49,6 @@
 
 // scss-docs-start reboot-body-rules
 body {
-  --scrollbar: calc(100vw - 100cqw);
-
   margin: 0; // 1
   font-family: var(--#{$prefix-bh}body-font-family);
   @include type($body, "02");
