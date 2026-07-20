@@ -37,6 +37,7 @@ footer {
   grid-area: main;
   margin: var(--layout-area-margin);
   border-radius: var(--layout-area-radius);
+  container-type: inline-size;
 }
 
 #sidebar {
