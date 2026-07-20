@@ -8253,6 +8253,7 @@ a.tag {
   padding: 0;
   border: 0;
   overflow: hidden;
+  background: var(--transparent);
 }
 
 .modal-backdrop {
