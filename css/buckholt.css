@@ -7279,11 +7279,15 @@ a.tag {
   max-width: var(--text-max-width);
 }
 .text-block [class^=display-]:has(+ p),
-.text-block [class*=" display-"]:has(+ p) {
+.text-block [class*=" display-"]:has(+ p),
+.text-block .heading:has(+ p) [class^=display-],
+.text-block .heading:has(+ p) [class*=" display-"] {
   margin-bottom: 1rem;
 }
 .text-block [class^=headline-]:has(+ p),
-.text-block [class*=" headline-"]:has(+ p) {
+.text-block [class*=" headline-"]:has(+ p),
+.text-block .heading:has(+ p) [class^=headline-],
+.text-block .heading:has(+ p) [class*=" headline-"] {
   margin-bottom: 0.5rem;
 }
 .text-block [class^=display-] small, .text-block [class^=display-] .small,
@@ -7354,6 +7358,10 @@ a.tag {
 [class$=-set][class*=-set-end],
 [class*="-set "][class*=-set-end] {
   justify-content: flex-end;
+}
+[class$=-set][class*=-set-nowrap],
+[class*="-set "][class*=-set-nowrap] {
+  flex-wrap: nowrap;
 }
 [class$=-set][class|=button],
 [class*="-set "][class|=button] {

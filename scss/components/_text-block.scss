@@ -44,12 +44,16 @@
   }
 
   [class^="display-"]:has(+ p),
-  [class*=" display-"]:has(+ p) {
+  [class*=" display-"]:has(+ p),
+  .heading:has(+ p) [class^="display-"],
+  .heading:has(+ p) [class*=" display-"] {
     margin-bottom: #{$display-margin-bottom};
   }
 
   [class^="headline-"]:has(+ p),
-  [class*=" headline-"]:has(+ p) {
+  [class*=" headline-"]:has(+ p),
+  .heading:has(+ p) [class^="headline-"],
+  .heading:has(+ p) [class*=" headline-"] {
     margin-bottom: #{$headline-margin-bottom};
   }
 

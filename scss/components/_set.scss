@@ -4,86 +4,89 @@
 
 [class$="-set"],
 [class*="-set "] {
-    --#{$prefix-bh}set-gap:     #{$spacer-03};
-    --#{$prefix-bh}set-row-gap: null;
+  --#{$prefix-bh}set-gap: #{$spacer-03};
+  --#{$prefix-bh}set-row-gap: null;
 
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--#{$prefix-bh}set-gap);
-    row-gap: var(--#{$prefix-bh}set-row-gap);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--#{$prefix-bh}set-gap);
+  row-gap: var(--#{$prefix-bh}set-row-gap);
 
-    // &[class*="-set-start"] {
-    //     justify-content: flex-start;
-    // }
+  // &[class*="-set-start"] {
+  //     justify-content: flex-start;
+  // }
 
-    &[class*="-set-center"] {
-        justify-content: center;
+  &[class*="-set-center"] {
+    justify-content: center;
+  }
+
+  &[class*="-set-end"] {
+    justify-content: flex-end;
+  }
+
+  &[class*="-set-nowrap"] {
+    flex-wrap: nowrap;
+  }
+
+  &[class|="button"] {
+    --#{$prefix-bh}set-gap: #{$button-set-gap};
+    --#{$prefix-bh}set-row-gap: #{$button-set-row-gap};
+    margin-top: #{$button-set-margin};
+
+    &:has(.btn-icon):not(:has(.button-label)) {
+      --#{$prefix-bh}set-gap: #{$button-icon-set-gap};
     }
 
-    &[class*="-set-end"] {
-        justify-content: flex-end;
+    &[class*="-set"][class|="button"]:has(~ *) {
+      margin-bottom: #{$button-set-margin};
     }
 
-    &[class|="button"] {
-        --#{$prefix-bh}set-gap: #{$button-set-gap};
-        --#{$prefix-bh}set-row-gap: #{$button-set-row-gap};
-        margin-top: #{$button-set-margin};
-        
-        &:has(.btn-icon):not(:has(.button-label)) {
-            --#{$prefix-bh}set-gap: #{$button-icon-set-gap};
-        }
-
-        &[class*=-set][class|=button]:has(~ *) {
-            margin-bottom: #{$button-set-margin};
-        }
-
-        &.button-set-no-offset {
-            margin: 0;
-        }
+    &.button-set-no-offset {
+      margin: 0;
     }
+  }
 
-    &[class|="tag"] {
-        --#{$prefix-bh}set-gap:     #{$tag-set-gap};
-        --#{$prefix-bh}set-row-gap: #{$tag-set-row-gap};
-    }
+  &[class|="tag"] {
+    --#{$prefix-bh}set-gap: #{$tag-set-gap};
+    --#{$prefix-bh}set-row-gap: #{$tag-set-row-gap};
+  }
 }
 
 // Button set
 .button-set-stacked {
-    flex-direction: column;
+  flex-direction: column;
 
-    & > .btn {
-        width: 100%;
-    }
+  & > .btn {
+    width: 100%;
+  }
 }
-
 
 // Link set
 .link-set {
-    --#{$prefix-bh}set-gap: #{$link-set-gap};
-    --#{$prefix-bh}set-row-gap: #{$link-set-row-gap};
+  --#{$prefix-bh}set-gap: #{$link-set-gap};
+  --#{$prefix-bh}set-row-gap: #{$link-set-row-gap};
 
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 
-    .linkset-item {
-        [class^="link"] {
-            display: inline-block;
-        }
+  .linkset-item {
+    [class^="link"] {
+      display: inline-block;
     }
+  }
 }
 
 .link-set-stacked {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 // Switch set
 .switch-set {
-    flex-direction: column;
-    gap: $switch-set-gap;
+  flex-direction: column;
+  gap: $switch-set-gap;
 
-    .form-switch + .form-switch {
-        margin-top: 0;
-    }
+  .form-switch + .form-switch {
+    margin-top: 0;
+  }
 }
