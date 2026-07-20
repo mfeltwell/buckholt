@@ -5,22 +5,21 @@
 // .modal-dialog    - positioning shell for the actual modal
 // .modal-content   - actual modal w/ bg and corners and stuff
 
-
 // Container that the modal scrolls within
 .modal {
   // scss-docs-start modal-css-vars
-  --#{$prefix-bh}modal-width:          #{$modal-md};
-  --#{$prefix-bh}modal-zindex:         #{$zindex-modal};
-  --#{$prefix-bh}modal-spacing:        #{$modal-spacing};
-  --#{$prefix-bh}modal-padding:        #{$modal-padding};
-  --#{$prefix-bh}modal-margin:         #{$modal-margin};
-  --#{$prefix-bh}modal-text:           #{$modal-text};
-  --#{$prefix-bh}modal-background:     #{$modal-background};
-  --#{$prefix-bh}modal-border:         #{$modal-border};
-  --#{$prefix-bh}modal-border-width:   #{$modal-border-width};
-  --#{$prefix-bh}modal-radius:         #{$modal-radius};
-  --#{$prefix-bh}modal-shadow:         #{$modal-shadow};
-  --#{$prefix-bh}modal-body-spacing:   #{$modal-body-spacing};
+  --#{$prefix-bh}modal-width: #{$modal-md};
+  --#{$prefix-bh}modal-zindex: #{$zindex-modal};
+  --#{$prefix-bh}modal-spacing: #{$modal-spacing};
+  --#{$prefix-bh}modal-padding: #{$modal-padding};
+  --#{$prefix-bh}modal-margin: #{$modal-margin};
+  --#{$prefix-bh}modal-text: #{$modal-text};
+  --#{$prefix-bh}modal-background: #{$modal-background};
+  --#{$prefix-bh}modal-border: #{$modal-border};
+  --#{$prefix-bh}modal-border-width: #{$modal-border-width};
+  --#{$prefix-bh}modal-radius: #{$modal-radius};
+  --#{$prefix-bh}modal-shadow: #{$modal-shadow};
+  --#{$prefix-bh}modal-body-spacing: #{$modal-body-spacing};
   // scss-docs-end modal-css-vars
 
   position: fixed;
@@ -95,11 +94,20 @@
   pointer-events: auto;
   background-color: var(--#{$prefix-bh}modal-background);
   background-clip: padding-box;
-  border: var(--#{$prefix-bh}modal-border-width) solid var(--#{$prefix-bh}modal-border);
+  border: var(--#{$prefix-bh}modal-border-width) solid
+    var(--#{$prefix-bh}modal-border);
   @include border-radius(var(--#{$prefix-bh}modal-radius));
   box-shadow: var(--#{$prefix-bh}modal-shadow);
   // Remove focus outline from opened modal
   outline: 0;
+}
+
+.modal-nopadding {
+  .modal-content {
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+  }
 }
 
 // Modal background
@@ -111,7 +119,12 @@
   --#{$prefix-bh}backdrop-blur: #{$modal-backdrop-blur};
   // scss-docs-end modal-backdrop-css-vars
 
-  @include overlay-backdrop(var(--#{$prefix-bh}backdrop-zindex), var(--#{$prefix-bh}backdrop-background), var(--#{$prefix-bh}backdrop-opacity), var(--#{$prefix-bh}backdrop-blur));
+  @include overlay-backdrop(
+    var(--#{$prefix-bh}backdrop-zindex),
+    var(--#{$prefix-bh}backdrop-background),
+    var(--#{$prefix-bh}backdrop-opacity),
+    var(--#{$prefix-bh}backdrop-blur)
+  );
 }
 
 // Modal header
@@ -136,7 +149,7 @@
   // Enable `flex-grow: 1` so that the body take up as much space as possible
   // when there should be a fixed height on `.modal-dialog`.
   flex: 1 1 auto;
-  
+
   display: flex;
   flex-direction: column;
   gap: var(--#{$prefix-bh}modal-body-spacing);
@@ -209,17 +222,14 @@
 }
 // scss-docs-end modal-fullscreen-loop
 
-
-
-
 //
 // Dark mode overrides
 //
 @if $enable-dark-mode {
   @include color-mode(dark) {
     .modal {
-      --#{$prefix-bh}modal-background:     #{$modal-background-dark};
-      --#{$prefix-bh}modal-border:         #{$modal-border-dark};
+      --#{$prefix-bh}modal-background: #{$modal-background-dark};
+      --#{$prefix-bh}modal-border: #{$modal-border-dark};
 
       .modal-content {
         backdrop-filter: blur($modal-background-blur-dark);

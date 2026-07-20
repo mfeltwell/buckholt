@@ -8249,6 +8249,12 @@ a.tag {
   outline: 0;
 }
 
+.modal-nopadding .modal-content {
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
 .modal-backdrop {
   --backdrop-zindex: 1050;
   --backdrop-background: var(--black-tint-60);
