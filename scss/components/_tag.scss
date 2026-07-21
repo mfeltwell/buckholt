@@ -37,17 +37,6 @@
   }
 }
 
-//
-// Dark mode overrides _______________________
-//
-@if $enable-dark-mode {
-  @include color-mode(dark) {
-    .tag {
-      --#{$prefix-bh}tag-background: #{$tag-background-dark};
-    }
-  }
-}
-
 .tag .tag-label {
   padding: 0 #{$tag-label-padding-x};
 }
@@ -122,4 +111,15 @@ a.tag {
   --#{$prefix-bh}tag-height: #{$tag-height-sm};
   --#{$prefix-bh}tag-min-width: #{$tag-min-width-sm};
   @include type($action, "00");
+}
+
+//
+// Dark mode overrides _______________________
+//
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .tag:not(.tag-selectable, .tag-status, .expressive-light) {
+      --#{$prefix-bh}tag-background: #{$tag-background-dark};
+    }
+  }
 }
