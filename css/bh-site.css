@@ -6450,7 +6450,7 @@ a.tag {
 .nav-underline {
   --nav-underline-link-padding-x: 0.75rem;
   --nav-underline-link-padding-y: 0.25rem;
-  --nav-link-gap: 2rem;
+  --nav-gap: 0.5rem;
   --nav-underline-border-width: 0.125rem;
   --nav-underline-border-padding: 0.5rem;
   --nav-underline-label: rgba(26, 26, 26, 0.625);
@@ -6474,10 +6474,10 @@ a.tag {
 .nav-underline .nav-item::after {
   content: "";
   position: absolute;
-  width: calc(100% + var(--nav-link-gap));
+  width: calc(100% + var(--nav-gap));
   height: var(--nav-underline-items-border-width);
   background-color: var(--nav-underline-items-border);
-  left: calc(var(--nav-link-gap) * -1);
+  left: calc(var(--nav-gap) * -1);
   bottom: calc(var(--nav-underline-border-padding) * -1);
   z-index: -1;
 }
@@ -6555,7 +6555,7 @@ a.tag {
 .tab-items {
   display: flex;
   align-items: start;
-  gap: 0.5rem;
+  gap: var(--nav-gap);
 }
 
 /* Scrollable area */

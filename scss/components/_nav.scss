@@ -215,7 +215,7 @@
   // scss-docs-start nav-underline-css-vars
   --#{$prefix-bh}nav-underline-link-padding-x: #{$nav-underline-link-padding-x};
   --#{$prefix-bh}nav-underline-link-padding-y: #{$nav-underline-link-padding-y};
-  --#{$prefix-bh}nav-link-gap: #{$nav-underline-gap};
+  --#{$prefix-bh}nav-gap: #{$nav-underline-gap};
   --#{$prefix-bh}nav-underline-border-width: #{$nav-underline-border-width};
   --#{$prefix-bh}nav-underline-border-padding: #{$nav-underline-border-padding};
   --#{$prefix-bh}nav-underline-label: #{$nav-underline-label};
@@ -245,10 +245,10 @@
     &::after {
       content: "";
       position: absolute;
-      width: calc(100% + var(--#{$prefix-bh}nav-link-gap));
+      width: calc(100% + var(--#{$prefix-bh}nav-gap));
       height: var(--#{$prefix-bh}nav-underline-items-border-width);
       background-color: var(--#{$prefix-bh}nav-underline-items-border);
-      left: calc(var(--#{$prefix-bh}nav-link-gap) * -1);
+      left: calc(var(--#{$prefix-bh}nav-gap) * -1);
       bottom: calc(var(--#{$prefix-bh}nav-underline-border-padding) * -1);
       z-index: -1;
     }
@@ -355,7 +355,7 @@
 .tab-items {
   display: flex;
   align-items: start;
-  gap: $tab-items-gap;
+  gap: var(--#{$prefix-bh}nav-gap);
 }
 
 /* Scrollable area */
