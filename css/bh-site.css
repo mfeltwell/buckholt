@@ -6450,7 +6450,7 @@ a.tag {
 .nav-underline {
   --nav-underline-link-padding-x: 0.75rem;
   --nav-underline-link-padding-y: 0.25rem;
-  --nav-link-gap: 0.5rem;
+  --nav-link-gap: 2rem;
   --nav-underline-border-width: 0.125rem;
   --nav-underline-border-padding: 0.5rem;
   --nav-underline-label: rgba(26, 26, 26, 0.625);
