@@ -5853,7 +5853,7 @@ fieldset:disabled .carousel-control-next {
 .btn-close {
   --btn-close-width: 2rem;
   --btn-close-height: 2rem;
-  --btn-close-icon: rgba(26, 26, 26, 0.625);
+  --btn-close-icon: var(--action-text-03);
   --btn-close-icon-size: 1rem;
   --btn-close-focus-ring: 0 0 0 0.125rem #1748d0;
   --btn-close-radius: 0.375rem;
@@ -5880,12 +5880,12 @@ fieldset:disabled .carousel-control-next {
   }
 }
 .btn-close:hover {
-  --btn-close-background: rgba(26, 26, 26, 0.07);
+  --btn-close-background: var(--action-05);
   color: var(--btn-close-icon);
   text-decoration: none;
 }
 .btn-close:focus {
-  --btn-close-background: rgba(26, 26, 26, 0.07);
+  --btn-close-background: var(--action-05);
   outline: 0;
   box-shadow: var(--btn-close-focus-ring);
 }

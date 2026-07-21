@@ -1284,7 +1284,7 @@ $toast-container-position-value-x: 2.5rem !default;
 $toast-backdrop-blur: $notification-backdrop-blur !default;
 
 // Close ________________________________
-$btn-close-icon: $action-text-03 !default;
+$btn-close-icon: var(--#{$prefix-bh}action-text-03) !default;
 $btn-close-focus-ring: $focus-ring !default;
 $btn-close-width: 2rem !default;
 $btn-close-height: $btn-close-width !default;
@@ -1292,8 +1292,8 @@ $btn-close-icon-size: $icon-md !default;
 $btn-close-radius: $border-radius-sm !default;
 
 $btn-close-background: $transparent !default;
-$btn-close-background-hover: $action-05 !default;
-$btn-close-background-focus: $action-05 !default;
+$btn-close-background-hover: var(--#{$prefix-bh}action-05) !default;
+$btn-close-background-focus: var(--#{$prefix-bh}action-05) !default;
 
 // Tag __________________________________
 $tag-border: $transparent !default;
