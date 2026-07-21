@@ -355,7 +355,7 @@
 .tab-items {
   display: flex;
   align-items: start;
-  gap: var(--#{$prefix-bh}nav-gap);
+  gap: $tab-items-gap;
 }
 
 /* Scrollable area */

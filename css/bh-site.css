@@ -6555,7 +6555,7 @@ a.tag {
 .tab-items {
   display: flex;
   align-items: start;
-  gap: var(--nav-gap);
+  gap: 0.5rem;
 }
 
 /* Scrollable area */
