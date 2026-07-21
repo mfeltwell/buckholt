@@ -6198,8 +6198,8 @@ fieldset:disabled .carousel-control-next {
   --tag-radius: 625rem;
   --tag-border: transparent;
   --tag-border-width: 1px;
-  --tag-background: rgba(26, 26, 26, 0.07);
-  --tag-label: #595959;
+  --tag-background: var(--action-05);
+  --tag-label: var(--action-text-04);
   --tag-icon: var(--tag-label);
   --tag-height: 2rem;
   --tag-min-width: 4rem;
@@ -6254,23 +6254,23 @@ a.tag {
 
 .tag-selectable {
   --tag-background: transparent;
-  --tag-border: #919191;
-  --tag-label: #595959;
+  --tag-border: var(--action-06);
+  --tag-label: var(--action-text-04);
   cursor: pointer;
-  border-bottom-width: 0.125rem;
+  border-bottom-width: var(--border-width-02);
 }
 .tag-selectable:not(:active) .tag-label {
   margin-bottom: 1px;
 }
 .tag-selectable:hover {
-  --tag-background: rgba(26, 26, 26, 0.07);
-  --tag-border: #919191;
-  --tag-label: #595959;
+  --tag-background: var(--action-05);
+  --tag-border: var(--action-06);
+  --tag-label: var(--action-text-04);
 }
 .tag-selectable.active {
-  --tag-background: rgba(15, 64, 197, 0.1);
-  --tag-border: rgba(15, 64, 197, 0.1);
-  --tag-label: #0f40c5;
+  --tag-background: var(--action-04);
+  --tag-border: var(--action-04);
+  --tag-label: var(--action-text-01);
   border-bottom-width: var(--tag-border-width);
 }
 .tag-selectable:focus-visible {

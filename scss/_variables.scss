@@ -1301,8 +1301,8 @@ $tag-border-width: $border-width-01 !default;
 $tag-padding-y: subtract($padding-01, $tag-border-width) !default;
 $tag-padding-x: subtract($padding-03, $tag-border-width) !default;
 $tag-radius: $border-radius-full !default;
-$tag-background: $action-05 !default;
-$tag-label: $action-text-04 !default;
+$tag-background: var(--#{$prefix-bh}action-05) !default;
+$tag-label: var(--#{$prefix-bh}action-text-04) !default;
 $tag-label-padding-x: $padding-01 !default;
 $tag-height: 2rem !default;
 $tag-min-width: 4rem !default;
@@ -1311,19 +1311,21 @@ $tag-set-gap: $spacer-02 !default;
 $tag-set-row-gap: $spacer-03 !default;
 
 $tag-selectable-background: $transparent !default;
-$tag-selectable-border: $action-06 !default;
-$tag-selectable-border-bottom-width: $border-width-02 !default;
-$tag-selectable-label: $action-text-04 !default;
+$tag-selectable-border: var(--#{$prefix-bh}action-06) !default;
+$tag-selectable-border-bottom-width: var(
+  --#{$prefix-bh}border-width-02
+) !default;
+$tag-selectable-label: var(--#{$prefix-bh}action-text-04) !default;
 $tag-selectable-icon: $tag-selectable-label !default;
 
-$tag-selectable-background-hover: $action-05 !default;
-$tag-selectable-border-hover: $action-06 !default;
-$tag-selectable-label-hover: $action-text-04 !default;
+$tag-selectable-background-hover: var(--#{$prefix-bh}action-05) !default;
+$tag-selectable-border-hover: var(--#{$prefix-bh}action-06) !default;
+$tag-selectable-label-hover: var(--#{$prefix-bh}action-text-04) !default;
 $tag-selectable-icon-hover: $tag-selectable-label-hover !default;
 
-$tag-selectable-background-active: $action-04 !default;
-$tag-selectable-border-active: $action-04 !default;
-$tag-selectable-label-active: $action-text-01 !default;
+$tag-selectable-background-active: var(--#{$prefix-bh}action-04) !default;
+$tag-selectable-border-active: var(--#{$prefix-bh}action-04) !default;
+$tag-selectable-label-active: var(--#{$prefix-bh}action-text-01) !default;
 $tag-selectable-icon-active: $tag-selectable-label-active !default;
 
 // Small tag
