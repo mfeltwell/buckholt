@@ -6323,6 +6323,10 @@ a.tag {
   line-height: 1rem;
 }
 
+[data-bs-theme=dark] .tag {
+  --tag-background-dark: var(--action-05);
+}
+
 .nav {
   --nav-gap: 0.25rem;
   --nav-link-padding-x: 1rem;

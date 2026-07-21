@@ -112,3 +112,14 @@ a.tag {
   --#{$prefix-bh}tag-min-width: #{$tag-min-width-sm};
   @include type($action, "00");
 }
+
+//
+// Dark mode overrides _______________________
+//
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .tag {
+      --#{$prefix-bh}tag-background-dark: #{$tag-background};
+    }
+  }
+}
