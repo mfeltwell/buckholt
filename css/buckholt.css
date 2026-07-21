@@ -6235,6 +6235,10 @@ fieldset:disabled .carousel-control-next {
   --tag-icon: var(--expressive-deep);
 }
 
+[data-bs-theme=dark] .tag {
+  --tag-background: var(--action-06);
+}
+
 .tag .tag-label {
   padding: 0 0.25rem;
 }
@@ -6321,10 +6325,6 @@ a.tag {
   font-weight: 400;
   letter-spacing: 0.25px;
   line-height: 1rem;
-}
-
-[data-bs-theme=dark] .tag {
-  --tag-background: var(--action-06);
 }
 
 .nav {
