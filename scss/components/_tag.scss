@@ -119,7 +119,7 @@ a.tag {
 @if $enable-dark-mode {
   @include color-mode(dark) {
     .tag {
-      --#{$prefix-bh}tag-background-dark: #{$tag-background};
+      --#{$prefix-bh}tag-background: #{$tag-background-dark};
     }
   }
 }

@@ -6324,7 +6324,7 @@ a.tag {
 }
 
 [data-bs-theme=dark] .tag {
-  --tag-background-dark: var(--action-05);
+  --tag-background: var(--action-06);
 }
 
 .nav {
