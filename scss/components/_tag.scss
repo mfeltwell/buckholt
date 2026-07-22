@@ -124,7 +124,7 @@ a.tag {
 
     .tag-selectable {
       &:hover {
-        --#{$prefix-bh}tag-background: #{$tag-selectable-background-hover};
+        --#{$prefix-bh}tag-background: #{$tag-selectable-background-hover-dark};
       }
     }
   }

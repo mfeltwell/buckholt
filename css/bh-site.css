@@ -6327,7 +6327,7 @@ a.tag {
   --tag-background: var(--action-06);
 }
 [data-bs-theme=dark] .tag-selectable:hover {
-  --tag-background: var(--action-05);
+  --tag-background: var(--action-06);
 }
 
 .nav {
