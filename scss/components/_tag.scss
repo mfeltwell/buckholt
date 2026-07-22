@@ -121,5 +121,11 @@ a.tag {
     .tag:not(.tag-selectable, .tag-status, .expressive-light) {
       --#{$prefix-bh}tag-background: #{$tag-background-dark};
     }
+
+    .tag-selectable {
+      &:hover {
+        --#{$prefix-bh}tag-background: #{$tag-selectable-background-hover};
+      }
+    }
   }
 }

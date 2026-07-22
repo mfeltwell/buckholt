@@ -6326,6 +6326,9 @@ a.tag {
 [data-bs-theme=dark] .tag:not(.tag-selectable, .tag-status, .expressive-light) {
   --tag-background: var(--action-06);
 }
+[data-bs-theme=dark] .tag-selectable:hover {
+  --tag-background: var(--action-05);
+}
 
 .nav {
   --nav-gap: 0.25rem;
