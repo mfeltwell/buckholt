@@ -1,485 +1,472 @@
 :root,
 [data-bs-theme="buckholt"] {
-    // Note: Custom variable values only support SassScript inside `#{}`.
+  // Note: Custom variable values only support SassScript inside `#{}`.
 
-    // Colours __________________________________________________________________________________________________________________________
-    
-    // Pallette _____________________________
-    // Generate palettes for full colors.
+  // Colours __________________________________________________________________________________________________________________________
 
-    // Base __________
-    --#{$prefix-bh}white: #{$white};
-    --#{$prefix-bh}black: #{$black};
-    --#{$prefix-bh}transparent: #{$transparent};
+  // Pallette _____________________________
+  // Generate palettes for full colors.
 
-    // Neutral __________
-    @each $color, $value in $neutral-palette {
-        --#{$prefix-bh}neutral-#{$color}: #{$value};
+  // Base __________
+  --#{$prefix-bh}white: #{$white};
+  --#{$prefix-bh}black: #{$black};
+  --#{$prefix-bh}transparent: #{$transparent};
+
+  // Neutral __________
+  @each $color, $value in $neutral-palette {
+    --#{$prefix-bh}neutral-#{$color}: #{$value};
+  }
+
+  // Primary __________
+  @each $color, $value in $primary-palette {
+    --#{$prefix-bh}primary-#{$color}: #{$value};
+  }
+
+  // Danger ___________
+  @each $color, $value in $danger-palette {
+    --#{$prefix-bh}danger-#{$color}: #{$value};
+  }
+
+  // Caution ________
+  @each $color, $value in $caution-palette {
+    --#{$prefix-bh}caution-#{$color}: #{$value};
+  }
+
+  // Valid _________
+  @each $color, $value in $valid-palette {
+    --#{$prefix-bh}valid-#{$color}: #{$value};
+  }
+
+  // Info __________
+  @each $color, $value in $info-palette {
+    --#{$prefix-bh}info-#{$color}: #{$value};
+  }
+
+  // Accent colours ________
+  @each $num, $palette in $accent-colours {
+    $accent-pal: map-get($accent-colours, $num);
+
+    @each $color, $value in $accent-pal {
+      --#{$prefix-bh}accent-#{$num}-#{$color}: #{$value};
+    }
+  }
+
+  // Prime _________
+  @each $color, $value in $prime-colors-rgb {
+    --#{$prefix-bh}#{$color}-rgb: #{$value};
+  }
+
+  // Black tint ____
+  @each $color, $value in $black-tint-palette {
+    --#{$prefix-bh}black-tint-#{$color}: #{$value};
+  }
+
+  // White tint ____
+  @each $color, $value in $white-tint-palette {
+    --#{$prefix-bh}white-tint-#{$color}: #{$value};
+  }
+
+  // Primary tint _____
+  @each $color, $value in $primary-tint-palette {
+    --#{$prefix-bh}primary-tint-#{$color}: #{$value};
+  }
+
+  // Danger tint ______
+  @each $color, $value in $danger-tint-palette {
+    --#{$prefix-bh}danger-tint-#{$color}: #{$value};
+  }
+
+  // Caution tint ___
+  @each $color, $value in $caution-tint-palette {
+    --#{$prefix-bh}caution-tint-#{$color}: #{$value};
+  }
+
+  // Valid tint ____
+  @each $color, $value in $valid-tint-palette {
+    --#{$prefix-bh}valid-tint-#{$color}: #{$value};
+  }
+
+  // Info tint _____
+  @each $color, $value in $info-tint-palette {
+    --#{$prefix-bh}info-tint-#{$color}: #{$value};
+  }
+
+  // Accent tints ________
+  @each $num, $palette in $accent-tints {
+    $accent-pal: map-get($accent-tints, $num);
+
+    @each $color, $value in $accent-pal {
+      --#{$prefix-bh}accent-#{$num}-tint-#{$color}: #{$value};
+    }
+  }
+
+  // Foundation ___________________________
+  // Text __________
+  @each $color, $value in $text-colors {
+    --#{$prefix-bh}text-#{$color}: #{$value};
+  }
+
+  // UI background _
+  @each $color, $value in $ui-background-colors {
+    --#{$prefix-bh}ui-background-#{$color}: #{$value};
+  }
+
+  @each $color, $value in $ui-overlay-colors {
+    --#{$prefix-bh}ui-overlay-#{$color}: #{$value};
+  }
+
+  // UI border _____
+  @each $color, $value in $ui-border-colors {
+    --#{$prefix-bh}ui-border-#{$color}: #{$value};
+  }
+
+  // Action ________
+  @each $color, $value in $action-colors {
+    --#{$prefix-bh}action-#{$color}: #{$value};
+  }
+
+  @each $color, $value in $action-text-colors {
+    --#{$prefix-bh}action-text-#{$color}: #{$value};
+  }
+
+  // Action danger _
+  @each $color, $value in $action-danger-colors {
+    --#{$prefix-bh}action-danger-#{$color}: #{$value};
+  }
+
+  @each $color, $value in $action-text-danger-colors {
+    --#{$prefix-bh}action-text-danger-#{$color}: #{$value};
+  }
+
+  // States ________
+  @each $color, $value in $disabled-colors {
+    --#{$prefix-bh}disabled-#{$color}: #{$value};
+  }
+
+  // --#{$prefix-bh}focus-01: #{$focus-01};
+  // --#{$prefix-bh}success-01: #{$success-01};
+  // --#{$prefix-bh}error-01: #{$error-01};
+
+  @each $color, $value in $state-colours {
+    --#{$prefix-bh}#{$color}: #{$value};
+  }
+
+  // @each $color, $value in $state-colours-rgb {
+  //     --#{$prefix-bh}#{$color}-rgb: #{$value};
+  // }
+
+  // Feedback ______
+  @each $state, $prop in $feedback-colours {
+    $colour: map-get($feedback-colours, $state);
+    @each $prop, $color in $colour {
+      @if ($prop == shadow) {
+        $rgb: to-rgb($color);
+        --#{$prefix-bh}feedback-#{$prop}-#{$state}: #{$rgb};
+      } @else {
+        --#{$prefix-bh}feedback-#{$prop}-#{$state}: #{$color};
+      }
+    }
+  }
+
+  // Expressive ____
+  @each $value, $colour in $expressive-colours {
+    @if ($value == primary) {
+      @each $type, $var in $colour {
+        @if ($type == tint) {
+          $tint: $var;
+          $color-pale-overlay: map-get($tint, "10");
+          $color-soft-overlay: map-get($tint, "20");
+
+          --#{$prefix-bh}expressive-pale-overlay: #{$color-pale-overlay};
+          --#{$prefix-bh}expressive-soft-overlay: #{$color-soft-overlay};
+        }
+
+        @if ($type == palette) {
+          $palette: $var;
+
+          $color-pale: map-get($palette, "10");
+          $color-soft: map-get($palette, "20");
+          $color-deep: map-get($palette, "60");
+          $color-rich: map-get($palette, "90");
+
+          --#{$prefix-bh}expressive-pale: #{$color-pale};
+          --#{$prefix-bh}expressive-soft: #{$color-soft};
+          --#{$prefix-bh}expressive-deep: #{$color-deep};
+          --#{$prefix-bh}expressive-rich: #{$color-rich};
+        }
+      }
     }
 
+    @if ($value != primary) {
+      @each $type, $var in $colour {
+        @if ($type == tint) {
+          $tint: $var;
+          $color-pale-overlay: map-get($tint, "10");
+          $color-soft-overlay: map-get($tint, "20");
+
+          --#{$prefix-bh}expressive-#{$value}-pale-overlay: #{$color-pale-overlay};
+          --#{$prefix-bh}expressive-#{$value}-soft-overlay: #{$color-soft-overlay};
+        }
+
+        @if ($type == palette) {
+          $palette: $var;
+
+          $color-pale: map-get($palette, "10");
+          $color-soft: map-get($palette, "20");
+          $color-deep: map-get($palette, "60");
+          $color-rich: map-get($palette, "90");
+
+          --#{$prefix-bh}expressive-#{$value}-pale: #{$color-pale};
+          --#{$prefix-bh}expressive-#{$value}-soft: #{$color-soft};
+          --#{$prefix-bh}expressive-#{$value}-deep: #{$color-deep};
+          --#{$prefix-bh}expressive-#{$value}-rich: #{$color-rich};
+        }
+      }
+    }
+  }
+
+  // Link __________
+  --#{$prefix-bh}link-colour: #{$link-colour};
+  --#{$prefix-bh}link-icon: #{$link-icon};
+  --#{$prefix-bh}link-decoration: #{$link-decoration};
+  --#{$prefix-bh}link-hover: #{$link-hover};
+  --#{$prefix-bh}link-icon-hover: #{$link-icon-hover};
+  --#{$prefix-bh}link-active: #{$link-active};
+  --#{$prefix-bh}link-icon-active: #{$link-icon-active};
+
+  @if $link-decoration-hover != null {
+    --#{$prefix-bh}link-decoration-hover: #{$link-decoration-hover};
+  }
+
+  --#{$prefix-bh}link-visited: #{$link-visited};
+  --#{$prefix-bh}link-icon-visited: #{$link-icon-visited};
+
+  // HR ____________
+  --#{$prefix-bh}hr-color: #{$hr-color};
+
+  // Fonts ____________________________________________________________________________________________________________________________
+
+  // Note: Use `inspect` for lists so that quoted items keep the quotes.
+  --#{$prefix-bh}font-sans-serif: #{inspect($font-family-sans-serif)};
+
+  // Root and body
+  --#{$prefix-bh}body-font-family: #{inspect($font-family-base)};
+
+  @each $weight, $value in $font-weights {
+    --#{$prefix-bh}font-weight-#{$weight}: #{$value};
+  }
+
+  @include rfs($font-size-base, --#{$prefix-bh}body-font-size);
+  --#{$prefix-bh}body-font-weight: #{$font-weight-base};
+  --#{$prefix-bh}body-line-height: #{$line-height-base};
+  @if $body-text-align != null {
+    --#{$prefix-bh}body-text-align: #{$body-text-align};
+  }
+  --#{$prefix-bh}body-color: #{$body-color};
+  --#{$prefix-bh}body-background: #{$body-background};
+
+  --#{$prefix-bh}heading-color: #{$headings-color};
+
+  // Type scale _______________________________________________________________________________________________________________________
+  @each $size, $value in $typescales {
+    --#{$prefix-bh}typescale-#{$size}: #{$value};
+  }
+
+  // Spacer ___________________________________________________________________________________________________________________________
+  @each $spacer, $value in $spacers {
+    @if ($spacer > 0 and $spacer < 10) {
+      --#{$prefix-bh}spacer-0#{$spacer}: #{$value};
+    } @else {
+      --#{$prefix-bh}spacer-#{$spacer}: #{$value};
+    }
+  }
+
+  // Padding __________________________________________________________________________________________________________________________
+  @each $padding, $value in $padding {
+    --#{$prefix-bh}padding-#{$padding}: #{$value};
+  }
+
+  // Margin ___________________________________________________________________________________________________________________________
+  @each $margin, $value in $margin {
+    --#{$prefix-bh}margin-#{$margin}: #{$value};
+  }
+
+  // Border ___________________________________________________________________________________________________________________________
+  --#{$prefix-bh}border-width: #{$border-width};
+  --#{$prefix-bh}border-style: #{$border-style};
+  --#{$prefix-bh}border-color: #{$border-color};
+
+  // Border radius ____________________________________________________________________________________________________________________
+  @each $radius, $value in $border-radii {
+    --#{$prefix-bh}border-radius-#{$radius}: #{$value};
+  }
+
+  // Validation _______________________________________________________________________________________________________________________
+  --#{$prefix-bh}form-validation-error: #{$form-validation-error};
+  --#{$prefix-bh}form-input-border-error: #{$form-input-border-error};
+
+  // Page layout ______________________________________________________________________________________________________________________
+  --#{$prefix-bh}page-body-spacing-y: #{$page-body-spacing-y};
+  --#{$prefix-bh}page-body-spacing-x: #{$page-body-spacing-x};
+  @media (max-width: 767.98px) {
+    --#{$prefix-bh}page-body-spacing-x: #{$page-body-spacing-x-sm};
+  }
+
+  --#{$prefix-bh}page-frame-spacing-y: #{$page-frame-spacing-y};
+  --#{$prefix-bh}page-frame-spacing-x: #{$page-frame-spacing-x};
+  --#{$prefix-bh}page-frame-gap: #{$page-frame-gap};
+  --#{$prefix-bh}page-pane-gap: #{$page-pane-gap};
+  --#{$prefix-bh}page-panel-gap: #{$page-panel-gap};
+  --#{$prefix-bh}content-spacing: #{$content-spacing};
+  --#{$prefix-bh}content-spacing-sm: #{$content-spacing-sm};
+  --#{$prefix-bh}content-spacing-xl: #{$content-spacing-xl};
+
+  --#{$prefix-bh}text-max-width: #{$text-max-width};
+
+  // Box shadows ______________________________________________________________________________________________________________________
+  --#{$prefix-bh}shadow-colour: #{$shadow-colour};
+
+  @each $shadow, $value in $shadows {
+    --#{$prefix-bh}shadow-#{$shadow}: #{$value};
+  }
+}
+
+@if $enable-dark-mode {
+  @include color-mode(dark, true) {
+    color-scheme: dark;
+
     // Primary __________
-    @each $color, $value in $primary-palette {
-        --#{$prefix-bh}primary-#{$color}: #{$value};
+    @each $color, $value in $primary-palette-dark {
+      --#{$prefix-bh}primary-#{$color}: #{$value};
     }
 
     // Danger ___________
-    @each $color, $value in $danger-palette {
-        --#{$prefix-bh}danger-#{$color}: #{$value};
+    @each $color, $value in $danger-palette-dark {
+      --#{$prefix-bh}danger-#{$color}: #{$value};
     }
 
     // Caution ________
-    @each $color, $value in $caution-palette {
-        --#{$prefix-bh}caution-#{$color}: #{$value};
+    @each $color, $value in $caution-palette-dark {
+      --#{$prefix-bh}caution-#{$color}: #{$value};
     }
 
     // Valid _________
-    @each $color, $value in $valid-palette {
-        --#{$prefix-bh}valid-#{$color}: #{$value};
+    @each $color, $value in $valid-palette-dark {
+      --#{$prefix-bh}valid-#{$color}: #{$value};
     }
 
     // Info __________
-    @each $color, $value in $info-palette {
-        --#{$prefix-bh}info-#{$color}: #{$value};
-    }
-
-    // Accent colours ________
-    @each $num, $palette in $accent-colours {
-        $accent-pal: map-get($accent-colours, $num);
-
-        @each $color, $value in $accent-pal {
-            --#{$prefix-bh}accent-#{$num}-#{$color}: #{$value};
-        }
-    }
-
-
-    // Prime _________
-    @each $color, $value in $prime-colors-rgb {
-        --#{$prefix-bh}#{$color}-rgb: #{$value};
-    }
-
-    // Black tint ____
-    @each $color, $value in $black-tint-palette {
-        --#{$prefix-bh}black-tint-#{$color}: #{$value};
-    }
-
-    // White tint ____
-    @each $color, $value in $white-tint-palette {
-        --#{$prefix-bh}white-tint-#{$color}: #{$value};
+    @each $color, $value in $info-palette-dark {
+      --#{$prefix-bh}info-#{$color}: #{$value};
     }
 
     // Primary tint _____
-    @each $color, $value in $primary-tint-palette {
-        --#{$prefix-bh}primary-tint-#{$color}: #{$value};
+    @each $color, $value in $primary-tint-palette-dark {
+      --#{$prefix-bh}primary-tint-#{$color}: #{$value};
     }
 
     // Danger tint ______
-    @each $color, $value in $danger-tint-palette {
-        --#{$prefix-bh}danger-tint-#{$color}: #{$value};
+    @each $color, $value in $danger-tint-palette-dark {
+      --#{$prefix-bh}danger-tint-#{$color}: #{$value};
     }
 
     // Caution tint ___
-    @each $color, $value in $caution-tint-palette {
-        --#{$prefix-bh}caution-tint-#{$color}: #{$value};
+    @each $color, $value in $caution-tint-palette-dark {
+      --#{$prefix-bh}caution-tint-#{$color}: #{$value};
     }
 
     // Valid tint ____
-    @each $color, $value in $valid-tint-palette {
-        --#{$prefix-bh}valid-tint-#{$color}: #{$value};
+    @each $color, $value in $valid-tint-palette-dark {
+      --#{$prefix-bh}valid-tint-#{$color}: #{$value};
     }
 
     // Info tint _____
-    @each $color, $value in $info-tint-palette {
-        --#{$prefix-bh}info-tint-#{$color}: #{$value};
+    @each $color, $value in $info-tint-palette-dark {
+      --#{$prefix-bh}info-tint-#{$color}: #{$value};
     }
 
-    // Accent tints ________
-    @each $num, $palette in $accent-tints {
-        $accent-pal: map-get($accent-tints, $num);
-
-        @each $color, $value in $accent-pal {
-            --#{$prefix-bh}accent-#{$num}-tint-#{$color}: #{$value};
-        }
+    // White tint ____
+    @each $color, $value in $white-tint-palette-dark {
+      --#{$prefix-bh}white-tint-#{$color}: #{$value};
     }
 
     // Foundation ___________________________
     // Text __________
-    @each $color, $value in $text-colors {
-        --#{$prefix-bh}text-#{$color}: #{$value};
+    @each $color, $value in $text-colors-dark {
+      --#{$prefix-bh}text-#{$color}: #{$value};
     }
 
     // UI background _
-    @each $color, $value in $ui-background-colors {
-        --#{$prefix-bh}ui-background-#{$color}: #{$value};
+    @each $color, $value in $ui-background-colors-dark {
+      --#{$prefix-bh}ui-background-#{$color}: #{$value};
     }
 
-    @each $color, $value in $ui-overlay-colors {
-        --#{$prefix-bh}ui-overlay-#{$color}: #{$value};
+    @each $color, $value in $ui-overlay-colors-dark {
+      --#{$prefix-bh}ui-overlay-#{$color}: #{$value};
     }
 
     // UI border _____
-    @each $color, $value in $ui-border-colors {
-        --#{$prefix-bh}ui-border-#{$color}: #{$value};
+    @each $color, $value in $ui-border-colors-dark {
+      --#{$prefix-bh}ui-border-#{$color}: #{$value};
     }
 
     // Action ________
-    @each $color, $value in $action-colors {
-        --#{$prefix-bh}action-#{$color}: #{$value};
+    @each $color, $value in $action-colors-dark {
+      --#{$prefix-bh}action-#{$color}: #{$value};
     }
 
-    @each $color, $value in $action-text-colors {
-        --#{$prefix-bh}action-text-#{$color}: #{$value};
+    @each $color, $value in $action-text-colors-dark {
+      --#{$prefix-bh}action-text-#{$color}: #{$value};
     }
 
     // Action danger _
-    @each $color, $value in $action-danger-colors {
-        --#{$prefix-bh}action-danger-#{$color}: #{$value};
+    @each $color, $value in $action-danger-colors-dark {
+      --#{$prefix-bh}action-danger-#{$color}: #{$value};
     }
 
-    @each $color, $value in $action-text-danger-colors {
-        --#{$prefix-bh}action-text-danger-#{$color}: #{$value};
+    @each $color, $value in $action-text-danger-colors-dark {
+      --#{$prefix-bh}action-text-danger-#{$color}: #{$value};
     }
 
     // States ________
-    @each $color, $value in $disabled-colors {
-        --#{$prefix-bh}disabled-#{$color}: #{$value};
+    @each $color, $value in $disabled-colors-dark {
+      --#{$prefix-bh}disabled-#{$color}: #{$value};
     }
 
-    // --#{$prefix-bh}focus-01: #{$focus-01};
-    // --#{$prefix-bh}success-01: #{$success-01};
-    // --#{$prefix-bh}error-01: #{$error-01};
-
-    @each $color, $value in $state-colours {
-        --#{$prefix-bh}#{$color}: #{$value};
+    @each $color, $value in $state-colours-dark {
+      --#{$prefix-bh}#{$color}: #{$value};
     }
-
-    // @each $color, $value in $state-colours-rgb {
-    //     --#{$prefix-bh}#{$color}-rgb: #{$value};
-    // }
 
     // Feedback ______
-    @each $state, $prop in $feedback-colours {
-        $colour: map-get($feedback-colours, $state);
-        @each $prop, $color in $colour {
-            @if($prop == shadow){
-                $rgb: to-rgb($color);
-                --#{$prefix-bh}feedback-#{$prop}-#{$state}: #{$rgb};
-            } @else {
-                --#{$prefix-bh}feedback-#{$prop}-#{$state}: #{$color};
-            }
-            
+    @each $state, $prop in $feedback-colours-dark {
+      $colour: map-get($feedback-colours-dark, $state);
+      @each $prop, $color in $colour {
+        @if ($prop == shadow) {
+          $rgb: to-rgb($color);
+          --#{$prefix-bh}feedback-#{$prop}-#{$state}: #{$rgb};
+        } @else {
+          --#{$prefix-bh}feedback-#{$prop}-#{$state}: #{$color};
         }
-    } 
-
-    // Expressive ____
-    @each $value, $colour in $expressive-colours {
-        @if($value == primary){
-            @each $type, $var in $colour {
-
-                @if($type == tint){
-                    $tint: $var;
-                    $color-pale-overlay: map-get($tint, "10");
-                    $color-soft-overlay: map-get($tint, "20");
-                    
-                    --#{$prefix-bh}expressive-pale-overlay: #{$color-pale-overlay};
-                    --#{$prefix-bh}expressive-soft-overlay: #{$color-soft-overlay};
-                }
-
-                @if($type == palette){
-                    $palette: $var;
-
-                    $color-pale: map-get($palette, "10");
-                    $color-soft: map-get($palette, "20");
-                    $color-deep: map-get($palette, "60");
-                    $color-rich: map-get($palette, "90");
-
-                    --#{$prefix-bh}expressive-pale: #{$color-pale};
-                    --#{$prefix-bh}expressive-soft: #{$color-soft};
-                    --#{$prefix-bh}expressive-deep: #{$color-deep};
-                    --#{$prefix-bh}expressive-rich: #{$color-rich};
-                }
-            }
-        }
-
-        @if($value != primary){
-            @each $type, $var in $colour {
-
-                @if($type == tint){
-                    $tint: $var;
-                    $color-pale-overlay: map-get($tint, "10");
-                    $color-soft-overlay: map-get($tint, "20");
-                    
-                    --#{$prefix-bh}expressive-#{$value}-pale-overlay: #{$color-pale-overlay};
-                    --#{$prefix-bh}expressive-#{$value}-soft-overlay: #{$color-soft-overlay};
-                }
-
-                @if($type == palette){
-                    $palette: $var;
-
-                    $color-pale: map-get($palette, "10");
-                    $color-soft: map-get($palette, "20");
-                    $color-deep: map-get($palette, "60");
-                    $color-rich: map-get($palette, "90");
-
-                    --#{$prefix-bh}expressive-#{$value}-pale: #{$color-pale};
-                    --#{$prefix-bh}expressive-#{$value}-soft: #{$color-soft};
-                    --#{$prefix-bh}expressive-#{$value}-deep: #{$color-deep};
-                    --#{$prefix-bh}expressive-#{$value}-rich: #{$color-rich};
-                }
-            }
-        }
+      }
     }
 
     // Link __________
-    --#{$prefix-bh}link-colour: #{$link-colour};
-    --#{$prefix-bh}link-icon: #{$link-icon};
-    --#{$prefix-bh}link-decoration: #{$link-decoration};
-    --#{$prefix-bh}link-hover: #{$link-hover};
-    --#{$prefix-bh}link-icon-hover: #{$link-icon-hover};
-    --#{$prefix-bh}link-active: #{$link-active};
-    --#{$prefix-bh}link-icon-active: #{$link-icon-active};
-
-    @if $link-decoration-hover != null {
-        --#{$prefix-bh}link-decoration-hover: #{$link-decoration-hover};
-    }
-
-    --#{$prefix-bh}link-visited: #{$link-visited};
-    --#{$prefix-bh}link-icon-visited: #{$link-icon-visited};
-
+    --#{$prefix-bh}link-colour: #{$link-colour-dark};
+    --#{$prefix-bh}link-icon: #{$link-icon-dark};
+    --#{$prefix-bh}link-hover: #{$link-hover-dark};
+    --#{$prefix-bh}link-icon-hover: #{$link-icon-hover-dark};
+    --#{$prefix-bh}link-active: #{$link-active-dark};
+    --#{$prefix-bh}link-icon-active: #{$link-icon-active-dark};
+    --#{$prefix-bh}link-visited: #{$link-visited-dark};
+    --#{$prefix-bh}link-icon-visited: #{$link-icon-visited-dark};
 
     // HR ____________
-    --#{$prefix-bh}hr-color: #{$hr-color};
+    --#{$prefix-bh}hr-color: #{$hr-color-dark};
 
     // Fonts ____________________________________________________________________________________________________________________________
+    --#{$prefix-bh}body-color: #{$body-color-dark};
+    --#{$prefix-bh}body-background: #{$body-background-dark};
 
-    // Note: Use `inspect` for lists so that quoted items keep the quotes.
-    --#{$prefix-bh}font-sans-serif: #{inspect($font-family-sans-serif)};
-    
-    // Root and body
-    --#{$prefix-bh}body-font-family: #{inspect($font-family-base)};
-
-    @each $weight, $value in $font-weights {
-        --#{$prefix-bh}font-weight-#{$weight}: #{$value};
-    }
-    
-    @include rfs($font-size-base, --#{$prefix-bh}body-font-size);
-    --#{$prefix-bh}body-font-weight: #{$font-weight-base};
-    --#{$prefix-bh}body-line-height: #{$line-height-base};
-    @if $body-text-align != null {
-        --#{$prefix-bh}body-text-align: #{$body-text-align};
-    }
-    --#{$prefix-bh}body-color: #{$body-color};
-    --#{$prefix-bh}body-background: #{$body-background};
-
-    --#{$prefix-bh}heading-color: #{$headings-color};
-    
-    // Type scale _______________________________________________________________________________________________________________________
-    @each $size, $value in $typescales {
-        --#{$prefix-bh}typescale-#{$size}: #{$value};
-    }
-
-    
-    // Spacer ___________________________________________________________________________________________________________________________
-    @each $spacer, $value in $spacers {
-        @if($spacer > 0 and $spacer < 10){
-            --#{$prefix-bh}spacer-0#{$spacer}: #{$value};
-        } @else {
-            --#{$prefix-bh}spacer-#{$spacer}: #{$value};
-        }
-    }
-
-    
-    // Padding __________________________________________________________________________________________________________________________
-    @each $padding, $value in $padding {
-        --#{$prefix-bh}padding-#{$padding}: #{$value};
-    }
-
-    // Margin ___________________________________________________________________________________________________________________________
-    @each $margin, $value in $margin {
-        --#{$prefix-bh}margin-#{$margin}: #{$value};
-    }
-
-    
-    // Border ___________________________________________________________________________________________________________________________
-    --#{$prefix-bh}border-width: #{$border-width};
-    --#{$prefix-bh}border-style: #{$border-style};
-    --#{$prefix-bh}border-color: #{$border-color};
-    
-
-    // Border radius ____________________________________________________________________________________________________________________
-    @each $radius, $value in $border-radii {
-        --#{$prefix-bh}border-radius-#{$radius}: #{$value};
-    }
-
-    
-    // Validation _______________________________________________________________________________________________________________________
-    --#{$prefix-bh}form-validation-error: #{$form-validation-error};
-    --#{$prefix-bh}form-input-border-error: #{$form-input-border-error};
-
-
-    // Page layout ______________________________________________________________________________________________________________________
-    --#{$prefix-bh}page-body-spacing-y: #{$page-body-spacing-y};
-    --#{$prefix-bh}page-body-spacing-x: #{$page-body-spacing-x};
-    --#{$prefix-bh}page-frame-spacing-y: #{$page-frame-spacing-y};
-    --#{$prefix-bh}page-frame-spacing-x: #{$page-frame-spacing-x};
-    --#{$prefix-bh}page-frame-gap: #{$page-frame-gap};
-    --#{$prefix-bh}page-pane-gap: #{$page-pane-gap};
-    --#{$prefix-bh}page-panel-gap: #{$page-panel-gap};
-    --#{$prefix-bh}content-spacing: #{$content-spacing};
-    --#{$prefix-bh}content-spacing-sm: #{$content-spacing-sm};
-    --#{$prefix-bh}content-spacing-xl: #{$content-spacing-xl};
-
-    --#{$prefix-bh}text-max-width: #{$text-max-width};
-
-
-    // Box shadows ______________________________________________________________________________________________________________________
-    --#{$prefix-bh}shadow-colour: #{$shadow-colour};
-
-    @each $shadow, $value in $shadows {
-        --#{$prefix-bh}shadow-#{$shadow}: #{$value};
-    }
-
-}
-
-@if $enable-dark-mode {
-    @include color-mode(dark, true) {
-
-        color-scheme: dark;
-
-        // Primary __________
-        @each $color, $value in $primary-palette-dark {
-            --#{$prefix-bh}primary-#{$color}: #{$value};
-        }
-
-        // Danger ___________
-        @each $color, $value in $danger-palette-dark {
-            --#{$prefix-bh}danger-#{$color}: #{$value};
-        }
-
-        // Caution ________
-        @each $color, $value in $caution-palette-dark {
-            --#{$prefix-bh}caution-#{$color}: #{$value};
-        }
-
-        // Valid _________
-        @each $color, $value in $valid-palette-dark {
-            --#{$prefix-bh}valid-#{$color}: #{$value};
-        }
-
-        // Info __________
-        @each $color, $value in $info-palette-dark {
-            --#{$prefix-bh}info-#{$color}: #{$value};
-        }
-
-        // Primary tint _____
-        @each $color, $value in $primary-tint-palette-dark {
-            --#{$prefix-bh}primary-tint-#{$color}: #{$value};
-        }
-
-        // Danger tint ______
-        @each $color, $value in $danger-tint-palette-dark {
-            --#{$prefix-bh}danger-tint-#{$color}: #{$value};
-        }
-
-        // Caution tint ___
-        @each $color, $value in $caution-tint-palette-dark {
-            --#{$prefix-bh}caution-tint-#{$color}: #{$value};
-        }
-
-        // Valid tint ____
-        @each $color, $value in $valid-tint-palette-dark {
-            --#{$prefix-bh}valid-tint-#{$color}: #{$value};
-        }
-
-        // Info tint _____
-        @each $color, $value in $info-tint-palette-dark {
-            --#{$prefix-bh}info-tint-#{$color}: #{$value};
-        }
-
-        // White tint ____
-        @each $color, $value in $white-tint-palette-dark {
-            --#{$prefix-bh}white-tint-#{$color}: #{$value};
-        }
-
-        // Foundation ___________________________
-        // Text __________
-        @each $color, $value in $text-colors-dark {
-            --#{$prefix-bh}text-#{$color}: #{$value};
-        }
-
-        // UI background _
-        @each $color, $value in $ui-background-colors-dark {
-            --#{$prefix-bh}ui-background-#{$color}: #{$value};
-        }
-
-        @each $color, $value in $ui-overlay-colors-dark {
-            --#{$prefix-bh}ui-overlay-#{$color}: #{$value};
-        }
-
-        // UI border _____
-        @each $color, $value in $ui-border-colors-dark {
-            --#{$prefix-bh}ui-border-#{$color}: #{$value};
-        }
-
-        // Action ________
-        @each $color, $value in $action-colors-dark {
-            --#{$prefix-bh}action-#{$color}: #{$value};
-        }
-
-        @each $color, $value in $action-text-colors-dark {
-            --#{$prefix-bh}action-text-#{$color}: #{$value};
-        }
-
-        // Action danger _
-        @each $color, $value in $action-danger-colors-dark {
-            --#{$prefix-bh}action-danger-#{$color}: #{$value};
-        }
-
-        @each $color, $value in $action-text-danger-colors-dark {
-            --#{$prefix-bh}action-text-danger-#{$color}: #{$value};
-        }
-
-        // States ________
-        @each $color, $value in $disabled-colors-dark {
-            --#{$prefix-bh}disabled-#{$color}: #{$value};
-        }
-
-        @each $color, $value in $state-colours-dark {
-            --#{$prefix-bh}#{$color}: #{$value};
-        }
-
-        // Feedback ______
-        @each $state, $prop in $feedback-colours-dark {
-            $colour: map-get($feedback-colours-dark, $state);
-            @each $prop, $color in $colour {
-                @if($prop == shadow){
-                    $rgb: to-rgb($color);
-                    --#{$prefix-bh}feedback-#{$prop}-#{$state}: #{$rgb};
-                } @else {
-                    --#{$prefix-bh}feedback-#{$prop}-#{$state}: #{$color};
-                }
-                
-            }
-        } 
-
-
-        // Link __________
-        --#{$prefix-bh}link-colour: #{$link-colour-dark};
-        --#{$prefix-bh}link-icon: #{$link-icon-dark};
-        --#{$prefix-bh}link-hover: #{$link-hover-dark};
-        --#{$prefix-bh}link-icon-hover: #{$link-icon-hover-dark};
-        --#{$prefix-bh}link-active: #{$link-active-dark};
-        --#{$prefix-bh}link-icon-active: #{$link-icon-active-dark};
-        --#{$prefix-bh}link-visited: #{$link-visited-dark};
-        --#{$prefix-bh}link-icon-visited: #{$link-icon-visited-dark};
-
-        // HR ____________
-        --#{$prefix-bh}hr-color: #{$hr-color-dark};
-
-        // Fonts ____________________________________________________________________________________________________________________________
-        --#{$prefix-bh}body-color: #{$body-color-dark};
-        --#{$prefix-bh}body-background: #{$body-background-dark};
-
-        color: var(--body-color);
-
-    }
+    color: var(--body-color);
+  }
 }

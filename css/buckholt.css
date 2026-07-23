@@ -330,6 +330,15 @@
   --form-input-border-error: var(--error-01);
   --page-body-spacing-y: 4rem;
   --page-body-spacing-x: 4rem;
+}
+@media (max-width: 767.98px) {
+  :root,
+  [data-bs-theme=buckholt] {
+    --page-body-spacing-x: 3rem;
+  }
+}
+:root,
+[data-bs-theme=buckholt] {
   --page-frame-spacing-y: 4rem;
   --page-frame-spacing-x: 4rem;
   --page-frame-gap: 4rem;
