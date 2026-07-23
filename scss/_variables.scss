@@ -865,8 +865,8 @@ $layout-area-radius: $border-radius-lg !default;
 
 $page-body-spacing-y: $spacer-08 !default;
 $page-body-spacing-x: $page-body-spacing-y !default;
-$page-body-spacing-y-sm: $spacer-06 !default;
-$page-body-spacing-x-sm: $spacer-08 !default;
+$page-body-spacing-y-sm: $spacer-08 !default;
+$page-body-spacing-x-sm: $page-body-spacing-y-sm !default;
 
 $page-frame-spacing-y: $page-body-spacing-y !default;
 $page-frame-spacing-x: $page-body-spacing-y !default;
