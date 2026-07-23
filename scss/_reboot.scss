@@ -300,41 +300,43 @@ a {
     --#{$prefix-bh}link-colour: var(--#{$prefix-bh}link-active);
   }
 
-  &.link-standalone {
-    display: inline-flex;
-    text-decoration: $link-standalone-decoration;
-    align-self: flex-start;
-
-    .icon {
-      margin-right: var(--#{$prefix-bh}margin-02);
-      display: inline-block;
-      font-size: inherit;
-      color: (var(--#{$prefix-bh}link-icon));
-      line-height: inherit;
-    }
-
-    &:hover {
-      text-decoration: $link-standalone-decoration-hover;
-
-      .icon {
-        color: var(--#{$prefix-bh}link-icon-hover);
-      }
-    }
-
-    @if $enable-visited-links {
-      &:visited .icon {
-        color: var(--#{$prefix-bh}link-icon-visited);
-      }
-    }
-
-    &:active .icon {
-      color: var(--#{$prefix-bh}link-icon-active);
-    }
-  }
-
   &:focus-visible {
     outline-offset: 0.25rem;
     text-decoration: underline;
+  }
+}
+
+.link-standalone {
+  color: var(--#{$prefix-bh}link-colour);
+  display: inline-flex;
+  text-decoration: $link-standalone-decoration;
+  text-underline-offset: 0.1875rem;
+  align-self: flex-start;
+
+  .icon {
+    margin-right: var(--#{$prefix-bh}margin-02);
+    display: inline-block;
+    font-size: inherit;
+    color: (var(--#{$prefix-bh}link-icon));
+    line-height: inherit;
+  }
+
+  &:hover {
+    text-decoration: $link-standalone-decoration-hover;
+
+    .icon {
+      color: var(--#{$prefix-bh}link-icon-hover);
+    }
+  }
+
+  @if $enable-visited-links {
+    &:visited .icon {
+      color: var(--#{$prefix-bh}link-icon-visited);
+    }
+  }
+
+  &:active .icon {
+    color: var(--#{$prefix-bh}link-icon-active);
   }
 }
 

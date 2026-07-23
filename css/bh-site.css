@@ -745,30 +745,33 @@ a:hover {
 a:active {
   --link-colour: var(--link-active);
 }
-a.link-standalone {
+a:focus-visible {
+  outline-offset: 0.25rem;
+  text-decoration: underline;
+}
+
+.link-standalone {
+  color: var(--link-colour);
   display: inline-flex;
   text-decoration: none;
+  text-underline-offset: 0.1875rem;
   align-self: flex-start;
 }
-a.link-standalone .icon {
+.link-standalone .icon {
   margin-right: var(--margin-02);
   display: inline-block;
   font-size: inherit;
   color: var(--link-icon);
   line-height: inherit;
 }
-a.link-standalone:hover {
+.link-standalone:hover {
   text-decoration: underline;
 }
-a.link-standalone:hover .icon {
+.link-standalone:hover .icon {
   color: var(--link-icon-hover);
 }
-a.link-standalone:active .icon {
+.link-standalone:active .icon {
   color: var(--link-icon-active);
-}
-a:focus-visible {
-  outline-offset: 0.25rem;
-  text-decoration: underline;
 }
 
 button.link-standalone {
