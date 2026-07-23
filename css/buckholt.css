@@ -335,7 +335,7 @@
   :root,
   [data-bs-theme=buckholt] {
     --page-body-spacing-y: 4rem;
-    --page-body-spacing-x: 4rem;
+    --page-body-spacing-x: 2rem;
   }
 }
 :root,
