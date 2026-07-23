@@ -309,6 +309,7 @@
   --#{$prefix-bh}page-body-spacing-y: #{$page-body-spacing-y};
   --#{$prefix-bh}page-body-spacing-x: #{$page-body-spacing-x};
   @media (max-width: 767.98px) {
+    --#{$prefix-bh}page-body-spacing-y: #{$page-body-spacing-y-sm};
     --#{$prefix-bh}page-body-spacing-x: #{$page-body-spacing-x-sm};
   }
 
