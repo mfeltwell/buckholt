@@ -786,6 +786,7 @@ a:focus-visible {
 button.link-standalone {
   background: none;
   border: none;
+  padding: 0;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
