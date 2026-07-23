@@ -334,7 +334,7 @@
 @media (max-width: 767.98px) {
   :root,
   [data-bs-theme=buckholt] {
-    --page-body-spacing-x: 3rem;
+    --page-body-spacing-x: 2rem;
   }
 }
 :root,
