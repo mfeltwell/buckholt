@@ -7434,10 +7434,6 @@ a.tag {
   flex-direction: column;
 }
 
-.link-set-stacked {
-  flex-direction: column;
-}
-
 @media (max-width: 575.98px) {
   .link-set-sm-stacked {
     flex-direction: column;

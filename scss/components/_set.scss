@@ -81,10 +81,6 @@
   flex-direction: column;
 }
 
-.link-set-stacked {
-  flex-direction: column;
-}
-
 // Responsive link set stacking
 @each $breakpoint in map-keys($grid-breakpoints) {
   @if $breakpoint != xs {
