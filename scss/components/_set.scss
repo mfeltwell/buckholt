@@ -52,7 +52,7 @@
   }
 }
 
-// Button set
+// Button set _________________________________________________________________
 .button-set-stacked {
   flex-direction: column;
 
@@ -61,7 +61,7 @@
   }
 }
 
-// Link set
+// Link set ____________________________________________________________________
 .link-set {
   --#{$prefix-bh}set-gap: #{$link-set-gap};
   --#{$prefix-bh}set-row-gap: #{$link-set-row-gap};
@@ -81,7 +81,22 @@
   flex-direction: column;
 }
 
-// Switch set
+.link-set-stacked {
+  flex-direction: column;
+}
+
+// Responsive link set stacking
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @if $breakpoint != xs {
+    @include media-breakpoint-down($breakpoint) {
+      .link-set-#{$breakpoint}-stacked {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+// Switch set __________________________________________________________________
 .switch-set {
   flex-direction: column;
   gap: $switch-set-gap;

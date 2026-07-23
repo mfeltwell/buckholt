@@ -7433,6 +7433,35 @@ a.tag {
   flex-direction: column;
 }
 
+.link-set-stacked {
+  flex-direction: column;
+}
+
+@media (max-width: 575.98px) {
+  .link-set-sm-stacked {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767.98px) {
+  .link-set-md-stacked {
+    flex-direction: column;
+  }
+}
+@media (max-width: 991.98px) {
+  .link-set-lg-stacked {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1199.98px) {
+  .link-set-xl-stacked {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1399.98px) {
+  .link-set-xxl-stacked {
+    flex-direction: column;
+  }
+}
 .switch-set {
   flex-direction: column;
   gap: 1rem;
