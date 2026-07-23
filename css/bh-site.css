@@ -552,9 +552,9 @@ body {
   margin: 0;
   font-family: var(--body-font-family);
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 300;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
   color: var(--body-color);
   text-align: var(--body-text-align);
   background-color: var(--body-background);
@@ -711,9 +711,9 @@ strong {
 
 small, .small {
   font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 300;
   letter-spacing: 0.25px;
-  line-height: 1.25rem;
   display: block;
   color: var(--text-muted);
 }
@@ -3327,240 +3327,282 @@ footer {
 }
 
 .display-01 {
-  font-size: 2.25rem !important;
+  font-size: calc(1.35rem + 1.2vw);
+}
+@media (min-width: 1200px) {
+  .display-01 {
+    font-size: 2.25rem;
+  }
+}
+.display-01 {
+  line-height: calc(calc(1.35rem + 1.2vw) + 0.5rem) !important;
+}
+@media (min-width: 1200px) {
+  .display-01 {
+    line-height: 2.75rem !important;
+  }
+}
+.display-01 {
   font-weight: 500 !important;
-  line-height: 2.75rem !important;
   letter-spacing: 0 !important;
 }
 
 .display-02 {
-  font-size: 2.5rem !important;
+  font-size: calc(1.375rem + 1.5vw);
+}
+@media (min-width: 1200px) {
+  .display-02 {
+    font-size: 2.5rem;
+  }
+}
+.display-02 {
+  line-height: calc(calc(1.375rem + 1.5vw) + 0.5rem) !important;
+}
+@media (min-width: 1200px) {
+  .display-02 {
+    line-height: 3rem !important;
+  }
+}
+.display-02 {
   font-weight: 500 !important;
-  line-height: 3rem !important;
   letter-spacing: 0 !important;
 }
 
 .display-03 {
-  font-size: 3.5rem !important;
+  font-size: calc(1.475rem + 2.7vw);
+}
+@media (min-width: 1200px) {
+  .display-03 {
+    font-size: 3.5rem;
+  }
+}
+.display-03 {
+  line-height: calc(calc(1.475rem + 2.7vw) + 0.5rem) !important;
+}
+@media (min-width: 1200px) {
+  .display-03 {
+    line-height: 4rem !important;
+  }
+}
+.display-03 {
   font-weight: 500 !important;
-  line-height: 4rem !important;
   letter-spacing: -0.25px !important;
 }
 
 .headline-01 {
   font-size: 1.5rem !important;
-  font-weight: 600 !important;
   line-height: 2rem !important;
+  font-weight: 600 !important;
   letter-spacing: 0 !important;
 }
 
 .headline-02 {
   font-size: 1.75rem !important;
-  font-weight: 600 !important;
   line-height: 2.25rem !important;
+  font-weight: 600 !important;
   letter-spacing: 0 !important;
 }
 
 .headline-03 {
   font-size: 2rem !important;
-  font-weight: 600 !important;
   line-height: 2.5rem !important;
+  font-weight: 600 !important;
   letter-spacing: 0 !important;
 }
 
 .title-00 {
   font-size: 0.875rem !important;
-  font-weight: 500 !important;
   line-height: 1.25rem !important;
+  font-weight: 500 !important;
   letter-spacing: 0.25px !important;
 }
 
 .title-01 {
   font-size: 1rem !important;
-  font-weight: 500 !important;
   line-height: 1.5rem !important;
+  font-weight: 500 !important;
   letter-spacing: 0.16px !important;
 }
 
 .title-02 {
   font-size: 1.25rem !important;
-  font-weight: 500 !important;
   line-height: 1.5rem !important;
+  font-weight: 500 !important;
   letter-spacing: 0 !important;
 }
 
 .title-03 {
   font-size: 1.5rem !important;
-  font-weight: 500 !important;
   line-height: 2rem !important;
+  font-weight: 500 !important;
   letter-spacing: 0 !important;
 }
 
 .body-00 {
   font-size: 0.75rem !important;
-  font-weight: 300 !important;
   line-height: 1rem !important;
+  font-weight: 300 !important;
   letter-spacing: 0.25px !important;
 }
 
 .body-01 {
   font-size: 0.875rem !important;
-  font-weight: 300 !important;
   line-height: 1.25rem !important;
+  font-weight: 300 !important;
   letter-spacing: 0.25px !important;
 }
 
 .body-02 {
   font-size: 1rem !important;
-  font-weight: 300 !important;
   line-height: 1.5rem !important;
+  font-weight: 300 !important;
   letter-spacing: 0.16px !important;
 }
 
 .action-00 {
   font-size: 0.75rem !important;
-  font-weight: 400 !important;
   line-height: 1rem !important;
+  font-weight: 400 !important;
   letter-spacing: 0.25px !important;
 }
 
 .action-01 {
   font-size: 0.875rem !important;
-  font-weight: 400 !important;
   line-height: 1.25rem !important;
+  font-weight: 400 !important;
   letter-spacing: 0.25px !important;
 }
 
 .action-02 {
   font-size: 1rem !important;
-  font-weight: 400 !important;
   line-height: 1.5rem !important;
+  font-weight: 400 !important;
   letter-spacing: 0.16px !important;
 }
 
 .label-01 {
   font-size: 0.875rem !important;
-  font-weight: 500 !important;
   line-height: 1.25rem !important;
+  font-weight: 500 !important;
   letter-spacing: 0.25px !important;
 }
 
 .label-02 {
   font-size: 1rem !important;
-  font-weight: 500 !important;
   line-height: 1.5rem !important;
+  font-weight: 500 !important;
   letter-spacing: 0.25px !important;
 }
 
 .label-03 {
   font-size: 1.25rem !important;
-  font-weight: 500 !important;
   line-height: 1.75rem !important;
+  font-weight: 500 !important;
   letter-spacing: 0.16px !important;
 }
 
 .input-text-01 {
   font-size: 1rem !important;
-  font-weight: 400 !important;
   line-height: 1.5rem !important;
+  font-weight: 400 !important;
   letter-spacing: 0.16px !important;
 }
 
 .input-text-02 {
   font-size: 1rem !important;
-  font-weight: 400 !important;
   line-height: 1.75rem !important;
+  font-weight: 400 !important;
   letter-spacing: 0.16px !important;
 }
 
 .placeholder-01 {
   font-size: 1rem !important;
-  font-weight: 300 !important;
   line-height: 1.5rem !important;
+  font-weight: 300 !important;
   letter-spacing: 0.16px !important;
 }
 
 .placeholder-02 {
   font-size: 1rem !important;
-  font-weight: 300 !important;
   line-height: 1.75rem !important;
+  font-weight: 300 !important;
   letter-spacing: 0.16px !important;
 }
 
 .support-01 {
   font-size: 0.75rem !important;
-  font-weight: 400 !important;
   line-height: 1rem !important;
+  font-weight: 400 !important;
   letter-spacing: 0.25px !important;
 }
 
 .link-01 {
   font-size: 0.75rem !important;
-  font-weight: 400 !important;
   line-height: 1rem !important;
+  font-weight: 400 !important;
   letter-spacing: 0.25px !important;
 }
 
 .link-02 {
   font-size: 0.875rem !important;
-  font-weight: 400 !important;
   line-height: 1.25rem !important;
+  font-weight: 400 !important;
   letter-spacing: 0.25px !important;
 }
 
 .link-03 {
   font-size: 1rem !important;
-  font-weight: 400 !important;
   line-height: 1.5rem !important;
+  font-weight: 400 !important;
   letter-spacing: 0.16px !important;
 }
 
 .key-01 {
   font-size: 0.75rem !important;
-  font-weight: 300 !important;
   line-height: 1rem !important;
+  font-weight: 300 !important;
   letter-spacing: 0.25px !important;
 }
 
 .key-02 {
   font-size: 0.875rem !important;
-  font-weight: 300 !important;
   line-height: 1.25rem !important;
+  font-weight: 300 !important;
   letter-spacing: 0.25px !important;
 }
 
 .key-03 {
   font-size: 1rem !important;
-  font-weight: 300 !important;
   line-height: 1.5rem !important;
+  font-weight: 300 !important;
   letter-spacing: 0.16px !important;
 }
 
 .value-01 {
   font-size: 1rem !important;
-  font-weight: 500 !important;
   line-height: 1.5rem !important;
+  font-weight: 500 !important;
   letter-spacing: 0.16px !important;
 }
 
 .value-02 {
   font-size: 1.5rem !important;
-  font-weight: 500 !important;
   line-height: 2rem !important;
+  font-weight: 500 !important;
   letter-spacing: 0 !important;
 }
 
 .value-03 {
   font-size: 2rem !important;
-  font-weight: 500 !important;
   line-height: 2.5rem !important;
+  font-weight: 500 !important;
   letter-spacing: 0 !important;
 }
 
 .value-04 {
   font-size: 3.5rem !important;
-  font-weight: 500 !important;
   line-height: 4rem !important;
+  font-weight: 500 !important;
   letter-spacing: -0.25px !important;
 }
 
@@ -3720,9 +3762,9 @@ footer {
   --form-label-disabled: var(--disabled-overlay-03);
   margin-bottom: 0;
   font-size: 1.25rem;
+  line-height: 1.75rem;
   font-weight: 500;
   letter-spacing: 0.16px;
-  line-height: 1.75rem;
   color: var(--form-label);
 }
 .form-label small, .form-label .small {
@@ -3744,9 +3786,9 @@ footer {
   --form-helper: var(--text-muted);
   margin-top: 0;
   font-size: 0.75rem;
+  line-height: 1rem;
   font-weight: 400;
   letter-spacing: 0.25px;
-  line-height: 1rem;
   color: var(--form-helper);
 }
 
@@ -3773,9 +3815,9 @@ footer {
   min-width: 4rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
+  line-height: 1.75rem;
   font-weight: 400;
   letter-spacing: 0.16px;
-  line-height: 1.75rem;
   color: var(--form-input-text);
   appearance: none;
   background-color: var(--form-input-background);
@@ -3812,9 +3854,9 @@ footer {
 }
 .form-control::placeholder, .form-search:not(.form-search-dropdown)::placeholder {
   font-size: 1rem;
+  line-height: 1.75rem;
   font-weight: 300;
   letter-spacing: 0.16px;
-  line-height: 1.75rem;
   color: var(--form-input-placeholder);
   opacity: 1;
 }
@@ -3959,9 +4001,9 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
   max-height: 2.75rem;
   padding: calc(0.5rem - 1px) calc(2.25rem + 0.5rem - 1px) calc(0.5rem - 1px) 1rem;
   font-size: 1rem;
+  line-height: 1.75rem;
   font-weight: 400;
   letter-spacing: 0.16px;
-  line-height: 1.75rem;
   color: var(--form-select-text);
   appearance: none;
   background-color: var(--form-select-background);
@@ -4104,9 +4146,9 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
 .form-check-label {
   color: var(--form-check-label);
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.25px;
-  line-height: 1.5rem;
 }
 
 .form-switch {
@@ -4138,9 +4180,9 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
   left: -0.5rem;
   transform: translate(-100%, -50%);
   font-size: 0.75rem;
+  line-height: 1rem;
   font-weight: 400;
   letter-spacing: 0.25px;
-  line-height: 1rem;
   text-align: right;
   color: var(--switch-status-tag);
 }
@@ -4193,17 +4235,17 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
 }
 .form-switch .form-check-label {
   font-size: 1.25rem;
+  line-height: 1.75rem;
   font-weight: 500;
   letter-spacing: 0.16px;
-  line-height: 1.75rem;
 }
 
 .form-switch-active::before {
   content: "Always active";
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.25px;
-  line-height: 1.5rem;
   color: var(--switch-track-background-on);
 }
 .form-switch-active:not(.form-switch-sm)::before {
@@ -4223,9 +4265,9 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
 }
 .form-switch-sm .form-check-label {
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.25px;
-  line-height: 1.5rem;
 }
 .form-switch-sm .form-check-input:disabled, .form-switch-sm .form-check-input:disabled:checked {
   --switch-handle-svg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='var%28--disabled-overlay-03%29'%3e%3c!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3e%3cpath d='M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z'/%3e%3c/svg%3e");
@@ -4459,9 +4501,9 @@ textarea.form-control, textarea.form-search:not(.form-search-dropdown) {
 .minmax {
   color: var(--form-slider-minmax);
   font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 300;
   letter-spacing: 0.25px;
-  line-height: 1.25rem;
 }
 
 .ticks {
@@ -4497,9 +4539,9 @@ output {
   display: block;
   opacity: 0;
   font-size: 0.75rem;
+  line-height: 1rem;
   font-weight: 400;
   letter-spacing: 0.25px;
-  line-height: 1rem;
   padding: 0.25rem 0.5rem;
   color: #1a1a1a;
   text-align: center;
@@ -4582,9 +4624,9 @@ output {
   align-items: center;
   padding: 0.375rem 1rem;
   font-size: 1rem;
+  line-height: 1.75rem;
   font-weight: 300;
   letter-spacing: 0.16px;
-  line-height: 1.75rem;
   color: var(--input-group-addon-text);
   text-align: center;
   white-space: nowrap;
@@ -4700,9 +4742,9 @@ output {
   width: 100%;
   margin: 0;
   font-size: 0.75rem;
+  line-height: 1rem;
   font-weight: 400;
   letter-spacing: 0.25px;
-  line-height: 1rem;
   color: var(--error-01);
   align-items: center;
 }
@@ -4806,9 +4848,9 @@ output {
   width: 100%;
   margin: 0;
   font-size: 0.75rem;
+  line-height: 1rem;
   font-weight: 400;
   letter-spacing: 0.25px;
-  line-height: 1rem;
   color: var(--error-01);
   align-items: center;
 }
@@ -4954,9 +4996,9 @@ output {
   bottom: -0.5rem;
   transform: translateY(100%);
   font-size: 0.75rem;
+  line-height: 1rem;
   font-weight: 400;
   letter-spacing: 0.25px;
-  line-height: 1rem;
   color: var(--text-muted);
 }
 .response .counter.counter-warning {
@@ -5026,9 +5068,9 @@ output {
 }
 .dropdown-toggle::placeholder, .form-search.form-search-dropdown::placeholder {
   font-size: 1rem;
+  line-height: 1.75rem;
   font-weight: 300;
   letter-spacing: 0.16px;
-  line-height: 1.75rem;
   color: var(--text-muted);
   opacity: 1;
 }
@@ -5075,9 +5117,9 @@ output {
   padding: var(--dropdown-padding-y) var(--dropdown-padding-x);
   margin: 0;
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
   color: var(--dropdown-item-label);
   text-align: left;
   list-style: none;
@@ -5283,9 +5325,9 @@ output {
   padding: var(--dropdown-item-padding-y) var(--dropdown-item-padding-x);
   clear: both;
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
   color: var(--dropdown-item-label);
   text-align: inherit;
   text-decoration: none;
@@ -5350,9 +5392,9 @@ output {
 .dropdown-item .form-check-label,
 .dropdown-link .form-check-label {
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
   color: inherit;
 }
 .dropdown-item [type=checkbox],
@@ -5424,9 +5466,9 @@ output {
   padding: var(--button-padding-y) var(--button-padding-x);
   font-family: var(--button-font-family);
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
   color: var(--button-label);
   text-align: center;
   text-decoration: none;
@@ -5728,9 +5770,9 @@ fieldset:disabled .carousel-control-next {
   --button-padding-x: 1.25rem;
   --button-radius: var(--border-radius-md);
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
   min-height: 3rem;
 }
 
@@ -5740,9 +5782,9 @@ fieldset:disabled .carousel-control-next {
   --button-padding-x: 0.75rem;
   --button-radius: var(--border-radius-sm);
   font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 400;
   letter-spacing: 0.25px;
-  line-height: 1.25rem;
   min-height: 2rem;
 }
 .btn-sm .btn-icon:not(:not(:has(.button-label)) .btn-icon):not(:not(:has(.button-label)) .carousel-control-prev):not(:not(:has(.button-label)) .carousel-control-next), .btn-sm .carousel-control-prev:not(:not(:has(.button-label)) .btn-icon):not(:not(:has(.button-label)) .carousel-control-prev):not(:not(:has(.button-label)) .carousel-control-next),
@@ -5757,9 +5799,9 @@ fieldset:disabled .carousel-control-next {
 .btn-sm:not(:has(.button-label)), .btn-combo-sm > .btn:not(:has(.button-label)), .btn-combo-sm > .carousel-control-prev:not(:has(.button-label)),
 .btn-combo-sm > .carousel-control-next:not(:has(.button-label)) {
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
   width: 2rem;
   min-width: 2rem;
   line-height: 1rem;
@@ -5773,9 +5815,9 @@ fieldset:disabled .carousel-control-next {
 .btn-response {
   min-height: 2.75rem;
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
 }
 .btn-response.readonly {
   --button-label: var(--button-label-readonly);
@@ -6014,9 +6056,9 @@ fieldset:disabled .carousel-control-next {
 .alert-message * {
   color: var(--alert-message);
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
 }
 
 .alert-icon {
@@ -6135,17 +6177,17 @@ fieldset:disabled .carousel-control-next {
 
 .toast-body {
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 300;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
 }
 
 .toast-message * {
   color: var(--toast-message);
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
 }
 
 .toast-icon {
@@ -6224,9 +6266,9 @@ fieldset:disabled .carousel-control-next {
   --tag-min-width: 4rem;
   border-radius: var(--tag-radius);
   font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 400;
   letter-spacing: 0.25px;
-  line-height: 1.25rem;
   height: var(--tag-height);
   min-width: var(--tag-min-width);
   padding: var(--tag-padding-y) var(--tag-padding-x);
@@ -6337,9 +6379,9 @@ a.tag {
   --tag-height: 1.5rem;
   --tag-min-width: 3rem;
   font-size: 0.75rem;
+  line-height: 1rem;
   font-weight: 400;
   letter-spacing: 0.25px;
-  line-height: 1rem;
 }
 
 [data-bs-theme=dark] .tag:not(.tag-selectable, .tag-status, .expressive-light) {
@@ -6403,9 +6445,9 @@ a.tag {
   gap: var(--nav-link-gap);
   padding: var(--nav-link-padding-y) var(--nav-link-padding-x);
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
   color: var(--nav-link);
   text-decoration: none;
   background: var(--nav-link-background);
@@ -7049,9 +7091,9 @@ a.tag {
   padding: var(--accordion-btn-padding-y) var(--accordion-btn-padding-x);
   padding-right: var(--accordion-btn-padding-right);
   font-size: 1.25rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 1.5rem;
   color: var(--accordion-header-label);
   text-align: left;
   border: 0;
@@ -7163,9 +7205,9 @@ a.tag {
 .accordion-lg .accordion-button {
   padding: var(--accordion-btn-padding-y) var(--accordion-btn-padding-x);
   font-size: 1.75rem;
+  line-height: 2.25rem;
   font-weight: 600;
   letter-spacing: 0;
-  line-height: 2.25rem;
 }
 .accordion-lg .accordion-button:not(.collapsed) {
   padding-bottom: 1.5rem;
@@ -7331,9 +7373,9 @@ a.tag {
 
 .eyebrow {
   font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 300;
   letter-spacing: 0.25px;
-  line-height: 1.25rem;
   color: var(--eyebrow);
   margin-bottom: 1rem;
   display: block;
@@ -7536,9 +7578,9 @@ a.tag {
   list-style: none;
   text-align: left;
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: var(--menu-item-gap);
@@ -7549,9 +7591,9 @@ a.tag {
   padding: var(--menu-section-header-padding-y) var(--menu-section-header-padding-x);
   margin-bottom: 0;
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
   color: var(--menu-section-header);
 }
 
@@ -7577,9 +7619,9 @@ a.tag {
   padding: var(--menu-item-padding-y) var(--menu-item-padding-x);
   clear: both;
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
   color: var(--menu-item-label);
   text-align: inherit;
   text-decoration: none;
@@ -7619,9 +7661,9 @@ a.tag {
 }
 .menu-item .form-check-label {
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
   color: inherit;
 }
 
@@ -7712,9 +7754,9 @@ a.tag {
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
+  line-height: 1.75rem;
   font-weight: 500;
   letter-spacing: 0.16px;
-  line-height: 1.75rem;
   overflow: hidden;
   text-transform: uppercase;
   flex-shrink: 0;
@@ -7740,18 +7782,18 @@ a.tag {
   --avatar-size: 2.5rem;
   --avatar-icon-size: 1.25rem;
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.25px;
-  line-height: 1.5rem;
 }
 
 .avatar-xs {
   --avatar-size: 2rem;
   --avatar-icon-size: 1rem;
   font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 500;
   letter-spacing: 0.25px;
-  line-height: 1.25rem;
 }
 
 .avatar-set {
@@ -7773,16 +7815,16 @@ a.tag {
   gap: 0.5rem;
   padding: 0.5rem;
   font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 300;
   letter-spacing: 0.25px;
-  line-height: 1.25rem;
   color: var(--text-muted);
 }
 .user-meta .user-meta-first {
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.25px;
-  line-height: 1.5rem;
   color: var(--text-primary);
 }
 
@@ -7807,9 +7849,9 @@ a.tag {
   gap: 0.5rem;
   text-decoration: none;
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.25px;
-  line-height: 1.5rem;
   color: var(--account-toggle-text);
 }
 .account-toggle::after {
@@ -7939,9 +7981,9 @@ a.tag {
 
 .collapse-trigger {
   font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 400;
   letter-spacing: 0.25px;
-  line-height: 1.25rem;
   color: var(--collapse-trigger);
   align-self: flex-start;
 }
@@ -7988,9 +8030,9 @@ a.tag {
 .collapse-title {
   color: var(--collapse-title);
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
 }
 
 [data-bs-theme=dark] .collapse-card {
@@ -8035,9 +8077,9 @@ a.tag {
 .list-heading {
   list-style: none;
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
   color: var(--text-secondary);
 }
 .list-heading:not(.list-unstyled .list-heading, .link-set .list-heading) {
@@ -8064,9 +8106,9 @@ a.tag {
   column-gap: 1rem;
   flex-wrap: wrap;
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
   color: var(--stepper-item);
 }
 .stepper-item:not(:first-child) {
@@ -8129,9 +8171,9 @@ a.tag {
 .sub-stepper .stepper-item {
   margin-top: 0.5rem;
   font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 300;
   letter-spacing: 0.25px;
-  line-height: 1.25rem;
   font-weight: 500;
 }
 .sub-stepper .stepper-item::before {
@@ -8180,9 +8222,9 @@ a.tag {
   display: flex;
   align-items: center;
   font-size: 0.75rem;
+  line-height: 1rem;
   font-weight: 400;
   letter-spacing: 0.25px;
-  line-height: 1rem;
   line-height: 1;
   color: var(--badge-label);
   text-align: center;
@@ -8503,9 +8545,9 @@ a.tag {
   display: block;
   margin: var(--tooltip-margin);
   font-size: 0.75rem;
+  line-height: 1rem;
   font-weight: 400;
   letter-spacing: 0.25px;
-  line-height: 1rem;
   word-wrap: break-word;
   opacity: 0;
 }
@@ -8598,9 +8640,9 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   gap: 0.5rem;
   color: #1a1a1a;
   font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 300;
   letter-spacing: 0.25px;
-  line-height: 1.25rem;
 }
 .progress-container:has(.is-valid) .progress-note, .progress-container:has(.is-invalid) .progress-note {
   display: none;
@@ -8628,9 +8670,9 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
 
 .progress-label {
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.25px;
-  line-height: 1.5rem;
   color: var(--text-secondary);
 }
 
@@ -8739,9 +8781,9 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
 
 .progress-helper {
   font-size: 0.75rem;
+  line-height: 1rem;
   font-weight: 400;
   letter-spacing: 0.25px;
-  line-height: 1rem;
   color: var(--text-muted);
 }
 
@@ -8787,9 +8829,9 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   --breadcrumb-item-current: var(--text-muted);
   --breadcrumb-link: var(--link-colour);
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   padding: var(--breadcrumb-padding-y) var(--breadcrumb-padding-x);
@@ -8851,37 +8893,37 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
 
 .key-value-xs .key {
   font-size: 0.75rem;
+  line-height: 1rem;
   font-weight: 300;
   letter-spacing: 0.25px;
-  line-height: 1rem;
 }
 
 .key-value-sm .key {
   font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 300;
   letter-spacing: 0.25px;
-  line-height: 1.25rem;
 }
 
 .key-value-lg .value {
   font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 2rem;
 }
 
 .key-value-xl .value {
   font-size: 2rem;
+  line-height: 2.5rem;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 2.5rem;
 }
 
 .key-value-display .value {
   font-size: 3.5rem;
+  line-height: 4rem;
   font-weight: 500;
   letter-spacing: -0.25px;
-  line-height: 4rem;
 }
 
 .key-value-flipped {
@@ -8895,17 +8937,17 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
 
 .key {
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 300;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
   color: var(--keyvalue-key);
 }
 
 .value {
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
   color: var(--keyvalue-value);
 }
 
@@ -9027,9 +9069,9 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
 
 .versatile-label {
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.25px;
-  line-height: 1.5rem;
   color: var(--versatile-label);
   overflow: hidden;
   white-space: nowrap;
@@ -9073,16 +9115,16 @@ a.versatile:hover {
 
 .summary-meta-headline {
   font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 600;
   letter-spacing: 0;
-  line-height: 2rem;
 }
 
 .summary-meta-label {
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.25px;
-  line-height: 1.5rem;
 }
 
 .summary-meta-text {
@@ -9113,9 +9155,9 @@ a.versatile:hover {
 .table > :not(caption) > * > * {
   padding: 0.125rem 1rem;
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 300;
   letter-spacing: 0.16px;
-  line-height: 1.5rem;
   color: var(--table-text);
   background-color: var(--table-background);
   border-bottom-width: 1px;
@@ -9134,9 +9176,9 @@ a.versatile:hover {
   white-space: nowrap;
   block-size: var(--table-header-row-height);
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.25px;
-  line-height: 1.5rem;
   border: none;
   color: var(--table-header-text);
 }
@@ -9196,9 +9238,9 @@ th:has(.table-sort) {
   background: none;
   border: none;
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.25px;
-  line-height: 1.5rem;
   color: var(--table-header-text);
 }
 .table-sort:hover {
@@ -9225,9 +9267,9 @@ th:has(.table-sort) {
   display: block;
   color: var(--table-text-secondary);
   font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 300;
   letter-spacing: 0.25px;
-  line-height: 1.25rem;
 }
 
 .table-cell-number {

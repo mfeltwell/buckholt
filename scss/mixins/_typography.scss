@@ -1,28 +1,43 @@
-@mixin type($type, $size) {
-    $font-size:     map-get($type, "font-sizes", $size);
-    $line-height:   map-get($type, "line-height", $size);
-    $letterspacing: map-get($type, "letter-spacing", $size);
+@mixin type($type, $size, $rfs: null) {
+  $font-size: map-get($type, "font-sizes", $size);
+  $line-height: map-get($type, "line-height", $size);
+  $letterspacing: map-get($type, "letter-spacing", $size);
+  $rfs-default: map-get($type, "use-rfs");
 
-    font-size:      $font-size;
-    font-weight:    map-get($type, "font-weight");
+  // Default line-height offset
+  $lineH-offset: if($line-height, $line-height, 0.5rem);
 
-    @if $letterspacing {
-        letter-spacing: $letterspacing;
-    } @else {
-        letter-spacing: $letter-spacing-base;
+  // Auto RFS logic from token
+  @if $rfs == null {
+    $rfs: if($rfs-default != null, $rfs-default, false);
+  }
+
+  @if $rfs {
+    @include rfs($font-size, font-size);
+
+    line-height: calc(#{rfs-fluid-value($font-size)} + #{$lineH-offset});
+
+    @media (min-width: #{rfs-breakpoint * 1px}) {
+      line-height: $font-size + $lineH-offset;
     }
+  } @else {
+    font-size: $font-size;
+    line-height: $font-size + $lineH-offset;
+  }
 
-    @if $line-height {
-        line-height: $font-size + $line-height;            
-    } @else {
-        line-height: $font-size + .5rem;
-    }    
+  font-weight: map-get($type, "font-weight");
+
+  @if $letterspacing {
+    letter-spacing: $letterspacing;
+  } @else {
+    letter-spacing: $letter-spacing-base;
+  }
 }
 
-@mixin typography($type...){
-    @for $i from 0 to length($type) {
-        [class^="#{nth($type, $i + 1)}-"] {
-            @content;
-        }
+@mixin typography($type...) {
+  @for $i from 0 to length($type) {
+    [class^="#{nth($type, $i + 1)}-"] {
+      @content;
     }
+  }
 }

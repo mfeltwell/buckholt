@@ -1,25 +1,39 @@
 // Typography ___________________________
 @each $type, $style in $typography {
-    $sizes:         map-get($style, "font-sizes");
-    $weight:        map-get($style, "font-weight");
+  $sizes: map-get($style, "font-sizes");
+  $weight: map-get($style, "font-weight");
+  $use-rfs: map-get($style, "use-rfs");
 
-    @each $scale, $fontsize in $sizes {
-        $lineH:         map-get($style, "line-height", $scale);
-        $letterspacing: map-get($style, "letter-spacing", $scale);
+  @each $scale, $fontsize in $sizes {
+    $lineH: map-get($style, "line-height", $scale);
+    $letterspacing: map-get($style, "letter-spacing", $scale);
 
-        .#{$type}-#{$scale} {
-            font-size: $fontsize !important;
-            font-weight: $weight !important;
-            @if $lineH {
-                line-height: $fontsize + $lineH !important;            
-            } @else {
-                line-height: $fontsize + .5rem !important;
-            }
-            @if $letterspacing {
-                letter-spacing: $letterspacing !important;
-            } @else {
-                letter-spacing: $letter-spacing-base !important;
-            }
+    // Default line-height offset
+    $lineH-offset: if($lineH, $lineH, 0.5rem);
+
+    .#{$type}-#{$scale} {
+      @if $use-rfs {
+        @include rfs($fontsize, font-size);
+
+        line-height: calc(
+          #{rfs-fluid-value($fontsize)} + #{$lineH-offset}
+        ) !important;
+
+        @media (min-width: #{$rfs-breakpoint * 1px}) {
+          line-height: $fontsize + $lineH-offset !important;
         }
-    } 
+      } @else {
+        font-size: $fontsize !important;
+        line-height: $fontsize + $lineH-offset !important;
+      }
+
+      font-weight: $weight !important;
+
+      @if $letterspacing {
+        letter-spacing: $letterspacing !important;
+      } @else {
+        letter-spacing: $letter-spacing-base !important;
+      }
+    }
+  }
 }
