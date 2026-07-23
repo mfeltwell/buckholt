@@ -276,7 +276,6 @@ sup {
 }
 
 // Links
-
 a {
   color: var(--#{$prefix-bh}link-colour);
   text-decoration: $link-decoration;
@@ -337,6 +336,11 @@ a {
     outline-offset: 0.25rem;
     text-decoration: underline;
   }
+}
+
+button.link-standalone {
+  background: none;
+  border: none;
 }
 
 // And undo these styles for placeholder links/named anchors (without href).
