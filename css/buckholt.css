@@ -344,6 +344,15 @@
   --page-frame-spacing-x: 4rem;
   --page-frame-gap: 4rem;
   --page-pane-gap: 4rem;
+}
+@media (max-width: 767.98px) {
+  :root,
+  [data-bs-theme=buckholt] {
+    --page-pane-gap: 4rem;
+  }
+}
+:root,
+[data-bs-theme=buckholt] {
   --page-panel-gap: 2rem;
   --content-spacing: 1.5rem;
   --content-spacing-sm: 0.5rem;

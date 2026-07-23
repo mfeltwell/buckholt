@@ -317,6 +317,10 @@
   --#{$prefix-bh}page-frame-spacing-x: #{$page-frame-spacing-x};
   --#{$prefix-bh}page-frame-gap: #{$page-frame-gap};
   --#{$prefix-bh}page-pane-gap: #{$page-pane-gap};
+  @media (max-width: 767.98px) {
+    --#{$prefix-bh}page-pane-gap: #{$page-pane-gap-sm};
+  }
+
   --#{$prefix-bh}page-panel-gap: #{$page-panel-gap};
   --#{$prefix-bh}content-spacing: #{$content-spacing};
   --#{$prefix-bh}content-spacing-sm: #{$content-spacing-sm};
