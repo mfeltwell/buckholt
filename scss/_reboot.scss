@@ -30,7 +30,7 @@
 
 :root {
   @if $font-size-root != null {
-    @include font-size(var(--#{$prefix-bh}$font-size-root));
+    @include font-size(var(--#{$prefix-bh}font-size-root));
   }
 
   @if $enable-smooth-scroll {

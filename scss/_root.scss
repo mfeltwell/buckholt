@@ -250,6 +250,7 @@
   --#{$prefix-bh}font-sans-serif: #{inspect($font-family-sans-serif)};
 
   // Root and body
+  --#{$prefix-bh}font-size-root: #{$font-size-root};
   --#{$prefix-bh}body-font-family: #{inspect($font-family-base)};
 
   @each $weight, $value in $font-weights {

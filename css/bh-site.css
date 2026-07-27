@@ -261,6 +261,7 @@
   --link-icon-visited: #1748d0;
   --hr-color: #dadada;
   --font-sans-serif: "Proxima-soft", Arial, sans-serif;
+  --font-size-root: 16px;
   --body-font-family: var(--font-sans-serif);
   --font-weight-th: 100;
   --font-weight-lt: 300;
@@ -549,7 +550,7 @@
   initial-value: 0px;
 }
 :root {
-  font-size: var(-- 16px);
+  font-size: var(--font-size-root);
 }
 @media (prefers-reduced-motion: no-preference) {
   :root {
