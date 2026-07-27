@@ -549,7 +549,7 @@
   initial-value: 0px;
 }
 :root {
-  font-size: var(--bs-root-font-size);
+  font-size: var(-- 16px);
 }
 @media (prefers-reduced-motion: no-preference) {
   :root {
