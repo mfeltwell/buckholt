@@ -152,7 +152,7 @@ footer {
     gap: var(--#{$prefix-bh}page-frame-gap);
 
     > .row {
-      --bs-gutter-x: var(--#{$prefix-bh}page-frame-spacing-x);
+      --#{$prefix}-gutter-x: var(--#{$prefix-bh}page-frame-spacing-x);
     }
   }
 }

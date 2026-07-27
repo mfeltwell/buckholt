@@ -17,7 +17,7 @@
 
     line-height: calc(#{rfs-fluid-value($font-size)} + #{$lineH-offset});
 
-    @media (min-width: #{rfs-breakpoint * 1px}) {
+    @media (min-width: #{$rfs-breakpoint * 1px}) {
       line-height: $font-size + $lineH-offset;
     }
   } @else {
