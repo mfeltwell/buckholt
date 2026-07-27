@@ -6885,6 +6885,11 @@ a.tag {
 .card-lg .card-body {
   padding: 4rem 4rem;
 }
+@media (max-width: 767.98px) {
+  .card-lg .card-body {
+    padding: 3rem 3rem;
+  }
+}
 
 .card-sm .card-body {
   padding: 1.5rem 1.5rem;

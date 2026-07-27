@@ -340,6 +340,10 @@
 .card-lg {
   .card-body {
     padding: $card-padding-y-lg $card-padding-x-lg;
+
+    @media (max-width: 767.98px) {
+      padding: $card-padding-y-lg-mobile $card-padding-x-lg-mobile;
+    }
   }
 }
 
