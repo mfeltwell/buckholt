@@ -1155,7 +1155,13 @@ footer {
   gap: var(--page-frame-gap);
 }
 .page-frame > .container > .row {
-  --bs--gutter-x: var(--page-frame-spacing-x);
+  --bs-gutter-x: var(--page-frame-spacing-x);
+}
+@media (max-width: 767.98px) {
+  .page-frame > .container > .row {
+    --bs-gutter-x: var(--page-frame-spacing-x-sm);
+    --bs-gutter-y: var(--page-frame-spacing-y-sm);
+  }
 }
 
 .page-pane {
