@@ -6,7 +6,7 @@
   --#{$prefix}gutter-y: #{$gutter};
 
   @media (max-width: 767.98px) {
-    &:has(> :is(.col, [class^="col-"], [class*=" col-"]) > .card) {
+    &:has(> :is(.col, [class^="col-"], [class*=" col-"]) > .card, .versatile) {
       --#{$prefix}gutter-x: #{$gutter-sm};
       --#{$prefix}gutter-y: #{$gutter-sm};
     }
