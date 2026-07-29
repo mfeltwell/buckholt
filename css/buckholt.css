@@ -1157,12 +1157,6 @@ footer {
 .page-frame > .container > .row {
   --bs-gutter-x: var(--page-frame-spacing-x);
 }
-@media (max-width: 767.98px) {
-  .page-frame > .container > .row {
-    --bs-gutter-x: var(--page-frame-spacing-x-sm);
-    --bs-gutter-y: var(--page-frame-spacing-y-sm);
-  }
-}
 
 .page-pane {
   gap: var(--page-pane-gap);
@@ -1438,6 +1432,14 @@ footer {
 .row {
   --bs-gutter-x: 2rem;
   --bs-gutter-y: 2rem;
+}
+@media (max-width: 767.98px) {
+  .row {
+    --bs-gutter-x: 1rem;
+    --bs-gutter-y: 1rem;
+  }
+}
+.row {
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
@@ -3143,6 +3145,13 @@ footer {
 
 .masonry-row {
   --bs-gutter-x: 2rem;
+}
+@media (max-width: 767.98px) {
+  .masonry-row {
+    --bs-gutter-x: 1rem;
+  }
+}
+.masonry-row {
   display: block;
   column-gap: 0;
   margin-top: 0;

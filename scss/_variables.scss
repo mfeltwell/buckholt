@@ -639,6 +639,7 @@ $text-max-width: 54rem !default;
 
 // Grid columns _________________________
 $grid-gutter-width: $spacer-06 !default; // variable to change --bs-gutter x and y
+$grid-gutter-width-sm: $spacer-04 !default; // variable to change --bs-gutter x and y for small screens
 
 // Transitions __________________________
 $transition-time: 0.15s !default;

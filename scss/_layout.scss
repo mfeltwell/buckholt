@@ -153,11 +153,6 @@ footer {
 
     > .row {
       --#{$prefix}gutter-x: var(--#{$prefix-bh}page-frame-spacing-x);
-
-      @media (max-width: 767.98px) {
-        --#{$prefix}gutter-x: var(--#{$prefix-bh}page-frame-spacing-x-sm);
-        --#{$prefix}gutter-y: var(--#{$prefix-bh}page-frame-spacing-y-sm);
-      }
     }
   }
 }
@@ -168,7 +163,7 @@ footer {
 }
 
 .page-panel {
-  --bs-gutter-x: var(--#{$prefix-bh}page-panel-gap);
+  --#{$prefix}gutter-x: var(--#{$prefix-bh}page-panel-gap);
   gap: var(--#{$prefix-bh}page-panel-gap);
   // height: 100%; // monitor to see if this is needed, may cause issues with flexbox children
 }

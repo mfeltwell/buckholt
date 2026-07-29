@@ -1,34 +1,55 @@
+@mixin make-row(
+  $gutter: $grid-gutter-width,
+  $gutter-sm: $grid-gutter-width-sm
+) {
+  --#{$prefix}gutter-x: #{$gutter};
+  --#{$prefix}gutter-y: #{$gutter};
 
-@mixin make-row($gutter: $grid-gutter-width) {
-    --#{$prefix}gutter-x: #{$gutter};
-    --#{$prefix}gutter-y: #{$gutter};
-    display: flex;
-    flex-wrap: wrap;
-    // TODO: Revisit calc order after https://github.com/react-bootstrap/react-bootstrap/issues/6039 is fixed
-    margin-top: calc(-1 * var(--#{$prefix}gutter-y)); // stylelint-disable-line function-disallowed-list
-    margin-right: calc(-.5 * var(--#{$prefix}gutter-x)); // stylelint-disable-line function-disallowed-list
-    margin-left: calc(-.5 * var(--#{$prefix}gutter-x)); // stylelint-disable-line function-disallowed-list
+  @media (max-width: 767.98px) {
+    --#{$prefix}gutter-x: #{$gutter-sm};
+    --#{$prefix}gutter-y: #{$gutter-sm};
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  // TODO: Revisit calc order after https://github.com/react-bootstrap/react-bootstrap/issues/6039 is fixed
+  margin-top: calc(
+    -1 * var(--#{$prefix}gutter-y)
+  ); // stylelint-disable-line function-disallowed-list
+  margin-right: calc(
+    -0.5 * var(--#{$prefix}gutter-x)
+  ); // stylelint-disable-line function-disallowed-list
+  margin-left: calc(
+    -0.5 * var(--#{$prefix}gutter-x)
+  ); // stylelint-disable-line function-disallowed-list
 }
 
 // Masonry row columns
 @mixin masonry-row-cols($count) {
-    columns: $count;
+  columns: $count;
 }
 
-@mixin masonry-row($gutter: $grid-gutter-width) {
-    --#{$prefix}gutter-x: #{$gutter};
+@mixin masonry-row(
+  $gutter: $grid-gutter-width,
+  $gutter-sm: $grid-gutter-width-sm
+) {
+  --#{$prefix}gutter-x: #{$gutter};
 
-    display: block;
-    column-gap: 0;
+  @media (max-width: 767.98px) {
+    --#{$prefix}gutter-x: #{$gutter-sm};
+  }
+
+  display: block;
+  column-gap: 0;
+  margin-top: 0;
+
+  > * {
+    width: 100%;
+    break-inside: avoid;
+    margin-bottom: var(--#{$prefix}gutter-x);
+  }
+
+  > *:first-child {
     margin-top: 0;
-
-    > * {
-        width: 100%;
-        break-inside: avoid;
-        margin-bottom: var(--#{$prefix}gutter-x);
-    }
-
-    > *:first-child {
-        margin-top: 0;
-    }
+  }
 }
