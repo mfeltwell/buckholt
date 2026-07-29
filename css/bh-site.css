@@ -1434,7 +1434,7 @@ footer {
   --bs-gutter-y: 2rem;
 }
 @media (max-width: 767.98px) {
-  .row {
+  .row:has(> :is(.col, [class^=col-], [class*=" col-"]) > .card) {
     --bs-gutter-x: 1rem;
     --bs-gutter-y: 1rem;
   }

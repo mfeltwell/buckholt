@@ -6,8 +6,10 @@
   --#{$prefix}gutter-y: #{$gutter};
 
   @media (max-width: 767.98px) {
-    --#{$prefix}gutter-x: #{$gutter-sm};
-    --#{$prefix}gutter-y: #{$gutter-sm};
+    &:has(> :is(.col, [class^="col-"], [class*=" col-"]) > .card) {
+      --#{$prefix}gutter-x: #{$gutter-sm};
+      --#{$prefix}gutter-y: #{$gutter-sm};
+    }
   }
 
   display: flex;
