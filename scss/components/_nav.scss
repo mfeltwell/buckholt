@@ -204,7 +204,6 @@
   border: $nav-group-border-width solid $nav-group-border;
   border-radius: $nav-group-radius;
   padding: $nav-group-padding;
-  margin-bottom: $nav-group-margin-bottom;
 }
 
 //
@@ -356,6 +355,14 @@
   display: flex;
   align-items: start;
   gap: $tab-items-gap;
+
+  &:has(.nav-group) {
+    margin-bottom: $tab-items-margin-bottom;
+
+    .tab-scroll {
+      align-self: center;
+    }
+  }
 }
 
 /* Scrollable area */
@@ -375,8 +382,10 @@
   white-space: nowrap;
 }
 
-.tab-items:not(.has-overflow) .tab-scroll {
-  display: none;
+.tab-items:not(.has-overflow) {
+  .tab-scroll {
+    display: none;
+  }
 }
 
 // Center tab items

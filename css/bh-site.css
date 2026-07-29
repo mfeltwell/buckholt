@@ -6579,7 +6579,6 @@ a.tag {
   border: 1px solid var(--ui-border-02);
   border-radius: 0.625rem;
   padding: 0.125rem;
-  margin-bottom: 1rem;
 }
 
 .nav-underline {
@@ -6691,6 +6690,12 @@ a.tag {
   display: flex;
   align-items: start;
   gap: 0.5rem;
+}
+.tab-items:has(.nav-group) {
+  margin-bottom: 1rem;
+}
+.tab-items:has(.nav-group) .tab-scroll {
+  align-self: center;
 }
 
 /* Scrollable area */
