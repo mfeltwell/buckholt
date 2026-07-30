@@ -6662,7 +6662,7 @@ a.tag {
   background-color: var(--nav-underline-items-border);
   left: calc(var(--nav-gap) * -1);
   bottom: calc(var(--nav-underline-border-padding) * -1);
-  z-index: -1;
+  z-index: 0;
 }
 .nav-underline .nav-link {
   padding: var(--nav-underline-link-padding-y) var(--nav-underline-link-padding-x);

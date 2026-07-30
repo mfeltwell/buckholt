@@ -249,7 +249,7 @@
       background-color: var(--#{$prefix-bh}nav-underline-items-border);
       left: calc(var(--#{$prefix-bh}nav-gap) * -1);
       bottom: calc(var(--#{$prefix-bh}nav-underline-border-padding) * -1);
-      z-index: -1;
+      z-index: 0;
     }
   }
 
