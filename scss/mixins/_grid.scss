@@ -10,9 +10,8 @@
         > :is(.col, [class^="col-"], [class*=" col-"]) > :is(.card, .versatile)
       ):not(
         :has(
-          > :is(.col, [class^="col-"], [class*=" col-"]):not(
-              :has(> :is(.card, .versatile))
-            )
+          > :is(.col, [class^="col-"], [class*=" col-"])
+            > :not(.card, .versatile)
         )
       ) {
       --#{$prefix}gutter-x: #{$gutter-sm};
