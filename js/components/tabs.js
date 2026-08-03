@@ -51,11 +51,16 @@ document.addEventListener("DOMContentLoaded", function () {
           ? parseFloat(navStyles.paddingLeft) || 0
           : 0;
 
+        const navBorderLeft = navStyles
+          ? parseFloat(navStyles.borderLeftWidth) || 0
+          : 0;
+
         const tabLeft =
           tab.getBoundingClientRect().left -
           scroller.getBoundingClientRect().left +
           scroller.scrollLeft -
-          navPaddingLeft;
+          navPaddingLeft -
+          navBorderLeft;
 
         scroller.scrollTo({
           left: tabLeft,
