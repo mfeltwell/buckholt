@@ -45,10 +45,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     scroller.querySelectorAll(".nav-link").forEach(function (tab) {
       tab.addEventListener("shown.bs.tab", function () {
+        const nav = tab.closest(".nav");
+        const navStyles = nav ? window.getComputedStyle(nav) : null;
+        const navPaddingLeft = navStyles
+          ? parseFloat(navStyles.paddingLeft) || 0
+          : 0;
+
         const tabLeft =
           tab.getBoundingClientRect().left -
           scroller.getBoundingClientRect().left +
-          scroller.scrollLeft;
+          scroller.scrollLeft -
+          navPaddingLeft;
 
         scroller.scrollTo({
           left: tabLeft,
