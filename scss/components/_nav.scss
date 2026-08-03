@@ -382,9 +382,21 @@
   white-space: nowrap;
 }
 
-.tab-items:not(.has-overflow) {
-  .tab-scroll {
-    display: none;
+// .tab-items:not(.has-overflow) {
+//   .tab-scroll {
+//     display: none;
+//   }
+// }
+
+.tab-scroll {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tab-items.has-overflow {
+    .tab-scroll {
+      display: inline-flex;
+    }
   }
 }
 

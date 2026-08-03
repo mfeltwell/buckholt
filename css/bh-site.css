@@ -6765,10 +6765,15 @@ a.tag {
   white-space: nowrap;
 }
 
-.tab-items:not(.has-overflow) .tab-scroll {
+.tab-scroll {
   display: none;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .tab-items.has-overflow .tab-scroll {
+    display: inline-flex;
+  }
+}
 .tab-items-center .tab-items-scroll {
   display: flex;
   justify-content: center;
