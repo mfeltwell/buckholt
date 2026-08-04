@@ -2,83 +2,86 @@
 // Base styles
 //
 
-.card {
-  // scss-docs-start card-css-vars
-  --#{$prefix-bh}card-padding-y: #{$card-padding-y};
-  --#{$prefix-bh}card-padding-x: #{$card-padding-x};
-  --#{$prefix-bh}card-padding-y-lg: #{$card-padding-y-lg};
-  --#{$prefix-bh}card-padding-x-lg: #{$card-padding-x-lg};
-  --#{$prefix-bh}card-border-width: #{$card-border-width};
-  --#{$prefix-bh}card-border: #{$card-border};
-  --#{$prefix-bh}card-radius: #{$card-radius};
-  --#{$prefix-bh}card-background: #{$card-background};
-  --#{$prefix-bh}card-body-gap: #{$card-body-gap};
+[data-bs-theme="buckholt"] {
+  &.card,
+  .card {
+    // scss-docs-start card-css-vars
+    --#{$prefix-bh}card-padding-y: #{$card-padding-y};
+    --#{$prefix-bh}card-padding-x: #{$card-padding-x};
+    --#{$prefix-bh}card-padding-y-lg: #{$card-padding-y-lg};
+    --#{$prefix-bh}card-padding-x-lg: #{$card-padding-x-lg};
+    --#{$prefix-bh}card-border-width: #{$card-border-width};
+    --#{$prefix-bh}card-border: #{$card-border};
+    --#{$prefix-bh}card-radius: #{$card-radius};
+    --#{$prefix-bh}card-background: #{$card-background};
+    --#{$prefix-bh}card-body-gap: #{$card-body-gap};
 
-  --#{$prefix-bh}card-background-secondary: #{$card-background-secondary};
-  --#{$prefix-bh}card-border-secondary: #{$card-border-secondary};
+    --#{$prefix-bh}card-background-secondary: #{$card-background-secondary};
+    --#{$prefix-bh}card-border-secondary: #{$card-border-secondary};
 
-  --#{$prefix-bh}card-text: #{$card-text};
+    --#{$prefix-bh}card-text: #{$card-text};
 
-  --#{$prefix-bh}card-cap-padding-y: #{$card-cap-padding-y};
-  --#{$prefix-bh}card-cap-padding-x: #{$card-cap-padding-x};
-  --#{$prefix-bh}card-cap-background: #{$card-cap-background};
-  --#{$prefix-bh}card-cap-border: #{$card-cap-border};
-  --#{$prefix-bh}card-cap-text: #{$card-cap-text};
+    --#{$prefix-bh}card-cap-padding-y: #{$card-cap-padding-y};
+    --#{$prefix-bh}card-cap-padding-x: #{$card-cap-padding-x};
+    --#{$prefix-bh}card-cap-background: #{$card-cap-background};
+    --#{$prefix-bh}card-cap-border: #{$card-cap-border};
+    --#{$prefix-bh}card-cap-text: #{$card-cap-text};
 
-  --#{$prefix-bh}card-image-max-height: #{$card-image-max-height};
+    --#{$prefix-bh}card-image-max-height: #{$card-image-max-height};
 
-  --#{$prefix}card-box-shadow: #{$card-box-shadow};
-  --#{$prefix-bh}card-height: #{$card-height};
-  --#{$prefix-bh}card-aspect-ratio: #{$card-aspect-ratio};
+    --#{$prefix}card-box-shadow: #{$card-box-shadow};
+    --#{$prefix-bh}card-height: #{$card-height};
+    --#{$prefix-bh}card-aspect-ratio: #{$card-aspect-ratio};
 
-  --#{$prefix}card-img-overlay-padding: #{$card-img-overlay-padding};
-  --#{$prefix}card-group-margin: #{$card-group-margin};
-  // scss-docs-end card-css-vars
+    --#{$prefix}card-img-overlay-padding: #{$card-img-overlay-padding};
+    --#{$prefix}card-group-margin: #{$card-group-margin};
+    // scss-docs-end card-css-vars
 
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
-  height: var(--#{$prefix-bh}card-height);
-  color: inherit;
-  word-wrap: break-word;
-  background-color: var(--#{$prefix-bh}card-background);
-  background-clip: border-box;
-  border: var(--#{$prefix-bh}card-border-width) solid
-    var(--#{$prefix-bh}card-border);
-  @include border-radius(var(--#{$prefix-bh}card-radius));
-  @include box-shadow(var(--#{$prefix}card-box-shadow));
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+    height: var(--#{$prefix-bh}card-height);
+    color: inherit;
+    word-wrap: break-word;
+    background-color: var(--#{$prefix-bh}card-background);
+    background-clip: border-box;
+    border: var(--#{$prefix-bh}card-border-width) solid
+      var(--#{$prefix-bh}card-border);
+    @include border-radius(var(--#{$prefix-bh}card-radius));
+    @include box-shadow(var(--#{$prefix}card-box-shadow));
 
-  &.card-secondary {
-    background-color: var(--#{$prefix-bh}card-background-secondary);
-    border-color: var(--#{$prefix-bh}card-border-secondary);
-  }
+    &.card-secondary {
+      background-color: var(--#{$prefix-bh}card-background-secondary);
+      border-color: var(--#{$prefix-bh}card-border-secondary);
+    }
 
-  > hr {
-    margin-right: 0;
-    margin-left: 0;
-  }
+    > hr {
+      margin-right: 0;
+      margin-left: 0;
+    }
 
-  > .list-group {
-    border-top: inherit;
-    border-bottom: inherit;
+    > .list-group {
+      border-top: inherit;
+      border-bottom: inherit;
 
-    // &:first-child {
-    //     border-top-width: 0;
-    //     @include border-top-radius(var(--#{$prefix-bh}card-inner-radius));
-    // }
+      // &:first-child {
+      //     border-top-width: 0;
+      //     @include border-top-radius(var(--#{$prefix-bh}card-inner-radius));
+      // }
 
-    // &:last-child  {
-    //     border-bottom-width: 0;
-    //     @include border-bottom-radius(var(--#{$prefix-bh}card-inner-radius));
-    // }
-  }
+      // &:last-child  {
+      //     border-bottom-width: 0;
+      //     @include border-bottom-radius(var(--#{$prefix-bh}card-inner-radius));
+      // }
+    }
 
-  // Due to specificity of the above selector (`.card > .list-group`), we must
-  // use a child selector here to prevent double borders.
-  > .card-header + .list-group,
-  > .list-group + .card-footer {
-    border-top: 0;
+    // Due to specificity of the above selector (`.card > .list-group`), we must
+    // use a child selector here to prevent double borders.
+    > .card-header + .list-group,
+    > .list-group + .card-footer {
+      border-top: 0;
+    }
   }
 }
 
