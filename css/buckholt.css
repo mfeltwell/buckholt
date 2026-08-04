@@ -6799,8 +6799,7 @@ a.tag {
   display: flex;
 }
 
-[data-bs-theme=buckholt].card,
-[data-bs-theme=buckholt] .card {
+.card {
   --card-padding-y: 2rem;
   --card-padding-x: 2rem;
   --card-padding-y-lg: 4rem;
@@ -6836,25 +6835,20 @@ a.tag {
   border: var(--card-border-width) solid var(--card-border);
   border-radius: var(--card-radius);
 }
-[data-bs-theme=buckholt].card.card-secondary,
-[data-bs-theme=buckholt] .card.card-secondary {
+.card.card-secondary {
   background-color: var(--card-background-secondary);
   border-color: var(--card-border-secondary);
 }
-[data-bs-theme=buckholt].card > hr,
-[data-bs-theme=buckholt] .card > hr {
+.card > hr {
   margin-right: 0;
   margin-left: 0;
 }
-[data-bs-theme=buckholt].card > .list-group,
-[data-bs-theme=buckholt] .card > .list-group {
+.card > .list-group {
   border-top: inherit;
   border-bottom: inherit;
 }
-[data-bs-theme=buckholt].card > .card-header + .list-group,
-[data-bs-theme=buckholt].card > .list-group + .card-footer,
-[data-bs-theme=buckholt] .card > .card-header + .list-group,
-[data-bs-theme=buckholt] .card > .list-group + .card-footer {
+.card > .card-header + .list-group,
+.card > .list-group + .card-footer {
   border-top: 0;
 }
 
