@@ -7896,6 +7896,11 @@ a.tag {
   --menu-item-border-hover: transparent;
 }
 
+.menu-panel-sm {
+  --menu-padding-x: 0.5rem;
+  --menu-padding-y: 0.5rem;
+}
+
 .avatar {
   --avatar-size: 3rem;
   --avatar-background: var(--expressive-soft);
