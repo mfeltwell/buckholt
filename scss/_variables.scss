@@ -1019,9 +1019,6 @@ $form-input-icon-size: $icon-md !default;
 $form-input-icon-gap: $spacer-03 !default;
 $form-input-icon-position-y: ($form-input-height - $form-input-icon-size) / 2 !default;
 
-// Short form
-$short-form-body-gap: $spacer-05 !default;
-
 // Form wrapper __________________________
 $form-gap: $spacer-06 !default;
 $form-body-gap: $form-gap !default;
@@ -1036,6 +1033,9 @@ $nested-inputs-padding-left: $padding-08 !default;
 $nested-inputs-border: $focus-01 !default;
 $nested-inputs-border-width: $border-width-02 !default;
 $nested-inputs-margin-top: $spacer-05 - $form-gap !default;
+
+// Short form
+$short-form-body-gap: $spacer-05 !default;
 
 // Input group __________________________
 $input-group-addon-padding-y: $padding-02 !default;
