@@ -5666,10 +5666,13 @@ fieldset:disabled .carousel-control-next {
   min-width: 1rem;
 }
 .btn:has(.btn-icon:first-child, .carousel-control-prev:first-child,
-.carousel-control-next:first-child):not(:not(:has(.button-label)), .btn-response-lg), .carousel-control-prev:has(.btn-icon:first-child, .carousel-control-prev:first-child,
-.carousel-control-next:first-child):not(:not(:has(.button-label)), .btn-response-lg),
+.carousel-control-next:first-child):not(:not(:has(.button-label)),
+.btn-response-lg), .carousel-control-prev:has(.btn-icon:first-child, .carousel-control-prev:first-child,
+.carousel-control-next:first-child):not(:not(:has(.button-label)),
+.btn-response-lg),
 .carousel-control-next:has(.btn-icon:first-child, .carousel-control-prev:first-child,
-.carousel-control-next:first-child):not(:not(:has(.button-label)), .btn-response-lg) {
+.carousel-control-next:first-child):not(:not(:has(.button-label)),
+.btn-response-lg) {
   padding-left: calc(var(--button-padding-x) - 0.25rem);
 }
 .btn:has(.btn-icon:last-child, .carousel-control-prev:last-child,
@@ -5679,8 +5682,11 @@ fieldset:disabled .carousel-control-next {
 .carousel-control-next:last-child):not(:not(:has(.button-label)), .btn-response-lg) {
   padding-right: calc(var(--button-padding-x) - 0.25rem);
 }
-.btn:not(:has(.button-label), .btn-response), .carousel-control-prev:not(:has(.button-label), .btn-response),
-.carousel-control-next:not(:has(.button-label), .btn-response) {
+.btn:has(.btn-icon, .carousel-control-prev,
+.carousel-control-next):not(:has(.button-label), .btn-response), .carousel-control-prev:has(.btn-icon, .carousel-control-prev,
+.carousel-control-next):not(:has(.button-label), .btn-response),
+.carousel-control-next:has(.btn-icon, .carousel-control-prev,
+.carousel-control-next):not(:has(.button-label), .btn-response) {
   --button-padding-y: 0.25rem;
   --button-padding-x: 0.5rem;
   width: var(--icon-button-width);
@@ -5898,8 +5904,12 @@ fieldset:disabled .carousel-control-next {
 .btn-combo-sm > .carousel-control-next .carousel-control-next:not(:not(:has(.button-label)) .btn-icon):not(:not(:has(.button-label)) .carousel-control-prev):not(:not(:has(.button-label)) .carousel-control-next) {
   min-width: 0.875rem;
 }
-.btn-sm:not(:has(.button-label)), .btn-combo-sm > .btn:not(:has(.button-label)), .btn-combo-sm > .carousel-control-prev:not(:has(.button-label)),
-.btn-combo-sm > .carousel-control-next:not(:has(.button-label)) {
+.btn-sm:has(.btn-icon, .carousel-control-prev,
+.carousel-control-next):not(:has(.button-label)), .btn-combo-sm > .btn:has(.btn-icon, .carousel-control-prev,
+.carousel-control-next):not(:has(.button-label)), .btn-combo-sm > .carousel-control-prev:has(.btn-icon, .carousel-control-prev,
+.carousel-control-next):not(:has(.button-label)),
+.btn-combo-sm > .carousel-control-next:has(.btn-icon, .carousel-control-prev,
+.carousel-control-next):not(:has(.button-label)) {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
@@ -5923,7 +5933,9 @@ fieldset:disabled .carousel-control-next {
 }
 .btn-response.readonly {
   --button-label: var(--button-label-readonly);
-  --button-background: var(--button-background-readonly);
+  --button-background: var(
+    --button-background-readonly
+  );
   --button-border: var(--button-border-readonly);
   --button-border-bottom-width: 1px;
 }

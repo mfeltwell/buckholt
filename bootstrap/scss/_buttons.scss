@@ -2,8 +2,7 @@
 // Base styles
 //
 
-.btn,
-%btn-base {
+.btn {
   // scss-docs-start btn-css-vars
   --#{$prefix}btn-padding-x: #{$btn-padding-x};
   --#{$prefix}btn-padding-y: #{$btn-padding-y};
@@ -137,8 +136,7 @@
 
 // scss-docs-start btn-variant-loops
 @each $color, $value in $theme-colors {
-  .btn-#{$color},
-  %btn-#{$color} {
+  .btn-#{$color} {
     @if $color == "light" {
       @include button-variant(
         $value,
@@ -164,8 +162,7 @@
 }
 
 @each $color, $value in $theme-colors {
-  .btn-outline-#{$color},
-  %btn-outline-#{$color} {
+  .btn-outline-#{$color} {
     @include button-outline-variant($value);
   }
 }
@@ -215,8 +212,7 @@
 // Button Sizes
 //
 
-.btn-lg,
-%btn-lg {
+.btn-lg {
   @include button-size(
     $btn-padding-y-lg,
     $btn-padding-x-lg,
@@ -225,8 +221,7 @@
   );
 }
 
-.btn-sm,
-%btn-sm {
+.btn-sm {
   @include button-size(
     $btn-padding-y-sm,
     $btn-padding-x-sm,
