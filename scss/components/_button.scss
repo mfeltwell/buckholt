@@ -150,7 +150,7 @@
     padding-right: calc(var(--#{$prefix-bh}button-padding-x) - $padding-01);
   }
 
-  &:has(.btn-icon):not(:has(.button-label), .btn-response) {
+  &:not(:has(.button-label), .btn-response) {
     --#{$prefix-bh}button-padding-y: #{$button-icon-padding-y};
     --#{$prefix-bh}button-padding-x: #{$button-icon-padding-x};
     width: var(--#{$prefix-bh}icon-button-width);

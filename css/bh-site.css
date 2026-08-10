@@ -5682,11 +5682,8 @@ fieldset:disabled .carousel-control-next {
 .carousel-control-next:last-child):not(:not(:has(.button-label)), .btn-response-lg) {
   padding-right: calc(var(--button-padding-x) - 0.25rem);
 }
-.btn:has(.btn-icon, .carousel-control-prev,
-.carousel-control-next):not(:has(.button-label), .btn-response), .carousel-control-prev:has(.btn-icon, .carousel-control-prev,
-.carousel-control-next):not(:has(.button-label), .btn-response),
-.carousel-control-next:has(.btn-icon, .carousel-control-prev,
-.carousel-control-next):not(:has(.button-label), .btn-response) {
+.btn:not(:has(.button-label), .btn-response), .carousel-control-prev:not(:has(.button-label), .btn-response),
+.carousel-control-next:not(:has(.button-label), .btn-response) {
   --button-padding-y: 0.25rem;
   --button-padding-x: 0.5rem;
   width: var(--icon-button-width);
