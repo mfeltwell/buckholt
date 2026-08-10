@@ -5904,12 +5904,8 @@ fieldset:disabled .carousel-control-next {
 .btn-combo-sm > .carousel-control-next .carousel-control-next:not(:not(:has(.button-label)) .btn-icon):not(:not(:has(.button-label)) .carousel-control-prev):not(:not(:has(.button-label)) .carousel-control-next) {
   min-width: 0.875rem;
 }
-.btn-sm:has(.btn-icon, .carousel-control-prev,
-.carousel-control-next):not(:has(.button-label)), .btn-combo-sm > .btn:has(.btn-icon, .carousel-control-prev,
-.carousel-control-next):not(:has(.button-label)), .btn-combo-sm > .carousel-control-prev:has(.btn-icon, .carousel-control-prev,
-.carousel-control-next):not(:has(.button-label)),
-.btn-combo-sm > .carousel-control-next:has(.btn-icon, .carousel-control-prev,
-.carousel-control-next):not(:has(.button-label)) {
+.btn-sm:not(:has(.button-label)), .btn-combo-sm > .btn:not(:has(.button-label)), .btn-combo-sm > .carousel-control-prev:not(:has(.button-label)),
+.btn-combo-sm > .carousel-control-next:not(:has(.button-label)) {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;

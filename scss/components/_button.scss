@@ -249,7 +249,7 @@
     min-width: 0.875rem;
   }
 
-  &:has(.btn-icon):not(:has(.button-label)) {
+  &:not(:has(.button-label)) {
     @include type($action, "02");
     width: $icon-button-width-sm;
     min-width: $icon-button-width-sm;
