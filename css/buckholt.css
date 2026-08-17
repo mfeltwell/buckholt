@@ -6396,7 +6396,7 @@ fieldset:disabled .carousel-control-next {
   white-space: nowrap;
   display: inline-flex;
   align-self: flex-start;
-  flex: 1 0 auto;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;

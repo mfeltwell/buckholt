@@ -19,7 +19,7 @@
   white-space: nowrap;
   display: inline-flex;
   align-self: flex-start;
-  flex: 1 0 auto;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
   @include transition($btn-transition);
