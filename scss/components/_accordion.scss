@@ -12,11 +12,11 @@
   --#{$prefix-bh}accordion-text: #{$accordion-text};
   --#{$prefix-bh}accordion-icon: #{$accordion-icon-svg};
   --#{$prefix-bh}accordion-icon-size: #{$accordion-icon-size};
-  --#{$prefix-bh}accordion-icon-spacing: #{$accordion-icon-spacing};
   --#{$prefix-bh}accordion-btn-padding-x: #{$accordion-button-padding-x};
   --#{$prefix-bh}accordion-btn-padding-y: #{$accordion-button-padding-y};
   --#{$prefix-bh}accordion-btn-padding-right: #{$accordion-button-padding-right};
   --#{$prefix-bh}accordion-btn-height: #{$accordion-button-height};
+  --#{$prefix-bh}accordion-btn-gap: #{$accordion-button-gap};
   --#{$prefix-bh}accordion-btn-background-active: #{$accordion-header-background-active};
   --#{$prefix-bh}accordion-btn-background-hover: #{$accordion-header-background-hover};
   --#{$prefix-bh}accordion-header-label: #{$accordion-header-label};
@@ -39,6 +39,7 @@
 .accordion-button {
   position: relative;
   display: flex;
+  column-gap: var(--#{$prefix-bh}accordion-btn-gap);
   align-items: center;
   width: 100%;
   min-height: var(--#{$prefix-bh}accordion-btn-height);
@@ -70,17 +71,12 @@
   // Accordion icon
   &::after {
     flex-shrink: 0;
-    width: calc(
-      var(--#{$prefix-bh}accordion-icon-size) +
-        var(--#{$prefix-bh}accordion-icon-spacing)
-    );
+    width: var(--#{$prefix-bh}accordion-icon-size);
     height: var(--#{$prefix-bh}accordion-icon-size);
     margin-left: auto;
-    padding-left: var(--#{$prefix-bh}accordion-icon-spacing);
     content: "";
     background-image: var(--#{$prefix-bh}accordion-icon);
     background-repeat: no-repeat;
-    background-position: right;
     background-size: var(--#{$prefix-bh}accordion-icon-size);
     @include transition(var(--#{$prefix}accordion-btn-icon-transition));
   }
