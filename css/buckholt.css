@@ -7159,7 +7159,7 @@ a.tag {
   flex: 0;
 }
 
-.col > .card .text-block:not(form .text-block),
+.row > .card .text-block:not(form .text-block),
 .carousel-item .card .text-block:not(form .text-block) {
   flex-grow: 1;
 }

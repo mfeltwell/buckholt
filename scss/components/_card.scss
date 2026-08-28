@@ -543,7 +543,7 @@
 // Rules for components inside cards
 //
 
-.col > .card .text-block:not(form .text-block),
+.row > .card .text-block:not(form .text-block),
 .carousel-item .card .text-block:not(form .text-block) {
   flex-grow: 1; // Allow text blocks to take up as much space as possible, ensuring footers are aligned to the bottom.
 }
