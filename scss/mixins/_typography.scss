@@ -36,7 +36,10 @@
 
 @mixin typography($type...) {
   @for $i from 0 to length($type) {
-    [class^="#{nth($type, $i + 1)}-"] {
+    $prefix: nth($type, $i + 1);
+
+    [class^="#{$prefix}-"],
+    [class*=" #{$prefix}-"] {
       @content;
     }
   }

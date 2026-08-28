@@ -7451,7 +7451,10 @@ a.tag {
   --icon-block-radius: 0.5rem;
 }
 
-[class^=title-] .icon, [class^=headline-] .icon, [class^=display-] .icon {
+[class^=title-] .icon,
+[class*=" title-"] .icon, [class^=headline-] .icon,
+[class*=" headline-"] .icon, [class^=display-] .icon,
+[class*=" display-"] .icon {
   margin-right: 0.5rem;
 }
 
