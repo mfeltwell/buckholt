@@ -9273,6 +9273,9 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.versatile-label .icon {
+  margin-right: 0.5rem;
+}
 
 .versatile-text {
   margin: 0;

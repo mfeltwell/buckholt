@@ -75,6 +75,10 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+
+  .icon {
+    margin-right: $icon-gap-right;
+  }
 }
 
 .versatile-text {
