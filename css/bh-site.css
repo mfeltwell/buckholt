@@ -7841,33 +7841,34 @@ a.tag {
   display: flex;
 }
 
-.submenu {
-  transform: translate(100%, 0);
-  top: 0;
-  right: -2px;
-  list-style-type: none;
-}
-.submenu [type=checkbox],
-.submenu [type=radio] {
+.menu [type=checkbox],
+.menu [type=radio] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.submenu [type=radio] ~ .menu-item,
-.submenu [type=checkbox] ~ .menu-item {
+.menu [type=radio] ~ .menu-item,
+.menu [type=checkbox] ~ .menu-item {
   padding-left: 2.25rem;
 }
-.submenu [type=radio] ~ .menu-item.active, .submenu [type=radio] ~ .menu-item:active,
-.submenu [type=checkbox] ~ .menu-item.active,
-.submenu [type=checkbox] ~ .menu-item:active {
+.menu [type=radio] ~ .menu-item.active, .menu [type=radio] ~ .menu-item:active,
+.menu [type=checkbox] ~ .menu-item.active,
+.menu [type=checkbox] ~ .menu-item:active {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='%23454545'%3e%3c!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license %28Commercial License%29 Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M441 103c9.4 9.4 9.4 24.6 0 33.9L177 401c-9.4 9.4-24.6 9.4-33.9 0L7 265c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l119 119L407 103c9.4-9.4 24.6-9.4 33.9 0z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: left 0.75rem center;
   background-size: auto 1rem;
 }
-.submenu [type=radio] ~ .menu-item:active,
-.submenu [type=checkbox] ~ .menu-item:active {
+.menu [type=radio] ~ .menu-item:active,
+.menu [type=checkbox] ~ .menu-item:active {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' fill='%230f40c5'%3e%3c!--!Font Awesome Pro 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license %28Commercial License%29 Copyright 2025 Fonticons, Inc.--%3e%3cpath d='M441 103c9.4 9.4 9.4 24.6 0 33.9L177 401c-9.4 9.4-24.6 9.4-33.9 0L7 265c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l119 119L407 103c9.4-9.4 24.6-9.4 33.9 0z'/%3e%3c/svg%3e");
+}
+
+.submenu {
+  transform: translate(100%, 0);
+  top: 0;
+  right: -2px;
+  list-style-type: none;
 }
 
 .submenu-toggle {

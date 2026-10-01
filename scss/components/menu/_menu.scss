@@ -181,14 +181,8 @@
   display: flex;
 }
 
-// Submenu
-.submenu {
-  @extend .menu-panel;
-  transform: translate(100%, 0);
-  top: 0;
-  right: -2px;
-  list-style-type: none;
-
+// checkable menu items (radio/checkbox)
+.menu {
   [type="checkbox"],
   [type="radio"] {
     position: absolute;
@@ -213,6 +207,15 @@
       background-image: escape-svg($menu-item-check-svg-active);
     }
   }
+}
+
+// Submenu
+.submenu {
+  @extend .menu-panel;
+  transform: translate(100%, 0);
+  top: 0;
+  right: -2px;
+  list-style-type: none;
 }
 
 .submenu-toggle {
