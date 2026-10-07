@@ -3,76 +3,79 @@
 //
 
 .avatar {
-    --#{$prefix-bh}avatar-size:         #{$avatar-size};
-    --#{$prefix-bh}avatar-background:   #{$avatar-background};
-    --#{$prefix-bh}avatar-border:       #{$avatar-border};
-    --#{$prefix-bh}avatar-border-width: null;
-    --#{$prefix-bh}avatar-text:         #{$avatar-text};
-    --#{$prefix-bh}avatar-icon-size:    #{$avatar-icon-size};
+  --#{$prefix-bh}avatar-size: #{$avatar-size};
+  --#{$prefix-bh}avatar-background: #{$avatar-background};
+  --#{$prefix-bh}avatar-border: #{$avatar-border};
+  --#{$prefix-bh}avatar-border-width: null;
+  --#{$prefix-bh}avatar-text: #{$avatar-text};
+  --#{$prefix-bh}avatar-icon-size: #{$avatar-icon-size};
 
+  background-color: var(--#{$prefix-bh}avatar-background);
+  border: var(--#{$prefix-bh}avatar-border-width) solid
+    var(--#{$prefix-bh}avatar-border);
+  border-radius: var(--border-radius-full);
+  color: var(--#{$prefix-bh}avatar-text);
+  height: var(--#{$prefix-bh}avatar-size);
+  width: var(--#{$prefix-bh}avatar-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include type($label, "03");
+  overflow: hidden;
+  text-transform: uppercase;
+  flex-shrink: 0;
 
-    background-color: var(--#{$prefix-bh}avatar-background);
-    border: var(--#{$prefix-bh}avatar-border-width) solid var(--#{$prefix-bh}avatar-border);
-    border-radius: var(--border-radius-full);
-    color: var(--#{$prefix-bh}avatar-text);
-    height: var(--#{$prefix-bh}avatar-size);
-    width: var(--#{$prefix-bh}avatar-size);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include type($label, "03");
-    overflow: hidden;
-    text-transform: uppercase;
-    flex-shrink: 0;
+  &:has(img) {
+    --#{$prefix-bh}avatar-background: transparent;
+  }
 
-    &:has(img) {
-        --#{$prefix-bh}avatar-background:   transparent;
-    }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 
-    img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    // Expressive colours
-    &.expressive-dark {
-        --#{$prefix-bh}avatar-text:            #{$text-light};
-        --#{$prefix-bh}avatar-background:      #{$expressive-rich};
-    }
+  // Expressive colours
+  &.expressive-dark {
+    --#{$prefix-bh}avatar-text: #{$text-light};
+    --#{$prefix-bh}avatar-background: #{$expressive-rich};
+  }
 }
 
 .avatar-icon {
-    font-size: var(--#{$prefix-bh}avatar-icon-size);
+  font-size: var(--#{$prefix-bh}avatar-icon-size);
 }
 
 .avatar-sm {
-    --#{$prefix-bh}avatar-size:         #{$avatar-size-sm};
-    --#{$prefix-bh}avatar-icon-size:    #{$avatar-icon-size-sm};
+  --#{$prefix-bh}avatar-size: #{$avatar-size-sm};
+  --#{$prefix-bh}avatar-icon-size: #{$avatar-icon-size-sm};
 
-    @include type($label, "02");
+  @include type($label, "02");
 }
 
 .avatar-xs {
-    --#{$prefix-bh}avatar-size:         #{$avatar-size-xs};
-    --#{$prefix-bh}avatar-icon-size:    #{$avatar-icon-size-xs};
+  --#{$prefix-bh}avatar-size: #{$avatar-size-xs};
+  --#{$prefix-bh}avatar-icon-size: #{$avatar-icon-size-xs};
 
-    @include type($label, "01");
+  @include type($label, "01");
 }
 
 // Avatar set - Check out set.scss for generic set rules.
 .avatar-set {
-    --set-gap: 0;
-    --avatar-set-overlap: #{$avatar-set-overlap};
+  --set-gap: 0;
+  --avatar-set-overlap: #{$avatar-set-overlap};
+  --avatar-set-shadow: #{$avatar-set-shadow};
 
-    .avatar {
-        &:has(img) {
-            --#{$prefix-bh}avatar-border:   #{$avatar-img-border};
-            --#{$prefix-bh}avatar-border-width: #{$avatar-border-width};
-        }
+  .avatar {
+    box-shadow: var(--avatar-set-shadow);
+
+    &:has(img) {
+      --#{$prefix-bh}avatar-border: #{$avatar-img-border};
+      --#{$prefix-bh}avatar-border-width: #{$avatar-border-width};
     }
-}
 
-.avatar-set .avatar:not(:first-child) {
-    margin-left: calc(var(--avatar-set-overlap) * -1);
+    &:not(:first-child) {
+      margin-left: calc(var(--avatar-set-overlap) * -1);
+    }
+  }
 }

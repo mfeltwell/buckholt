@@ -7975,12 +7975,15 @@ a.tag {
 .avatar-set {
   --set-gap: 0;
   --avatar-set-overlap: 0.75rem;
+  --avatar-set-shadow: 0 1px 3px 0 rgba(var(--shadow-colour), 0.1), 0 1px 2px -1px rgba(var(--shadow-colour), 0.1);
+}
+.avatar-set .avatar {
+  box-shadow: var(--avatar-set-shadow);
 }
 .avatar-set .avatar:has(img) {
   --avatar-border: #ffffff;
   --avatar-border-width: 0.125rem;
 }
-
 .avatar-set .avatar:not(:first-child) {
   margin-left: calc(var(--avatar-set-overlap) * -1);
 }
