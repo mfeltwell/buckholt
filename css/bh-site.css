@@ -6612,6 +6612,10 @@ a.tag {
   flex-direction: column;
 }
 
+.nav-xs {
+  --nav-link-height: 2rem;
+}
+
 .nav-sm {
   --nav-link-height: 2.75rem;
 }

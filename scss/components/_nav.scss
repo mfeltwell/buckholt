@@ -116,6 +116,10 @@
 }
 
 // Nav size variants
+.nav-xs {
+  --#{$prefix-bh}nav-link-height: #{$nav-link-height-xs};
+}
+
 .nav-sm {
   --#{$prefix-bh}nav-link-height: #{$nav-link-height-sm};
 }
