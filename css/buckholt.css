@@ -6816,10 +6816,39 @@ a.tag {
   --nav-sidebar-padding-y: 0.5rem;
   --nav-sidebar-padding-x: 0.5rem;
   --nav-sidebar-background: var(--ui-overlay-02);
+  --nav-sidebar-content-gap: 0.5rem;
+  --nav-sidebar-header-gap: 1.5rem;
+  --nav-sidebar-body-gap: 0.5rem;
+  --nav-sidebar-primary-radius: 1rem;
+  --nav-sidebar-primary-border-width: 1px;
+  --nav-sidebar-primary-border: var(--ui-border-03);
+  --nav-sidebar-primary-padding-y: 1rem;
+  --nav-sidebar-primary-padding-x: 1rem;
+  --nav-sidebar-primary-background: var(--ui-background-01);
   padding: var(--nav-sidebar-padding-y) var(--nav-sidebar-padding-x);
   background-color: var(--nav-sidebar-background);
   border-radius: var(--nav-sidebar-radius);
   border: var(--nav-sidebar-border-width) solid var(--nav-sidebar-border);
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nav-sidebar-content-gap);
+}
+
+.nav-sidebar-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nav-sidebar-header-gap);
+}
+
+.nav-sidebar-body {
+  display: flex;
+  flex-direction: row;
+  gap: var(--nav-sidebar-body-gap);
 }
 
 .card {

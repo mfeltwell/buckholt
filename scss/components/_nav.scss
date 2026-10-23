@@ -442,6 +442,16 @@
   --#{$prefix-bh}nav-sidebar-padding-y: #{$nav-sidebar-padding-y};
   --#{$prefix-bh}nav-sidebar-padding-x: #{$nav-sidebar-padding-x};
   --#{$prefix-bh}nav-sidebar-background: #{$nav-sidebar-background};
+  --#{$prefix-bh}nav-sidebar-content-gap: #{$nav-sidebar-content-gap};
+  --#{$prefix-bh}nav-sidebar-header-gap: #{$nav-sidebar-header-gap};
+  --#{$prefix-bh}nav-sidebar-body-gap: #{$nav-sidebar-body-gap};
+
+  --#{$prefix-bh}nav-sidebar-primary-radius: #{$nav-sidebar-primary-radius};
+  --#{$prefix-bh}nav-sidebar-primary-border-width: #{$nav-sidebar-primary-border-width};
+  --#{$prefix-bh}nav-sidebar-primary-border: #{$nav-sidebar-primary-border};
+  --#{$prefix-bh}nav-sidebar-primary-padding-y: #{$nav-sidebar-primary-padding-y};
+  --#{$prefix-bh}nav-sidebar-primary-padding-x: #{$nav-sidebar-primary-padding-x};
+  --#{$prefix-bh}nav-sidebar-primary-background: #{$nav-sidebar-primary-background};
 
   padding: var(--#{$prefix-bh}nav-sidebar-padding-y)
     var(--#{$prefix-bh}nav-sidebar-padding-x);
@@ -449,13 +459,30 @@
   border-radius: var(--#{$prefix-bh}nav-sidebar-radius);
   border: var(--#{$prefix-bh}nav-sidebar-border-width) solid
     var(--#{$prefix-bh}nav-sidebar-border);
+  display: flex;
+  flex-direction: column;
 }
 
 .nav-sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--#{$prefix-bh}nav-sidebar-content-gap);
 }
 
 .nav-sidebar-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--#{$prefix-bh}nav-sidebar-header-gap);
 }
 
 .nav-sidebar-body {
+  display: flex;
+  flex-direction: row;
+  gap: var(--#{$prefix-bh}nav-sidebar-body-gap);
+}
+
+.nav-sidebar-primary {
+}
+
+.nav-sidebar-secondary {
 }
