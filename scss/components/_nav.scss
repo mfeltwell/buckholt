@@ -433,3 +433,27 @@
     display: flex;
   }
 }
+
+// Navigation sidebar
+.nav-sidebar {
+  --#{$prefix-bh}nav-sidebar-radius: #{$nav-sidebar-radius};
+  --#{$prefix-bh}nav-sidebar-border-width: #{$nav-sidebar-border-width};
+  --#{$prefix-bh}nav-sidebar-border: #{$nav-sidebar-border};
+  --#{$prefix-bh}nav-sidebar-padding: #{$nav-sidebar-padding};
+  --#{$prefix-bh}nav-sidebar-background: #{$nav-sidebar-background};
+
+  padding: var(--#{$prefix-bh}nav-sidebar-padding);
+  background-color: var(--#{$prefix-bh}nav-sidebar-background);
+  border-radius: var(--#{$prefix-bh}nav-sidebar-radius);
+  border: var(--#{$prefix-bh}nav-sidebar-border-width) solid
+    var(--#{$prefix-bh}nav-sidebar-border);
+}
+
+.nav-sidebar-content {
+}
+
+.nav-sidebar-header {
+}
+
+.nav-sidebar-body {
+}

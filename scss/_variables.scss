@@ -1425,6 +1425,14 @@ $nav-tabs-content-padding-y: 0 !default;
 $nav-tabs-content-radius: 0 !default;
 $nav-tabs-content-background: $transparent !default;
 
+// Nav sidebar
+$nav-sidebar-padding-y: $padding-05 !default;
+$nav-sidebar-padding-x: $padding-05 !default;
+$nav-sidebar-radius: $border-radius-lg !default;
+$nav-sidebar-border-width: $border-width !default;
+$nav-sidebar-border: var(--ui-border-02) !default;
+$nav-sidebar-background: var(--ui-background-01) !default;
+
 // Card _________________________________
 $card-padding-y: $padding-08 !default;
 $card-padding-x: $padding-08 !default;
