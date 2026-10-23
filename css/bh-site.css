@@ -6825,6 +6825,7 @@ a.tag {
   --nav-sidebar-primary-padding-y: 1rem;
   --nav-sidebar-primary-padding-x: 1rem;
   --nav-sidebar-primary-background: var(--ui-background-01);
+  --nav-sidebar-primary-gap: 1rem;
   padding: var(--nav-sidebar-padding-y) var(--nav-sidebar-padding-x);
   background-color: var(--nav-sidebar-background);
   border-radius: var(--nav-sidebar-radius);
@@ -6849,6 +6850,15 @@ a.tag {
   display: flex;
   flex-direction: row;
   gap: var(--nav-sidebar-body-gap);
+}
+
+.nav-sidebar-primary {
+  padding: var(--nav-sidebar-primary-padding-y) var(--nav-sidebar-primary-padding-x);
+  background-color: var(--nav-sidebar-primary-background);
+  border-radius: var(--nav-sidebar-primary-radius);
+  border: var(--nav-sidebar-primary-border-width) solid var(--nav-sidebar-primary-border);
+  display: flex;
+  flex-direction: column;
 }
 
 .card {

@@ -452,6 +452,7 @@
   --#{$prefix-bh}nav-sidebar-primary-padding-y: #{$nav-sidebar-primary-padding-y};
   --#{$prefix-bh}nav-sidebar-primary-padding-x: #{$nav-sidebar-primary-padding-x};
   --#{$prefix-bh}nav-sidebar-primary-background: #{$nav-sidebar-primary-background};
+  --#{$prefix-bh}nav-sidebar-primary-gap: #{$nav-sidebar-primary-gap};
 
   padding: var(--#{$prefix-bh}nav-sidebar-padding-y)
     var(--#{$prefix-bh}nav-sidebar-padding-x);
@@ -482,6 +483,14 @@
 }
 
 .nav-sidebar-primary {
+  padding: var(--#{$prefix-bh}nav-sidebar-primary-padding-y)
+    var(--#{$prefix-bh}nav-sidebar-primary-padding-x);
+  background-color: var(--#{$prefix-bh}nav-sidebar-primary-background);
+  border-radius: var(--#{$prefix-bh}nav-sidebar-primary-radius);
+  border: var(--#{$prefix-bh}nav-sidebar-primary-border-width) solid
+    var(--#{$prefix-bh}nav-sidebar-primary-border);
+  display: flex;
+  flex-direction: column;
 }
 
 .nav-sidebar-secondary {
