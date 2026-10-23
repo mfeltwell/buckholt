@@ -439,10 +439,12 @@
   --#{$prefix-bh}nav-sidebar-radius: #{$nav-sidebar-radius};
   --#{$prefix-bh}nav-sidebar-border-width: #{$nav-sidebar-border-width};
   --#{$prefix-bh}nav-sidebar-border: #{$nav-sidebar-border};
-  --#{$prefix-bh}nav-sidebar-padding: #{$nav-sidebar-padding};
+  --#{$prefix-bh}nav-sidebar-padding-y: #{$nav-sidebar-padding-y};
+  --#{$prefix-bh}nav-sidebar-padding-x: #{$nav-sidebar-padding-x};
   --#{$prefix-bh}nav-sidebar-background: #{$nav-sidebar-background};
 
-  padding: var(--#{$prefix-bh}nav-sidebar-padding);
+  padding: var(--#{$prefix-bh}nav-sidebar-padding-y)
+    var(--#{$prefix-bh}nav-sidebar-padding-x);
   background-color: var(--#{$prefix-bh}nav-sidebar-background);
   border-radius: var(--#{$prefix-bh}nav-sidebar-radius);
   border: var(--#{$prefix-bh}nav-sidebar-border-width) solid

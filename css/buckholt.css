@@ -6809,6 +6809,19 @@ a.tag {
   display: flex;
 }
 
+.nav-sidebar {
+  --nav-sidebar-radius: 1.5rem;
+  --nav-sidebar-border-width: 1px;
+  --nav-sidebar-border: var(--ui-border-03);
+  --nav-sidebar-padding-y: 0.5rem;
+  --nav-sidebar-padding-x: 0.5rem;
+  --nav-sidebar-background: var(--ui-overlay-02);
+  padding: var(--nav-sidebar-padding-y) var(--nav-sidebar-padding-x);
+  background-color: var(--nav-sidebar-background);
+  border-radius: var(--nav-sidebar-radius);
+  border: var(--nav-sidebar-border-width) solid var(--nav-sidebar-border);
+}
+
 .card {
   --card-padding-y: 2rem;
   --card-padding-x: 2rem;
