@@ -512,12 +512,21 @@
 }
 
 // Nav tree
-
 .nav-tree {
+  --#{$prefix-bh}nav-tree-gap: #{$nav-tree-gap};
+  --#{$prefix-bh}nav-tree-label-padding-y: #{$nav-tree-label-padding-y};
+  --#{$prefix-bh}nav-tree-label-padding-x: #{$nav-tree-label-padding-x};
+  --#{$prefix-bh}nav-tree-label-spacing: #{$nav-tree-label-spacing};
+  --#{$prefix-bh}nav-tree-items-padding-start: #{$nav-tree-items-padding-start};
+
   .nav {
     flex-direction: column;
   }
 
-  .nav-item {
+  .nav-tree-items {
+    padding-left: var(--#{$prefix-bh}nav-tree-items-padding-start);
   }
+}
+
+.nav-tree-label {
 }

@@ -6876,9 +6876,20 @@ a.tag {
   flex-direction: column;
 }
 
+.nav-tree {
+  --nav-tree-gap: 0.25rem;
+  --nav-tree-label-padding-y: 0.25rem;
+  --nav-tree-label-padding-x: 0.5rem;
+  --nav-tree-label-spacing: 0.5rem;
+  --nav-tree-items-padding-start: 1.5rem;
+}
 .nav-tree .nav {
   flex-direction: column;
 }
+.nav-tree .nav-tree-items {
+  padding-left: var(--nav-tree-items-padding-start);
+}
+
 .card {
   --card-padding-y: 2rem;
   --card-padding-x: 2rem;
