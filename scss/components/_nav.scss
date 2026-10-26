@@ -522,6 +522,10 @@
   --#{$prefix-bh}nav-tree-items-vr-width: #{$nav-tree-items-vr-width};
   --#{$prefix-bh}nav-tree-items-vr-colour: #{$nav-tree-items-vr-colour};
 
+  display: flex;
+  flex-direction: column;
+  gap: var(--#{$prefix-bh}nav-tree-gap);
+
   .nav {
     flex-direction: column;
   }

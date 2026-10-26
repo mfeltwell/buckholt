@@ -6885,6 +6885,9 @@ a.tag {
   --nav-tree-items-padding-start: 1.5rem;
   --nav-tree-items-vr-width: 1px;
   --nav-tree-items-vr-colour: #dadada;
+  display: flex;
+  flex-direction: column;
+  gap: var(--nav-tree-gap);
 }
 .nav-tree .nav {
   flex-direction: column;
