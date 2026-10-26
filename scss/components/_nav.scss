@@ -529,4 +529,9 @@
 }
 
 .nav-tree-label {
+  padding: var(--#{$prefix-bh}nav-tree-label-padding-y)
+    var(--#{$prefix-bh}nav-tree-label-padding-x);
+  display: flex;
+  align-items: center;
+  gap: var(--#{$prefix-bh}nav-tree-label-spacing);
 }

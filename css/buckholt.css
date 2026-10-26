@@ -6890,6 +6890,13 @@ a.tag {
   padding-left: var(--nav-tree-items-padding-start);
 }
 
+.nav-tree-label {
+  padding: var(--nav-tree-label-padding-y) var(--nav-tree-label-padding-x);
+  display: flex;
+  align-items: center;
+  gap: var(--nav-tree-label-spacing);
+}
+
 .card {
   --card-padding-y: 2rem;
   --card-padding-x: 2rem;
