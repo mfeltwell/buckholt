@@ -6911,6 +6911,10 @@ a.tag {
   display: flex;
   align-items: center;
   gap: var(--nav-tree-label-spacing);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.25px;
 }
 
 .card {

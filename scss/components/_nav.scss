@@ -555,4 +555,5 @@
   display: flex;
   align-items: center;
   gap: var(--#{$prefix-bh}nav-tree-label-spacing);
+  @include type($label, "02");
 }
