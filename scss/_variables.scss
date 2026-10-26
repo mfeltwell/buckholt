@@ -1365,6 +1365,8 @@ $nav-link-focus-ring: $focus-ring !default;
 
 //Nav link sizes
 $nav-link-height-xs: 2rem !default;
+$nav-link-radius-xs: $border-radius-sm !default;
+
 $nav-link-height-sm: 2.5rem !default;
 $nav-link-height-lg: 3.5rem !default;
 
@@ -1449,6 +1451,8 @@ $nav-sidebar-primary-gap: $spacer-04 !default;
 // Nav tree
 $nav-tree-gap: $spacer-02 !default;
 $nav-tree-items-padding-start: $padding-07 !default;
+$nav-tree-items-vr-width: $border-width !default;
+$nav-tree-items-vr-colour: $hr-color !default;
 $nav-tree-label-padding-y: $padding-01 !default;
 $nav-tree-label-padding-x: $padding-03 !default;
 $nav-tree-label-spacing: $spacer-03 !default;

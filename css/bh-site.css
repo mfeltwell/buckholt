@@ -6614,6 +6614,7 @@ a.tag {
 
 .nav-xs {
   --nav-link-height: 2rem;
+  --nav-link-radius: 0.375rem;
 }
 .nav-xs .nav-link {
   font-size: 0.875rem;
@@ -6882,12 +6883,24 @@ a.tag {
   --nav-tree-label-padding-x: 0.5rem;
   --nav-tree-label-spacing: 0.5rem;
   --nav-tree-items-padding-start: 1.5rem;
+  --nav-tree-items-vr-width: 1px;
+  --nav-tree-items-vr-colour: #dadada;
 }
 .nav-tree .nav {
   flex-direction: column;
 }
 .nav-tree .nav-tree-items {
   padding-left: var(--nav-tree-items-padding-start);
+  position: relative;
+}
+.nav-tree .nav-tree-items::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--nav-tree-label-padding-x)calc(var(--fa-width, 1.25em) * 0.5);
+  height: 100%;
+  width: var(--nav-tree-items-vr-width);
+  background-color: var(--nav-tree-items-vr-colour);
 }
 
 .nav-tree-label {
