@@ -6818,6 +6818,8 @@ a.tag {
   --nav-sidebar-background: var(--ui-overlay-02);
   --nav-sidebar-content-gap: 0.5rem;
   --nav-sidebar-header-gap: 1.5rem;
+  --nav-sidebar-header-padding-y: 0.5rem;
+  --nav-sidebar-header-padding-x: 0.5rem;
   --nav-sidebar-body-gap: 0.5rem;
   --nav-sidebar-primary-radius: 1rem;
   --nav-sidebar-primary-border-width: 1px;
@@ -6842,8 +6844,15 @@ a.tag {
 
 .nav-sidebar-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   gap: var(--nav-sidebar-header-gap);
+  padding: var(--nav-sidebar-header-padding-y) var(--nav-sidebar-header-padding-x);
+}
+.nav-sidebar-header .btn, .nav-sidebar-header .carousel-control-prev,
+.nav-sidebar-header .carousel-control-next {
+  align-self: center;
 }
 
 .nav-sidebar-body {

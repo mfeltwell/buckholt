@@ -1427,13 +1427,15 @@ $nav-tabs-content-background: $transparent !default;
 
 // Nav sidebar
 $nav-sidebar-padding-y: $padding-03 !default;
-$nav-sidebar-padding-x: $padding-03 !default;
+$nav-sidebar-padding-x: $nav-sidebar-padding-y !default;
 $nav-sidebar-radius: $border-radius-xl !default;
 $nav-sidebar-border-width: $border-width !default;
 $nav-sidebar-border: var(--ui-border-03) !default;
 $nav-sidebar-background: var(--ui-overlay-02) !default;
 $nav-sidebar-content-gap: $spacer-03 !default;
 $nav-sidebar-header-gap: $spacer-05 !default;
+$nav-sidebar-header-padding-y: $padding-03 !default;
+$nav-sidebar-header-padding-x: $nav-sidebar-header-padding-y !default;
 $nav-sidebar-body-gap: $spacer-03 !default;
 
 $nav-sidebar-primary-radius: $border-radius-lg !default;

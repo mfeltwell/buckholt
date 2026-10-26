@@ -444,6 +444,9 @@
   --#{$prefix-bh}nav-sidebar-background: #{$nav-sidebar-background};
   --#{$prefix-bh}nav-sidebar-content-gap: #{$nav-sidebar-content-gap};
   --#{$prefix-bh}nav-sidebar-header-gap: #{$nav-sidebar-header-gap};
+  --#{$prefix-bh}nav-sidebar-header-padding-y: #{$nav-sidebar-header-padding-y};
+  --#{$prefix-bh}nav-sidebar-header-padding-x: #{$nav-sidebar-header-padding-x};
+
   --#{$prefix-bh}nav-sidebar-body-gap: #{$nav-sidebar-body-gap};
 
   --#{$prefix-bh}nav-sidebar-primary-radius: #{$nav-sidebar-primary-radius};
@@ -472,8 +475,16 @@
 
 .nav-sidebar-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   gap: var(--#{$prefix-bh}nav-sidebar-header-gap);
+  padding: var(--#{$prefix-bh}nav-sidebar-header-padding-y)
+    var(--#{$prefix-bh}nav-sidebar-header-padding-x);
+
+  .btn {
+    align-self: center;
+  }
 }
 
 .nav-sidebar-body {
