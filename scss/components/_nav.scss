@@ -118,6 +118,10 @@
 // Nav size variants
 .nav-xs {
   --#{$prefix-bh}nav-link-height: #{$nav-link-height-xs};
+
+  .nav-link {
+    @include type($action, "01");
+  }
 }
 
 .nav-sm {
@@ -505,4 +509,15 @@
 }
 
 .nav-sidebar-secondary {
+}
+
+// Nav tree
+
+.nav-tree {
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav-item {
+  }
 }

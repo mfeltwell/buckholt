@@ -6615,9 +6615,15 @@ a.tag {
 .nav-xs {
   --nav-link-height: 2rem;
 }
+.nav-xs .nav-link {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+}
 
 .nav-sm {
-  --nav-link-height: 2.75rem;
+  --nav-link-height: 2.5rem;
 }
 
 .nav-lg {
@@ -6870,6 +6876,9 @@ a.tag {
   flex-direction: column;
 }
 
+.nav-tree .nav {
+  flex-direction: column;
+}
 .card {
   --card-padding-y: 2rem;
   --card-padding-x: 2rem;
