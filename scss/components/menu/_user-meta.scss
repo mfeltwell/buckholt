@@ -11,13 +11,17 @@
   color: var(--text-muted);
 
   .user-meta-first {
-    @include type($label, "02");
+    @include type($label, "03");
     color: var(--text-primary);
   }
 }
 
 .user-meta-compact {
   padding: 0;
+
+  .user-meta-first {
+    @include type($label, "02");
+  }
 }
 
 .user-meta-body {
