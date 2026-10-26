@@ -6897,7 +6897,7 @@ a.tag {
   content: "";
   position: absolute;
   top: 0;
-  left: var(--nav-tree-label-padding-x)calc(var(--fa-width, 1.25em) * 0.5);
+  left: calc(var(--nav-tree-label-padding-x) + var(--fa-width, 1.25em) * 0.5);
   height: 100%;
   width: var(--nav-tree-items-vr-width);
   background-color: var(--nav-tree-items-vr-colour);
