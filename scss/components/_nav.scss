@@ -77,9 +77,9 @@
   border: var(--#{$prefix-bh}nav-link-border-width) solid
     var(--#{$prefix-bh}nav-link-border);
   border-radius: var(--#{$prefix-bh}nav-link-radius);
-  @include transition($nav-link-transition);
   min-height: var(--#{$prefix-bh}nav-link-height);
   white-space: nowrap;
+  @include transition($nav-link-transition);
 
   &:not(:has(.nav-link-label)) {
     justify-content: center;

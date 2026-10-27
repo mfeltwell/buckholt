@@ -6575,16 +6575,14 @@ a.tag {
   background: var(--nav-link-background);
   border: var(--nav-link-border-width) solid var(--nav-link-border);
   border-radius: var(--nav-link-radius);
+  min-height: var(--nav-link-height);
+  white-space: nowrap;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
     transition: none;
   }
-}
-.nav-link {
-  min-height: var(--nav-link-height);
-  white-space: nowrap;
 }
 .nav-link:not(:has(.nav-link-label)) {
   justify-content: center;
