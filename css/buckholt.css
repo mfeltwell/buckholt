@@ -6893,7 +6893,7 @@ a.tag {
   --nav-tree-label-icon-transition: transform 0.2s ease-in-out;
   --nav-tree-label-background: transparent;
   --nav-tree-label-border: transparent;
-  --nav-tree-label-border-width: 0;
+  --nav-tree-label-border-width: 0px;
   display: flex;
   flex-direction: column;
   gap: var(--nav-tree-gap);
