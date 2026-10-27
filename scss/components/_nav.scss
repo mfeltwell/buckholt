@@ -521,11 +521,13 @@
   display: flex;
   flex-direction: column;
 
-  &:not(:has(~ .nav-sidebar-secondary)) {
+  &:not(:has(~ .nav-sidebar-secondary:not([hidden]))) {
+    flex: 1 1 auto;
+  }
+
+  &:has(~ .nav-sidebar-secondary) {
     --#{$prefix-bh}nav-sidebar-primary-padding-y: #{$nav-sidebar-primary-padding-y-collapsed};
     --#{$prefix-bh}nav-sidebar-primary-padding-x: #{$nav-sidebar-primary-padding-x-collapsed};
-
-    flex: 1 1 auto;
   }
 }
 
