@@ -459,6 +459,9 @@
   --#{$prefix-bh}nav-sidebar-primary-padding-x: #{$nav-sidebar-primary-padding-x};
   --#{$prefix-bh}nav-sidebar-primary-background: #{$nav-sidebar-primary-background};
   --#{$prefix-bh}nav-sidebar-primary-gap: #{$nav-sidebar-primary-gap};
+  --#{$prefix-bh}nav-sidebar-secondary-gap: #{$nav-sidebar-secondary-gap};
+  --#{$prefix-bh}nav-sidebar-secondary-padding-y: #{$nav-sidebar-secondary-padding-y};
+  --#{$prefix-bh}nav-sidebar-secondary-padding-x: #{$nav-sidebar-secondary-padding-x};
 
   padding: var(--#{$prefix-bh}nav-sidebar-padding-y)
     var(--#{$prefix-bh}nav-sidebar-padding-x);
@@ -509,6 +512,19 @@
 }
 
 .nav-sidebar-secondary {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: var(--#{$prefix-bh}nav-sidebar-scondary-gap);
+  padding: var(--#{$prefix-bh}nav-sidebar-secondary-padding-y)
+    var(--#{$prefix-bh}nav-sidebar-secondary-padding-x);
+
+  .nav-sidebar-secondary-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 // Nav tree
