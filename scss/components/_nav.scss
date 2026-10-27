@@ -447,6 +447,7 @@
 
 // Navigation sidebar
 .nav-sidebar {
+  --#{$prefix-bh}nav-sidebar-width: #{$nav-sidebar-width};
   --#{$prefix-bh}nav-sidebar-radius: #{$nav-sidebar-radius};
   --#{$prefix-bh}nav-sidebar-border-width: #{$nav-sidebar-border-width};
   --#{$prefix-bh}nav-sidebar-border: #{$nav-sidebar-border};
@@ -480,6 +481,8 @@
     var(--#{$prefix-bh}nav-sidebar-border);
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
+  max-width: var(--#{$prefix-bh}nav-sidebar-width);
 }
 
 .nav-sidebar-content {
@@ -517,13 +520,11 @@
     var(--#{$prefix-bh}nav-sidebar-primary-border);
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
 }
 
 .nav-sidebar-secondary {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   gap: var(--#{$prefix-bh}nav-sidebar-secondary-gap);
   padding: var(--#{$prefix-bh}nav-sidebar-secondary-padding-y)
     var(--#{$prefix-bh}nav-sidebar-secondary-padding-x);

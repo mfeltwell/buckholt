@@ -6820,6 +6820,7 @@ a.tag {
 }
 
 .nav-sidebar {
+  --nav-sidebar-width: 20rem;
   --nav-sidebar-radius: 1.5rem;
   --nav-sidebar-border-width: 1px;
   --nav-sidebar-border: var(--ui-border-03);
@@ -6850,6 +6851,8 @@ a.tag {
   border: var(--nav-sidebar-border-width) solid var(--nav-sidebar-border);
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
+  max-width: var(--nav-sidebar-width);
 }
 
 .nav-sidebar-content {
@@ -6884,13 +6887,11 @@ a.tag {
   border: var(--nav-sidebar-primary-border-width) solid var(--nav-sidebar-primary-border);
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
 }
 
 .nav-sidebar-secondary {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   gap: var(--nav-sidebar-secondary-gap);
   padding: var(--nav-sidebar-secondary-padding-y) var(--nav-sidebar-secondary-padding-x);
 }
