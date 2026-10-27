@@ -520,14 +520,62 @@
     var(--#{$prefix-bh}nav-sidebar-primary-border);
   display: flex;
   flex-direction: column;
+  flex: 0 0 auto;
+  width: 302px;
 
-  &:not(:has(~ .nav-sidebar-secondary:not([hidden]))) {
-    flex: 1 1 auto;
+  // Default views
+  > .nav-sidebar-primary-body {
+    > .nav-sidebar-primary-expanded {
+      display: block;
+    }
+
+    > .nav-sidebar-primary-compact {
+      display: none;
+    }
   }
 
+  // Fill the available body width when no secondary is shown
+  &:not(:has(~ .nav-sidebar-secondary:not([hidden]))) {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  // Compact primary when a secondary is shown
   &:has(~ .nav-sidebar-secondary:not([hidden])) {
     --#{$prefix-bh}nav-sidebar-primary-padding-y: #{$nav-sidebar-primary-padding-y-collapsed};
     --#{$prefix-bh}nav-sidebar-primary-padding-x: #{$nav-sidebar-primary-padding-x-collapsed};
+
+    width: 58px;
+
+    > .nav-sidebar-primary-body {
+      > .nav-sidebar-primary-expanded {
+        display: none;
+      }
+
+      > .nav-sidebar-primary-compact {
+        display: block;
+      }
+    }
+
+    // Expand over the secondary without moving it
+    &:hover {
+      z-index: 1;
+      width: 302px;
+
+      margin-inline-end: calc(
+        var(--#{$prefix-bh}58px) - var(--#{$prefix-bh}302px)
+      );
+
+      > .nav-sidebar-primary-body {
+        > .nav-sidebar-primary-expanded {
+          display: block;
+        }
+
+        > .nav-sidebar-primary-compact {
+          display: none;
+        }
+      }
+    }
   }
 }
 

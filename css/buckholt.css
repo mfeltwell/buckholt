@@ -6887,13 +6887,40 @@ a.tag {
   border: var(--nav-sidebar-primary-border-width) solid var(--nav-sidebar-primary-border);
   display: flex;
   flex-direction: column;
+  flex: 0 0 auto;
+  width: 302px;
+}
+.nav-sidebar-primary > .nav-sidebar-primary-body > .nav-sidebar-primary-expanded {
+  display: block;
+}
+.nav-sidebar-primary > .nav-sidebar-primary-body > .nav-sidebar-primary-compact {
+  display: none;
 }
 .nav-sidebar-primary:not(:has(~ .nav-sidebar-secondary:not([hidden]))) {
   flex: 1 1 auto;
+  min-width: 0;
 }
 .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) {
   --nav-sidebar-primary-padding-y: 0.5rem;
   --nav-sidebar-primary-padding-x: 0.5rem;
+  width: 58px;
+}
+.nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) > .nav-sidebar-primary-body > .nav-sidebar-primary-expanded {
+  display: none;
+}
+.nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) > .nav-sidebar-primary-body > .nav-sidebar-primary-compact {
+  display: block;
+}
+.nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])):hover {
+  z-index: 1;
+  width: 302px;
+  margin-inline-end: calc(var(--58px) - var(--302px));
+}
+.nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])):hover > .nav-sidebar-primary-body > .nav-sidebar-primary-expanded {
+  display: block;
+}
+.nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])):hover > .nav-sidebar-primary-body > .nav-sidebar-primary-compact {
+  display: none;
 }
 
 .nav-sidebar-secondary {
