@@ -462,6 +462,9 @@
   --#{$prefix-bh}nav-sidebar-secondary-gap: #{$nav-sidebar-secondary-gap};
   --#{$prefix-bh}nav-sidebar-secondary-padding-y: #{$nav-sidebar-secondary-padding-y};
   --#{$prefix-bh}nav-sidebar-secondary-padding-x: #{$nav-sidebar-secondary-padding-x};
+  --#{$prefix-bh}nav-sidebar-secondary-header-padding-y: #{$nav-sidebar-secondary-header-padding-y};
+  --#{$prefix-bh}nav-sidebar-secondary-header-padding-x: #{$nav-sidebar-secondary-header-padding-x};
+  --#{$prefix-bh}nav-sidebar-secondary-header-gap: #{$nav-sidebar-secondary-header-gap};
 
   padding: var(--#{$prefix-bh}nav-sidebar-padding-y)
     var(--#{$prefix-bh}nav-sidebar-padding-x);
@@ -524,6 +527,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    gap: var(--#{$prefix-bh}nav-sidebar-secondary-header-gap);
+    padding: var(--#{$prefix-bh}nav-sidebar-secondary-header-padding-y)
+      var(--#{$prefix-bh}nav-sidebar-secondary-header-padding-x);
   }
 }
 

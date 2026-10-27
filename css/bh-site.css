@@ -6838,6 +6838,9 @@ a.tag {
   --nav-sidebar-secondary-gap: 1rem;
   --nav-sidebar-secondary-padding-y: 0.5rem;
   --nav-sidebar-secondary-padding-x: 0;
+  --nav-sidebar-secondary-header-padding-y: 0;
+  --nav-sidebar-secondary-header-padding-x: 0.5rem;
+  --nav-sidebar-secondary-header-gap: 0.5rem;
   padding: var(--nav-sidebar-padding-y) var(--nav-sidebar-padding-x);
   background-color: var(--nav-sidebar-background);
   border-radius: var(--nav-sidebar-radius);
@@ -6893,6 +6896,8 @@ a.tag {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: var(--nav-sidebar-secondary-header-gap);
+  padding: var(--nav-sidebar-secondary-header-padding-y) var(--nav-sidebar-secondary-header-padding-x);
 }
 
 .nav-tree {
