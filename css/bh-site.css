@@ -6890,6 +6890,7 @@ a.tag {
 }
 .nav-sidebar-primary:not(:has(~ .nav-sidebar-secondary)) {
   flex: 1 1 auto;
+  padding: var(--nav-sidebar-primary-padding-y-collapsed) var(--nav-sidebar-primary-padding-x-collapsed);
 }
 
 .nav-sidebar-secondary {

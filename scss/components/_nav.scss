@@ -523,6 +523,8 @@
 
   &:not(:has(~ .nav-sidebar-secondary)) {
     flex: 1 1 auto;
+    padding: var(--#{$prefix-bh}nav-sidebar-primary-padding-y-collapsed)
+      var(--#{$prefix-bh}nav-sidebar-primary-padding-x-collapsed);
   }
 }
 
