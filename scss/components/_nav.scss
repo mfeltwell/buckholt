@@ -507,6 +507,7 @@
     var(--#{$prefix-bh}nav-sidebar-primary-border);
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .nav-sidebar-secondary {
@@ -556,4 +557,10 @@
   align-items: center;
   gap: var(--#{$prefix-bh}nav-tree-label-spacing);
   @include type($label, "02");
+}
+
+.nav-tree-group {
+  display: flex;
+  flex-direction: column;
+  gap: #{$nav-tree-group-gap};
 }

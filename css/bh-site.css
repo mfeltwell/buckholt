@@ -6875,6 +6875,7 @@ a.tag {
   border: var(--nav-sidebar-primary-border-width) solid var(--nav-sidebar-primary-border);
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .nav-tree {
@@ -6915,6 +6916,12 @@ a.tag {
   line-height: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.25px;
+}
+
+.nav-tree-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .card {
