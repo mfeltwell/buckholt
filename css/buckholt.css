@@ -6891,7 +6891,7 @@ a.tag {
 .nav-sidebar-primary:not(:has(~ .nav-sidebar-secondary:not([hidden]))) {
   flex: 1 1 auto;
 }
-.nav-sidebar-primary:has(~ .nav-sidebar-secondary) {
+.nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) {
   --nav-sidebar-primary-padding-y: 0.5rem;
   --nav-sidebar-primary-padding-x: 0.5rem;
 }

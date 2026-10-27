@@ -525,7 +525,7 @@
     flex: 1 1 auto;
   }
 
-  &:has(~ .nav-sidebar-secondary) {
+  &:has(~ .nav-sidebar-secondary:not([hidden])) {
     --#{$prefix-bh}nav-sidebar-primary-padding-y: #{$nav-sidebar-primary-padding-y-collapsed};
     --#{$prefix-bh}nav-sidebar-primary-padding-x: #{$nav-sidebar-primary-padding-x-collapsed};
   }
