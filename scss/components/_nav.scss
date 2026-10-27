@@ -522,6 +522,7 @@
   --#{$prefix-bh}nav-tree-items-vr-width: #{$nav-tree-items-vr-width};
   --#{$prefix-bh}nav-tree-items-vr-colour: #{$nav-tree-items-vr-colour};
 
+  --#{$prefix-bh}nav-tree-label: #{$nav-tree-label};
   --#{$prefix-bh}nav-tree-label-icon: #{$nav-tree-label-icon-svg};
   --#{$prefix-bh}nav-tree-label-icon-size: #{$nav-tree-label-icon-size};
   --#{$prefix-bh}nav-tree-label-icon-transform: #{$nav-tree-label-icon-transform};
@@ -571,6 +572,7 @@
   border: var(--#{$prefix-bh}nav-tree-label-border-width) solid
     var(--#{$prefix-bh}nav-tree-label-border);
   width: 100%;
+  color: var(--#{$prefix-bh}nav-tree-label);
 }
 
 .nav-tree-button {
