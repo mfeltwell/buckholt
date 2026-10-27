@@ -627,6 +627,7 @@
     background-image: var(--#{$prefix-bh}nav-tree-label-icon);
     background-repeat: no-repeat;
     background-size: var(--#{$prefix-bh}nav-tree-label-icon-size);
+    margin-left: $spacer-03;
     @include transition(var(--#{$prefix-bh}nav-tree-label-icon-transition));
   }
 }
