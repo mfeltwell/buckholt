@@ -6891,6 +6891,7 @@ a.tag {
   --nav-tree-label-icon-size: 0.875rem;
   --nav-tree-label-icon-transform: rotate(-180deg);
   --nav-tree-label-icon-transition: transform 0.2s ease-in-out;
+  --nav-tree-label-background: transparent;
   display: flex;
   flex-direction: column;
   gap: var(--nav-tree-gap);
@@ -6922,6 +6923,7 @@ a.tag {
   font-weight: 500;
   letter-spacing: 0.25px;
   border-radius: var(--nav-tree-label-radius);
+  background-color: var(--nav-tree-label-background);
 }
 .nav-tree-label.nav-tree-label-collapsible::after {
   flex-shrink: 0;
@@ -6938,6 +6940,9 @@ a.tag {
   .nav-tree-label.nav-tree-label-collapsible::after {
     transition: none;
   }
+}
+.nav-tree-label.nav-tree-label-collapsible:hover {
+  --nav-tree-label-background: rgba(26, 26, 26, 0.07);
 }
 
 .nav-tree-group {

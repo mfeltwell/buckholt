@@ -526,6 +526,7 @@
   --#{$prefix-bh}nav-tree-label-icon-size: #{$nav-tree-label-icon-size};
   --#{$prefix-bh}nav-tree-label-icon-transform: #{$nav-tree-label-icon-transform};
   --#{$prefix-bh}nav-tree-label-icon-transition: #{$nav-tree-label-icon-transition};
+  --#{$prefix-bh}nav-tree-label-background: #{$nav-tree-label-background};
 
   display: flex;
   flex-direction: column;
@@ -562,6 +563,7 @@
   gap: var(--#{$prefix-bh}nav-tree-label-spacing);
   @include type($label, "02");
   border-radius: var(--#{$prefix-bh}nav-tree-label-radius);
+  background-color: var(--#{$prefix-bh}nav-tree-label-background);
 
   &.nav-tree-label-collapsible {
     // Nav tree label collapse icon
@@ -575,6 +577,10 @@
       background-repeat: no-repeat;
       background-size: var(--#{$prefix-bh}nav-tree-label-icon-size);
       @include transition(var(--#{$prefix-bh}nav-tree-label-icon-transition));
+    }
+
+    &:hover {
+      --#{$prefix-bh}nav-tree-label-background: #{$nav-tree-label-background-hover};
     }
   }
 }
