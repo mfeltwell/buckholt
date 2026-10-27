@@ -529,6 +529,7 @@
   --#{$prefix-bh}nav-tree-label-background: #{$nav-tree-label-background};
   --#{$prefix-bh}nav-tree-label-border: #{$nav-tree-label-border};
   --#{$prefix-bh}nav-tree-label-border-width: #{$nav-tree-label-border-width};
+  --#{$prefix-bh}nav-tree-button-transition: #{$nav-tree-button-transition};
 
   display: flex;
   flex-direction: column;
@@ -573,6 +574,8 @@
 }
 
 .nav-tree-button {
+  @include transition(var(--#{$prefix-bh}nav-tree-button-transition));
+
   &:not(.collapsed) {
     &::after {
       transform: var(--#{$prefix-bh}nav-tree-label-icon-transform);

@@ -1468,6 +1468,7 @@ $nav-tree-label-icon-svg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/
 $nav-tree-label-icon-size: $icon-sm !default;
 $nav-tree-label-icon-transition: transform 0.2s ease-in-out !default;
 $nav-tree-label-icon-transform: rotate(-180deg) !default;
+$nav-tree-button-transition: $button-transition !default;
 
 // Card _________________________________
 $card-padding-y: $padding-08 !default;

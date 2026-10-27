@@ -6894,6 +6894,7 @@ a.tag {
   --nav-tree-label-background: transparent;
   --nav-tree-label-border: transparent;
   --nav-tree-label-border-width: 0px;
+  --nav-tree-button-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   display: flex;
   flex-direction: column;
   gap: var(--nav-tree-gap);
@@ -6931,6 +6932,14 @@ a.tag {
   width: 100%;
 }
 
+.nav-tree-button {
+  transition: var(--nav-tree-button-transition);
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-tree-button {
+    transition: none;
+  }
+}
 .nav-tree-button:not(.collapsed)::after {
   transform: var(--nav-tree-label-icon-transform);
 }
