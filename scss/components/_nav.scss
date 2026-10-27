@@ -555,7 +555,18 @@
   }
 }
 
-.nav-tree-label {
+.nav-tree-label:not(:has(.nav-tree-button)) {
+  padding: var(--#{$prefix-bh}nav-tree-label-padding-y)
+    var(--#{$prefix-bh}nav-tree-label-padding-x);
+  display: flex;
+  align-items: center;
+  gap: var(--#{$prefix-bh}nav-tree-label-spacing);
+  @include type($label, "02");
+  border-radius: var(--#{$prefix-bh}nav-tree-label-radius);
+  background-color: var(--#{$prefix-bh}nav-tree-label-background);
+}
+
+.nav-tree-button {
   padding: var(--#{$prefix-bh}nav-tree-label-padding-y)
     var(--#{$prefix-bh}nav-tree-label-padding-x);
   display: flex;
@@ -565,23 +576,21 @@
   border-radius: var(--#{$prefix-bh}nav-tree-label-radius);
   background-color: var(--#{$prefix-bh}nav-tree-label-background);
 
-  &.nav-tree-label-collapsible {
-    // Nav tree label collapse icon
-    &::after {
-      flex-shrink: 0;
-      width: var(--#{$prefix-bh}nav-tree-label-icon-size);
-      height: var(--#{$prefix-bh}nav-tree-label-icon-size);
-      margin-left: auto;
-      content: "";
-      background-image: var(--#{$prefix-bh}nav-tree-label-icon);
-      background-repeat: no-repeat;
-      background-size: var(--#{$prefix-bh}nav-tree-label-icon-size);
-      @include transition(var(--#{$prefix-bh}nav-tree-label-icon-transition));
-    }
+  // Nav tree label collapse icon
+  &::after {
+    flex-shrink: 0;
+    width: var(--#{$prefix-bh}nav-tree-label-icon-size);
+    height: var(--#{$prefix-bh}nav-tree-label-icon-size);
+    margin-left: auto;
+    content: "";
+    background-image: var(--#{$prefix-bh}nav-tree-label-icon);
+    background-repeat: no-repeat;
+    background-size: var(--#{$prefix-bh}nav-tree-label-icon-size);
+    @include transition(var(--#{$prefix-bh}nav-tree-label-icon-transition));
+  }
 
-    &:hover {
-      --#{$prefix-bh}nav-tree-label-background: #{$nav-tree-label-background-hover};
-    }
+  &:hover {
+    --#{$prefix-bh}nav-tree-label-background: #{$nav-tree-label-background-hover};
   }
 }
 

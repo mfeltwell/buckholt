@@ -6913,7 +6913,7 @@ a.tag {
   background-color: var(--nav-tree-items-vr-colour);
 }
 
-.nav-tree-label {
+.nav-tree-label:not(:has(.nav-tree-button)) {
   padding: var(--nav-tree-label-padding-y) var(--nav-tree-label-padding-x);
   display: flex;
   align-items: center;
@@ -6925,7 +6925,20 @@ a.tag {
   border-radius: var(--nav-tree-label-radius);
   background-color: var(--nav-tree-label-background);
 }
-.nav-tree-label.nav-tree-label-collapsible::after {
+
+.nav-tree-button {
+  padding: var(--nav-tree-label-padding-y) var(--nav-tree-label-padding-x);
+  display: flex;
+  align-items: center;
+  gap: var(--nav-tree-label-spacing);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  border-radius: var(--nav-tree-label-radius);
+  background-color: var(--nav-tree-label-background);
+}
+.nav-tree-button::after {
   flex-shrink: 0;
   width: var(--nav-tree-label-icon-size);
   height: var(--nav-tree-label-icon-size);
@@ -6937,11 +6950,11 @@ a.tag {
   transition: var(--nav-tree-label-icon-transition);
 }
 @media (prefers-reduced-motion: reduce) {
-  .nav-tree-label.nav-tree-label-collapsible::after {
+  .nav-tree-button::after {
     transition: none;
   }
 }
-.nav-tree-label.nav-tree-label-collapsible:hover {
+.nav-tree-button:hover {
   --nav-tree-label-background: rgba(26, 26, 26, 0.07);
 }
 
