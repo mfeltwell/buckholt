@@ -6889,8 +6889,9 @@ a.tag {
   flex-direction: column;
 }
 .nav-sidebar-primary:not(:has(~ .nav-sidebar-secondary)) {
+  --nav-sidebar-primary-padding-y: 0.5rem;
+  --nav-sidebar-primary-padding-x: 0.5rem;
   flex: 1 1 auto;
-  padding: var(--nav-sidebar-primary-padding-y-collapsed) var(--nav-sidebar-primary-padding-x-collapsed);
 }
 
 .nav-sidebar-secondary {
@@ -6898,6 +6899,9 @@ a.tag {
   flex-direction: column;
   gap: var(--nav-sidebar-secondary-gap);
   padding: var(--nav-sidebar-secondary-padding-y) var(--nav-sidebar-secondary-padding-x);
+}
+.nav-sidebar-secondary[hidden] {
+  display: none !important;
 }
 .nav-sidebar-secondary .nav-sidebar-secondary-header {
   display: flex;

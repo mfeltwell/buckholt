@@ -522,9 +522,10 @@
   flex-direction: column;
 
   &:not(:has(~ .nav-sidebar-secondary)) {
+    --#{$prefix-bh}nav-sidebar-primary-padding-y: #{$nav-sidebar-primary-padding-y-collapsed};
+    --#{$prefix-bh}nav-sidebar-primary-padding-x: #{$nav-sidebar-primary-padding-x-collapsed};
+
     flex: 1 1 auto;
-    padding: var(--#{$prefix-bh}nav-sidebar-primary-padding-y-collapsed)
-      var(--#{$prefix-bh}nav-sidebar-primary-padding-x-collapsed);
   }
 }
 
@@ -534,6 +535,10 @@
   gap: var(--#{$prefix-bh}nav-sidebar-secondary-gap);
   padding: var(--#{$prefix-bh}nav-sidebar-secondary-padding-y)
     var(--#{$prefix-bh}nav-sidebar-secondary-padding-x);
+
+  &[hidden] {
+    display: none !important;
+  }
 
   .nav-sidebar-secondary-header {
     display: flex;
