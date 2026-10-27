@@ -451,9 +451,7 @@
   --#{$prefix-bh}nav-sidebar-header-gap: #{$nav-sidebar-header-gap};
   --#{$prefix-bh}nav-sidebar-header-padding-y: #{$nav-sidebar-header-padding-y};
   --#{$prefix-bh}nav-sidebar-header-padding-x: #{$nav-sidebar-header-padding-x};
-
   --#{$prefix-bh}nav-sidebar-body-gap: #{$nav-sidebar-body-gap};
-
   --#{$prefix-bh}nav-sidebar-primary-radius: #{$nav-sidebar-primary-radius};
   --#{$prefix-bh}nav-sidebar-primary-border-width: #{$nav-sidebar-primary-border-width};
   --#{$prefix-bh}nav-sidebar-primary-border: #{$nav-sidebar-primary-border};
@@ -519,9 +517,15 @@
   --#{$prefix-bh}nav-tree-label-padding-y: #{$nav-tree-label-padding-y};
   --#{$prefix-bh}nav-tree-label-padding-x: #{$nav-tree-label-padding-x};
   --#{$prefix-bh}nav-tree-label-spacing: #{$nav-tree-label-spacing};
+  --#{$prefix-bh}nav-tree-label-radius: #{$nav-tree-label-radius};
   --#{$prefix-bh}nav-tree-items-padding-start: #{$nav-tree-items-padding-start};
   --#{$prefix-bh}nav-tree-items-vr-width: #{$nav-tree-items-vr-width};
   --#{$prefix-bh}nav-tree-items-vr-colour: #{$nav-tree-items-vr-colour};
+
+  --#{$prefix-bh}nav-tree-label-icon: #{$nav-tree-label-icon};
+  --#{$prefix-bh}nav-tree-label-icon-size: #{$nav-tree-label-icon-size};
+  --#{$prefix-bh}nav-tree-label-icon-transform: #{$nav-tree-label-icon-transform};
+  --#{$prefix-bh}nav-tree-label-icon-transition: #{$nav-tree-label-icon-transition};
 
   display: flex;
   flex-direction: column;
@@ -557,6 +561,22 @@
   align-items: center;
   gap: var(--#{$prefix-bh}nav-tree-label-spacing);
   @include type($label, "02");
+  border-radius: var(--#{$prefix-bh}nav-tree-label-radius);
+
+  .nav-tree-label-collapsible {
+    // Nav tree label collapse icon
+    &::after {
+      flex-shrink: 0;
+      width: var(--#{$prefix-bh}nav-tree-label-icon-size);
+      height: var(--#{$prefix-bh}nav-tree-label-icon-size);
+      margin-left: auto;
+      content: "";
+      background-image: var(--#{$prefix-bh}nav-tree-label-icon);
+      background-repeat: no-repeat;
+      background-size: var(--#{$prefix-bh}nav-tree-label-icon-size);
+      @include transition(var(--#{$prefix-bh}nav-tree-label-icon-transition));
+    }
+  }
 }
 
 .nav-tree-group {
