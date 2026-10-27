@@ -6923,7 +6923,7 @@ a.tag {
   letter-spacing: 0.25px;
   border-radius: var(--nav-tree-label-radius);
 }
-.nav-tree-label .nav-tree-label-collapsible::after {
+.nav-tree-label.nav-tree-label-collapsible::after {
   flex-shrink: 0;
   width: var(--nav-tree-label-icon-size);
   height: var(--nav-tree-label-icon-size);
@@ -6935,7 +6935,7 @@ a.tag {
   transition: var(--nav-tree-label-icon-transition);
 }
 @media (prefers-reduced-motion: reduce) {
-  .nav-tree-label .nav-tree-label-collapsible::after {
+  .nav-tree-label.nav-tree-label-collapsible::after {
     transition: none;
   }
 }

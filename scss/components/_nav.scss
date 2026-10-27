@@ -563,7 +563,7 @@
   @include type($label, "02");
   border-radius: var(--#{$prefix-bh}nav-tree-label-radius);
 
-  .nav-tree-label-collapsible {
+  &.nav-tree-label-collapsible {
     // Nav tree label collapse icon
     &::after {
       flex-shrink: 0;
