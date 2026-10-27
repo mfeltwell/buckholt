@@ -81,6 +81,12 @@
   min-height: var(--#{$prefix-bh}nav-link-height);
   white-space: nowrap;
 
+  &:not(:has(.nav-link-label)) {
+    justify-content: center;
+    padding-inline: 0;
+    min-width: var(--#{$prefix-bh}nav-link-height);
+  }
+
   &:hover,
   &:focus {
     color: var(--#{$prefix-bh}nav-link-hover);

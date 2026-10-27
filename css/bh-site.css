@@ -6586,6 +6586,11 @@ a.tag {
   min-height: var(--nav-link-height);
   white-space: nowrap;
 }
+.nav-link:not(:has(.nav-link-label)) {
+  justify-content: center;
+  padding-inline: 0;
+  min-width: var(--nav-link-height);
+}
 .nav-link:hover, .nav-link:focus {
   color: var(--nav-link-hover);
   background-color: var(--nav-link-background-hover);
