@@ -6931,6 +6931,12 @@ a.tag {
   width: 100%;
 }
 
+.nav-tree-button:not(.collapsed)::after {
+  transform: var(--nav-tree-label-icon-transform);
+}
+.nav-tree-button:hover {
+  --nav-tree-label-background: rgba(26, 26, 26, 0.07);
+}
 .nav-tree-button::after {
   flex-shrink: 0;
   width: var(--nav-tree-label-icon-size);
@@ -6946,9 +6952,6 @@ a.tag {
   .nav-tree-button::after {
     transition: none;
   }
-}
-.nav-tree-button:hover {
-  --nav-tree-label-background: rgba(26, 26, 26, 0.07);
 }
 
 .nav-tree-group {

@@ -573,6 +573,16 @@
 }
 
 .nav-tree-button {
+  &:not(.collapsed) {
+    &::after {
+      transform: var(--#{$prefix-bh}nav-tree-label-icon-transform);
+    }
+  }
+
+  &:hover {
+    --#{$prefix-bh}nav-tree-label-background: #{$nav-tree-label-background-hover};
+  }
+
   // Nav tree label collapse icon
   &::after {
     flex-shrink: 0;
@@ -584,10 +594,6 @@
     background-repeat: no-repeat;
     background-size: var(--#{$prefix-bh}nav-tree-label-icon-size);
     @include transition(var(--#{$prefix-bh}nav-tree-label-icon-transition));
-  }
-
-  &:hover {
-    --#{$prefix-bh}nav-tree-label-background: #{$nav-tree-label-background-hover};
   }
 }
 
