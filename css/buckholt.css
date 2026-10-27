@@ -6836,8 +6836,8 @@ a.tag {
   --nav-sidebar-primary-background: var(--ui-background-01);
   --nav-sidebar-primary-gap: 1rem;
   --nav-sidebar-secondary-gap: 1rem;
-  --nav-sidebar-secondary-padding-y: 0;
-  --nav-sidebar-secondary-padding-x: 1rem;
+  --nav-sidebar-secondary-padding-y: 0.5rem;
+  --nav-sidebar-secondary-padding-x: 0;
   padding: var(--nav-sidebar-padding-y) var(--nav-sidebar-padding-x);
   background-color: var(--nav-sidebar-background);
   border-radius: var(--nav-sidebar-radius);
@@ -6885,7 +6885,7 @@ a.tag {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  gap: var(--nav-sidebar-scondary-gap);
+  gap: var(--nav-sidebar-secondary-gap);
   padding: var(--nav-sidebar-secondary-padding-y) var(--nav-sidebar-secondary-padding-x);
 }
 .nav-sidebar-secondary .nav-sidebar-secondary-header {
