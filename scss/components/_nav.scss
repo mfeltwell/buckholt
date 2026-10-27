@@ -520,6 +520,10 @@
     var(--#{$prefix-bh}nav-sidebar-primary-border);
   display: flex;
   flex-direction: column;
+
+  &:not(:has(~ .nav-sidebar-secondary)) {
+    flex: 1 1 auto;
+  }
 }
 
 .nav-sidebar-secondary {

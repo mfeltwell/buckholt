@@ -6888,6 +6888,9 @@ a.tag {
   display: flex;
   flex-direction: column;
 }
+.nav-sidebar-primary:not(:has(~ .nav-sidebar-secondary)) {
+  flex: 1 1 auto;
+}
 
 .nav-sidebar-secondary {
   display: flex;
