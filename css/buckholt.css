@@ -6892,6 +6892,8 @@ a.tag {
   --nav-tree-label-icon-transform: rotate(-180deg);
   --nav-tree-label-icon-transition: transform 0.2s ease-in-out;
   --nav-tree-label-background: transparent;
+  --nav-tree-label-border: transparent;
+  --nav-tree-label-border-width: 0;
   display: flex;
   flex-direction: column;
   gap: var(--nav-tree-gap);
@@ -6913,19 +6915,7 @@ a.tag {
   background-color: var(--nav-tree-items-vr-colour);
 }
 
-.nav-tree-label:not(:has(.nav-tree-button)) {
-  padding: var(--nav-tree-label-padding-y) var(--nav-tree-label-padding-x);
-  display: flex;
-  align-items: center;
-  gap: var(--nav-tree-label-spacing);
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 500;
-  letter-spacing: 0.25px;
-  border-radius: var(--nav-tree-label-radius);
-  background-color: var(--nav-tree-label-background);
-}
-
+.nav-tree-label:not(:has(.nav-tree-button)),
 .nav-tree-button {
   padding: var(--nav-tree-label-padding-y) var(--nav-tree-label-padding-x);
   display: flex;
@@ -6937,7 +6927,10 @@ a.tag {
   letter-spacing: 0.25px;
   border-radius: var(--nav-tree-label-radius);
   background-color: var(--nav-tree-label-background);
+  border: var(--nav-tree-label-border-width) solid var(--nav-tree-label-border);
+  width: 100%;
 }
+
 .nav-tree-button::after {
   flex-shrink: 0;
   width: var(--nav-tree-label-icon-size);

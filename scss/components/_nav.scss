@@ -527,6 +527,8 @@
   --#{$prefix-bh}nav-tree-label-icon-transform: #{$nav-tree-label-icon-transform};
   --#{$prefix-bh}nav-tree-label-icon-transition: #{$nav-tree-label-icon-transition};
   --#{$prefix-bh}nav-tree-label-background: #{$nav-tree-label-background};
+  --#{$prefix-bh}nav-tree-label-border: #{$nav-tree-label-border};
+  --#{$prefix-bh}nav-tree-label-border-width: #{$nav-tree-label-border-width};
 
   display: flex;
   flex-direction: column;
@@ -555,17 +557,7 @@
   }
 }
 
-.nav-tree-label:not(:has(.nav-tree-button)) {
-  padding: var(--#{$prefix-bh}nav-tree-label-padding-y)
-    var(--#{$prefix-bh}nav-tree-label-padding-x);
-  display: flex;
-  align-items: center;
-  gap: var(--#{$prefix-bh}nav-tree-label-spacing);
-  @include type($label, "02");
-  border-radius: var(--#{$prefix-bh}nav-tree-label-radius);
-  background-color: var(--#{$prefix-bh}nav-tree-label-background);
-}
-
+.nav-tree-label:not(:has(.nav-tree-button)),
 .nav-tree-button {
   padding: var(--#{$prefix-bh}nav-tree-label-padding-y)
     var(--#{$prefix-bh}nav-tree-label-padding-x);
@@ -575,7 +567,12 @@
   @include type($label, "02");
   border-radius: var(--#{$prefix-bh}nav-tree-label-radius);
   background-color: var(--#{$prefix-bh}nav-tree-label-background);
+  border: var(--#{$prefix-bh}nav-tree-label-border-width) solid
+    var(--#{$prefix-bh}nav-tree-label-border);
+  width: 100%;
+}
 
+.nav-tree-button {
   // Nav tree label collapse icon
   &::after {
     flex-shrink: 0;
