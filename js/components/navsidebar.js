@@ -14,6 +14,14 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
   toggle?.addEventListener("click", () => {
     const collapsed = sidebar.classList.toggle("is-collapsed");
 
+    sidebar
+      .querySelector(".nav-sidebar-header .user-meta")
+      ?.classList.toggle("user-meta-compact", collapsed);
+
+    sidebar
+      .querySelector(".nav-sidebar-header .avatar")
+      ?.classList.toggle("avatar-sm", collapsed);
+
     if (!collapsed) {
       measureNavigation();
     }

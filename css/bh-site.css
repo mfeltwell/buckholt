@@ -6979,6 +6979,9 @@ a.tag {
   padding: var(--nav-sidebar-secondary-header-padding-y) var(--nav-sidebar-secondary-header-padding-x);
 }
 
+.nav-sidebar.is-collapsed {
+  --nav-sidebar-header-gap: 0.5rem;
+}
 .nav-sidebar.is-collapsed .nav-sidebar-header {
   flex-direction: column-reverse;
   gap: var(--nav-sidebar-header-gap);

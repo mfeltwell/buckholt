@@ -641,6 +641,8 @@
 }
 
 .nav-sidebar.is-collapsed {
+  --#{$prefix-bh}nav-sidebar-header-gap: #{$nav-sidebar-header-gap-collapsed};
+
   // Button above the avatar.
   .nav-sidebar-header {
     flex-direction: column-reverse;
