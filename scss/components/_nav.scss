@@ -539,7 +539,7 @@
   border: var(--#{$prefix-bh}nav-sidebar-primary-border-width) solid
     var(--#{$prefix-bh}nav-sidebar-primary-border);
 
-  @include transition(width 0.2s ease-in-out, padding 0.2s ease-in-out);
+  @include transition(width 0.2s ease-in-out);
 }
 
 // Navigation views.
