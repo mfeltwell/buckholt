@@ -6900,7 +6900,7 @@ a.tag {
   background-color: var(--nav-sidebar-primary-background);
   border-radius: var(--nav-sidebar-primary-radius);
   border: var(--nav-sidebar-primary-border-width) solid var(--nav-sidebar-primary-border);
-  transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out, padding 0s linear;
 }
 @media (prefers-reduced-motion: reduce) {
   .nav-sidebar-primary-panel {
