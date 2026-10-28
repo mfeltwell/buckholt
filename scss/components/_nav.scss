@@ -513,80 +513,91 @@
   gap: var(--#{$prefix-bh}nav-sidebar-body-gap);
 }
 
+// Reserves the primary's space beside the secondary.
 .nav-sidebar-primary {
   position: relative;
+  flex: 0 0 auto;
+
+  &:not(:has(~ .nav-sidebar-secondary:not([hidden]))) {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
+// The surface that will expand.
+.nav-sidebar-primary-panel {
   display: flex;
   flex-direction: column;
-  flex: 0 0 auto;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 
   padding: var(--#{$prefix-bh}nav-sidebar-primary-padding-y)
     var(--#{$prefix-bh}nav-sidebar-primary-padding-x);
+
   background-color: var(--#{$prefix-bh}nav-sidebar-primary-background);
   border-radius: var(--#{$prefix-bh}nav-sidebar-primary-radius);
   border: var(--#{$prefix-bh}nav-sidebar-primary-border-width) solid
     var(--#{$prefix-bh}nav-sidebar-primary-border);
 
-  // Default views
-  > .nav-sidebar-primary-body {
-    > .nav-sidebar-primary-expanded {
-      display: block;
-    }
+  @include transition(width 0.2s ease-in-out, padding 0.2s ease-in-out);
+}
 
-    > .nav-sidebar-primary-compact {
-      display: none;
-    }
+// Navigation views.
+.nav-sidebar-primary-body {
+  > .nav-sidebar-primary-expanded {
+    display: block;
   }
 
-  // Fill the available body width when no secondary is shown
-  &:not(:has(~ .nav-sidebar-secondary:not([hidden]))) {
-    flex: 1 1 auto;
-    min-width: 0;
+  > .nav-sidebar-primary-compact {
+    display: none;
   }
+}
 
-  // Compact primary when a secondary is shown
-  &:has(~ .nav-sidebar-secondary:not([hidden])) {
+// Keep the primary's layout space fixed while its panel expands.
+.nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) {
+  width: var(--nav-sidebar-measured-compact-width);
+  min-height: var(--nav-sidebar-measured-height);
+
+  > .nav-sidebar-primary-panel {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+
+    width: var(--nav-sidebar-measured-compact-width);
+    min-height: 100%;
+
     padding: var(--#{$prefix-bh}nav-sidebar-primary-padding-y-collapsed)
       var(--#{$prefix-bh}nav-sidebar-primary-padding-x-collapsed);
 
     > .nav-sidebar-primary-body {
+      > .nav-sidebar-primary-expanded {
+        display: none;
+        width: var(--nav-sidebar-measured-expanded-content-width);
+      }
+
       > .nav-sidebar-primary-compact {
         display: block;
       }
-
-      // Expanded view overlays the secondary.
-      > .nav-sidebar-primary-expanded {
-        display: none;
-        position: absolute;
-        inset-block-start: 0;
-        inset-inline-start: 0;
-        z-index: 1;
-
-        box-sizing: border-box;
-        width: max-content;
-        min-width: 100%;
-
-        padding: var(--#{$prefix-bh}nav-sidebar-primary-padding-y)
-          var(--#{$prefix-bh}nav-sidebar-primary-padding-x);
-
-        background-color: var(--#{$prefix-bh}nav-sidebar-primary-background);
-        border-radius: var(--#{$prefix-bh}nav-sidebar-primary-radius);
-        border: var(--#{$prefix-bh}nav-sidebar-primary-border-width) solid
-          var(--#{$prefix-bh}nav-sidebar-primary-border);
-      }
     }
+  }
 
-    // Expand over the secondary without moving it
-    &:hover {
-      z-index: 1;
+  &:hover {
+    z-index: 1;
+
+    > .nav-sidebar-primary-panel {
+      width: var(--nav-sidebar-measured-expanded-width);
+
+      padding: var(--#{$prefix-bh}nav-sidebar-primary-padding-y)
+        var(--#{$prefix-bh}nav-sidebar-primary-padding-x);
 
       > .nav-sidebar-primary-body {
         > .nav-sidebar-primary-expanded {
           display: block;
         }
 
-        // Preserve the compact view's layout space.
         > .nav-sidebar-primary-compact {
-          visibility: hidden;
+          display: none;
         }
       }
     }
