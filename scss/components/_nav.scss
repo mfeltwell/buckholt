@@ -464,6 +464,8 @@
   --#{$prefix-bh}nav-sidebar-primary-border: #{$nav-sidebar-primary-border};
   --#{$prefix-bh}nav-sidebar-primary-padding-y: #{$nav-sidebar-primary-padding-y};
   --#{$prefix-bh}nav-sidebar-primary-padding-x: #{$nav-sidebar-primary-padding-x};
+  --#{$prefix-bh}nav-sidebar-primary-padding-y-collapsed: #{$nav-sidebar-primary-padding-y-collapsed};
+  --#{$prefix-bh}nav-sidebar-primary-padding-x-collapsed: #{$nav-sidebar-primary-padding-x-collapsed};
   --#{$prefix-bh}nav-sidebar-primary-background: #{$nav-sidebar-primary-background};
   --#{$prefix-bh}nav-sidebar-primary-gap: #{$nav-sidebar-primary-gap};
   --#{$prefix-bh}nav-sidebar-secondary-gap: #{$nav-sidebar-secondary-gap};
@@ -512,16 +514,17 @@
 }
 
 .nav-sidebar-primary {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+
   padding: var(--#{$prefix-bh}nav-sidebar-primary-padding-y)
     var(--#{$prefix-bh}nav-sidebar-primary-padding-x);
   background-color: var(--#{$prefix-bh}nav-sidebar-primary-background);
   border-radius: var(--#{$prefix-bh}nav-sidebar-primary-radius);
   border: var(--#{$prefix-bh}nav-sidebar-primary-border-width) solid
     var(--#{$prefix-bh}nav-sidebar-primary-border);
-  display: flex;
-  flex-direction: column;
-  flex: 0 0 auto;
-  width: 302px;
 
   // Default views
   > .nav-sidebar-primary-body {
@@ -542,37 +545,48 @@
 
   // Compact primary when a secondary is shown
   &:has(~ .nav-sidebar-secondary:not([hidden])) {
-    --#{$prefix-bh}nav-sidebar-primary-padding-y: #{$nav-sidebar-primary-padding-y-collapsed};
-    --#{$prefix-bh}nav-sidebar-primary-padding-x: #{$nav-sidebar-primary-padding-x-collapsed};
-
-    width: 58px;
+    padding: var(--#{$prefix-bh}nav-sidebar-primary-padding-y-collapsed)
+      var(--#{$prefix-bh}nav-sidebar-primary-padding-x-collapsed);
 
     > .nav-sidebar-primary-body {
-      > .nav-sidebar-primary-expanded {
-        display: none;
-      }
-
       > .nav-sidebar-primary-compact {
         display: block;
+      }
+
+      // Expanded view overlays the secondary.
+      > .nav-sidebar-primary-expanded {
+        display: none;
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        z-index: 1;
+
+        box-sizing: border-box;
+        width: max-content;
+        min-width: 100%;
+
+        padding: var(--#{$prefix-bh}nav-sidebar-primary-padding-y)
+          var(--#{$prefix-bh}nav-sidebar-primary-padding-x);
+
+        background-color: var(--#{$prefix-bh}nav-sidebar-primary-background);
+        border-radius: var(--#{$prefix-bh}nav-sidebar-primary-radius);
+        border: var(--#{$prefix-bh}nav-sidebar-primary-border-width) solid
+          var(--#{$prefix-bh}nav-sidebar-primary-border);
       }
     }
 
     // Expand over the secondary without moving it
     &:hover {
       z-index: 1;
-      width: 302px;
-
-      margin-inline-end: calc(
-        var(--#{$prefix-bh}58px) - var(--#{$prefix-bh}302px)
-      );
 
       > .nav-sidebar-primary-body {
         > .nav-sidebar-primary-expanded {
           display: block;
         }
 
+        // Preserve the compact view's layout space.
         > .nav-sidebar-primary-compact {
-          display: none;
+          visibility: hidden;
         }
       }
     }
@@ -582,6 +596,8 @@
 .nav-sidebar-secondary {
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 0;
   gap: var(--#{$prefix-bh}nav-sidebar-secondary-gap);
   padding: var(--#{$prefix-bh}nav-sidebar-secondary-padding-y)
     var(--#{$prefix-bh}nav-sidebar-secondary-padding-x);
