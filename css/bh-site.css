@@ -6945,16 +6945,16 @@ a.tag {
   visibility: visible;
   transition: none;
 }
-.nav-sidebar:not(.is-collapsed) .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])):hover > .nav-sidebar-primary-panel {
+.nav-sidebar:not(.is-collapsed) .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])):has(> .nav-sidebar-primary-panel > .nav-sidebar-primary-body:hover) > .nav-sidebar-primary-panel {
   width: 100%;
   transition-delay: 0.18s;
   padding: var(--nav-sidebar-primary-padding-y) var(--nav-sidebar-primary-padding-x);
 }
-.nav-sidebar:not(.is-collapsed) .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])):hover > .nav-sidebar-primary-panel > .nav-sidebar-primary-body > .nav-sidebar-primary-expanded {
+.nav-sidebar:not(.is-collapsed) .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])):has(> .nav-sidebar-primary-panel > .nav-sidebar-primary-body:hover) > .nav-sidebar-primary-panel > .nav-sidebar-primary-body > .nav-sidebar-primary-expanded {
   visibility: visible;
   transition: visibility 0s linear 0.18s;
 }
-.nav-sidebar:not(.is-collapsed) .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])):hover > .nav-sidebar-primary-panel > .nav-sidebar-primary-body > .nav-sidebar-primary-compact {
+.nav-sidebar:not(.is-collapsed) .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])):has(> .nav-sidebar-primary-panel > .nav-sidebar-primary-body:hover) > .nav-sidebar-primary-panel > .nav-sidebar-primary-body > .nav-sidebar-primary-compact {
   visibility: hidden;
   transition: visibility 0s linear 0.18s;
 }

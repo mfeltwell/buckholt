@@ -593,7 +593,7 @@
     }
   }
 
-  &:hover {
+  &:has(> .nav-sidebar-primary-panel > .nav-sidebar-primary-body:hover) {
     > .nav-sidebar-primary-panel {
       width: 100%;
       transition-delay: 0.18s;
