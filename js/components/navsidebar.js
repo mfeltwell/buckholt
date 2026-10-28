@@ -11,7 +11,19 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
     ":scope > .nav-sidebar-content > .nav-sidebar-header > [data-nav-sidebar-toggle]",
   );
 
+  const content = sidebar.querySelector(":scope > .nav-sidebar-content");
+  const originalContentWidth = content.style.width;
+
+  let sidebarAnimation;
+
   toggle?.addEventListener("click", () => {
+    // Capture the current width, including any animation in progress.
+    const startWidth = sidebar.getBoundingClientRect().width;
+
+    sidebarAnimation?.cancel();
+    content.style.width = originalContentWidth;
+
+    // Apply the new state.
     const collapsed = sidebar.classList.toggle("is-collapsed");
 
     sidebar
@@ -22,15 +34,48 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
       .querySelector(".nav-sidebar-header .avatar")
       ?.classList.toggle("avatar-sm", collapsed);
 
-    if (!collapsed) {
-      measureNavigation();
-    }
-
     toggle.setAttribute("aria-expanded", String(!collapsed));
     toggle.setAttribute(
       "aria-label",
       collapsed ? "Expand sidebar" : "Collapse sidebar",
     );
+
+    if (!collapsed) {
+      measureNavigation();
+    }
+
+    // Measure the sidebar at its new natural size.
+    const endWidth = sidebar.getBoundingClientRect().width;
+    const contentWidth = content.getBoundingClientRect().width;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    // Keep the contents at their final width to prevent rewrapping.
+    content.style.width = `${contentWidth}px`;
+
+    sidebarAnimation = sidebar.animate(
+      [
+        {
+          width: `${startWidth}px`,
+          overflow: "hidden",
+        },
+        {
+          width: `${endWidth}px`,
+          overflow: "hidden",
+        },
+      ],
+      {
+        duration: 200,
+        easing: "ease-in-out",
+      },
+    );
+
+    sidebarAnimation.onfinish = () => {
+      content.style.width = originalContentWidth;
+      sidebarAnimation = undefined;
+    };
   });
 
   function measureNavigation() {
