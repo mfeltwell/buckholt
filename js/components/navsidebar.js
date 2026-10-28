@@ -15,12 +15,15 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
   const originalContentWidth = content.style.width;
 
   let sidebarAnimation;
+  let primaryAnimation;
 
   toggle?.addEventListener("click", () => {
     // Capture the current width, including any animation in progress.
     const startWidth = sidebar.getBoundingClientRect().width;
+    const startPrimaryWidth = panel.getBoundingClientRect().width;
 
     sidebarAnimation?.cancel();
+    primaryAnimation?.cancel();
     content.style.width = originalContentWidth;
 
     // Apply the new state.
@@ -46,6 +49,7 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
 
     // Measure the sidebar at its new natural size.
     const endWidth = sidebar.getBoundingClientRect().width;
+    const endPrimaryWidth = panel.getBoundingClientRect().width;
     const contentWidth = content.getBoundingClientRect().width;
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -54,6 +58,14 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
 
     // Keep the contents at their final width to prevent rewrapping.
     content.style.width = `${contentWidth}px`;
+
+    primaryAnimation = panel.animate(
+      [{ width: `${startPrimaryWidth}px` }, { width: `${endPrimaryWidth}px` }],
+      {
+        duration: 200,
+        easing: "ease-in-out",
+      },
+    );
 
     sidebarAnimation = sidebar.animate(
       [
