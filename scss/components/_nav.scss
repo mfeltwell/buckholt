@@ -467,7 +467,6 @@
   --#{$prefix-bh}nav-sidebar-primary-padding-y-collapsed: #{$nav-sidebar-primary-padding-y-collapsed};
   --#{$prefix-bh}nav-sidebar-primary-padding-x-collapsed: #{$nav-sidebar-primary-padding-x-collapsed};
   --#{$prefix-bh}nav-sidebar-primary-background: #{$nav-sidebar-primary-background};
-  --#{$prefix-bh}nav-sidebar-primary-gap: #{$nav-sidebar-primary-gap};
   --#{$prefix-bh}nav-sidebar-secondary-gap: #{$nav-sidebar-secondary-gap};
   --#{$prefix-bh}nav-sidebar-secondary-padding-y: #{$nav-sidebar-secondary-padding-y};
   --#{$prefix-bh}nav-sidebar-secondary-padding-x: #{$nav-sidebar-secondary-padding-x};
@@ -508,6 +507,7 @@
 }
 
 .nav-sidebar-body {
+  position: relative;
   display: flex;
   flex-direction: row;
   gap: var(--#{$prefix-bh}nav-sidebar-body-gap);
@@ -515,7 +515,6 @@
 
 // Reserves the primary's space beside the secondary.
 .nav-sidebar-primary {
-  position: relative;
   flex: 0 0 auto;
 
   &:not(:has(~ .nav-sidebar-secondary:not([hidden]))) {
@@ -573,7 +572,7 @@
     > .nav-sidebar-primary-body {
       > .nav-sidebar-primary-expanded {
         display: none;
-        width: var(--nav-sidebar-measured-expanded-content-width);
+        width: 100%;
       }
 
       > .nav-sidebar-primary-compact {
@@ -586,7 +585,7 @@
     z-index: 1;
 
     > .nav-sidebar-primary-panel {
-      width: var(--nav-sidebar-measured-expanded-width);
+      width: 100%;
 
       padding: var(--#{$prefix-bh}nav-sidebar-primary-padding-y)
         var(--#{$prefix-bh}nav-sidebar-primary-padding-x);
@@ -710,7 +709,6 @@
     flex-shrink: 0;
     width: var(--#{$prefix-bh}nav-tree-label-icon-size);
     height: var(--#{$prefix-bh}nav-tree-label-icon-size);
-    margin-left: auto;
     content: "";
     background-image: var(--#{$prefix-bh}nav-tree-label-icon);
     background-repeat: no-repeat;

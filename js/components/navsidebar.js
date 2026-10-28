@@ -47,17 +47,26 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
 
     primary.append(probe);
 
-    function measure(view, otherView, paddingY, paddingX) {
-      view.style.width = "max-content";
+    function measure(
+      view,
+      otherView,
+      paddingY,
+      paddingX,
+      width = "max-content",
+    ) {
+      probe.style.width = width;
+
+      view.style.width = width === "max-content" ? "max-content" : "100%";
       view.style.display = "block";
       otherView.style.display = "none";
 
       probe.style.padding = `var(${paddingY}) var(${paddingX})`;
 
+      const bounds = probe.getBoundingClientRect();
+
       return {
-        width: probe.getBoundingClientRect().width,
-        height: probe.getBoundingClientRect().height,
-        contentWidth: view.getBoundingClientRect().width,
+        width: bounds.width,
+        height: bounds.height,
       };
     }
 
@@ -69,6 +78,7 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
       compact,
       `--${prefix}nav-sidebar-primary-padding-y`,
       `--${prefix}nav-sidebar-primary-padding-x`,
+      `${primary.parentElement.clientWidth}px`,
     );
 
     const compactSize = measure(
@@ -81,18 +91,8 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
     probe.remove();
 
     primary.style.setProperty(
-      "--nav-sidebar-measured-expanded-width",
-      `${Math.ceil(fullSize.width)}px`,
-    );
-
-    primary.style.setProperty(
       "--nav-sidebar-measured-compact-width",
       `${Math.ceil(compactSize.width)}px`,
-    );
-
-    primary.style.setProperty(
-      "--nav-sidebar-measured-expanded-content-width",
-      `${Math.ceil(fullSize.contentWidth)}px`,
     );
 
     primary.style.setProperty(

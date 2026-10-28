@@ -6840,7 +6840,6 @@ a.tag {
   --nav-sidebar-primary-padding-y-collapsed: 0.5rem;
   --nav-sidebar-primary-padding-x-collapsed: 0.5rem;
   --nav-sidebar-primary-background: var(--ui-background-01);
-  --nav-sidebar-primary-gap: 1rem;
   --nav-sidebar-secondary-gap: 1rem;
   --nav-sidebar-secondary-padding-y: 0.5rem;
   --nav-sidebar-secondary-padding-x: 0;
@@ -6877,13 +6876,13 @@ a.tag {
 }
 
 .nav-sidebar-body {
+  position: relative;
   display: flex;
   flex-direction: row;
   gap: var(--nav-sidebar-body-gap);
 }
 
 .nav-sidebar-primary {
-  position: relative;
   flex: 0 0 auto;
 }
 .nav-sidebar-primary:not(:has(~ .nav-sidebar-secondary:not([hidden]))) {
@@ -6930,7 +6929,7 @@ a.tag {
 }
 .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) > .nav-sidebar-primary-panel > .nav-sidebar-primary-body > .nav-sidebar-primary-expanded {
   display: none;
-  width: var(--nav-sidebar-measured-expanded-content-width);
+  width: 100%;
 }
 .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) > .nav-sidebar-primary-panel > .nav-sidebar-primary-body > .nav-sidebar-primary-compact {
   display: block;
@@ -6939,7 +6938,7 @@ a.tag {
   z-index: 1;
 }
 .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])):hover > .nav-sidebar-primary-panel {
-  width: var(--nav-sidebar-measured-expanded-width);
+  width: 100%;
   padding: var(--nav-sidebar-primary-padding-y) var(--nav-sidebar-primary-padding-x);
 }
 .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])):hover > .nav-sidebar-primary-panel > .nav-sidebar-primary-body > .nav-sidebar-primary-expanded {
@@ -7043,7 +7042,6 @@ a.tag {
   flex-shrink: 0;
   width: var(--nav-tree-label-icon-size);
   height: var(--nav-tree-label-icon-size);
-  margin-left: auto;
   content: "";
   background-image: var(--nav-tree-label-icon);
   background-repeat: no-repeat;
