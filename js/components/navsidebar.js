@@ -67,6 +67,7 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
       return {
         width: bounds.width,
         height: bounds.height,
+        contentWidth: view.getBoundingClientRect().width,
       };
     }
 
@@ -93,6 +94,11 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
     primary.style.setProperty(
       "--nav-sidebar-measured-compact-width",
       `${Math.ceil(compactSize.width)}px`,
+    );
+
+    primary.style.setProperty(
+      "--nav-sidebar-measured-expanded-content-width",
+      `${fullSize.contentWidth}px`,
     );
 
     primary.style.setProperty(
