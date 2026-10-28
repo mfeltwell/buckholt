@@ -14,6 +14,10 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
   const content = sidebar.querySelector(":scope > .nav-sidebar-content");
   const originalContentWidth = content.style.width;
 
+  const primaryBody = panel.querySelector(":scope > .nav-sidebar-primary-body");
+
+  const originalPrimaryBodyWidth = primaryBody.style.width;
+
   let sidebarAnimation;
   let primaryAnimation;
 
@@ -25,6 +29,7 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
     sidebarAnimation?.cancel();
     primaryAnimation?.cancel();
     content.style.width = originalContentWidth;
+    primaryBody.style.width = originalPrimaryBodyWidth;
 
     // Apply the new state.
     const collapsed = sidebar.classList.toggle("is-collapsed");
@@ -51,6 +56,7 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
     const endWidth = sidebar.getBoundingClientRect().width;
     const endPrimaryWidth = panel.getBoundingClientRect().width;
     const contentWidth = content.getBoundingClientRect().width;
+    const primaryBodyWidth = primaryBody.getBoundingClientRect().width;
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       return;
@@ -58,6 +64,7 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
 
     // Keep the contents at their final width to prevent rewrapping.
     content.style.width = `${contentWidth}px`;
+    primaryBody.style.width = `${primaryBodyWidth}px`;
 
     primaryAnimation = panel.animate(
       [{ width: `${startPrimaryWidth}px` }, { width: `${endPrimaryWidth}px` }],
@@ -86,6 +93,7 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
 
     sidebarAnimation.onfinish = () => {
       content.style.width = originalContentWidth;
+      primaryBody.style.width = originalPrimaryBodyWidth;
       sidebarAnimation = undefined;
     };
   });
