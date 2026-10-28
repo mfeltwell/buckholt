@@ -7,7 +7,27 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
 
   if (!panel) return;
 
+  const toggle = sidebar.querySelector(
+    ":scope > .nav-sidebar-content > .nav-sidebar-header > [data-nav-sidebar-toggle]",
+  );
+
+  toggle?.addEventListener("click", () => {
+    const collapsed = sidebar.classList.toggle("is-collapsed");
+
+    if (!collapsed) {
+      measureNavigation();
+    }
+
+    toggle.setAttribute("aria-expanded", String(!collapsed));
+    toggle.setAttribute(
+      "aria-label",
+      collapsed ? "Expand sidebar" : "Collapse sidebar",
+    );
+  });
+
   function measureNavigation() {
+    if (sidebar.classList.contains("is-collapsed")) return;
+
     const probe = panel.cloneNode(true);
 
     // Avoid duplicate IDs and interactive measurement content.

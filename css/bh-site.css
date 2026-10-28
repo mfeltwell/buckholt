@@ -6915,11 +6915,11 @@ a.tag {
   display: none;
 }
 
-.nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) {
+.nav-sidebar:not(.is-collapsed) .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) {
   width: var(--nav-sidebar-measured-compact-width);
   min-height: var(--nav-sidebar-measured-height);
 }
-.nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) > .nav-sidebar-primary-panel {
+.nav-sidebar:not(.is-collapsed) .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) > .nav-sidebar-primary-panel {
   position: absolute;
   inset-block-start: 0;
   inset-inline-start: 0;
@@ -6928,10 +6928,10 @@ a.tag {
   transition-delay: 0s;
   padding: var(--nav-sidebar-primary-padding-y-collapsed) var(--nav-sidebar-primary-padding-x-collapsed);
 }
-.nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) > .nav-sidebar-primary-panel > .nav-sidebar-primary-body {
+.nav-sidebar:not(.is-collapsed) .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) > .nav-sidebar-primary-panel > .nav-sidebar-primary-body {
   position: relative;
 }
-.nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) > .nav-sidebar-primary-panel > .nav-sidebar-primary-body > .nav-sidebar-primary-expanded {
+.nav-sidebar:not(.is-collapsed) .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) > .nav-sidebar-primary-panel > .nav-sidebar-primary-body > .nav-sidebar-primary-expanded {
   display: block;
   position: absolute;
   inset-block-start: 0;
@@ -6940,21 +6940,21 @@ a.tag {
   visibility: hidden;
   transition: none;
 }
-.nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) > .nav-sidebar-primary-panel > .nav-sidebar-primary-body > .nav-sidebar-primary-compact {
+.nav-sidebar:not(.is-collapsed) .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) > .nav-sidebar-primary-panel > .nav-sidebar-primary-body > .nav-sidebar-primary-compact {
   display: block;
   visibility: visible;
   transition: none;
 }
-.nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])):hover > .nav-sidebar-primary-panel {
+.nav-sidebar:not(.is-collapsed) .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])):hover > .nav-sidebar-primary-panel {
   width: 100%;
   transition-delay: 0.18s;
   padding: var(--nav-sidebar-primary-padding-y) var(--nav-sidebar-primary-padding-x);
 }
-.nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])):hover > .nav-sidebar-primary-panel > .nav-sidebar-primary-body > .nav-sidebar-primary-expanded {
+.nav-sidebar:not(.is-collapsed) .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])):hover > .nav-sidebar-primary-panel > .nav-sidebar-primary-body > .nav-sidebar-primary-expanded {
   visibility: visible;
   transition: visibility 0s linear 0.18s;
 }
-.nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])):hover > .nav-sidebar-primary-panel > .nav-sidebar-primary-body > .nav-sidebar-primary-compact {
+.nav-sidebar:not(.is-collapsed) .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])):hover > .nav-sidebar-primary-panel > .nav-sidebar-primary-body > .nav-sidebar-primary-compact {
   visibility: hidden;
   transition: visibility 0s linear 0.18s;
 }
@@ -6977,6 +6977,42 @@ a.tag {
   justify-content: space-between;
   gap: var(--nav-sidebar-secondary-header-gap);
   padding: var(--nav-sidebar-secondary-header-padding-y) var(--nav-sidebar-secondary-header-padding-x);
+}
+
+.nav-sidebar.is-collapsed .nav-sidebar-header {
+  flex-direction: column-reverse;
+  gap: var(--nav-sidebar-header-gap);
+}
+.nav-sidebar.is-collapsed .nav-sidebar-header .user-meta {
+  justify-content: center;
+  gap: 0;
+}
+.nav-sidebar.is-collapsed .nav-sidebar-header .user-meta-body {
+  display: none;
+}
+.nav-sidebar.is-collapsed .nav-sidebar-body {
+  gap: 0;
+}
+.nav-sidebar.is-collapsed .nav-sidebar-primary {
+  flex: 0 0 auto;
+  width: auto;
+  min-height: 0;
+}
+.nav-sidebar.is-collapsed .nav-sidebar-primary-panel {
+  position: relative;
+  width: auto;
+  min-height: 0;
+  transition: none;
+  padding: var(--nav-sidebar-primary-padding-y-collapsed) var(--nav-sidebar-primary-padding-x-collapsed);
+}
+.nav-sidebar.is-collapsed .nav-sidebar-primary-expanded {
+  display: none;
+}
+.nav-sidebar.is-collapsed .nav-sidebar-primary-compact {
+  display: block;
+}
+.nav-sidebar.is-collapsed .nav-sidebar-secondary {
+  display: none;
 }
 
 .nav-tree {

@@ -554,7 +554,8 @@
 }
 
 // Keep the primary's layout space fixed while its panel expands.
-.nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) {
+.nav-sidebar:not(.is-collapsed)
+  .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) {
   width: var(--nav-sidebar-measured-compact-width);
   min-height: var(--nav-sidebar-measured-height);
 
@@ -636,6 +637,56 @@
     gap: var(--#{$prefix-bh}nav-sidebar-secondary-header-gap);
     padding: var(--#{$prefix-bh}nav-sidebar-secondary-header-padding-y)
       var(--#{$prefix-bh}nav-sidebar-secondary-header-padding-x);
+  }
+}
+
+.nav-sidebar.is-collapsed {
+  // Button above the avatar.
+  .nav-sidebar-header {
+    flex-direction: column-reverse;
+    gap: var(--#{$prefix-bh}nav-sidebar-header-gap);
+  }
+
+  // Keep the avatar; hide the user's details.
+  .nav-sidebar-header .user-meta {
+    justify-content: center;
+    gap: 0;
+  }
+
+  .nav-sidebar-header .user-meta-body {
+    display: none;
+  }
+
+  .nav-sidebar-body {
+    gap: 0;
+  }
+
+  .nav-sidebar-primary {
+    flex: 0 0 auto;
+    width: auto;
+    min-height: 0;
+  }
+
+  .nav-sidebar-primary-panel {
+    position: relative;
+    width: auto;
+    min-height: 0;
+    transition: none;
+
+    padding: var(--#{$prefix-bh}nav-sidebar-primary-padding-y-collapsed)
+      var(--#{$prefix-bh}nav-sidebar-primary-padding-x-collapsed);
+  }
+
+  .nav-sidebar-primary-expanded {
+    display: none;
+  }
+
+  .nav-sidebar-primary-compact {
+    display: block;
+  }
+
+  .nav-sidebar-secondary {
+    display: none;
   }
 }
 
