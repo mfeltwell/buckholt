@@ -553,14 +553,6 @@
   > .nav-sidebar-primary-compact {
     display: none;
   }
-
-  .nav-link {
-    gap: 0;
-
-    > .nav-link-label {
-      @include visually-hidden();
-    }
-  }
 }
 
 // Keep the primary's layout space fixed while its panel expands.
@@ -671,6 +663,16 @@
 
   .nav-sidebar-body {
     gap: 0;
+  }
+
+  .nav-sidebar-primary-body {
+    > .nav .nav-link {
+      gap: 0;
+
+      > .nav-link-label {
+        @include visually-hidden();
+      }
+    }
   }
 
   .nav-sidebar-primary {
