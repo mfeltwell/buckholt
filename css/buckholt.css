@@ -6584,7 +6584,7 @@ a.tag {
     transition: none;
   }
 }
-.nav-link:not(:has(.nav-link-label)), .nav-link:has(.nav-link-label[hidden]) {
+.nav-link:has(i:is([class^=fa-], [class*=" fa-"])):not(:has(.nav-link-label)), .nav-link:has(i:is([class^=fa-], [class*=" fa-"])):has(.nav-link-label[hidden]) {
   justify-content: center;
   padding-inline: 0;
   min-width: var(--nav-link-height);
