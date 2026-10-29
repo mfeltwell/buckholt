@@ -1343,7 +1343,8 @@ $tag-height-input: 1.75rem !default;
 // Navs _________________________________
 $nav-gap: $spacer-02 !default;
 $nav-link-gap: $spacer-03 !default;
-$nav-link-padding-y: $padding-01 !default;
+$nav-link-padding-y: $padding-03 !default;
+$nav-link-padding-y-sm: $padding-01 !default;
 $nav-link-padding-x: $padding-05 !default;
 $nav-link-radius: $border-radius-md !default;
 $nav-link-border: var(--#{$prefix-bh}transparent) !default;

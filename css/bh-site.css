@@ -6516,7 +6516,7 @@ a.tag {
 .nav {
   --nav-gap: 0.25rem;
   --nav-link-padding-x: 1rem;
-  --nav-link-padding-y: 0.25rem;
+  --nav-link-padding-y: 0.5rem;
   --nav-link-gap: 0.5rem;
   --nav-link-radius: 0.5rem;
   --nav-link-border: var(--transparent);
@@ -6618,6 +6618,7 @@ a.tag {
 .nav-xs {
   --nav-link-height: 2rem;
   --nav-link-radius: 0.375rem;
+  --nav-link-padding-y: 0.25rem;
 }
 .nav-xs .nav-link {
   font-size: 0.875rem;
@@ -6628,6 +6629,7 @@ a.tag {
 
 .nav-sm {
   --nav-link-height: 2.5rem;
+  --nav-link-padding-y: 0.25rem;
 }
 
 .nav-lg {
