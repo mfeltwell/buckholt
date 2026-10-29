@@ -81,7 +81,8 @@
   white-space: nowrap;
   @include transition($nav-link-transition);
 
-  &:not(:has(.nav-link-label)) {
+  &:not(:has(.nav-link-label)),
+  &:has(.nav-link-label[hidden]) {
     justify-content: center;
     padding-inline: 0;
     min-width: var(--#{$prefix-bh}nav-link-height);
