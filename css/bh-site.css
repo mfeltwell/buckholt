@@ -6855,6 +6855,7 @@ a.tag {
   align-self: flex-start;
   width: fit-content;
   max-width: var(--nav-sidebar-width);
+  height: 100%;
 }
 
 .nav-sidebar-content {
