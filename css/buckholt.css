@@ -7120,7 +7120,7 @@ a.tag {
   background-image: var(--nav-tree-label-icon);
   background-repeat: no-repeat;
   background-size: var(--nav-tree-label-icon-size);
-  background-position: right center;
+  background-position: left center;
   margin-left: auto;
   transition: var(--nav-tree-label-icon-transition);
 }
