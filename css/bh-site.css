@@ -6862,6 +6862,7 @@ a.tag {
   display: flex;
   flex-direction: column;
   gap: var(--nav-sidebar-content-gap);
+  height: 100%;
 }
 
 .nav-sidebar-header {
@@ -6882,6 +6883,7 @@ a.tag {
   display: flex;
   flex-direction: row;
   gap: var(--nav-sidebar-body-gap);
+  height: 100%;
 }
 
 .nav-sidebar-primary {
