@@ -7114,13 +7114,14 @@ a.tag {
 }
 .nav-tree-button::after {
   flex-shrink: 0;
-  width: var(--nav-tree-label-icon-size);
+  width: calc(var(--nav-tree-label-icon-size) + 0.5rem);
   height: var(--nav-tree-label-icon-size);
   content: "";
   background-image: var(--nav-tree-label-icon);
   background-repeat: no-repeat;
   background-size: var(--nav-tree-label-icon-size);
-  margin-left: 0.5rem;
+  background-position: right center;
+  margin-left: auto;
   transition: var(--nav-tree-label-icon-transition);
 }
 @media (prefers-reduced-motion: reduce) {
