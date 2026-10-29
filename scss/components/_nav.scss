@@ -483,6 +483,7 @@
   display: flex;
   flex-direction: column;
   align-self: flex-start;
+  width: fit-content;
   max-width: var(--#{$prefix-bh}nav-sidebar-width);
 }
 
@@ -550,6 +551,14 @@
 
   > .nav-sidebar-primary-compact {
     display: none;
+  }
+
+  .nav-link {
+    gap: 0;
+
+    > .nav-link-label {
+      @include visually-hidden();
+    }
   }
 }
 

@@ -6853,6 +6853,7 @@ a.tag {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
+  width: fit-content;
   max-width: var(--nav-sidebar-width);
 }
 
@@ -6913,6 +6914,22 @@ a.tag {
 }
 .nav-sidebar-primary-body > .nav-sidebar-primary-compact {
   display: none;
+}
+.nav-sidebar-primary-body .nav-link {
+  gap: 0;
+}
+.nav-sidebar-primary-body .nav-link > .nav-link-label {
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+.nav-sidebar-primary-body .nav-link > .nav-link-label:not(caption) {
+  position: absolute !important;
 }
 
 .nav-sidebar:not(.is-collapsed) .nav-sidebar-primary:has(~ .nav-sidebar-secondary:not([hidden])) {
