@@ -667,7 +667,9 @@
 
   .nav-sidebar-primary-body {
     > .nav .nav-link {
-      gap: 0;
+      justify-content: center;
+      padding-inline: 0;
+      min-width: var(--nav-link-height);
 
       > .nav-link-label {
         @include visually-hidden();
