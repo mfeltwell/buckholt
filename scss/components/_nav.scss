@@ -793,13 +793,13 @@
   // Nav tree label collapse icon
   &::after {
     flex-shrink: 0;
-    width: calc(var(--#{$prefix-bh}nav-tree-label-icon-size) + #{$spacer-03});
+    width: var(--#{$prefix-bh}nav-tree-label-icon-size);
     height: var(--#{$prefix-bh}nav-tree-label-icon-size);
     content: "";
     background-image: var(--#{$prefix-bh}nav-tree-label-icon);
     background-repeat: no-repeat;
     background-size: var(--#{$prefix-bh}nav-tree-label-icon-size);
-    background-position: left center;
+    background-position: center;
     margin-left: auto;
     @include transition(var(--#{$prefix-bh}nav-tree-label-icon-transition));
   }
