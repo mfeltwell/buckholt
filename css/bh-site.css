@@ -17891,6 +17891,18 @@ a.versatile:hover {
   overflow: unset;
 }
 
+.code_block .badge {
+  top: 0.5rem;
+  right: 0.5rem;
+  background: var(--ui-background-03);
+  color: var(--text-secondary);
+  transform: none;
+}
+
+[data-bs-theme=dark] .code_block .badge {
+  background: var(--white-tint-20);
+}
+
 /* Swatches ____________________________________________________________________*/
 .swatches {
   display: flex;
