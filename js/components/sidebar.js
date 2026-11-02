@@ -1,20 +1,20 @@
-document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
+document.querySelectorAll(".sidebar").forEach((sidebar) => {
   const primary = sidebar.querySelector(
-    ":scope > .nav-sidebar-content > .nav-sidebar-body > .nav-sidebar-primary",
+    ":scope > .sidebar-content > .sidebar-body > .sidebar-primary",
   );
 
-  const panel = primary?.querySelector(":scope > .nav-sidebar-primary-panel");
+  const panel = primary?.querySelector(":scope > .sidebar-primary-panel");
 
   if (!panel) return;
 
   const toggle = sidebar.querySelector(
-    ":scope > .nav-sidebar-content > .nav-sidebar-header > [data-nav-sidebar-toggle]",
+    ":scope > .sidebar-content > .sidebar-header > [data-sidebar-toggle]",
   );
 
-  const content = sidebar.querySelector(":scope > .nav-sidebar-content");
+  const content = sidebar.querySelector(":scope > .sidebar-content");
   const originalContentWidth = content.style.width;
 
-  const primaryBody = panel.querySelector(":scope > .nav-sidebar-primary-body");
+  const primaryBody = panel.querySelector(":scope > .sidebar-primary-body");
 
   const originalPrimaryBodyWidth = primaryBody.style.width;
 
@@ -35,11 +35,11 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
     const collapsed = sidebar.classList.toggle("is-collapsed");
 
     sidebar
-      .querySelector(".nav-sidebar-header .user-meta")
+      .querySelector(".sidebar-header .user-meta")
       ?.classList.toggle("user-meta-compact", collapsed);
 
     sidebar
-      .querySelector(".nav-sidebar-header .avatar")
+      .querySelector(".sidebar-header .avatar")
       ?.classList.toggle("avatar-sm", collapsed);
 
     toggle.setAttribute("aria-expanded", String(!collapsed));
@@ -129,11 +129,11 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
     });
 
     const expanded = probe.querySelector(
-      ":scope > .nav-sidebar-primary-body > .nav-sidebar-primary-expanded",
+      ":scope > .sidebar-primary-body > .sidebar-primary-expanded",
     );
 
     const compact = probe.querySelector(
-      ":scope > .nav-sidebar-primary-body > .nav-sidebar-primary-compact",
+      ":scope > .sidebar-primary-body > .sidebar-primary-compact",
     );
 
     if (!expanded || !compact) return;
@@ -170,32 +170,32 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
     const fullSize = measure(
       expanded,
       compact,
-      `--${prefix}nav-sidebar-primary-padding-y`,
-      `--${prefix}nav-sidebar-primary-padding-x`,
+      `--${prefix}sidebar-primary-padding-y`,
+      `--${prefix}sidebar-primary-padding-x`,
       `${primary.parentElement.clientWidth}px`,
     );
 
     const compactSize = measure(
       compact,
       expanded,
-      `--${prefix}nav-sidebar-primary-padding-y-collapsed`,
-      `--${prefix}nav-sidebar-primary-padding-x-collapsed`,
+      `--${prefix}sidebar-primary-padding-y-collapsed`,
+      `--${prefix}sidebar-primary-padding-x-collapsed`,
     );
 
     probe.remove();
 
     primary.style.setProperty(
-      "--nav-sidebar-measured-compact-width",
+      "--sidebar-measured-compact-width",
       `${Math.ceil(compactSize.width)}px`,
     );
 
     primary.style.setProperty(
-      "--nav-sidebar-measured-expanded-content-width",
+      "--sidebar-measured-expanded-content-width",
       `${fullSize.contentWidth}px`,
     );
 
     primary.style.setProperty(
-      "--nav-sidebar-measured-height",
+      "--sidebar-measured-height",
       `${Math.ceil(Math.max(fullSize.height, compactSize.height))}px`,
     );
   }
@@ -206,5 +206,5 @@ document.querySelectorAll(".nav-sidebar").forEach((sidebar) => {
   document.fonts.ready.then(measureNavigation);
 
   // Applications can request a fresh measurement after changing content.
-  sidebar.addEventListener("nav-sidebar:refresh", measureNavigation);
+  sidebar.addEventListener("sidebar:refresh", measureNavigation);
 });
