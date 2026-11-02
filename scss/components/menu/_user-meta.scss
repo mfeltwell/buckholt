@@ -10,7 +10,7 @@
   @include type($body, "01");
   color: var(--text-muted);
 
-  .user-meta-first {
+  .user-meta-primary {
     @include type($label, "03");
     color: var(--text-primary);
   }
@@ -19,7 +19,7 @@
 .user-meta-compact {
   padding: 0;
 
-  .user-meta-first {
+  .user-meta-primary {
     @include type($label, "02");
   }
 }

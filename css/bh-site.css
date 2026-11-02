@@ -7695,7 +7695,7 @@ output {
   letter-spacing: 0.25px;
   color: var(--text-muted);
 }
-.user-meta .user-meta-first {
+.user-meta .user-meta-primary {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 500;
@@ -7706,7 +7706,7 @@ output {
 .user-meta-compact {
   padding: 0;
 }
-.user-meta-compact .user-meta-first {
+.user-meta-compact .user-meta-primary {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 500;
