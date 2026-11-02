@@ -5,14 +5,14 @@
 .user-meta {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem;
+  gap: $user-meta-gap;
+  padding: $user-meta-padding-y $user-meta-padding-x;
   @include type($body, "01");
-  color: var(--text-muted);
+  color: $user-meta-text;
 
   .user-meta-primary {
     @include type($label, "03");
-    color: var(--text-primary);
+    color: $user-meta-primary;
   }
 }
 

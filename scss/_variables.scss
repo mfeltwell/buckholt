@@ -1719,6 +1719,13 @@ $avatar-img-border: $ui-border-04 !default;
 $avatar-set-overlap: 0.75rem !default;
 $avatar-set-shadow: $shadow-xs !default;
 
+// User meta ____________________________
+$user-meta-gap: $spacer-02 !default;
+$user-meta-padding-y: $padding-03 !default;
+$user-meta-padding-x: $padding-03 !default;
+$user-meta-text: var(--text-muted) !default;
+$user-meta-primary: var(--text-primary) !default;
+
 // Account toggle _______________________
 $account-toggle-text: $text-secondary !default;
 $account-toggle-text-hover: $account-toggle-text !default;
