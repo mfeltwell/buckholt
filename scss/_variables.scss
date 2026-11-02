@@ -1876,20 +1876,22 @@ $sub-stepper-icon-svg-disabled: url("data:image/svg+xml,<svg xmlns='http://www.w
 $sub-stepper-icon-size-error: $icon-sm !default;
 
 // Badge ________________________________
-$badge-padding-x: $padding-03 !default;
-$badge-padding-y: 0 !default;
-$badge-label: $expressive-rich !default;
+$badge-padding-x: $padding-02 !default;
+$badge-padding-y: $padding-01 !default;
+$badge-height: 1rem !default;
+
+$badge-label: var(--text-secondary) !default;
 $badge-radius: $border-radius !default;
-$badge-border: $expressive-soft !default;
+$badge-border: var(--ui-border-03) !default;
 $badge-border-width: $border-width !default;
-$badge-background: $expressive-soft !default;
-$badge-height: 1.25rem !default;
-$badge-position: absolute !default;
-$badge-position-top: 50% !default;
-$badge-position-start: auto !default;
-$badge-position-end: 0.75rem !default;
-$badge-translate-y: -50% !default;
-$badge-translate-x: 0 !default;
+$badge-background: var(--ui-overlay-03) !default;
+
+// $badge-position: absolute !default;
+// $badge-position-top: 50% !default;
+// $badge-position-start: auto !default;
+// $badge-position-end: 0.75rem !default;
+// $badge-translate-y: -50% !default;
+// $badge-translate-x: 0 !default;
 
 // Modal ________________________________
 $modal-padding: $padding-08 !default;
