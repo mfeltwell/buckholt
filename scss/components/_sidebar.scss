@@ -1,0 +1,262 @@
+// Navigation sidebar
+.sidebar {
+  --#{$prefix-bh}sidebar-width: #{$sidebar-width};
+  --#{$prefix-bh}sidebar-radius: #{$sidebar-radius};
+  --#{$prefix-bh}sidebar-border-width: #{$sidebar-border-width};
+  --#{$prefix-bh}sidebar-border: #{$sidebar-border};
+  --#{$prefix-bh}sidebar-padding-y: #{$sidebar-padding-y};
+  --#{$prefix-bh}sidebar-padding-x: #{$sidebar-padding-x};
+  --#{$prefix-bh}sidebar-background: #{$sidebar-background};
+  --#{$prefix-bh}sidebar-content-gap: #{$sidebar-content-gap};
+  --#{$prefix-bh}sidebar-header-gap: #{$sidebar-header-gap};
+  --#{$prefix-bh}sidebar-header-padding-y: #{$sidebar-header-padding-y};
+  --#{$prefix-bh}sidebar-header-padding-x: #{$sidebar-header-padding-x};
+  --#{$prefix-bh}sidebar-body-gap: #{$sidebar-body-gap};
+  --#{$prefix-bh}sidebar-primary-radius: #{$sidebar-primary-radius};
+  --#{$prefix-bh}sidebar-primary-border-width: #{$sidebar-primary-border-width};
+  --#{$prefix-bh}sidebar-primary-border: #{$sidebar-primary-border};
+  --#{$prefix-bh}sidebar-primary-padding-y: #{$sidebar-primary-padding-y};
+  --#{$prefix-bh}sidebar-primary-padding-x: #{$sidebar-primary-padding-x};
+  --#{$prefix-bh}sidebar-primary-padding-y-collapsed: #{$sidebar-primary-padding-y-collapsed};
+  --#{$prefix-bh}sidebar-primary-padding-x-collapsed: #{$sidebar-primary-padding-x-collapsed};
+  --#{$prefix-bh}sidebar-primary-background: #{$sidebar-primary-background};
+  --#{$prefix-bh}sidebar-secondary-gap: #{$sidebar-secondary-gap};
+  --#{$prefix-bh}sidebar-secondary-padding-y: #{$sidebar-secondary-padding-y};
+  --#{$prefix-bh}sidebar-secondary-padding-x: #{$sidebar-secondary-padding-x};
+  --#{$prefix-bh}sidebar-secondary-header-padding-y: #{$sidebar-secondary-header-padding-y};
+  --#{$prefix-bh}sidebar-secondary-header-padding-x: #{$sidebar-secondary-header-padding-x};
+  --#{$prefix-bh}sidebar-secondary-header-gap: #{$sidebar-secondary-header-gap};
+
+  padding: var(--#{$prefix-bh}sidebar-padding-y)
+    var(--#{$prefix-bh}sidebar-padding-x);
+  background-color: var(--#{$prefix-bh}sidebar-background);
+  border-radius: var(--#{$prefix-bh}sidebar-radius);
+  border: var(--#{$prefix-bh}sidebar-border-width) solid
+    var(--#{$prefix-bh}sidebar-border);
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  width: fit-content;
+  max-width: var(--#{$prefix-bh}sidebar-width);
+  height: 100%;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--#{$prefix-bh}sidebar-content-gap);
+  height: 100%;
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--#{$prefix-bh}sidebar-header-gap);
+  padding: var(--#{$prefix-bh}sidebar-header-padding-y)
+    var(--#{$prefix-bh}sidebar-header-padding-x);
+
+  .btn {
+    align-self: center;
+  }
+}
+
+.sidebar-body {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: var(--#{$prefix-bh}sidebar-body-gap);
+  height: 100%;
+}
+
+// Reserves the primary's space beside the secondary.
+.sidebar-primary {
+  flex: 0 0 auto;
+
+  &:not(:has(~ .sidebar-secondary:not([hidden]))) {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
+// The surface that will expand.
+.sidebar-primary-panel {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  padding: var(--#{$prefix-bh}sidebar-primary-padding-y)
+    var(--#{$prefix-bh}sidebar-primary-padding-x);
+
+  background-color: var(--#{$prefix-bh}sidebar-primary-background);
+  border-radius: var(--#{$prefix-bh}sidebar-primary-radius);
+  border: var(--#{$prefix-bh}sidebar-primary-border-width) solid
+    var(--#{$prefix-bh}sidebar-primary-border);
+
+  @include transition(width 0.2s ease-in-out, padding 0s linear);
+}
+
+// Navigation views.
+.sidebar-primary-body {
+  > .sidebar-primary-expanded {
+    display: block;
+  }
+
+  > .sidebar-primary-compact {
+    display: none;
+  }
+}
+
+// Keep the primary's layout space fixed while its panel expands.
+.sidebar:not(.is-collapsed)
+  .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) {
+  width: var(--sidebar-measured-compact-width);
+  min-height: var(--sidebar-measured-height);
+
+  > .sidebar-primary-panel {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+
+    width: var(--sidebar-measured-compact-width);
+    min-height: 100%;
+    transition-delay: 0s;
+
+    padding: var(--#{$prefix-bh}sidebar-primary-padding-y-collapsed)
+      var(--#{$prefix-bh}sidebar-primary-padding-x-collapsed);
+
+    > .sidebar-primary-body {
+      position: relative;
+
+      > .sidebar-primary-expanded {
+        display: block;
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+
+        width: var(--sidebar-measured-expanded-content-width);
+        visibility: hidden;
+        transition: none;
+      }
+
+      > .sidebar-primary-compact {
+        display: block;
+        visibility: visible;
+        transition: none;
+      }
+    }
+  }
+
+  &:has(> .sidebar-primary-panel > .sidebar-primary-body:hover) {
+    > .sidebar-primary-panel {
+      width: 100%;
+      transition-delay: 0.18s;
+
+      padding: var(--#{$prefix-bh}sidebar-primary-padding-y)
+        var(--#{$prefix-bh}sidebar-primary-padding-x);
+
+      > .sidebar-primary-body {
+        > .sidebar-primary-expanded {
+          visibility: visible;
+          transition: visibility 0s linear 0.18s;
+        }
+
+        > .sidebar-primary-compact {
+          visibility: hidden;
+          transition: visibility 0s linear 0.18s;
+        }
+      }
+    }
+  }
+}
+
+.sidebar-secondary {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 0;
+  gap: var(--#{$prefix-bh}sidebar-secondary-gap);
+  padding: var(--#{$prefix-bh}sidebar-secondary-padding-y)
+    var(--#{$prefix-bh}sidebar-secondary-padding-x);
+
+  &[hidden] {
+    display: none !important;
+  }
+
+  .sidebar-secondary-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--#{$prefix-bh}sidebar-secondary-header-gap);
+    padding: var(--#{$prefix-bh}sidebar-secondary-header-padding-y)
+      var(--#{$prefix-bh}sidebar-secondary-header-padding-x);
+  }
+}
+
+.sidebar.is-collapsed {
+  --#{$prefix-bh}sidebar-header-gap: #{$sidebar-header-gap-collapsed};
+
+  // Button above the avatar.
+  .sidebar-header {
+    flex-direction: column-reverse;
+    gap: var(--#{$prefix-bh}sidebar-header-gap);
+  }
+
+  // Keep the avatar; hide the user's details.
+  .sidebar-header .user-meta {
+    justify-content: center;
+    gap: 0;
+  }
+
+  .sidebar-header .user-meta-body {
+    display: none;
+  }
+
+  .sidebar-body {
+    gap: 0;
+  }
+
+  .sidebar-primary-body {
+    > .nav .nav-link {
+      justify-content: center;
+      padding-inline: 0;
+      min-width: var(--nav-link-height);
+
+      > .nav-link-label {
+        @include visually-hidden();
+      }
+    }
+  }
+
+  .sidebar-primary {
+    flex: 0 0 auto;
+    width: auto;
+    min-height: 0;
+  }
+
+  .sidebar-primary-panel {
+    position: relative;
+    width: auto;
+    min-height: 0;
+    transition: none;
+
+    padding: var(--#{$prefix-bh}sidebar-primary-padding-y-collapsed)
+      var(--#{$prefix-bh}sidebar-primary-padding-x-collapsed);
+  }
+
+  .sidebar-primary-expanded {
+    display: none;
+  }
+
+  .sidebar-primary-compact {
+    display: block;
+  }
+
+  .sidebar-secondary {
+    display: none;
+  }
+}
