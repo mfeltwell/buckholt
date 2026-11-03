@@ -4190,6 +4190,10 @@ footer {
   margin: 2px;
 }
 
+*:has(> .badge-notification) {
+  position: relative;
+}
+
 .breadcrumb {
   --breadcrumb-padding-x: 0;
   --breadcrumb-padding-y: 0;

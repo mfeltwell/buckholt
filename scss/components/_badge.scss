@@ -62,3 +62,7 @@
     margin: 2px;
   }
 }
+
+*:has(> .badge-notification) {
+  position: relative;
+}
