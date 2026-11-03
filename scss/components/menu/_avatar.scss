@@ -64,7 +64,7 @@
 
 // Avatar set - Check out set.scss for generic set rules.
 .avatar-set {
-  --set-gap: 0 !important;
+  --set-gap: 0;
   --avatar-set-overlap: #{$avatar-set-overlap};
   --avatar-set-shadow: #{$avatar-set-shadow};
 
