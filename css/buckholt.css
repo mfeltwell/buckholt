@@ -4164,11 +4164,9 @@ footer {
 .badge:empty {
   --badge-background: var(--expressive-deep);
   padding: 0;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-.badge:empty:not(.badge-notification) {
-  display: none;
+  width: 1rem;
+  min-height: 1rem;
+  margin: 0.125rem;
 }
 
 .badge-notification {

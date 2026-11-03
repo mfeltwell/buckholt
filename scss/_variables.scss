@@ -1879,6 +1879,9 @@ $sub-stepper-icon-size-error: $icon-sm !default;
 $badge-padding-x: $padding-02 !default;
 $badge-padding-y: $padding-01 !default;
 $badge-height: 1.25rem !default;
+$badge-height-empty: 1rem !default;
+$badge-width-empty: 1rem !default;
+$badge-margin-empty: $margin-03 * 0.125 !default;
 
 $badge-label: var(--text-secondary) !default;
 $badge-radius: $border-radius !default;

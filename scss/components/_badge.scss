@@ -33,14 +33,11 @@
 
   &:empty {
     --#{$prefix-bh}badge-background: #{$expressive-deep};
-    padding: 0;
-    width: 0.75rem;
-    height: 0.75rem;
-  }
 
-  // Empty badges collapse automatically
-  &:empty:not(.badge-notification) {
-    display: none;
+    padding: 0;
+    width: $badge-width-empty;
+    min-height: $badge-height-empty;
+    margin: $badge-margin-empty;
   }
 }
 
