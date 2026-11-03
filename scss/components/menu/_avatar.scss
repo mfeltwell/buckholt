@@ -9,11 +9,12 @@
   --#{$prefix-bh}avatar-border-width: null;
   --#{$prefix-bh}avatar-text: #{$avatar-text};
   --#{$prefix-bh}avatar-icon-size: #{$avatar-icon-size};
+  --#{$prefix-bh}avatar-radius: #{$avatar-radius};
 
   background-color: var(--#{$prefix-bh}avatar-background);
   border: var(--#{$prefix-bh}avatar-border-width) solid
     var(--#{$prefix-bh}avatar-border);
-  border-radius: var(--border-radius-full);
+  border-radius: var(--#{$prefix-bh}avatar-radius);
   color: var(--#{$prefix-bh}avatar-text);
   height: var(--#{$prefix-bh}avatar-size);
   width: var(--#{$prefix-bh}avatar-size);
@@ -21,7 +22,6 @@
   align-items: center;
   justify-content: center;
   @include type($label, "03");
-  overflow: hidden;
   text-transform: uppercase;
   flex-shrink: 0;
 
@@ -33,6 +33,8 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-radius: var(--#{$prefix-bh}avatar-radius);
+    overflow: hidden;
   }
 
   // Expressive colours
@@ -62,7 +64,7 @@
 
 // Avatar set - Check out set.scss for generic set rules.
 .avatar-set {
-  --set-gap: 0;
+  --set-gap: 0 !important;
   --avatar-set-overlap: #{$avatar-set-overlap};
   --avatar-set-shadow: #{$avatar-set-shadow};
 
