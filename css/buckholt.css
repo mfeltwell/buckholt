@@ -4172,6 +4172,8 @@ footer {
   --badge-background: var(--error-01);
   --badge-label: var(--text-light);
   --badge-radius: 1rem;
+  --badge-border: var(--transparent);
+  --badge-border-width: 0;
   position: absolute;
   top: -0.5rem;
   right: -0.5rem;

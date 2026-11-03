@@ -1895,6 +1895,11 @@ $badge-notification-label: var(--text-light) !default;
 $badge-notification-radius: $border-radius-lg !default;
 $badge-notification-height: $badge-height !default;
 $badge-notification-width: $badge-notification-height !default;
+$badge-notification-border: var(--transparent) !default;
+$badge-notification-border-width: $border-width-0 !default;
+
+$badge-notification-position-top: -0.5rem !default;
+$badge-notification-position-right: -0.5rem !default;
 
 $badge-notification-height-empty: $badge-height-empty !default;
 $badge-notification-width-empty: $badge-notification-height-empty !default;

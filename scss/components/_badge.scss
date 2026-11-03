@@ -43,10 +43,12 @@
   --#{$prefix-bh}badge-background: #{$badge-notification-background};
   --#{$prefix-bh}badge-label: #{$badge-notification-label};
   --#{$prefix-bh}badge-radius: #{$badge-notification-radius};
+  --#{$prefix-bh}badge-border: #{$badge-notification-border};
+  --#{$prefix-bh}badge-border-width: #{$badge-notification-border-width};
 
   position: absolute;
-  top: -0.5rem;
-  right: -0.5rem;
+  top: $badge-notification-position-top;
+  right: $badge-notification-position-right;
   min-height: $badge-notification-height;
   min-width: $badge-notification-width;
   display: flex;
