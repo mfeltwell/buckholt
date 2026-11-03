@@ -1877,10 +1877,10 @@ $sub-stepper-icon-size-error: $icon-sm !default;
 
 // Badge ________________________________
 $badge-padding-x: $padding-02 !default;
-$badge-padding-y: $padding-01 !default;
+$badge-padding-y: 0 !default;
 $badge-height: 1.25rem !default;
 $badge-height-empty: 1rem !default;
-$badge-width-empty: 1rem !default;
+$badge-width-empty: $badge-height-empty !default;
 $badge-margin-empty: $margin-03 * 0.125 !default;
 
 $badge-label: var(--text-secondary) !default;
@@ -1888,6 +1888,17 @@ $badge-radius: $border-radius !default;
 $badge-border: var(--ui-border-03) !default;
 $badge-border-width: $border-width !default;
 $badge-background: var(--ui-overlay-03) !default;
+
+// Badge notification
+$badge-notification-background: var(--#{$prefix-bh}error-01) !default;
+$badge-notification-label: var(--text-light) !default;
+$badge-notification-radius: $border-radius-lg !default;
+$badge-notification-height: $badge-height !default;
+$badge-notification-width: $badge-notification-height !default;
+
+$badge-notification-height-empty: $badge-height-empty !default;
+$badge-notification-width-empty: $badge-notification-height-empty !default;
+$badge-notification-margin-empty: $badge-margin-empty !default;
 
 // Modal ________________________________
 $modal-padding: $padding-08 !default;

@@ -32,8 +32,6 @@
   min-height: $badge-height;
 
   &:empty {
-    --#{$prefix-bh}badge-background: #{$expressive-deep};
-
     padding: 0;
     width: $badge-width-empty;
     min-height: $badge-height-empty;
@@ -42,24 +40,24 @@
 }
 
 .badge-notification {
+  --#{$prefix-bh}badge-background: #{$badge-notification-background};
+  --#{$prefix-bh}badge-label: #{$badge-notification-label};
+  --#{$prefix-bh}badge-radius: #{$badge-notification-radius};
+
   position: absolute;
   top: -0.5rem;
   right: -0.5rem;
-  background-color: red;
-  color: white;
-  border-radius: 1rem;
-  min-height: 1.25rem;
-  min-width: 1.25rem;
+  min-height: $badge-notification-height;
+  min-width: $badge-notification-width;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-inline: 0.25rem;
 
   &.badge:empty {
     padding: 0;
-    min-width: 1rem;
-    min-height: 1rem;
-    margin: 2px;
+    min-width: $badge-notification-width-empty;
+    min-height: $badge-notification-height-empty;
+    margin: $badge-notification-margin-empty;
   }
 }
 

@@ -4137,7 +4137,7 @@ footer {
 
 .badge {
   --badge-padding-x: 0.375rem;
-  --badge-padding-y: 0.25rem;
+  --badge-padding-y: 0;
   --badge-label: var(--text-secondary);
   --badge-radius: 0.5rem;
   --badge-border: var(--ui-border-03);
@@ -4162,7 +4162,6 @@ footer {
   min-height: 1.25rem;
 }
 .badge:empty {
-  --badge-background: var(--expressive-deep);
   padding: 0;
   width: 1rem;
   min-height: 1rem;
@@ -4170,24 +4169,23 @@ footer {
 }
 
 .badge-notification {
+  --badge-background: var(--error-01);
+  --badge-label: var(--text-light);
+  --badge-radius: 1rem;
   position: absolute;
   top: -0.5rem;
   right: -0.5rem;
-  background-color: red;
-  color: white;
-  border-radius: 1rem;
   min-height: 1.25rem;
   min-width: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-inline: 0.25rem;
 }
 .badge-notification.badge:empty {
   padding: 0;
   min-width: 1rem;
   min-height: 1rem;
-  margin: 2px;
+  margin: 0.125rem;
 }
 
 *:has(> .badge-notification) {
