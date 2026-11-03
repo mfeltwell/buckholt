@@ -4158,10 +4158,8 @@ footer {
   border: var(--badge-border-width) solid var(--badge-border);
   background-color: var(--badge-background);
   z-index: 999;
-}
-.badge:not(:empty) {
-  min-height: 1rem;
   padding: var(--badge-padding-y) var(--badge-padding-x);
+  min-height: 1.25rem;
 }
 .badge:empty {
   --badge-background: var(--expressive-deep);
@@ -4169,13 +4167,29 @@ footer {
   width: 0.75rem;
   height: 0.75rem;
 }
-.badge.badge-floating {
-  top: -0.5rem;
-  right: -0.25rem;
-  transform: none;
+.badge:empty:not(.badge-notification) {
+  display: none;
 }
-.badge.badge-floating:empty {
-  top: 0.125rem;
+
+.badge-notification {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  background-color: red;
+  color: white;
+  border-radius: 1rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 0.25rem;
+}
+.badge-notification.badge:empty {
+  padding: 0;
+  min-width: 1rem;
+  min-height: 1rem;
+  margin: 2px;
 }
 
 .breadcrumb {

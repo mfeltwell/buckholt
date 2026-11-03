@@ -12,12 +12,6 @@
   --#{$prefix-bh}badge-border-width: #{$badge-border-width};
   --#{$prefix-bh}badge-background: #{$badge-background};
 
-  // --#{$prefix-bh}badge-position: #{$badge-position};
-  // --#{$prefix-bh}badge-position-top: #{$badge-position-top};
-  // --#{$prefix-bh}badge-position-start: #{$badge-position-start};
-  // --#{$prefix-bh}badge-position-end: #{$badge-position-end};
-  // --#{$prefix-bh}badge-translate-x: #{$badge-translate-x};
-  // --#{$prefix-bh}badge-translate-y: #{$badge-translate-y};
   // scss-docs-end badge-css-vars
 
   display: flex;
@@ -33,25 +27,9 @@
     var(--#{$prefix-bh}badge-border);
   background-color: var(--#{$prefix-bh}badge-background);
   z-index: 999;
-  // position: var(--#{$prefix-bh}badge-position);
-  // top: var(--#{$prefix-bh}badge-position-top);
-  // inset-inline-start: var(--#{$prefix-bh}badge-position-start);
-  // inset-inline-end: var(--#{$prefix-bh}badge-position-end);
-  // transform: translate(
-  //   var(--#{$prefix-bh}badge-translate-x),
-  //   var(--#{$prefix-bh}badge-translate-y)
-  // );
-
-  &:not(:empty) {
-    min-height: $badge-height;
-    padding: var(--#{$prefix-bh}badge-padding-y)
-      var(--#{$prefix-bh}badge-padding-x);
-  }
-
-  // Empty badges collapse automatically
-  // &:empty {
-  //     display: none;
-  // }
+  padding: var(--#{$prefix-bh}badge-padding-y)
+    var(--#{$prefix-bh}badge-padding-x);
+  min-height: $badge-height;
 
   &:empty {
     --#{$prefix-bh}badge-background: #{$expressive-deep};
@@ -60,13 +38,30 @@
     height: 0.75rem;
   }
 
-  &.badge-floating {
-    top: -0.5rem;
-    right: -0.25rem;
-    transform: none;
+  // Empty badges collapse automatically
+  &:empty:not(.badge-notification) {
+    display: none;
+  }
+}
 
-    &:empty {
-      top: 0.125rem;
-    }
+.badge-notification {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  background-color: red;
+  color: white;
+  border-radius: 1rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 0.25rem;
+
+  &.badge:empty {
+    padding: 0;
+    min-width: 1rem;
+    min-height: 1rem;
+    margin: 2px;
   }
 }
