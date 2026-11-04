@@ -87,7 +87,7 @@
   .badge-notification {
     position: absolute;
     top: unset;
-    bottom: var(--#{$prefix-bh}avatar-badge-position-bottom);
-    right: var(--#{$prefix-bh}avatar-badge-position-right);
+    bottom: $avatar-badge-position-bottom;
+    right: $avatar-badge-position-right;
   }
 }
