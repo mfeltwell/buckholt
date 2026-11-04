@@ -8584,6 +8584,15 @@ a.tag {
   min-height: 1rem;
   margin: 0.125rem;
 }
+.badge-notification.status-indicator {
+  padding: 0;
+  background: none;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.badge-notification.status-indicator > i {
+  width: auto;
+}
 
 *:has(> .badge-notification) {
   position: relative;

@@ -61,6 +61,18 @@
     min-height: $badge-notification-height-empty;
     margin: $badge-notification-margin-empty;
   }
+
+  // Status indicator badge
+  &.status-indicator {
+    padding: 0;
+    background: none;
+    font-size: $badge-notification-height;
+    line-height: 1;
+
+    > i {
+      width: auto;
+    }
+  }
 }
 
 *:has(> .badge-notification) {
