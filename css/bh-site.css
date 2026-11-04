@@ -198,9 +198,13 @@
   --disabled-02: #dadada;
   --disabled-03: #bababa;
   --disabled-04: #ffffff;
-  --focus-01: #1748d0;
-  --success-01: #168914;
   --error-01: #d7050c;
+  --warning-01: #b35400;
+  --success-01: #168914;
+  --info-01: #3f66d1;
+  --neutral-01: #919191;
+  --undefined-01: #5731D6;
+  --focus-01: #1748d0;
   --feedback-background-info: #e7ecf9;
   --feedback-overlay-info: rgba(23, 72, 208, 0.1);
   --feedback-border-info: #3f66d1;
@@ -8588,10 +8592,6 @@ a.tag {
   padding: 0;
   background: none;
   font-size: 1.25rem;
-  line-height: 1;
-}
-.badge-notification.status-indicator > i {
-  width: auto;
 }
 
 *:has(> .badge-notification) {
@@ -10260,6 +10260,43 @@ th:has(.table-sort) {
   min-height: 1em;
   background-color: #dadada;
   opacity: 1;
+}
+
+.status-indicator {
+  --indicator-size: 1rem;
+  font-size: var(--indicator-size);
+  line-height: 1;
+}
+.status-indicator > i {
+  width: auto;
+}
+
+.status-indicator-error {
+  --status-indicator-colour: var(--error-01);
+}
+
+.status-indicator-warning {
+  --status-indicator-colour: var(--warning-01);
+}
+
+.status-indicator-success {
+  --status-indicator-colour: var(--success-01);
+}
+
+.status-indicator-info {
+  --status-indicator-colour: var(--info-01);
+}
+
+.status-indicator-neutral {
+  --status-indicator-colour: var(--neutral-01);
+}
+
+.status-indicator-undefined {
+  --status-indicator-colour: var(--undefined-01);
+}
+
+.status-indicator-sm {
+  --indicator-size: 0.75rem;
 }
 
 .align-baseline {

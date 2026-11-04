@@ -1,0 +1,7 @@
+@mixin status-indicator-colours($colours: $status-indicator-colours) {
+  @each $state, $colour in $colours {
+    .status-indicator-#{$state} {
+      --#{$prefix-bh}status-indicator-colour: #{$colour};
+    }
+  }
+}

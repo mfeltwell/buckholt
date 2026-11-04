@@ -1,0 +1,17 @@
+.status-indicator {
+  --#{$prefix-bh}indicator-size: #{$indicator-size};
+
+  font-size: var(--#{$prefix-bh}indicator-size);
+  line-height: 1;
+
+  > i {
+    width: auto;
+  }
+}
+
+// Generate the state modifier classes
+@include status-indicator-colours;
+
+.status-indicator-sm {
+  --#{$prefix-bh}indicator-size: #{$indicator-size-sm};
+}

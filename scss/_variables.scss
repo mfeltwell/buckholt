@@ -350,14 +350,22 @@ $ui-border-03: $black-tint-30 !default;
 $ui-border-04: $white !default;
 
 // State colours ________________________
-$focus-01: $info-60 !default;
-$success-01: $valid-60 !default;
 $error-01: $danger-60 !default;
+$warning-01: $caution-80 !default;
+$success-01: $valid-60 !default;
+$info-01: $info-50 !default;
+$neutral-01: $neutral-60 !default;
+$undefined-01: $accent-01-60 !default;
+$focus-01: $info-60 !default;
 
 $state-colours: (
-  "focus-01": $focus-01,
-  "success-01": $success-01,
   "error-01": $error-01,
+  "warning-01": $warning-01,
+  "success-01": $success-01,
+  "info-01": $info-01,
+  "neutral-01": $neutral-01,
+  "undefined-01": $undefined-01,
+  "focus-01": $focus-01,
 ) !default;
 
 $disabled-overlay-01: $black-tint-30 !default;
@@ -430,6 +438,16 @@ $action-danger-colors: (
 
 $action-text-danger-colors: (
   "01": $action-text-danger-01,
+) !default;
+
+// Status indicator colours ____________
+$status-indicator-colours: (
+  "error": var(--#{$prefix-bh}error-01),
+  "warning": var(--#{$prefix-bh}warning-01),
+  "success": var(--#{$prefix-bh}success-01),
+  "info": var(--#{$prefix-bh}info-01),
+  "neutral": var(--#{$prefix-bh}neutral-01),
+  "undefined": var(--#{$prefix-bh}undefined-01),
 ) !default;
 
 // Feedback colours _____________________
@@ -2153,3 +2171,7 @@ $table-header-gap: $spacer-03 !default;
 
 $table-sort-icon: var(--#{$prefix-bh}text-active) !default;
 $table-sort-icon-size: $icon-sm !default;
+
+// Status indicator _______________________
+$indicator-size: 1rem !default;
+$indicator-size-sm: 0.75rem !default;
