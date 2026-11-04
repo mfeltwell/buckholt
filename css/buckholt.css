@@ -8100,6 +8100,13 @@ a.tag {
   margin-left: calc(var(--avatar-set-overlap) * -1);
 }
 
+.avatar .badge-notification {
+  position: absolute;
+  top: unset;
+  bottom: -0.25rem;
+  right: -0.25rem;
+}
+
 .user-meta {
   display: flex;
   align-items: center;
