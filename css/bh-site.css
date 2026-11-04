@@ -8103,8 +8103,8 @@ a.tag {
 .avatar .badge-notification {
   position: absolute;
   top: unset;
-  bottom: -0.25rem;
-  right: -0.25rem;
+  bottom: var(--avatar-badge-position-bottom);
+  right: var(--avatar-badge-position-right);
 }
 
 .user-meta {
