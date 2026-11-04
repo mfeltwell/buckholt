@@ -10273,26 +10273,32 @@ th:has(.table-sort) {
 
 .status-indicator-error {
   --status-indicator-colour: var(--error-01);
+  color: var(--status-indicator-colour);
 }
 
 .status-indicator-warning {
   --status-indicator-colour: var(--warning-01);
+  color: var(--status-indicator-colour);
 }
 
 .status-indicator-success {
   --status-indicator-colour: var(--success-01);
+  color: var(--status-indicator-colour);
 }
 
 .status-indicator-info {
   --status-indicator-colour: var(--info-01);
+  color: var(--status-indicator-colour);
 }
 
 .status-indicator-neutral {
   --status-indicator-colour: var(--neutral-01);
+  color: var(--status-indicator-colour);
 }
 
 .status-indicator-undefined {
   --status-indicator-colour: var(--undefined-01);
+  color: var(--status-indicator-colour);
 }
 
 .status-indicator-sm {

@@ -2,6 +2,7 @@
   @each $state, $colour in $colours {
     .status-indicator-#{$state} {
       --#{$prefix-bh}status-indicator-colour: #{$colour};
+      color: var(--status-indicator-colour);
     }
   }
 }
