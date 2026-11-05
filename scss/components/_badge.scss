@@ -37,6 +37,19 @@
     min-height: $badge-height-empty;
     margin: $badge-margin-empty;
   }
+
+  // Expressive colours
+  &.expressive-light {
+    --#{$prefix-bh}badge-label: #{$expressive-deep};
+    --#{$prefix-bh}badge-background: #{$expressive-pale-overlay};
+    --#{$prefix-bh}badge-border: #{$expressive-pale-overlay};
+  }
+
+  &.expressive-dark {
+    --#{$prefix-bh}badge-label: #{$text-light};
+    --#{$prefix-bh}badge-background: #{$expressive-rich};
+    --#{$prefix-bh}badge-border: #{$expressive-rich};
+  }
 }
 
 .badge-notification {

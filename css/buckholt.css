@@ -8566,6 +8566,16 @@ a.tag {
   min-height: 1rem;
   margin: 0.125rem;
 }
+.badge.expressive-light {
+  --badge-label: var(--expressive-deep);
+  --badge-background: var(--expressive-pale-overlay);
+  --badge-border: var(--expressive-pale-overlay);
+}
+.badge.expressive-dark {
+  --badge-label: #ffffff;
+  --badge-background: var(--expressive-rich);
+  --badge-border: var(--expressive-rich);
+}
 
 .badge-notification {
   --badge-background: var(--error-01);
