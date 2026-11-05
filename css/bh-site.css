@@ -8567,9 +8567,9 @@ a.tag {
   margin: 0.125rem;
 }
 .badge.expressive-light {
-  --badge-label: var(--expressive-deep);
-  --badge-background: var(--expressive-pale-overlay);
-  --badge-border: var(--expressive-pale-overlay);
+  --badge-label: var(--expressive-rich);
+  --badge-background: var(--expressive-soft-overlay);
+  --badge-border: var(--expressive-soft-overlay);
 }
 .badge.expressive-dark {
   --badge-label: #ffffff;

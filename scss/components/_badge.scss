@@ -40,9 +40,9 @@
 
   // Expressive colours
   &.expressive-light {
-    --#{$prefix-bh}badge-label: #{$expressive-deep};
-    --#{$prefix-bh}badge-background: #{$expressive-pale-overlay};
-    --#{$prefix-bh}badge-border: #{$expressive-pale-overlay};
+    --#{$prefix-bh}badge-label: #{$expressive-rich};
+    --#{$prefix-bh}badge-background: #{$expressive-soft-overlay};
+    --#{$prefix-bh}badge-border: #{$expressive-soft-overlay};
   }
 
   &.expressive-dark {
