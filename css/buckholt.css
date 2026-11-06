@@ -9891,10 +9891,15 @@ th:has(.table-sort) {
   --status-indicator-size: 1rem;
   font-size: var(--status-indicator-size);
   line-height: 1;
-  margin-right: 0.5rem;
 }
 .status-indicator > i {
   width: auto;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .status-indicator-error {
