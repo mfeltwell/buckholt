@@ -13,11 +13,14 @@
   display: inline-flex;
   align-items: center;
   gap: #{$status-gap};
+  @include type($body, "02");
 }
 
 // Generate the state modifier classes
 @include status-indicator-colours;
 
+// Sizes
 .status-indicator-sm {
   --#{$prefix-bh}status-indicator-size: #{$status-indicator-size-sm};
+  @include type($body, "01");
 }

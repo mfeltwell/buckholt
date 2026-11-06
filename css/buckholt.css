@@ -9900,6 +9900,10 @@ th:has(.table-sort) {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.16px;
 }
 
 .status-indicator-error {
@@ -9934,6 +9938,10 @@ th:has(.table-sort) {
 
 .status-indicator-sm {
   --status-indicator-size: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 0.25px;
 }
 
 .lookup {
