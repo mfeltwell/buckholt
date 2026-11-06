@@ -8602,6 +8602,7 @@ a.tag {
   padding: 0;
   background: none;
   font-size: 1.25rem;
+  margin: 0;
 }
 
 *:has(> .badge-notification) {
@@ -9884,6 +9885,50 @@ th:has(.table-sort) {
   display: none;
 }
 
+.status-indicator {
+  --indicator-size: 1rem;
+  font-size: var(--indicator-size);
+  line-height: 1;
+  margin-right: 0.5rem;
+}
+.status-indicator > i {
+  width: auto;
+}
+
+.status-indicator-error {
+  --status-indicator-colour: var(--error-01);
+  color: var(--status-indicator-colour);
+}
+
+.status-indicator-warning {
+  --status-indicator-colour: var(--warning-01);
+  color: var(--status-indicator-colour);
+}
+
+.status-indicator-success {
+  --status-indicator-colour: var(--success-01);
+  color: var(--status-indicator-colour);
+}
+
+.status-indicator-info {
+  --status-indicator-colour: var(--info-01);
+  color: var(--status-indicator-colour);
+}
+
+.status-indicator-neutral {
+  --status-indicator-colour: var(--neutral-01);
+  color: var(--status-indicator-colour);
+}
+
+.status-indicator-undefined {
+  --status-indicator-colour: var(--undefined-01);
+  color: var(--status-indicator-colour);
+}
+
+.status-indicator-sm {
+  --indicator-size: 0.75rem;
+}
+
 .lookup {
   display: flex;
   flex-direction: column;
@@ -10271,49 +10316,6 @@ th:has(.table-sort) {
   min-height: 1em;
   background-color: #dadada;
   opacity: 1;
-}
-
-.status-indicator {
-  --indicator-size: 1rem;
-  font-size: var(--indicator-size);
-  line-height: 1;
-}
-.status-indicator > i {
-  width: auto;
-}
-
-.status-indicator-error {
-  --status-indicator-colour: var(--error-01);
-  color: var(--status-indicator-colour);
-}
-
-.status-indicator-warning {
-  --status-indicator-colour: var(--warning-01);
-  color: var(--status-indicator-colour);
-}
-
-.status-indicator-success {
-  --status-indicator-colour: var(--success-01);
-  color: var(--status-indicator-colour);
-}
-
-.status-indicator-info {
-  --status-indicator-colour: var(--info-01);
-  color: var(--status-indicator-colour);
-}
-
-.status-indicator-neutral {
-  --status-indicator-colour: var(--neutral-01);
-  color: var(--status-indicator-colour);
-}
-
-.status-indicator-undefined {
-  --status-indicator-colour: var(--undefined-01);
-  color: var(--status-indicator-colour);
-}
-
-.status-indicator-sm {
-  --indicator-size: 0.75rem;
 }
 
 .align-baseline {

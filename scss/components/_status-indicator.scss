@@ -3,6 +3,7 @@
 
   font-size: var(--#{$prefix-bh}indicator-size);
   line-height: 1;
+  margin-right: $spacer-03;
 
   > i {
     width: auto;
