@@ -9887,15 +9887,6 @@ th:has(.table-sort) {
   display: none;
 }
 
-.status-indicator {
-  --status-indicator-size: 1rem;
-  font-size: var(--status-indicator-size);
-  line-height: 1;
-}
-.status-indicator > i {
-  width: auto;
-}
-
 .status {
   display: inline-flex;
   align-items: center;
@@ -9904,6 +9895,15 @@ th:has(.table-sort) {
   line-height: 1.5rem;
   font-weight: 300;
   letter-spacing: 0.16px;
+}
+
+.status-indicator {
+  --status-indicator-size: 1rem;
+  font-size: var(--status-indicator-size);
+  line-height: 1;
+}
+.status-indicator > i {
+  width: auto;
 }
 
 .status-indicator-error {

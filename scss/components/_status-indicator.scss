@@ -1,3 +1,10 @@
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: #{$status-gap};
+  @include type($body, "02");
+}
+
 .status-indicator {
   --#{$prefix-bh}status-indicator-size: #{$status-indicator-size};
 
@@ -7,13 +14,6 @@
   > i {
     width: auto;
   }
-}
-
-.status {
-  display: inline-flex;
-  align-items: center;
-  gap: #{$status-gap};
-  @include type($body, "02");
 }
 
 // Generate the state modifier classes
