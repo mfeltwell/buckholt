@@ -24,7 +24,7 @@
   @include type($body, "01");
 }
 
-.status-sm,
+.status-sm > .status-indicator,
 .status-indicator-sm {
   --#{$prefix-bh}status-indicator-size: #{$status-indicator-size-sm};
 }
