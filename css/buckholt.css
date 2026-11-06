@@ -9943,8 +9943,17 @@ th:has(.table-sort) {
   letter-spacing: 0.25px;
 }
 
-.status-sm > .status-indicator,
 .status-indicator-sm {
+  --status-indicator-size: 0.75rem;
+}
+
+.status-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.25px;
+}
+.status-xs > .status-indicator {
   --status-indicator-size: 0.75rem;
 }
 
