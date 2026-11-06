@@ -8602,6 +8602,8 @@ a.tag {
   padding: 0;
   background: none;
   font-size: 1rem;
+  min-width: 1rem;
+  min-height: 1rem;
   margin: 0.125rem;
 }
 

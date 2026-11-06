@@ -80,6 +80,8 @@
     padding: 0;
     background: none;
     font-size: $badge-notification-height-empty;
+    min-width: $badge-notification-width-empty;
+    min-height: $badge-notification-height-empty;
     margin: $badge-notification-margin-empty;
   }
 }
