@@ -8601,8 +8601,8 @@ a.tag {
 .badge-notification.status-indicator {
   padding: 0;
   background: none;
-  font-size: 1.25rem;
-  margin: 0;
+  font-size: 1rem;
+  margin: 0.125rem;
 }
 
 *:has(> .badge-notification) {

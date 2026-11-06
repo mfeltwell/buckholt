@@ -79,8 +79,8 @@
   &.status-indicator {
     padding: 0;
     background: none;
-    font-size: $badge-notification-height;
-    margin: 0;
+    font-size: $badge-notification-height-empty;
+    margin: $badge-notification-margin-empty;
   }
 }
 
