@@ -20,8 +20,11 @@
 @include status-indicator-colours;
 
 // Sizes
+.status-sm {
+  @include type($body, "01");
+}
+
 .status-sm,
 .status-indicator-sm {
   --#{$prefix-bh}status-indicator-size: #{$status-indicator-size-sm};
-  @include type($body, "01");
 }
