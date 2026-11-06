@@ -41,8 +41,8 @@
 .versatile-body {
   display: flex;
   gap: var(--#{$prefix-bh}versatile-body-gap);
+  flex-grow: 1;
   align-items: flex-start;
-  width: 100%;
   min-width: 0;
 
   .icon-block {
@@ -59,6 +59,7 @@
   display: flex;
   align-items: center;
   gap: var(--#{$prefix-bh}versatile-actions-gap);
+  flex-shrink: 0;
 
   .button-set {
     margin: 0;

@@ -9391,8 +9391,8 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
 .versatile-body {
   display: flex;
   gap: var(--versatile-body-gap);
+  flex-grow: 1;
   align-items: flex-start;
-  width: 100%;
   min-width: 0;
 }
 .versatile-body .icon-block {
@@ -9408,6 +9408,7 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   display: flex;
   align-items: center;
   gap: var(--versatile-actions-gap);
+  flex-shrink: 0;
 }
 .versatile-actions .button-set {
   margin: 0;
