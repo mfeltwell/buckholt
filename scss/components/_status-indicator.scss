@@ -1,7 +1,7 @@
 .status-indicator {
-  --#{$prefix-bh}indicator-size: #{$indicator-size};
+  --#{$prefix-bh}status-indicator-size: #{$status-indicator-size};
 
-  font-size: var(--#{$prefix-bh}indicator-size);
+  font-size: var(--#{$prefix-bh}status-indicator-size);
   line-height: 1;
   margin-right: $spacer-03;
 
@@ -14,5 +14,5 @@
 @include status-indicator-colours;
 
 .status-indicator-sm {
-  --#{$prefix-bh}indicator-size: #{$indicator-size-sm};
+  --#{$prefix-bh}status-indicator-size: #{$status-indicator-size-sm};
 }

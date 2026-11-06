@@ -60,29 +60,29 @@
   --#{$prefix-bh}badge-border-width: #{$badge-notification-border-width};
 
   position: absolute;
-  top: $badge-notification-position-top;
-  right: $badge-notification-position-right;
-  min-height: $badge-notification-height;
-  min-width: $badge-notification-width;
+  top: #{$badge-notification-position-top};
+  right: #{$badge-notification-position-right};
+  min-height: #{$badge-notification-height};
+  min-width: #{$badge-notification-width};
   display: flex;
   align-items: center;
   justify-content: center;
 
   &.badge:empty {
     padding: 0;
-    min-width: $badge-notification-width-empty;
-    min-height: $badge-notification-height-empty;
-    margin: $badge-notification-margin-empty;
+    min-width: #{$badge-notification-width-empty};
+    min-height: #{$badge-notification-height-empty};
+    margin: #{$badge-notification-margin-empty};
   }
 
   // Status indicator badge
   &.status-indicator {
     padding: 0;
     background: none;
-    font-size: $badge-notification-height-empty;
-    min-width: $badge-notification-width-empty;
-    min-height: $badge-notification-height-empty;
-    margin: $badge-notification-margin-empty;
+    font-size: #{$status-indicator-size};
+    min-width: #{$badge-notification-width-empty};
+    min-height: #{$badge-notification-height-empty};
+    margin: #{$badge-notification-margin-empty};
   }
 }
 

@@ -9888,8 +9888,8 @@ th:has(.table-sort) {
 }
 
 .status-indicator {
-  --indicator-size: 1rem;
-  font-size: var(--indicator-size);
+  --status-indicator-size: 1rem;
+  font-size: var(--status-indicator-size);
   line-height: 1;
   margin-right: 0.5rem;
 }
@@ -9928,7 +9928,7 @@ th:has(.table-sort) {
 }
 
 .status-indicator-sm {
-  --indicator-size: 0.75rem;
+  --status-indicator-size: 0.75rem;
 }
 
 .lookup {
