@@ -9936,6 +9936,7 @@ th:has(.table-sort) {
   color: var(--status-indicator-colour);
 }
 
+.status-sm,
 .status-indicator-sm {
   --status-indicator-size: 0.75rem;
   font-size: 0.875rem;
