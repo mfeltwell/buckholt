@@ -8583,9 +8583,7 @@ a.tag {
   right: 1rem;
 }
 .badge-floating.expressive-light {
-  --badge-label: var(--expressive-rich);
   --badge-background: var(--expressive-soft);
-  --badge-border: var(--expressive-soft);
 }
 
 *:has(> .badge-floating) {

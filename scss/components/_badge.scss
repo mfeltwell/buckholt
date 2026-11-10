@@ -59,9 +59,7 @@
 
   // Expressive colours
   &.expressive-light {
-    --#{$prefix-bh}badge-label: #{$expressive-rich};
     --#{$prefix-bh}badge-background: #{$expressive-soft};
-    --#{$prefix-bh}badge-border: #{$expressive-soft};
   }
 }
 
