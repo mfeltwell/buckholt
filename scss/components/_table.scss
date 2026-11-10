@@ -91,6 +91,12 @@
     flex-wrap: nowrap;
   }
 
+  &:not(:has(thead)) {
+    .table-gap {
+      display: none;
+    }
+  }
+
   .table-gap {
     border: none;
 

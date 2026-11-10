@@ -9581,6 +9581,9 @@ a.versatile:hover {
 .table [class*="-set "] {
   flex-wrap: nowrap;
 }
+.table:not(:has(thead)) .table-gap {
+  display: none;
+}
 .table .table-gap {
   border: none;
 }
