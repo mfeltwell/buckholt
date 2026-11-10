@@ -52,6 +52,23 @@
   }
 }
 
+.badge-floating {
+  position: absolute;
+  top: #{$badge-floating-position-top};
+  right: #{$badge-floating-position-right};
+
+  // Expressive colours
+  &.expressive-light {
+    --#{$prefix-bh}badge-label: #{$expressive-rich};
+    --#{$prefix-bh}badge-background: #{$expressive-soft};
+    --#{$prefix-bh}badge-border: #{$expressive-soft};
+  }
+}
+
+*:has(> .badge-floating) {
+  position: relative;
+}
+
 .badge-notification {
   --#{$prefix-bh}badge-background: #{$badge-notification-background};
   --#{$prefix-bh}badge-label: #{$badge-notification-label};

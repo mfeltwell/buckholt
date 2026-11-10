@@ -1927,6 +1927,10 @@ $badge-notification-height-empty: $badge-height-empty !default;
 $badge-notification-width-empty: $badge-notification-height-empty !default;
 $badge-notification-margin-empty: $badge-margin-empty !default;
 
+// Badge floating
+$badge-floating-position-top: -0.5rem !default;
+$badge-floating-position-right: 1rem !default;
+
 // Modal ________________________________
 $modal-padding: $padding-08 !default;
 $modal-margin: $margin-02 !default;

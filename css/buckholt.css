@@ -8577,6 +8577,21 @@ a.tag {
   --badge-border: var(--expressive-rich);
 }
 
+.badge-floating {
+  position: absolute;
+  top: -0.5rem;
+  right: 1rem;
+}
+.badge-floating.expressive-light {
+  --badge-label: var(--expressive-rich);
+  --badge-background: var(--expressive-soft);
+  --badge-border: var(--expressive-soft);
+}
+
+*:has(> .badge-floating) {
+  position: relative;
+}
+
 .badge-notification {
   --badge-background: var(--error-01);
   --badge-label: var(--text-light);
