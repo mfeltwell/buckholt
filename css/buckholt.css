@@ -9957,7 +9957,7 @@ th:has(.table-sort) {
 }
 
 .status-indicator-sm {
-  --status-indicator-size: 0.75rem;
+  --status-indicator-size: 0.875rem;
 }
 
 .status-xs {
@@ -9967,7 +9967,7 @@ th:has(.table-sort) {
   letter-spacing: 0.25px;
 }
 .status-xs > .status-indicator {
-  --status-indicator-size: 0.75rem;
+  --status-indicator-size: 0.875rem;
 }
 
 .lookup {
