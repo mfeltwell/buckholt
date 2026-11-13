@@ -10,6 +10,9 @@ document.querySelectorAll(".sidebar").forEach((sidebar) => {
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const animations = new Map();
+  const primaryBody = primary.querySelector(
+    ":scope > .sidebar-primary-panel > .sidebar-primary-body",
+  );
 
   function animateLayout(changeState) {
     const elements = [sidebar, primary, secondary].filter(Boolean);
@@ -28,6 +31,24 @@ document.querySelectorAll(".sidebar").forEach((sidebar) => {
     if (reducedMotion.matches) return;
 
     const after = elements.map((el) => el.getBoundingClientRect().width);
+
+    // Hold the navigation at its final width while the card opens or closes.
+    if (primaryBody && before[1] !== after[1]) {
+      const width = `${primaryBody.getBoundingClientRect().width}px`;
+      const frame = { width, boxSizing: "border-box" };
+
+      const hold = primaryBody.animate([frame, frame], {
+        duration: 200,
+      });
+
+      animations.set(primaryBody, hold);
+
+      hold.onfinish = () => {
+        if (animations.get(primaryBody) === hold) {
+          animations.delete(primaryBody);
+        }
+      };
+    }
 
     elements.forEach((el, index) => {
       const from = before[index];
