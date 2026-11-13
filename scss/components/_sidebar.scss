@@ -110,11 +110,12 @@
   }
 }
 
-// Keep the primary's layout space fixed while its panel expands.
+// Expand the primary column on hover, pushing the secondary column across.
 .sidebar:not(.is-collapsed)
   .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) {
   width: var(--sidebar-measured-compact-width);
   min-height: var(--sidebar-measured-height);
+  @include transition(width 0.2s ease-in-out);
 
   > .sidebar-primary-panel {
     position: relative;
@@ -147,7 +148,14 @@
     }
   }
 
-  &:has(> .sidebar-primary-panel > .sidebar-primary-body:hover) {
+  &:hover {
+    width: calc(
+      var(--sidebar-measured-expanded-content-width) + 2 *
+        var(--#{$prefix-bh}sidebar-primary-padding-x) + 2 *
+        var(--#{$prefix-bh}sidebar-primary-border-width)
+    );
+    transition-delay: 0.18s;
+
     > .sidebar-primary-panel {
       width: 100%;
       transition-delay: 0.18s;

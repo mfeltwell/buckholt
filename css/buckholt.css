@@ -9785,6 +9785,12 @@ th:has(.table-sort) {
 .sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) {
   width: var(--sidebar-measured-compact-width);
   min-height: var(--sidebar-measured-height);
+  transition: width 0.2s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) {
+    transition: none;
+  }
 }
 .sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) > .sidebar-primary-panel {
   position: relative;
@@ -9810,16 +9816,20 @@ th:has(.table-sort) {
   visibility: visible;
   transition: none;
 }
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])):has(> .sidebar-primary-panel > .sidebar-primary-body:hover) > .sidebar-primary-panel {
+.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])):hover {
+  width: calc(var(--sidebar-measured-expanded-content-width) + 2 * var(--sidebar-primary-padding-x) + 2 * var(--sidebar-primary-border-width));
+  transition-delay: 0.18s;
+}
+.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])):hover > .sidebar-primary-panel {
   width: 100%;
   transition-delay: 0.18s;
   padding: var(--sidebar-primary-padding-y) var(--sidebar-primary-padding-x);
 }
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])):has(> .sidebar-primary-panel > .sidebar-primary-body:hover) > .sidebar-primary-panel > .sidebar-primary-body > .sidebar-primary-expanded {
+.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])):hover > .sidebar-primary-panel > .sidebar-primary-body > .sidebar-primary-expanded {
   visibility: visible;
   transition: visibility 0s linear 0.18s;
 }
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])):has(> .sidebar-primary-panel > .sidebar-primary-body:hover) > .sidebar-primary-panel > .sidebar-primary-body > .sidebar-primary-compact {
+.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])):hover > .sidebar-primary-panel > .sidebar-primary-body > .sidebar-primary-compact {
   visibility: hidden;
   transition: visibility 0s linear 0.18s;
 }
