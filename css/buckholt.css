@@ -9787,10 +9787,8 @@ th:has(.table-sort) {
   min-height: var(--sidebar-measured-height);
 }
 .sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) > .sidebar-primary-panel {
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  width: var(--sidebar-measured-compact-width);
+  position: relative;
+  width: 100%;
   min-height: 100%;
   transition-delay: 0s;
   padding: var(--sidebar-primary-padding-y-collapsed) var(--sidebar-primary-padding-x-collapsed);

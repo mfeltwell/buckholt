@@ -117,11 +117,8 @@
   min-height: var(--sidebar-measured-height);
 
   > .sidebar-primary-panel {
-    position: absolute;
-    inset-block-start: 0;
-    inset-inline-start: 0;
-
-    width: var(--sidebar-measured-compact-width);
+    position: relative;
+    width: 100%;
     min-height: 100%;
     transition-delay: 0s;
 
