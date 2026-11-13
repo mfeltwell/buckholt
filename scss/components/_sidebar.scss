@@ -1,6 +1,12 @@
 // Navigation sidebar
 .sidebar {
   --#{$prefix-bh}sidebar-width: #{$sidebar-width};
+  --#{$prefix-bh}sidebar-panel-min-width: #{$sidebar-panel-min-width};
+  --#{$prefix-bh}sidebar-panel-max-width: calc(
+    var(--#{$prefix-bh}sidebar-width) - 2 *
+      var(--#{$prefix-bh}sidebar-padding-x) - 2 *
+      var(--#{$prefix-bh}sidebar-border-width)
+  );
   --#{$prefix-bh}sidebar-radius: #{$sidebar-radius};
   --#{$prefix-bh}sidebar-border-width: #{$sidebar-border-width};
   --#{$prefix-bh}sidebar-border: #{$sidebar-border};
@@ -36,8 +42,9 @@
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-  width: fit-content;
-  max-width: var(--#{$prefix-bh}sidebar-width);
+  box-sizing: border-box;
+  width: var(--#{$prefix-bh}sidebar-width);
+  flex-shrink: 0;
   height: 100%;
 }
 
@@ -95,8 +102,6 @@
   border-radius: var(--#{$prefix-bh}sidebar-primary-radius);
   border: var(--#{$prefix-bh}sidebar-primary-border-width) solid
     var(--#{$prefix-bh}sidebar-primary-border);
-
-  @include transition(width 0.2s ease-in-out, padding 0s linear);
 }
 
 // Navigation views.
@@ -110,70 +115,38 @@
   }
 }
 
-// Expand the primary column on hover, pushing the secondary column across.
+// With secondary navigation visible, show either the compact or expanded primary.
 .sidebar:not(.is-collapsed)
   .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) {
-  width: var(--sidebar-measured-compact-width);
-  min-height: var(--sidebar-measured-height);
-  @include transition(width 0.2s ease-in-out);
-
   > .sidebar-primary-panel {
-    position: relative;
-    width: 100%;
+    box-sizing: border-box;
     min-height: 100%;
-    transition-delay: 0s;
+  }
 
-    padding: var(--#{$prefix-bh}sidebar-primary-padding-y-collapsed)
-      var(--#{$prefix-bh}sidebar-primary-padding-x-collapsed);
+  &:not(.is-open) {
+    width: max-content;
 
-    > .sidebar-primary-body {
-      position: relative;
+    > .sidebar-primary-panel {
+      padding: var(--#{$prefix-bh}sidebar-primary-padding-y-collapsed)
+        var(--#{$prefix-bh}sidebar-primary-padding-x-collapsed);
+    }
 
-      > .sidebar-primary-expanded {
-        display: block;
-        position: absolute;
-        inset-block-start: 0;
-        inset-inline-start: 0;
+    .sidebar-primary-expanded {
+      display: none;
+    }
 
-        width: var(--sidebar-measured-expanded-content-width);
-        visibility: hidden;
-        transition: none;
-      }
-
-      > .sidebar-primary-compact {
-        display: block;
-        visibility: visible;
-        transition: none;
-      }
+    .sidebar-primary-compact {
+      display: block;
     }
   }
 
   &.is-open {
-    width: calc(
-      var(--sidebar-measured-expanded-content-width) + 2 *
-        var(--#{$prefix-bh}sidebar-primary-padding-x) + 2 *
-        var(--#{$prefix-bh}sidebar-primary-border-width)
-    );
-    transition-delay: 0.18s;
+    .sidebar-primary-expanded {
+      display: block;
+    }
 
-    > .sidebar-primary-panel {
-      width: 100%;
-      transition-delay: 0.18s;
-
-      padding: var(--#{$prefix-bh}sidebar-primary-padding-y)
-        var(--#{$prefix-bh}sidebar-primary-padding-x);
-
-      > .sidebar-primary-body {
-        > .sidebar-primary-expanded {
-          visibility: visible;
-          transition: visibility 0s linear 0.18s;
-        }
-
-        > .sidebar-primary-compact {
-          visibility: hidden;
-          transition: visibility 0s linear 0.18s;
-        }
-      }
+    .sidebar-primary-compact {
+      display: none;
     }
   }
 }
@@ -202,34 +175,37 @@
   }
 }
 
-// Give both panels room inside the sidebar when the primary is open.
+// Both panels open: each takes its own content width, within the panel limits.
 .sidebar:not(.is-collapsed):has(
     > .sidebar-content
       > .sidebar-body
       > .sidebar-primary.is-open
       ~ .sidebar-secondary:not([hidden])
   ) {
-  box-sizing: border-box;
-  width: calc(var(--#{$prefix-bh}sidebar-width) * 2);
-  max-width: 100%;
+  width: max-content;
+
+  // The two panels determine the sidebar width; the header uses that width.
+  > .sidebar-content > .sidebar-header {
+    contain: inline-size;
+  }
 
   > .sidebar-content > .sidebar-body {
-    height: auto;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
-    > .sidebar-primary {
-      max-width: 100%;
-    }
-
+    > .sidebar-primary,
     > .sidebar-secondary {
-      flex: 1 1 14rem;
-      min-width: 0;
+      box-sizing: border-box;
+      flex: 0 0 auto;
+      width: max-content;
+      min-width: var(--#{$prefix-bh}sidebar-panel-min-width);
+      max-width: var(--#{$prefix-bh}sidebar-panel-max-width);
       overflow-wrap: anywhere;
     }
   }
 }
 
 .sidebar.is-collapsed {
+  width: fit-content;
   --#{$prefix-bh}sidebar-header-gap: #{$sidebar-header-gap-collapsed};
 
   // Button above the avatar.

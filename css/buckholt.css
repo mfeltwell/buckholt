@@ -9684,6 +9684,12 @@ th:has(.table-sort) {
 
 .sidebar {
   --sidebar-width: 20rem;
+  --sidebar-panel-min-width: 14rem;
+  --sidebar-panel-max-width: calc(
+    var(--sidebar-width) - 2 *
+      var(--sidebar-padding-x) - 2 *
+      var(--sidebar-border-width)
+  );
   --sidebar-radius: 1.5rem;
   --sidebar-border-width: 1px;
   --sidebar-border: var(--ui-border-03);
@@ -9716,8 +9722,9 @@ th:has(.table-sort) {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-  width: fit-content;
-  max-width: var(--sidebar-width);
+  box-sizing: border-box;
+  width: var(--sidebar-width);
+  flex-shrink: 0;
   height: 100%;
 }
 
@@ -9767,12 +9774,6 @@ th:has(.table-sort) {
   background-color: var(--sidebar-primary-background);
   border-radius: var(--sidebar-primary-radius);
   border: var(--sidebar-primary-border-width) solid var(--sidebar-primary-border);
-  transition: width 0.2s ease-in-out, padding 0s linear;
-}
-@media (prefers-reduced-motion: reduce) {
-  .sidebar-primary-panel {
-    transition: none;
-  }
 }
 
 .sidebar-primary-body > .sidebar-primary-expanded {
@@ -9782,56 +9783,27 @@ th:has(.table-sort) {
   display: none;
 }
 
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) {
-  width: var(--sidebar-measured-compact-width);
-  min-height: var(--sidebar-measured-height);
-  transition: width 0.2s ease-in-out;
-}
-@media (prefers-reduced-motion: reduce) {
-  .sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) {
-    transition: none;
-  }
-}
 .sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) > .sidebar-primary-panel {
-  position: relative;
-  width: 100%;
+  box-sizing: border-box;
   min-height: 100%;
-  transition-delay: 0s;
+}
+.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])):not(.is-open) {
+  width: max-content;
+}
+.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])):not(.is-open) > .sidebar-primary-panel {
   padding: var(--sidebar-primary-padding-y-collapsed) var(--sidebar-primary-padding-x-collapsed);
 }
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) > .sidebar-primary-panel > .sidebar-primary-body {
-  position: relative;
+.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])):not(.is-open) .sidebar-primary-expanded {
+  display: none;
 }
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) > .sidebar-primary-panel > .sidebar-primary-body > .sidebar-primary-expanded {
+.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])):not(.is-open) .sidebar-primary-compact {
   display: block;
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  width: var(--sidebar-measured-expanded-content-width);
-  visibility: hidden;
-  transition: none;
 }
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) > .sidebar-primary-panel > .sidebar-primary-body > .sidebar-primary-compact {
+.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])).is-open .sidebar-primary-expanded {
   display: block;
-  visibility: visible;
-  transition: none;
 }
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])).is-open {
-  width: calc(var(--sidebar-measured-expanded-content-width) + 2 * var(--sidebar-primary-padding-x) + 2 * var(--sidebar-primary-border-width));
-  transition-delay: 0.18s;
-}
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])).is-open > .sidebar-primary-panel {
-  width: 100%;
-  transition-delay: 0.18s;
-  padding: var(--sidebar-primary-padding-y) var(--sidebar-primary-padding-x);
-}
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])).is-open > .sidebar-primary-panel > .sidebar-primary-body > .sidebar-primary-expanded {
-  visibility: visible;
-  transition: visibility 0s linear 0.18s;
-}
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])).is-open > .sidebar-primary-panel > .sidebar-primary-body > .sidebar-primary-compact {
-  visibility: hidden;
-  transition: visibility 0s linear 0.18s;
+.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])).is-open .sidebar-primary-compact {
+  display: none;
 }
 
 .sidebar-secondary {
@@ -9855,24 +9827,26 @@ th:has(.table-sort) {
 }
 
 .sidebar:not(.is-collapsed):has(> .sidebar-content > .sidebar-body > .sidebar-primary.is-open ~ .sidebar-secondary:not([hidden])) {
-  box-sizing: border-box;
-  width: calc(var(--sidebar-width) * 2);
-  max-width: 100%;
+  width: max-content;
+}
+.sidebar:not(.is-collapsed):has(> .sidebar-content > .sidebar-body > .sidebar-primary.is-open ~ .sidebar-secondary:not([hidden])) > .sidebar-content > .sidebar-header {
+  contain: inline-size;
 }
 .sidebar:not(.is-collapsed):has(> .sidebar-content > .sidebar-body > .sidebar-primary.is-open ~ .sidebar-secondary:not([hidden])) > .sidebar-content > .sidebar-body {
-  height: auto;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
-.sidebar:not(.is-collapsed):has(> .sidebar-content > .sidebar-body > .sidebar-primary.is-open ~ .sidebar-secondary:not([hidden])) > .sidebar-content > .sidebar-body > .sidebar-primary {
-  max-width: 100%;
-}
+.sidebar:not(.is-collapsed):has(> .sidebar-content > .sidebar-body > .sidebar-primary.is-open ~ .sidebar-secondary:not([hidden])) > .sidebar-content > .sidebar-body > .sidebar-primary,
 .sidebar:not(.is-collapsed):has(> .sidebar-content > .sidebar-body > .sidebar-primary.is-open ~ .sidebar-secondary:not([hidden])) > .sidebar-content > .sidebar-body > .sidebar-secondary {
-  flex: 1 1 14rem;
-  min-width: 0;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: max-content;
+  min-width: var(--sidebar-panel-min-width);
+  max-width: var(--sidebar-panel-max-width);
   overflow-wrap: anywhere;
 }
 
 .sidebar.is-collapsed {
+  width: fit-content;
   --sidebar-header-gap: 0.5rem;
 }
 .sidebar.is-collapsed .sidebar-header {
