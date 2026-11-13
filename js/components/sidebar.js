@@ -179,7 +179,7 @@ document.querySelectorAll(".sidebar").forEach((sidebar) => {
       compact,
       `--${prefix}sidebar-primary-padding-y`,
       `--${prefix}sidebar-primary-padding-x`,
-      `${primary.parentElement.clientWidth}px`,
+      `calc(var(--${prefix}sidebar-width) - 2 * var(--${prefix}sidebar-padding-x) - 2 * var(--${prefix}sidebar-border-width))`,
     );
 
     const compactSize = measure(

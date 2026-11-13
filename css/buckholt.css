@@ -9854,6 +9854,24 @@ th:has(.table-sort) {
   padding: var(--sidebar-secondary-header-padding-y) var(--sidebar-secondary-header-padding-x);
 }
 
+.sidebar:not(.is-collapsed):has(> .sidebar-content > .sidebar-body > .sidebar-primary.is-open ~ .sidebar-secondary:not([hidden])) {
+  box-sizing: border-box;
+  width: calc(var(--sidebar-width) * 2);
+  max-width: 100%;
+}
+.sidebar:not(.is-collapsed):has(> .sidebar-content > .sidebar-body > .sidebar-primary.is-open ~ .sidebar-secondary:not([hidden])) > .sidebar-content > .sidebar-body {
+  height: auto;
+  flex-wrap: wrap;
+}
+.sidebar:not(.is-collapsed):has(> .sidebar-content > .sidebar-body > .sidebar-primary.is-open ~ .sidebar-secondary:not([hidden])) > .sidebar-content > .sidebar-body > .sidebar-primary {
+  max-width: 100%;
+}
+.sidebar:not(.is-collapsed):has(> .sidebar-content > .sidebar-body > .sidebar-primary.is-open ~ .sidebar-secondary:not([hidden])) > .sidebar-content > .sidebar-body > .sidebar-secondary {
+  flex: 1 1 14rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .sidebar.is-collapsed {
   --sidebar-header-gap: 0.5rem;
 }

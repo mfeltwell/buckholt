@@ -202,6 +202,33 @@
   }
 }
 
+// Give both panels room inside the sidebar when the primary is open.
+.sidebar:not(.is-collapsed):has(
+    > .sidebar-content
+      > .sidebar-body
+      > .sidebar-primary.is-open
+      ~ .sidebar-secondary:not([hidden])
+  ) {
+  box-sizing: border-box;
+  width: calc(var(--#{$prefix-bh}sidebar-width) * 2);
+  max-width: 100%;
+
+  > .sidebar-content > .sidebar-body {
+    height: auto;
+    flex-wrap: wrap;
+
+    > .sidebar-primary {
+      max-width: 100%;
+    }
+
+    > .sidebar-secondary {
+      flex: 1 1 14rem;
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+  }
+}
+
 .sidebar.is-collapsed {
   --#{$prefix-bh}sidebar-header-gap: #{$sidebar-header-gap-collapsed};
 
