@@ -21,6 +21,15 @@ document.querySelectorAll(".sidebar").forEach((sidebar) => {
   let sidebarAnimation;
   let primaryAnimation;
 
+  primary.addEventListener("click", (event) => {
+    const button = event.target.closest(
+      ".nav-tree-button[data-sidebar-primary-open]",
+    );
+    if (!button) return;
+
+    primary.classList.add("is-open");
+  });
+
   toggle?.addEventListener("click", () => {
     // Capture the current width, including any animation in progress.
     const startWidth = sidebar.getBoundingClientRect().width;

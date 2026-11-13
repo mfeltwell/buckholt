@@ -148,7 +148,7 @@
     }
   }
 
-  &:hover {
+  &.is-open {
     width: calc(
       var(--sidebar-measured-expanded-content-width) + 2 *
         var(--#{$prefix-bh}sidebar-primary-padding-x) + 2 *
