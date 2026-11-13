@@ -44,7 +44,6 @@
   align-self: flex-start;
   box-sizing: border-box;
   width: var(--#{$prefix-bh}sidebar-width);
-  flex-shrink: 0;
   height: 100%;
 }
 
@@ -57,98 +56,42 @@
 
 .sidebar-header {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: var(--#{$prefix-bh}sidebar-header-gap);
   padding: var(--#{$prefix-bh}sidebar-header-padding-y)
     var(--#{$prefix-bh}sidebar-header-padding-x);
-
-  .btn {
-    align-self: center;
-  }
 }
 
 .sidebar-body {
-  position: relative;
   display: flex;
-  flex-direction: row;
   gap: var(--#{$prefix-bh}sidebar-body-gap);
   height: 100%;
 }
 
-// Reserves the primary's space beside the secondary.
+// A primary panel on its own fills the available width.
 .sidebar-primary {
-  flex: 0 0 auto;
-
-  &:not(:has(~ .sidebar-secondary:not([hidden]))) {
-    flex: 1 1 auto;
-    min-width: 0;
-  }
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
-// The surface that will expand.
 .sidebar-primary-panel {
   display: flex;
   flex-direction: column;
-  position: relative;
-  z-index: 1;
+  box-sizing: border-box;
   overflow: hidden;
-
   padding: var(--#{$prefix-bh}sidebar-primary-padding-y)
     var(--#{$prefix-bh}sidebar-primary-padding-x);
-
   background-color: var(--#{$prefix-bh}sidebar-primary-background);
   border-radius: var(--#{$prefix-bh}sidebar-primary-radius);
   border: var(--#{$prefix-bh}sidebar-primary-border-width) solid
     var(--#{$prefix-bh}sidebar-primary-border);
 }
 
-// Navigation views.
-.sidebar-primary-body {
-  > .sidebar-primary-expanded {
-    display: block;
-  }
-
-  > .sidebar-primary-compact {
-    display: none;
-  }
-}
-
-// With secondary navigation visible, show either the compact or expanded primary.
-.sidebar:not(.is-collapsed)
-  .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) {
-  > .sidebar-primary-panel {
-    box-sizing: border-box;
-    min-height: 100%;
-  }
-
-  &:not(.is-open) {
-    width: max-content;
-
-    > .sidebar-primary-panel {
-      padding: var(--#{$prefix-bh}sidebar-primary-padding-y-collapsed)
-        var(--#{$prefix-bh}sidebar-primary-padding-x-collapsed);
-    }
-
-    .sidebar-primary-expanded {
-      display: none;
-    }
-
-    .sidebar-primary-compact {
-      display: block;
-    }
-  }
-
-  &.is-open {
-    .sidebar-primary-expanded {
-      display: block;
-    }
-
-    .sidebar-primary-compact {
-      display: none;
-    }
-  }
+// The nav-tree variant shows its expanded view by default.
+// The basic sidebar has neither view wrapper.
+.sidebar-primary-body > .sidebar-primary-compact {
+  display: none;
 }
 
 .sidebar-secondary {
@@ -163,19 +106,47 @@
   &[hidden] {
     display: none !important;
   }
+}
 
-  .sidebar-secondary-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--#{$prefix-bh}sidebar-secondary-header-gap);
-    padding: var(--#{$prefix-bh}sidebar-secondary-header-padding-y)
-      var(--#{$prefix-bh}sidebar-secondary-header-padding-x);
+.sidebar-secondary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--#{$prefix-bh}sidebar-secondary-header-gap);
+  padding: var(--#{$prefix-bh}sidebar-secondary-header-padding-y)
+    var(--#{$prefix-bh}sidebar-secondary-header-padding-x);
+}
+
+// Beside a visible secondary, the primary occupies its own width.
+.sidebar:not(.is-collapsed)
+  .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) {
+  flex: 0 0 auto;
+  width: max-content;
+
+  > .sidebar-primary-panel {
+    min-height: 100%;
   }
 }
 
-// Both panels open: each takes its own content width, within the panel limits.
+// Both compact states use the same card padding and nav-tree view.
+.sidebar.is-collapsed .sidebar-primary,
+.sidebar:not(.is-collapsed)
+  .sidebar-primary:not(.is-open):has(~ .sidebar-secondary:not([hidden])) {
+  > .sidebar-primary-panel {
+    padding: var(--#{$prefix-bh}sidebar-primary-padding-y-collapsed)
+      var(--#{$prefix-bh}sidebar-primary-padding-x-collapsed);
+  }
+
+  .sidebar-primary-body > .sidebar-primary-expanded {
+    display: none;
+  }
+
+  .sidebar-primary-body > .sidebar-primary-compact {
+    display: block;
+  }
+}
+
+// Both panels open: their individual widths determine the sidebar width.
 .sidebar:not(.is-collapsed):has(
     > .sidebar-content
       > .sidebar-body
@@ -184,14 +155,11 @@
   ) {
   width: max-content;
 
-  // The two panels determine the sidebar width; the header uses that width.
   > .sidebar-content > .sidebar-header {
     contain: inline-size;
   }
 
   > .sidebar-content > .sidebar-body {
-    flex-wrap: nowrap;
-
     > .sidebar-primary,
     > .sidebar-secondary {
       box-sizing: border-box;
@@ -204,64 +172,37 @@
   }
 }
 
+// Whole sidebar collapsed using the header button.
 .sidebar.is-collapsed {
-  width: fit-content;
   --#{$prefix-bh}sidebar-header-gap: #{$sidebar-header-gap-collapsed};
+  width: fit-content;
 
-  // Button above the avatar.
   .sidebar-header {
     flex-direction: column-reverse;
-    gap: var(--#{$prefix-bh}sidebar-header-gap);
-  }
 
-  // Keep the avatar; hide the user's details.
-  .sidebar-header .user-meta {
-    justify-content: center;
-    gap: 0;
-  }
-
-  .sidebar-header .user-meta-body {
-    display: none;
-  }
-
-  .sidebar-body {
-    gap: 0;
-  }
-
-  .sidebar-primary-body {
-    > .nav .nav-link {
+    .user-meta {
       justify-content: center;
-      padding-inline: 0;
-      min-width: var(--nav-link-height);
+      gap: 0;
+    }
 
-      > .nav-link-label {
-        @include visually-hidden();
-      }
+    .user-meta-body {
+      display: none;
     }
   }
 
   .sidebar-primary {
     flex: 0 0 auto;
-    width: auto;
-    min-height: 0;
   }
 
-  .sidebar-primary-panel {
-    position: relative;
-    width: auto;
-    min-height: 0;
-    transition: none;
+  // Basic sidebar: keep the same links and collapse them to icons.
+  .sidebar-primary-body > .nav .nav-link {
+    justify-content: center;
+    padding-inline: 0;
+    min-width: var(--nav-link-height);
 
-    padding: var(--#{$prefix-bh}sidebar-primary-padding-y-collapsed)
-      var(--#{$prefix-bh}sidebar-primary-padding-x-collapsed);
-  }
-
-  .sidebar-primary-expanded {
-    display: none;
-  }
-
-  .sidebar-primary-compact {
-    display: block;
+    > .nav-link-label {
+      @include visually-hidden();
+    }
   }
 
   .sidebar-secondary {

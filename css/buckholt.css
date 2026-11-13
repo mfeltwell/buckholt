@@ -9724,7 +9724,6 @@ th:has(.table-sort) {
   align-self: flex-start;
   box-sizing: border-box;
   width: var(--sidebar-width);
-  flex-shrink: 0;
   height: 100%;
 }
 
@@ -9737,29 +9736,19 @@ th:has(.table-sort) {
 
 .sidebar-header {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: var(--sidebar-header-gap);
   padding: var(--sidebar-header-padding-y) var(--sidebar-header-padding-x);
 }
-.sidebar-header .btn, .sidebar-header .carousel-control-prev,
-.sidebar-header .carousel-control-next {
-  align-self: center;
-}
 
 .sidebar-body {
-  position: relative;
   display: flex;
-  flex-direction: row;
   gap: var(--sidebar-body-gap);
   height: 100%;
 }
 
 .sidebar-primary {
-  flex: 0 0 auto;
-}
-.sidebar-primary:not(:has(~ .sidebar-secondary:not([hidden]))) {
   flex: 1 1 auto;
   min-width: 0;
 }
@@ -9767,8 +9756,7 @@ th:has(.table-sort) {
 .sidebar-primary-panel {
   display: flex;
   flex-direction: column;
-  position: relative;
-  z-index: 1;
+  box-sizing: border-box;
   overflow: hidden;
   padding: var(--sidebar-primary-padding-y) var(--sidebar-primary-padding-x);
   background-color: var(--sidebar-primary-background);
@@ -9776,33 +9764,7 @@ th:has(.table-sort) {
   border: var(--sidebar-primary-border-width) solid var(--sidebar-primary-border);
 }
 
-.sidebar-primary-body > .sidebar-primary-expanded {
-  display: block;
-}
 .sidebar-primary-body > .sidebar-primary-compact {
-  display: none;
-}
-
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) > .sidebar-primary-panel {
-  box-sizing: border-box;
-  min-height: 100%;
-}
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])):not(.is-open) {
-  width: max-content;
-}
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])):not(.is-open) > .sidebar-primary-panel {
-  padding: var(--sidebar-primary-padding-y-collapsed) var(--sidebar-primary-padding-x-collapsed);
-}
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])):not(.is-open) .sidebar-primary-expanded {
-  display: none;
-}
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])):not(.is-open) .sidebar-primary-compact {
-  display: block;
-}
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])).is-open .sidebar-primary-expanded {
-  display: block;
-}
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])).is-open .sidebar-primary-compact {
   display: none;
 }
 
@@ -9817,13 +9779,34 @@ th:has(.table-sort) {
 .sidebar-secondary[hidden] {
   display: none !important;
 }
-.sidebar-secondary .sidebar-secondary-header {
+
+.sidebar-secondary-header {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: var(--sidebar-secondary-header-gap);
   padding: var(--sidebar-secondary-header-padding-y) var(--sidebar-secondary-header-padding-x);
+}
+
+.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) {
+  flex: 0 0 auto;
+  width: max-content;
+}
+.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) > .sidebar-primary-panel {
+  min-height: 100%;
+}
+
+.sidebar.is-collapsed .sidebar-primary > .sidebar-primary-panel,
+.sidebar:not(.is-collapsed) .sidebar-primary:not(.is-open):has(~ .sidebar-secondary:not([hidden])) > .sidebar-primary-panel {
+  padding: var(--sidebar-primary-padding-y-collapsed) var(--sidebar-primary-padding-x-collapsed);
+}
+.sidebar.is-collapsed .sidebar-primary .sidebar-primary-body > .sidebar-primary-expanded,
+.sidebar:not(.is-collapsed) .sidebar-primary:not(.is-open):has(~ .sidebar-secondary:not([hidden])) .sidebar-primary-body > .sidebar-primary-expanded {
+  display: none;
+}
+.sidebar.is-collapsed .sidebar-primary .sidebar-primary-body > .sidebar-primary-compact,
+.sidebar:not(.is-collapsed) .sidebar-primary:not(.is-open):has(~ .sidebar-secondary:not([hidden])) .sidebar-primary-body > .sidebar-primary-compact {
+  display: block;
 }
 
 .sidebar:not(.is-collapsed):has(> .sidebar-content > .sidebar-body > .sidebar-primary.is-open ~ .sidebar-secondary:not([hidden])) {
@@ -9831,9 +9814,6 @@ th:has(.table-sort) {
 }
 .sidebar:not(.is-collapsed):has(> .sidebar-content > .sidebar-body > .sidebar-primary.is-open ~ .sidebar-secondary:not([hidden])) > .sidebar-content > .sidebar-header {
   contain: inline-size;
-}
-.sidebar:not(.is-collapsed):has(> .sidebar-content > .sidebar-body > .sidebar-primary.is-open ~ .sidebar-secondary:not([hidden])) > .sidebar-content > .sidebar-body {
-  flex-wrap: nowrap;
 }
 .sidebar:not(.is-collapsed):has(> .sidebar-content > .sidebar-body > .sidebar-primary.is-open ~ .sidebar-secondary:not([hidden])) > .sidebar-content > .sidebar-body > .sidebar-primary,
 .sidebar:not(.is-collapsed):has(> .sidebar-content > .sidebar-body > .sidebar-primary.is-open ~ .sidebar-secondary:not([hidden])) > .sidebar-content > .sidebar-body > .sidebar-secondary {
@@ -9846,12 +9826,11 @@ th:has(.table-sort) {
 }
 
 .sidebar.is-collapsed {
-  width: fit-content;
   --sidebar-header-gap: 0.5rem;
+  width: fit-content;
 }
 .sidebar.is-collapsed .sidebar-header {
   flex-direction: column-reverse;
-  gap: var(--sidebar-header-gap);
 }
 .sidebar.is-collapsed .sidebar-header .user-meta {
   justify-content: center;
@@ -9860,8 +9839,8 @@ th:has(.table-sort) {
 .sidebar.is-collapsed .sidebar-header .user-meta-body {
   display: none;
 }
-.sidebar.is-collapsed .sidebar-body {
-  gap: 0;
+.sidebar.is-collapsed .sidebar-primary {
+  flex: 0 0 auto;
 }
 .sidebar.is-collapsed .sidebar-primary-body > .nav .nav-link {
   justify-content: center;
@@ -9880,24 +9859,6 @@ th:has(.table-sort) {
 }
 .sidebar.is-collapsed .sidebar-primary-body > .nav .nav-link > .nav-link-label:not(caption) {
   position: absolute !important;
-}
-.sidebar.is-collapsed .sidebar-primary {
-  flex: 0 0 auto;
-  width: auto;
-  min-height: 0;
-}
-.sidebar.is-collapsed .sidebar-primary-panel {
-  position: relative;
-  width: auto;
-  min-height: 0;
-  transition: none;
-  padding: var(--sidebar-primary-padding-y-collapsed) var(--sidebar-primary-padding-x-collapsed);
-}
-.sidebar.is-collapsed .sidebar-primary-expanded {
-  display: none;
-}
-.sidebar.is-collapsed .sidebar-primary-compact {
-  display: block;
 }
 .sidebar.is-collapsed .sidebar-secondary {
   display: none;
