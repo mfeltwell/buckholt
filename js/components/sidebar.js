@@ -22,10 +22,8 @@ document.querySelectorAll(".sidebar").forEach((sidebar) => {
   let primaryAnimation;
 
   primary.addEventListener("click", (event) => {
-    const button = event.target.closest(
-      ".nav-tree-button[data-sidebar-primary-open]",
-    );
-    if (!button) return;
+    const opener = event.target.closest("button[data-sidebar-primary-open]");
+    if (!opener || !primary.contains(opener)) return;
 
     primary.classList.add("is-open");
   });
