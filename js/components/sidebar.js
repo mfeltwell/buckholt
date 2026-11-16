@@ -98,7 +98,9 @@ document.querySelectorAll(".sidebar").forEach((sidebar) => {
         width: `${width}px`,
         minWidth: "0",
         maxWidth: "none",
-        overflow: "hidden",
+        overflow: el.classList.contains("sidebar-container")
+          ? "visible"
+          : "hidden",
       });
 
       const animation = el.animate([frame(from), frame(to)], {
