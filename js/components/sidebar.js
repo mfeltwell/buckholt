@@ -14,6 +14,24 @@ document.querySelectorAll(".sidebar").forEach((sidebar) => {
     ":scope > .sidebar-primary-panel > .sidebar-primary-body",
   );
 
+  function syncHeader() {
+    const collapsed = sidebar.classList.contains("is-collapsed");
+
+    header
+      ?.querySelector(".user-meta")
+      ?.classList.toggle("user-meta-compact", collapsed);
+
+    header?.querySelector(".avatar")?.classList.toggle("avatar-sm", collapsed);
+
+    toggle?.setAttribute("aria-expanded", String(!collapsed));
+    toggle?.setAttribute(
+      "aria-label",
+      collapsed ? "Expand sidebar" : "Collapse sidebar",
+    );
+  }
+
+  syncHeader();
+
   function animateLayout(changeState) {
     const elements = [sidebar, primary, secondary].filter(Boolean);
 
@@ -98,17 +116,11 @@ document.querySelectorAll(".sidebar").forEach((sidebar) => {
     animateLayout(() => {
       const collapsed = sidebar.classList.toggle("is-collapsed");
 
-      header
-        .querySelector(".user-meta")
-        ?.classList.toggle("user-meta-compact", collapsed);
+      if (collapsed) {
+        primary.classList.remove("is-open");
+      }
 
-      header.querySelector(".avatar")?.classList.toggle("avatar-sm", collapsed);
-
-      toggle.setAttribute("aria-expanded", String(!collapsed));
-      toggle.setAttribute(
-        "aria-label",
-        collapsed ? "Expand sidebar" : "Collapse sidebar",
-      );
+      syncHeader();
     });
   });
 });

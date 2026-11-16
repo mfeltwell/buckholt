@@ -9741,12 +9741,14 @@ th:has(.table-sort) {
 .sidebar-content {
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
   gap: var(--sidebar-content-gap);
-  height: 100%;
 }
 
 .sidebar-header {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: space-between;
   gap: var(--sidebar-header-gap);
@@ -9755,8 +9757,9 @@ th:has(.table-sort) {
 
 .sidebar-body {
   display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
   gap: var(--sidebar-body-gap);
-  height: 100%;
 }
 
 .sidebar-primary {
