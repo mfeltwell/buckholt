@@ -9695,21 +9695,26 @@ th:has(.table-sort) {
 
 .sidebar-container {
   position: relative;
+  display: flex;
+  flex-direction: column;
   flex: 0 0 auto;
+  align-self: flex-start;
   width: 20rem;
-  height: 100%;
+  min-height: 0;
+  max-height: 100%;
   overflow: visible;
 }
 .sidebar-container:has(> .sidebar.is-collapsed) {
   width: fit-content;
 }
 .sidebar-container > .sidebar {
-  position: absolute;
-  inset-block: 0;
-  inset-inline-start: 0;
+  position: relative;
   z-index: 1;
+  flex: 0 1 auto;
+  height: auto;
+  min-height: 0;
 }
-.sidebar-container > .sidebar.is-collapsed {
+.sidebar-container .sidebar.is-collapsed {
   width: fit-content;
 }
 
@@ -9760,7 +9765,8 @@ th:has(.table-sort) {
   align-self: flex-start;
   box-sizing: border-box;
   width: var(--sidebar-width);
-  height: 100%;
+  height: auto;
+  min-height: 0;
 }
 
 .sidebar-content {
@@ -9790,6 +9796,9 @@ th:has(.table-sort) {
 .sidebar-primary {
   flex: 1 1 auto;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .sidebar-primary-panel {
@@ -9797,12 +9806,18 @@ th:has(.table-sort) {
   flex-direction: column;
   box-sizing: border-box;
   overflow: hidden;
+  flex: 1 1 auto;
+  min-height: 0;
   padding: var(--sidebar-primary-padding-y) var(--sidebar-primary-padding-x);
   background-color: var(--sidebar-primary-background);
   border-radius: var(--sidebar-primary-radius);
   border: var(--sidebar-primary-border-width) solid var(--sidebar-primary-border);
 }
 
+.sidebar-primary-body {
+  min-height: 0;
+  overflow-y: auto;
+}
 .sidebar-primary-body > .sidebar-primary-compact {
   display: none;
 }
@@ -9812,6 +9827,7 @@ th:has(.table-sort) {
   flex-direction: column;
   flex: 1 1 auto;
   min-width: 0;
+  min-height: 0;
   gap: var(--sidebar-secondary-gap);
   padding: var(--sidebar-secondary-padding-y) var(--sidebar-secondary-padding-x);
 }
@@ -9823,6 +9839,7 @@ th:has(.table-sort) {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-shrink: 0;
   gap: var(--sidebar-secondary-header-gap);
   padding: var(--sidebar-secondary-header-padding-y) var(--sidebar-secondary-header-padding-x);
 }
@@ -9831,8 +9848,11 @@ th:has(.table-sort) {
   flex: 0 0 auto;
   width: max-content;
 }
-.sidebar:not(.is-collapsed) .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) > .sidebar-primary-panel {
-  min-height: 100%;
+
+.sidebar-secondary-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
 }
 
 .sidebar.is-collapsed .sidebar-primary > .sidebar-primary-panel,

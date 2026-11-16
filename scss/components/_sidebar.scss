@@ -1,25 +1,27 @@
 // Navigation sidebar
-// Reserve space in the page layout.
 .sidebar-container {
   position: relative;
+  display: flex;
+  flex-direction: column;
   flex: 0 0 auto;
+  align-self: flex-start;
   width: #{$sidebar-width};
-  height: 100%;
+  min-height: 0;
+  max-height: 100%;
   overflow: visible;
 
   &:has(> .sidebar.is-collapsed) {
     width: fit-content;
   }
 
-  // Let the sidebar grow beyond its reserved space.
   > .sidebar {
-    position: absolute;
-    inset-block: 0;
-    inset-inline-start: 0;
+    position: relative;
     z-index: 1;
+    flex: 0 1 auto;
+    height: auto;
+    min-height: 0;
   }
-
-  > .sidebar.is-collapsed {
+  .sidebar.is-collapsed {
     width: fit-content;
   }
 }
@@ -74,7 +76,8 @@
   align-self: flex-start;
   box-sizing: border-box;
   width: var(--#{$prefix-bh}sidebar-width);
-  height: 100%;
+  height: auto;
+  min-height: 0;
 }
 
 .sidebar-content {
@@ -106,6 +109,9 @@
 .sidebar-primary {
   flex: 1 1 auto;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 
 .sidebar-primary-panel {
@@ -113,6 +119,8 @@
   flex-direction: column;
   box-sizing: border-box;
   overflow: hidden;
+  flex: 1 1 auto;
+  min-height: 0;
   padding: var(--#{$prefix-bh}sidebar-primary-padding-y)
     var(--#{$prefix-bh}sidebar-primary-padding-x);
   background-color: var(--#{$prefix-bh}sidebar-primary-background);
@@ -123,8 +131,13 @@
 
 // The nav-tree variant shows its expanded view by default.
 // The basic sidebar has neither view wrapper.
-.sidebar-primary-body > .sidebar-primary-compact {
-  display: none;
+.sidebar-primary-body {
+  min-height: 0;
+  overflow-y: auto;
+
+  > .sidebar-primary-compact {
+    display: none;
+  }
 }
 
 .sidebar-secondary {
@@ -132,6 +145,7 @@
   flex-direction: column;
   flex: 1 1 auto;
   min-width: 0;
+  min-height: 0;
   gap: var(--#{$prefix-bh}sidebar-secondary-gap);
   padding: var(--#{$prefix-bh}sidebar-secondary-padding-y)
     var(--#{$prefix-bh}sidebar-secondary-padding-x);
@@ -145,6 +159,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-shrink: 0;
   gap: var(--#{$prefix-bh}sidebar-secondary-header-gap);
   padding: var(--#{$prefix-bh}sidebar-secondary-header-padding-y)
     var(--#{$prefix-bh}sidebar-secondary-header-padding-x);
@@ -155,10 +170,12 @@
   .sidebar-primary:has(~ .sidebar-secondary:not([hidden])) {
   flex: 0 0 auto;
   width: max-content;
+}
 
-  > .sidebar-primary-panel {
-    min-height: 100%;
-  }
+.sidebar-secondary-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
 }
 
 // Both compact states use the same card padding and nav-tree view.
