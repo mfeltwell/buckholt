@@ -99,7 +99,6 @@ document.querySelectorAll(".sidebar").forEach((sidebar) => {
   primary.addEventListener("click", (event) => {
     const opener = event.target.closest("button[data-sidebar-primary-open]");
     if (!opener || !primary.contains(opener)) return;
-    if (sidebar.classList.contains("is-collapsed")) return;
     if (
       primary.classList.contains("is-open") &&
       !sidebar.classList.contains("is-collapsed")
