@@ -9786,6 +9786,10 @@ th:has(.table-sort) {
   gap: var(--sidebar-header-gap);
   padding: var(--sidebar-header-padding-y) var(--sidebar-header-padding-x);
 }
+.sidebar-header .btn, .sidebar-header .carousel-control-prev,
+.sidebar-header .carousel-control-next {
+  align-self: center;
+}
 
 .sidebar-body {
   display: flex;

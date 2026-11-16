@@ -97,6 +97,10 @@
   gap: var(--#{$prefix-bh}sidebar-header-gap);
   padding: var(--#{$prefix-bh}sidebar-header-padding-y)
     var(--#{$prefix-bh}sidebar-header-padding-x);
+
+  .btn {
+    align-self: center;
+  }
 }
 
 .sidebar-body {
