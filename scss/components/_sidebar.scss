@@ -6,6 +6,7 @@
   flex: 0 0 auto;
   align-self: flex-start;
   width: #{$sidebar-width};
+  height: 100%;
   min-height: 0;
   max-height: 100%;
   overflow: visible;
@@ -18,7 +19,7 @@
     position: relative;
     z-index: 1;
     flex: 0 1 auto;
-    height: auto;
+    height: 100%;
     min-height: 0;
   }
   .sidebar.is-collapsed {
@@ -120,6 +121,7 @@
   box-sizing: border-box;
   overflow: hidden;
   flex: 1 1 auto;
+  height: 100%;
   min-height: 0;
   padding: var(--#{$prefix-bh}sidebar-primary-padding-y)
     var(--#{$prefix-bh}sidebar-primary-padding-x);
@@ -242,6 +244,10 @@
 
   .sidebar-primary {
     flex: 0 0 auto;
+  }
+
+  .sidebar-primary-panel {
+    height: auto;
   }
 
   // Basic sidebar: keep the same links and collapse them to icons.

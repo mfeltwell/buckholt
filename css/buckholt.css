@@ -9700,6 +9700,7 @@ th:has(.table-sort) {
   flex: 0 0 auto;
   align-self: flex-start;
   width: 20rem;
+  height: 100%;
   min-height: 0;
   max-height: 100%;
   overflow: visible;
@@ -9711,7 +9712,7 @@ th:has(.table-sort) {
   position: relative;
   z-index: 1;
   flex: 0 1 auto;
-  height: auto;
+  height: 100%;
   min-height: 0;
 }
 .sidebar-container .sidebar.is-collapsed {
@@ -9807,6 +9808,7 @@ th:has(.table-sort) {
   box-sizing: border-box;
   overflow: hidden;
   flex: 1 1 auto;
+  height: 100%;
   min-height: 0;
   padding: var(--sidebar-primary-padding-y) var(--sidebar-primary-padding-x);
   background-color: var(--sidebar-primary-background);
@@ -9900,6 +9902,9 @@ th:has(.table-sort) {
 }
 .sidebar.is-collapsed .sidebar-primary {
   flex: 0 0 auto;
+}
+.sidebar.is-collapsed .sidebar-primary-panel {
+  height: auto;
 }
 .sidebar.is-collapsed .sidebar-primary-body > .nav .nav-link {
   justify-content: center;
