@@ -9295,6 +9295,7 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   flex-direction: row-reverse;
   align-items: flex-start;
   justify-content: flex-end;
+  flex-grow: 1;
 }
 .key-value-flipped.key-value-stacked {
   flex-direction: column-reverse;
@@ -9314,6 +9315,16 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   font-weight: 500;
   letter-spacing: 0.16px;
   color: var(--keyvalue-value);
+}
+
+.key:has(> *),
+.value:has(> *) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .key-value-center {
