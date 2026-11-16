@@ -7,6 +7,7 @@ import "./components/tabs.js";
 import "./components/table.js";
 import "./components/dropdown.js";
 import "./components/sidebar.js";
+import "./opaque-surface.js";
 
 const $ = window.jQuery;
 

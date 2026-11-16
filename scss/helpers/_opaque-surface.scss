@@ -1,0 +1,9 @@
+/* Load once alongside your design-system styles. Solid-colour surfaces only. */
+[data-opaque-surface] {
+  /* A uniform fill above the original background colour, below the content. */
+  background-image: linear-gradient(
+    var(--ds-opaque-surface-colour, transparent),
+    var(--ds-opaque-surface-colour, transparent)
+  ) !important;
+  background-blend-mode: normal !important;
+}
