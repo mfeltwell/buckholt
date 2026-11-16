@@ -5,6 +5,9 @@ document.querySelectorAll(".sidebar").forEach((sidebar) => {
   const primary = body?.querySelector(":scope > .sidebar-primary");
   const secondary = body?.querySelector(":scope > .sidebar-secondary");
   const toggle = header?.querySelector("[data-sidebar-toggle]");
+  const container = sidebar.parentElement?.matches(".sidebar-container")
+    ? sidebar.parentElement
+    : null;
 
   if (!primary) return;
 
@@ -33,7 +36,7 @@ document.querySelectorAll(".sidebar").forEach((sidebar) => {
   syncHeader();
 
   function animateLayout(changeState) {
-    const elements = [sidebar, primary, secondary].filter(Boolean);
+    const elements = [sidebar, primary, secondary, container].filter(Boolean);
 
     // Capture the visible widths, including any animation already in progress.
     const before = elements.map((el) => el.getBoundingClientRect().width);
