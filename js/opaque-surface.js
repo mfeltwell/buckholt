@@ -9,6 +9,7 @@
 
   const selector = "[data-opaque-surface]";
   const property = "--ds-opaque-surface-colour";
+  const paintProperty = "background-color";
   const managed = new Map();
   const canvas = document.createElement("canvas");
   canvas.width = canvas.height = 1;
@@ -58,13 +59,42 @@
     }
   }
 
+  function restoreBackground(element, previous) {
+    if (
+      element.style.getPropertyValue(paintProperty) !== previous.paintApplied
+    ) {
+      previous.paintValue = element.style.getPropertyValue(paintProperty);
+      previous.paintPriority = element.style.getPropertyPriority(paintProperty);
+    }
+    if (previous.paintValue) {
+      element.style.setProperty(
+        paintProperty,
+        previous.paintValue,
+        previous.paintPriority,
+      );
+    } else {
+      element.style.removeProperty(paintProperty);
+    }
+  }
+
   function update() {
     pending = null;
     if (stopped) return;
+    // Our temporary measuring overrides must not trigger observer loops.
+    observer.disconnect();
+    try {
+      updateSurfaces();
+    } finally {
+      if (!stopped) observe();
+    }
+  }
 
+  function updateSurfaces() {
     const elements = Array.from(document.querySelectorAll(selector));
     const active = new Set(elements);
     for (const [element, previous] of managed) {
+      // Restore ALL original colours before reading any ancestor colours.
+      restoreBackground(element, previous);
       if (!active.has(element)) {
         restore(element, previous);
         managed.delete(element);
@@ -78,7 +108,14 @@
     function effectiveColour(element) {
       if (!element) return pageColour;
       if (cache.has(element)) return cache.get(element);
-      const own = readColour(getComputedStyle(element).backgroundColor);
+      const styles = getComputedStyle(element);
+      // Optional explicit sources are retained for backwards compatibility.
+      const source = element.getAttribute("data-opaque-surface-source");
+      const own = readColour(
+        source
+          ? styles.getPropertyValue(source).trim() || styles.backgroundColor
+          : styles.backgroundColor,
+      );
       const result =
         own[3] === 1
           ? own
@@ -87,7 +124,7 @@
       return result;
     }
 
-    // Read all colours before writing styles. Original background-color stays intact.
+    // Read all original colours before applying calculated colours.
     const results = elements.map((element) => {
       const colour = effectiveColour(element);
       return [element, `rgb(${colour.slice(0, 3).map(Math.round).join(", ")})`];
@@ -99,6 +136,9 @@
           value: element.style.getPropertyValue(property),
           priority: element.style.getPropertyPriority(property),
           applied: null,
+          paintValue: element.style.getPropertyValue(paintProperty),
+          paintPriority: element.style.getPropertyPriority(paintProperty),
+          paintApplied: null,
         });
       }
       managed.get(element).applied = colour;
@@ -106,6 +146,9 @@
       if (element.style.getPropertyValue(property) !== colour) {
         element.style.setProperty(property, colour);
       }
+      element.style.setProperty(paintProperty, colour, "important");
+      managed.get(element).paintApplied =
+        element.style.getPropertyValue(paintProperty);
     }
   }
 
@@ -114,12 +157,15 @@
   }
 
   const observer = new MutationObserver(refresh);
-  observer.observe(document.documentElement, {
-    subtree: true,
-    childList: true,
-    attributes: true,
-    characterData: true,
-  });
+  function observe() {
+    observer.observe(document.documentElement, {
+      subtree: true,
+      childList: true,
+      attributes: true,
+      characterData: true,
+    });
+  }
+  observe();
 
   const scheme = matchMedia("(prefers-color-scheme: dark)");
   scheme.addEventListener("change", refresh);
@@ -149,7 +195,10 @@
       document.removeEventListener("focusout", refresh);
       document.removeEventListener("transitionend", refresh, true);
       document.removeEventListener("animationend", refresh, true);
-      for (const [element, previous] of managed) restore(element, previous);
+      for (const [element, previous] of managed) {
+        restoreBackground(element, previous);
+        restore(element, previous);
+      }
       managed.clear();
       delete window.DSOpaqueSurfaces;
     },
