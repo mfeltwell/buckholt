@@ -248,6 +248,7 @@
 
   .sidebar-primary-panel {
     height: auto;
+    flex-grow: 0;
   }
 
   // Basic sidebar: keep the same links and collapse them to icons.
