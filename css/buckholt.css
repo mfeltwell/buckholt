@@ -9693,6 +9693,31 @@ th:has(.table-sort) {
   --table-header-background: var(--ui-overlay-02);
 }
 
+.sidebar-container {
+  position: relative;
+  flex: 0 0 auto;
+  width: 20rem;
+  height: 100%;
+  overflow: visible;
+}
+.sidebar-container:has(> .sidebar.is-collapsed) {
+  width: fit-content;
+}
+.sidebar-container > .sidebar {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  z-index: 1;
+}
+.sidebar-container > .sidebar.is-collapsed {
+  width: fit-content;
+}
+
+.sidebar-example > .example-body {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
 .sidebar {
   --sidebar-width: 20rem;
   --sidebar-panel-min-width: 14rem;

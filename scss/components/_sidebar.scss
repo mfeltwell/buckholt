@@ -1,4 +1,34 @@
 // Navigation sidebar
+// Reserve space in the page layout.
+.sidebar-container {
+  position: relative;
+  flex: 0 0 auto;
+  width: #{$sidebar-width};
+  height: 100%;
+  overflow: visible;
+
+  &:has(> .sidebar.is-collapsed) {
+    width: fit-content;
+  }
+
+  // Let the sidebar grow beyond its reserved space.
+  > .sidebar {
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: 0;
+    z-index: 1;
+  }
+
+  > .sidebar.is-collapsed {
+    width: fit-content;
+  }
+}
+
+.sidebar-example > .example-body {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
 .sidebar {
   --#{$prefix-bh}sidebar-width: #{$sidebar-width};
   --#{$prefix-bh}sidebar-panel-min-width: #{$sidebar-panel-min-width};
