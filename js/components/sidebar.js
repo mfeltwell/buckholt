@@ -16,6 +16,13 @@ document.querySelectorAll(".sidebar").forEach((sidebar) => {
   const primaryBody = primary.querySelector(
     ":scope > .sidebar-primary-panel > .sidebar-primary-body",
   );
+  const secondaryHeader = secondary?.querySelector(
+    ":scope > .sidebar-secondary-header",
+  );
+
+  const secondaryBody = secondary?.querySelector(
+    ":scope > .sidebar-secondary-body",
+  );
 
   function syncHeader() {
     const collapsed = sidebar.classList.contains("is-collapsed");
@@ -54,22 +61,29 @@ document.querySelectorAll(".sidebar").forEach((sidebar) => {
     const after = elements.map((el) => el.getBoundingClientRect().width);
 
     // Hold the navigation at its final width while the card opens or closes.
-    if (primaryBody && before[1] !== after[1]) {
-      const width = `${primaryBody.getBoundingClientRect().width}px`;
+    // Hold panel content at its final width during the animation.
+    [
+      [primaryBody, 1],
+      [secondaryHeader, 2],
+      [secondaryBody, 2],
+    ].forEach(([element, index]) => {
+      if (!element || !after[index] || before[index] === after[index]) return;
+
+      const width = `${element.getBoundingClientRect().width}px`;
       const frame = { width, boxSizing: "border-box" };
 
-      const hold = primaryBody.animate([frame, frame], {
+      const hold = element.animate([frame, frame], {
         duration: 200,
       });
 
-      animations.set(primaryBody, hold);
+      animations.set(element, hold);
 
       hold.onfinish = () => {
-        if (animations.get(primaryBody) === hold) {
-          animations.delete(primaryBody);
+        if (animations.get(element) === hold) {
+          animations.delete(element);
         }
       };
-    }
+    });
 
     elements.forEach((el, index) => {
       const from = before[index];
