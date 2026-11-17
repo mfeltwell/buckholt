@@ -5,6 +5,8 @@
 
   display: flex;
   gap: var(--#{$prefix-bh}keyvalue-gap);
+  min-width: 0;
+  max-width: 100%;
 
   // Expressive colours
   &.expressive {
@@ -78,14 +80,65 @@
   color: var(--#{$prefix-bh}keyvalue-value);
 }
 
-.key,
-.value {
-  &:has(> *) {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: #{$spacer-03};
-    justify-content: space-between;
+// Allow keys and values to shrink within their available space.
+.key-value {
+  > .key,
+  > .value {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+
+    &:has(> *) {
+      display: flex;
+      align-items: center;
+      gap: #{$spacer-03};
+      justify-content: space-between;
+    }
+
+    > .key-text,
+    > .value-text {
+      flex: 1 1 auto;
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    > .status-indicator {
+      flex: 0 0 auto;
+    }
+  }
+}
+
+// One line, then an ellipsis.
+.key-value[data-value-overflow="truncate"] {
+  > .value > .value-text {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+// Up to two lines, then an ellipsis.
+.key-value[data-value-overflow="clamp-2"] {
+  > .value {
+    align-items: flex-start;
+  }
+
+  > .value > .value-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    white-space: normal;
+    overflow: hidden;
+  }
+}
+
+// Stacked layouts give both rows the available width.
+.key-value-stacked,
+.key-value-list-stacked .key-value {
+  > .key,
+  > .value {
     width: 100%;
   }
 }

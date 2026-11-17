@@ -9241,6 +9241,8 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   --keyvalue-value: var(--text-primary);
   display: flex;
   gap: var(--keyvalue-gap);
+  min-width: 0;
+  max-width: 100%;
 }
 .key-value.expressive .value {
   color: var(--expressive-deep);
@@ -9317,13 +9319,55 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   color: var(--keyvalue-value);
 }
 
-.key:has(> *),
-.value:has(> *) {
+.key-value > .key,
+.key-value > .value {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.key-value > .key:has(> *),
+.key-value > .value:has(> *) {
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: 0.5rem;
   justify-content: space-between;
+}
+.key-value > .key > .key-text,
+.key-value > .key > .value-text,
+.key-value > .value > .key-text,
+.key-value > .value > .value-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.key-value > .key > .status-indicator,
+.key-value > .value > .status-indicator {
+  flex: 0 0 auto;
+}
+
+.key-value[data-value-overflow=truncate] > .value > .value-text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.key-value[data-value-overflow=clamp-2] > .value {
+  align-items: flex-start;
+}
+.key-value[data-value-overflow=clamp-2] > .value > .value-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.key-value-stacked > .key,
+.key-value-stacked > .value,
+.key-value-list-stacked .key-value > .key,
+.key-value-list-stacked .key-value > .value {
   width: 100%;
 }
 
