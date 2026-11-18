@@ -9352,9 +9352,6 @@ a[data-bs-toggle=tooltip]:not(.btn):not(.carousel-control-prev):not(.carousel-co
   text-overflow: ellipsis;
 }
 
-.key-value[data-value-overflow=clamp-2] > .value {
-  align-items: flex-start;
-}
 .key-value[data-value-overflow=clamp-2] > .value > .value-text {
   display: -webkit-box;
   -webkit-box-orient: vertical;

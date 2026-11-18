@@ -120,10 +120,6 @@
 
 // Up to two lines, then an ellipsis.
 .key-value[data-value-overflow="clamp-2"] {
-  > .value {
-    align-items: flex-start;
-  }
-
   > .value > .value-text {
     display: -webkit-box;
     -webkit-box-orient: vertical;
